@@ -19,7 +19,7 @@ include, the theme, copy direction, and the legal pages (Privacy, Terms).
 | Package (Android) | `com.civicintelligence.app` |
 | Deep-link scheme | `civicintelligence://` |
 | Platforms | iOS + Android (Expo / React Native) |
-| Contact email | _(set one — e.g. `support@civicintelligence.app`)_ |
+| Contact email | `kitsomogale19@gmail.com` |
 | Company/legal entity | _(set: registered name + country)_ |
 
 Keep these in a single `src/config.js` so they're never hard-coded twice.
@@ -60,9 +60,9 @@ reads as advocacy for a party or position.
 3. **Terms of Use** (`/terms`) — required (UGC platform → strong terms needed).
 4. _(optional)_ **Support / Contact** (`/support`) — a Play/App Store deep-link
    target is good to have; even a simple email + FAQ.
-5. _(optional)_ **Account / Data deletion** (`/delete-account`) — **Google Play
-   now requires** a way to request account + data deletion reachable from the
-   web. Strongly recommended (see §7).
+5. **Account / Data deletion** (`/delete-account`) — **required by Google Play**:
+   a public URL describing account + data deletion. Full page copy + React
+   component in §7.
 
 Footer links Privacy / Terms / Support / Delete account on every page.
 
@@ -227,16 +227,131 @@ Sections to include:
 
 ---
 
-## 7. Account & data deletion page (recommended, often required)
+## 7. Account & data deletion page (`/delete-account`) — REQUIRED for Google Play
 
-Google Play requires that users can **request deletion of their account and
-data**, reachable from a web URL. Include:
-- How to delete from inside the app (if available), AND
-- A web request path: email `privacy@…` (or a form) with what gets deleted
-  (account, profile, your Lens posts/uploads, comments) and what may be retained
-  (e.g. embedded community articles you co-authored may remain as part of the
-  shared knowledge base — state this clearly; or anonymize authorship).
-- A response timeframe (e.g. within 30 days).
+Google Play requires a **public URL** (no app install needed to read it) that
+explains how to delete your account + data and what is removed vs kept. The app
+already has **in-app deletion** (Account → Delete account, backed by a Cloud
+Function), so this page just **documents** that flow — **no form or email inbox
+is required.** Paste this page's URL into **Play Console → App content → Data
+safety → Account deletion**.
+
+> This copy mirrors exactly what the app's `deleteAccount` function does. Keep
+> the two in sync if the deletion policy changes. Support email:
+> `kitsomogale19@gmail.com` (make sure this inbox is monitored).
+
+### 7.1 Ready-to-publish page copy
+
+```
+# Delete your Civic Intelligence account
+
+You can permanently delete your account and personal data at any time, directly
+in the app. Deletion is immediate and can’t be undone.
+
+## How to delete your account
+1. Open the Civic Intelligence app.
+2. Go to the Account tab.
+3. Tap “Delete account”.
+4. Type DELETE to confirm.
+
+Your account and data are removed right away.
+
+## What gets deleted
+- Your account and sign-in (Google or email/password).
+- Your profile: name, email, and location verification (country/city).
+- Your Local Lens posts and any photos or videos you uploaded.
+
+## What gets anonymized (kept, but no longer linked to you)
+Civic Intelligence is a collaborative knowledge base — articles and collections
+are written and improved by many people. To avoid erasing shared community
+knowledge:
+- Articles and collections you wrote stay published, but your name is removed
+  from them (shown as “Anonymous”).
+- Your comments are removed and shown as “[deleted]”.
+
+## Can’t access the app?
+If you can’t sign in to delete your account yourself, email us at
+kitsomogale19@gmail.com from the address on your account and we’ll delete it for
+you, typically within 30 days.
+
+Last updated: June 15, 2026
+```
+
+### 7.2 React component (drop into the website repo)
+
+Minimal, accessible, SEO-friendly. Next.js App Router shown; adapt for Vite +
+React Router by wrapping in your route element instead of exporting `metadata`.
+
+```jsx
+// app/delete-account/page.jsx
+// SUPPORT_EMAIL is "kitsomogale19@gmail.com"; APP_NAME is "Civic Intelligence".
+// Keep these in @/config so they're defined once across the site.
+import { SUPPORT_EMAIL, APP_NAME } from "@/config";
+
+export const metadata = {
+  title: `Delete your account · ${APP_NAME}`,
+  description:
+    "How to permanently delete your Civic Intelligence account and data, and what is removed vs anonymized.",
+  alternates: { canonical: "/delete-account" },
+};
+
+export default function DeleteAccountPage() {
+  return (
+    <main className="prose mx-auto max-w-2xl px-5 py-16">
+      <h1>Delete your {APP_NAME} account</h1>
+      <p>
+        You can permanently delete your account and personal data at any time,
+        directly in the app. Deletion is immediate and can’t be undone.
+      </p>
+
+      <h2>How to delete your account</h2>
+      <ol>
+        <li>Open the {APP_NAME} app.</li>
+        <li>Go to the <strong>Account</strong> tab.</li>
+        <li>Tap <strong>“Delete account”</strong>.</li>
+        <li>Type <code>DELETE</code> to confirm.</li>
+      </ol>
+      <p>Your account and data are removed right away.</p>
+
+      <h2>What gets deleted</h2>
+      <ul>
+        <li>Your account and sign-in (Google or email/password).</li>
+        <li>Your profile: name, email, and location verification (country/city).</li>
+        <li>Your Local Lens posts and any photos or videos you uploaded.</li>
+      </ul>
+
+      <h2>What gets anonymized</h2>
+      <p>
+        {APP_NAME} is a collaborative knowledge base — articles and collections
+        are written and improved by many people. To avoid erasing shared
+        community knowledge:
+      </p>
+      <ul>
+        <li>
+          Articles and collections you wrote stay published, but your name is
+          removed (shown as “Anonymous”).
+        </li>
+        <li>Your comments are removed and shown as “[deleted]”.</li>
+      </ul>
+
+      <h2>Can’t access the app?</h2>
+      <p>
+        If you can’t sign in to delete your account yourself, email{" "}
+        <a href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</a> from the address
+        on your account and we’ll delete it for you, typically within 30 days.
+      </p>
+    </main>
+  );
+}
+```
+
+### 7.3 Checklist for this page
+- [ ] Reachable at a stable public URL (e.g. `https://<domain>/delete-account`).
+- [ ] Linked in the site footer + from the Privacy Policy.
+- [ ] `SUPPORT_EMAIL` set; that inbox is monitored.
+- [ ] URL pasted into Play Console → Data safety → Account deletion.
+- [ ] Wording matches the app's actual `deleteAccount` behavior (delete vs
+      anonymize) — update both together if it ever changes.
 
 ---
 
