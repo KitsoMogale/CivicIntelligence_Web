@@ -13,8 +13,8 @@ export default function Home() {
             {config.tagline}
           </h1>
           <p className="mt-6 max-w-md text-lg text-text-muted">
-            Collaborative, verified, plain-language civic knowledge — written and
-            reviewed by the people who live it.
+            Collaborative, plain-language civic explainers — written by the
+            people who live it. Community opinion, not official information.
           </p>
           <StoreBadges className="mt-8" />
           <p className="mt-4 text-sm text-text-muted">
@@ -30,7 +30,7 @@ export default function Home() {
       <section className="bg-surface-2">
         <div className="mx-auto max-w-content px-6 py-20">
           <h2 className="text-center text-3xl font-extrabold text-ink sm:text-4xl">
-            Civic knowledge, built together
+            Civic explainers, written together
           </h2>
           <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {features.map((f) => (
@@ -94,7 +94,7 @@ export default function Home() {
             </h2>
             <p className="mt-3 max-w-md text-text-muted">
               Locals post photos and video documenting things on the ground — at
-              country and city level. A living, visual layer over the knowledge base.
+              country and city level. A living, visual layer over the community's explainers.
             </p>
           </div>
           {/* Placeholder gallery — swap for real Local Lens imagery (with consent). */}
@@ -126,6 +126,12 @@ export default function Home() {
               </div>
             ))}
           </div>
+
+          {/* Non-government disclaimer on the landing page (guide §1 / §3.9 —
+              Google Play Misleading Claims policy). */}
+          <p className="mx-auto mt-12 max-w-2xl rounded-card border border-line bg-white px-6 py-4 text-center text-sm text-text-muted">
+            {config.disclaimer}
+          </p>
         </div>
       </section>
 

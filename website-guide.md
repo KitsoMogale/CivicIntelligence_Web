@@ -28,9 +28,24 @@ Keep these in a single `src/config.js` so they're never hard-coded twice.
 
 ## 1. What the app actually is (so copy is honest)
 
-Civic Intelligence is a **collaborative, country-scoped civic knowledge app**.
+Civic Intelligence is a **collaborative, country-scoped civic discussion app**.
 Verified locals in a country co-author and peer-review plain-language explainers
-of how their country works.
+of how they understand their country to work.
+
+> ⚠️ **Misleading Claims policy — read before writing any copy.** Google Play
+> classifies this as an app that "provides government information," so the
+> website copy must follow the same rules as the store listing:
+> - The app **does not provide official government information** and **does not
+>   source information from the government.** All content is the **personal
+>   opinion / explanation of members of the public.**
+> - **Never** describe content as "sourced", "verified", "official", "accurate",
+>   or "drawn from official sources." It is community opinion, not an
+>   information service.
+> - Every page that describes the content (landing, About, Terms) must carry a
+>   clear disclaimer that the app is **independent, not affiliated with any
+>   government, and not a substitute for official information**, and point users
+>   to **their own country's official government website** for authoritative
+>   info. Mirror the store listing in `play-store-listing.md`.
 
 **Core concepts to communicate:**
 - **Country-scoped.** You verify your location once; you contribute to *your*
@@ -48,8 +63,10 @@ of how their country works.
 - **Reputation (coming).** A per-country contribution score next to your name.
 
 **Tone:** civic, trustworthy, optimistic, neutral (non-partisan). Think
-"Wikipedia meets a local lens," not a political/news brand. Avoid anything that
-reads as advocacy for a party or position.
+"a community discussion space meets a local lens," not a political/news brand,
+and **not** an authoritative reference/encyclopedia (don't imply the content is
+official or verified). Avoid anything that reads as advocacy for a party or
+position.
 
 ---
 
@@ -74,7 +91,8 @@ Footer links Privacy / Terms / Support / Delete account on every page.
    primary "Get the app" button right. Sticky, translucent-on-scroll.
 2. **Hero** —
    - H1: short, bold value prop (e.g. *"Understand how your country works."*).
-   - Sub: 1–2 lines on collaborative, verified, plain-language civic knowledge.
+   - Sub: 1–2 lines on collaborative, plain-language, community-written civic
+     explainers (note: "community-written," not "verified/official knowledge").
    - Two CTAs: **App Store** + **Google Play** badges (use official badge SVGs).
    - Right side / below: a phone mockup (screenshot of the home or an article).
    - Small trust line: "Free · Verified locals · Community-reviewed."
@@ -95,7 +113,11 @@ Footer links Privacy / Terms / Support / Delete account on every page.
    versioned history, reporting tools. Builds credibility for a civic product.
 8. **Final CTA band** — repeat the store badges on a colored background.
 9. **Footer** — logo, short blurb, link columns (Product / Legal / Support),
-   copyright, the legal entity name, contact email.
+   copyright, the legal entity name, contact email, and a **one-line
+   non-government disclaimer** on every page: e.g. *"Independent and
+   community-run. Not affiliated with any government and not a source of
+   official information — always verify with your country's official government
+   website."*
 
 **Don't include (yet):** pricing (it's free), testimonials you don't have, fake
 user counts, or country-specific political claims.
@@ -360,9 +382,15 @@ export default function DeleteAccountPage() {
 > Critical for a community/UGC platform. **Lawyer review required.** Checklist:
 
 1. **Acceptance & eligibility** — by using the app you agree; minimum age.
-2. **The service** — what Civic Intelligence is; that it's
-   community-contributed and **not official government information**; no
-   warranty of accuracy.
+2. **The service** — what Civic Intelligence is: a community discussion space
+   where members of the public post their own explanations of how they
+   understand their country to work. State explicitly that it is **independent,
+   not affiliated with or endorsed by any government, does not provide official
+   government information, and does not source information from the
+   government.** All content is **community opinion**, may be inaccurate or out
+   of date, carries **no warranty of accuracy**, and is **not a substitute for
+   official information** — users should rely on their own country's official
+   government website. (Mirror the store-listing disclaimer.)
 3. **Accounts** — you're responsible for your account; one account; Google
    Sign-In.
 4. **Location verification** — you confirm you genuinely live in the country/city
@@ -401,10 +429,15 @@ export default function DeleteAccountPage() {
 - Avoid jargon ("decentralized", "blockchain" — none of that applies).
 - Civic and inclusive; never align with a political side.
 
-**Hero candidates:**
+**Hero candidates** (all frame content as community explanation, never as
+official/verified information):
 - "Understand how your country works."
-- "Civic knowledge, written by the people who live it."
-- "Your country, explained — by verified locals."
+- "How your country works, explained by the people who live it."
+- "Your country, explained — by verified locals. Community opinion, not official."
+
+> Avoid hero/marketing lines implying authority or accuracy, e.g. "the trusted
+> source for…", "verified civic facts", "official information about your
+> country." Those reintroduce the Misleading Claims problem.
 
 ---
 
@@ -416,6 +449,10 @@ export default function DeleteAccountPage() {
 - [ ] Official App Store + Google Play badge assets, linked to store listings.
 - [ ] Theme: Inter font + CSS variables from §4; white + `--surface-2` bands.
 - [ ] `/privacy` and `/terms` pages (lawyer-reviewed) with last-updated dates.
+- [ ] **Non-government disclaimer in the footer of every page** + on the landing
+      page (Misleading Claims policy): independent, not a government, does not
+      provide/source official info, points to official government websites.
+- [ ] No copy implies the content is official, verified, accurate, or sourced.
 - [ ] `/delete-account` (or support) page for the deletion flow.
 - [ ] SEO: titles, meta, OG image, sitemap, robots, favicon.
 - [ ] Responsive + accessible (alt text, contrast, reduced-motion).

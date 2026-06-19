@@ -23,13 +23,19 @@ export const config = {
 
   // Legal dates (guide §6/§8 — "last updated")
   lastUpdated: "2026-06-11",
+
+  // Non-government disclaimer — required on every page + landing (guide §1/§3.9).
+  // Google Play Misleading Claims policy: the app is community opinion, not an
+  // official/verified information service. Do not soften this.
+  disclaimer:
+    "Independent and community-run. Not affiliated with any government and not a source of official information — always verify with your country's official government website.",
 };
 
 // Landing-page content (guide §3) — kept here so copy lives in one place.
 
 // §3.3 — what it is
 export const features = [
-  { icon: "📚", title: "Plain-language explainers", body: "How systems, institutions, and policies actually work." },
+  { icon: "📚", title: "Plain-language explainers", body: "How locals understand systems, institutions, and policies to work." },
   { icon: "🗳️", title: "Community-reviewed", body: "Submissions are voted on before they go live." },
   { icon: "📁", title: "Collections", body: "Group related articles into browsable folders." },
   { icon: "📷", title: "Local Lens", body: "Locals document the country in photos & video." },
@@ -53,7 +59,7 @@ export const categories = [
 
 // §3.7 — trust & safety
 export const trust = [
-  { icon: "📍", title: "Country verification", body: "Contributors verify where they live, so knowledge comes from locals." },
+  { icon: "📍", title: "Country verification", body: "Contributors verify where they live, so explanations come from locals." },
   { icon: "🗳️", title: "Community moderation", body: "Submissions and edits are voted on; reported content can be hidden or removed." },
   { icon: "🕓", title: "Versioned history", body: "Every change is tracked with full history and “what changed” diffs." },
   { icon: "🚩", title: "Reporting tools", body: "Anyone can flag content for review, mirroring the in-app moderation." },

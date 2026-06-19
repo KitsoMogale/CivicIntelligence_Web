@@ -14,8 +14,8 @@ const SECTIONS = [
   {
     heading: 'The service',
     blocks: [
-      { p: '{appName} is a collaborative, country-scoped civic knowledge platform. Verified locals co-author and review plain-language explainers of how their country works — its systems, institutions, companies, policies, and resources — and can document the country visually through Local Lens.' },
-      { note: 'Content on {appName} is contributed and reviewed by the community. It is not official government information, and we do not warrant that it is accurate, complete, or up to date. Do not rely on it as a substitute for official sources or professional advice.' },
+      { p: '{appName} is a collaborative, country-scoped civic discussion space where members of the public post their own plain-language explanations of how they understand their country to work — its systems, institutions, companies, policies, and resources — and can document the country visually through Local Lens.' },
+      { note: '{appName} is independent and is not affiliated with, endorsed by, or operated by any government. It does not provide official government information and does not source information from the government. All content is the personal opinion of members of the public — it may be inaccurate or out of date, carries no warranty of accuracy, and is not a substitute for official information. For authoritative information, always consult your own country’s official government website.' },
     ],
   },
   {

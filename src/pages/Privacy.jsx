@@ -60,7 +60,7 @@ const SECTIONS = [
   {
     heading: 'Public content notice',
     blocks: [
-      { note: 'Important: {appName} is a public, community knowledge platform. The articles, collections, edits, comments, votes, and Local Lens posts you create — along with your display name — are visible to other users, especially within your country.' },
+      { note: 'Important: {appName} is a public, community discussion platform. The articles, collections, edits, comments, votes, and Local Lens posts you create — along with your display name — are visible to other users, especially within your country.' },
       { p: 'Do not include personal information you don’t want to be public in the content you post. Because contributions are collaboratively edited and versioned, your earlier versions remain part of the article’s history.' },
     ],
   },
@@ -68,7 +68,7 @@ const SECTIONS = [
     heading: 'Data retention',
     blocks: [
       { p: 'We keep your account data for as long as your account is active. When you delete your account, we delete your profile, your Local Lens uploads, and your comments.' },
-      { p: 'Because articles are co-authored by the community, embedded articles you contributed to may remain as part of the shared knowledge base after you leave; where this happens, we anonymize your authorship. We may also retain limited data where required for legal, security, or abuse-prevention reasons.' },
+      { p: 'Because articles are co-authored by the community, articles you contributed to may remain as part of the shared community content after you leave; where this happens, we anonymize your authorship. We may also retain limited data where required for legal, security, or abuse-prevention reasons.' },
       { p: 'You can request deletion at any time — see our Account & Data Deletion page.' },
     ],
   },

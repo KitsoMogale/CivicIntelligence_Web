@@ -35,8 +35,11 @@ export default function Footer() {
       </div>
 
       <div className="border-t border-line">
-        <div className="mx-auto max-w-content px-6 py-6 text-xs text-text-muted">
-          © {year} {config.legalEntity || config.appName}. All rights reserved.
+        <div className="mx-auto max-w-content space-y-2 px-6 py-6 text-xs text-text-muted">
+          {/* Non-government disclaimer on every page (guide §3.9 —
+              Google Play Misleading Claims policy). */}
+          <p>{config.disclaimer}</p>
+          <p>© {year} {config.legalEntity || config.appName}. All rights reserved.</p>
         </div>
       </div>
     </footer>
