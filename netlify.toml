@@ -1,10 +1,9 @@
 [build]
-  command = "npm run build"
-  publish = "dist"
+  command = "npm run data:check && npm test && npm run build"
+  publish = ".next"
 
-# SPA fallback: serve index.html for client-side routes so React Router
-# handles /privacy, /terms, etc. on direct load and refresh.
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+[build.environment]
+  NODE_VERSION = "22"
+
+# Netlify auto-detects Next.js and provisions the OpenNext adapter.
+# API routes run server-side; do not restore the old SPA catch-all redirect.

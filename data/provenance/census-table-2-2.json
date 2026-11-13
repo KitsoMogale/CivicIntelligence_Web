@@ -1,0 +1,66 @@
+{
+  "publisher": "Statistics South Africa",
+  "title": "Census 2022 Statistical Release P0301.4, Table 2.2",
+  "sourceUrl": "https://census.statssa.gov.za/assets/documents/2022/P03014_Census_2022_Statistical_Release.pdf",
+  "publicationDate": "2023-10-10",
+  "retrievedDate": "2026-11-13",
+  "printedPage": 4,
+  "unit": "people",
+  "notes": [
+    "Historical census results; these are not current population estimates.",
+    "Transcribed from Table 2.2 of the October 2023 release. Later Stats SA publications can differ by one person for some provincial counts; do not mix source vintages.",
+    "Published national 2011 total is 51,770,560; the nine published provincial integers sum to 51,770,561. Preserve source values and disclose the one-person discrepancy rather than forcing the sum.",
+    "This is a two-observation census comparison, not an annually measured time series."
+  ],
+  "nationalPublished": {
+    "2011": 51770560,
+    "2022": 62027503
+  },
+  "rows": [
+    {
+      "2011": 5822734,
+      "2022": 7433019,
+      "province": "Western Cape"
+    },
+    {
+      "2011": 6562053,
+      "2022": 7230204,
+      "province": "Eastern Cape"
+    },
+    {
+      "2011": 1145861,
+      "2022": 1355946,
+      "province": "Northern Cape"
+    },
+    {
+      "2011": 2745590,
+      "2022": 2964412,
+      "province": "Free State"
+    },
+    {
+      "2011": 10267300,
+      "2022": 12423907,
+      "province": "KwaZulu-Natal"
+    },
+    {
+      "2011": 3509953,
+      "2022": 3804548,
+      "province": "North West"
+    },
+    {
+      "2011": 12272263,
+      "2022": 15099422,
+      "province": "Gauteng"
+    },
+    {
+      "2011": 4039939,
+      "2022": 5143324,
+      "province": "Mpumalanga"
+    },
+    {
+      "2011": 5404868,
+      "2022": 6572721,
+      "province": "Limpopo"
+    }
+  ]
+}

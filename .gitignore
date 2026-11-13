@@ -10,6 +10,17 @@ lerna-debug.log*
 node_modules
 dist
 dist-ssr
+.next/
+out/
+.env
+.env.*
+!.env.example
+*.tsbuildinfo
+__pycache__/
+.venv/
+.pytest_cache/
+test-results/
+playwright-report/
 *.local
 
 # Editor directories and files
@@ -22,3 +33,13 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+.npm-cache/
+.uv-cache/
+.python/
+.tools/
+
+backend/.venv/
+/.research/
+/.data-backups/
+/.next-verify/

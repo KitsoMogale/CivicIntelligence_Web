@@ -1,0 +1,200 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.98001,
+          -25.469622
+        ]
+      },
+      "properties": {
+        "id": "za-city-mbombela",
+        "name": "Mbombela",
+        "region": "mpumalanga"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.470025,
+          -25.759631
+        ]
+      },
+      "properties": {
+        "id": "za-city-middelburg",
+        "name": "Middelburg",
+        "region": "mpumalanga"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.770002,
+          -28.746838
+        ]
+      },
+      "properties": {
+        "id": "za-city-kimberley",
+        "name": "Kimberley",
+        "region": "northern-cape"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.240032,
+          -25.650025
+        ]
+      },
+      "properties": {
+        "id": "za-city-rustenburg",
+        "name": "Rustenburg",
+        "region": "north-west"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.610002,
+          -25.830014
+        ]
+      },
+      "properties": {
+        "id": "za-city-mmabatho",
+        "name": "Mmabatho / Mahikeng area",
+        "region": "north-west"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.450026,
+          -23.890029
+        ]
+      },
+      "properties": {
+        "id": "za-city-polokwane",
+        "name": "Polokwane",
+        "region": "limpopo"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.390021,
+          -29.610042
+        ]
+      },
+      "properties": {
+        "id": "za-city-pietermaritzburg",
+        "name": "Pietermaritzburg",
+        "region": "kwazulu-natal"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.389997,
+          -32.869997
+        ]
+      },
+      "properties": {
+        "id": "za-city-bhisho",
+        "name": "Bhisho",
+        "region": "eastern-cape"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.229913,
+          -29.119994
+        ]
+      },
+      "properties": {
+        "id": "za-city-bloemfontein",
+        "name": "Bloemfontein",
+        "region": "free-state"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          28.227483,
+          -25.704975
+        ]
+      },
+      "properties": {
+        "id": "za-city-pretoria",
+        "name": "Pretoria",
+        "region": "gauteng"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.010944,
+          -29.860662
+        ]
+      },
+      "properties": {
+        "id": "za-city-durban",
+        "name": "Durban",
+        "region": "kwazulu-natal"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          28.028064,
+          -26.168099
+        ]
+      },
+      "properties": {
+        "id": "za-city-johannesburg",
+        "name": "Johannesburg",
+        "region": "gauteng"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.433042,
+          -33.918065
+        ]
+      },
+      "properties": {
+        "id": "za-city-cape-town",
+        "name": "Cape Town",
+        "region": "western-cape"
+      }
+    }
+  ]
+}

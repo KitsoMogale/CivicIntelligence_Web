@@ -1,0 +1,33 @@
+services:
+  db:
+    build:
+      context: .
+      dockerfile: backend/postgres.Dockerfile
+    environment:
+      POSTGRES_DB: civic
+      POSTGRES_USER: civic
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Set a production database password}
+    volumes:
+      - production_pg:/var/lib/postgresql/data
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U civic -d civic"]
+      interval: 10s
+      retries: 10
+  api:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    environment:
+      DATABASE_URL: ${DATABASE_URL:?Set the URL-encoded PostgreSQL URL for the db service}
+      APP_ORIGIN: ${APP_ORIGIN:?Set the Netlify site origin}
+      LOG_REQUESTS: "1"
+    ports:
+      - "127.0.0.1:8000:8000"
+    depends_on:
+      db:
+        condition: service_healthy
+    restart: unless-stopped
+    command: ["sh", "-c", "alembic -c backend/alembic.ini upgrade head && python -m backend.seed && uvicorn backend.main:app --host 0.0.0.0 --port 8000 --proxy-headers --forwarded-allow-ips=127.0.0.1"]
+volumes:
+  production_pg:

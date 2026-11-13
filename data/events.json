@@ -1,0 +1,97 @@
+[
+  {
+    "id": "mining-event-0",
+    "date": "2018-11-01",
+    "title": "Mototolo operation transferred to RPM",
+    "description": "Mototolo operations transferred to RPM as a wholly owned operation after acquisition of the remaining joint-venture interests.",
+    "country": "ZA",
+    "entityIds": [
+      "za-mototolo-mine",
+      "za-rustenburg-platinum-mines"
+    ],
+    "sourceIds": [
+      "mototolo-2018"
+    ]
+  },
+  {
+    "id": "mining-event-1",
+    "date": "2019",
+    "title": "Mining at Belfast commenced",
+    "description": "Mining at Belfast commenced.",
+    "country": "ZA",
+    "entityIds": [
+      "za-belfast-mine"
+    ],
+    "sourceIds": [
+      "belfast-history"
+    ]
+  },
+  {
+    "id": "mining-event-2",
+    "date": "2025-05-31",
+    "title": "Valterra Platinum demerger took effect",
+    "description": "Demerger of Anglo American's controlling interest in Valterra Platinum took effect.",
+    "country": "ZA",
+    "entityIds": [
+      "za-valterra-platinum"
+    ],
+    "sourceIds": [
+      "valterra-demerger-2025"
+    ]
+  },
+  {
+    "id": "mining-event-3",
+    "date": "2025-09-04",
+    "title": "Anglo American exited its remaining Valterra stake",
+    "description": "Anglo American completed sale of its remaining approximately 19.9% interest in Valterra.",
+    "country": "ZA",
+    "entityIds": [
+      "za-valterra-platinum"
+    ],
+    "sourceIds": [
+      "valterra-exit-2025"
+    ]
+  },
+  {
+    "id": "mining-event-4",
+    "date": "2026-04-01",
+    "title": "Matla coal supply agreement took effect",
+    "description": "New long-term Matla coal supply agreement took effect, with stated end date 30 November 2043.",
+    "country": "ZA",
+    "entityIds": [
+      "za-matla-colliery",
+      "za-exxaro-coal-mpumalanga",
+      "za-eskom"
+    ],
+    "sourceIds": [
+      "matla-csa-2026"
+    ]
+  },
+  {
+    "id": "constitution-1997",
+    "date": "1997-02-04",
+    "title": "The Constitution took effect",
+    "description": "The Constitution of the Republic of South Africa, 1996 came into operation. It provides the constitutional framework for institutions and the three spheres of government.",
+    "country": "ZA",
+    "entityIds": [
+      "za-government",
+      "za-justice"
+    ],
+    "sourceIds": [
+      "constitution-commencement"
+    ]
+  },
+  {
+    "id": "census-2022-release",
+    "date": "2023-10-10",
+    "title": "Census 2022 statistical release published",
+    "description": "Statistics South Africa published the Census 2022 statistical release. The provincial 2011 and 2022 counts shown in this workspace come from Table 2.2.",
+    "country": "ZA",
+    "entityIds": [
+      "za-society"
+    ],
+    "sourceIds": [
+      "census"
+    ]
+  }
+]

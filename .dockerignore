@@ -1,0 +1,13 @@
+node_modules
+.next
+.git
+.npm-cache
+.uv-cache
+.python
+.tools
+backend/.venv
+__pycache__
+.env
+.env.*
+test-results
+dist

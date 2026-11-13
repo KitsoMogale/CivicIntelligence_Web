@@ -1,0 +1,196 @@
+{
+  "retrievedAt": "2026-11-13",
+  "scopeNote": "Four real South African electricity-generation assets. Coordinates are transcribed from primary public Eskom documents, then converted mathematically from DMS to decimal degrees. Coordinate roles and document dates are explicit: some are project/site locators rather than station centroids. No current capacity, output, outage or completion claims are included.",
+  "coordinateOrder": "longitude, latitude",
+  "conversion": "absolute decimal degrees = degrees + minutes/60 + seconds/3600; south latitudes are negative and east longitudes positive. Values rounded to 8 decimal places; decimal precision does not imply survey accuracy.",
+  "sources": [
+    {
+      "id": "eskom-kusile-site-2025",
+      "title": "Professional Services – Warehouse Facility Upgrades at Kusile Power Station, KUS-20250607 Revision 1",
+      "publisher": "Eskom Holdings SOC Limited, published on National Treasury eTender portal",
+      "url": "https://www.etenders.gov.za/home/Download/?blobName=195a7507-fee0-4c68-a821-0bf271f67e44.pdf&downloadedFileName=KUS-20250607+KUS+Warehouse+Facility+Upgrades+Scope.pdf",
+      "documentDate": "2025-08-13",
+      "location": "PDF page 9 of 49, section 4 Site Description; authorization dates on cover",
+      "supports": "Approximate station-site coordinate and Mpumalanga location.",
+      "rightsNote": "Eskom copyright retained. Only short factual paraphrases and coordinate values used; do not reproduce drawings, photographs or the complete tender document."
+    },
+    {
+      "id": "eskom-koeberg-carpark-2016",
+      "title": "Heritage Impact Assessment for the Proposed Extension of a Car Park at Koeberg Nuclear Power Station",
+      "publisher": "ASHA Consulting on behalf of Eskom, published by Eskom",
+      "url": "https://www.eskom.co.za/eia/gx/wp-content/uploads/migrated/KoebergCarPark/Appendices-2/Appendix%20D3_HIA_Car%20Park%20Extension.pdf",
+      "documentDate": "2016-09-28",
+      "location": "PDF page 2, printed page ii, executive summary section 2 Location",
+      "supports": "Published project-site point at the station car-park extension and Western Cape location.",
+      "rightsNote": "Short facts only. Do not reproduce report imagery or aerial photographs."
+    },
+    {
+      "id": "eskom-medupi-fgd-notice-2014",
+      "title": "Medupi Flue Gas Desulphurisation EIA: Appendix F-1, Proof of Site Notice and Advertisement",
+      "publisher": "Zitholele Consulting on behalf of Eskom, published by Eskom",
+      "url": "https://www.eskom.co.za/eia/gx/wp-content/uploads/migrated/medupi/FEIR-Appendecies/Appendix%20F-1_PPP%20Site%20Notice%20and%20Advertisement.pdf",
+      "documentDate": null,
+      "dateNote": "Scoping-stage materials include June 2014 documents; the coordinate table itself is undated. Do not label the coordinate as surveyed in 2014 or current in 2026.",
+      "location": "PDF page 3, Appendix E2 Table 1; project/province description on PDF page 5",
+      "supports": "GPS point on Medupi property fence where an EIA site notice was displayed; station in Limpopo.",
+      "rightsNote": "Short factual paraphrase and numeric point only."
+    },
+    {
+      "id": "eskom-duvha-emissions-2024",
+      "title": "Duvha Power Station Annual Emissions Report for FY 2023/24",
+      "publisher": "Eskom Holdings SOC Limited",
+      "url": "https://www.eskom.co.za/dataportal/wp-content/uploads/2024/08/Duvha-Annual-Report-2023_24.pdf",
+      "documentDate": "2024-07-11",
+      "location": "PDF page 35, printed audit page 25 of 36, section 3 Location and Extent of Plant; cover for report date",
+      "supports": "Reported approximate operational-centre coordinate, Mpumalanga and municipal location.",
+      "qualityNote": "The same audit row requests that the station ensure the coordinates are correct. Preserve this caveat; do not present this point as independently verified or survey-grade. The text extraction renders the degree symbol as a superscript 0 and a decimal comma in the longitude seconds.",
+      "rightsNote": "Short factual paraphrase and numeric point only."
+    },
+    {
+      "id": "eskom-coal-station-directory",
+      "title": "Coal fired power stations",
+      "publisher": "Eskom Holdings SOC Limited",
+      "url": "https://www.eskom.co.za/eskom-divisions/gx/coal-fired-power-stations/",
+      "documentDate": null,
+      "retrievedAt": "2026-11-13",
+      "supports": "Coal-fired generation type and operator-directory membership. Undated project descriptions may be stale, so no capacities or operating-status statements are copied."
+    },
+    {
+      "id": "eskom-koeberg-operator-page",
+      "title": "Koeberg Nuclear Power Station",
+      "publisher": "Eskom Holdings SOC Limited",
+      "url": "https://www.eskom.co.za/eskom-divisions/gx/koeberg-nuclear-power-station/",
+      "documentDate": null,
+      "retrievedAt": "2026-11-13",
+      "supports": "Nuclear generation type, Duynefontein location and Western Cape context."
+    }
+  ],
+  "entities": [
+    {
+      "id": "za-kusile-power-station",
+      "name": "Kusile Power Station",
+      "kind": "power station",
+      "domain": "infrastructure",
+      "countryCode": "ZA",
+      "province": "Mpumalanga",
+      "provinceCode": "ZA-MP",
+      "generationType": "coal",
+      "operator": "Eskom",
+      "description": "Coal-fired power station near eMalahleni in Mpumalanga.",
+      "coordinates": [
+        28.91202778,
+        -25.91870556
+      ],
+      "coordinateDms": {
+        "latitude": "25°55′07.34″S",
+        "longitude": "28°54′43.30″E"
+      },
+      "coordinateRole": "approximate station-site point supplied by operator",
+      "coordinateLabel": "Published approximate site location (2025)",
+      "coordinateSourceId": "eskom-kusile-site-2025",
+      "coordinateAccuracy": "Source explicitly says approximate; no numeric accuracy stated.",
+      "asOf": "2025-08-13",
+      "sourceIds": [
+        "eskom-kusile-site-2025",
+        "eskom-coal-station-directory"
+      ]
+    },
+    {
+      "id": "za-koeberg-power-station",
+      "name": "Koeberg Nuclear Power Station",
+      "kind": "power station",
+      "domain": "infrastructure",
+      "countryCode": "ZA",
+      "province": "Western Cape",
+      "provinceCode": "ZA-WC",
+      "generationType": "nuclear",
+      "operator": "Eskom",
+      "description": "Nuclear power station at Duynefontein in the Western Cape.",
+      "coordinates": [
+        18.43694444,
+        -33.67472222
+      ],
+      "coordinateDms": {
+        "latitude": "33°40′29″S",
+        "longitude": "18°26′13″E"
+      },
+      "coordinateRole": "car-park project site locator at the station",
+      "coordinateLabel": "Station car-park project locator (2016)",
+      "coordinateSourceId": "eskom-koeberg-carpark-2016",
+      "coordinateAccuracy": "Published project location, not a reactor location, station centroid or verified boundary.",
+      "asOf": "2016-09-28",
+      "sourceIds": [
+        "eskom-koeberg-carpark-2016",
+        "eskom-koeberg-operator-page"
+      ]
+    },
+    {
+      "id": "za-medupi-power-station",
+      "name": "Medupi Power Station",
+      "kind": "power station",
+      "domain": "infrastructure",
+      "countryCode": "ZA",
+      "province": "Limpopo",
+      "provinceCode": "ZA-LP",
+      "generationType": "coal",
+      "operator": "Eskom",
+      "description": "Coal-fired power station west of Lephalale in Limpopo.",
+      "coordinates": [
+        27.57454444,
+        -23.69455278
+      ],
+      "coordinateDms": {
+        "latitude": "23°41′40.39″S",
+        "longitude": "27°34′28.36″E"
+      },
+      "coordinateRole": "published EIA site-notice point on station property fence",
+      "coordinateLabel": "Published property-fence locator (historic EIA)",
+      "coordinateSourceId": "eskom-medupi-fgd-notice-2014",
+      "coordinateAccuracy": "Exact transcribed GPS point for the notice location; not a surveyed station centroid. Coordinate table has no date.",
+      "asOf": null,
+      "sourceIds": [
+        "eskom-medupi-fgd-notice-2014",
+        "eskom-coal-station-directory"
+      ]
+    },
+    {
+      "id": "za-duvha-power-station",
+      "name": "Duvha Power Station",
+      "kind": "power station",
+      "domain": "infrastructure",
+      "countryCode": "ZA",
+      "province": "Mpumalanga",
+      "provinceCode": "ZA-MP",
+      "district": "Nkangala",
+      "municipality": "eMalahleni",
+      "generationType": "coal",
+      "operator": "Eskom",
+      "description": "Coal-fired power station near Witbank Dam in Mpumalanga.",
+      "coordinates": [
+        29.34178889,
+        -25.96020278
+      ],
+      "coordinateDms": {
+        "latitude": "25°57′36.73″S",
+        "longitude": "29°20′30.44″E"
+      },
+      "coordinateRole": "reported operational-centre point in operator emissions report",
+      "coordinateLabel": "Reported centre location (2024; verification requested in source)",
+      "coordinateSourceId": "eskom-duvha-emissions-2024",
+      "coordinateAccuracy": "Audit expressly requests coordinate verification. Suitable only as a labelled published locator; retain source caveat or omit the pin pending review.",
+      "asOf": "2024-07-11",
+      "sourceIds": [
+        "eskom-duvha-emissions-2024",
+        "eskom-coal-station-directory"
+      ]
+    }
+  ],
+  "editorialNotes": [
+    "These primary-source markers support general exploration, not navigation, engineering, security, property boundaries or current operational decisions.",
+    "Display each coordinateLabel in the entity details. Avoid calling every marker an exact station position, because the source points have different purposes.",
+    "No third-party coordinates were used. Do not replace a sourced point with a plausible-looking web-map coordinate without adding and checking a primary reference.",
+    "The 2017 combined Matimba/Medupi atmospheric report repeats identical coordinates for both stations. It was rejected as a source of separate station positions.",
+    "No current capacity/output or unit-operating-status claims were added. Sources may describe historic projects or stale construction states.",
+    "Do not copy operator diagrams, basemap imagery, photographs or long report excerpts into the product."
+  ]
+}

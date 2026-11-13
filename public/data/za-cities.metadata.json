@@ -1,0 +1,39 @@
+{
+  "publisher": "Natural Earth",
+  "dataset": "1:10m populated places, simple",
+  "retrievedDate": "2026-11-13",
+  "sourceUrl": "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-populated-places/",
+  "downloadUrl": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_10m_populated_places_simple.geojson",
+  "latestFileCommitAtRetrieval": "789c9904087846cc3361302857aa2e76b0ae71ff",
+  "latestFileCommitDate": "2022-05-13T23:22:03Z",
+  "pinnedEquivalentUrl": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/789c9904087846cc3361302857aa2e76b0ae71ff/geojson/ne_10m_populated_places_simple.geojson",
+  "commitMetadataUrl": "https://api.github.com/repos/nvkelso/natural-earth-vector/commits?path=geojson/ne_10m_populated_places_simple.geojson&per_page=1",
+  "license": "Public domain",
+  "licenseUrl": "https://www.naturalearthdata.com/about/terms-of-use/",
+  "attribution": "Made with Natural Earth.",
+  "rawFile": "natural-earth-10m-populated-places-simple.geojson",
+  "selectionFile": "za-city-points-natural-earth.geojson",
+  "coordinateOrder": "longitude, latitude (GeoJSON geometry.coordinates)",
+  "matchedExactNames": ["Bhisho", "Bloemfontein", "Cape Town", "Johannesburg", "Kimberley", "Mbombela", "Pietermaritzburg", "Polokwane", "Durban", "Pretoria", "Rustenburg", "Middelburg"],
+  "matchedRegionalLocator": {
+    "requested": "Mahikeng",
+    "sourceName": "Mmabatho",
+    "sourceAlias": "MMabatho (Mafikeng)",
+    "coordinates": [25.610002, -25.830014],
+    "note": "Keep displayed as Mmabatho / Mahikeng area or omit if exact city center is required. This is not an exact Mahikeng city-center coordinate.",
+    "contextSourceUrl": "https://www.mahikeng.gov.za/history/",
+    "context": "Municipality history explains Mmabatho became part of Mafikeng in 1996."
+  },
+  "missingRequestedNames": ["Mokopane", "Lephalale", "Kriel", "Belfast", "Delmas"],
+  "capitalRolesSourceUrl": "https://www.gov.za/about-sa/south-africas-provinces",
+  "notes": [
+    "The selection preserves original feature properties and geometries; exact city-center or mine-site precision is not asserted.",
+    "Use geometry.coordinates for display. Some original longitude/latitude attributes differ slightly from the actual Point geometry, notably Durban.",
+    "Middelburg is ambiguous: selected the Mpumalanga feature, excluding the Eastern Cape feature with the same name.",
+    "Natural Earth uses Orange Free State in some adm1name attributes; normalize to Free State for display and preserve source property separately.",
+    "Mbombela has namepar=Nelspruit; Bhisho has namealt=Bisho; Polokwane has historic Pietersburg alias.",
+    "Natural Earth featurecla includes legacy/incorrect capital labels. Establish current governmental roles from the government source, not the featurecla field.",
+    "Natural Earth population fields are approximate historic urban/metro estimates, not current municipal or Census populations. Do not surface these numbers as current population facts.",
+    "Missing requested towns are not guessed. Use verified province locators for relevant mining entities until site-specific coordinates can be sourced."
+  ]
+}

@@ -1,0 +1,441 @@
+{
+  "retrievedAt": "2026-11-13",
+  "publisher": "Government of South Africa / GCIS",
+  "sourceUrl": "https://www.gov.za/about-government/contact-directory/national-government",
+  "publicationDate": null,
+  "directoryGrouping": "National Government Departments",
+  "scopeNote": "Exactly the43 entries in the national departments subsection, excluding separate ministries, parliamentary, judicial, constitutional bodies and overseas representatives sections. Bodies without Department in sourceLabel use generic national body kind; sourceLabel preserved so agencies, offices and services are not falsely presented as ordinary departments. Directory grouping is not an organizational command hierarchy.",
+  "count": 43,
+  "institutions": [
+    {
+      "name": "Agriculture",
+      "sourceLabel": "Agriculture [ Department of ]",
+      "kind": "department",
+      "country": "ZA",
+      "sphere": "national",
+      "directoryUrl": "https://www.gov.za/about-government/contact-directory/departments/agriculture-department",
+      "sourceUrl": "https://www.gov.za/about-government/contact-directory/national-government",
+      "asOf": "2026-11-13"
+    },
+    {
+      "name": "Basic Education",
+      "sourceLabel": "Basic Education [ Department of ]",
+      "kind": "department",
+      "country": "ZA",
+      "sphere": "national",
+      "directoryUrl": "https://www.gov.za/about-government/contact-directory/departments/basic-education-department",
+      "sourceUrl": "https://www.gov.za/about-government/contact-directory/national-government",
+      "asOf": "2026-11-13"
+    },
+    {
+      "name": "Civilian Secretariat for Police Service",
+      "sourceLabel": "Civilian Secretariat for Police Service",
+      "kind": "national body",
+      "country": "ZA",
+      "sphere": "national",
+      "directoryUrl": "https://www.gov.za/about-government/contact-directory/departments/civilian-secretariat-police-service",
+      "sourceUrl": "https://www.gov.za/about-government/contact-directory/national-government",
+      "asOf": "2026-11-13"
+    },
+    {
+      "name": "Communications and Digital Technologies",
+      "sourceLabel": "Communications and Digital Technologies [Department of ]",
+      "kind": "department",
+      "country": "ZA",
+      "sphere": "national",
+      "directoryUrl": "https://www.gov.za/about-government/contact-directory/departments/communications-and-digital-technologies-department",
+      "sourceUrl": "https://www.gov.za/about-government/contact-directory/national-government",
+      "asOf": "2026-11-13"
+    },
+    {
+      "name": "Cooperative Governance",
+      "sourceLabel": "Cooperative Governance [ Department of ]",
+      "kind": "department",
+      "country": "ZA",
+      "sphere": "national",
+      "directoryUrl": "https://www.gov.za/about-government/contact-directory/departments/cooperative-governance-department",
+      "sourceUrl": "https://www.gov.za/about-government/contact-directory/national-government",
+      "asOf": "2026-11-13"
+    },
+    {
+      "name": "Correctional Services",
+      "sourceLabel": "Correctional Services [ Department of ]",
+      "kind": "department",
+      "country": "ZA",
+      "sphere": "national",
+      "directoryUrl": "https://www.gov.za/about-government/contact-directory/departments/correctional-services-department",
+      "sourceUrl": "https://www.gov.za/about-government/contact-directory/national-government",
+      "asOf": "2026-11-13"
+    },
+    {
+      "name": "Defence",
+      "sourceLabel": "Defence [ Department of ]",
+      "kind": "department",
+      "country": "ZA",
+      "sphere": "national",
+      "directoryUrl": "https://www.gov.za/about-government/contact-directory/departments/defence-department",
+      "sourceUrl": "https://www.gov.za/about-government/contact-directory/national-government",
+      "asOf": "2026-11-13"
+    },
+    {
+      "name": "Electricity and Energy",
+      "sourceLabel": "Electricity and Energy [ Department of ]",
+      "kind": "department",
+      "country": "ZA",
+      "sphere": "national",
+      "directoryUrl": "https://www.gov.za/about-government/contact-directory/departments/electricity-and-energy-department",
+      "sourceUrl": "https://www.gov.za/about-government/contact-directory/national-government",
+      "asOf": "2026-11-13"
+    },
+    {
+      "name": "Employment and Labour",
+      "sourceLabel": "Employment and Labour [Department of]",
+      "kind": "department",
+      "country": "ZA",
+      "sphere": "national",
+      "directoryUrl": "https://www.gov.za/about-government/contact-directory/departments/employment-and-labour-department",
+      "sourceUrl": "https://www.gov.za/about-government/contact-directory/national-government",
+      "asOf": "2026-11-13"
+    },
+    {
+      "name": "Forestry, Fisheries and the Environment",
+      "sourceLabel": "Forestry, Fisheries and the Environment [Department of ]",
+      "kind": "department",
+      "country": "ZA",
+      "sphere": "national",
+      "directoryUrl": "https://www.gov.za/about-government/contact-directory/departments/forestry-fisheries-and-environment-department",
+      "sourceUrl": "https://www.gov.za/about-government/contact-directory/national-government",
+      "asOf": "2026-11-13"
+    },
+    {
+      "name": "Government Communication and Information System",
+      "sourceLabel": "Government Communication and Information System",
+      "kind": "national body",
+      "country": "ZA",
+      "sphere": "national",
+      "directoryUrl": "https://www.gov.za/about-government/contact-directory/departments/government-communication-and-information-system",
+      "sourceUrl": "https://www.gov.za/about-government/contact-directory/national-government",
+      "asOf": "2026-11-13"
+    },
+    {
+      "name": "Government Pensions Administration Agency (GPAA)",
+      "sourceLabel": "Government Pensions Administration Agency (GPAA)",
+      "kind": "national body",
+      "country": "ZA",
+      "sphere": "national",
+      "directoryUrl": "https://www.gov.za/about-government/contact-directory/departments/government-pensions-administration-agency-gpaa",
+      "sourceUrl": "https://www.gov.za/about-government/contact-directory/national-government",
+      "asOf": "2026-11-13"
+    },
+    {
+      "name": "Government Printing Works (GPW)",
+      "sourceLabel": "Government Printing Works (GPW)",
+      "kind": "national body",
+      "country": "ZA",
+      "sphere": "national",
+      "directoryUrl": "https://www.gov.za/about-government/contact-directory/departments/government-printing-works-gpw",
+      "sourceUrl": "https://www.gov.za/about-government/contact-directory/national-government",
+      "asOf": "2026-11-13"
+    },
+    {
+      "name": "Health",
+      "sourceLabel": "Health [ Department of ]",
+      "kind": "department",
+      "country": "ZA",
+      "sphere": "national",
+      "directoryUrl": "https://www.gov.za/about-government/contact-directory/departments/health-department",
+      "sourceUrl": "https://www.gov.za/about-government/contact-directory/national-government",
+      "asOf": "2026-11-13"
+    },
+    {
+      "name": "Higher Education and Training",
+      "sourceLabel": "Higher Education and Training [ Department of ]",
+      "kind": "department",
+      "country": "ZA",
+      "sphere": "national",
+      "directoryUrl": "https://www.gov.za/about-government/contact-directory/departments/higher-education-and-training-department",
+      "sourceUrl": "https://www.gov.za/about-government/contact-directory/national-government",
+      "asOf": "2026-11-13"
+    },
+    {
+      "name": "Home Affairs",
+      "sourceLabel": "Home Affairs [ Department of ]",
+      "kind": "department",
+      "country": "ZA",
+      "sphere": "national",
+      "directoryUrl": "https://www.gov.za/about-government/contact-directory/departments/home-affairs-department",
+      "sourceUrl": "https://www.gov.za/about-government/contact-directory/national-government",
+      "asOf": "2026-11-13"
+    },
+    {
+      "name": "Human Settlements",
+      "sourceLabel": "Human Settlements [ Department of ]",
+      "kind": "department",
+      "country": "ZA",
+      "sphere": "national",
+      "directoryUrl": "https://www.gov.za/about-government/contact-directory/departments/human-settlements-department",
+      "sourceUrl": "https://www.gov.za/about-government/contact-directory/national-government",
+      "asOf": "2026-11-13"
+    },
+    {
+      "name": "Independent Police Investigative Directorate (IPID)",
+      "sourceLabel": "Independent Police Investigative Directorate (IPID)",
+      "kind": "national body",
+      "country": "ZA",
+      "sphere": "national",
+      "directoryUrl": "https://www.gov.za/about-government/contact-directory/departments/independent-police-investigative-directorate-ipid",
+      "sourceUrl": "https://www.gov.za/about-government/contact-directory/national-government",
+      "asOf": "2026-11-13"
+    },
+    {
+      "name": "International Relations and Cooperation",
+      "sourceLabel": "International Relations and Cooperation [ Department of ]",
+      "kind": "department",
+      "country": "ZA",
+      "sphere": "national",
+      "directoryUrl": "https://www.gov.za/about-government/contact-directory/departments/international-relations-and-cooperation-department",
+      "sourceUrl": "https://www.gov.za/about-government/contact-directory/national-government",
+      "asOf": "2026-11-13"
+    },
+    {
+      "name": "Justice and Constitutional Development",
+      "sourceLabel": "Justice and Constitutional Development [ Department of ]",
+      "kind": "department",
+      "country": "ZA",
+      "sphere": "national",
+      "directoryUrl": "https://www.gov.za/about-government/contact-directory/departments/justice-and-constitutional-development-department",
+      "sourceUrl": "https://www.gov.za/about-government/contact-directory/national-government",
+      "asOf": "2026-11-13"
+    },
+    {
+      "name": "Land Reform and Rural Development",
+      "sourceLabel": "Land Reform and Rural Development [ Department of ]",
+      "kind": "department",
+      "country": "ZA",
+      "sphere": "national",
+      "directoryUrl": "https://www.gov.za/about-government/contact-directory/departments/land-reform-and-rural-development-department",
+      "sourceUrl": "https://www.gov.za/about-government/contact-directory/national-government",
+      "asOf": "2026-11-13"
+    },
+    {
+      "name": "Military Veterans",
+      "sourceLabel": "Military Veterans [ Department of ]",
+      "kind": "department",
+      "country": "ZA",
+      "sphere": "national",
+      "directoryUrl": "https://www.gov.za/about-government/contact-directory/departments/military-veterans-department",
+      "sourceUrl": "https://www.gov.za/about-government/contact-directory/national-government",
+      "asOf": "2026-11-13"
+    },
+    {
+      "name": "Mineral and Petroleum Resources",
+      "sourceLabel": "Mineral and Petroleum Resources [ Department of ]",
+      "kind": "department",
+      "country": "ZA",
+      "sphere": "national",
+      "directoryUrl": "https://www.gov.za/about-government/contact-directory/departments/mineral-and-petroleum-resources-department",
+      "sourceUrl": "https://www.gov.za/about-government/contact-directory/national-government",
+      "asOf": "2026-11-13"
+    },
+    {
+      "name": "National School of Government",
+      "sourceLabel": "National School of Government",
+      "kind": "national body",
+      "country": "ZA",
+      "sphere": "national",
+      "directoryUrl": "https://www.gov.za/about-government/contact-directory/departments/national-school-government",
+      "sourceUrl": "https://www.gov.za/about-government/contact-directory/national-government",
+      "asOf": "2026-11-13"
+    },
+    {
+      "name": "National Treasury",
+      "sourceLabel": "National Treasury",
+      "kind": "national body",
+      "country": "ZA",
+      "sphere": "national",
+      "directoryUrl": "https://www.gov.za/about-government/contact-directory/departments/national-treasury",
+      "sourceUrl": "https://www.gov.za/about-government/contact-directory/national-government",
+      "asOf": "2026-11-13"
+    },
+    {
+      "name": "Planning, Monitoring and Evaluation",
+      "sourceLabel": "Planning, Monitoring and Evaluation [ Department of ]",
+      "kind": "department",
+      "country": "ZA",
+      "sphere": "national",
+      "directoryUrl": "https://www.gov.za/about-government/contact-directory/departments/planning-monitoring-and-evaluation-department",
+      "sourceUrl": "https://www.gov.za/about-government/contact-directory/national-government",
+      "asOf": "2026-11-13"
+    },
+    {
+      "name": "Presidency [ The Department in ]",
+      "sourceLabel": "Presidency [ The Department in ]",
+      "kind": "department",
+      "country": "ZA",
+      "sphere": "national",
+      "directoryUrl": "https://www.gov.za/about-government/contact-directory/departments/presidency-department",
+      "sourceUrl": "https://www.gov.za/about-government/contact-directory/national-government",
+      "asOf": "2026-11-13"
+    },
+    {
+      "name": "Public Service and Administration",
+      "sourceLabel": "Public Service and Administration [ Department of ]",
+      "kind": "department",
+      "country": "ZA",
+      "sphere": "national",
+      "directoryUrl": "https://www.gov.za/about-government/contact-directory/departments/public-service-and-administration-department",
+      "sourceUrl": "https://www.gov.za/about-government/contact-directory/national-government",
+      "asOf": "2026-11-13"
+    },
+    {
+      "name": "Public Works and Infrastructure",
+      "sourceLabel": "Public Works and Infrastructure [ Department of ]",
+      "kind": "department",
+      "country": "ZA",
+      "sphere": "national",
+      "directoryUrl": "https://www.gov.za/about-government/contact-directory/departments/public-works-and-infrastructure-department",
+      "sourceUrl": "https://www.gov.za/about-government/contact-directory/national-government",
+      "asOf": "2026-11-13"
+    },
+    {
+      "name": "Science, Technology and Innovation",
+      "sourceLabel": "Science, Technology and Innovation [ Department of ]",
+      "kind": "department",
+      "country": "ZA",
+      "sphere": "national",
+      "directoryUrl": "https://www.gov.za/about-government/contact-directory/departments/science-technology-and-innovation-department",
+      "sourceUrl": "https://www.gov.za/about-government/contact-directory/national-government",
+      "asOf": "2026-11-13"
+    },
+    {
+      "name": "Small Business Development",
+      "sourceLabel": "Small Business Development [ Department of ]",
+      "kind": "department",
+      "country": "ZA",
+      "sphere": "national",
+      "directoryUrl": "https://www.gov.za/about-government/contact-directory/departments/small-business-development-department",
+      "sourceUrl": "https://www.gov.za/about-government/contact-directory/national-government",
+      "asOf": "2026-11-13"
+    },
+    {
+      "name": "Social Development",
+      "sourceLabel": "Social Development [ Department of ]",
+      "kind": "department",
+      "country": "ZA",
+      "sphere": "national",
+      "directoryUrl": "https://www.gov.za/about-government/contact-directory/departments/social-development-department",
+      "sourceUrl": "https://www.gov.za/about-government/contact-directory/national-government",
+      "asOf": "2026-11-13"
+    },
+    {
+      "name": "South African Police Service (SAPS)",
+      "sourceLabel": "South African Police Service (SAPS)",
+      "kind": "national body",
+      "country": "ZA",
+      "sphere": "national",
+      "directoryUrl": "https://www.gov.za/about-government/contact-directory/departments/south-african-police-service-saps",
+      "sourceUrl": "https://www.gov.za/about-government/contact-directory/national-government",
+      "asOf": "2026-11-13"
+    },
+    {
+      "name": "South African Revenue Service (SARS)",
+      "sourceLabel": "South African Revenue Service (SARS)",
+      "kind": "national body",
+      "country": "ZA",
+      "sphere": "national",
+      "directoryUrl": "https://www.gov.za/about-government/contact-directory/departments/south-african-revenue-service-sars",
+      "sourceUrl": "https://www.gov.za/about-government/contact-directory/national-government",
+      "asOf": "2026-11-13"
+    },
+    {
+      "name": "Sport, Arts and Culture",
+      "sourceLabel": "Sport, Arts and Culture [ Department of ]",
+      "kind": "department",
+      "country": "ZA",
+      "sphere": "national",
+      "directoryUrl": "https://www.gov.za/about-government/contact-directory/departments/sport-arts-and-culture-department",
+      "sourceUrl": "https://www.gov.za/about-government/contact-directory/national-government",
+      "asOf": "2026-11-13"
+    },
+    {
+      "name": "State Security",
+      "sourceLabel": "State Security [Department of]",
+      "kind": "department",
+      "country": "ZA",
+      "sphere": "national",
+      "directoryUrl": "https://www.gov.za/about-government/contact-directory/departments/state-security-department",
+      "sourceUrl": "https://www.gov.za/about-government/contact-directory/national-government",
+      "asOf": "2026-11-13"
+    },
+    {
+      "name": "Statistics South Africa [ Stats SA ]",
+      "sourceLabel": "Statistics South Africa [ Stats SA ]",
+      "kind": "national body",
+      "country": "ZA",
+      "sphere": "national",
+      "directoryUrl": "https://www.gov.za/about-government/contact-directory/departments/statistics-south-africa-stats-sa",
+      "sourceUrl": "https://www.gov.za/about-government/contact-directory/national-government",
+      "asOf": "2026-11-13"
+    },
+    {
+      "name": "Tourism",
+      "sourceLabel": "Tourism [ Department of ]",
+      "kind": "department",
+      "country": "ZA",
+      "sphere": "national",
+      "directoryUrl": "https://www.gov.za/about-government/contact-directory/departments/tourism-department",
+      "sourceUrl": "https://www.gov.za/about-government/contact-directory/national-government",
+      "asOf": "2026-11-13"
+    },
+    {
+      "name": "Trade, Industry and Competition",
+      "sourceLabel": "Trade, Industry and Competition [ Department of ]",
+      "kind": "department",
+      "country": "ZA",
+      "sphere": "national",
+      "directoryUrl": "https://www.gov.za/about-government/contact-directory/departments/trade-industry-and-competition-department",
+      "sourceUrl": "https://www.gov.za/about-government/contact-directory/national-government",
+      "asOf": "2026-11-13"
+    },
+    {
+      "name": "Traditional Affairs",
+      "sourceLabel": "Traditional Affairs [ Department of ]",
+      "kind": "department",
+      "country": "ZA",
+      "sphere": "national",
+      "directoryUrl": "https://www.gov.za/about-government/contact-directory/departments/traditional-affairs-department",
+      "sourceUrl": "https://www.gov.za/about-government/contact-directory/national-government",
+      "asOf": "2026-11-13"
+    },
+    {
+      "name": "Transport",
+      "sourceLabel": "Transport [ Department of ]",
+      "kind": "department",
+      "country": "ZA",
+      "sphere": "national",
+      "directoryUrl": "https://www.gov.za/about-government/contact-directory/departments/transport-department",
+      "sourceUrl": "https://www.gov.za/about-government/contact-directory/national-government",
+      "asOf": "2026-11-13"
+    },
+    {
+      "name": "Water and Sanitation",
+      "sourceLabel": "Water and Sanitation [ Department of ]",
+      "kind": "department",
+      "country": "ZA",
+      "sphere": "national",
+      "directoryUrl": "https://www.gov.za/about-government/contact-directory/departments/water-and-sanitation-department",
+      "sourceUrl": "https://www.gov.za/about-government/contact-directory/national-government",
+      "asOf": "2026-11-13"
+    },
+    {
+      "name": "Women, Youth and Persons with Disabilities",
+      "sourceLabel": "Women, Youth and Persons with Disabilities [ Department of ]",
+      "kind": "department",
+      "country": "ZA",
+      "sphere": "national",
+      "directoryUrl": "https://www.gov.za/about-government/contact-directory/departments/women-youth-and-persons-disabilities-department",
+      "sourceUrl": "https://www.gov.za/about-government/contact-directory/national-government",
+      "asOf": "2026-11-13"
+    }
+  ]
+}

@@ -1,0 +1,137 @@
+[
+  {
+    "id": "eastern-cape",
+    "name": "Eastern Cape",
+    "country": "ZA",
+    "entityId": "za-eastern-cape",
+    "center": [
+      26.464799897500058,
+      -32.10782998549996
+    ],
+    "capital": "Bhisho",
+    "sourceIds": [
+      "za-provinces-directory",
+      "province-boundaries"
+    ]
+  },
+  {
+    "id": "free-state",
+    "name": "Free State",
+    "country": "ZA",
+    "entityId": "za-free-state",
+    "center": [
+      27.065874977000036,
+      -28.681335000499956
+    ],
+    "capital": "Bloemfontein",
+    "sourceIds": [
+      "za-provinces-directory",
+      "province-boundaries"
+    ]
+  },
+  {
+    "id": "gauteng",
+    "name": "Gauteng",
+    "country": "ZA",
+    "entityId": "za-gauteng",
+    "center": [
+      28.12738000150003,
+      -26.01665100049998
+    ],
+    "capital": "Johannesburg",
+    "sourceIds": [
+      "za-provinces-directory",
+      "province-boundaries"
+    ]
+  },
+  {
+    "id": "kwazulu-natal",
+    "name": "KwaZulu-Natal",
+    "country": "ZA",
+    "entityId": "za-kwazulu-natal",
+    "center": [
+      30.909305958500056,
+      -28.943715001499953
+    ],
+    "capital": "Pietermaritzburg",
+    "sourceIds": [
+      "za-provinces-directory",
+      "province-boundaries"
+    ]
+  },
+  {
+    "id": "limpopo",
+    "name": "Limpopo",
+    "country": "ZA",
+    "entityId": "za-limpopo",
+    "center": [
+      29.146067332500053,
+      -23.77395003999996
+    ],
+    "capital": "Polokwane",
+    "sourceIds": [
+      "za-provinces-directory",
+      "province-boundaries"
+    ]
+  },
+  {
+    "id": "mpumalanga",
+    "name": "Mpumalanga",
+    "country": "ZA",
+    "entityId": "za-mpumalanga",
+    "center": [
+      30.138527500500032,
+      -25.743630001999946
+    ],
+    "capital": "Mbombela",
+    "sourceIds": [
+      "za-provinces-directory",
+      "province-boundaries"
+    ]
+  },
+  {
+    "id": "northern-cape",
+    "name": "Northern Cape",
+    "country": "ZA",
+    "entityId": "za-northern-cape",
+    "center": [
+      21.00061000050002,
+      -28.855427501499946
+    ],
+    "capital": "Kimberley",
+    "sourceIds": [
+      "za-provinces-directory",
+      "province-boundaries"
+    ]
+  },
+  {
+    "id": "north-west",
+    "name": "North West",
+    "country": "ZA",
+    "entityId": "za-north-west",
+    "center": [
+      25.463679998500055,
+      -26.37491949799997
+    ],
+    "capital": "Mahikeng",
+    "sourceIds": [
+      "za-provinces-directory",
+      "province-boundaries"
+    ]
+  },
+  {
+    "id": "western-cape",
+    "name": "Western Cape",
+    "country": "ZA",
+    "entityId": "za-western-cape",
+    "center": [
+      20.98999500150002,
+      -32.63221500049994
+    ],
+    "capital": "Cape Town",
+    "sourceIds": [
+      "za-provinces-directory",
+      "province-boundaries"
+    ]
+  }
+]

@@ -1,0 +1,358 @@
+{
+  "retrievedAt": "2026-11-13",
+  "period": "2014–2024",
+  "indicators": [
+    {
+      "code": "SP.POP.TOTL",
+      "name": "Population, total",
+      "unit": "people",
+      "description": "De facto population: all residents regardless of legal status or citizenship. Values are midyear estimates. Midyear estimates are not census-date headcounts. In particular, WDI South Africa 2022 population differs from Stats SA Census 2022. Keep these datasets separate.",
+      "sourceIds": [
+        "wdi-sp-pop-totl"
+      ],
+      "observations": [
+        {
+          "country": "BW",
+          "year": 2024,
+          "value": 2521139
+        },
+        {
+          "country": "BW",
+          "year": 2023,
+          "value": 2480244
+        },
+        {
+          "country": "BW",
+          "year": 2022,
+          "value": 2439892
+        },
+        {
+          "country": "BW",
+          "year": 2021,
+          "value": 2401441
+        },
+        {
+          "country": "BW",
+          "year": 2020,
+          "value": 2365894
+        },
+        {
+          "country": "BW",
+          "year": 2019,
+          "value": 2332083
+        },
+        {
+          "country": "BW",
+          "year": 2018,
+          "value": 2299141
+        },
+        {
+          "country": "BW",
+          "year": 2017,
+          "value": 2266747
+        },
+        {
+          "country": "BW",
+          "year": 2016,
+          "value": 2234776
+        },
+        {
+          "country": "BW",
+          "year": 2015,
+          "value": 2203273
+        },
+        {
+          "country": "BW",
+          "year": 2014,
+          "value": 2172044
+        },
+        {
+          "country": "NA",
+          "year": 2024,
+          "value": 3030131
+        },
+        {
+          "country": "NA",
+          "year": 2023,
+          "value": 2963095
+        },
+        {
+          "country": "NA",
+          "year": 2022,
+          "value": 2889662
+        },
+        {
+          "country": "NA",
+          "year": 2021,
+          "value": 2810548
+        },
+        {
+          "country": "NA",
+          "year": 2020,
+          "value": 2728762
+        },
+        {
+          "country": "NA",
+          "year": 2019,
+          "value": 2650494
+        },
+        {
+          "country": "NA",
+          "year": 2018,
+          "value": 2577327
+        },
+        {
+          "country": "NA",
+          "year": 2017,
+          "value": 2506853
+        },
+        {
+          "country": "NA",
+          "year": 2016,
+          "value": 2439213
+        },
+        {
+          "country": "NA",
+          "year": 2015,
+          "value": 2374300
+        },
+        {
+          "country": "NA",
+          "year": 2014,
+          "value": 2312139
+        },
+        {
+          "country": "ZA",
+          "year": 2024,
+          "value": 64007187
+        },
+        {
+          "country": "ZA",
+          "year": 2023,
+          "value": 63212384
+        },
+        {
+          "country": "ZA",
+          "year": 2022,
+          "value": 62378410
+        },
+        {
+          "country": "ZA",
+          "year": 2021,
+          "value": 61502603
+        },
+        {
+          "country": "ZA",
+          "year": 2020,
+          "value": 60562381
+        },
+        {
+          "country": "ZA",
+          "year": 2019,
+          "value": 59587885
+        },
+        {
+          "country": "ZA",
+          "year": 2018,
+          "value": 58613001
+        },
+        {
+          "country": "ZA",
+          "year": 2017,
+          "value": 57635162
+        },
+        {
+          "country": "ZA",
+          "year": 2016,
+          "value": 57259551
+        },
+        {
+          "country": "ZA",
+          "year": 2015,
+          "value": 56723537
+        },
+        {
+          "country": "ZA",
+          "year": 2014,
+          "value": 55594838
+        }
+      ]
+    },
+    {
+      "code": "NY.GDP.MKTP.KD.ZG",
+      "name": "GDP growth (annual %)",
+      "unit": "%",
+      "description": "Percentage change over each previous year of GDP at constant prices (base year 2015), expressed in United States dollars, as defined by the current WDI indicator metadata. Annual growth rates measure change, not economic size or household income. Historical records can be revised.",
+      "sourceIds": [
+        "wdi-ny-gdp-mktp-kd-zg"
+      ],
+      "observations": [
+        {
+          "country": "BW",
+          "year": 2024,
+          "value": -2.77988981666252
+        },
+        {
+          "country": "BW",
+          "year": 2023,
+          "value": 3.20806812224438
+        },
+        {
+          "country": "BW",
+          "year": 2022,
+          "value": 5.48601706446772
+        },
+        {
+          "country": "BW",
+          "year": 2021,
+          "value": 11.9162724376008
+        },
+        {
+          "country": "BW",
+          "year": 2020,
+          "value": -8.72888243996397
+        },
+        {
+          "country": "BW",
+          "year": 2019,
+          "value": 3.0317733945467
+        },
+        {
+          "country": "BW",
+          "year": 2018,
+          "value": 4.18869237159223
+        },
+        {
+          "country": "BW",
+          "year": 2017,
+          "value": 4.11437856445083
+        },
+        {
+          "country": "BW",
+          "year": 2016,
+          "value": 7.20442475914267
+        },
+        {
+          "country": "BW",
+          "year": 2015,
+          "value": -4.85132507409779
+        },
+        {
+          "country": "BW",
+          "year": 2014,
+          "value": 5.69714422072884
+        },
+        {
+          "country": "NA",
+          "year": 2024,
+          "value": 3.77851723267591
+        },
+        {
+          "country": "NA",
+          "year": 2023,
+          "value": 4.32498048866805
+        },
+        {
+          "country": "NA",
+          "year": 2022,
+          "value": 5.3987247803654
+        },
+        {
+          "country": "NA",
+          "year": 2021,
+          "value": 3.60382919248703
+        },
+        {
+          "country": "NA",
+          "year": 2020,
+          "value": -8.10140201443319
+        },
+        {
+          "country": "NA",
+          "year": 2019,
+          "value": -0.839152163419357
+        },
+        {
+          "country": "NA",
+          "year": 2018,
+          "value": 1.05993949860752
+        },
+        {
+          "country": "NA",
+          "year": 2017,
+          "value": -1.02724808856709
+        },
+        {
+          "country": "NA",
+          "year": 2016,
+          "value": 0.0337944502063294
+        },
+        {
+          "country": "NA",
+          "year": 2015,
+          "value": 4.26417453763675
+        },
+        {
+          "country": "NA",
+          "year": 2014,
+          "value": 6.09251915977956
+        },
+        {
+          "country": "ZA",
+          "year": 2024,
+          "value": 0.534843531905139
+        },
+        {
+          "country": "ZA",
+          "year": 2023,
+          "value": 0.80610455095804
+        },
+        {
+          "country": "ZA",
+          "year": 2022,
+          "value": 2.05813661692193
+        },
+        {
+          "country": "ZA",
+          "year": 2021,
+          "value": 4.85864865060148
+        },
+        {
+          "country": "ZA",
+          "year": 2020,
+          "value": -6.1689177146757
+        },
+        {
+          "country": "ZA",
+          "year": 2019,
+          "value": 0.25993557687633
+        },
+        {
+          "country": "ZA",
+          "year": 2018,
+          "value": 1.55678384721676
+        },
+        {
+          "country": "ZA",
+          "year": 2017,
+          "value": 1.15794695181735
+        },
+        {
+          "country": "ZA",
+          "year": 2016,
+          "value": 0.664552307858116
+        },
+        {
+          "country": "ZA",
+          "year": 2015,
+          "value": 1.32186223678229
+        },
+        {
+          "country": "ZA",
+          "year": 2014,
+          "value": 1.41382645223793
+        }
+      ]
+    }
+  ]
+}
