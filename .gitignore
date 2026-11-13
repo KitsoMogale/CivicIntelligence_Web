@@ -43,3 +43,4 @@ backend/.venv/
 /.research/
 /.data-backups/
 /.next-verify/
+/public/vendor/maplibre/

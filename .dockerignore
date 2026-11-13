@@ -1,5 +1,10 @@
 node_modules
 .next
+.next-verify
+.research
+.data-backups
+.pytest_cache
+*.tsbuildinfo
 .git
 .npm-cache
 .uv-cache

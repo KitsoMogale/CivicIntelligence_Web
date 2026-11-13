@@ -10,6 +10,7 @@ import {
 import { modeSchema } from "./actions";
 import type { Country, Domain, Mode } from "./types";
 import { networkSchema, type NetworkQuery } from "./network";
+import { wardById, type BoundaryEdition } from "./boundaries";
 import {
   cameraSchema,
   densitySchema,
@@ -49,6 +50,9 @@ export type Exploration = {
   splitRatio: number;
   networkTrace: NetworkQuery | null;
   municipalityLevel: "local" | "district";
+  boundaryEdition: BoundaryEdition;
+  basemap: "reference" | "streets";
+  selectedWardId: string | null;
   filters: { query: string; entityType: string; relationshipType: string };
   selectionIds: string[];
   isolatedEntityIds: string[];
@@ -81,6 +85,9 @@ export const initialExploration: Exploration = {
   splitRatio: 50,
   networkTrace: null,
   municipalityLevel: "local",
+  boundaryEdition: "mdb-2026",
+  basemap: "streets",
+  selectedWardId: null,
   filters: { query: "", entityType: "", relationshipType: "" },
   selectionIds: [],
   isolatedEntityIds: [],
@@ -95,6 +102,9 @@ const schema = z.object({
   splitRatio: z.number().min(25).max(75).default(50),
   networkTrace: networkSchema.nullable().default(null),
   municipalityLevel: z.enum(["local", "district"]).default("local"),
+  boundaryEdition: z.enum(["legacy-2020", "mdb-2026"]).default("legacy-2020"),
+  basemap: z.enum(["reference", "streets"]).default("reference"),
+  selectedWardId: z.string().nullable().default(null),
   filters: filterSchema.default({
     query: "",
     entityType: "",
@@ -136,6 +146,11 @@ export function normalizeExploration(input: unknown): Exploration {
   const value = schema.parse(input);
   const country = countries.find((c) => c.code === value.country.code);
   if (!country) throw new Error("Unknown country in exploration");
+  if (
+    value.selectedWardId &&
+    (!wardById(value.selectedWardId) || country.code !== "ZA")
+  )
+    throw new Error("Unknown ward or ward outside active country");
   for (const id of [
     value.selectedEntity,
     value.region,
@@ -194,6 +209,11 @@ export function normalizeExploration(input: unknown): Exploration {
   const layers = value.layers ?? legacyLayers(value);
   return {
     ...value,
+    selectedWardId:
+      value.boundaryEdition === "mdb-2026" &&
+      wardById(value.selectedWardId)?.municipalityId === value.region
+        ? value.selectedWardId
+        : null,
     ...legacyFlags(layers),
     country,
     layers,

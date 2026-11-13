@@ -10,14 +10,15 @@ The application uses a reviewed, versioned catalogue. A source citation records 
 - `data/geography-assets.json`: source vintage, feature counts and SHA-256 hashes for the two public municipality files.
 - `data/provincial-indicators.json`: six provincial measures / 54 observations, definitions, periods, denominators and caveats.
 
-The release digest covers seven JSON files. Geometry asset hashes bind the public municipality files to that release. Preserve the original geometry licenses and historical vintage. Education rates use adults **20+**, not 25+. Medical-aid coverage measures financial coverage, not facility capacity or care quality. Table transcription and calculation evidence is retained in `data/provenance/provincial-indicator-evidence.md`. Stats SA reuse terms require attribution and disclosure of independent processing; they are not described as Creative Commons.
+The release digest covers twelve JSON files, including official geometry asset hashes and the repair record. Geometry asset hashes bind the public municipality files to that release. Preserve the original geometry licenses and historical vintage. Education rates use adults **20+**, not 25+. Medical-aid coverage measures financial coverage, not facility capacity or care quality. Table transcription and calculation evidence is retained in `data/provenance/provincial-indicator-evidence.md`. Stats SA reuse terms require attribution and disclosure of independent processing; they are not described as Creative Commons.
 
-The database seed stores nine province and 257 municipality geometries, plus eight indicator records (two national series and six province overlays). `node scripts/db-check.mjs` applies the seed twice and verifies valid positive-area geometry against the isolated development database.
+The database seed retains nine province and 257 historical municipality geometries, plus eight indicator records (two national series and six province overlays). `node scripts/db-check.mjs` applies the seed twice and verifies valid positive-area geometry against the isolated development database.
+
 - `data/indicators.json`: normalized World Bank observations, preserving source precision and missing values.
 - `data/events.json`: sourced dates; year-only events retain year precision.
 - `data/provenance/`: original Treasury directory/change history, national directory metadata, Census table transcription, raw WDI responses, mining editorial notes and operator coordinate provenance.
 - `public/data/`: country/province/city geography with separate metadata and license notes.
-- `data/release.json`: a digest of the four catalogue files, record counts and release version.
+- `data/release.json`: a digest of the twelve reviewed catalogue/index/manifest files, record counts and release version.
 
 Dates distinguish retrieval, publication and ownership/operating reporting dates. A recent retrieval date does not make a historic disclosure current.
 
@@ -64,6 +65,18 @@ Use the exact primary source URLs recorded in `data/provenance` and the source r
 - **Census:** preserve the release vintage and table number. Do not mix population estimates with census-date counts.
 - **Geography:** retain the pinned source and attribution. Province geometry is a simplified 2020 boundary vintage. Original source label/code normalization is recorded.
 - **Infrastructure:** preserve the purpose and date of each published coordinate. Project, property-fence and station-centre points are different locators. Duvha remains a province locator pending source-requested verification.
+
+## Official municipality and ward refresh
+
+The reviewed MDB 2026 export is indexed in `data/boundary-release.json`, `data/boundary-assets.json`, `data/municipal-geography-2026.json` and `data/ward-index.json`. Raw source URLs, queries, SHA-256 digests, retrieval dates and custom publisher terms are in `data/provenance/mdb-2026.json`. MDB terms are not Creative Commons. Preserve attribution and the distinction between publisher data and this derived export.
+
+Use the revised `MDB_Wards_2026` service (4,485 features), not the superseded May `Wards2026` snapshot (4,488). The Kopanong stay is corroborated by the IEC source in the register. Do not invent wards to fill official number gaps. DATE/DATE_/DATE_EFFEC = 2026-11-04 is the source attribute, not retrieval or publication time.
+
+Place hash-verified raw downloads in a staging directory and run `node scripts/import-mdb.mjs <directory>`. Full coordinates and attributes are retained, split into 478 files. A known self-intersection in Ward 52308005 uses a pinned ST_MakeValid repair guarded by the original geometry digest; `data/provenance/mdb-geometry-repairs.json` documents unchanged unique coordinate pairs and geodesic area. The publisher original is downloadable separately. Changed source geometry must be reviewed before reusing a repair.
+
+Run `python -m backend.check_boundaries` with DATABASE_URL pointing at the local PostGIS database: its temporary table verifies 4,750 display geometries, positive areas and ward interior points within their declared local parents. This is a separate audit from historical database seeding. The API defaults remain historical for compatibility; use `/regions/{id}/boundary?edition=mdb-2026`, `/wards`, `/wards/{id}/boundary` and `/boundary-editions` for current-edition assets.
+
+OpenStreetMap tiles are requested only for ordinary visible human map use. Keep attribution, normal browser caching and referrers. Do not prefetch, bulk-download, proxy, cache-bust or automate pan/zoom against the public tile server. All browser test scripts use synthetic tiles.
 
 ## Data limitations to keep visible
 

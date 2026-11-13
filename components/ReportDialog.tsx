@@ -107,6 +107,14 @@ export default function ReportDialog({ close }: { close: () => void }) {
         (id) => refs.add(id),
       );
     }
+    if (s.basemap === "streets") refs.add("openstreetmap");
+    if (s.boundaryEdition === "mdb-2026" && s.country.code === "ZA") {
+      refs.add("mdb-municipalities-2026");
+      if (s.selectedWardId) {
+        refs.add("mdb-wards-2026");
+        refs.add("iec-kopanong-2026");
+      }
+    }
     full.provincialMetric?.sourceIds.forEach((id) => refs.add(id));
     return {
       ...full,

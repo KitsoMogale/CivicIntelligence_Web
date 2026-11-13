@@ -1,3 +1,4 @@
+import { mockStreetTiles } from "./browser-map-fixtures.mjs";
 import { chromium } from "playwright-core";
 import fs from "node:fs/promises";
 import assert from "node:assert/strict";
@@ -57,6 +58,7 @@ try {
     acceptDownloads: true,
     reducedMotion: "reduce",
   });
+  await mockStreetTiles(context);
   const page = await context.newPage();
   observe(page);
   await page.goto(base, { waitUntil: "domcontentloaded" });
@@ -447,6 +449,7 @@ try {
     hasTouch: true,
     reducedMotion: "reduce",
   });
+  await mockStreetTiles(mobileContext);
   const mobile = await mobileContext.newPage();
   observe(mobile);
   await mobile.goto(base, { waitUntil: "domcontentloaded" });

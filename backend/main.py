@@ -12,6 +12,7 @@ from fastapi import FastAPI, HTTPException, Query
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, ConfigDict, Field, field_validator
 from backend.catalog import SEED, REGIONS, INDICATORS, EVENTS, ROOT, MUNICIPALITIES, PROVINCIAL_METRICS, catalog_digest
+from backend.catalog import OFFICIAL_MUNICIPALITIES, WARDS, BOUNDARY_RELEASE
 app = FastAPI(title="Civic Intelligence Knowledge API", version="0.2.0")
 app.add_middleware(CORSMiddleware, allow_origins=[os.getenv("APP_ORIGIN", "http://127.0.0.1:3000")], allow_methods=["GET", "POST"], allow_headers=["Content-Type"])
 logger = logging.getLogger("civic.api")
@@ -129,7 +130,13 @@ def datasets(country: str = Query("ZA", pattern="^[A-Z]{2}$")):
 def regions(country: str = Query("ZA", pattern="^[A-Z]{2}$")):
     return [r for r in REGIONS if r["country"]==country]
 @app.get("/regions/{region_id}/boundary")
-def region_boundary(region_id: str):
+def region_boundary(region_id: str, edition: Literal["legacy-2020","mdb-2026"]="legacy-2020"):
+    if edition=="mdb-2026":
+        municipality=next((m for m in OFFICIAL_MUNICIPALITIES if m["entityId"]==region_id),None)
+        if not municipality: raise HTTPException(404,"No 2026 municipality boundary for this identifier")
+        level="district" if municipality["category"]=="C" else "local"
+        file=ROOT/"public/data/za-municipalities-2026"/level/(municipality["municipalityCode"]+".geojson")
+        return json.loads(file.read_text(encoding="utf-8"))["features"][0]
     region = next((r for r in [*REGIONS,*MUNICIPALITIES] if r["id"]==region_id),None)
     if not region:
         raise HTTPException(404,"Region not found")
@@ -146,6 +153,18 @@ def region_boundary(region_id: str):
     path = ROOT / "public" / "data" / file
     data = json.loads(path.read_text(encoding="utf-8"))
     return next(f for f in data["features"] if f["properties"]["id"]==region_id)
+@app.get("/boundary-editions")
+def boundary_editions():
+    return {"legacy":"Historical representative 2020 geography","mdb-2026":BOUNDARY_RELEASE}
+@app.get("/wards")
+def ward_records(municipality: str | None=None, country: str=Query("ZA",pattern="^[A-Z]{2}$")):
+    return [w for w in WARDS if country=="ZA" and w["municipalityId"]==municipality]
+@app.get("/wards/{ward_id}/boundary")
+def ward_boundary(ward_id: str):
+    ward=next((w for w in WARDS if w["id"]==ward_id),None)
+    if not ward: raise HTTPException(404,"Ward not found")
+    data=json.loads((ROOT/"public/data/za-wards-2026"/(ward["municipalityCode"]+".geojson")).read_text(encoding="utf-8"))
+    return next(f for f in data["features"] if f["properties"]["wardId"]==ward_id)
 @app.get("/indicators")
 def indicators(country: str | None = Query(None, pattern="^[A-Z]{2}$")):
     values = collection("indicators")

@@ -84,6 +84,7 @@ export function canvasPlaces(
       layer.opacity > 0 &&
       s.camera.zoom >= meta.minZoom &&
       s.camera.zoom <= meta.maxZoom &&
+      (!p.regional || s.camera.zoom < 9) &&
       matchesFilters(p.entity, s.filters) &&
       matchesFilters(p.entity, layer.filters) &&
       inRegion(p.entity, s.region) &&

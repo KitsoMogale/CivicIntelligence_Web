@@ -19,11 +19,11 @@ npm.cmd run build
 npm.cmd start
 ```
 
-A fresh checkout needs `npm.cmd ci` first. Use Node 22 or later. The default experience requires no API key, database, map-token or external tiles.
+A fresh checkout needs `npm.cmd ci` first. Use Node 22 or later. The default experience requires no API key, database, map-token. The default street basemap uses online OpenStreetMap tiles; reference geography works offline.
 
 ## What to explore
 
-- **Map:** select countries, nine provinces and 257 municipality records. Enable Municipal boundaries and choose local/metro or district/metro geography. Boundaries are historical representative-2020 geometry. Five additional hospital, campus/building and harbour locators retain publisher precision notes.
+- **Map:** roads and street names from OpenStreetMap, zoom through level 19, and MDB 2026 municipal/ward boundaries. Enable Ward boundaries, choose a province and local municipality/metro, then click a polygon or choose Focus ward. The revised release contains 4,485 wards and 257 municipality identities. Historical 2020 geometry remains a separate edition.
 - **Split canvas:** choose Layout → Split canvas to keep the map beside a graph or chart. Drag the divider or use its arrow keys; panels stack on mobile. Shared selection, camera, saved views and undo retain context.
 - **Networks:** Explore network supports one to six steps, shortest documented paths, direction and relationship-type controls. Directory connections are optional. The shared evidence-date filter excludes undated edges. Reverse traversal indicates connectivity, not reverse ownership.
 - **Provincial statistics:** Layers offers unemployment and absorption (Q3 2026), real GDP growth (2025), adult education (2022, ages 20+), and medical-aid coverage (2025), alongside Census population/change. Legends and reports retain definitions, denominators, periods and sources; no municipality estimates are interpolated.
@@ -67,10 +67,11 @@ npm.cmd test
 npm.cmd run test:api
 npm.cmd run build
 npm.cmd run test:browser
+npm.cmd run test:accuracy
 node scripts/smoke.mjs
 ```
 
-Browser tests use the installed Microsoft Edge through playwright-core. Set `BROWSER_EXECUTABLE` if needed and `TEST_BASE_URL` for a different local port. Screenshots and JSON reports go to ignored `test-results/`.
+Browser tests use the installed Microsoft Edge through playwright-core. All automated tests mock OSM street tiles to comply with its tile policy. Set `BROWSER_EXECUTABLE` if needed and `TEST_BASE_URL` for a different local port. Screenshots and JSON reports go to ignored `test-results/`.
 
 For an isolated production check while port 3000 is in use:
 
@@ -83,7 +84,7 @@ That server uses `.next-verify` and http://127.0.0.1:3100, leaving the regular b
 
 ## Data and release workflow
 
-The curated catalogue contains **396 entities, 399 relationships, 88 references, nine province regions, 257 municipal boundary identities, two Census datasets, two World Bank indicator series, six provincial metrics (54 observations) and seven dated events**. Navigation and geographic-context links are included in the relationship count.
+The curated catalogue contains **396 entities, 399 relationships, 92 references, nine province regions, 257 municipal boundary identities, 4,485 wards, two Census datasets, two World Bank indicator series, six provincial metrics (54 observations) and seven dated events**. Navigation and geographic-context links are included in the relationship count.
 
 See [data maintenance](docs/data-maintenance.md), [production setup](docs/production.md), [local verification](docs/local-verification.md), and the [product brief](docs/product-brief.md). `data/release.json` records the bundle digest used by database readiness checks.
 
@@ -97,7 +98,7 @@ Institutional knowledge focuses on South Africa; statistical comparisons cover Z
 
 Ownership and operating interests retain their reporting dates and legal-entity level. No current officeholder list, interest rate, asset output or forecasts are invented. Census counts and World Bank midyear estimates are different measures. The published 2011 provincial integers sum to one more person than the release's printed national total; source values are preserved.
 
-Country and province geography is simplified. City points and station project/fence points are representative locators, with precision notes. Mining points and Duvha use province locators where exact positions have not been verified. Licenses and attribution accompany geography and source records.
+Country and province reference geography is simplified. MDB municipality and ward coordinates are unsimplified; a documented self-intersecting ring in Alfred Duma Ward 5 is repaired for display with the original retained. See [map data](public/data/README.md). City points and station project/fence points are representative locators, with precision notes. Mining points and Duvha use province locators where exact positions have not been verified. Licenses and attribution accompany geography and source records.
 
 Investigations and review notes are browser-local; there is no account system or cloud synchronization. Review proposals are checked in the browser and applied through the repository workflow, not through an unauthenticated public write API. There is no collaboration, simulation or 3D view.
 

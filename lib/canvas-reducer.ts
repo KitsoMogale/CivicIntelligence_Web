@@ -14,6 +14,7 @@ import { validateActions, type CanvasAction } from "./actions";
 import { legacyFlags } from "./canvas";
 import { traceNetwork } from "./network";
 import { municipalById } from "./geography";
+import { boundaryMunicipality, boundsCamera, wardById } from "./boundaries";
 export function entityExpansion(state: Exploration, id: string) {
   const expanded = new Set(state.expanded),
     pending = [id],
@@ -30,7 +31,7 @@ export function entityExpansion(state: Exploration, id: string) {
   return [...expanded];
 }
 export function focusCamera(state: Exploration, id: string | null) {
-  const municipality = municipalById(id);
+  const municipality = boundaryMunicipality(id, state.boundaryEdition);
   if (municipality) {
     const bounds = municipality.bounds,
       span = Math.max(bounds[2] - bounds[0], bounds[3] - bounds[1]);
@@ -59,6 +60,22 @@ export function reduceCanvas(state: Exploration, input: unknown): Exploration {
   let next = structuredClone(state);
   for (const a of actions) {
     switch (a.type) {
+      case "SELECT_WARD": {
+        const ward = wardById(a.payload.id)!;
+        next = reduceCanvas(next, [
+          { type: "FOCUS_REGION", payload: { entityId: ward.municipalityId } },
+        ]);
+        next.boundaryEdition = "mdb-2026";
+        next.municipalityLevel = "local";
+        next.selectedWardId = ward.id;
+        next.layers = next.layers.map((l) =>
+          l.id === "wards" || l.id === "municipalities"
+            ? { ...l, visible: true }
+            : l,
+        );
+        next.camera = boundsCamera(ward.bounds);
+        break;
+      }
       case "TRACE_NETWORK": {
         const result = traceNetwork(
           a.payload,
@@ -68,6 +85,7 @@ export function reduceCanvas(state: Exploration, input: unknown): Exploration {
         next.networkTrace = a.payload;
         next.mode = "relationships";
         next.region = null;
+        next.selectedWardId = null;
         next.filters = {
           query: "",
           entityType: "",
@@ -102,6 +120,7 @@ export function reduceCanvas(state: Exploration, input: unknown): Exploration {
                 : "compare"
               : "geographic",
           region: null,
+          selectedWardId: null,
           selectedEntity: null,
           selectedRelationship: null,
           networkTrace: null,
@@ -145,6 +164,7 @@ export function reduceCanvas(state: Exploration, input: unknown): Exploration {
         next = {
           ...next,
           selectedEntity: entity.id,
+          selectedWardId: null,
           selectionIds: [entity.id],
           selectedRelationship: null,
           domain: next.mode === "data" ? "society" : entity.domain,
@@ -159,6 +179,7 @@ export function reduceCanvas(state: Exploration, input: unknown): Exploration {
         next = {
           ...next,
           region: a.payload.entityId,
+          selectedWardId: null,
           mode: next.layout !== "single" ? next.mode : "geographic",
           selectedEntity: a.payload.entityId,
           selectionIds: [a.payload.entityId],
@@ -211,6 +232,13 @@ export function reduceCanvas(state: Exploration, input: unknown): Exploration {
         next.density = a.payload.density;
         break;
       case "SET_LAYER_VISIBILITY":
+        if (a.payload.id === "wards" && a.payload.visible) {
+          next.boundaryEdition = "mdb-2026";
+          next.municipalityLevel = "local";
+          next.layers = next.layers.map((l) =>
+            l.id === "municipalities" ? { ...l, visible: true } : l,
+          );
+        }
         next.layers = next.layers.map((l) =>
           l.id === a.payload.id ? { ...l, visible: a.payload.visible } : l,
         );
@@ -268,6 +296,7 @@ export function reduceCanvas(state: Exploration, input: unknown): Exploration {
         next = {
           ...next,
           selectedEntity: null,
+          selectedWardId: null,
           selectedRelationship: null,
           selectionIds: [],
           highlightedRelationshipIds: [],

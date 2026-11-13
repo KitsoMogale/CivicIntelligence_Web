@@ -4,6 +4,7 @@ import { relationships } from "./knowledge";
 import { networkSchema } from "./network";
 import { metricSchema } from "./statistics";
 import { municipalById } from "./geography";
+import { wardById } from "./boundaries";
 import {
   cameraSchema,
   densitySchema,
@@ -22,6 +23,12 @@ export const modeSchema = z.enum([
   "timeline",
 ]);
 export const actionSchema = z.discriminatedUnion("type", [
+  z
+    .object({
+      type: z.literal("SELECT_WARD"),
+      payload: z.object({ id: z.string() }).strict(),
+    })
+    .strict(),
   z
     .object({ type: z.literal("TRACE_NETWORK"), payload: networkSchema })
     .strict(),
@@ -47,8 +54,8 @@ export const actionSchema = z.discriminatedUnion("type", [
         .object({
           ids: z
             .array(layerIdSchema)
-            .length(10)
-            .refine((ids) => new Set(ids).size === 10),
+            .length(11)
+            .refine((ids) => new Set(ids).size === 11),
         })
         .strict(),
     })
@@ -214,6 +221,11 @@ export function validateActions(
   )
     throw new Error("History actions must be issued alone");
   for (const action of parsed) {
+    if (
+      action.type === "SELECT_WARD" &&
+      (country !== "ZA" || !wardById(action.payload.id))
+    )
+      throw new Error("Unknown ward or ward outside active country");
     if (action.type === "TRACE_NETWORK")
       for (const id of [action.payload.startId, action.payload.targetId])
         if (id && entityById(id)?.country !== country)

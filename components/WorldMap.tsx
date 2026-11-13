@@ -1,9 +1,8 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
-import maplibregl, {
-  type Map as MapInstance,
-  type GeoJSONSource,
-} from "maplibre-gl";
+import * as maplibregl from "maplibre-gl";
+import type { Map as MapInstance, GeoJSONSource } from "maplibre-gl";
+import { MAP_WORKER_URL } from "@/lib/map-runtime";
 import type { FeatureCollection } from "geojson";
 import { AlertCircle, Layers3, RotateCcw } from "lucide-react";
 import { countries, entityById, regions, getSources } from "@/lib/knowledge";
@@ -22,6 +21,12 @@ import {
   type Camera,
 } from "@/lib/canvas";
 import LayerControls from "./LayerControls";
+import MapDetails, { type StreetStatus } from "./MapDetails";
+import {
+  boundaryTitle,
+  municipalityRecords,
+  municipalFilesFor,
+} from "@/lib/boundaries";
 import { municipalGeography, municipalById } from "@/lib/geography";
 import {
   metricById,
@@ -30,13 +35,36 @@ import {
   metricExtent,
   formatMetric,
 } from "@/lib/statistics";
+maplibregl.setWorkerUrl(MAP_WORKER_URL);
 let geography: Promise<FeatureCollection> | undefined,
   provinceGeography: Promise<FeatureCollection> | undefined;
-const municipalFiles: Record<string, Promise<FeatureCollection>> = {};
-async function jsonFile(path: string): Promise<FeatureCollection> {
-  const r = await fetch(path);
+const municipalFiles: Record<string, FeatureCollection> = {};
+async function jsonFile(
+  path: string,
+  signal?: AbortSignal,
+): Promise<FeatureCollection> {
+  const r = await fetch(path, { signal });
   if (!r.ok) throw new Error("Geography unavailable");
   return r.json();
+}
+async function municipalData(
+  paths: string[],
+  signal: AbortSignal,
+): Promise<FeatureCollection> {
+  const collections: FeatureCollection[] = new Array(paths.length);
+  let cursor = 0;
+  await Promise.all(
+    Array.from({ length: Math.min(4, paths.length) }, async () => {
+      while (cursor < paths.length) {
+        const index = cursor++;
+        collections[index] = await jsonFile(paths[index], signal);
+      }
+    }),
+  );
+  return {
+    type: "FeatureCollection",
+    features: collections.flatMap((c) => c.features),
+  };
 }
 function readCamera(m: MapInstance): Camera {
   const center = m.getCenter();
@@ -62,6 +90,7 @@ export default function WorldMap() {
     map = useRef<MapInstance | null>(null),
     markers = useRef<maplibregl.Marker[]>([]);
   const s = useExplorer();
+  const [streetStatus, setStreetStatus] = useState<StreetStatus>("off");
   const municipalLevelLoaded = useRef("");
   const [municipalReady, setMunicipalReady] = useState(false),
     [municipalError, setMunicipalError] = useState(false);
@@ -86,7 +115,7 @@ export default function WorldMap() {
         container: container.current,
         ...camera,
         minZoom: 1.2,
-        maxZoom: 12,
+        maxZoom: 19,
         maxPitch: 60,
         attributionControl: false,
         renderWorldCopies: false,
@@ -103,7 +132,24 @@ export default function WorldMap() {
         },
       });
       map.current = m;
-      observer = new ResizeObserver(() => m?.resize());
+      observer = new ResizeObserver(() => {
+        m?.resize();
+        // A short mobile panel cannot fit expanded attribution. The permanent
+        // OSM credit remains visible; the information control can still open.
+        if (
+          m &&
+          window.innerWidth <= 760 &&
+          m.getContainer().clientHeight < 350
+        ) {
+          const attribution = m
+            .getContainer()
+            .querySelector<HTMLDetailsElement>(
+              ".maplibregl-ctrl-attrib.maplibregl-compact",
+            );
+          attribution?.removeAttribute("open");
+          attribution?.classList.remove("maplibregl-compact-show");
+        }
+      });
       observer.observe(container.current);
       m.addControl(
         new maplibregl.NavigationControl({ showCompass: true }),
@@ -113,7 +159,7 @@ export default function WorldMap() {
         new maplibregl.AttributionControl({
           compact: true,
           customAttribution:
-            'Countries/cities: <a href="https://www.naturalearthdata.com/about/terms-of-use/" target="_blank" rel="noreferrer">Natural Earth (public domain)</a> · Provinces/municipalities: <a href="https://www.geoboundaries.org/" target="_blank" rel="noreferrer">geoBoundaries (CC BY 4.0)</a>; OCHA ROSEA / MDB (<a href="https://creativecommons.org/licenses/by/3.0/igo/" target="_blank" rel="noreferrer">CC BY 3.0 IGO</a>), 2020 · simplified',
+            'Countries/cities: <a href="https://www.naturalearthdata.com/about/terms-of-use/" target="_blank" rel="noreferrer">Natural Earth (public domain)</a> · Reference geography (2020): <a href="https://www.geoboundaries.org/" target="_blank" rel="noreferrer">geoBoundaries (CC BY 4.0)</a>; OCHA ROSEA / MDB (<a href="https://creativecommons.org/licenses/by/3.0/igo/" target="_blank" rel="noreferrer">CC BY 3.0 IGO</a>), 2020 · simplified · 2026 municipality/ward geometry: <a href="https://spatialhub-mdb-sa.opendata.arcgis.com/" target="_blank" rel="noreferrer">Municipal Demarcation Board</a> (publisher terms)',
         }),
       );
       m.on("moveend", () => {
@@ -124,6 +170,18 @@ export default function WorldMap() {
         useExplorer.getState().recordCamera(camera);
       });
       m.on("idle", () => {
+        if (m?.getLayer("ward-fill")) {
+          container.current?.setAttribute(
+            "data-visible-wards",
+            String(m.queryRenderedFeatures({ layers: ["ward-fill"] }).length),
+          );
+          container.current?.setAttribute(
+            "data-highlighted-wards",
+            String(
+              m.queryRenderedFeatures({ layers: ["ward-selection"] }).length,
+            ),
+          );
+        }
         if (m?.getLayer("land") && m.loaded())
           container.current?.setAttribute("data-loaded", "true");
       });
@@ -230,6 +288,7 @@ export default function WorldMap() {
             if (isMarkerControl(e)) return;
             if (!m) return;
             const layers = [
+              "ward-fill",
               "municipal-fill",
               "province-fill",
               "statistics-fill",
@@ -350,6 +409,11 @@ export default function WorldMap() {
         m.on("click", (e) => {
           if (isMarkerControl(e)) return;
           if (
+            m.getLayer("ward-fill") &&
+            m.queryRenderedFeatures(e.point, { layers: ["ward-fill"] }).length
+          )
+            return;
+          if (
             m.getLayer("municipal-fill") &&
             layerById(useExplorer.getState().layers, "municipalities").visible
           ) {
@@ -402,24 +466,38 @@ export default function WorldMap() {
       s.camera.zoom < 4.5
     )
       return;
-    const level = s.municipalityLevel === "district" ? "2" : "3";
+    const paths = municipalFilesFor(
+      s.boundaryEdition,
+      s.municipalityLevel,
+      s.region,
+    );
+    const level = s.boundaryEdition + ":" + paths.join("|");
+    if (!paths.length) {
+      setMunicipalReady(false);
+      container.current?.setAttribute("data-municipalities-loaded", "false");
+      return;
+    }
     if (
       municipalLevelLoaded.current === level &&
       m.getSource("za-municipalities")
-    )
+    ) {
+      setMunicipalReady(true);
+      container.current?.setAttribute("data-municipalities-loaded", "true");
       return;
+    }
     let cancelled = false;
+    const controller = new AbortController();
     setMunicipalReady(false);
     container.current?.setAttribute("data-municipalities-loaded", "false");
-    municipalFiles[level] ??= jsonFile(
-      "/data/za-municipalities-adm" + level + ".geojson",
-    ).catch((e) => {
-      delete municipalFiles[level];
-      throw e;
-    });
-    municipalFiles[level]
+    (municipalFiles[level]
+      ? Promise.resolve(municipalFiles[level])
+      : municipalData(paths, controller.signal)
+    )
       .then((data) => {
         if (cancelled) return;
+        municipalFiles[level] = data;
+        for (const key of Object.keys(municipalFiles).slice(0, -3))
+          if (key !== level) delete municipalFiles[key];
         if (m.getSource("za-municipalities"))
           (m.getSource("za-municipalities") as GeoJSONSource).setData(data);
         else {
@@ -454,7 +532,11 @@ export default function WorldMap() {
             if (p) {
               m.getCanvas().style.cursor = "pointer";
               setHover(
-                p.name + " · historical 2020 boundary · " + p.municipalityCode,
+                p.name +
+                  " · " +
+                  boundaryTitle(useExplorer.getState().boundaryEdition) +
+                  " · " +
+                  p.municipalityCode,
               );
             }
           });
@@ -470,16 +552,22 @@ export default function WorldMap() {
         );
       })
       .catch(() => {
-        if (!cancelled) setMunicipalError(true);
+        if (!cancelled) {
+          controller.abort();
+          setMunicipalError(true);
+        }
       });
     return () => {
       cancelled = true;
+      controller.abort();
     };
   }, [
     ready,
     s.country.code,
     s.municipalityLevel,
-    s.camera.zoom,
+    s.boundaryEdition,
+    s.region,
+    s.camera.zoom >= 4.5,
     layerById(s.layers, "municipalities").visible,
     retry,
   ]);
@@ -513,6 +601,7 @@ export default function WorldMap() {
         "municipal-borders",
         "municipal-selection",
       ],
+      wards: ["ward-fill", "ward-borders", "ward-selection"],
       statistics: ["statistics-fill"],
       connections: ["connection-lines"],
       cities: ["points-cities"],
@@ -547,11 +636,17 @@ export default function WorldMap() {
             "connection-lines",
             "municipal-borders",
             "municipal-selection",
+            "ward-borders",
+            "ward-selection",
           ].includes(id)
         )
           m.setPaintProperty(id, "line-opacity", layer.opacity);
         if (id === "land")
-          m.setPaintProperty(id, "fill-opacity", layer.opacity * 0.96);
+          m.setPaintProperty(
+            id,
+            "fill-opacity",
+            layer.opacity * (streetStatus === "ready" ? 0.025 : 0.96),
+          );
       }
     }
     if (provinceReady) {
@@ -601,8 +696,9 @@ export default function WorldMap() {
               "#d5dca0",
             ],
       );
-      for (const id of ["province-fill", "province-borders", "statistics-fill"])
-        m.setLayerZoomRange(id, 3, 13);
+      for (const id of ["province-fill", "province-borders"])
+        m.setLayerZoomRange(id, 3, s.basemap === "streets" ? 9 : 13);
+      m.setLayerZoomRange("statistics-fill", 3, 13);
       const metric = metricById(stats.metric);
       if (metric) {
         const expression: unknown[] = ["match", ["get", "id"]];
@@ -640,7 +736,19 @@ export default function WorldMap() {
           municipalById(s.region)?.entityId ??
           "",
       ]);
+      m.setPaintProperty(
+        "municipal-borders",
+        "line-color",
+        s.basemap === "streets" ? "#50467b" : "#9cb09c",
+      );
+      m.setPaintProperty(
+        "municipal-selection",
+        "line-color",
+        s.basemap === "streets" ? "#982b6e" : "#e3f3b6",
+      );
     }
+    m.setLayerZoomRange("borders", 1.2, s.basemap === "streets" ? 8 : 19);
+    m.setLayerZoomRange("selection", 1.2, s.basemap === "streets" ? 8 : 19);
   }, [
     ready,
     provinceReady,
@@ -649,6 +757,8 @@ export default function WorldMap() {
     s.region,
     s.country.code,
     s.selectedEntity,
+    streetStatus,
+    s.basemap,
   ]);
   useEffect(() => {
     const m = map.current;
@@ -864,6 +974,11 @@ export default function WorldMap() {
     statSource = metric ? getSources(metric.sourceIds)[0] : null;
   return (
     <div className="map-frame">
+      <MapDetails
+        map={map.current}
+        ready={ready}
+        onStreetStatus={setStreetStatus}
+      />
       <div
         ref={container}
         className="map-surface"
@@ -940,7 +1055,7 @@ export default function WorldMap() {
               }}
             >
               <option value="">Choose municipality</option>
-              {municipalGeography
+              {municipalityRecords(s.boundaryEdition)
                 .filter(
                   (m) =>
                     (s.municipalityLevel === "district"
@@ -964,6 +1079,12 @@ export default function WorldMap() {
       <div className="map-density-status" aria-label="Map scope and density">
         {geographicScope(liveCamera.zoom)} · {s.density} · {visibleCount}{" "}
         records
+        {layerById(s.layers, "municipalities").visible &&
+        s.boundaryEdition === "mdb-2026" &&
+        !s.region
+          ? " · choose a province or municipality for boundary detail"
+          : ""}
+        {s.camera.zoom >= 9 ? " · province-only locators omitted" : ""}
         {layerById(s.layers, "connections").visible
           ? " · " + connectionCount + " abstract connections"
           : ""}
@@ -984,7 +1105,7 @@ export default function WorldMap() {
               (selected.coordinates
                 ? "Published representative locator"
                 : municipalById(selected.id)
-                  ? "Historical 2020 municipality boundary · not a facility locator"
+                  ? boundaryTitle(s.boundaryEdition) + " · area geometry"
                   : "No verified exact location")}
           </small>
           {sources.slice(0, 1).map((source) => (

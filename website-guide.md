@@ -6,9 +6,9 @@ The original product brief is preserved in [docs/product-brief.md](docs/product-
 
 Next.js App Router, TypeScript, Tailwind, Zustand, MapLibre, React Flow, Cytoscape and ECharts provide a responsive knowledge workspace with seven views: Map, Hierarchy, Relationships, System flow, Data, Compare and History.
 
-The [canvas interaction implementation](docs/canvas-implementation.md) adds independent ordered layers, opacity/filter controls, native map symbols, semantic scope with separate density, shared camera and selection, an overlay layout, and reversible validated actions. Existing saved investigations migrate to the expanded state. Split view and live AI orchestration remain deferred.
+The [canvas interaction implementation](docs/canvas-implementation.md) adds independent ordered layers, opacity/filter controls, native map symbols, semantic scope with separate density, shared camera and selection, an overlay layout, and reversible validated actions. Existing saved investigations migrate to the expanded state. Resizable split view is implemented; live AI orchestration remains deferred.
 
-The curated catalogue includes 396 entities, 399 typed/navigation relationships, 88 sources, all nine South African provinces, 43 national-directory bodies, 257 municipalities with historical boundary geometry, three mining groups with eight operations, four station assets, five additional sourced facility locators, 13 representative city points, two Census datasets, six provincial measures, two historical World Bank indicators and seven events.
+The curated catalogue includes 396 entities, 399 typed/navigation relationships, 92 sources, all nine South African provinces, 43 national-directory bodies, 257 municipalities with current-edition and historical boundary geometry, 4,485 revised MDB wards, three mining groups with eight operations, four station assets, five additional sourced facility locators, 13 representative city points, two Census datasets, six provincial measures, two historical World Bank indicators and seven events.
 
 Detailed institutional coverage focuses on South Africa. World Bank population and GDP-growth comparisons cover South Africa, Botswana and Namibia in 2014–2024. Other countries remain map-only.
 
@@ -32,9 +32,11 @@ The Next frontend and same-origin Node routes are prepared for Netlify. The opti
 
 The default reviewed bundle works without a database or AI credentials. Streaming AI and embedding plumbing remain available for later credential configuration. No live-provider requests or deployments are part of this milestone.
 
-Choose **Layout → Split canvas** to keep the map beside the active graph/chart, then drag or keyboard-resize the divider. Its ratio is saved and supports undo. **Layers → Municipal boundaries** offers local/metro and district/metro levels for 257 unique records. Boundaries are explicitly historical representative-2020 geometry, not current legal demarcations. Five sourced facility points retain publisher precision.
+Choose **Layout → Split canvas** to keep the map beside the active graph/chart, then drag or keyboard-resize the divider. Its ratio is saved and supports undo. **Layers → Municipal boundaries** offers local/metro and district/metro levels for 257 unique records. The default is the MDB 2026 published edition; historical representative-2020 geometry remains separately selectable. Enable Ward boundaries, choose a local municipality/metro, and select a ward. Online OpenStreetMap supplies roads and street labels through zoom 19. Five sourced facility points retain publisher precision.
 
 **Explore network** finds multi-step neighborhoods or a shortest documented path, with direction, type, reporting-date filters and evidence links. Directory connections are optional. Provincial statistics include unemployment, employment absorption, real GDP growth, adult education and medical-aid coverage. Legends and reports preserve periods, denominators and attribution. Netlify deployment and live AI credentials remain deferred.
+
+Ward files retain official identifiers and numbering gaps. The revised release reflects the stayed Kopanong split (nine wards). Source DATE fields are 4 November 2026; retrieval was 13 November. One publisher ring defect in Alfred Duma Ward 5 has a documented, area-preserving display repair and a downloadable original. Boundary editions do not change the dates or granularity of statistical observations.
 
 ## Run and maintain
 

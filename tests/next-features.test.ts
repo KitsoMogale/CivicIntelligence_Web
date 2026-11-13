@@ -21,13 +21,15 @@ import assets from "../data/geography-assets.json";
 
 test("old nine-layer investigations migrate without losing style or order", () => {
   const layers = defaultLayers()
-    .filter((l) => l.id !== "municipalities")
+    .filter((l) => !["municipalities", "wards"].includes(l.id))
     .reverse()
     .map((l, zIndex) => ({ ...l, zIndex, opacity: 0.4 }));
   const next = normalizeExploration({ ...initialExploration, layers });
-  assert.equal(next.layers.length, 10);
+  assert.equal(next.layers.length, 11);
   assert.deepEqual(
-    next.layers.filter((l) => l.id !== "municipalities").map((l) => l.id),
+    next.layers
+      .filter((l) => !["municipalities", "wards"].includes(l.id))
+      .map((l) => l.id),
     layers.map((l) => l.id),
   );
   assert.equal(layerById(next.layers, "cities").opacity, 0.4);

@@ -199,11 +199,17 @@ export const useExplorer = create<State>()(
     }),
     {
       name: "civic-exploration-v1",
-      version: 4,
+      version: 5,
       partialize: (s) => snapshot(s),
       migrate: (value) => {
         try {
-          return normalizeExploration(value);
+          const stored = value && typeof value === "object" ? value : {};
+          return normalizeExploration({
+            ...stored,
+            boundaryEdition:
+              "boundaryEdition" in stored ? stored.boundaryEdition : "mdb-2026",
+            basemap: "basemap" in stored ? stored.basemap : "streets",
+          });
         } catch {
           return structuredClone(initial);
         }

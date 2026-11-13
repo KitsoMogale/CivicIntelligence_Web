@@ -11,6 +11,9 @@ INDICATORS = read_data("indicators.json")
 EVENTS = read_data("events.json")
 MUNICIPALITIES = read_data("municipal-geography.json")
 PROVINCIAL_METRICS = read_data("provincial-indicators.json")["metrics"]
+OFFICIAL_MUNICIPALITIES=read_data("municipal-geography-2026.json")
+WARDS=read_data("ward-index.json")
+BOUNDARY_RELEASE=read_data("boundary-release.json")
 def catalog_digest():
     digest = hashlib.sha256()
     for name in sorted(read_data("release.json")["files"]):

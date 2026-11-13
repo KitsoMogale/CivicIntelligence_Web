@@ -5,6 +5,7 @@ import { useExplorer } from "@/lib/store";
 import { layerRegistry, layerById, type LayerId } from "@/lib/canvas";
 import { entities, getSources, relationships } from "@/lib/knowledge";
 import { provincialMetrics, type MetricId } from "@/lib/statistics";
+import { boundaryTitle } from "@/lib/boundaries";
 export default function LayerControls({ close }: { close: () => void }) {
   const s = useExplorer(),
     ordered = [...s.layers].sort((a, b) => b.zIndex - a.zIndex),
@@ -38,6 +39,50 @@ export default function LayerControls({ close }: { close: () => void }) {
           <X size={17} />
         </button>
       </header>
+      <label>
+        Basemap
+        <select
+          aria-label="Basemap"
+          value={s.basemap}
+          onChange={(e) =>
+            s.navigate(
+              { basemap: e.target.value as typeof s.basemap },
+              "Change basemap",
+            )
+          }
+        >
+          <option value="streets">Streets · OpenStreetMap</option>
+          <option value="reference">Reference geography · offline</option>
+        </select>
+      </label>
+      <p>
+        Street names and roads come from OpenStreetMap, require internet access
+        and follow the publisher's updates. They are visual map detail; abstract
+        knowledge connections are separate.
+      </p>
+      <label>
+        Boundary edition
+        <select
+          aria-label="Boundary edition"
+          value={s.boundaryEdition}
+          onChange={(e) =>
+            s.navigate(
+              {
+                boundaryEdition: e.target.value as typeof s.boundaryEdition,
+                selectedWardId: null,
+              },
+              "Change boundary edition",
+            )
+          }
+        >
+          <option value="mdb-2026">MDB 2026 published edition</option>
+          <option value="legacy-2020">Historical representative 2020</option>
+        </select>
+      </label>
+      <p>
+        {boundaryTitle(s.boundaryEdition)}. Municipality and ward geometry
+        retain publisher dates. Ward detail is available in the 2026 edition.
+      </p>
       <label>
         Information density
         <select
@@ -185,7 +230,15 @@ export default function LayerControls({ close }: { close: () => void }) {
       <div className="canvas-layer-list">
         {ordered.map((layer, index) => {
           const meta = layerRegistry[layer.id],
-            source = getSources([meta.sourceId])[0];
+            metric =
+              layer.id === "statistics"
+                ? provincialMetrics.find((m) => m.id === layer.metric)
+                : undefined,
+            source = getSources([
+              layer.id === "municipalities" && s.boundaryEdition === "mdb-2026"
+                ? "mdb-municipalities-2026"
+                : (metric?.sourceIds[0] ?? meta.sourceId),
+            ])[0];
           const available =
             s.country.code === "ZA" ||
             ["countries", "evidence"].includes(layer.id);
@@ -257,7 +310,16 @@ export default function LayerControls({ close }: { close: () => void }) {
                     }
                   />
                 </label>
-                <p>{meta.legend}</p>
+                <p>
+                  {layer.id === "municipalities"
+                    ? boundaryTitle(s.boundaryEdition)
+                    : metric
+                      ? metric.name +
+                        " · " +
+                        metric.periodLabel +
+                        " · province observations only"
+                      : meta.legend}
+                </p>
                 {source && (
                   <a href={source.url} target="_blank" rel="noreferrer">
                     {source.publisher} · source ↗
@@ -313,10 +375,10 @@ export default function LayerControls({ close }: { close: () => void }) {
         </select>
       </label>
       <p>
-        Representative 2020 boundaries from a 2018 source, joined to the 2026
-        directory. District and local areas overlap; eight metros occur at both
-        levels. Source geometry is illustrative, not a current legal
-        demarcation.
+        District and local areas overlap; eight metros occur at both levels. The
+        historical edition uses a 2018 source representative of 2020. The 2026
+        edition uses the published MDB dataset. These editions are kept
+        separate.
       </p>
       <label>
         Statistical measure

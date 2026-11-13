@@ -7,7 +7,7 @@ export const cameraSchema = z
       z.number().min(-180).max(180),
       z.number().min(-85).max(85),
     ]),
-    zoom: z.number().min(1.2).max(12),
+    zoom: z.number().min(1.2).max(19),
     bearing: z.number().min(-180).max(180).default(0),
     pitch: z.number().min(0).max(60).default(0),
   })
@@ -19,6 +19,7 @@ export const layerIdSchema = z.enum([
   "countries",
   "provinces",
   "municipalities",
+  "wards",
   "statistics",
   "cities",
   "institutions",
@@ -55,27 +56,33 @@ export const layersSchema = z.preprocess(
   (value) => {
     if (
       !Array.isArray(value) ||
-      value.length !== 9 ||
-      value.some((l) => l?.id === "municipalities")
+      ![9, 10].includes(value.length) ||
+      value.some((l) => !l || typeof l !== "object")
     )
       return value;
     const old = [...value].sort((a, b) => a.zIndex - b.zIndex);
-    old.splice(
-      old.findIndex((l) => l.id === "provinces") + 1,
-      0,
-      defaultLayers().find((l) => l.id === "municipalities")!,
-    );
+    for (const id of ["municipalities", "wards"] as const)
+      if (!old.some((l) => l.id === id))
+        old.splice(
+          old.findIndex(
+            (l) =>
+              l.id ===
+              (id === "municipalities" ? "provinces" : "municipalities"),
+          ) + 1,
+          0,
+          defaultLayers().find((l) => l.id === id)!,
+        );
     return old.map((l, zIndex) => ({ ...l, zIndex }));
   },
   z
     .array(layerSchema)
-    .length(10)
+    .length(11)
     .refine(
-      (layers) => new Set(layers.map((l) => l.id)).size === 10,
+      (layers) => new Set(layers.map((l) => l.id)).size === 11,
       "Every registered layer must occur once",
     )
     .refine(
-      (layers) => new Set(layers.map((l) => l.zIndex)).size === 10,
+      (layers) => new Set(layers.map((l) => l.zIndex)).size === 11,
       "Layer order must be unique",
     ),
 );
@@ -97,7 +104,7 @@ export const layerRegistry: Record<
     sourceId: "natural-earth",
     legend: "Simplified country boundaries · Natural Earth · public domain",
     minZoom: 1.2,
-    maxZoom: 12,
+    maxZoom: 19,
     style: { color: "#335e54" },
   },
   provinces: {
@@ -106,7 +113,7 @@ export const layerRegistry: Record<
     sourceId: "province-boundaries",
     legend: "2020 province geometry · simplified · CC BY 4.0 / CC BY 3.0 IGO",
     minZoom: 3,
-    maxZoom: 12,
+    maxZoom: 19,
     style: { color: "#749b87" },
   },
   statistics: {
@@ -116,7 +123,7 @@ export const layerRegistry: Record<
     legend:
       "Stats SA Census · provincial counts or 2011–2022 percentage change",
     minZoom: 3,
-    maxZoom: 12,
+    maxZoom: 19,
     style: { color: "#a0c389" },
   },
   municipalities: {
@@ -126,7 +133,7 @@ export const layerRegistry: Record<
     legend:
       "Historical representative 2020 geometry · source 2018 · joined to 2026 directory · not current legal demarcation",
     minZoom: 4.5,
-    maxZoom: 12,
+    maxZoom: 19,
     style: { color: "#9fb6ab" },
   },
   cities: {
@@ -135,8 +142,18 @@ export const layerRegistry: Record<
     sourceId: "natural-earth-cities",
     legend: "Representative settlement points · Natural Earth",
     minZoom: 3,
-    maxZoom: 12,
+    maxZoom: 19,
     style: { color: "#85b9d6" },
+  },
+  wards: {
+    name: "Ward boundaries",
+    type: "geography",
+    sourceId: "mdb-wards-2026",
+    legend:
+      "MDB 2026 ward edition · choose a local municipality or metro · zoom in for detail",
+    minZoom: 7,
+    maxZoom: 19,
+    style: { color: "#e6bf76" },
   },
   institutions: {
     name: "Institutions",
@@ -145,7 +162,7 @@ export const layerRegistry: Record<
     legend:
       "Published institutional locators · inspect each record for evidence",
     minZoom: 3,
-    maxZoom: 12,
+    maxZoom: 19,
     style: { color: "#aed7bc" },
   },
   mining: {
@@ -154,7 +171,7 @@ export const layerRegistry: Record<
     sourceId: "entity",
     legend: "Province locators only · exact mine positions are unavailable",
     minZoom: 3,
-    maxZoom: 12,
+    maxZoom: 19,
     style: { color: "#d9b576" },
   },
   infrastructure: {
@@ -163,7 +180,7 @@ export const layerRegistry: Record<
     sourceId: "entity",
     legend: "Published project/site points; Duvha uses a province locator",
     minZoom: 3,
-    maxZoom: 12,
+    maxZoom: 19,
     style: { color: "#d8a68b" },
   },
   connections: {
@@ -173,7 +190,7 @@ export const layerRegistry: Record<
     legend:
       "Dashed lines link published endpoint locators; they are not physical routes",
     minZoom: 3,
-    maxZoom: 12,
+    maxZoom: 19,
     style: { color: "#96b7cc" },
   },
   evidence: {
@@ -182,14 +199,16 @@ export const layerRegistry: Record<
     sourceId: "entity",
     legend: "Shared selection and source-linked details",
     minZoom: 1.2,
-    maxZoom: 12,
+    maxZoom: 19,
     style: { color: "#dcf1b2" },
   },
 };
 export function defaultLayers(): CanvasLayer[] {
   return layerIdSchema.options.map((id, zIndex) => ({
     id,
-    visible: !["statistics", "connections", "municipalities"].includes(id),
+    visible: !["statistics", "connections", "municipalities", "wards"].includes(
+      id,
+    ),
     opacity: id === "statistics" ? 0.72 : 1,
     zIndex,
     filters: { query: "", entityType: "", relationshipType: "" },
@@ -263,7 +282,9 @@ export function geographicScope(zoom: number) {
       ? "Country"
       : zoom < 8
         ? "Province / region"
-        : "City / district";
+        : zoom < 13
+          ? "City / district"
+          : "Streets / neighborhood";
 }
 export function sameCamera(a: Camera, b: Camera) {
   return (

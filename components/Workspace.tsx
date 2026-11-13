@@ -135,7 +135,18 @@ export default function Workspace() {
     [mounted, setMounted] = useState(false);
   const searchInput = useRef<HTMLInputElement>(null);
   useEffect(() => {
-    if (s.selectedEntity) setAiOpen(true);
+    const geographicSelection =
+      s.selectedWardId ||
+      s.selectedEntity?.startsWith("za-municipality-") ||
+      entityById(s.selectedEntity ?? "")?.type === "Province";
+    const choosingWards =
+      s.layers.some((l) => l.id === "wards" && l.visible) &&
+      (s.mode === "geographic" || s.layout !== "single");
+    if (
+      s.selectedEntity &&
+      !(window.innerWidth <= 760 && geographicSelection && choosingWards)
+    )
+      setAiOpen(true);
   }, [s.selectedEntity]);
   useEffect(() => {
     if (searchOpen) searchInput.current?.focus();

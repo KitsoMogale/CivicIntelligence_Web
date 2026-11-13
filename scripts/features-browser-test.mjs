@@ -1,3 +1,4 @@
+import { mockStreetTiles } from "./browser-map-fixtures.mjs";
 import { chromium } from "playwright-core";
 import assert from "node:assert/strict";
 import fs from "node:fs/promises";
@@ -21,6 +22,7 @@ const check = (label) => {
   console.log("PASS " + label);
 };
 async function open(context) {
+  await mockStreetTiles(context);
   page = await context.newPage();
   page.setDefaultTimeout(90000);
   page.on("pageerror", (e) => errors.push(e.message));
@@ -59,6 +61,9 @@ try {
   });
   await open(context);
   await layers();
+  await page
+    .getByLabel("Boundary edition", { exact: true })
+    .selectOption("legacy-2020");
   await page.getByLabel("Municipal boundaries", { exact: true }).check();
   await closeLayers();
   await page

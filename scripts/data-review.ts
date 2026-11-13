@@ -24,7 +24,32 @@ const regions = await read("data/regions.json");
 const countries = await read("data/countries.json");
 const regionIds = new Set(regions.map((r: { id: string }) => r.id));
 const countryIds = new Set(countries.map((c: { code: string }) => c.code));
+const officialMunicipal = await read("data/municipal-geography-2026.json"),
+  wards = await read("data/ward-index.json"),
+  boundaryAssets = await read("data/boundary-assets.json"),
+  boundaryRelease = await read("data/boundary-release.json");
 const refs = new Set(result.bundle?.sources.map((s) => s.id));
+const repairs = await read("data/provenance/mdb-geometry-repairs.json");
+for (const repair of repairs) {
+  const bytes = await fs.readFile(
+    path.join(root, "public", repair.originalGeometryFile),
+  );
+  if (
+    createHash("sha256").update(bytes).digest("hex") !==
+    repair.originalFileSha256
+  )
+    errors.push({
+      severity: "error",
+      record: repair.wardId,
+      message: "Retained original geometry digest differs",
+    });
+  if (repair.originalAreaM2 !== repair.repairedAreaM2)
+    errors.push({
+      severity: "error",
+      record: repair.wardId,
+      message: "Repair changes measured area",
+    });
+}
 const entityIds = new Set(result.bundle?.entities.map((e) => e.id));
 function fail(record: string, message: string) {
   errors.push({ severity: "error", record, message });
@@ -100,6 +125,78 @@ for (const asset of assets) {
     if (!entityIds.has(f.properties.entityId))
       fail(asset.file, "Boundary references unknown municipality");
 }
+const officialIds = new Map(
+    officialMunicipal.map((m: { entityId: string }) => [m.entityId, m]),
+  ),
+  wardIds = new Map(wards.map((w: { id: string }) => [w.id, w]));
+if (officialIds.size !== 257 || wardIds.size !== 4485)
+  fail("mdb-2026", "Unexpected reviewed municipality or ward count");
+const seenWards = new Set<string>();
+let wardFeatures = 0,
+  municipalFeatures = 0;
+for (const asset of boundaryAssets) {
+  if (
+    !/^za-(municipalities|wards)-2026\/[A-Za-z0-9/.-]+\.geojson$/.test(
+      asset.file,
+    )
+  ) {
+    fail(asset.file, "Unsafe boundary asset path");
+    continue;
+  }
+  const bytes = await fs.readFile(path.join(root, "public/data", asset.file));
+  if (createHash("sha256").update(bytes).digest("hex") !== asset.sha256)
+    fail(asset.file, "Official geometry digest mismatch");
+  const collection = JSON.parse(bytes.toString());
+  if (collection.features.length !== asset.features)
+    fail(asset.file, "Official geometry feature count mismatch");
+  for (const feature of collection.features) {
+    const p = feature.properties;
+    if (asset.kind === "ward") {
+      wardFeatures++;
+      const record = wardIds.get(p.wardId) as
+        | { municipalityId: string; municipalityCode: string; number: number }
+        | undefined;
+      if (
+        !record ||
+        seenWards.has(p.wardId) ||
+        record.municipalityId !== p.municipalityId ||
+        record.municipalityCode !== p.CAT_B ||
+        record.number !== p.WardNo ||
+        !officialIds.has(p.municipalityId)
+      )
+        fail(asset.file, "Ward identity or parent join mismatch");
+      seenWards.add(p.wardId);
+    } else {
+      municipalFeatures++;
+      if (
+        !officialIds.has(p.entityId) ||
+        !entityIds.has(p.entityId) ||
+        p.boundaryVintage !== "2026"
+      )
+        fail(asset.file, "Official municipality join mismatch");
+    }
+    if (!["Polygon", "MultiPolygon"].includes(feature.geometry?.type))
+      fail(asset.file, "Expected polygon geometry");
+  }
+}
+if (
+  wardFeatures !== 4485 ||
+  municipalFeatures !== 265 ||
+  seenWards.size !== 4485
+)
+  fail("mdb-2026", "Incomplete reviewed geometry coverage");
+if (
+  boundaryRelease.counts.wards !== 4485 ||
+  boundaryRelease.counts.municipalities !== 257
+)
+  fail("mdb-2026", "Boundary release counts differ");
+for (const w of wards)
+  if (
+    !refs.has(w.sourceId) ||
+    !regionIds.has(w.provinceId) ||
+    !officialIds.has(w.municipalityId)
+  )
+    fail(w.id, "Unknown ward source, province or municipality");
 const metricIds = new Set();
 for (const metric of provincial.metrics) {
   if (metricIds.has(metric.id)) fail(metric.id, "Duplicate provincial metric");
@@ -187,6 +284,11 @@ if (args.includes("--apply")) {
     "provincial-indicators.json",
     "municipal-geography.json",
     "geography-assets.json",
+    "boundary-assets.json",
+    "boundary-release.json",
+    "municipal-geography-2026.json",
+    "ward-index.json",
+    "provenance/mdb-geometry-repairs.json",
   ].sort();
   for (const name of files) {
     digest.update(name);
@@ -206,6 +308,8 @@ if (args.includes("--apply")) {
       events: events.length,
       municipalities: municipal.length,
       provincialIndicators: provincial.metrics.length,
+      wards: wards.length,
+      officialMunicipalities: officialMunicipal.length,
     },
     files,
   };

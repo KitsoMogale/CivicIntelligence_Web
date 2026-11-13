@@ -90,3 +90,20 @@ def test_provincial_overlays_remain_separate_from_national_indicators():
     assert all(len(metric["observations"])==9 for metric in values)
     assert client.get("/overlays?country=BW").json() == []
     assert all("code" in metric for metric in client.get("/indicators").json())
+
+def test_official_edition_retains_source_geometry_and_revised_wards():
+    editions=client.get("/boundary-editions").json()
+    assert editions["mdb-2026"]["counts"]["wards"]==4485
+    boundary=client.get("/regions/za-municipality-cpt/boundary?edition=mdb-2026")
+    assert boundary.status_code==200
+    assert boundary.json()["properties"]["boundaryVintage"]=="2026"
+    assert boundary.json()["properties"]["CATEGORY"]=="A"
+    wards=client.get("/wards?municipality=za-municipality-fs162").json()
+    assert len(wards)==9
+    ward=next(w for w in wards if w["number"]==9)
+    feature=client.get("/wards/"+ward["id"]+"/boundary")
+    assert feature.status_code==200
+    assert feature.json()["properties"]["WardID"]==ward["id"].replace("ward-","")
+    assert client.get("/wards?municipality=za-municipality-fs164").json()==[]
+    assert client.get("/wards?country=BW&municipality=za-municipality-fs162").json()==[]
+    assert client.get("/wards/missing/boundary").status_code==404

@@ -1,3 +1,4 @@
+import { mockStreetTiles } from "./browser-map-fixtures.mjs";
 import { chromium } from "playwright-core";
 import fs from "node:fs/promises";
 import assert from "node:assert/strict";
@@ -22,6 +23,7 @@ const check = (label) => {
   console.log("PASS " + label);
 };
 async function observe(context) {
+  await mockStreetTiles(context);
   const page = await context.newPage();
   active = page;
   page.setDefaultTimeout(90000);
@@ -58,7 +60,7 @@ try {
     .locator('.map-surface[data-loaded="true"][data-provinces-loaded="true"]')
     .waitFor();
   await layers(page);
-  assert.equal(await page.locator(".canvas-layer-row").count(), 10);
+  assert.equal(await page.locator(".canvas-layer-row").count(), 11);
   await page.getByLabel("Cities & towns", { exact: true }).uncheck();
   await page.getByLabel("Institutions", { exact: true }).uncheck();
   await page
@@ -255,7 +257,7 @@ try {
   for await (const chunk of await download.createReadStream()) content += chunk;
   const saved = JSON.parse(content);
   assert.equal(saved.context.layout, "overlay");
-  assert.equal(saved.context.layers.length, 10);
+  assert.equal(saved.context.layers.length, 11);
   assert.ok(saved.context.camera.zoom);
   await page.getByLabel("Close dialog", { exact: true }).click();
   await page.reload({ waitUntil: "domcontentloaded" });

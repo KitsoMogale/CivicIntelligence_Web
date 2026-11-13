@@ -1,9 +1,9 @@
 {
   "version": "0.2.0",
-  "revision": "034a3fe25a216db5c9905b4f52fb588a4c56a55968ac2dfcee8d345954fb4f51",
+  "revision": "8bf92dcc9685cfda6697fcd19a20e4962286e65f1fa8260f1b4732f59506603c",
   "reviewedAt": "2026-11-13",
   "counts": {
-    "sources": 88,
+    "sources": 92,
     "entities": 396,
     "relationships": 399,
     "datasets": 2,
@@ -11,15 +11,22 @@
     "indicators": 2,
     "events": 7,
     "municipalities": 257,
-    "provincialIndicators": 6
+    "provincialIndicators": 6,
+    "wards": 4485,
+    "officialMunicipalities": 257
   },
   "files": [
+    "boundary-assets.json",
+    "boundary-release.json",
     "events.json",
     "geography-assets.json",
     "indicators.json",
     "knowledge.json",
+    "municipal-geography-2026.json",
     "municipal-geography.json",
+    "provenance/mdb-geometry-repairs.json",
     "provincial-indicators.json",
-    "regions.json"
+    "regions.json",
+    "ward-index.json"
   ]
 }

@@ -1,4 +1,113 @@
 /* Investigation, geography and evidence tools. */
+.map-source-status {
+  position: absolute;
+  bottom: 8px;
+  left: 12px;
+  right: 58px;
+  z-index: 4;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 12px;
+  align-items: center;
+  background: #10201fee;
+  padding: 7px 9px;
+  border: 1px solid #466455;
+  border-radius: 5px;
+  color: #bfd0bf;
+  font-size: 9px;
+  line-height: 1.5;
+  pointer-events: auto;
+}
+.map-source-status a {
+  font-size: 12px;
+  color: #d9e6cd;
+  text-decoration: underline;
+}
+.map-source-status button {
+  text-decoration: underline;
+}
+.map-frame:has(.map-source-status) .map-legend {
+  bottom: 82px;
+}
+.ward-controls {
+  position: absolute;
+  top: 164px;
+  left: 14px;
+  z-index: 3;
+  width: 235px;
+  max-width: calc(100% - 70px);
+  max-height: 265px;
+  overflow: auto;
+  background: #12211fee;
+  border: 1px solid #8b754b;
+  border-radius: 5px;
+  padding: 12px;
+  font-size: 10px;
+  color: #cdd8c8;
+  line-height: 1.7;
+}
+.ward-controls strong {
+  font-size: 11px;
+  color: #f0d29f;
+}
+.ward-controls label {
+  display: grid;
+  gap: 5px;
+  margin: 8px 0;
+}
+.ward-controls select {
+  width: 100%;
+  background: #162b29;
+  border: 1px solid #65745a;
+  border-radius: 4px;
+  padding: 6px;
+  font-size: 10px;
+  color: #d8e2cf;
+}
+.ward-controls p {
+  font-size: 10px;
+  margin: 7px 0;
+}
+.ward-controls a,
+.ward-controls button {
+  color: #dec48c;
+  text-decoration: underline;
+}
+.ward-evidence {
+  border-left: 2px solid #d6a453;
+  padding-left: 8px;
+}
+.map-frame:has(.ward-controls) .map-selection-card {
+  display: none;
+}
+@media (max-width: 760px) {
+  .ward-controls {
+    top: 146px;
+    max-height: 180px;
+    padding: 9px;
+    width: 218px;
+  }
+  .map-source-status {
+    bottom: 6px;
+    left: 8px;
+    right: 52px;
+    gap: 3px 8px;
+    padding: 5px;
+    font-size: 8px;
+  }
+  .map-source-status a {
+    font-size: 11px;
+  }
+  .has-canvas-split .ward-controls {
+    max-height: 105px;
+    top: 122px;
+  }
+  .map-frame:has(.map-source-status) .map-legend {
+    bottom: 95px;
+    max-height: 140px;
+    overflow: auto;
+  }
+}
 .province-focus {
   display: grid;
   gap: 5px;
@@ -1597,5 +1706,20 @@
   }
   .map-frame .map-entity .map-marker-label {
     left: 29px;
+  }
+}
+
+@media (max-width: 760px) {
+  .has-canvas-split .ward-controls {
+    top: 52px;
+    left: calc(50% + 4px);
+    right: 52px;
+    width: auto;
+    max-width: none;
+    max-height: 110px;
+  }
+  .has-canvas-split .ward-controls > strong,
+  .has-canvas-split .map-frame:has(.ward-controls) .map-density-status {
+    display: none;
   }
 }
