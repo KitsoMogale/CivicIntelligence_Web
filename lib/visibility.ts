@@ -9,6 +9,7 @@ import {
   canvasLinks,
 } from "./map-data";
 import { entityById } from "./knowledge";
+import { traceNetwork } from "./network";
 export function visibleEntityIds(context: {
   countryCode: string;
   domain: Domain;
@@ -32,6 +33,16 @@ export function visibleEntityIds(context: {
           context.provinceLayer,
         ).map((place) => place.entity.id);
   const root = domains.find((d) => d.id === context.domain)!.root;
+  if (context.mode === "relationships" && context.canvas?.networkTrace) {
+    const s = context.canvas;
+    return traceNetwork(
+      s.networkTrace!,
+      s.country.code,
+      s.timeRange,
+    ).nodeIds.filter(
+      (id) => !s.isolatedEntityIds.length || s.isolatedEntityIds.includes(id),
+    );
+  }
   const all = descendants(root);
   if (context.mode === "flow")
     return context.domain === "infrastructure"

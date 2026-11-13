@@ -12,6 +12,8 @@ import {
 } from "./exploration";
 import { validateActions, type CanvasAction } from "./actions";
 import { legacyFlags } from "./canvas";
+import { traceNetwork } from "./network";
+import { municipalById } from "./geography";
 export function entityExpansion(state: Exploration, id: string) {
   const expanded = new Set(state.expanded),
     pending = [id],
@@ -28,11 +30,26 @@ export function entityExpansion(state: Exploration, id: string) {
   return [...expanded];
 }
 export function focusCamera(state: Exploration, id: string | null) {
+  const municipality = municipalById(id);
+  if (municipality) {
+    const bounds = municipality.bounds,
+      span = Math.max(bounds[2] - bounds[0], bounds[3] - bounds[1]);
+    return {
+      center: municipality.center,
+      zoom: Math.max(4.5, Math.min(9, Math.log2(360 / span / 1.6))),
+      bearing: 0,
+      pitch: 0,
+    };
+  }
   const e = id ? entityById(id) : null,
     region = regions.find((r) => r.entityId === id || r.id === e?.region);
   return {
     center: e?.coordinates ?? region?.center ?? state.country.center,
-    zoom: e ? (e.type === "Province" ? 6 : 8) : state.country.zoom,
+    zoom: e
+      ? e.type === "Province" || !e.coordinates
+        ? 6
+        : 8
+      : state.country.zoom,
     bearing: 0,
     pitch: 0,
   };
@@ -42,6 +59,35 @@ export function reduceCanvas(state: Exploration, input: unknown): Exploration {
   let next = structuredClone(state);
   for (const a of actions) {
     switch (a.type) {
+      case "TRACE_NETWORK": {
+        const result = traceNetwork(
+          a.payload,
+          next.country.code,
+          next.timeRange,
+        );
+        next.networkTrace = a.payload;
+        next.mode = "relationships";
+        next.region = null;
+        next.filters = {
+          query: "",
+          entityType: "",
+          relationshipType: a.payload.relationshipType,
+        };
+        next.camera = {
+          center: next.country.center,
+          zoom: next.country.zoom,
+          bearing: 0,
+          pitch: 0,
+        };
+        next.selectionIds = result.nodeIds;
+        next.selectedEntity = a.payload.startId;
+        next.selectedRelationship = null;
+        next.highlightedRelationshipIds = result.relationshipIds;
+        next.domain = entityById(a.payload.startId)!.domain;
+        next.expanded = [...new Set([...next.expanded, ...result.nodeIds])];
+        next.isolatedEntityIds = [];
+        break;
+      }
       case "SELECT_COUNTRY": {
         const country = countries.find(
           (c) => c.code === a.payload.countryCode,
@@ -49,10 +95,16 @@ export function reduceCanvas(state: Exploration, input: unknown): Exploration {
         next = {
           ...next,
           country,
-          mode: "geographic",
+          mode:
+            next.layout === "split"
+              ? country.code === "ZA"
+                ? "relationships"
+                : "compare"
+              : "geographic",
           region: null,
           selectedEntity: null,
           selectedRelationship: null,
+          networkTrace: null,
           selectionIds: [],
           isolatedEntityIds: [],
           highlightedRelationshipIds: [],
@@ -71,6 +123,8 @@ export function reduceCanvas(state: Exploration, input: unknown): Exploration {
         break;
       }
       case "SET_VISUALIZATION_MODE": {
+        if (a.payload.mode === "geographic" && next.layout === "split")
+          next.layout = "single";
         next.mode = a.payload.mode;
         next.domain =
           a.payload.mode === "flow"
@@ -105,12 +159,12 @@ export function reduceCanvas(state: Exploration, input: unknown): Exploration {
         next = {
           ...next,
           region: a.payload.entityId,
-          mode: next.layout === "overlay" ? next.mode : "geographic",
+          mode: next.layout !== "single" ? next.mode : "geographic",
           selectedEntity: a.payload.entityId,
           selectionIds: [a.payload.entityId],
           selectedRelationship: null,
           domain:
-            next.layout === "overlay" && next.mode === "data"
+            next.layout !== "single" && next.mode === "data"
               ? "society"
               : entityById(a.payload.entityId)!.domain,
           expanded: [
@@ -121,6 +175,14 @@ export function reduceCanvas(state: Exploration, input: unknown): Exploration {
           ],
           camera: focusCamera(next, a.payload.entityId),
         };
+        if (municipalById(a.payload.entityId)) {
+          next.layers = next.layers.map((l) =>
+            l.id === "municipalities" ? { ...l, visible: true } : l,
+          );
+          const category = municipalById(a.payload.entityId)!.category;
+          if (category !== "A")
+            next.municipalityLevel = category === "C" ? "district" : "local";
+        }
         break;
       case "CREATE_CHART":
         next = {
@@ -142,6 +204,8 @@ export function reduceCanvas(state: Exploration, input: unknown): Exploration {
         break;
       case "SET_LAYOUT":
         next.layout = a.payload.layout;
+        if (next.layout === "split" && next.mode === "geographic")
+          next.mode = next.country.code === "ZA" ? "relationships" : "compare";
         break;
       case "SET_INFORMATION_DENSITY":
         next.density = a.payload.density;
@@ -174,6 +238,11 @@ export function reduceCanvas(state: Exploration, input: unknown): Exploration {
         break;
       case "SET_FILTERS":
         next.filters = a.payload;
+        if (next.networkTrace)
+          next.networkTrace = {
+            ...next.networkTrace,
+            relationshipType: a.payload.relationshipType,
+          };
         break;
       case "SET_TIME_RANGE":
         next.timeRange = a.payload.range;
@@ -203,6 +272,7 @@ export function reduceCanvas(state: Exploration, input: unknown): Exploration {
           selectionIds: [],
           highlightedRelationshipIds: [],
           isolatedEntityIds: [],
+          networkTrace: null,
         };
         break;
       case "UNDO":

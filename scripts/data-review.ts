@@ -71,6 +71,66 @@ for (const event of events) {
     fail(event.id, "Unknown event entity");
 }
 const boundaries = await read("public/data/za-provinces.geojson");
+const provincial = await read("data/provincial-indicators.json"),
+  municipal = await read("data/municipal-geography.json"),
+  assets = await read("data/geography-assets.json");
+if (
+  municipal.length !== 257 ||
+  new Set(municipal.map((m: { entityId: string }) => m.entityId)).size !== 257
+)
+  fail("municipalities", "Expected257unique municipality code joins");
+for (const m of municipal) {
+  if (
+    !entityIds.has(m.entityId) ||
+    !regionIds.has(m.region) ||
+    m.bounds.length !== 4 ||
+    m.center.length !== 2 ||
+    ![...m.bounds, ...m.center].every(Number.isFinite)
+  )
+    fail(m.entityId, "Invalid municipal geography join or bounds");
+}
+for (const asset of assets) {
+  const bytes = await fs.readFile(path.join(root, "public/data", asset.file));
+  if (createHash("sha256").update(bytes).digest("hex") !== asset.sha256)
+    fail(asset.file, "Geography asset digest mismatch");
+  const geo = JSON.parse(bytes.toString());
+  if (geo.features.length !== asset.features)
+    fail(asset.file, "Boundary feature count mismatch");
+  for (const f of geo.features)
+    if (!entityIds.has(f.properties.entityId))
+      fail(asset.file, "Boundary references unknown municipality");
+}
+const metricIds = new Set();
+for (const metric of provincial.metrics) {
+  if (metricIds.has(metric.id)) fail(metric.id, "Duplicate provincial metric");
+  metricIds.add(metric.id);
+  if (
+    metric.startDate > metric.endDate ||
+    !metric.sourceIds.every((id: string) => refs.has(id))
+  )
+    fail(metric.id, "Invalid period or unknown source");
+  const observed = new Set();
+  for (const o of metric.observations) {
+    if (
+      !regionIds.has(o.regionId) ||
+      observed.has(o.regionId) ||
+      (o.value !== null && !Number.isFinite(o.value))
+    )
+      fail(metric.id, "Invalid province observation");
+    observed.add(o.regionId);
+    if (
+      o.numerator !== undefined &&
+      (!(o.denominator > 0) ||
+        Math.round((o.numerator / o.denominator) * 1000) / 10 !== o.value)
+    )
+      fail(metric.id, "Derived percentage differs from published counts");
+  }
+  if (observed.size !== 9)
+    fail(
+      metric.id,
+      "Province coverage must explicitly include all9regions, using null for unavailable values",
+    );
+}
 if (boundaries.features.length !== 9)
   fail("province-boundaries", "Expected nine source province geometries");
 for (const feature of boundaries.features) {
@@ -124,6 +184,9 @@ if (args.includes("--apply")) {
     "regions.json",
     "indicators.json",
     "events.json",
+    "provincial-indicators.json",
+    "municipal-geography.json",
+    "geography-assets.json",
   ].sort();
   for (const name of files) {
     digest.update(name);
@@ -141,6 +204,8 @@ if (args.includes("--apply")) {
       regions: regions.length,
       indicators: indicators.indicators.length,
       events: events.length,
+      municipalities: municipal.length,
+      provincialIndicators: provincial.metrics.length,
     },
     files,
   };

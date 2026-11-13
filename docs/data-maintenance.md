@@ -6,6 +6,13 @@ The application uses a reviewed, versioned catalogue. A source citation records 
 
 - `data/knowledge.json`: sources, entities, typed relationships and Census datasets.
 - `data/regions.json`: nine provinces and joins to entity IDs.
+- `data/municipal-geography.json`: 257 unique municipality joins and historical geometry navigation bounds.
+- `data/geography-assets.json`: source vintage, feature counts and SHA-256 hashes for the two public municipality files.
+- `data/provincial-indicators.json`: six provincial measures / 54 observations, definitions, periods, denominators and caveats.
+
+The release digest covers seven JSON files. Geometry asset hashes bind the public municipality files to that release. Preserve the original geometry licenses and historical vintage. Education rates use adults **20+**, not 25+. Medical-aid coverage measures financial coverage, not facility capacity or care quality. Table transcription and calculation evidence is retained in `data/provenance/provincial-indicator-evidence.md`. Stats SA reuse terms require attribution and disclosure of independent processing; they are not described as Creative Commons.
+
+The database seed stores nine province and 257 municipality geometries, plus eight indicator records (two national series and six province overlays). `node scripts/db-check.mjs` applies the seed twice and verifies valid positive-area geometry against the isolated development database.
 - `data/indicators.json`: normalized World Bank observations, preserving source precision and missing values.
 - `data/events.json`: sourced dates; year-only events retain year precision.
 - `data/provenance/`: original Treasury directory/change history, national directory metadata, Census table transcription, raw WDI responses, mining editorial notes and operator coordinate provenance.

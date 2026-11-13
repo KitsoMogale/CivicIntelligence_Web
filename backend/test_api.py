@@ -75,3 +75,18 @@ def test_history_and_catalog_readiness():
     from backend.catalog import catalog_digest
     assert client.get("/catalog").json()["revision"] == catalog_digest()
     assert client.get("/health").headers.get("x-request-id")
+
+def test_municipal_levels_and_historical_geometry():
+    assert len(client.get("/municipalities").json()) == 213
+    assert len(client.get("/municipalities?level=district").json()) == 52
+    assert client.get("/municipalities?country=BW").json() == []
+    feature=client.get("/regions/za-municipality-cpt/boundary")
+    assert feature.status_code == 200
+    assert feature.json()["properties"]["boundaryVintage"] == "2020"
+
+def test_provincial_overlays_remain_separate_from_national_indicators():
+    values=client.get("/overlays").json()
+    assert len(values) == 6
+    assert all(len(metric["observations"])==9 for metric in values)
+    assert client.get("/overlays?country=BW").json() == []
+    assert all("code" in metric for metric in client.get("/indicators").json())

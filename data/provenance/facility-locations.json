@@ -1,0 +1,195 @@
+{
+  "retrievedAt": "2026-11-13",
+  "coordinateOrder": "longitude, latitude",
+  "conversion": "DMS d+m/60+s/3600; decimal minutes d+m/60. South negative, East positive; rounded8decimals. Numeric precision is not survey accuracy.",
+  "rightsNote": "Small set of individual factual positions from official municipal/university/port-authority sources. No blanket open licence asserted for these pages or reports. Do not redistribute photographs, maps, drawings or copied prose.",
+  "scopeNote": "Five primary-sourced facility locators; a bounded example catalogue, not national facility coverage. No inferred ownership, current operating status, capacity, quality or access-to-care metrics.",
+  "sources": [
+    {
+      "id": "lephalale-facility-locations",
+      "title": "Hospitals and clinics in Lephalale",
+      "publisher": "Lephalale Local Municipality",
+      "url": "https://www.lephalale.gov.za/pages/hospitals%20and%20clinics%20in%20Lephalale.php",
+      "retrievedAt": "2026-11-13",
+      "note": "Undated official municipal directory. Published points only; retrieval is not a fresh facility inspection. Individual coordinate facts transcribed; page copyright retained."
+    },
+    {
+      "id": "uct-egs-location",
+      "title": "Environmental & Geographical Science: Contact us",
+      "publisher": "University of Cape Town",
+      "url": "https://science.uct.ac.za/department-egs/contact-us",
+      "retrievedAt": "2026-11-13",
+      "note": "Published point is the EGS building on Upper Campus, not an assumed campus centroid. Undated contact page; individual coordinate facts only."
+    },
+    {
+      "id": "nwu-campus-locations",
+      "title": "Where to find the NWU: Maps and directions",
+      "publisher": "North-West University",
+      "url": "https://www.nwu.ac.za/content/maps-and-directions-io",
+      "retrievedAt": "2026-11-13",
+      "note": "Published Potchefstroom Campus visitor locator; not a cadastral campus boundary or surveyed centroid. Individual factual location only."
+    },
+    {
+      "id": "tnpa-durban-location-2023",
+      "title": "Dry Dock Study: Contract mandatory returnables, TNPA/2023/03/0002/25990/RFP",
+      "publisher": "Transnet National Ports Authority, published by National Treasury eTenders",
+      "url": "https://www.etenders.gov.za/home/Download/?blobName=cf9e7645-a87d-44eb-a2be-8ae1e4bc3ba4.pdf&downloadedFileName=Contract+Mandatory+Returnables+-+TNPA-2023-03-0002-25990RFP.pdf",
+      "retrievedAt": "2026-11-13",
+      "note": "PDF page47 (zero-based46), PartC4 Site Information section1.1. Published general harbour locator, whole arc-minute precision. No current throughput, capacities, navigation, or operating-condition claims. Rights retained; individual facts only."
+    }
+  ],
+  "entities": [
+    {
+      "id": "za-ellisras-hospital",
+      "name": "Ellisras Hospital",
+      "type": "Healthcare facility",
+      "country": "ZA",
+      "domain": "society",
+      "description": "Healthcare facility listed in the Lephalale municipal directory. The map point follows the directory’s published GPS location; no current service or capacity claim is made.",
+      "sourceIds": [
+        "lephalale-facility-locations"
+      ],
+      "updatedAt": "2026-11-13",
+      "region": "limpopo",
+      "coordinates": [
+        27.70315,
+        -23.6783
+      ],
+      "coordinateNote": "Municipality-published hospital locator (decimal minutes).",
+      "attributes": {
+        "Facility class": "Healthcare facility",
+        "Coordinate role": "Municipality-published hospital locator (decimal minutes).",
+        "Source coordinates": "S23 40.698 E27 42.189",
+        "Coordinate review": "Transcribed from primary publisher; accuracy and current operating status not independently surveyed"
+      }
+    },
+    {
+      "id": "za-mediclinic-lephalale",
+      "name": "Mediclinic Lephalale",
+      "type": "Healthcare facility",
+      "country": "ZA",
+      "domain": "society",
+      "description": "Healthcare facility listed at the corner of Douwater and Joe Slovo Street in the Lephalale municipal directory. The point is the directory locator; no current service or capacity claim is made.",
+      "sourceIds": [
+        "lephalale-facility-locations"
+      ],
+      "updatedAt": "2026-11-13",
+      "region": "limpopo",
+      "coordinates": [
+        27.69813889,
+        -23.68646667
+      ],
+      "coordinateNote": "Municipality-published hospital locator (DMS).",
+      "attributes": {
+        "Facility class": "Healthcare facility",
+        "Coordinate role": "Municipality-published hospital locator (DMS).",
+        "Source coordinates": "23 41'11.28\" S 27 41'53.30\" E",
+        "Coordinate review": "Transcribed from primary publisher; accuracy and current operating status not independently surveyed"
+      }
+    },
+    {
+      "id": "za-uct-egs-building",
+      "name": "UCT Environmental & Geographical Science Building",
+      "type": "University teaching and research building",
+      "country": "ZA",
+      "domain": "society",
+      "description": "University of Cape Town’s Environmental & Geographical Science department publishes this building location on South Lane, Upper Campus. The point identifies the department’s building rather than the whole university.",
+      "sourceIds": [
+        "uct-egs-location"
+      ],
+      "updatedAt": "2026-11-13",
+      "region": "western-cape",
+      "coordinates": [
+        18.46005,
+        -33.95735
+      ],
+      "coordinateNote": "University-published EGS building locator (decimal minutes).",
+      "attributes": {
+        "Facility class": "University teaching and research building",
+        "Coordinate role": "University-published EGS building locator (decimal minutes).",
+        "Source coordinates": "S33°57.441' E18°27.603'",
+        "Coordinate review": "Transcribed from primary publisher; accuracy and current operating status not independently surveyed"
+      }
+    },
+    {
+      "id": "za-nwu-potchefstroom-campus",
+      "name": "North-West University Potchefstroom Campus",
+      "type": "University campus",
+      "country": "ZA",
+      "domain": "society",
+      "description": "North-West University publishes this Potchefstroom Campus locator with visitor directions to its main security entrance. It is a representative visitor point, not a campus boundary.",
+      "sourceIds": [
+        "nwu-campus-locations"
+      ],
+      "updatedAt": "2026-11-13",
+      "region": "north-west",
+      "coordinates": [
+        27.09333333,
+        -26.69055556
+      ],
+      "coordinateNote": "University-published campus visitor locator (DMS).",
+      "attributes": {
+        "Facility class": "University campus",
+        "Coordinate role": "University-published campus visitor locator (DMS).",
+        "Source coordinates": "S26°41'26\" E27°05'36\"",
+        "Coordinate review": "Transcribed from primary publisher; accuracy and current operating status not independently surveyed"
+      }
+    },
+    {
+      "id": "za-port-durban",
+      "name": "Port of Durban",
+      "type": "Commercial port",
+      "country": "ZA",
+      "domain": "infrastructure",
+      "description": "Transnet National Ports Authority’s 2023 dry-dock study tender publishes a general geographic locator for the Port of Durban. The point is approximate and does not identify a particular terminal, berth or navigational approach.",
+      "sourceIds": [
+        "tnpa-durban-location-2023"
+      ],
+      "updatedAt": "2026-11-13",
+      "region": "kwazulu-natal",
+      "coordinates": [
+        31.03333333,
+        -29.86666667
+      ],
+      "coordinateNote": "General harbour locator published to whole arc-minute precision; approximate within the harbour.",
+      "attributes": {
+        "Facility class": "Commercial port",
+        "Coordinate role": "General harbour locator published to whole arc-minute precision; approximate within the harbour.",
+        "Source coordinates": "31°02'E 29°52'S",
+        "Coordinate review": "Transcribed from primary publisher; accuracy and current operating status not independently surveyed"
+      }
+    }
+  ],
+  "provenance": [
+    {
+      "entityId": "za-ellisras-hospital",
+      "sourceId": "lephalale-facility-locations",
+      "original": "S23 40.698 E27 42.189",
+      "coordinateRole": "Municipality-published hospital locator (decimal minutes)."
+    },
+    {
+      "entityId": "za-mediclinic-lephalale",
+      "sourceId": "lephalale-facility-locations",
+      "original": "23 41'11.28\" S 27 41'53.30\" E",
+      "coordinateRole": "Municipality-published hospital locator (DMS)."
+    },
+    {
+      "entityId": "za-uct-egs-building",
+      "sourceId": "uct-egs-location",
+      "original": "S33°57.441' E18°27.603'",
+      "coordinateRole": "University-published EGS building locator (decimal minutes)."
+    },
+    {
+      "entityId": "za-nwu-potchefstroom-campus",
+      "sourceId": "nwu-campus-locations",
+      "original": "S26°41'26\" E27°05'36\"",
+      "coordinateRole": "University-published campus visitor locator (DMS)."
+    },
+    {
+      "entityId": "za-port-durban",
+      "sourceId": "tnpa-durban-location-2023",
+      "original": "31°02'E 29°52'S",
+      "coordinateRole": "General harbour locator published to whole arc-minute precision; approximate within the harbour."
+    }
+  ]
+}

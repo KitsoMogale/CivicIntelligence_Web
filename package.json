@@ -11,6 +11,7 @@
     "test": "tsx --test --test-concurrency=1 tests/*.test.ts",
     "test:browser": "node scripts/browser-test.mjs",
     "test:canvas": "node scripts/canvas-browser-test.mjs",
+    "test:features": "node scripts/features-browser-test.mjs",
     "dev:api": "backend/.venv/Scripts/python.exe -m uvicorn backend.main:app --host 127.0.0.1 --port 8000",
     "format": "prettier --write app components lib tests scripts",
     "format:check": "prettier --check app components lib tests scripts",

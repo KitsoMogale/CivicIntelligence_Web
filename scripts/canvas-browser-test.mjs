@@ -58,7 +58,7 @@ try {
     .locator('.map-surface[data-loaded="true"][data-provinces-loaded="true"]')
     .waitFor();
   await layers(page);
-  assert.equal(await page.locator(".canvas-layer-row").count(), 9);
+  assert.equal(await page.locator(".canvas-layer-row").count(), 10);
   await page.getByLabel("Cities & towns", { exact: true }).uncheck();
   await page.getByLabel("Institutions", { exact: true }).uncheck();
   await page
@@ -255,7 +255,7 @@ try {
   for await (const chunk of await download.createReadStream()) content += chunk;
   const saved = JSON.parse(content);
   assert.equal(saved.context.layout, "overlay");
-  assert.equal(saved.context.layers.length, 9);
+  assert.equal(saved.context.layers.length, 10);
   assert.ok(saved.context.camera.zoom);
   await page.getByLabel("Close dialog", { exact: true }).click();
   await page.reload({ waitUntil: "domcontentloaded" });

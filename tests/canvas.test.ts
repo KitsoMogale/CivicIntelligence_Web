@@ -55,7 +55,7 @@ test("layer changes compose independently, enforce opacity bounds and preserve u
   assert.equal(layerById(next.layers, "cities").visible, false);
   assert.equal(layerById(next.layers, "infrastructure").visible, true);
   assert.equal(layerById(next.layers, "mining").opacity, 0.35);
-  assert.equal(layerById(next.layers, "countries").zIndex, 8);
+  assert.equal(layerById(next.layers, "countries").zIndex, 9);
   assert.throws(() =>
     validateActions([
       { type: "SET_LAYER_OPACITY", payload: { id: "mining", opacity: 2 } },

@@ -8,7 +8,7 @@ Next.js App Router, TypeScript, Tailwind, Zustand, MapLibre, React Flow, Cytosca
 
 The [canvas interaction implementation](docs/canvas-implementation.md) adds independent ordered layers, opacity/filter controls, native map symbols, semantic scope with separate density, shared camera and selection, an overlay layout, and reversible validated actions. Existing saved investigations migrate to the expanded state. Split view and live AI orchestration remain deferred.
 
-The curated catalogue includes 390 entities, 393 typed/navigation relationships, 79 sources, all nine South African provinces, 43 national-directory bodies, 257 municipalities, three mining groups with eight operations, four station assets, 13 representative city points, two Census datasets, two historical World Bank indicators and seven events.
+The curated catalogue includes 396 entities, 399 typed/navigation relationships, 88 sources, all nine South African provinces, 43 national-directory bodies, 257 municipalities with historical boundary geometry, three mining groups with eight operations, four station assets, five additional sourced facility locators, 13 representative city points, two Census datasets, six provincial measures, two historical World Bank indicators and seven events.
 
 Detailed institutional coverage focuses on South Africa. World Bank population and GDP-growth comparisons cover South Africa, Botswana and Namibia in 2014–2024. Other countries remain map-only.
 
@@ -31,6 +31,10 @@ The public directory separates former municipality codes. Source review records 
 The Next frontend and same-origin Node routes are prepared for Netlify. The optional FastAPI service uses PostgreSQL, PostGIS, pgvector, SQLAlchemy and Alembic and needs a separate production host. It persists entities, relationships, sources, datasets, province geometry, indicator series, timeline events and catalogue revisions.
 
 The default reviewed bundle works without a database or AI credentials. Streaming AI and embedding plumbing remain available for later credential configuration. No live-provider requests or deployments are part of this milestone.
+
+Choose **Layout → Split canvas** to keep the map beside the active graph/chart, then drag or keyboard-resize the divider. Its ratio is saved and supports undo. **Layers → Municipal boundaries** offers local/metro and district/metro levels for 257 unique records. Boundaries are explicitly historical representative-2020 geometry, not current legal demarcations. Five sourced facility points retain publisher precision.
+
+**Explore network** finds multi-step neighborhoods or a shortest documented path, with direction, type, reporting-date filters and evidence links. Directory connections are optional. Provincial statistics include unemployment, employment absorption, real GDP growth, adult education and medical-aid coverage. Legends and reports preserve periods, denominators and attribution. Netlify deployment and live AI credentials remain deferred.
 
 ## Run and maintain
 

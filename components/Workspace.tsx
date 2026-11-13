@@ -61,6 +61,7 @@ import type { Domain, Mode } from "@/lib/types";
 import Assistant from "./Assistant";
 import KnowledgeTree from "./KnowledgeTree";
 import CanvasTools from "./CanvasTools";
+import SplitDivider from "./SplitDivider";
 const Loading = () => (
   <div className="canvas-loading">
     <span className="loading-ring" />
@@ -665,24 +666,34 @@ export default function Workspace() {
           </div>
           <CanvasTools />
           <div
+            style={
+              {
+                "--split-ratio": s.splitRatio + "%",
+              } as import("react").CSSProperties
+            }
             className={
               "canvas-container " +
-              (s.layout === "overlay" && s.mode !== "geographic"
-                ? "has-canvas-overlay"
-                : "")
+              (s.layout === "split"
+                ? "has-canvas-split"
+                : s.layout === "overlay" && s.mode !== "geographic"
+                  ? "has-canvas-overlay"
+                  : "")
             }
           >
             <div
               className="persistent-map"
-              hidden={s.mode !== "geographic" && s.layout !== "overlay"}
+              hidden={s.mode !== "geographic" && s.layout === "single"}
             >
               <WorldMap />
             </div>
+            {s.layout === "split" && <SplitDivider />}
             <div
               className={
-                s.mode !== "geographic" && s.layout === "overlay"
-                  ? "canvas-floating-view"
-                  : "canvas-main-view"
+                s.layout === "split"
+                  ? "canvas-split-view"
+                  : s.mode !== "geographic" && s.layout === "overlay"
+                    ? "canvas-floating-view"
+                    : "canvas-main-view"
               }
             >
               {s.mode === "geographic" ? (

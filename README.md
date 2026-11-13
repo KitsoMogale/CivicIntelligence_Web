@@ -23,7 +23,10 @@ A fresh checkout needs `npm.cmd ci` first. Use Node 22 or later. The default exp
 
 ## What to explore
 
-- **Map:** select countries and all nine South African provinces. Open Layers for Census 2022 population, 2011–2022 change, city points, institutions, mining province locators and power-station locators.
+- **Map:** select countries, nine provinces and 257 municipality records. Enable Municipal boundaries and choose local/metro or district/metro geography. Boundaries are historical representative-2020 geometry. Five additional hospital, campus/building and harbour locators retain publisher precision notes.
+- **Split canvas:** choose Layout → Split canvas to keep the map beside a graph or chart. Drag the divider or use its arrow keys; panels stack on mobile. Shared selection, camera, saved views and undo retain context.
+- **Networks:** Explore network supports one to six steps, shortest documented paths, direction and relationship-type controls. Directory connections are optional. The shared evidence-date filter excludes undated edges. Reverse traversal indicates connectivity, not reverse ownership.
+- **Provincial statistics:** Layers offers unemployment and absorption (Q3 2026), real GDP growth (2025), adult education (2022, ages 20+), and medical-aid coverage (2025), alongside Census population/change. Legends and reports retain definitions, denominators, periods and sources; no municipality estimates are interpolated.
 - **Canvas controls:** combine independent layers, reorder them, change opacity and choose Census 2011/2022. Set information density separately from zoom. Shared selection, filters and camera survive view changes. Use Map + overlay for synchronized diagrams, Trace/Isolate for selections, and History for undo/redo. See [canvas implementation](docs/canvas-implementation.md).
 - **Hierarchy / Relationships:** explore government spheres, provincial institutions, 43 national directory bodies, 257 municipalities, and three mining groups with eight operations. Select a connection for its evidence and reporting date.
 - **System flow:** the simplified four-stage electricity supply path stays separate from the infrastructure asset catalogue.
@@ -80,7 +83,7 @@ That server uses `.next-verify` and http://127.0.0.1:3100, leaving the regular b
 
 ## Data and release workflow
 
-The curated catalogue contains **390 entities, 393 relationships, 79 references, nine province regions, two Census datasets, two World Bank indicator series and seven dated events**. Navigation and geographic-context links are included in the relationship count.
+The curated catalogue contains **396 entities, 399 relationships, 88 references, nine province regions, 257 municipal boundary identities, two Census datasets, two World Bank indicator series, six provincial metrics (54 observations) and seven dated events**. Navigation and geographic-context links are included in the relationship count.
 
 See [data maintenance](docs/data-maintenance.md), [production setup](docs/production.md), [local verification](docs/local-verification.md), and the [product brief](docs/product-brief.md). `data/release.json` records the bundle digest used by database readiness checks.
 

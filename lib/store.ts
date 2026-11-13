@@ -73,6 +73,7 @@ export const useExplorer = create<State>()(
         const d = domains.find((d) => d.id === domain)!;
         get().navigate(
           {
+            networkTrace: null,
             domain,
             selectedEntity: null,
             selectionIds: [],
@@ -198,7 +199,7 @@ export const useExplorer = create<State>()(
     }),
     {
       name: "civic-exploration-v1",
-      version: 3,
+      version: 4,
       partialize: (s) => snapshot(s),
       migrate: (value) => {
         try {

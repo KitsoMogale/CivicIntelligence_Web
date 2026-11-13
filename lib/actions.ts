@@ -1,6 +1,9 @@
 import { z } from "zod";
 import { countries, datasets, entityById, entities } from "./knowledge";
 import { relationships } from "./knowledge";
+import { networkSchema } from "./network";
+import { metricSchema } from "./statistics";
+import { municipalById } from "./geography";
 import {
   cameraSchema,
   densitySchema,
@@ -19,6 +22,9 @@ export const modeSchema = z.enum([
   "timeline",
 ]);
 export const actionSchema = z.discriminatedUnion("type", [
+  z
+    .object({ type: z.literal("TRACE_NETWORK"), payload: networkSchema })
+    .strict(),
   z.object({ type: z.literal("FLY_TO"), payload: cameraSchema }).strict(),
   z
     .object({
@@ -41,8 +47,8 @@ export const actionSchema = z.discriminatedUnion("type", [
         .object({
           ids: z
             .array(layerIdSchema)
-            .length(9)
-            .refine((ids) => new Set(ids).size === 9),
+            .length(10)
+            .refine((ids) => new Set(ids).size === 10),
         })
         .strict(),
     })
@@ -58,7 +64,7 @@ export const actionSchema = z.discriminatedUnion("type", [
       type: z.literal("SET_STATISTIC"),
       payload: z
         .object({
-          metric: z.enum(["population", "change"]),
+          metric: metricSchema,
           year: z.union([z.literal(2011), z.literal(2022)]),
         })
         .strict(),
@@ -208,6 +214,10 @@ export function validateActions(
   )
     throw new Error("History actions must be issued alone");
   for (const action of parsed) {
+    if (action.type === "TRACE_NETWORK")
+      for (const id of [action.payload.startId, action.payload.targetId])
+        if (id && entityById(id)?.country !== country)
+          throw new Error("Network entity outside active country");
     if (action.type === "SELECT_ENTITIES" || action.type === "ISOLATE_ENTITIES")
       for (const id of action.payload.ids)
         if (entityById(id)?.country !== country)
@@ -246,7 +256,11 @@ export function validateActions(
       const entity = entityById(id);
       if (!entity || entity.country !== country)
         throw new Error("Entity outside active country");
-      if (action.type === "FOCUS_REGION" && !entity.coordinates)
+      if (
+        action.type === "FOCUS_REGION" &&
+        !entity.coordinates &&
+        !municipalById(entity.id)
+      )
         throw new Error("Region has no geometry");
     }
     if (

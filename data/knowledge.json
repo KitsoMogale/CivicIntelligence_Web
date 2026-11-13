@@ -586,6 +586,87 @@
       "url": "https://www.eskom.co.za/eskom-divisions/gx/koeberg-nuclear-power-station/",
       "retrievedAt": "2026-11-13",
       "note": "Nuclear generation type, Duynefontein location and Western Cape context."
+    },
+    {
+      "id": "qlfs-2026-q3",
+      "title": "Quarterly Labour Force Survey, Quarter 3: 2026 (P0211)",
+      "publisher": "Statistics South Africa",
+      "url": "https://www.statssa.gov.za/publications/P0211/P02113rdQuarter2026.pdf",
+      "publishedAt": "2026-11-10",
+      "retrievedAt": "2026-11-13",
+      "license": "Stats SA copyright: reuse with source attribution and independent-processing disclosure. No Creative Commons licence asserted.",
+      "note": "Printed page 9, section 5: provincial labour-market measures map; definitions in report Household sample survey of labour market activities for persons aged 15–64. Questionnaire revised in Q3 2025 to reflect updated ICLS standards; do not combine sector definitions across this break. Rates are survey estimates, not municipal measurements. Statistics South Africa (Stats SA). Map display and derived education percentages are independent Civic Intelligence processing. Official source PDF text exposed by web search; direct Stats SA PDF download returned HTML anti-bot response."
+    },
+    {
+      "id": "provincial-gdp-2025",
+      "title": "Provincial gross domestic product, 2025 (P0441.2; September 2026 issue)",
+      "publisher": "Statistics South Africa",
+      "url": "https://www.statssa.gov.za/publications/P04412/P04412September2026.pdf",
+      "publishedAt": "2026-10-29",
+      "retrievedAt": "2026-11-13",
+      "license": "Stats SA copyright: reuse with source attribution and independent-processing disclosure. No Creative Commons licence asserted.",
+      "note": "Printed page 7, Table 2: GDP by province at constant 2022 prices, percentage changes Rebased and benchmarked 2022-price series. This release revises earlier GDP estimates. Preserve its vintage and do not splice to the older 2015-base or WDI national series. Statistics South Africa (Stats SA). Map display and derived education percentages are independent Civic Intelligence processing. Official source PDF text exposed by web search; direct Stats SA PDF download returned HTML anti-bot response."
+    },
+    {
+      "id": "census-2022-education",
+      "title": "Census 2022 statistical release: adult educational attainment (P0301.4)",
+      "publisher": "Statistics South Africa",
+      "url": "https://www.gov.za/sites/default/files/P03014_Census_2022_Statistical_Release.pdf",
+      "publishedAt": "2023-10-10",
+      "retrievedAt": "2026-11-13",
+      "license": "Stats SA copyright: reuse with source attribution and independent-processing disclosure. No Creative Commons licence asserted.",
+      "note": "Printed page 43, Table 4.6: population aged 20 and older by educational attainment and province Historical Census 2022 counts. Ages 20+; not ages 25+, current schooling, school quality, or a census of qualifications completed during 2022. Statistics South Africa (Stats SA). Map display and derived education percentages are independent Civic Intelligence processing. Official South African Government PDF downloaded successfully; original Stats SA URL: https://census.statssa.gov.za/assets/documents/2022/P03014_Census_2022_Statistical_Release.pdf"
+    },
+    {
+      "id": "ghs-2025-medical-aid",
+      "title": "General Household Survey, 2025 (P0318): medical aid coverage",
+      "publisher": "Statistics South Africa",
+      "url": "https://www.statssa.gov.za/publications/P0318/P03182025.pdf",
+      "publishedAt": "2026-05-26",
+      "retrievedAt": "2026-11-13",
+      "license": "Stats SA copyright: reuse with source attribution and independent-processing disclosure. No Creative Commons licence asserted.",
+      "note": "Printed page 21, Figure 5.3; corroborated by P0318.2 selected development indicators Table 2.4, printed page 9 Financial insurance-coverage proxy. This does not measure healthcare availability, access to public treatment, quality of care, bed capacity, facility counts or health outcomes. Survey estimates; published percentages preserved without recalculation from rounded counts. Statistics South Africa (Stats SA). Map display and derived education percentages are independent Civic Intelligence processing. Official source PDF text exposed by web search; direct Stats SA PDF download returned HTML anti-bot response."
+    },
+    {
+      "id": "municipal-boundaries",
+      "title": "South African municipal boundaries (historical representative2020)",
+      "publisher": "OCHA ROSEA / Municipal Demarcation Board; simplified by geoBoundaries",
+      "url": "https://data.humdata.org/dataset/cod-ab-zaf",
+      "retrievedAt": "2026-11-13",
+      "license": "Original CC BY3.0IGO; geoBoundaries CC BY4.0",
+      "note": "Historical sourcecreated2018-12-27, humanitarian valid2020-11-09, reviewed2025-01-28.52district/metro and213local/metro polygons,257unique municipal codes. Names joined to October2026 Treasury directory. Simplified geometry is not current legal/cadastral demarcation. Eight metros occur at both levels; never aggregate levels together."
+    },
+    {
+      "id": "lephalale-facility-locations",
+      "title": "Hospitals and clinics in Lephalale",
+      "publisher": "Lephalale Local Municipality",
+      "url": "https://www.lephalale.gov.za/pages/hospitals%20and%20clinics%20in%20Lephalale.php",
+      "retrievedAt": "2026-11-13",
+      "note": "Undated official municipal directory. Published points only; retrieval is not a fresh facility inspection. Individual coordinate facts transcribed; page copyright retained."
+    },
+    {
+      "id": "uct-egs-location",
+      "title": "Environmental & Geographical Science: Contact us",
+      "publisher": "University of Cape Town",
+      "url": "https://science.uct.ac.za/department-egs/contact-us",
+      "retrievedAt": "2026-11-13",
+      "note": "Published point is the EGS building on Upper Campus, not an assumed campus centroid. Undated contact page; individual coordinate facts only."
+    },
+    {
+      "id": "nwu-campus-locations",
+      "title": "Where to find the NWU: Maps and directions",
+      "publisher": "North-West University",
+      "url": "https://www.nwu.ac.za/content/maps-and-directions-io",
+      "retrievedAt": "2026-11-13",
+      "note": "Published Potchefstroom Campus visitor locator; not a cadastral campus boundary or surveyed centroid. Individual factual location only."
+    },
+    {
+      "id": "tnpa-durban-location-2023",
+      "title": "Dry Dock Study: Contract mandatory returnables, TNPA/2023/03/0002/25990/RFP",
+      "publisher": "Transnet National Ports Authority, published by National Treasury eTenders",
+      "url": "https://www.etenders.gov.za/home/Download/?blobName=cf9e7645-a87d-44eb-a2be-8ae1e4bc3ba4.pdf&downloadedFileName=Contract+Mandatory+Returnables+-+TNPA-2023-03-0002-25990RFP.pdf",
+      "retrievedAt": "2026-11-13",
+      "note": "PDF page47 (zero-based46), PartC4 Site Information section1.1. Published general harbour locator, whole arc-minute precision. No current throughput, capacities, navigation, or operating-condition claims. Rights retained; individual facts only."
     }
   ],
   "entities": [
@@ -2176,11 +2257,14 @@
         "Municipality code": "BUF",
         "Category": "A",
         "Province": "Eastern Cape",
-        "Parent directory code": "EC"
+        "Parent directory code": "EC",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -2197,11 +2281,14 @@
         "Municipality code": "CPT",
         "Category": "A",
         "Province": "Western Cape",
-        "Parent directory code": "WC"
+        "Parent directory code": "WC",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -2218,11 +2305,14 @@
         "Municipality code": "DC1",
         "Category": "C",
         "Province": "Western Cape",
-        "Parent directory code": "WC"
+        "Parent directory code": "WC",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -2239,11 +2329,14 @@
         "Municipality code": "DC10",
         "Category": "C",
         "Province": "Eastern Cape",
-        "Parent directory code": "EC"
+        "Parent directory code": "EC",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -2260,11 +2353,14 @@
         "Municipality code": "DC12",
         "Category": "C",
         "Province": "Eastern Cape",
-        "Parent directory code": "EC"
+        "Parent directory code": "EC",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -2281,11 +2377,14 @@
         "Municipality code": "DC13",
         "Category": "C",
         "Province": "Eastern Cape",
-        "Parent directory code": "EC"
+        "Parent directory code": "EC",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -2302,11 +2401,14 @@
         "Municipality code": "DC14",
         "Category": "C",
         "Province": "Eastern Cape",
-        "Parent directory code": "EC"
+        "Parent directory code": "EC",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -2323,11 +2425,14 @@
         "Municipality code": "DC15",
         "Category": "C",
         "Province": "Eastern Cape",
-        "Parent directory code": "EC"
+        "Parent directory code": "EC",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -2344,11 +2449,14 @@
         "Municipality code": "DC16",
         "Category": "C",
         "Province": "Free State",
-        "Parent directory code": "FS"
+        "Parent directory code": "FS",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -2365,11 +2473,14 @@
         "Municipality code": "DC18",
         "Category": "C",
         "Province": "Free State",
-        "Parent directory code": "FS"
+        "Parent directory code": "FS",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -2386,11 +2497,14 @@
         "Municipality code": "DC19",
         "Category": "C",
         "Province": "Free State",
-        "Parent directory code": "FS"
+        "Parent directory code": "FS",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -2407,11 +2521,14 @@
         "Municipality code": "DC2",
         "Category": "C",
         "Province": "Western Cape",
-        "Parent directory code": "WC"
+        "Parent directory code": "WC",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -2428,11 +2545,14 @@
         "Municipality code": "DC20",
         "Category": "C",
         "Province": "Free State",
-        "Parent directory code": "FS"
+        "Parent directory code": "FS",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -2449,11 +2569,14 @@
         "Municipality code": "DC21",
         "Category": "C",
         "Province": "KwaZulu-Natal",
-        "Parent directory code": "KZ"
+        "Parent directory code": "KZ",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -2470,11 +2593,14 @@
         "Municipality code": "DC22",
         "Category": "C",
         "Province": "KwaZulu-Natal",
-        "Parent directory code": "KZ"
+        "Parent directory code": "KZ",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -2491,11 +2617,14 @@
         "Municipality code": "DC23",
         "Category": "C",
         "Province": "KwaZulu-Natal",
-        "Parent directory code": "KZ"
+        "Parent directory code": "KZ",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -2512,11 +2641,14 @@
         "Municipality code": "DC24",
         "Category": "C",
         "Province": "KwaZulu-Natal",
-        "Parent directory code": "KZ"
+        "Parent directory code": "KZ",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -2533,11 +2665,14 @@
         "Municipality code": "DC25",
         "Category": "C",
         "Province": "KwaZulu-Natal",
-        "Parent directory code": "KZ"
+        "Parent directory code": "KZ",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -2554,11 +2689,14 @@
         "Municipality code": "DC26",
         "Category": "C",
         "Province": "KwaZulu-Natal",
-        "Parent directory code": "KZ"
+        "Parent directory code": "KZ",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -2575,11 +2713,14 @@
         "Municipality code": "DC27",
         "Category": "C",
         "Province": "KwaZulu-Natal",
-        "Parent directory code": "KZ"
+        "Parent directory code": "KZ",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -2596,11 +2737,14 @@
         "Municipality code": "DC28",
         "Category": "C",
         "Province": "KwaZulu-Natal",
-        "Parent directory code": "KZ"
+        "Parent directory code": "KZ",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -2617,11 +2761,14 @@
         "Municipality code": "DC29",
         "Category": "C",
         "Province": "KwaZulu-Natal",
-        "Parent directory code": "KZ"
+        "Parent directory code": "KZ",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -2638,11 +2785,14 @@
         "Municipality code": "DC3",
         "Category": "C",
         "Province": "Western Cape",
-        "Parent directory code": "WC"
+        "Parent directory code": "WC",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -2659,11 +2809,14 @@
         "Municipality code": "DC30",
         "Category": "C",
         "Province": "Mpumalanga",
-        "Parent directory code": "MP"
+        "Parent directory code": "MP",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -2680,11 +2833,14 @@
         "Municipality code": "DC31",
         "Category": "C",
         "Province": "Mpumalanga",
-        "Parent directory code": "MP"
+        "Parent directory code": "MP",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -2701,11 +2857,14 @@
         "Municipality code": "DC32",
         "Category": "C",
         "Province": "Mpumalanga",
-        "Parent directory code": "MP"
+        "Parent directory code": "MP",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -2722,11 +2881,14 @@
         "Municipality code": "DC33",
         "Category": "C",
         "Province": "Limpopo",
-        "Parent directory code": "LP"
+        "Parent directory code": "LP",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -2743,11 +2905,14 @@
         "Municipality code": "DC34",
         "Category": "C",
         "Province": "Limpopo",
-        "Parent directory code": "LP"
+        "Parent directory code": "LP",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -2764,11 +2929,14 @@
         "Municipality code": "DC35",
         "Category": "C",
         "Province": "Limpopo",
-        "Parent directory code": "LP"
+        "Parent directory code": "LP",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -2785,11 +2953,14 @@
         "Municipality code": "DC36",
         "Category": "C",
         "Province": "Limpopo",
-        "Parent directory code": "LP"
+        "Parent directory code": "LP",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -2806,11 +2977,14 @@
         "Municipality code": "DC37",
         "Category": "C",
         "Province": "North West",
-        "Parent directory code": "NW"
+        "Parent directory code": "NW",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -2827,11 +3001,14 @@
         "Municipality code": "DC38",
         "Category": "C",
         "Province": "North West",
-        "Parent directory code": "NW"
+        "Parent directory code": "NW",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -2848,11 +3025,14 @@
         "Municipality code": "DC39",
         "Category": "C",
         "Province": "North West",
-        "Parent directory code": "NW"
+        "Parent directory code": "NW",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -2869,11 +3049,14 @@
         "Municipality code": "DC4",
         "Category": "C",
         "Province": "Western Cape",
-        "Parent directory code": "WC"
+        "Parent directory code": "WC",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -2890,11 +3073,14 @@
         "Municipality code": "DC40",
         "Category": "C",
         "Province": "North West",
-        "Parent directory code": "NW"
+        "Parent directory code": "NW",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -2911,11 +3097,14 @@
         "Municipality code": "DC42",
         "Category": "C",
         "Province": "Gauteng",
-        "Parent directory code": "GT"
+        "Parent directory code": "GT",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -2932,11 +3121,14 @@
         "Municipality code": "DC43",
         "Category": "C",
         "Province": "KwaZulu-Natal",
-        "Parent directory code": "KZ"
+        "Parent directory code": "KZ",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -2953,11 +3145,14 @@
         "Municipality code": "DC44",
         "Category": "C",
         "Province": "Eastern Cape",
-        "Parent directory code": "EC"
+        "Parent directory code": "EC",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -2974,11 +3169,14 @@
         "Municipality code": "DC45",
         "Category": "C",
         "Province": "Northern Cape",
-        "Parent directory code": "NC"
+        "Parent directory code": "NC",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -2995,11 +3193,14 @@
         "Municipality code": "DC47",
         "Category": "C",
         "Province": "Limpopo",
-        "Parent directory code": "LP"
+        "Parent directory code": "LP",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -3016,11 +3217,14 @@
         "Municipality code": "DC48",
         "Category": "C",
         "Province": "Gauteng",
-        "Parent directory code": "GT"
+        "Parent directory code": "GT",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -3037,11 +3241,14 @@
         "Municipality code": "DC5",
         "Category": "C",
         "Province": "Western Cape",
-        "Parent directory code": "WC"
+        "Parent directory code": "WC",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -3058,11 +3265,14 @@
         "Municipality code": "DC6",
         "Category": "C",
         "Province": "Northern Cape",
-        "Parent directory code": "NC"
+        "Parent directory code": "NC",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -3079,11 +3289,14 @@
         "Municipality code": "DC7",
         "Category": "C",
         "Province": "Northern Cape",
-        "Parent directory code": "NC"
+        "Parent directory code": "NC",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -3100,11 +3313,14 @@
         "Municipality code": "DC8",
         "Category": "C",
         "Province": "Northern Cape",
-        "Parent directory code": "NC"
+        "Parent directory code": "NC",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -3121,11 +3337,14 @@
         "Municipality code": "DC9",
         "Category": "C",
         "Province": "Northern Cape",
-        "Parent directory code": "NC"
+        "Parent directory code": "NC",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -3142,11 +3361,14 @@
         "Municipality code": "EC101",
         "Category": "B",
         "Province": "Eastern Cape",
-        "Parent directory code": "DC10"
+        "Parent directory code": "DC10",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -3163,11 +3385,14 @@
         "Municipality code": "EC102",
         "Category": "B",
         "Province": "Eastern Cape",
-        "Parent directory code": "DC10"
+        "Parent directory code": "DC10",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -3184,11 +3409,14 @@
         "Municipality code": "EC104",
         "Category": "B",
         "Province": "Eastern Cape",
-        "Parent directory code": "DC10"
+        "Parent directory code": "DC10",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -3205,11 +3433,14 @@
         "Municipality code": "EC105",
         "Category": "B",
         "Province": "Eastern Cape",
-        "Parent directory code": "DC10"
+        "Parent directory code": "DC10",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -3226,11 +3457,14 @@
         "Municipality code": "EC106",
         "Category": "B",
         "Province": "Eastern Cape",
-        "Parent directory code": "DC10"
+        "Parent directory code": "DC10",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -3247,11 +3481,14 @@
         "Municipality code": "EC108",
         "Category": "B",
         "Province": "Eastern Cape",
-        "Parent directory code": "DC10"
+        "Parent directory code": "DC10",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -3268,11 +3505,14 @@
         "Municipality code": "EC109",
         "Category": "B",
         "Province": "Eastern Cape",
-        "Parent directory code": "DC10"
+        "Parent directory code": "DC10",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -3289,11 +3529,14 @@
         "Municipality code": "EC121",
         "Category": "B",
         "Province": "Eastern Cape",
-        "Parent directory code": "DC12"
+        "Parent directory code": "DC12",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -3310,11 +3553,14 @@
         "Municipality code": "EC122",
         "Category": "B",
         "Province": "Eastern Cape",
-        "Parent directory code": "DC12"
+        "Parent directory code": "DC12",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -3331,11 +3577,14 @@
         "Municipality code": "EC123",
         "Category": "B",
         "Province": "Eastern Cape",
-        "Parent directory code": "DC12"
+        "Parent directory code": "DC12",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -3352,11 +3601,14 @@
         "Municipality code": "EC124",
         "Category": "B",
         "Province": "Eastern Cape",
-        "Parent directory code": "DC12"
+        "Parent directory code": "DC12",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -3373,11 +3625,14 @@
         "Municipality code": "EC126",
         "Category": "B",
         "Province": "Eastern Cape",
-        "Parent directory code": "DC12"
+        "Parent directory code": "DC12",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -3394,11 +3649,14 @@
         "Municipality code": "EC129",
         "Category": "B",
         "Province": "Eastern Cape",
-        "Parent directory code": "DC12"
+        "Parent directory code": "DC12",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -3415,11 +3673,14 @@
         "Municipality code": "EC131",
         "Category": "B",
         "Province": "Eastern Cape",
-        "Parent directory code": "DC13"
+        "Parent directory code": "DC13",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -3436,11 +3697,14 @@
         "Municipality code": "EC135",
         "Category": "B",
         "Province": "Eastern Cape",
-        "Parent directory code": "DC13"
+        "Parent directory code": "DC13",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -3457,11 +3721,14 @@
         "Municipality code": "EC136",
         "Category": "B",
         "Province": "Eastern Cape",
-        "Parent directory code": "DC13"
+        "Parent directory code": "DC13",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -3478,11 +3745,14 @@
         "Municipality code": "EC137",
         "Category": "B",
         "Province": "Eastern Cape",
-        "Parent directory code": "DC13"
+        "Parent directory code": "DC13",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -3499,11 +3769,14 @@
         "Municipality code": "EC138",
         "Category": "B",
         "Province": "Eastern Cape",
-        "Parent directory code": "DC13"
+        "Parent directory code": "DC13",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -3520,11 +3793,14 @@
         "Municipality code": "EC139",
         "Category": "B",
         "Province": "Eastern Cape",
-        "Parent directory code": "DC13"
+        "Parent directory code": "DC13",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -3541,11 +3817,14 @@
         "Municipality code": "EC141",
         "Category": "B",
         "Province": "Eastern Cape",
-        "Parent directory code": "DC14"
+        "Parent directory code": "DC14",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -3562,11 +3841,14 @@
         "Municipality code": "EC142",
         "Category": "B",
         "Province": "Eastern Cape",
-        "Parent directory code": "DC14"
+        "Parent directory code": "DC14",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -3583,11 +3865,14 @@
         "Municipality code": "EC145",
         "Category": "B",
         "Province": "Eastern Cape",
-        "Parent directory code": "DC14"
+        "Parent directory code": "DC14",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -3604,11 +3889,14 @@
         "Municipality code": "EC153",
         "Category": "B",
         "Province": "Eastern Cape",
-        "Parent directory code": "DC15"
+        "Parent directory code": "DC15",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -3625,11 +3913,14 @@
         "Municipality code": "EC154",
         "Category": "B",
         "Province": "Eastern Cape",
-        "Parent directory code": "DC15"
+        "Parent directory code": "DC15",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -3646,11 +3937,14 @@
         "Municipality code": "EC155",
         "Category": "B",
         "Province": "Eastern Cape",
-        "Parent directory code": "DC15"
+        "Parent directory code": "DC15",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -3667,11 +3961,14 @@
         "Municipality code": "EC156",
         "Category": "B",
         "Province": "Eastern Cape",
-        "Parent directory code": "DC15"
+        "Parent directory code": "DC15",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -3688,11 +3985,14 @@
         "Municipality code": "EC157",
         "Category": "B",
         "Province": "Eastern Cape",
-        "Parent directory code": "DC15"
+        "Parent directory code": "DC15",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -3709,11 +4009,14 @@
         "Municipality code": "EC441",
         "Category": "B",
         "Province": "Eastern Cape",
-        "Parent directory code": "DC44"
+        "Parent directory code": "DC44",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -3730,11 +4033,14 @@
         "Municipality code": "EC442",
         "Category": "B",
         "Province": "Eastern Cape",
-        "Parent directory code": "DC44"
+        "Parent directory code": "DC44",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -3751,11 +4057,14 @@
         "Municipality code": "EC443",
         "Category": "B",
         "Province": "Eastern Cape",
-        "Parent directory code": "DC44"
+        "Parent directory code": "DC44",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -3772,11 +4081,14 @@
         "Municipality code": "EC444",
         "Category": "B",
         "Province": "Eastern Cape",
-        "Parent directory code": "DC44"
+        "Parent directory code": "DC44",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -3793,11 +4105,14 @@
         "Municipality code": "EKU",
         "Category": "A",
         "Province": "Gauteng",
-        "Parent directory code": "GT"
+        "Parent directory code": "GT",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -3814,11 +4129,14 @@
         "Municipality code": "ETH",
         "Category": "A",
         "Province": "KwaZulu-Natal",
-        "Parent directory code": "KZ"
+        "Parent directory code": "KZ",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -3835,11 +4153,14 @@
         "Municipality code": "FS161",
         "Category": "B",
         "Province": "Free State",
-        "Parent directory code": "DC16"
+        "Parent directory code": "DC16",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -3856,11 +4177,14 @@
         "Municipality code": "FS162",
         "Category": "B",
         "Province": "Free State",
-        "Parent directory code": "DC16"
+        "Parent directory code": "DC16",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -3877,11 +4201,14 @@
         "Municipality code": "FS163",
         "Category": "B",
         "Province": "Free State",
-        "Parent directory code": "DC16"
+        "Parent directory code": "DC16",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -3898,11 +4225,14 @@
         "Municipality code": "FS181",
         "Category": "B",
         "Province": "Free State",
-        "Parent directory code": "DC18"
+        "Parent directory code": "DC18",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -3919,11 +4249,14 @@
         "Municipality code": "FS182",
         "Category": "B",
         "Province": "Free State",
-        "Parent directory code": "DC18"
+        "Parent directory code": "DC18",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -3940,11 +4273,14 @@
         "Municipality code": "FS183",
         "Category": "B",
         "Province": "Free State",
-        "Parent directory code": "DC18"
+        "Parent directory code": "DC18",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -3961,11 +4297,14 @@
         "Municipality code": "FS184",
         "Category": "B",
         "Province": "Free State",
-        "Parent directory code": "DC18"
+        "Parent directory code": "DC18",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -3982,11 +4321,14 @@
         "Municipality code": "FS185",
         "Category": "B",
         "Province": "Free State",
-        "Parent directory code": "DC18"
+        "Parent directory code": "DC18",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -4003,11 +4345,14 @@
         "Municipality code": "FS191",
         "Category": "B",
         "Province": "Free State",
-        "Parent directory code": "DC19"
+        "Parent directory code": "DC19",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -4024,11 +4369,14 @@
         "Municipality code": "FS192",
         "Category": "B",
         "Province": "Free State",
-        "Parent directory code": "DC19"
+        "Parent directory code": "DC19",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -4045,11 +4393,14 @@
         "Municipality code": "FS193",
         "Category": "B",
         "Province": "Free State",
-        "Parent directory code": "DC19"
+        "Parent directory code": "DC19",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -4066,11 +4417,14 @@
         "Municipality code": "FS194",
         "Category": "B",
         "Province": "Free State",
-        "Parent directory code": "DC19"
+        "Parent directory code": "DC19",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -4087,11 +4441,14 @@
         "Municipality code": "FS195",
         "Category": "B",
         "Province": "Free State",
-        "Parent directory code": "DC19"
+        "Parent directory code": "DC19",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -4108,11 +4465,14 @@
         "Municipality code": "FS196",
         "Category": "B",
         "Province": "Free State",
-        "Parent directory code": "DC19"
+        "Parent directory code": "DC19",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -4129,11 +4489,14 @@
         "Municipality code": "FS201",
         "Category": "B",
         "Province": "Free State",
-        "Parent directory code": "DC20"
+        "Parent directory code": "DC20",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -4150,11 +4513,14 @@
         "Municipality code": "FS203",
         "Category": "B",
         "Province": "Free State",
-        "Parent directory code": "DC20"
+        "Parent directory code": "DC20",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -4171,11 +4537,14 @@
         "Municipality code": "FS204",
         "Category": "B",
         "Province": "Free State",
-        "Parent directory code": "DC20"
+        "Parent directory code": "DC20",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -4192,11 +4561,14 @@
         "Municipality code": "FS205",
         "Category": "B",
         "Province": "Free State",
-        "Parent directory code": "DC20"
+        "Parent directory code": "DC20",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -4213,11 +4585,14 @@
         "Municipality code": "GT421",
         "Category": "B",
         "Province": "Gauteng",
-        "Parent directory code": "DC42"
+        "Parent directory code": "DC42",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -4234,11 +4609,14 @@
         "Municipality code": "GT422",
         "Category": "B",
         "Province": "Gauteng",
-        "Parent directory code": "DC42"
+        "Parent directory code": "DC42",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -4255,11 +4633,14 @@
         "Municipality code": "GT423",
         "Category": "B",
         "Province": "Gauteng",
-        "Parent directory code": "DC42"
+        "Parent directory code": "DC42",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -4276,11 +4657,14 @@
         "Municipality code": "GT481",
         "Category": "B",
         "Province": "Gauteng",
-        "Parent directory code": "DC48"
+        "Parent directory code": "DC48",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -4297,11 +4681,14 @@
         "Municipality code": "GT484",
         "Category": "B",
         "Province": "Gauteng",
-        "Parent directory code": "DC48"
+        "Parent directory code": "DC48",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -4318,11 +4705,14 @@
         "Municipality code": "GT485",
         "Category": "B",
         "Province": "Gauteng",
-        "Parent directory code": "DC48"
+        "Parent directory code": "DC48",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -4339,11 +4729,14 @@
         "Municipality code": "JHB",
         "Category": "A",
         "Province": "Gauteng",
-        "Parent directory code": "GT"
+        "Parent directory code": "GT",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -4360,11 +4753,14 @@
         "Municipality code": "KZN212",
         "Category": "B",
         "Province": "KwaZulu-Natal",
-        "Parent directory code": "DC21"
+        "Parent directory code": "DC21",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -4381,11 +4777,14 @@
         "Municipality code": "KZN213",
         "Category": "B",
         "Province": "KwaZulu-Natal",
-        "Parent directory code": "DC21"
+        "Parent directory code": "DC21",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -4402,11 +4801,14 @@
         "Municipality code": "KZN214",
         "Category": "B",
         "Province": "KwaZulu-Natal",
-        "Parent directory code": "DC21"
+        "Parent directory code": "DC21",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -4423,11 +4825,14 @@
         "Municipality code": "KZN216",
         "Category": "B",
         "Province": "KwaZulu-Natal",
-        "Parent directory code": "DC21"
+        "Parent directory code": "DC21",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -4444,11 +4849,14 @@
         "Municipality code": "KZN221",
         "Category": "B",
         "Province": "KwaZulu-Natal",
-        "Parent directory code": "DC22"
+        "Parent directory code": "DC22",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -4465,11 +4873,14 @@
         "Municipality code": "KZN222",
         "Category": "B",
         "Province": "KwaZulu-Natal",
-        "Parent directory code": "DC22"
+        "Parent directory code": "DC22",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -4486,11 +4897,14 @@
         "Municipality code": "KZN223",
         "Category": "B",
         "Province": "KwaZulu-Natal",
-        "Parent directory code": "DC22"
+        "Parent directory code": "DC22",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -4507,11 +4921,14 @@
         "Municipality code": "KZN224",
         "Category": "B",
         "Province": "KwaZulu-Natal",
-        "Parent directory code": "DC22"
+        "Parent directory code": "DC22",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -4528,11 +4945,14 @@
         "Municipality code": "KZN225",
         "Category": "B",
         "Province": "KwaZulu-Natal",
-        "Parent directory code": "DC22"
+        "Parent directory code": "DC22",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -4549,11 +4969,14 @@
         "Municipality code": "KZN226",
         "Category": "B",
         "Province": "KwaZulu-Natal",
-        "Parent directory code": "DC22"
+        "Parent directory code": "DC22",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -4570,11 +4993,14 @@
         "Municipality code": "KZN227",
         "Category": "B",
         "Province": "KwaZulu-Natal",
-        "Parent directory code": "DC22"
+        "Parent directory code": "DC22",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -4591,11 +5017,14 @@
         "Municipality code": "KZN235",
         "Category": "B",
         "Province": "KwaZulu-Natal",
-        "Parent directory code": "DC23"
+        "Parent directory code": "DC23",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -4612,11 +5041,14 @@
         "Municipality code": "KZN237",
         "Category": "B",
         "Province": "KwaZulu-Natal",
-        "Parent directory code": "DC23"
+        "Parent directory code": "DC23",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -4633,11 +5065,14 @@
         "Municipality code": "KZN238",
         "Category": "B",
         "Province": "KwaZulu-Natal",
-        "Parent directory code": "DC23"
+        "Parent directory code": "DC23",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -4654,11 +5089,14 @@
         "Municipality code": "KZN241",
         "Category": "B",
         "Province": "KwaZulu-Natal",
-        "Parent directory code": "DC24"
+        "Parent directory code": "DC24",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -4675,11 +5113,14 @@
         "Municipality code": "KZN242",
         "Category": "B",
         "Province": "KwaZulu-Natal",
-        "Parent directory code": "DC24"
+        "Parent directory code": "DC24",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -4696,11 +5137,14 @@
         "Municipality code": "KZN244",
         "Category": "B",
         "Province": "KwaZulu-Natal",
-        "Parent directory code": "DC24"
+        "Parent directory code": "DC24",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -4717,11 +5161,14 @@
         "Municipality code": "KZN245",
         "Category": "B",
         "Province": "KwaZulu-Natal",
-        "Parent directory code": "DC24"
+        "Parent directory code": "DC24",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -4738,11 +5185,14 @@
         "Municipality code": "KZN252",
         "Category": "B",
         "Province": "KwaZulu-Natal",
-        "Parent directory code": "DC25"
+        "Parent directory code": "DC25",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -4759,11 +5209,14 @@
         "Municipality code": "KZN253",
         "Category": "B",
         "Province": "KwaZulu-Natal",
-        "Parent directory code": "DC25"
+        "Parent directory code": "DC25",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -4780,11 +5233,14 @@
         "Municipality code": "KZN254",
         "Category": "B",
         "Province": "KwaZulu-Natal",
-        "Parent directory code": "DC25"
+        "Parent directory code": "DC25",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -4801,11 +5257,14 @@
         "Municipality code": "KZN261",
         "Category": "B",
         "Province": "KwaZulu-Natal",
-        "Parent directory code": "DC26"
+        "Parent directory code": "DC26",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -4822,11 +5281,14 @@
         "Municipality code": "KZN262",
         "Category": "B",
         "Province": "KwaZulu-Natal",
-        "Parent directory code": "DC26"
+        "Parent directory code": "DC26",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -4843,11 +5305,14 @@
         "Municipality code": "KZN263",
         "Category": "B",
         "Province": "KwaZulu-Natal",
-        "Parent directory code": "DC26"
+        "Parent directory code": "DC26",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -4864,11 +5329,14 @@
         "Municipality code": "KZN265",
         "Category": "B",
         "Province": "KwaZulu-Natal",
-        "Parent directory code": "DC26"
+        "Parent directory code": "DC26",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -4885,11 +5353,14 @@
         "Municipality code": "KZN266",
         "Category": "B",
         "Province": "KwaZulu-Natal",
-        "Parent directory code": "DC26"
+        "Parent directory code": "DC26",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -4906,11 +5377,14 @@
         "Municipality code": "KZN271",
         "Category": "B",
         "Province": "KwaZulu-Natal",
-        "Parent directory code": "DC27"
+        "Parent directory code": "DC27",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -4927,11 +5401,14 @@
         "Municipality code": "KZN272",
         "Category": "B",
         "Province": "KwaZulu-Natal",
-        "Parent directory code": "DC27"
+        "Parent directory code": "DC27",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -4948,11 +5425,14 @@
         "Municipality code": "KZN275",
         "Category": "B",
         "Province": "KwaZulu-Natal",
-        "Parent directory code": "DC27"
+        "Parent directory code": "DC27",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -4969,11 +5449,14 @@
         "Municipality code": "KZN276",
         "Category": "B",
         "Province": "KwaZulu-Natal",
-        "Parent directory code": "DC27"
+        "Parent directory code": "DC27",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -4990,11 +5473,14 @@
         "Municipality code": "KZN281",
         "Category": "B",
         "Province": "KwaZulu-Natal",
-        "Parent directory code": "DC28"
+        "Parent directory code": "DC28",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -5011,11 +5497,14 @@
         "Municipality code": "KZN282",
         "Category": "B",
         "Province": "KwaZulu-Natal",
-        "Parent directory code": "DC28"
+        "Parent directory code": "DC28",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -5032,11 +5521,14 @@
         "Municipality code": "KZN284",
         "Category": "B",
         "Province": "KwaZulu-Natal",
-        "Parent directory code": "DC28"
+        "Parent directory code": "DC28",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -5053,11 +5545,14 @@
         "Municipality code": "KZN285",
         "Category": "B",
         "Province": "KwaZulu-Natal",
-        "Parent directory code": "DC28"
+        "Parent directory code": "DC28",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -5074,11 +5569,14 @@
         "Municipality code": "KZN286",
         "Category": "B",
         "Province": "KwaZulu-Natal",
-        "Parent directory code": "DC28"
+        "Parent directory code": "DC28",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -5095,11 +5593,14 @@
         "Municipality code": "KZN291",
         "Category": "B",
         "Province": "KwaZulu-Natal",
-        "Parent directory code": "DC29"
+        "Parent directory code": "DC29",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -5116,11 +5617,14 @@
         "Municipality code": "KZN292",
         "Category": "B",
         "Province": "KwaZulu-Natal",
-        "Parent directory code": "DC29"
+        "Parent directory code": "DC29",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -5137,11 +5641,14 @@
         "Municipality code": "KZN293",
         "Category": "B",
         "Province": "KwaZulu-Natal",
-        "Parent directory code": "DC29"
+        "Parent directory code": "DC29",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -5158,11 +5665,14 @@
         "Municipality code": "KZN294",
         "Category": "B",
         "Province": "KwaZulu-Natal",
-        "Parent directory code": "DC29"
+        "Parent directory code": "DC29",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -5179,11 +5689,14 @@
         "Municipality code": "KZN433",
         "Category": "B",
         "Province": "KwaZulu-Natal",
-        "Parent directory code": "DC43"
+        "Parent directory code": "DC43",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -5200,11 +5713,14 @@
         "Municipality code": "KZN434",
         "Category": "B",
         "Province": "KwaZulu-Natal",
-        "Parent directory code": "DC43"
+        "Parent directory code": "DC43",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -5221,11 +5737,14 @@
         "Municipality code": "KZN435",
         "Category": "B",
         "Province": "KwaZulu-Natal",
-        "Parent directory code": "DC43"
+        "Parent directory code": "DC43",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -5242,11 +5761,14 @@
         "Municipality code": "KZN436",
         "Category": "B",
         "Province": "KwaZulu-Natal",
-        "Parent directory code": "DC43"
+        "Parent directory code": "DC43",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -5263,11 +5785,14 @@
         "Municipality code": "LIM331",
         "Category": "B",
         "Province": "Limpopo",
-        "Parent directory code": "DC33"
+        "Parent directory code": "DC33",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -5284,11 +5809,14 @@
         "Municipality code": "LIM332",
         "Category": "B",
         "Province": "Limpopo",
-        "Parent directory code": "DC33"
+        "Parent directory code": "DC33",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -5305,11 +5833,14 @@
         "Municipality code": "LIM333",
         "Category": "B",
         "Province": "Limpopo",
-        "Parent directory code": "DC33"
+        "Parent directory code": "DC33",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -5326,11 +5857,14 @@
         "Municipality code": "LIM334",
         "Category": "B",
         "Province": "Limpopo",
-        "Parent directory code": "DC33"
+        "Parent directory code": "DC33",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -5347,11 +5881,14 @@
         "Municipality code": "LIM335",
         "Category": "B",
         "Province": "Limpopo",
-        "Parent directory code": "DC33"
+        "Parent directory code": "DC33",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -5368,11 +5905,14 @@
         "Municipality code": "LIM341",
         "Category": "B",
         "Province": "Limpopo",
-        "Parent directory code": "DC34"
+        "Parent directory code": "DC34",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -5389,11 +5929,14 @@
         "Municipality code": "LIM343",
         "Category": "B",
         "Province": "Limpopo",
-        "Parent directory code": "DC34"
+        "Parent directory code": "DC34",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -5410,11 +5953,14 @@
         "Municipality code": "LIM344",
         "Category": "B",
         "Province": "Limpopo",
-        "Parent directory code": "DC34"
+        "Parent directory code": "DC34",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -5431,11 +5977,14 @@
         "Municipality code": "LIM345",
         "Category": "B",
         "Province": "Limpopo",
-        "Parent directory code": "DC34"
+        "Parent directory code": "DC34",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -5452,11 +6001,14 @@
         "Municipality code": "LIM351",
         "Category": "B",
         "Province": "Limpopo",
-        "Parent directory code": "DC35"
+        "Parent directory code": "DC35",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -5473,11 +6025,14 @@
         "Municipality code": "LIM353",
         "Category": "B",
         "Province": "Limpopo",
-        "Parent directory code": "DC35"
+        "Parent directory code": "DC35",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -5494,11 +6049,14 @@
         "Municipality code": "LIM354",
         "Category": "B",
         "Province": "Limpopo",
-        "Parent directory code": "DC35"
+        "Parent directory code": "DC35",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -5515,11 +6073,14 @@
         "Municipality code": "LIM355",
         "Category": "B",
         "Province": "Limpopo",
-        "Parent directory code": "DC35"
+        "Parent directory code": "DC35",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -5536,11 +6097,14 @@
         "Municipality code": "LIM361",
         "Category": "B",
         "Province": "Limpopo",
-        "Parent directory code": "DC36"
+        "Parent directory code": "DC36",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -5557,11 +6121,14 @@
         "Municipality code": "LIM362",
         "Category": "B",
         "Province": "Limpopo",
-        "Parent directory code": "DC36"
+        "Parent directory code": "DC36",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -5578,11 +6145,14 @@
         "Municipality code": "LIM366",
         "Category": "B",
         "Province": "Limpopo",
-        "Parent directory code": "DC36"
+        "Parent directory code": "DC36",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -5599,11 +6169,14 @@
         "Municipality code": "LIM367",
         "Category": "B",
         "Province": "Limpopo",
-        "Parent directory code": "DC36"
+        "Parent directory code": "DC36",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -5620,11 +6193,14 @@
         "Municipality code": "LIM368",
         "Category": "B",
         "Province": "Limpopo",
-        "Parent directory code": "DC36"
+        "Parent directory code": "DC36",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -5641,11 +6217,14 @@
         "Municipality code": "LIM471",
         "Category": "B",
         "Province": "Limpopo",
-        "Parent directory code": "DC47"
+        "Parent directory code": "DC47",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -5662,11 +6241,14 @@
         "Municipality code": "LIM472",
         "Category": "B",
         "Province": "Limpopo",
-        "Parent directory code": "DC47"
+        "Parent directory code": "DC47",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -5683,11 +6265,14 @@
         "Municipality code": "LIM473",
         "Category": "B",
         "Province": "Limpopo",
-        "Parent directory code": "DC47"
+        "Parent directory code": "DC47",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -5704,11 +6289,14 @@
         "Municipality code": "LIM476",
         "Category": "B",
         "Province": "Limpopo",
-        "Parent directory code": "DC47"
+        "Parent directory code": "DC47",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -5725,11 +6313,14 @@
         "Municipality code": "MAN",
         "Category": "A",
         "Province": "Free State",
-        "Parent directory code": "FS"
+        "Parent directory code": "FS",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -5746,11 +6337,14 @@
         "Municipality code": "MP301",
         "Category": "B",
         "Province": "Mpumalanga",
-        "Parent directory code": "DC30"
+        "Parent directory code": "DC30",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -5767,11 +6361,14 @@
         "Municipality code": "MP302",
         "Category": "B",
         "Province": "Mpumalanga",
-        "Parent directory code": "DC30"
+        "Parent directory code": "DC30",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -5788,11 +6385,14 @@
         "Municipality code": "MP303",
         "Category": "B",
         "Province": "Mpumalanga",
-        "Parent directory code": "DC30"
+        "Parent directory code": "DC30",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -5809,11 +6409,14 @@
         "Municipality code": "MP304",
         "Category": "B",
         "Province": "Mpumalanga",
-        "Parent directory code": "DC30"
+        "Parent directory code": "DC30",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -5830,11 +6433,14 @@
         "Municipality code": "MP305",
         "Category": "B",
         "Province": "Mpumalanga",
-        "Parent directory code": "DC30"
+        "Parent directory code": "DC30",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -5851,11 +6457,14 @@
         "Municipality code": "MP306",
         "Category": "B",
         "Province": "Mpumalanga",
-        "Parent directory code": "DC30"
+        "Parent directory code": "DC30",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -5872,11 +6481,14 @@
         "Municipality code": "MP307",
         "Category": "B",
         "Province": "Mpumalanga",
-        "Parent directory code": "DC30"
+        "Parent directory code": "DC30",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -5893,11 +6505,14 @@
         "Municipality code": "MP311",
         "Category": "B",
         "Province": "Mpumalanga",
-        "Parent directory code": "DC31"
+        "Parent directory code": "DC31",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -5914,11 +6529,14 @@
         "Municipality code": "MP312",
         "Category": "B",
         "Province": "Mpumalanga",
-        "Parent directory code": "DC31"
+        "Parent directory code": "DC31",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -5935,11 +6553,14 @@
         "Municipality code": "MP313",
         "Category": "B",
         "Province": "Mpumalanga",
-        "Parent directory code": "DC31"
+        "Parent directory code": "DC31",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -5956,11 +6577,14 @@
         "Municipality code": "MP314",
         "Category": "B",
         "Province": "Mpumalanga",
-        "Parent directory code": "DC31"
+        "Parent directory code": "DC31",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -5977,11 +6601,14 @@
         "Municipality code": "MP315",
         "Category": "B",
         "Province": "Mpumalanga",
-        "Parent directory code": "DC31"
+        "Parent directory code": "DC31",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -5998,11 +6625,14 @@
         "Municipality code": "MP316",
         "Category": "B",
         "Province": "Mpumalanga",
-        "Parent directory code": "DC31"
+        "Parent directory code": "DC31",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -6019,11 +6649,14 @@
         "Municipality code": "MP321",
         "Category": "B",
         "Province": "Mpumalanga",
-        "Parent directory code": "DC32"
+        "Parent directory code": "DC32",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -6040,11 +6673,14 @@
         "Municipality code": "MP324",
         "Category": "B",
         "Province": "Mpumalanga",
-        "Parent directory code": "DC32"
+        "Parent directory code": "DC32",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -6061,11 +6697,14 @@
         "Municipality code": "MP325",
         "Category": "B",
         "Province": "Mpumalanga",
-        "Parent directory code": "DC32"
+        "Parent directory code": "DC32",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -6082,11 +6721,14 @@
         "Municipality code": "MP326",
         "Category": "B",
         "Province": "Mpumalanga",
-        "Parent directory code": "DC32"
+        "Parent directory code": "DC32",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -6103,11 +6745,14 @@
         "Municipality code": "NC061",
         "Category": "B",
         "Province": "Northern Cape",
-        "Parent directory code": "DC6"
+        "Parent directory code": "DC6",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -6124,11 +6769,14 @@
         "Municipality code": "NC062",
         "Category": "B",
         "Province": "Northern Cape",
-        "Parent directory code": "DC6"
+        "Parent directory code": "DC6",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -6145,11 +6793,14 @@
         "Municipality code": "NC064",
         "Category": "B",
         "Province": "Northern Cape",
-        "Parent directory code": "DC6"
+        "Parent directory code": "DC6",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -6166,11 +6817,14 @@
         "Municipality code": "NC065",
         "Category": "B",
         "Province": "Northern Cape",
-        "Parent directory code": "DC6"
+        "Parent directory code": "DC6",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -6187,11 +6841,14 @@
         "Municipality code": "NC066",
         "Category": "B",
         "Province": "Northern Cape",
-        "Parent directory code": "DC6"
+        "Parent directory code": "DC6",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -6208,11 +6865,14 @@
         "Municipality code": "NC067",
         "Category": "B",
         "Province": "Northern Cape",
-        "Parent directory code": "DC6"
+        "Parent directory code": "DC6",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -6229,11 +6889,14 @@
         "Municipality code": "NC071",
         "Category": "B",
         "Province": "Northern Cape",
-        "Parent directory code": "DC7"
+        "Parent directory code": "DC7",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -6250,11 +6913,14 @@
         "Municipality code": "NC072",
         "Category": "B",
         "Province": "Northern Cape",
-        "Parent directory code": "DC7"
+        "Parent directory code": "DC7",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -6271,11 +6937,14 @@
         "Municipality code": "NC073",
         "Category": "B",
         "Province": "Northern Cape",
-        "Parent directory code": "DC7"
+        "Parent directory code": "DC7",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -6292,11 +6961,14 @@
         "Municipality code": "NC074",
         "Category": "B",
         "Province": "Northern Cape",
-        "Parent directory code": "DC7"
+        "Parent directory code": "DC7",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -6313,11 +6985,14 @@
         "Municipality code": "NC075",
         "Category": "B",
         "Province": "Northern Cape",
-        "Parent directory code": "DC7"
+        "Parent directory code": "DC7",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -6334,11 +7009,14 @@
         "Municipality code": "NC076",
         "Category": "B",
         "Province": "Northern Cape",
-        "Parent directory code": "DC7"
+        "Parent directory code": "DC7",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -6355,11 +7033,14 @@
         "Municipality code": "NC077",
         "Category": "B",
         "Province": "Northern Cape",
-        "Parent directory code": "DC7"
+        "Parent directory code": "DC7",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -6376,11 +7057,14 @@
         "Municipality code": "NC078",
         "Category": "B",
         "Province": "Northern Cape",
-        "Parent directory code": "DC7"
+        "Parent directory code": "DC7",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -6397,11 +7081,14 @@
         "Municipality code": "NC082",
         "Category": "B",
         "Province": "Northern Cape",
-        "Parent directory code": "DC8"
+        "Parent directory code": "DC8",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -6418,11 +7105,14 @@
         "Municipality code": "NC084",
         "Category": "B",
         "Province": "Northern Cape",
-        "Parent directory code": "DC8"
+        "Parent directory code": "DC8",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -6439,11 +7129,14 @@
         "Municipality code": "NC085",
         "Category": "B",
         "Province": "Northern Cape",
-        "Parent directory code": "DC8"
+        "Parent directory code": "DC8",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -6460,11 +7153,14 @@
         "Municipality code": "NC086",
         "Category": "B",
         "Province": "Northern Cape",
-        "Parent directory code": "DC8"
+        "Parent directory code": "DC8",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -6481,11 +7177,14 @@
         "Municipality code": "NC087",
         "Category": "B",
         "Province": "Northern Cape",
-        "Parent directory code": "DC8"
+        "Parent directory code": "DC8",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -6502,11 +7201,14 @@
         "Municipality code": "NC091",
         "Category": "B",
         "Province": "Northern Cape",
-        "Parent directory code": "DC9"
+        "Parent directory code": "DC9",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -6523,11 +7225,14 @@
         "Municipality code": "NC092",
         "Category": "B",
         "Province": "Northern Cape",
-        "Parent directory code": "DC9"
+        "Parent directory code": "DC9",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -6544,11 +7249,14 @@
         "Municipality code": "NC093",
         "Category": "B",
         "Province": "Northern Cape",
-        "Parent directory code": "DC9"
+        "Parent directory code": "DC9",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -6565,11 +7273,14 @@
         "Municipality code": "NC094",
         "Category": "B",
         "Province": "Northern Cape",
-        "Parent directory code": "DC9"
+        "Parent directory code": "DC9",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -6586,11 +7297,14 @@
         "Municipality code": "NC451",
         "Category": "B",
         "Province": "Northern Cape",
-        "Parent directory code": "DC45"
+        "Parent directory code": "DC45",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -6607,11 +7321,14 @@
         "Municipality code": "NC452",
         "Category": "B",
         "Province": "Northern Cape",
-        "Parent directory code": "DC45"
+        "Parent directory code": "DC45",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -6628,11 +7345,14 @@
         "Municipality code": "NC453",
         "Category": "B",
         "Province": "Northern Cape",
-        "Parent directory code": "DC45"
+        "Parent directory code": "DC45",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -6649,11 +7369,14 @@
         "Municipality code": "NMA",
         "Category": "A",
         "Province": "Eastern Cape",
-        "Parent directory code": "EC"
+        "Parent directory code": "EC",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -6670,11 +7393,14 @@
         "Municipality code": "NW371",
         "Category": "B",
         "Province": "North West",
-        "Parent directory code": "DC37"
+        "Parent directory code": "DC37",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -6691,11 +7417,14 @@
         "Municipality code": "NW372",
         "Category": "B",
         "Province": "North West",
-        "Parent directory code": "DC37"
+        "Parent directory code": "DC37",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -6712,11 +7441,14 @@
         "Municipality code": "NW373",
         "Category": "B",
         "Province": "North West",
-        "Parent directory code": "DC37"
+        "Parent directory code": "DC37",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -6733,11 +7465,14 @@
         "Municipality code": "NW374",
         "Category": "B",
         "Province": "North West",
-        "Parent directory code": "DC37"
+        "Parent directory code": "DC37",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -6754,11 +7489,14 @@
         "Municipality code": "NW375",
         "Category": "B",
         "Province": "North West",
-        "Parent directory code": "DC37"
+        "Parent directory code": "DC37",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -6775,11 +7513,14 @@
         "Municipality code": "NW381",
         "Category": "B",
         "Province": "North West",
-        "Parent directory code": "DC38"
+        "Parent directory code": "DC38",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -6796,11 +7537,14 @@
         "Municipality code": "NW382",
         "Category": "B",
         "Province": "North West",
-        "Parent directory code": "DC38"
+        "Parent directory code": "DC38",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -6817,11 +7561,14 @@
         "Municipality code": "NW383",
         "Category": "B",
         "Province": "North West",
-        "Parent directory code": "DC38"
+        "Parent directory code": "DC38",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -6838,11 +7585,14 @@
         "Municipality code": "NW384",
         "Category": "B",
         "Province": "North West",
-        "Parent directory code": "DC38"
+        "Parent directory code": "DC38",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -6859,11 +7609,14 @@
         "Municipality code": "NW385",
         "Category": "B",
         "Province": "North West",
-        "Parent directory code": "DC38"
+        "Parent directory code": "DC38",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -6880,11 +7633,14 @@
         "Municipality code": "NW392",
         "Category": "B",
         "Province": "North West",
-        "Parent directory code": "DC39"
+        "Parent directory code": "DC39",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -6901,11 +7657,14 @@
         "Municipality code": "NW393",
         "Category": "B",
         "Province": "North West",
-        "Parent directory code": "DC39"
+        "Parent directory code": "DC39",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -6922,11 +7681,14 @@
         "Municipality code": "NW394",
         "Category": "B",
         "Province": "North West",
-        "Parent directory code": "DC39"
+        "Parent directory code": "DC39",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -6943,11 +7705,14 @@
         "Municipality code": "NW396",
         "Category": "B",
         "Province": "North West",
-        "Parent directory code": "DC39"
+        "Parent directory code": "DC39",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -6964,11 +7729,14 @@
         "Municipality code": "NW397",
         "Category": "B",
         "Province": "North West",
-        "Parent directory code": "DC39"
+        "Parent directory code": "DC39",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -6985,11 +7753,14 @@
         "Municipality code": "NW403",
         "Category": "B",
         "Province": "North West",
-        "Parent directory code": "DC40"
+        "Parent directory code": "DC40",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -7006,11 +7777,14 @@
         "Municipality code": "NW404",
         "Category": "B",
         "Province": "North West",
-        "Parent directory code": "DC40"
+        "Parent directory code": "DC40",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -7027,11 +7801,14 @@
         "Municipality code": "NW405",
         "Category": "B",
         "Province": "North West",
-        "Parent directory code": "DC40"
+        "Parent directory code": "DC40",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -7048,11 +7825,14 @@
         "Municipality code": "TSH",
         "Category": "A",
         "Province": "Gauteng",
-        "Parent directory code": "GT"
+        "Parent directory code": "GT",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -7069,11 +7849,14 @@
         "Municipality code": "WC011",
         "Category": "B",
         "Province": "Western Cape",
-        "Parent directory code": "DC1"
+        "Parent directory code": "DC1",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -7090,11 +7873,14 @@
         "Municipality code": "WC012",
         "Category": "B",
         "Province": "Western Cape",
-        "Parent directory code": "DC1"
+        "Parent directory code": "DC1",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -7111,11 +7897,14 @@
         "Municipality code": "WC013",
         "Category": "B",
         "Province": "Western Cape",
-        "Parent directory code": "DC1"
+        "Parent directory code": "DC1",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -7132,11 +7921,14 @@
         "Municipality code": "WC014",
         "Category": "B",
         "Province": "Western Cape",
-        "Parent directory code": "DC1"
+        "Parent directory code": "DC1",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -7153,11 +7945,14 @@
         "Municipality code": "WC015",
         "Category": "B",
         "Province": "Western Cape",
-        "Parent directory code": "DC1"
+        "Parent directory code": "DC1",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -7174,11 +7969,14 @@
         "Municipality code": "WC022",
         "Category": "B",
         "Province": "Western Cape",
-        "Parent directory code": "DC2"
+        "Parent directory code": "DC2",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -7195,11 +7993,14 @@
         "Municipality code": "WC023",
         "Category": "B",
         "Province": "Western Cape",
-        "Parent directory code": "DC2"
+        "Parent directory code": "DC2",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -7216,11 +8017,14 @@
         "Municipality code": "WC024",
         "Category": "B",
         "Province": "Western Cape",
-        "Parent directory code": "DC2"
+        "Parent directory code": "DC2",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -7237,11 +8041,14 @@
         "Municipality code": "WC025",
         "Category": "B",
         "Province": "Western Cape",
-        "Parent directory code": "DC2"
+        "Parent directory code": "DC2",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -7258,11 +8065,14 @@
         "Municipality code": "WC026",
         "Category": "B",
         "Province": "Western Cape",
-        "Parent directory code": "DC2"
+        "Parent directory code": "DC2",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -7279,11 +8089,14 @@
         "Municipality code": "WC031",
         "Category": "B",
         "Province": "Western Cape",
-        "Parent directory code": "DC3"
+        "Parent directory code": "DC3",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -7300,11 +8113,14 @@
         "Municipality code": "WC032",
         "Category": "B",
         "Province": "Western Cape",
-        "Parent directory code": "DC3"
+        "Parent directory code": "DC3",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -7321,11 +8137,14 @@
         "Municipality code": "WC033",
         "Category": "B",
         "Province": "Western Cape",
-        "Parent directory code": "DC3"
+        "Parent directory code": "DC3",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -7342,11 +8161,14 @@
         "Municipality code": "WC034",
         "Category": "B",
         "Province": "Western Cape",
-        "Parent directory code": "DC3"
+        "Parent directory code": "DC3",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -7363,11 +8185,14 @@
         "Municipality code": "WC041",
         "Category": "B",
         "Province": "Western Cape",
-        "Parent directory code": "DC4"
+        "Parent directory code": "DC4",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -7384,11 +8209,14 @@
         "Municipality code": "WC042",
         "Category": "B",
         "Province": "Western Cape",
-        "Parent directory code": "DC4"
+        "Parent directory code": "DC4",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -7405,11 +8233,14 @@
         "Municipality code": "WC043",
         "Category": "B",
         "Province": "Western Cape",
-        "Parent directory code": "DC4"
+        "Parent directory code": "DC4",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -7426,11 +8257,14 @@
         "Municipality code": "WC044",
         "Category": "B",
         "Province": "Western Cape",
-        "Parent directory code": "DC4"
+        "Parent directory code": "DC4",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -7447,11 +8281,14 @@
         "Municipality code": "WC045",
         "Category": "B",
         "Province": "Western Cape",
-        "Parent directory code": "DC4"
+        "Parent directory code": "DC4",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -7468,11 +8305,14 @@
         "Municipality code": "WC047",
         "Category": "B",
         "Province": "Western Cape",
-        "Parent directory code": "DC4"
+        "Parent directory code": "DC4",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -7489,11 +8329,14 @@
         "Municipality code": "WC048",
         "Category": "B",
         "Province": "Western Cape",
-        "Parent directory code": "DC4"
+        "Parent directory code": "DC4",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -7510,11 +8353,14 @@
         "Municipality code": "WC051",
         "Category": "B",
         "Province": "Western Cape",
-        "Parent directory code": "DC5"
+        "Parent directory code": "DC5",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -7531,11 +8377,14 @@
         "Municipality code": "WC052",
         "Category": "B",
         "Province": "Western Cape",
-        "Parent directory code": "DC5"
+        "Parent directory code": "DC5",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -7552,11 +8401,14 @@
         "Municipality code": "WC053",
         "Category": "B",
         "Province": "Western Cape",
-        "Parent directory code": "DC5"
+        "Parent directory code": "DC5",
+        "Boundary vintage": "Historical 2020 representative geometry; source 2018",
+        "Boundary accuracy": "Simplified visualization, not current legal demarcation"
       },
       "sourceIds": [
         "municipal-treasury",
-        "local-government-directory"
+        "local-government-directory",
+        "municipal-boundaries"
       ],
       "updatedAt": "2026-11-13",
       "asOf": "2026-10-22"
@@ -8146,6 +8998,139 @@
       "sourceIds": [
         "eskom-duvha-emissions-2024",
         "eskom-coal-station-directory"
+      ],
+      "updatedAt": "2026-11-13"
+    },
+    {
+      "id": "za-ellisras-hospital",
+      "name": "Ellisras Hospital",
+      "type": "Healthcare facility",
+      "country": "ZA",
+      "domain": "society",
+      "description": "Healthcare facility listed in the Lephalale municipal directory. The map point follows the directory’s published GPS location; no current service or capacity claim is made.",
+      "sourceIds": [
+        "lephalale-facility-locations"
+      ],
+      "updatedAt": "2026-11-13",
+      "region": "limpopo",
+      "coordinates": [
+        27.70315,
+        -23.6783
+      ],
+      "coordinateNote": "Municipality-published hospital locator (decimal minutes).",
+      "attributes": {
+        "Facility class": "Healthcare facility",
+        "Coordinate role": "Municipality-published hospital locator (decimal minutes).",
+        "Source coordinates": "S23 40.698 E27 42.189",
+        "Coordinate review": "Transcribed from primary publisher; accuracy and current operating status not independently surveyed"
+      }
+    },
+    {
+      "id": "za-mediclinic-lephalale",
+      "name": "Mediclinic Lephalale",
+      "type": "Healthcare facility",
+      "country": "ZA",
+      "domain": "society",
+      "description": "Healthcare facility listed at the corner of Douwater and Joe Slovo Street in the Lephalale municipal directory. The point is the directory locator; no current service or capacity claim is made.",
+      "sourceIds": [
+        "lephalale-facility-locations"
+      ],
+      "updatedAt": "2026-11-13",
+      "region": "limpopo",
+      "coordinates": [
+        27.69813889,
+        -23.68646667
+      ],
+      "coordinateNote": "Municipality-published hospital locator (DMS).",
+      "attributes": {
+        "Facility class": "Healthcare facility",
+        "Coordinate role": "Municipality-published hospital locator (DMS).",
+        "Source coordinates": "23 41'11.28\" S 27 41'53.30\" E",
+        "Coordinate review": "Transcribed from primary publisher; accuracy and current operating status not independently surveyed"
+      }
+    },
+    {
+      "id": "za-uct-egs-building",
+      "name": "UCT Environmental & Geographical Science Building",
+      "type": "University teaching and research building",
+      "country": "ZA",
+      "domain": "society",
+      "description": "University of Cape Town’s Environmental & Geographical Science department publishes this building location on South Lane, Upper Campus. The point identifies the department’s building rather than the whole university.",
+      "sourceIds": [
+        "uct-egs-location"
+      ],
+      "updatedAt": "2026-11-13",
+      "region": "western-cape",
+      "coordinates": [
+        18.46005,
+        -33.95735
+      ],
+      "coordinateNote": "University-published EGS building locator (decimal minutes).",
+      "attributes": {
+        "Facility class": "University teaching and research building",
+        "Coordinate role": "University-published EGS building locator (decimal minutes).",
+        "Source coordinates": "S33°57.441' E18°27.603'",
+        "Coordinate review": "Transcribed from primary publisher; accuracy and current operating status not independently surveyed"
+      }
+    },
+    {
+      "id": "za-nwu-potchefstroom-campus",
+      "name": "North-West University Potchefstroom Campus",
+      "type": "University campus",
+      "country": "ZA",
+      "domain": "society",
+      "description": "North-West University publishes this Potchefstroom Campus locator with visitor directions to its main security entrance. It is a representative visitor point, not a campus boundary.",
+      "sourceIds": [
+        "nwu-campus-locations"
+      ],
+      "updatedAt": "2026-11-13",
+      "region": "north-west",
+      "coordinates": [
+        27.09333333,
+        -26.69055556
+      ],
+      "coordinateNote": "University-published campus visitor locator (DMS).",
+      "attributes": {
+        "Facility class": "University campus",
+        "Coordinate role": "University-published campus visitor locator (DMS).",
+        "Source coordinates": "S26°41'26\" E27°05'36\"",
+        "Coordinate review": "Transcribed from primary publisher; accuracy and current operating status not independently surveyed"
+      }
+    },
+    {
+      "id": "za-port-durban",
+      "name": "Port of Durban",
+      "type": "Commercial port",
+      "country": "ZA",
+      "domain": "infrastructure",
+      "description": "Transnet National Ports Authority’s 2023 dry-dock study tender publishes a general geographic locator for the Port of Durban. The point is approximate and does not identify a particular terminal, berth or navigational approach.",
+      "sourceIds": [
+        "tnpa-durban-location-2023"
+      ],
+      "updatedAt": "2026-11-13",
+      "region": "kwazulu-natal",
+      "coordinates": [
+        31.03333333,
+        -29.86666667
+      ],
+      "coordinateNote": "General harbour locator published to whole arc-minute precision; approximate within the harbour.",
+      "attributes": {
+        "Facility class": "Commercial port",
+        "Coordinate role": "General harbour locator published to whole arc-minute precision; approximate within the harbour.",
+        "Source coordinates": "31°02'E 29°52'S",
+        "Coordinate review": "Transcribed from primary publisher; accuracy and current operating status not independently surveyed"
+      }
+    },
+    {
+      "id": "za-infrastructure",
+      "name": "South African infrastructure",
+      "type": "Knowledge domain",
+      "country": "ZA",
+      "domain": "infrastructure",
+      "description": "A navigation group for curated electricity-system and port records. Membership does not establish ownership or administrative control.",
+      "sourceIds": [
+        "eskom",
+        "tnpa-durban-location-2023"
       ],
       "updatedAt": "2026-11-13"
     }
@@ -12116,6 +13101,67 @@
         "eskom-coal-station-directory"
       ],
       "description": "Listed in the operator source; this does not assert current generating-unit availability."
+    },
+    {
+      "id": "next-facility-directory-0",
+      "source": "za-infrastructure",
+      "target": "za-electricity",
+      "sourceIds": [
+        "eskom",
+        "tnpa-durban-location-2023"
+      ],
+      "type": "INCLUDES",
+      "description": "Curated directory navigation. This link does not assert ownership, service availability or operating status."
+    },
+    {
+      "id": "next-facility-directory-1",
+      "source": "za-society",
+      "target": "za-ellisras-hospital",
+      "sourceIds": [
+        "lephalale-facility-locations"
+      ],
+      "type": "INCLUDES",
+      "description": "Curated directory navigation. This link does not assert ownership, service availability or operating status."
+    },
+    {
+      "id": "next-facility-directory-2",
+      "source": "za-society",
+      "target": "za-mediclinic-lephalale",
+      "sourceIds": [
+        "lephalale-facility-locations"
+      ],
+      "type": "INCLUDES",
+      "description": "Curated directory navigation. This link does not assert ownership, service availability or operating status."
+    },
+    {
+      "id": "next-facility-directory-3",
+      "source": "za-society",
+      "target": "za-uct-egs-building",
+      "sourceIds": [
+        "uct-egs-location"
+      ],
+      "type": "INCLUDES",
+      "description": "Curated directory navigation. This link does not assert ownership, service availability or operating status."
+    },
+    {
+      "id": "next-facility-directory-4",
+      "source": "za-society",
+      "target": "za-nwu-potchefstroom-campus",
+      "sourceIds": [
+        "nwu-campus-locations"
+      ],
+      "type": "INCLUDES",
+      "description": "Curated directory navigation. This link does not assert ownership, service availability or operating status."
+    },
+    {
+      "id": "next-facility-directory-5",
+      "source": "za-infrastructure",
+      "target": "za-port-durban",
+      "sourceIds": [
+        "tnpa-durban-location-2023"
+      ],
+      "type": "INCLUDES",
+      "description": "Curated directory navigation. This link does not assert ownership, service availability or operating status."
     }
   ],
   "datasets": [

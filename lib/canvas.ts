@@ -1,4 +1,5 @@
 import { z } from "zod";
+import { metricSchema } from "./statistics";
 
 export const cameraSchema = z
   .object({
@@ -13,10 +14,11 @@ export const cameraSchema = z
   .strict();
 export type Camera = z.infer<typeof cameraSchema>;
 export const densitySchema = z.enum(["overview", "regional", "detailed"]);
-export const layoutSchema = z.enum(["single", "overlay"]);
+export const layoutSchema = z.enum(["single", "overlay", "split"]);
 export const layerIdSchema = z.enum([
   "countries",
   "provinces",
+  "municipalities",
   "statistics",
   "cities",
   "institutions",
@@ -44,22 +46,39 @@ export const layerSchema = z
       entityType: "",
       relationshipType: "",
     }),
-    metric: z.enum(["population", "change"]).default("population"),
+    metric: metricSchema.default("population"),
     year: z.union([z.literal(2011), z.literal(2022)]).default(2022),
   })
   .strict();
 export type CanvasLayer = z.infer<typeof layerSchema>;
-export const layersSchema = z
-  .array(layerSchema)
-  .length(9)
-  .refine(
-    (layers) => new Set(layers.map((l) => l.id)).size === 9,
-    "Every registered layer must occur once",
-  )
-  .refine(
-    (layers) => new Set(layers.map((l) => l.zIndex)).size === 9,
-    "Layer order must be unique",
-  );
+export const layersSchema = z.preprocess(
+  (value) => {
+    if (
+      !Array.isArray(value) ||
+      value.length !== 9 ||
+      value.some((l) => l?.id === "municipalities")
+    )
+      return value;
+    const old = [...value].sort((a, b) => a.zIndex - b.zIndex);
+    old.splice(
+      old.findIndex((l) => l.id === "provinces") + 1,
+      0,
+      defaultLayers().find((l) => l.id === "municipalities")!,
+    );
+    return old.map((l, zIndex) => ({ ...l, zIndex }));
+  },
+  z
+    .array(layerSchema)
+    .length(10)
+    .refine(
+      (layers) => new Set(layers.map((l) => l.id)).size === 10,
+      "Every registered layer must occur once",
+    )
+    .refine(
+      (layers) => new Set(layers.map((l) => l.zIndex)).size === 10,
+      "Layer order must be unique",
+    ),
+);
 export const layerRegistry: Record<
   LayerId,
   {
@@ -91,7 +110,7 @@ export const layerRegistry: Record<
     style: { color: "#749b87" },
   },
   statistics: {
-    name: "Population statistics",
+    name: "Provincial statistics",
     type: "statistics",
     sourceId: "census",
     legend:
@@ -99,6 +118,16 @@ export const layerRegistry: Record<
     minZoom: 3,
     maxZoom: 12,
     style: { color: "#a0c389" },
+  },
+  municipalities: {
+    name: "Municipal boundaries",
+    type: "geography",
+    sourceId: "municipal-boundaries",
+    legend:
+      "Historical representative 2020 geometry · source 2018 · joined to 2026 directory · not current legal demarcation",
+    minZoom: 4.5,
+    maxZoom: 12,
+    style: { color: "#9fb6ab" },
   },
   cities: {
     name: "Cities & towns",
@@ -160,7 +189,7 @@ export const layerRegistry: Record<
 export function defaultLayers(): CanvasLayer[] {
   return layerIdSchema.options.map((id, zIndex) => ({
     id,
-    visible: !["statistics", "connections"].includes(id),
+    visible: !["statistics", "connections", "municipalities"].includes(id),
     opacity: id === "statistics" ? 0.72 : 1,
     zIndex,
     filters: { query: "", entityType: "", relationshipType: "" },
@@ -213,7 +242,11 @@ export function legacyFlags(layers: CanvasLayer[]) {
   const stats = layerById(layers, "statistics");
   return {
     provinceLayer: layerById(layers, "provinces").visible,
-    populationLayer: stats.visible ? stats.metric : ("none" as const),
+    populationLayer: stats.visible
+      ? stats.metric === "change"
+        ? ("change" as const)
+        : ("population" as const)
+      : ("none" as const),
     markerLayer:
       markers.length === 0
         ? ("none" as const)

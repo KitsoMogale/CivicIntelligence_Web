@@ -55,8 +55,8 @@ export const domains: {
     id: "infrastructure",
     name: "Infrastructure & systems",
     short: "Infrastructure",
-    root: "za-electricity",
-    caption: "How electricity reaches consumers",
+    root: "za-infrastructure",
+    caption: "Electricity, transport and sourced infrastructure records",
   },
   {
     id: "law",

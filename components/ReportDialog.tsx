@@ -8,12 +8,13 @@ import { renderReport } from "@/lib/report";
 import { getSources } from "@/lib/knowledge";
 import { visibleEntityIds } from "@/lib/visibility";
 import { layerById } from "@/lib/canvas";
+import { metricById } from "@/lib/statistics";
 export default function ReportDialog({ close }: { close: () => void }) {
   const s = useExplorer();
   const [geography, setGeography] = useState<FeatureCollection | null>(null),
     [mapStatus, setMapStatus] = useState("");
   useEffect(() => {
-    if (s.mode !== "geographic") return;
+    if (s.mode !== "geographic" && s.layout === "single") return;
     let cancelled = false;
     setMapStatus("Preparing the map figure…");
     setGeography(null);
@@ -49,7 +50,7 @@ export default function ReportDialog({ close }: { close: () => void }) {
     return () => {
       cancelled = true;
     };
-  }, [s.mode, s.country.code]);
+  }, [s.mode, s.layout, s.country.code]);
   const [title, setTitle] = useState(
     s.country.name +
       " · " +
@@ -62,7 +63,9 @@ export default function ReportDialog({ close }: { close: () => void }) {
   const [note, setNote] = useState("");
   const [scope, setScope] = useState("visible");
   const data = useMemo(() => {
-    const full = knowledgeSnapshot(s);
+    const full = knowledgeSnapshot(
+      scope === "domain" ? { ...s, networkTrace: null } : s,
+    );
     if (scope === "domain" || ["compare", "timeline", "data"].includes(s.mode))
       return full;
     const visible = new Set(
@@ -92,10 +95,19 @@ export default function ReportDialog({ close }: { close: () => void }) {
     const refs = new Set(
       [...records, ...links, ...full.datasets].flatMap((r) => r.sourceIds),
     );
-    if (s.mode === "geographic" && s.country.code === "ZA") {
+    if (
+      (s.mode === "geographic" || s.layout !== "single") &&
+      s.country.code === "ZA"
+    ) {
       refs.add("province-boundaries");
       if (s.populationLayer !== "none") refs.add("census");
+      if (layerById(s.layers, "municipalities").visible)
+        refs.add("municipal-boundaries");
+      metricById(layerById(s.layers, "statistics").metric)?.sourceIds.forEach(
+        (id) => refs.add(id),
+      );
     }
+    full.provincialMetric?.sourceIds.forEach((id) => refs.add(id));
     return {
       ...full,
       entities: records,
@@ -112,8 +124,13 @@ export default function ReportDialog({ close }: { close: () => void }) {
         geography
           ? {
               geography,
-              overlay: s.populationLayer,
+              overlay: s.country.code === "ZA" ? s.populationLayer : "none",
               year: layerById(s.layers, "statistics").year,
+              metricId:
+                s.country.code === "ZA" &&
+                layerById(s.layers, "statistics").visible
+                  ? layerById(s.layers, "statistics").metric
+                  : undefined,
             }
           : undefined,
       ),

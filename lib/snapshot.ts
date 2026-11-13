@@ -11,6 +11,8 @@ import {
 import type { Country, Domain, Mode } from "./types";
 import { comparisonRows } from "./analytics";
 import { initialExploration, type Exploration } from "./exploration";
+import { metricById } from "./statistics";
+import { traceNetwork } from "./network";
 export function knowledgeSnapshot(
   context: Pick<Exploration, "country" | "domain" | "mode" | "selectedEntity"> &
     Partial<Exploration>,
@@ -20,21 +22,34 @@ export function knowledgeSnapshot(
       .filter((key) => key in context)
       .map((key) => [key, context[key as keyof Exploration]]),
   ) as Partial<Exploration>;
+  const trace =
+    context.mode === "relationships" && context.networkTrace
+      ? traceNetwork(
+          context.networkTrace,
+          context.country.code,
+          context.timeRange,
+        )
+      : null;
   const ids = new Set(
-    context.country.code === "ZA" &&
-      !["compare", "timeline", "data"].includes(context.mode)
-      ? context.mode === "geographic"
-        ? entities
-            .filter((e) => e.country === context.country.code)
-            .map((e) => e.id)
-        : descendants(domains.find((d) => d.id === context.domain)!.root)
-      : [],
+    trace
+      ? trace.nodeIds
+      : context.country.code === "ZA" &&
+          !["compare", "timeline", "data"].includes(context.mode)
+        ? context.mode === "geographic"
+          ? entities
+              .filter((e) => e.country === context.country.code)
+              .map((e) => e.id)
+          : descendants(domains.find((d) => d.id === context.domain)!.root)
+        : [],
   );
   const records = entities.filter(
     (e) => e.country === context.country.code && ids.has(e.id),
   );
   const links = relationships.filter(
-    (r) => ids.has(r.source) && ids.has(r.target),
+    (r) =>
+      ids.has(r.source) &&
+      ids.has(r.target) &&
+      (!trace || trace.relationshipIds.includes(r.id)),
   );
   const series =
     context.country.code === "ZA" && context.domain === "society"
@@ -59,7 +74,19 @@ export function knowledgeSnapshot(
               event.entityIds.includes(context.timelineEntity)),
         )
       : [];
+  const provincialMetric =
+    context.country.code === "ZA" &&
+    context.layers?.some((l) => l.id === "statistics" && l.visible)
+      ? (metricById(
+          context.layers.find((l) => l.id === "statistics")!.metric,
+        ) ?? null)
+      : null;
   const references = [
+    ...(provincialMetric?.sourceIds ?? []),
+    ...(context.country.code === "ZA" &&
+    context.layers?.some((l) => l.id === "municipalities" && l.visible)
+      ? ["municipal-boundaries"]
+      : []),
     ...(context.mode === "geographic" && context.country.code === "ZA"
       ? ["province-boundaries"]
       : []),
@@ -88,6 +115,7 @@ export function knowledgeSnapshot(
     datasets: series,
     comparison,
     events,
+    provincialMetric,
     sources: getSources(references),
     mapAttribution: {
       publisher: "Natural Earth",

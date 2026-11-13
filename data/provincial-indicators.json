@@ -1,0 +1,504 @@
+{
+  "schemaVersion": 1,
+  "country": "ZA",
+  "retrievedAt": "2026-11-13",
+  "snapshot": true,
+  "notes": [
+    "Six province-level metrics from four primary Stats SA releases. Periods and denominators differ; do not combine them into an undated composite score.",
+    "No municipality-level estimates or interpolated missing values have been created.",
+    "Values are published or reproducibly derived; null is reserved for unavailable observations.",
+    "No claim of live or continuously updated data."
+  ],
+  "sources": [
+    {
+      "id": "qlfs-2026-q3",
+      "title": "Quarterly Labour Force Survey, Quarter 3: 2026 (P0211)",
+      "publisher": "Statistics South Africa",
+      "url": "https://www.statssa.gov.za/publications/P0211/P02113rdQuarter2026.pdf",
+      "publishedAt": "2026-11-10",
+      "retrievedAt": "2026-11-13",
+      "locator": "Printed page 9, section 5: provincial labour-market measures map; definitions in report",
+      "note": "Household sample survey of labour market activities for persons aged 15–64. Questionnaire revised in Q3 2025 to reflect updated ICLS standards; do not combine sector definitions across this break. Rates are survey estimates, not municipal measurements.",
+      "licence": "Stats SA copyright: reuse with source attribution and independent-processing disclosure. No Creative Commons licence asserted.",
+      "licenceUrl": "https://www.statssa.gov.za/?page_id=425",
+      "attribution": "Statistics South Africa (Stats SA). Map display and derived education percentages are independent Civic Intelligence processing.",
+      "access": "Official source PDF text exposed by web search; direct Stats SA PDF download returned HTML anti-bot response."
+    },
+    {
+      "id": "provincial-gdp-2025",
+      "title": "Provincial gross domestic product, 2025 (P0441.2; September 2026 issue)",
+      "publisher": "Statistics South Africa",
+      "url": "https://www.statssa.gov.za/publications/P04412/P04412September2026.pdf",
+      "publishedAt": "2026-10-29",
+      "retrievedAt": "2026-11-13",
+      "locator": "Printed page 7, Table 2: GDP by province at constant 2022 prices, percentage changes",
+      "note": "Rebased and benchmarked 2022-price series. This release revises earlier GDP estimates. Preserve its vintage and do not splice to the older 2015-base or WDI national series.",
+      "licence": "Stats SA copyright: reuse with source attribution and independent-processing disclosure. No Creative Commons licence asserted.",
+      "licenceUrl": "https://www.statssa.gov.za/?page_id=425",
+      "attribution": "Statistics South Africa (Stats SA). Map display and derived education percentages are independent Civic Intelligence processing.",
+      "access": "Official source PDF text exposed by web search; direct Stats SA PDF download returned HTML anti-bot response."
+    },
+    {
+      "id": "census-2022-education",
+      "title": "Census 2022 statistical release: adult educational attainment (P0301.4)",
+      "publisher": "Statistics South Africa",
+      "url": "https://www.gov.za/sites/default/files/P03014_Census_2022_Statistical_Release.pdf",
+      "publishedAt": "2023-10-10",
+      "retrievedAt": "2026-11-13",
+      "locator": "Printed page 43, Table 4.6: population aged 20 and older by educational attainment and province",
+      "note": "Historical Census 2022 counts. Ages 20+; not ages 25+, current schooling, school quality, or a census of qualifications completed during 2022.",
+      "licence": "Stats SA copyright: reuse with source attribution and independent-processing disclosure. No Creative Commons licence asserted.",
+      "licenceUrl": "https://www.statssa.gov.za/?page_id=425",
+      "attribution": "Statistics South Africa (Stats SA). Map display and derived education percentages are independent Civic Intelligence processing.",
+      "access": "Official South African Government PDF downloaded successfully; original Stats SA URL: https://census.statssa.gov.za/assets/documents/2022/P03014_Census_2022_Statistical_Release.pdf"
+    },
+    {
+      "id": "ghs-2025-medical-aid",
+      "title": "General Household Survey, 2025 (P0318): medical aid coverage",
+      "publisher": "Statistics South Africa",
+      "url": "https://www.statssa.gov.za/publications/P0318/P03182025.pdf",
+      "publishedAt": "2026-05-26",
+      "retrievedAt": "2026-11-13",
+      "locator": "Printed page 21, Figure 5.3; corroborated by P0318.2 selected development indicators Table 2.4, printed page 9",
+      "note": "Financial insurance-coverage proxy. This does not measure healthcare availability, access to public treatment, quality of care, bed capacity, facility counts or health outcomes. Survey estimates; published percentages preserved without recalculation from rounded counts.",
+      "licence": "Stats SA copyright: reuse with source attribution and independent-processing disclosure. No Creative Commons licence asserted.",
+      "licenceUrl": "https://www.statssa.gov.za/?page_id=425",
+      "attribution": "Statistics South Africa (Stats SA). Map display and derived education percentages are independent Civic Intelligence processing.",
+      "access": "Official source PDF text exposed by web search; direct Stats SA PDF download returned HTML anti-bot response."
+    }
+  ],
+  "metrics": [
+    {
+      "country": "ZA",
+      "geography": "province",
+      "unit": "%",
+      "precision": 1,
+      "aggregation": "Do not sum or average provincial rates; the national value is separately sourced.",
+      "missingValue": null,
+      "id": "za-unemployment-2026-q3",
+      "name": "Official unemployment rate",
+      "theme": "employment",
+      "period": "2026-Q3",
+      "periodLabel": "Jul–Sep 2026",
+      "startDate": "2026-07-01",
+      "endDate": "2026-09-30",
+      "year": 2026,
+      "definition": "Unemployed persons as a percentage of the labour force, ages 15–64, using the official unemployment definition.",
+      "denominator": "Employed plus officially unemployed persons aged 15–64 (labour force).",
+      "sourceIds": [
+        "qlfs-2026-q3"
+      ],
+      "nationalValue": 33.7,
+      "method": "Published rates transcribed without recalculation.",
+      "observations": [
+        {
+          "regionId": "western-cape",
+          "value": 19.4
+        },
+        {
+          "regionId": "eastern-cape",
+          "value": 44.3
+        },
+        {
+          "regionId": "northern-cape",
+          "value": 30
+        },
+        {
+          "regionId": "free-state",
+          "value": 39.1
+        },
+        {
+          "regionId": "kwazulu-natal",
+          "value": 33.3
+        },
+        {
+          "regionId": "north-west",
+          "value": 38.1
+        },
+        {
+          "regionId": "gauteng",
+          "value": 35.7
+        },
+        {
+          "regionId": "mpumalanga",
+          "value": 37.8
+        },
+        {
+          "regionId": "limpopo",
+          "value": 30.2
+        }
+      ],
+      "caveats": [
+        "Official unemployment is distinct from combined unemployment and potential labour force (LU3).",
+        "Survey sampling uncertainty is not displayed in this snapshot; avoid interpreting small differences as statistically significant."
+      ]
+    },
+    {
+      "country": "ZA",
+      "geography": "province",
+      "unit": "%",
+      "precision": 1,
+      "aggregation": "Do not sum or average provincial rates; the national value is separately sourced.",
+      "missingValue": null,
+      "id": "za-absorption-2026-q3",
+      "name": "Employment absorption rate",
+      "theme": "employment",
+      "period": "2026-Q3",
+      "periodLabel": "Jul–Sep 2026",
+      "startDate": "2026-07-01",
+      "endDate": "2026-09-30",
+      "year": 2026,
+      "definition": "Employed persons as a percentage of the working-age population, ages 15–64.",
+      "denominator": "All persons aged 15–64, including those outside the labour force.",
+      "sourceIds": [
+        "qlfs-2026-q3"
+      ],
+      "nationalValue": 39.7,
+      "method": "Published rates transcribed without recalculation.",
+      "observations": [
+        {
+          "regionId": "western-cape",
+          "value": 55.4
+        },
+        {
+          "regionId": "eastern-cape",
+          "value": 29.6
+        },
+        {
+          "regionId": "northern-cape",
+          "value": 36.7
+        },
+        {
+          "regionId": "free-state",
+          "value": 37.8
+        },
+        {
+          "regionId": "kwazulu-natal",
+          "value": 34.8
+        },
+        {
+          "regionId": "north-west",
+          "value": 32.1
+        },
+        {
+          "regionId": "gauteng",
+          "value": 44
+        },
+        {
+          "regionId": "mpumalanga",
+          "value": 38.1
+        },
+        {
+          "regionId": "limpopo",
+          "value": 36.5
+        }
+      ],
+      "caveats": [
+        "This is an employment-to-working-age-population rate, not the complement of the unemployment rate.",
+        "Survey sampling uncertainty is not displayed in this snapshot."
+      ]
+    },
+    {
+      "country": "ZA",
+      "geography": "province",
+      "unit": "% annual change",
+      "precision": 1,
+      "aggregation": "Do not sum or average provincial rates; the national value is separately sourced.",
+      "missingValue": null,
+      "id": "za-gdp-growth-2025",
+      "name": "Real provincial GDP growth",
+      "theme": "economy",
+      "period": "2025",
+      "periodLabel": "2025 vs 2024",
+      "startDate": "2025-01-01",
+      "endDate": "2025-12-31",
+      "year": 2025,
+      "definition": "Annual percentage change in provincial GDP measured at constant 2022 prices.",
+      "denominator": "Previous calendar year provincial GDP in the same constant-2022-price release vintage.",
+      "sourceIds": [
+        "provincial-gdp-2025"
+      ],
+      "nationalValue": 0.9,
+      "method": "Published one-decimal percentage changes from Table 2; not recalculated from rounded rand-million levels.",
+      "observations": [
+        {
+          "regionId": "western-cape",
+          "value": 1.4
+        },
+        {
+          "regionId": "eastern-cape",
+          "value": 0.6
+        },
+        {
+          "regionId": "northern-cape",
+          "value": 0.9
+        },
+        {
+          "regionId": "free-state",
+          "value": 0.8
+        },
+        {
+          "regionId": "kwazulu-natal",
+          "value": 0.7
+        },
+        {
+          "regionId": "north-west",
+          "value": 0.9
+        },
+        {
+          "regionId": "gauteng",
+          "value": 1.1
+        },
+        {
+          "regionId": "mpumalanga",
+          "value": 0.5
+        },
+        {
+          "regionId": "limpopo",
+          "value": 1
+        }
+      ],
+      "caveats": [
+        "Growth is not the size, share or per-capita income of a provincial economy.",
+        "The October 2026 rebased release revises prior years; do not mix its growth estimates with earlier vintages.",
+        "All values reflect 2025; the release month and retrieval date are separate from the measurement period."
+      ]
+    },
+    {
+      "country": "ZA",
+      "geography": "province",
+      "unit": "%",
+      "precision": 1,
+      "aggregation": "Do not sum or average provincial rates; the national value is separately sourced.",
+      "missingValue": null,
+      "id": "za-no-schooling-2022",
+      "name": "Adults with no schooling",
+      "theme": "education",
+      "period": "2022",
+      "periodLabel": "Census 2022 · ages 20+",
+      "year": 2022,
+      "definition": "Share of persons aged 20 and older whose highest educational attainment category was no schooling.",
+      "denominator": "All persons aged 20 and older in Table 4.6, including the Other attainment category.",
+      "sourceIds": [
+        "census-2022-education"
+      ],
+      "nationalValue": 6.9,
+      "method": "Calculated as 100 × published category count / published provincial total aged 20+; rounded to one decimal for display. Raw category and denominator counts retained.",
+      "observations": [
+        {
+          "regionId": "western-cape",
+          "value": 2.3,
+          "numerator": 107254,
+          "denominator": 4764565
+        },
+        {
+          "regionId": "eastern-cape",
+          "value": 7.2,
+          "numerator": 300119,
+          "denominator": 4151162
+        },
+        {
+          "regionId": "northern-cape",
+          "value": 6.6,
+          "numerator": 52588,
+          "denominator": 792272
+        },
+        {
+          "regionId": "free-state",
+          "value": 5,
+          "numerator": 87798,
+          "denominator": 1763343
+        },
+        {
+          "regionId": "kwazulu-natal",
+          "value": 8.3,
+          "numerator": 607121,
+          "denominator": 7356329
+        },
+        {
+          "regionId": "north-west",
+          "value": 7.9,
+          "numerator": 176650,
+          "denominator": 2229861
+        },
+        {
+          "regionId": "gauteng",
+          "value": 3.9,
+          "numerator": 384007,
+          "denominator": 9898581
+        },
+        {
+          "regionId": "mpumalanga",
+          "value": 11.7,
+          "numerator": 355682,
+          "denominator": 3036936
+        },
+        {
+          "regionId": "limpopo",
+          "value": 14.1,
+          "numerator": 504793,
+          "denominator": 3584940
+        }
+      ],
+      "caveats": [
+        "This denominator is ages 20+, not ages 25+ or all residents.",
+        "Census attainment categories measure highest attainment, not current enrolment or education quality.",
+        "Published rounded category counts can differ by a few persons when summed; use the published total denominator without forcing reconciliation."
+      ]
+    },
+    {
+      "country": "ZA",
+      "geography": "province",
+      "unit": "%",
+      "precision": 1,
+      "aggregation": "Do not sum or average provincial rates; the national value is separately sourced.",
+      "missingValue": null,
+      "id": "za-post-school-2022",
+      "name": "Adults with post-school education",
+      "theme": "education",
+      "period": "2022",
+      "periodLabel": "Census 2022 · ages 20+",
+      "year": 2022,
+      "definition": "Share of persons aged 20 and older whose highest educational attainment category was post-school.",
+      "denominator": "All persons aged 20 and older in Table 4.6, including the Other attainment category.",
+      "sourceIds": [
+        "census-2022-education"
+      ],
+      "nationalValue": 12.2,
+      "method": "Calculated as 100 × published category count / published provincial total aged 20+; rounded to one decimal for display. Raw category and denominator counts retained.",
+      "observations": [
+        {
+          "regionId": "western-cape",
+          "value": 17.6,
+          "numerator": 837320,
+          "denominator": 4764565
+        },
+        {
+          "regionId": "eastern-cape",
+          "value": 10,
+          "numerator": 416388,
+          "denominator": 4151162
+        },
+        {
+          "regionId": "northern-cape",
+          "value": 7.1,
+          "numerator": 56208,
+          "denominator": 792272
+        },
+        {
+          "regionId": "free-state",
+          "value": 10.2,
+          "numerator": 179313,
+          "denominator": 1763343
+        },
+        {
+          "regionId": "kwazulu-natal",
+          "value": 10.4,
+          "numerator": 763354,
+          "denominator": 7356329
+        },
+        {
+          "regionId": "north-west",
+          "value": 7.5,
+          "numerator": 166980,
+          "denominator": 2229861
+        },
+        {
+          "regionId": "gauteng",
+          "value": 16.2,
+          "numerator": 1606149,
+          "denominator": 9898581
+        },
+        {
+          "regionId": "mpumalanga",
+          "value": 7.3,
+          "numerator": 222321,
+          "denominator": 3036936
+        },
+        {
+          "regionId": "limpopo",
+          "value": 9.9,
+          "numerator": 354732,
+          "denominator": 3584940
+        }
+      ],
+      "caveats": [
+        "This denominator is ages 20+, not ages 25+ or all residents.",
+        "Census attainment categories measure highest attainment, not current enrolment or education quality.",
+        "Published rounded category counts can differ by a few persons when summed; use the published total denominator without forcing reconciliation."
+      ]
+    },
+    {
+      "country": "ZA",
+      "geography": "province",
+      "unit": "%",
+      "precision": 1,
+      "aggregation": "Do not sum or average provincial rates; the national value is separately sourced.",
+      "missingValue": null,
+      "id": "za-medical-aid-2025",
+      "name": "Medical aid coverage",
+      "theme": "health",
+      "period": "2025",
+      "periodLabel": "GHS 2025",
+      "year": 2025,
+      "definition": "Percentage of individuals who are members of a medical aid scheme, as published by Stats SA.",
+      "denominator": "Individuals represented by the General Household Survey; published medical-aid membership rates retained rather than reconstructed from rounded counts.",
+      "sourceIds": [
+        "ghs-2025-medical-aid"
+      ],
+      "nationalValue": 15.5,
+      "method": "Published Figure 5.3 one-decimal rates, corroborated by selected development indicators Table 2.4; not computed from rounded counts.",
+      "observations": [
+        {
+          "regionId": "western-cape",
+          "value": 25.9
+        },
+        {
+          "regionId": "eastern-cape",
+          "value": 9.9
+        },
+        {
+          "regionId": "northern-cape",
+          "value": 16.7
+        },
+        {
+          "regionId": "free-state",
+          "value": 11.8
+        },
+        {
+          "regionId": "kwazulu-natal",
+          "value": 9.5
+        },
+        {
+          "regionId": "north-west",
+          "value": 13.1
+        },
+        {
+          "regionId": "gauteng",
+          "value": 22.1
+        },
+        {
+          "regionId": "mpumalanga",
+          "value": 12.6
+        },
+        {
+          "regionId": "limpopo",
+          "value": 8.2
+        }
+      ],
+      "caveats": [
+        "Financial insurance coverage is an access proxy; it does not measure public healthcare access, service availability, quality, facility capacity or health outcomes.",
+        "People without medical aid can still receive care through public services.",
+        "Unknown or unspecified coverage statuses are handled as in the published Stats SA estimates; no observations were imputed.",
+        "Survey sampling uncertainty is not displayed; do not interpret small provincial differences as statistically significant."
+      ]
+    }
+  ],
+  "unavailable": [
+    {
+      "id": "health-facility-capacity",
+      "name": "Health facility capacity",
+      "reason": "No verified, consistently defined provincial capacity table was selected in this bounded research. Medical aid membership must not be relabelled as capacity."
+    }
+  ]
+}

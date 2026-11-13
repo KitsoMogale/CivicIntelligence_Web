@@ -9,6 +9,7 @@ import {
 } from "./knowledge";
 import { modeSchema } from "./actions";
 import type { Country, Domain, Mode } from "./types";
+import { networkSchema, type NetworkQuery } from "./network";
 import {
   cameraSchema,
   densitySchema,
@@ -44,7 +45,10 @@ export type Exploration = {
   camera: Camera;
   layers: CanvasLayer[];
   density: "overview" | "regional" | "detailed";
-  layout: "single" | "overlay";
+  layout: "single" | "overlay" | "split";
+  splitRatio: number;
+  networkTrace: NetworkQuery | null;
+  municipalityLevel: "local" | "district";
   filters: { query: string; entityType: string; relationshipType: string };
   selectionIds: string[];
   isolatedEntityIds: string[];
@@ -74,6 +78,9 @@ export const initialExploration: Exploration = {
   layers: defaultLayers(),
   density: "regional",
   layout: "single",
+  splitRatio: 50,
+  networkTrace: null,
+  municipalityLevel: "local",
   filters: { query: "", entityType: "", relationshipType: "" },
   selectionIds: [],
   isolatedEntityIds: [],
@@ -85,6 +92,9 @@ const schema = z.object({
   layers: layersSchema.optional(),
   density: densitySchema.default("regional"),
   layout: layoutSchema.default("single"),
+  splitRatio: z.number().min(25).max(75).default(50),
+  networkTrace: networkSchema.nullable().default(null),
+  municipalityLevel: z.enum(["local", "district"]).default("local"),
   filters: filterSchema.default({
     query: "",
     entityType: "",
@@ -133,6 +143,8 @@ export function normalizeExploration(input: unknown): Exploration {
     ...value.selectionIds,
     ...value.isolatedEntityIds,
     ...value.expanded,
+    value.networkTrace?.startId,
+    value.networkTrace?.targetId,
   ])
     if (id && entityById(id)?.country !== country.code)
       throw new Error("Entity outside exploration country");

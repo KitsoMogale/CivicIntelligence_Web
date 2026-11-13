@@ -2,8 +2,11 @@
 import { useExplorer } from "@/lib/store";
 import { entityById } from "@/lib/knowledge";
 import { canvasLinks } from "@/lib/map-data";
+import { useState } from "react";
+import NetworkExplorer from "./NetworkExplorer";
 export default function CanvasTools() {
   const s = useExplorer();
+  const [networkOpen, setNetworkOpen] = useState(false);
   function trace() {
     const links = canvasLinks(s).filter(
       (r) =>
@@ -41,6 +44,7 @@ export default function CanvasTools() {
         >
           <option value="single">Single view</option>
           <option value="overlay">Map + overlay</option>
+          <option value="split">Split canvas</option>
         </select>
       </label>
       <span
@@ -53,6 +57,20 @@ export default function CanvasTools() {
       <button disabled={!s.selectionIds.length} onClick={trace}>
         Trace connections
       </button>
+      <button
+        onClick={() => setNetworkOpen(true)}
+        disabled={s.country.code !== "ZA"}
+      >
+        Explore network
+      </button>
+      {s.layout === "split" && (
+        <button
+          onClick={() => s.navigate({ splitRatio: 50 }, "Equal split panels")}
+        >
+          Equal panels
+        </button>
+      )}
+      {networkOpen && <NetworkExplorer close={() => setNetworkOpen(false)} />}
       <button
         disabled={!s.selectionIds.length && !s.isolatedEntityIds.length}
         onClick={() =>

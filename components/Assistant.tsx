@@ -22,6 +22,7 @@ import {
 } from "@/lib/knowledge";
 import { visibleEntityIds } from "@/lib/visibility";
 import { useExplorer } from "@/lib/store";
+import { municipalById } from "@/lib/geography";
 import { validateActions, type CanvasAction } from "@/lib/actions";
 type Message = {
   role: "user" | "assistant";
@@ -276,12 +277,19 @@ export default function Assistant({
                 <button
                   className="detail-link"
                   onClick={() =>
-                    s.navigate({ region: selected.id, mode: "geographic" })
+                    s.applyActions([
+                      {
+                        type: "FOCUS_REGION",
+                        payload: { entityId: selected.id },
+                      },
+                    ])
                   }
                 >
-                  {selected.coordinates
-                    ? "Locate on map"
-                    : "View province · site coordinates unavailable"}{" "}
+                  {municipalById(selected.id)
+                    ? "View historical municipality boundary"
+                    : selected.coordinates
+                      ? "Locate on map"
+                      : "View province · site coordinates unavailable"}{" "}
                   <ArrowUpRight size={14} />
                 </button>
               )}

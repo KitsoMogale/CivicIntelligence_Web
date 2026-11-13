@@ -1,0 +1,5342 @@
+{
+  "title": "South African municipal boundaries",
+  "retrievedAt": "2026-11-13",
+  "publisher": "OCHA ROSEA / South African Municipal Demarcation Board; simplified by geoBoundaries",
+  "sourceUrl": "https://data.humdata.org/dataset/cod-ab-zaf",
+  "geometrySourceUrls": [
+    "https://www.geoboundaries.org/api/current/gbOpen/ZAF/ADM2/",
+    "https://www.geoboundaries.org/api/current/gbOpen/ZAF/ADM3/"
+  ],
+  "license": "CC BY 3.0 IGO (original source); CC BY 4.0 (geoBoundaries project)",
+  "licenseUrl": "https://creativecommons.org/licenses/by/3.0/igo/",
+  "geoBoundariesProjectLicense": "CC BY 4.0",
+  "geoBoundariesProjectLicenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "projectAttributionUrl": "https://www.geoboundaries.org/",
+  "suggestedAttribution": "Municipal boundaries: geoBoundaries (CC BY 4.0); original source OCHA ROSEA / South African Municipal Demarcation Board (CC BY 3.0 IGO), representative2020 boundaries. Simplified for display. Municipality codes joined to the October2026 Treasury directory.",
+  "boundarySourceCreated": "2018-12-27",
+  "humanitarianValidOn": "2020-11-09",
+  "sourceReviewed": "2025-01-28",
+  "boundaryYearRepresented": "2020",
+  "directorySnapshot": "2026-10-22",
+  "counts": {
+    "adm2": 52,
+    "adm3": 213,
+    "duplicateMetros": 8,
+    "uniqueMunicipalities": 257,
+    "local": 205,
+    "district": 44,
+    "metro": 8,
+    "exactCodeJoins": 257,
+    "unjoined": 0
+  },
+  "normalization": "Geometry source name matched exactly after case, punctuation and Unicode normalization to HDX source name; duplicate Emalahleni names disambiguated by the published HDX centre point falling inside one polygon. HDX *_name1 municipality codes then joined exactly to Treasury directory municipality codes. No fuzzy matching or invented codes.",
+  "displayNote": "Historical 2020 representative boundaries (source created2018), matched by municipality code to the October2026 directory. Names shown from the current directory; sourceName and vintage retained. Boundaries do not assert a current legal demarcation.",
+  "layerNote": "ADM2 contains44 districts and8metros. ADM3 contains205locals and8metros. The8metro shapes occur at both levels; do not count or aggregate them twice. District and local polygons intentionally overlap. Recommended separate level selector.",
+  "precisionNote": "geoBoundaries simplified visualization geometry; rounded6decimaldegrees. Not cadastral or survey geometry.",
+  "sha256": {
+    "za-municipalities-adm2.geojson": "b077c243027801129b26f1edcb43b3b155832111bba082531fcac0bb5ab69750",
+    "za-municipalities-adm3.geojson": "dd47505fe98907591d23751b81368fe7cfa14b47a9550c6031cb8aedaacecd22"
+  },
+  "review": [
+    {
+      "id": "za-municipality-dc44",
+      "entityId": "za-municipality-dc44",
+      "name": "Alfred Nzo",
+      "sourceName": "Alfred Nzo",
+      "municipalityCode": "DC44",
+      "category": "C",
+      "region": "eastern-cape",
+      "province": "Eastern Cape",
+      "adminLevel": 2,
+      "sourcePcode": "ZA244",
+      "boundaryId": "47623444B30321887561170",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-dc25",
+      "entityId": "za-municipality-dc25",
+      "name": "Amajuba",
+      "sourceName": "Amajuba",
+      "municipalityCode": "DC25",
+      "category": "C",
+      "region": "kwazulu-natal",
+      "province": "KwaZulu-Natal",
+      "adminLevel": 2,
+      "sourcePcode": "ZA525",
+      "boundaryId": "47623444B66034573524186",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-dc12",
+      "entityId": "za-municipality-dc12",
+      "name": "Amathole",
+      "sourceName": "Amathole",
+      "municipalityCode": "DC12",
+      "category": "C",
+      "region": "eastern-cape",
+      "province": "Eastern Cape",
+      "adminLevel": 2,
+      "sourcePcode": "ZA212",
+      "boundaryId": "47623444B36505680523289",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-dc37",
+      "entityId": "za-municipality-dc37",
+      "name": "Bojanala Platinum",
+      "sourceName": "Bojanala",
+      "municipalityCode": "DC37",
+      "category": "C",
+      "region": "north-west",
+      "province": "North West",
+      "adminLevel": 2,
+      "sourcePcode": "ZA637",
+      "boundaryId": "47623444B85240549790840",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-buf",
+      "entityId": "za-municipality-buf",
+      "name": "Buffalo City",
+      "sourceName": "Buffalo City",
+      "municipalityCode": "BUF",
+      "category": "A",
+      "region": "eastern-cape",
+      "province": "Eastern Cape",
+      "adminLevel": 2,
+      "sourcePcode": "ZA292",
+      "boundaryId": "47623444B85184421345333",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-dc10",
+      "entityId": "za-municipality-dc10",
+      "name": "Sarah Baartman",
+      "sourceName": "Cacadu",
+      "municipalityCode": "DC10",
+      "category": "C",
+      "region": "eastern-cape",
+      "province": "Eastern Cape",
+      "adminLevel": 2,
+      "sourcePcode": "ZA210",
+      "boundaryId": "47623444B84929106525656",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-dc2",
+      "entityId": "za-municipality-dc2",
+      "name": "Cape Winelands DM",
+      "sourceName": "Cape Winelands",
+      "municipalityCode": "DC2",
+      "category": "C",
+      "region": "western-cape",
+      "province": "Western Cape",
+      "adminLevel": 2,
+      "sourcePcode": "ZA102",
+      "boundaryId": "47623444B8262601395586",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-dc35",
+      "entityId": "za-municipality-dc35",
+      "name": "Capricorn",
+      "sourceName": "Capricorn",
+      "municipalityCode": "DC35",
+      "category": "C",
+      "region": "limpopo",
+      "province": "Limpopo",
+      "adminLevel": 2,
+      "sourcePcode": "ZA935",
+      "boundaryId": "47623444B39961875100415",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-dc5",
+      "entityId": "za-municipality-dc5",
+      "name": "Central Karoo",
+      "sourceName": "Central Karoo",
+      "municipalityCode": "DC5",
+      "category": "C",
+      "region": "western-cape",
+      "province": "Western Cape",
+      "adminLevel": 2,
+      "sourcePcode": "ZA105",
+      "boundaryId": "47623444B66747201173997",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-dc13",
+      "entityId": "za-municipality-dc13",
+      "name": "Chris Hani",
+      "sourceName": "Chris Hani",
+      "municipalityCode": "DC13",
+      "category": "C",
+      "region": "eastern-cape",
+      "province": "Eastern Cape",
+      "adminLevel": 2,
+      "sourcePcode": "ZA213",
+      "boundaryId": "47623444B97098873518332",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-cpt",
+      "entityId": "za-municipality-cpt",
+      "name": "Cape Town",
+      "sourceName": "City of Cape Town",
+      "municipalityCode": "CPT",
+      "category": "A",
+      "region": "western-cape",
+      "province": "Western Cape",
+      "adminLevel": 2,
+      "sourcePcode": "ZA191",
+      "boundaryId": "47623444B95865124382580",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "MultiPolygon"
+    },
+    {
+      "id": "za-municipality-jhb",
+      "entityId": "za-municipality-jhb",
+      "name": "City of Johannesburg",
+      "sourceName": "City of Johannesburg",
+      "municipalityCode": "JHB",
+      "category": "A",
+      "region": "gauteng",
+      "province": "Gauteng",
+      "adminLevel": 2,
+      "sourcePcode": "ZA798",
+      "boundaryId": "47623444B15418766532839",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-tsh",
+      "entityId": "za-municipality-tsh",
+      "name": "City of Tshwane",
+      "sourceName": "City of Tshwane",
+      "municipalityCode": "TSH",
+      "category": "A",
+      "region": "gauteng",
+      "province": "Gauteng",
+      "adminLevel": 2,
+      "sourcePcode": "ZA799",
+      "boundaryId": "47623444B80921072750836",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-dc40",
+      "entityId": "za-municipality-dc40",
+      "name": "Dr Kenneth Kaunda",
+      "sourceName": "Dr Kenneth Kaunda",
+      "municipalityCode": "DC40",
+      "category": "C",
+      "region": "north-west",
+      "province": "North West",
+      "adminLevel": 2,
+      "sourcePcode": "ZA640",
+      "boundaryId": "47623444B93741575558004",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-dc39",
+      "entityId": "za-municipality-dc39",
+      "name": "Dr Ruth Segomotsi Mompati",
+      "sourceName": "Dr Ruth Segomotsi Mompati",
+      "municipalityCode": "DC39",
+      "category": "C",
+      "region": "north-west",
+      "province": "North West",
+      "adminLevel": 2,
+      "sourcePcode": "ZA639",
+      "boundaryId": "47623444B1265322146951",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-dc4",
+      "entityId": "za-municipality-dc4",
+      "name": "Garden Route",
+      "sourceName": "Eden",
+      "municipalityCode": "DC4",
+      "category": "C",
+      "region": "western-cape",
+      "province": "Western Cape",
+      "adminLevel": 2,
+      "sourcePcode": "ZA104",
+      "boundaryId": "47623444B71894478343084",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-dc32",
+      "entityId": "za-municipality-dc32",
+      "name": "Ehlanzeni",
+      "sourceName": "Ehlanzeni",
+      "municipalityCode": "DC32",
+      "category": "C",
+      "region": "mpumalanga",
+      "province": "Mpumalanga",
+      "adminLevel": 2,
+      "sourcePcode": "ZA832",
+      "boundaryId": "47623444B37290189898198",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-eku",
+      "entityId": "za-municipality-eku",
+      "name": "City of Ekurhuleni",
+      "sourceName": "Ekurhuleni",
+      "municipalityCode": "EKU",
+      "category": "A",
+      "region": "gauteng",
+      "province": "Gauteng",
+      "adminLevel": 2,
+      "sourcePcode": "ZA797",
+      "boundaryId": "47623444B61881803671589",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-eth",
+      "entityId": "za-municipality-eth",
+      "name": "eThekwini",
+      "sourceName": "eThekwini",
+      "municipalityCode": "ETH",
+      "category": "A",
+      "region": "kwazulu-natal",
+      "province": "KwaZulu-Natal",
+      "adminLevel": 2,
+      "sourcePcode": "ZA595",
+      "boundaryId": "47623444B60178842862169",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-dc20",
+      "entityId": "za-municipality-dc20",
+      "name": "Fezile Dabi",
+      "sourceName": "Fezile Dabi",
+      "municipalityCode": "DC20",
+      "category": "C",
+      "region": "free-state",
+      "province": "Free State",
+      "adminLevel": 2,
+      "sourcePcode": "ZA420",
+      "boundaryId": "47623444B21501715606105",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-dc9",
+      "entityId": "za-municipality-dc9",
+      "name": "Frances Baard",
+      "sourceName": "Frances Baard",
+      "municipalityCode": "DC9",
+      "category": "C",
+      "region": "northern-cape",
+      "province": "Nothern Cape",
+      "adminLevel": 2,
+      "sourcePcode": "ZA309",
+      "boundaryId": "47623444B47551800403987",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-dc30",
+      "entityId": "za-municipality-dc30",
+      "name": "Gert Sibande",
+      "sourceName": "Gert Sibande",
+      "municipalityCode": "DC30",
+      "category": "C",
+      "region": "mpumalanga",
+      "province": "Mpumalanga",
+      "adminLevel": 2,
+      "sourcePcode": "ZA830",
+      "boundaryId": "47623444B27645248540404",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-dc29",
+      "entityId": "za-municipality-dc29",
+      "name": "iLembe",
+      "sourceName": "iLembe",
+      "municipalityCode": "DC29",
+      "category": "C",
+      "region": "kwazulu-natal",
+      "province": "KwaZulu-Natal",
+      "adminLevel": 2,
+      "sourcePcode": "ZA529",
+      "boundaryId": "47623444B69150070479938",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-dc14",
+      "entityId": "za-municipality-dc14",
+      "name": "Joe Gqabi",
+      "sourceName": "Joe Gqabi",
+      "municipalityCode": "DC14",
+      "category": "C",
+      "region": "eastern-cape",
+      "province": "Eastern Cape",
+      "adminLevel": 2,
+      "sourcePcode": "ZA214",
+      "boundaryId": "47623444B23123045321242",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-dc45",
+      "entityId": "za-municipality-dc45",
+      "name": "John Taolo Gaetsewe",
+      "sourceName": "John Taolo Gaetsewe",
+      "municipalityCode": "DC45",
+      "category": "C",
+      "region": "northern-cape",
+      "province": "Nothern Cape",
+      "adminLevel": 2,
+      "sourcePcode": "ZA345",
+      "boundaryId": "47623444B84629172160693",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-dc18",
+      "entityId": "za-municipality-dc18",
+      "name": "Lejweleputswa",
+      "sourceName": "Lejweleputswa",
+      "municipalityCode": "DC18",
+      "category": "C",
+      "region": "free-state",
+      "province": "Free State",
+      "adminLevel": 2,
+      "sourcePcode": "ZA418",
+      "boundaryId": "47623444B29116896592790",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-man",
+      "entityId": "za-municipality-man",
+      "name": "Mangaung",
+      "sourceName": "Mangaung",
+      "municipalityCode": "MAN",
+      "category": "A",
+      "region": "free-state",
+      "province": "Free State",
+      "adminLevel": 2,
+      "sourcePcode": "ZA494",
+      "boundaryId": "47623444B22599792684232",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-dc33",
+      "entityId": "za-municipality-dc33",
+      "name": "Mopani",
+      "sourceName": "Mopani",
+      "municipalityCode": "DC33",
+      "category": "C",
+      "region": "limpopo",
+      "province": "Limpopo",
+      "adminLevel": 2,
+      "sourcePcode": "ZA933",
+      "boundaryId": "47623444B84816538378710",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-dc6",
+      "entityId": "za-municipality-dc6",
+      "name": "Namakwa",
+      "sourceName": "Namakwa",
+      "municipalityCode": "DC6",
+      "category": "C",
+      "region": "northern-cape",
+      "province": "Nothern Cape",
+      "adminLevel": 2,
+      "sourcePcode": "ZA306",
+      "boundaryId": "47623444B2552562251298",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-nma",
+      "entityId": "za-municipality-nma",
+      "name": "Nelson Mandela Bay",
+      "sourceName": "Nelson Mandela Bay",
+      "municipalityCode": "NMA",
+      "category": "A",
+      "region": "eastern-cape",
+      "province": "Eastern Cape",
+      "adminLevel": 2,
+      "sourcePcode": "ZA293",
+      "boundaryId": "47623444B28857154592205",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-dc38",
+      "entityId": "za-municipality-dc38",
+      "name": "Ngaka Modiri Molema",
+      "sourceName": "Ngaka Modiri Molema",
+      "municipalityCode": "DC38",
+      "category": "C",
+      "region": "north-west",
+      "province": "North West",
+      "adminLevel": 2,
+      "sourcePcode": "ZA638",
+      "boundaryId": "47623444B28912463422483",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-dc31",
+      "entityId": "za-municipality-dc31",
+      "name": "Nkangala",
+      "sourceName": "Nkangala",
+      "municipalityCode": "DC31",
+      "category": "C",
+      "region": "mpumalanga",
+      "province": "Mpumalanga",
+      "adminLevel": 2,
+      "sourcePcode": "ZA831",
+      "boundaryId": "47623444B64302501149239",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-dc15",
+      "entityId": "za-municipality-dc15",
+      "name": "O R Tambo",
+      "sourceName": "O.R.Tambo",
+      "municipalityCode": "DC15",
+      "category": "C",
+      "region": "eastern-cape",
+      "province": "Eastern Cape",
+      "adminLevel": 2,
+      "sourcePcode": "ZA215",
+      "boundaryId": "47623444B2401151093158",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-dc3",
+      "entityId": "za-municipality-dc3",
+      "name": "Overberg",
+      "sourceName": "Overberg",
+      "municipalityCode": "DC3",
+      "category": "C",
+      "region": "western-cape",
+      "province": "Western Cape",
+      "adminLevel": 2,
+      "sourcePcode": "ZA103",
+      "boundaryId": "47623444B61406186088349",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "MultiPolygon"
+    },
+    {
+      "id": "za-municipality-dc7",
+      "entityId": "za-municipality-dc7",
+      "name": "Pixley Ka Seme (NC)",
+      "sourceName": "Pixley ka Seme",
+      "municipalityCode": "DC7",
+      "category": "C",
+      "region": "northern-cape",
+      "province": "Nothern Cape",
+      "adminLevel": 2,
+      "sourcePcode": "ZA307",
+      "boundaryId": "47623444B63696254381244",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-dc42",
+      "entityId": "za-municipality-dc42",
+      "name": "Sedibeng",
+      "sourceName": "Sedibeng",
+      "municipalityCode": "DC42",
+      "category": "C",
+      "region": "gauteng",
+      "province": "Gauteng",
+      "adminLevel": 2,
+      "sourcePcode": "ZA742",
+      "boundaryId": "47623444B84489694859974",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-dc47",
+      "entityId": "za-municipality-dc47",
+      "name": "Sekhukhune",
+      "sourceName": "Sekhukhune",
+      "municipalityCode": "DC47",
+      "category": "C",
+      "region": "limpopo",
+      "province": "Limpopo",
+      "adminLevel": 2,
+      "sourcePcode": "ZA947",
+      "boundaryId": "47623444B21298621424908",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-dc43",
+      "entityId": "za-municipality-dc43",
+      "name": "Harry Gwala",
+      "sourceName": "Sisonke",
+      "municipalityCode": "DC43",
+      "category": "C",
+      "region": "kwazulu-natal",
+      "province": "KwaZulu-Natal",
+      "adminLevel": 2,
+      "sourcePcode": "ZA543",
+      "boundaryId": "47623444B12889843225205",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-dc19",
+      "entityId": "za-municipality-dc19",
+      "name": "Thabo Mofutsanyana",
+      "sourceName": "Thabo Mofutsanyane",
+      "municipalityCode": "DC19",
+      "category": "C",
+      "region": "free-state",
+      "province": "Free State",
+      "adminLevel": 2,
+      "sourcePcode": "ZA419",
+      "boundaryId": "47623444B5552574832417",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-dc21",
+      "entityId": "za-municipality-dc21",
+      "name": "Ugu",
+      "sourceName": "Ugu",
+      "municipalityCode": "DC21",
+      "category": "C",
+      "region": "kwazulu-natal",
+      "province": "KwaZulu-Natal",
+      "adminLevel": 2,
+      "sourcePcode": "ZA521",
+      "boundaryId": "47623444B80915190121590",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-dc22",
+      "entityId": "za-municipality-dc22",
+      "name": "uMgungundlovu",
+      "sourceName": "Umgungundlovu",
+      "municipalityCode": "DC22",
+      "category": "C",
+      "region": "kwazulu-natal",
+      "province": "KwaZulu-Natal",
+      "adminLevel": 2,
+      "sourcePcode": "ZA522",
+      "boundaryId": "47623444B82303823139799",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-dc27",
+      "entityId": "za-municipality-dc27",
+      "name": "Umkhanyakude",
+      "sourceName": "Umkhanyakude",
+      "municipalityCode": "DC27",
+      "category": "C",
+      "region": "kwazulu-natal",
+      "province": "KwaZulu-Natal",
+      "adminLevel": 2,
+      "sourcePcode": "ZA527",
+      "boundaryId": "47623444B87808740966359",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-dc24",
+      "entityId": "za-municipality-dc24",
+      "name": "Umzinyathi",
+      "sourceName": "Umzinyathi",
+      "municipalityCode": "DC24",
+      "category": "C",
+      "region": "kwazulu-natal",
+      "province": "KwaZulu-Natal",
+      "adminLevel": 2,
+      "sourcePcode": "ZA524",
+      "boundaryId": "47623444B41861303399053",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-dc23",
+      "entityId": "za-municipality-dc23",
+      "name": "Uthukela",
+      "sourceName": "Uthukela",
+      "municipalityCode": "DC23",
+      "category": "C",
+      "region": "kwazulu-natal",
+      "province": "KwaZulu-Natal",
+      "adminLevel": 2,
+      "sourcePcode": "ZA523",
+      "boundaryId": "47623444B45932738864801",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-dc28",
+      "entityId": "za-municipality-dc28",
+      "name": "King Cetshwayo",
+      "sourceName": "Uthungulu",
+      "municipalityCode": "DC28",
+      "category": "C",
+      "region": "kwazulu-natal",
+      "province": "KwaZulu-Natal",
+      "adminLevel": 2,
+      "sourcePcode": "ZA528",
+      "boundaryId": "47623444B51210648784187",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-dc34",
+      "entityId": "za-municipality-dc34",
+      "name": "Vhembe",
+      "sourceName": "Vhembe",
+      "municipalityCode": "DC34",
+      "category": "C",
+      "region": "limpopo",
+      "province": "Limpopo",
+      "adminLevel": 2,
+      "sourcePcode": "ZA934",
+      "boundaryId": "47623444B95982048670815",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-dc36",
+      "entityId": "za-municipality-dc36",
+      "name": "Waterberg",
+      "sourceName": "Waterberg",
+      "municipalityCode": "DC36",
+      "category": "C",
+      "region": "limpopo",
+      "province": "Limpopo",
+      "adminLevel": 2,
+      "sourcePcode": "ZA936",
+      "boundaryId": "47623444B68910643198214",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-dc1",
+      "entityId": "za-municipality-dc1",
+      "name": "West Coast",
+      "sourceName": "West Coast",
+      "municipalityCode": "DC1",
+      "category": "C",
+      "region": "western-cape",
+      "province": "Western Cape",
+      "adminLevel": 2,
+      "sourcePcode": "ZA101",
+      "boundaryId": "47623444B37444115609272",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "MultiPolygon"
+    },
+    {
+      "id": "za-municipality-dc48",
+      "entityId": "za-municipality-dc48",
+      "name": "West Rand",
+      "sourceName": "West Rand",
+      "municipalityCode": "DC48",
+      "category": "C",
+      "region": "gauteng",
+      "province": "Gauteng",
+      "adminLevel": 2,
+      "sourcePcode": "ZA748",
+      "boundaryId": "47623444B6623169143942",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-dc16",
+      "entityId": "za-municipality-dc16",
+      "name": "Xhariep",
+      "sourceName": "Xhariep",
+      "municipalityCode": "DC16",
+      "category": "C",
+      "region": "free-state",
+      "province": "Free State",
+      "adminLevel": 2,
+      "sourcePcode": "ZA416",
+      "boundaryId": "47623444B92402502391318",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-dc8",
+      "entityId": "za-municipality-dc8",
+      "name": "Z F Mgcawu",
+      "sourceName": "Z F Mgcawu",
+      "municipalityCode": "DC8",
+      "category": "C",
+      "region": "northern-cape",
+      "province": "Nothern Cape",
+      "adminLevel": 2,
+      "sourcePcode": "ZA308",
+      "boundaryId": "47623444B49450251729649",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-dc26",
+      "entityId": "za-municipality-dc26",
+      "name": "Zululand",
+      "sourceName": "Zululand",
+      "municipalityCode": "DC26",
+      "category": "C",
+      "region": "kwazulu-natal",
+      "province": "KwaZulu-Natal",
+      "adminLevel": 2,
+      "sourcePcode": "ZA526",
+      "boundaryId": "47623444B26591670939926",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-kzn263",
+      "entityId": "za-municipality-kzn263",
+      "name": "Abaqulusi",
+      "sourceName": "Abaqulusi",
+      "municipalityCode": "KZN263",
+      "category": "B",
+      "region": "kwazulu-natal",
+      "province": "KwaZulu-Natal",
+      "adminLevel": 3,
+      "sourcePcode": "ZA5263",
+      "boundaryId": "15628383B7049738786767",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-kzn238",
+      "entityId": "za-municipality-kzn238",
+      "name": "Alfred Duma",
+      "sourceName": "Alfred Duma",
+      "municipalityCode": "KZN238",
+      "category": "B",
+      "region": "kwazulu-natal",
+      "province": "KwaZulu-Natal",
+      "adminLevel": 3,
+      "sourcePcode": "ZA5238",
+      "boundaryId": "15628383B5643651506202",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-ec124",
+      "entityId": "za-municipality-ec124",
+      "name": "Amahlathi",
+      "sourceName": "Amahlathi",
+      "municipalityCode": "EC124",
+      "category": "B",
+      "region": "eastern-cape",
+      "province": "Eastern Cape",
+      "adminLevel": 3,
+      "sourcePcode": "ZA2124",
+      "boundaryId": "15628383B22921038758267",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-lim334",
+      "entityId": "za-municipality-lim334",
+      "name": "Ba-Phalaborwa",
+      "sourceName": "Ba-Phalaborwa",
+      "municipalityCode": "LIM334",
+      "category": "B",
+      "region": "limpopo",
+      "province": "Limpopo",
+      "adminLevel": 3,
+      "sourcePcode": "ZA9334",
+      "boundaryId": "15628383B175155379368",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-wc053",
+      "entityId": "za-municipality-wc053",
+      "name": "Beaufort West",
+      "sourceName": "Beaufort West",
+      "municipalityCode": "WC053",
+      "category": "B",
+      "region": "western-cape",
+      "province": "Western Cape",
+      "adminLevel": 3,
+      "sourcePcode": "ZA1053",
+      "boundaryId": "15628383B46275674627540",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-lim366",
+      "entityId": "za-municipality-lim366",
+      "name": "Bela Bela",
+      "sourceName": "Bela-Bela",
+      "municipalityCode": "LIM366",
+      "category": "B",
+      "region": "limpopo",
+      "province": "Limpopo",
+      "adminLevel": 3,
+      "sourcePcode": "ZA9366",
+      "boundaryId": "15628383B70995166326216",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-wc013",
+      "entityId": "za-municipality-wc013",
+      "name": "Bergrivier",
+      "sourceName": "Bergrivier",
+      "municipalityCode": "WC013",
+      "category": "B",
+      "region": "western-cape",
+      "province": "Western Cape",
+      "adminLevel": 3,
+      "sourcePcode": "ZA1013",
+      "boundaryId": "15628383B4913573600740",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-kzn276",
+      "entityId": "za-municipality-kzn276",
+      "name": "Hlabisa Big Five",
+      "sourceName": "Big Five Hlabisa",
+      "municipalityCode": "KZN276",
+      "category": "B",
+      "region": "kwazulu-natal",
+      "province": "KwaZulu-Natal",
+      "adminLevel": 3,
+      "sourcePcode": "ZA5276",
+      "boundaryId": "15628383B53437482814779",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-wc047",
+      "entityId": "za-municipality-wc047",
+      "name": "Bitou",
+      "sourceName": "Bitou",
+      "municipalityCode": "WC047",
+      "category": "B",
+      "region": "western-cape",
+      "province": "Western Cape",
+      "adminLevel": 3,
+      "sourcePcode": "ZA1047",
+      "boundaryId": "15628383B70327245637461",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-lim351",
+      "entityId": "za-municipality-lim351",
+      "name": "Blouberg",
+      "sourceName": "Blouberg",
+      "municipalityCode": "LIM351",
+      "category": "B",
+      "region": "limpopo",
+      "province": "Limpopo",
+      "adminLevel": 3,
+      "sourcePcode": "ZA9351",
+      "boundaryId": "15628383B83278814134603",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-ec102",
+      "entityId": "za-municipality-ec102",
+      "name": "Blue Crane Route",
+      "sourceName": "Blue Crane Route",
+      "municipalityCode": "EC102",
+      "category": "B",
+      "region": "eastern-cape",
+      "province": "Eastern Cape",
+      "adminLevel": 3,
+      "sourcePcode": "ZA2102",
+      "boundaryId": "15628383B80616091697700",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-wc025",
+      "entityId": "za-municipality-wc025",
+      "name": "Breede Valley",
+      "sourceName": "Breede Valley",
+      "municipalityCode": "WC025",
+      "category": "B",
+      "region": "western-cape",
+      "province": "Western Cape",
+      "adminLevel": 3,
+      "sourcePcode": "ZA1025",
+      "boundaryId": "15628383B46768042592549",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-buf",
+      "entityId": "za-municipality-buf",
+      "name": "Buffalo City",
+      "sourceName": "Buffalo City",
+      "municipalityCode": "BUF",
+      "category": "A",
+      "region": "eastern-cape",
+      "province": "Eastern Cape",
+      "adminLevel": 3,
+      "sourcePcode": "ZA2920",
+      "boundaryId": "15628383B85184421345333",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-mp325",
+      "entityId": "za-municipality-mp325",
+      "name": "Bushbuckridge",
+      "sourceName": "Bushbuckridge",
+      "municipalityCode": "MP325",
+      "category": "B",
+      "region": "mpumalanga",
+      "province": "Mpumalanga",
+      "adminLevel": 3,
+      "sourcePcode": "ZA8325",
+      "boundaryId": "15628383B63173838521780",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-wc033",
+      "entityId": "za-municipality-wc033",
+      "name": "Cape Agulhas",
+      "sourceName": "Cape Agulhas",
+      "municipalityCode": "WC033",
+      "category": "B",
+      "region": "western-cape",
+      "province": "Western Cape",
+      "adminLevel": 3,
+      "sourcePcode": "ZA1033",
+      "boundaryId": "15628383B45277998127708",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-wc012",
+      "entityId": "za-municipality-wc012",
+      "name": "Cederberg",
+      "sourceName": "Cederberg",
+      "municipalityCode": "WC012",
+      "category": "B",
+      "region": "western-cape",
+      "province": "Western Cape",
+      "adminLevel": 3,
+      "sourcePcode": "ZA1012",
+      "boundaryId": "15628383B588317222273",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-mp301",
+      "entityId": "za-municipality-mp301",
+      "name": "Albert Luthuli",
+      "sourceName": "Chief Albert Luthuli",
+      "municipalityCode": "MP301",
+      "category": "B",
+      "region": "mpumalanga",
+      "province": "Mpumalanga",
+      "adminLevel": 3,
+      "sourcePcode": "ZA8301",
+      "boundaryId": "15628383B22507296568616",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-cpt",
+      "entityId": "za-municipality-cpt",
+      "name": "Cape Town",
+      "sourceName": "City of Cape Town",
+      "municipalityCode": "CPT",
+      "category": "A",
+      "region": "western-cape",
+      "province": "Western Cape",
+      "adminLevel": 3,
+      "sourcePcode": "ZA1910",
+      "boundaryId": "15628383B95865124382580",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "MultiPolygon"
+    },
+    {
+      "id": "za-municipality-jhb",
+      "entityId": "za-municipality-jhb",
+      "name": "City of Johannesburg",
+      "sourceName": "City of Johannesburg",
+      "municipalityCode": "JHB",
+      "category": "A",
+      "region": "gauteng",
+      "province": "Gauteng",
+      "adminLevel": 3,
+      "sourcePcode": "ZA7980",
+      "boundaryId": "15628383B15418766532839",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-nw403",
+      "entityId": "za-municipality-nw403",
+      "name": "City of Matlosana",
+      "sourceName": "City of Matlosana",
+      "municipalityCode": "NW403",
+      "category": "B",
+      "region": "north-west",
+      "province": "North West",
+      "adminLevel": 3,
+      "sourcePcode": "ZA6403",
+      "boundaryId": "15628383B99813197331106",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-tsh",
+      "entityId": "za-municipality-tsh",
+      "name": "City of Tshwane",
+      "sourceName": "City of Tshwane",
+      "municipalityCode": "TSH",
+      "category": "A",
+      "region": "gauteng",
+      "province": "Gauteng",
+      "adminLevel": 3,
+      "sourcePcode": "ZA7990",
+      "boundaryId": "15628383B80921072750836",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-lim345",
+      "entityId": "za-municipality-lim345",
+      "name": "Collins Chabane",
+      "sourceName": "Collins Chabane",
+      "municipalityCode": "LIM345",
+      "category": "B",
+      "region": "limpopo",
+      "province": "Limpopo",
+      "adminLevel": 3,
+      "sourcePcode": "ZA9345",
+      "boundaryId": "15628383B74534237927019",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-kzn254",
+      "entityId": "za-municipality-kzn254",
+      "name": "Dannhauser",
+      "sourceName": "Dannhauser",
+      "municipalityCode": "KZN254",
+      "category": "B",
+      "region": "kwazulu-natal",
+      "province": "KwaZulu-Natal",
+      "adminLevel": 3,
+      "sourcePcode": "ZA5254",
+      "boundaryId": "15628383B73156190774193",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-nc087",
+      "entityId": "za-municipality-nc087",
+      "name": "Dawid Kruiper",
+      "sourceName": "Dawid Kruiper",
+      "municipalityCode": "NC087",
+      "category": "B",
+      "region": "northern-cape",
+      "province": "Nothern Cape",
+      "adminLevel": 3,
+      "sourcePcode": "ZA3087",
+      "boundaryId": "15628383B86009182191517",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-fs192",
+      "entityId": "za-municipality-fs192",
+      "name": "Dihlabeng",
+      "sourceName": "Dihlabeng",
+      "municipalityCode": "FS192",
+      "category": "B",
+      "region": "free-state",
+      "province": "Free State",
+      "adminLevel": 3,
+      "sourcePcode": "ZA4192",
+      "boundaryId": "15628383B98466320732904",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-nc092",
+      "entityId": "za-municipality-nc092",
+      "name": "Dikgatlong",
+      "sourceName": "Dikgatlong",
+      "municipalityCode": "NC092",
+      "category": "B",
+      "region": "northern-cape",
+      "province": "Nothern Cape",
+      "adminLevel": 3,
+      "sourcePcode": "ZA3092",
+      "boundaryId": "15628383B10857408054288",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-mp306",
+      "entityId": "za-municipality-mp306",
+      "name": "Dipaleseng",
+      "sourceName": "Dipaleseng",
+      "municipalityCode": "MP306",
+      "category": "B",
+      "region": "mpumalanga",
+      "province": "Mpumalanga",
+      "adminLevel": 3,
+      "sourcePcode": "ZA8306",
+      "boundaryId": "15628383B57924236425168",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-nw384",
+      "entityId": "za-municipality-nw384",
+      "name": "Ditsobotla",
+      "sourceName": "Ditsobotla",
+      "municipalityCode": "NW384",
+      "category": "B",
+      "region": "north-west",
+      "province": "North West",
+      "adminLevel": 3,
+      "sourcePcode": "ZA6384",
+      "boundaryId": "15628383B50977513509488",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-ec101",
+      "entityId": "za-municipality-ec101",
+      "name": "Dr Beyers Naude",
+      "sourceName": "Dr Beyers Naude",
+      "municipalityCode": "EC101",
+      "category": "B",
+      "region": "eastern-cape",
+      "province": "Eastern Cape",
+      "adminLevel": 3,
+      "sourcePcode": "ZA2101",
+      "boundaryId": "15628383B99818150234159",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-mp316",
+      "entityId": "za-municipality-mp316",
+      "name": "Dr J.S. Moroka",
+      "sourceName": "Dr JS Moroka",
+      "municipalityCode": "MP316",
+      "category": "B",
+      "region": "mpumalanga",
+      "province": "Mpumalanga",
+      "adminLevel": 3,
+      "sourcePcode": "ZA8316",
+      "boundaryId": "15628383B79754077720638",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-kzn436",
+      "entityId": "za-municipality-kzn436",
+      "name": "Dr Nkosazana Dlamini Zuma",
+      "sourceName": "Dr Nkosazana Dlamini Zuma",
+      "municipalityCode": "KZN436",
+      "category": "B",
+      "region": "kwazulu-natal",
+      "province": "KwaZulu-Natal",
+      "adminLevel": 3,
+      "sourcePcode": "ZA5436",
+      "boundaryId": "15628383B13555669719826",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-mp304",
+      "entityId": "za-municipality-mp304",
+      "name": "Pixley Ka Seme (MP)",
+      "sourceName": "Dr Pixley Ka Isaka Seme",
+      "municipalityCode": "MP304",
+      "category": "B",
+      "region": "mpumalanga",
+      "province": "Mpumalanga",
+      "adminLevel": 3,
+      "sourcePcode": "ZA8304",
+      "boundaryId": "15628383B82081482790652",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-wc023",
+      "entityId": "za-municipality-wc023",
+      "name": "Drakenstein",
+      "sourceName": "Drakenstein",
+      "municipalityCode": "WC023",
+      "category": "B",
+      "region": "western-cape",
+      "province": "Western Cape",
+      "adminLevel": 3,
+      "sourcePcode": "ZA1023",
+      "boundaryId": "15628383B58344705808288",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-kzn261",
+      "entityId": "za-municipality-kzn261",
+      "name": "eDumbe",
+      "sourceName": "eDumbe",
+      "municipalityCode": "KZN261",
+      "category": "B",
+      "region": "kwazulu-natal",
+      "province": "KwaZulu-Natal",
+      "adminLevel": 3,
+      "sourcePcode": "ZA5261",
+      "boundaryId": "15628383B68393982164111",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-eku",
+      "entityId": "za-municipality-eku",
+      "name": "City of Ekurhuleni",
+      "sourceName": "Ekurhuleni",
+      "municipalityCode": "EKU",
+      "category": "A",
+      "region": "gauteng",
+      "province": "Gauteng",
+      "adminLevel": 3,
+      "sourcePcode": "ZA7970",
+      "boundaryId": "15628383B61881803671589",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-lim472",
+      "entityId": "za-municipality-lim472",
+      "name": "Elias Motsoaledi",
+      "sourceName": "Elias Motsoaledi",
+      "municipalityCode": "LIM472",
+      "category": "B",
+      "region": "limpopo",
+      "province": "Limpopo",
+      "adminLevel": 3,
+      "sourcePcode": "ZA9472",
+      "boundaryId": "15628383B15882687938841",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-ec141",
+      "entityId": "za-municipality-ec141",
+      "name": "Elundini",
+      "sourceName": "Elundini",
+      "municipalityCode": "EC141",
+      "category": "B",
+      "region": "eastern-cape",
+      "province": "Eastern Cape",
+      "adminLevel": 3,
+      "sourcePcode": "ZA2141",
+      "boundaryId": "15628383B24019341917361",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-kzn253",
+      "entityId": "za-municipality-kzn253",
+      "name": "Emadlangeni",
+      "sourceName": "Emadlangeni",
+      "municipalityCode": "KZN253",
+      "category": "B",
+      "region": "kwazulu-natal",
+      "province": "KwaZulu-Natal",
+      "adminLevel": 3,
+      "sourcePcode": "ZA5253",
+      "boundaryId": "15628383B65289064858217",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-mp314",
+      "entityId": "za-municipality-mp314",
+      "name": "Emakhazeni",
+      "sourceName": "Emakhazeni",
+      "municipalityCode": "MP314",
+      "category": "B",
+      "region": "mpumalanga",
+      "province": "Mpumalanga",
+      "adminLevel": 3,
+      "sourcePcode": "ZA8314",
+      "boundaryId": "15628383B70767103982228",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-ec136",
+      "entityId": "za-municipality-ec136",
+      "name": "Emalahleni (EC)",
+      "sourceName": "Emalahleni",
+      "municipalityCode": "EC136",
+      "category": "B",
+      "region": "eastern-cape",
+      "province": "Eastern Cape",
+      "adminLevel": 3,
+      "sourcePcode": "ZA2136",
+      "boundaryId": "15628383B46688478529811",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact source name and source centre contained by polygon",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-mp312",
+      "entityId": "za-municipality-mp312",
+      "name": "Emalahleni (MP)",
+      "sourceName": "Emalahleni",
+      "municipalityCode": "MP312",
+      "category": "B",
+      "region": "mpumalanga",
+      "province": "Mpumalanga",
+      "adminLevel": 3,
+      "sourcePcode": "ZA8312",
+      "boundaryId": "15628383B49434551949748",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact source name and source centre contained by polygon",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-gt421",
+      "entityId": "za-municipality-gt421",
+      "name": "Emfuleni",
+      "sourceName": "Emfuleni",
+      "municipalityCode": "GT421",
+      "category": "B",
+      "region": "gauteng",
+      "province": "Gauteng",
+      "adminLevel": 3,
+      "sourcePcode": "ZA7421",
+      "boundaryId": "15628383B33735276955904",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-nc073",
+      "entityId": "za-municipality-nc073",
+      "name": "Emthanjeni",
+      "sourceName": "Emthanjeni",
+      "municipalityCode": "NC073",
+      "category": "B",
+      "region": "northern-cape",
+      "province": "Nothern Cape",
+      "adminLevel": 3,
+      "sourcePcode": "ZA3073",
+      "boundaryId": "15628383B29698007895414",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-kzn241",
+      "entityId": "za-municipality-kzn241",
+      "name": "Endumeni",
+      "sourceName": "Endumeni",
+      "municipalityCode": "KZN241",
+      "category": "B",
+      "region": "kwazulu-natal",
+      "province": "KwaZulu-Natal",
+      "adminLevel": 3,
+      "sourcePcode": "ZA5241",
+      "boundaryId": "15628383B56796644270272",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-ec137",
+      "entityId": "za-municipality-ec137",
+      "name": "Dr. A.B. Xuma",
+      "sourceName": "Engcobo",
+      "municipalityCode": "EC137",
+      "category": "B",
+      "region": "eastern-cape",
+      "province": "Eastern Cape",
+      "adminLevel": 3,
+      "sourcePcode": "ZA2137",
+      "boundaryId": "15628383B4889923419833",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-ec139",
+      "entityId": "za-municipality-ec139",
+      "name": "Enoch Mgijima",
+      "sourceName": "Enoch Mgijima",
+      "municipalityCode": "EC139",
+      "category": "B",
+      "region": "eastern-cape",
+      "province": "Eastern Cape",
+      "adminLevel": 3,
+      "sourcePcode": "ZA2139",
+      "boundaryId": "15628383B67522024924235",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-lim471",
+      "entityId": "za-municipality-lim471",
+      "name": "Ephraim Mogale",
+      "sourceName": "Ephraim Mogale",
+      "municipalityCode": "LIM471",
+      "category": "B",
+      "region": "limpopo",
+      "province": "Limpopo",
+      "adminLevel": 3,
+      "sourcePcode": "ZA9471",
+      "boundaryId": "15628383B2775886496345",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-eth",
+      "entityId": "za-municipality-eth",
+      "name": "eThekwini",
+      "sourceName": "eThekwini",
+      "municipalityCode": "ETH",
+      "category": "A",
+      "region": "kwazulu-natal",
+      "province": "KwaZulu-Natal",
+      "adminLevel": 3,
+      "sourcePcode": "ZA5950",
+      "boundaryId": "15628383B60178842862169",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-nc452",
+      "entityId": "za-municipality-nc452",
+      "name": "Ga-Segonyana",
+      "sourceName": "Ga-Segonyana",
+      "municipalityCode": "NC452",
+      "category": "B",
+      "region": "northern-cape",
+      "province": "Nothern Cape",
+      "adminLevel": 3,
+      "sourcePcode": "ZA3452",
+      "boundaryId": "15628383B95844669523964",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-nc453",
+      "entityId": "za-municipality-nc453",
+      "name": "Gamagara",
+      "sourceName": "Gamagara",
+      "municipalityCode": "NC453",
+      "category": "B",
+      "region": "northern-cape",
+      "province": "Nothern Cape",
+      "adminLevel": 3,
+      "sourcePcode": "ZA3453",
+      "boundaryId": "15628383B81360864143836",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-wc044",
+      "entityId": "za-municipality-wc044",
+      "name": "George",
+      "sourceName": "George",
+      "municipalityCode": "WC044",
+      "category": "B",
+      "region": "western-cape",
+      "province": "Western Cape",
+      "adminLevel": 3,
+      "sourcePcode": "ZA1044",
+      "boundaryId": "15628383B23729286231059",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-mp307",
+      "entityId": "za-municipality-mp307",
+      "name": "Govan Mbeki",
+      "sourceName": "Govan Mbeki",
+      "municipalityCode": "MP307",
+      "category": "B",
+      "region": "mpumalanga",
+      "province": "Mpumalanga",
+      "adminLevel": 3,
+      "sourcePcode": "ZA8307",
+      "boundaryId": "15628383B79900485911991",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-ec123",
+      "entityId": "za-municipality-ec123",
+      "name": "Great Kei",
+      "sourceName": "Great Kei",
+      "municipalityCode": "EC123",
+      "category": "B",
+      "region": "eastern-cape",
+      "province": "Eastern Cape",
+      "adminLevel": 3,
+      "sourcePcode": "ZA2123",
+      "boundaryId": "15628383B7332879576770",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-lim331",
+      "entityId": "za-municipality-lim331",
+      "name": "Greater Giyani",
+      "sourceName": "Greater Giyani",
+      "municipalityCode": "LIM331",
+      "category": "B",
+      "region": "limpopo",
+      "province": "Limpopo",
+      "adminLevel": 3,
+      "sourcePcode": "ZA9331",
+      "boundaryId": "15628383B45801429507111",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-kzn433",
+      "entityId": "za-municipality-kzn433",
+      "name": "Greater Kokstad",
+      "sourceName": "Greater Kokstad",
+      "municipalityCode": "KZN433",
+      "category": "B",
+      "region": "kwazulu-natal",
+      "province": "KwaZulu-Natal",
+      "adminLevel": 3,
+      "sourcePcode": "ZA5433",
+      "boundaryId": "15628383B15970578895860",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-lim332",
+      "entityId": "za-municipality-lim332",
+      "name": "Greater Letaba",
+      "sourceName": "Greater Letaba",
+      "municipalityCode": "LIM332",
+      "category": "B",
+      "region": "limpopo",
+      "province": "Limpopo",
+      "adminLevel": 3,
+      "sourcePcode": "ZA9332",
+      "boundaryId": "15628383B92780608982812",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-nw394",
+      "entityId": "za-municipality-nw394",
+      "name": "Greater Taung",
+      "sourceName": "Greater Taung",
+      "municipalityCode": "NW394",
+      "category": "B",
+      "region": "north-west",
+      "province": "North West",
+      "adminLevel": 3,
+      "sourcePcode": "ZA6394",
+      "boundaryId": "15628383B81730914179068",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-lim476",
+      "entityId": "za-municipality-lim476",
+      "name": "Tubatse Fetakgomo",
+      "sourceName": "Greater Tubatse/Fetakgomo",
+      "municipalityCode": "LIM476",
+      "category": "B",
+      "region": "limpopo",
+      "province": "Limpopo",
+      "adminLevel": 3,
+      "sourcePcode": "ZA9476",
+      "boundaryId": "15628383B17638662829865",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-lim333",
+      "entityId": "za-municipality-lim333",
+      "name": "Greater Tzaneen",
+      "sourceName": "Greater Tzaneen",
+      "municipalityCode": "LIM333",
+      "category": "B",
+      "region": "limpopo",
+      "province": "Limpopo",
+      "adminLevel": 3,
+      "sourcePcode": "ZA9333",
+      "boundaryId": "15628383B43736937905361",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-nc065",
+      "entityId": "za-municipality-nc065",
+      "name": "Hantam",
+      "sourceName": "Hantam",
+      "municipalityCode": "NC065",
+      "category": "B",
+      "region": "northern-cape",
+      "province": "Nothern Cape",
+      "adminLevel": 3,
+      "sourcePcode": "ZA3065",
+      "boundaryId": "15628383B84137500673583",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-wc042",
+      "entityId": "za-municipality-wc042",
+      "name": "Hessequa",
+      "sourceName": "Hessequa",
+      "municipalityCode": "WC042",
+      "category": "B",
+      "region": "western-cape",
+      "province": "Western Cape",
+      "adminLevel": 3,
+      "sourcePcode": "ZA1042",
+      "boundaryId": "15628383B36762535834519",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-kzn224",
+      "entityId": "za-municipality-kzn224",
+      "name": "Impendle",
+      "sourceName": "Impendle",
+      "municipalityCode": "KZN224",
+      "category": "B",
+      "region": "kwazulu-natal",
+      "province": "KwaZulu-Natal",
+      "adminLevel": 3,
+      "sourcePcode": "ZA5224",
+      "boundaryId": "15628383B86066615117516",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-kzn237",
+      "entityId": "za-municipality-kzn237",
+      "name": "Inkosi Langalibalele",
+      "sourceName": "Inkosi Langalibalele",
+      "municipalityCode": "KZN237",
+      "category": "B",
+      "region": "kwazulu-natal",
+      "province": "KwaZulu-Natal",
+      "adminLevel": 3,
+      "sourcePcode": "ZA5237",
+      "boundaryId": "15628383B48291536006426",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-ec135",
+      "entityId": "za-municipality-ec135",
+      "name": "Vuyisile Mini",
+      "sourceName": "Intsika Yethu",
+      "municipalityCode": "EC135",
+      "category": "B",
+      "region": "eastern-cape",
+      "province": "Eastern Cape",
+      "adminLevel": 3,
+      "sourcePcode": "ZA2135",
+      "boundaryId": "15628383B88034979550306",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-ec131",
+      "entityId": "za-municipality-ec131",
+      "name": "Inxuba Yethemba",
+      "sourceName": "Inxuba Yethemba",
+      "municipalityCode": "EC131",
+      "category": "B",
+      "region": "eastern-cape",
+      "province": "Eastern Cape",
+      "adminLevel": 3,
+      "sourcePcode": "ZA2131",
+      "boundaryId": "15628383B92131487833225",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-nc451",
+      "entityId": "za-municipality-nc451",
+      "name": "Joe Morolong",
+      "sourceName": "Joe Morolong",
+      "municipalityCode": "NC451",
+      "category": "B",
+      "region": "northern-cape",
+      "province": "Nothern Cape",
+      "adminLevel": 3,
+      "sourcePcode": "ZA3451",
+      "boundaryId": "15628383B87581242557684",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-kzn272",
+      "entityId": "za-municipality-kzn272",
+      "name": "Jozini",
+      "sourceName": "Jozini",
+      "municipalityCode": "KZN272",
+      "category": "B",
+      "region": "kwazulu-natal",
+      "province": "KwaZulu-Natal",
+      "adminLevel": 3,
+      "sourcePcode": "ZA5272",
+      "boundaryId": "15628383B5837125139106",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-nw397",
+      "entityId": "za-municipality-nw397",
+      "name": "Kagisano-Molopo",
+      "sourceName": "Kagisano/Molopo",
+      "municipalityCode": "NW397",
+      "category": "B",
+      "region": "north-west",
+      "province": "North West",
+      "adminLevel": 3,
+      "sourcePcode": "ZA6397",
+      "boundaryId": "15628383B79703818366198",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-nc082",
+      "entityId": "za-municipality-nc082",
+      "name": "!Kai! Garib",
+      "sourceName": "Kai Garib",
+      "municipalityCode": "NC082",
+      "category": "B",
+      "region": "northern-cape",
+      "province": "Nothern Cape",
+      "adminLevel": 3,
+      "sourcePcode": "ZA3082",
+      "boundaryId": "15628383B93031826303928",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-nc064",
+      "entityId": "za-municipality-nc064",
+      "name": "Kamiesberg",
+      "sourceName": "Kamiesberg",
+      "municipalityCode": "NC064",
+      "category": "B",
+      "region": "northern-cape",
+      "province": "Nothern Cape",
+      "adminLevel": 3,
+      "sourcePcode": "ZA3064",
+      "boundaryId": "15628383B13551745181443",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-wc041",
+      "entityId": "za-municipality-wc041",
+      "name": "Kannaland",
+      "sourceName": "Kannaland",
+      "municipalityCode": "WC041",
+      "category": "B",
+      "region": "western-cape",
+      "province": "Western Cape",
+      "adminLevel": 3,
+      "sourcePcode": "ZA1041",
+      "boundaryId": "15628383B76119886441371",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-nc074",
+      "entityId": "za-municipality-nc074",
+      "name": "Kareeberg",
+      "sourceName": "Kareeberg",
+      "municipalityCode": "NC074",
+      "category": "B",
+      "region": "northern-cape",
+      "province": "Nothern Cape",
+      "adminLevel": 3,
+      "sourcePcode": "ZA3074",
+      "boundaryId": "15628383B44998866357068",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-nc066",
+      "entityId": "za-municipality-nc066",
+      "name": "Karoo Hoogland",
+      "sourceName": "Karoo Hoogland",
+      "municipalityCode": "NC066",
+      "category": "B",
+      "region": "northern-cape",
+      "province": "Nothern Cape",
+      "adminLevel": 3,
+      "sourcePcode": "ZA3066",
+      "boundaryId": "15628383B57251515863423",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-nc086",
+      "entityId": "za-municipality-nc086",
+      "name": "Kgatelopele",
+      "sourceName": "Kgatelopele",
+      "municipalityCode": "NC086",
+      "category": "B",
+      "region": "northern-cape",
+      "province": "Nothern Cape",
+      "adminLevel": 3,
+      "sourcePcode": "ZA3086",
+      "boundaryId": "15628383B20937674647485",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-nw374",
+      "entityId": "za-municipality-nw374",
+      "name": "Kgetlengrivier",
+      "sourceName": "Kgetlengrivier",
+      "municipalityCode": "NW374",
+      "category": "B",
+      "region": "north-west",
+      "province": "North West",
+      "adminLevel": 3,
+      "sourcePcode": "ZA6374",
+      "boundaryId": "15628383B17721277899206",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-nc067",
+      "entityId": "za-municipality-nc067",
+      "name": "Khai-Ma",
+      "sourceName": "Khâi-Ma",
+      "municipalityCode": "NC067",
+      "category": "B",
+      "region": "northern-cape",
+      "province": "Nothern Cape",
+      "adminLevel": 3,
+      "sourcePcode": "ZA3067",
+      "boundaryId": "15628383B42598503726448",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-nc084",
+      "entityId": "za-municipality-nc084",
+      "name": "!Kheis",
+      "sourceName": "Kheis",
+      "municipalityCode": "NC084",
+      "category": "B",
+      "region": "northern-cape",
+      "province": "Nothern Cape",
+      "adminLevel": 3,
+      "sourcePcode": "ZA3084",
+      "boundaryId": "15628383B1879233030807",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-ec157",
+      "entityId": "za-municipality-ec157",
+      "name": "King Sabata Dalindyebo",
+      "sourceName": "King Sabata Dalindyebo",
+      "municipalityCode": "EC157",
+      "category": "B",
+      "region": "eastern-cape",
+      "province": "Eastern Cape",
+      "adminLevel": 3,
+      "sourcePcode": "ZA2157",
+      "boundaryId": "15628383B23629152206602",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-wc048",
+      "entityId": "za-municipality-wc048",
+      "name": "Knysna",
+      "sourceName": "Knysna",
+      "municipalityCode": "WC048",
+      "category": "B",
+      "region": "western-cape",
+      "province": "Western Cape",
+      "adminLevel": 3,
+      "sourcePcode": "ZA1048",
+      "boundaryId": "15628383B74708406235770",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-fs162",
+      "entityId": "za-municipality-fs162",
+      "name": "Kopanong",
+      "sourceName": "Kopanong",
+      "municipalityCode": "FS162",
+      "category": "B",
+      "region": "free-state",
+      "province": "Free State",
+      "adminLevel": 3,
+      "sourcePcode": "ZA4162",
+      "boundaryId": "15628383B95874570647832",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-ec109",
+      "entityId": "za-municipality-ec109",
+      "name": "Kou-Kamma",
+      "sourceName": "Kou-Kamma",
+      "municipalityCode": "EC109",
+      "category": "B",
+      "region": "eastern-cape",
+      "province": "Eastern Cape",
+      "adminLevel": 3,
+      "sourcePcode": "ZA2109",
+      "boundaryId": "15628383B33674951697181",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-ec108",
+      "entityId": "za-municipality-ec108",
+      "name": "Kouga",
+      "sourceName": "Kouga",
+      "municipalityCode": "EC108",
+      "category": "B",
+      "region": "eastern-cape",
+      "province": "Eastern Cape",
+      "adminLevel": 3,
+      "sourcePcode": "ZA2108",
+      "boundaryId": "15628383B36159893459203",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-kzn292",
+      "entityId": "za-municipality-kzn292",
+      "name": "KwaDukuza",
+      "sourceName": "KwaDukuza",
+      "municipalityCode": "KZN292",
+      "category": "B",
+      "region": "kwazulu-natal",
+      "province": "KwaZulu-Natal",
+      "adminLevel": 3,
+      "sourcePcode": "ZA5292",
+      "boundaryId": "15628383B32392853457814",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-wc051",
+      "entityId": "za-municipality-wc051",
+      "name": "Laingsburg",
+      "sourceName": "Laingsburg",
+      "municipalityCode": "WC051",
+      "category": "B",
+      "region": "western-cape",
+      "province": "Western Cape",
+      "adminLevel": 3,
+      "sourcePcode": "ZA1051",
+      "boundaryId": "15628383B34503575796370",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-wc026",
+      "entityId": "za-municipality-wc026",
+      "name": "Langeberg",
+      "sourceName": "Langeberg",
+      "municipalityCode": "WC026",
+      "category": "B",
+      "region": "western-cape",
+      "province": "Western Cape",
+      "adminLevel": 3,
+      "sourcePcode": "ZA1026",
+      "boundaryId": "15628383B41752648432939",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-mp305",
+      "entityId": "za-municipality-mp305",
+      "name": "Lekwa",
+      "sourceName": "Lekwa",
+      "municipalityCode": "MP305",
+      "category": "B",
+      "region": "mpumalanga",
+      "province": "Mpumalanga",
+      "adminLevel": 3,
+      "sourcePcode": "ZA8305",
+      "boundaryId": "15628383B77142145531518",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-nw396",
+      "entityId": "za-municipality-nw396",
+      "name": "Lekwa-Teemane",
+      "sourceName": "Lekwa-Teemane",
+      "municipalityCode": "NW396",
+      "category": "B",
+      "region": "north-west",
+      "province": "North West",
+      "adminLevel": 3,
+      "sourcePcode": "ZA6396",
+      "boundaryId": "15628383B57700102928675",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-lim355",
+      "entityId": "za-municipality-lim355",
+      "name": "Lepelle-Nkumpi",
+      "sourceName": "Lepele-Nkumpi",
+      "municipalityCode": "LIM355",
+      "category": "B",
+      "region": "limpopo",
+      "province": "Limpopo",
+      "adminLevel": 3,
+      "sourcePcode": "ZA9355",
+      "boundaryId": "15628383B78103499968670",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-lim362",
+      "entityId": "za-municipality-lim362",
+      "name": "Lephalale",
+      "sourceName": "Lephalale",
+      "municipalityCode": "LIM362",
+      "category": "B",
+      "region": "limpopo",
+      "province": "Limpopo",
+      "adminLevel": 3,
+      "sourcePcode": "ZA9362",
+      "boundaryId": "15628383B88632116880655",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-gt423",
+      "entityId": "za-municipality-gt423",
+      "name": "Lesedi",
+      "sourceName": "Lesedi",
+      "municipalityCode": "GT423",
+      "category": "B",
+      "region": "gauteng",
+      "province": "Gauteng",
+      "adminLevel": 3,
+      "sourcePcode": "ZA7423",
+      "boundaryId": "15628383B73981426352220",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-fs161",
+      "entityId": "za-municipality-fs161",
+      "name": "Letsemeng",
+      "sourceName": "Letsemeng",
+      "municipalityCode": "FS161",
+      "category": "B",
+      "region": "free-state",
+      "province": "Free State",
+      "adminLevel": 3,
+      "sourcePcode": "ZA4161",
+      "boundaryId": "15628383B41355720683916",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-nw372",
+      "entityId": "za-municipality-nw372",
+      "name": "Madibeng",
+      "sourceName": "Local Municipality of Madibeng",
+      "municipalityCode": "NW372",
+      "category": "B",
+      "region": "north-west",
+      "province": "North West",
+      "adminLevel": 3,
+      "sourcePcode": "ZA6372",
+      "boundaryId": "15628383B18572395899182",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-nw383",
+      "entityId": "za-municipality-nw383",
+      "name": "Mafikeng",
+      "sourceName": "Mafikeng",
+      "municipalityCode": "NW383",
+      "category": "B",
+      "region": "north-west",
+      "province": "North West",
+      "adminLevel": 3,
+      "sourcePcode": "ZA6383",
+      "boundaryId": "15628383B50612573820544",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-fs205",
+      "entityId": "za-municipality-fs205",
+      "name": "Mafube",
+      "sourceName": "Mafube",
+      "municipalityCode": "FS205",
+      "category": "B",
+      "region": "free-state",
+      "province": "Free State",
+      "adminLevel": 3,
+      "sourcePcode": "ZA4205",
+      "boundaryId": "15628383B54089772316442",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-nc093",
+      "entityId": "za-municipality-nc093",
+      "name": "Magareng",
+      "sourceName": "Magareng",
+      "municipalityCode": "NC093",
+      "category": "B",
+      "region": "northern-cape",
+      "province": "Nothern Cape",
+      "adminLevel": 3,
+      "sourcePcode": "ZA3093",
+      "boundaryId": "15628383B14963180798708",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-ec104",
+      "entityId": "za-municipality-ec104",
+      "name": "Makana",
+      "sourceName": "Makana",
+      "municipalityCode": "EC104",
+      "category": "B",
+      "region": "eastern-cape",
+      "province": "Eastern Cape",
+      "adminLevel": 3,
+      "sourcePcode": "ZA2104",
+      "boundaryId": "15628383B78908098986015",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-lim344",
+      "entityId": "za-municipality-lim344",
+      "name": "Makhado",
+      "sourceName": "Makhado",
+      "municipalityCode": "LIM344",
+      "category": "B",
+      "region": "limpopo",
+      "province": "Limpopo",
+      "adminLevel": 3,
+      "sourcePcode": "ZA9344",
+      "boundaryId": "15628383B84884961472226",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-lim473",
+      "entityId": "za-municipality-lim473",
+      "name": "Makhuduthamaga",
+      "sourceName": "Makhuduthamaga",
+      "municipalityCode": "LIM473",
+      "category": "B",
+      "region": "limpopo",
+      "province": "Limpopo",
+      "adminLevel": 3,
+      "sourcePcode": "ZA9473",
+      "boundaryId": "15628383B7678060115213",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-fs194",
+      "entityId": "za-municipality-fs194",
+      "name": "Maluti-a-Phofung",
+      "sourceName": "Maluti a Phofung",
+      "municipalityCode": "FS194",
+      "category": "B",
+      "region": "free-state",
+      "province": "Free State",
+      "adminLevel": 3,
+      "sourcePcode": "ZA4194",
+      "boundaryId": "15628383B3612135390382",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-nw393",
+      "entityId": "za-municipality-nw393",
+      "name": "Mamusa",
+      "sourceName": "Mamusa",
+      "municipalityCode": "NW393",
+      "category": "B",
+      "region": "north-west",
+      "province": "North West",
+      "adminLevel": 3,
+      "sourcePcode": "ZA6393",
+      "boundaryId": "15628383B32940385818298",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-kzn291",
+      "entityId": "za-municipality-kzn291",
+      "name": "Mandeni",
+      "sourceName": "Mandeni",
+      "municipalityCode": "KZN291",
+      "category": "B",
+      "region": "kwazulu-natal",
+      "province": "KwaZulu-Natal",
+      "adminLevel": 3,
+      "sourcePcode": "ZA5291",
+      "boundaryId": "15628383B23770618200301",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-man",
+      "entityId": "za-municipality-man",
+      "name": "Mangaung",
+      "sourceName": "Mangaung",
+      "municipalityCode": "MAN",
+      "category": "A",
+      "region": "free-state",
+      "province": "Free State",
+      "adminLevel": 3,
+      "sourcePcode": "ZA4940",
+      "boundaryId": "15628383B22599792684232",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-fs196",
+      "entityId": "za-municipality-fs196",
+      "name": "Mantsopa",
+      "sourceName": "Mantsopa",
+      "municipalityCode": "FS196",
+      "category": "B",
+      "region": "free-state",
+      "province": "Free State",
+      "adminLevel": 3,
+      "sourcePcode": "ZA4196",
+      "boundaryId": "15628383B98897135095916",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-kzn294",
+      "entityId": "za-municipality-kzn294",
+      "name": "Maphumulo",
+      "sourceName": "Maphumulo",
+      "municipalityCode": "KZN294",
+      "category": "B",
+      "region": "kwazulu-natal",
+      "province": "KwaZulu-Natal",
+      "adminLevel": 3,
+      "sourcePcode": "ZA5294",
+      "boundaryId": "15628383B61836669217179",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-nw404",
+      "entityId": "za-municipality-nw404",
+      "name": "Maquassi Hills",
+      "sourceName": "Maquassi Hills",
+      "municipalityCode": "NW404",
+      "category": "B",
+      "region": "north-west",
+      "province": "North West",
+      "adminLevel": 3,
+      "sourcePcode": "ZA6404",
+      "boundaryId": "15628383B62442804941170",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-lim335",
+      "entityId": "za-municipality-lim335",
+      "name": "Maruleng",
+      "sourceName": "Maruleng",
+      "municipalityCode": "LIM335",
+      "category": "B",
+      "region": "limpopo",
+      "province": "Limpopo",
+      "adminLevel": 3,
+      "sourcePcode": "ZA9335",
+      "boundaryId": "15628383B54951115928747",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-fs181",
+      "entityId": "za-municipality-fs181",
+      "name": "Masilonyana",
+      "sourceName": "Masilonyana",
+      "municipalityCode": "FS181",
+      "category": "B",
+      "region": "free-state",
+      "province": "Free State",
+      "adminLevel": 3,
+      "sourcePcode": "ZA4181",
+      "boundaryId": "15628383B18474910363829",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-ec441",
+      "entityId": "za-municipality-ec441",
+      "name": "Matatiele",
+      "sourceName": "Matatiele",
+      "municipalityCode": "EC441",
+      "category": "B",
+      "region": "eastern-cape",
+      "province": "Eastern Cape",
+      "adminLevel": 3,
+      "sourcePcode": "ZA2441",
+      "boundaryId": "15628383B15412398369676",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-fs184",
+      "entityId": "za-municipality-fs184",
+      "name": "Matjhabeng",
+      "sourceName": "Matjhabeng",
+      "municipalityCode": "FS184",
+      "category": "B",
+      "region": "free-state",
+      "province": "Free State",
+      "adminLevel": 3,
+      "sourcePcode": "ZA4184",
+      "boundaryId": "15628383B81566829241164",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-wc011",
+      "entityId": "za-municipality-wc011",
+      "name": "Matzikama",
+      "sourceName": "Matzikama",
+      "municipalityCode": "WC011",
+      "category": "B",
+      "region": "western-cape",
+      "province": "Western Cape",
+      "adminLevel": 3,
+      "sourcePcode": "ZA1011",
+      "boundaryId": "15628383B66088030322014",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-ec121",
+      "entityId": "za-municipality-ec121",
+      "name": "Mbhashe",
+      "sourceName": "Mbhashe",
+      "municipalityCode": "EC121",
+      "category": "B",
+      "region": "eastern-cape",
+      "province": "Eastern Cape",
+      "adminLevel": 3,
+      "sourcePcode": "ZA2121",
+      "boundaryId": "15628383B43349124035682",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-ec443",
+      "entityId": "za-municipality-ec443",
+      "name": "Winnie Madikizela-Mandela",
+      "sourceName": "Mbizana",
+      "municipalityCode": "EC443",
+      "category": "B",
+      "region": "eastern-cape",
+      "province": "Eastern Cape",
+      "adminLevel": 3,
+      "sourcePcode": "ZA2443",
+      "boundaryId": "15628383B5927961612819",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-mp326",
+      "entityId": "za-municipality-mp326",
+      "name": "City of Mbombela",
+      "sourceName": "Mbombela",
+      "municipalityCode": "MP326",
+      "category": "B",
+      "region": "mpumalanga",
+      "province": "Mpumalanga",
+      "adminLevel": 3,
+      "sourcePcode": "ZA8326",
+      "boundaryId": "15628383B30127802260453",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-gt484",
+      "entityId": "za-municipality-gt484",
+      "name": "Merafong City",
+      "sourceName": "Merafong City",
+      "municipalityCode": "GT484",
+      "category": "B",
+      "region": "gauteng",
+      "province": "Gauteng",
+      "adminLevel": 3,
+      "sourcePcode": "ZA7484",
+      "boundaryId": "15628383B24995614588179",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-fs204",
+      "entityId": "za-municipality-fs204",
+      "name": "Metsimaholo",
+      "sourceName": "Metsimaholo",
+      "municipalityCode": "FS204",
+      "category": "B",
+      "region": "free-state",
+      "province": "Free State",
+      "adminLevel": 3,
+      "sourcePcode": "ZA4204",
+      "boundaryId": "15628383B88999037487897",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-kzn281",
+      "entityId": "za-municipality-kzn281",
+      "name": "Mfolozi",
+      "sourceName": "Mfolozi",
+      "municipalityCode": "KZN281",
+      "category": "B",
+      "region": "kwazulu-natal",
+      "province": "KwaZulu-Natal",
+      "adminLevel": 3,
+      "sourcePcode": "ZA5281",
+      "boundaryId": "15628383B16733887405757",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-ec156",
+      "entityId": "za-municipality-ec156",
+      "name": "Kumkani Mhlontlo",
+      "sourceName": "Mhlontlo",
+      "municipalityCode": "EC156",
+      "category": "B",
+      "region": "eastern-cape",
+      "province": "Eastern Cape",
+      "adminLevel": 3,
+      "sourcePcode": "ZA2156",
+      "boundaryId": "15628383B11467516641790",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-gt422",
+      "entityId": "za-municipality-gt422",
+      "name": "Midvaal",
+      "sourceName": "Midvaal",
+      "municipalityCode": "GT422",
+      "category": "B",
+      "region": "gauteng",
+      "province": "Gauteng",
+      "adminLevel": 3,
+      "sourcePcode": "ZA7422",
+      "boundaryId": "15628383B4021169730913",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-kzn226",
+      "entityId": "za-municipality-kzn226",
+      "name": "Mkhambathini",
+      "sourceName": "Mkhambathini",
+      "municipalityCode": "KZN226",
+      "category": "B",
+      "region": "kwazulu-natal",
+      "province": "KwaZulu-Natal",
+      "adminLevel": 3,
+      "sourcePcode": "ZA5226",
+      "boundaryId": "15628383B81102328331389",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-mp303",
+      "entityId": "za-municipality-mp303",
+      "name": "Mkhondo",
+      "sourceName": "Mkhondo",
+      "municipalityCode": "MP303",
+      "category": "B",
+      "region": "mpumalanga",
+      "province": "Mpumalanga",
+      "adminLevel": 3,
+      "sourcePcode": "ZA8303",
+      "boundaryId": "15628383B23048095503212",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-ec122",
+      "entityId": "za-municipality-ec122",
+      "name": "Mnquma",
+      "sourceName": "Mnquma",
+      "municipalityCode": "EC122",
+      "category": "B",
+      "region": "eastern-cape",
+      "province": "Eastern Cape",
+      "adminLevel": 3,
+      "sourcePcode": "ZA2122",
+      "boundaryId": "15628383B87612584942124",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-lim368",
+      "entityId": "za-municipality-lim368",
+      "name": "Modimolle-Mookgopong",
+      "sourceName": "Modimolle/Mookgophong",
+      "municipalityCode": "LIM368",
+      "category": "B",
+      "region": "limpopo",
+      "province": "Limpopo",
+      "adminLevel": 3,
+      "sourcePcode": "ZA9368",
+      "boundaryId": "15628383B9479695775145",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-lim367",
+      "entityId": "za-municipality-lim367",
+      "name": "Mogalakwena",
+      "sourceName": "Mogalakwena",
+      "municipalityCode": "LIM367",
+      "category": "B",
+      "region": "limpopo",
+      "province": "Limpopo",
+      "adminLevel": 3,
+      "sourcePcode": "ZA9367",
+      "boundaryId": "15628383B98666839265379",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-gt481",
+      "entityId": "za-municipality-gt481",
+      "name": "Mogale City",
+      "sourceName": "Mogale City",
+      "municipalityCode": "GT481",
+      "category": "B",
+      "region": "gauteng",
+      "province": "Gauteng",
+      "adminLevel": 3,
+      "sourcePcode": "ZA7481",
+      "boundaryId": "15628383B13881296162767",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-fs163",
+      "entityId": "za-municipality-fs163",
+      "name": "Mohokare",
+      "sourceName": "Mohokare",
+      "municipalityCode": "FS163",
+      "category": "B",
+      "region": "free-state",
+      "province": "Free State",
+      "adminLevel": 3,
+      "sourcePcode": "ZA4163",
+      "boundaryId": "15628383B49239152180339",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-lim353",
+      "entityId": "za-municipality-lim353",
+      "name": "Molemole",
+      "sourceName": "Molemole",
+      "municipalityCode": "LIM353",
+      "category": "B",
+      "region": "limpopo",
+      "province": "Limpopo",
+      "adminLevel": 3,
+      "sourcePcode": "ZA9353",
+      "boundaryId": "15628383B94123430351076",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-fs201",
+      "entityId": "za-municipality-fs201",
+      "name": "Moqhaka",
+      "sourceName": "Moqhaka",
+      "municipalityCode": "FS201",
+      "category": "B",
+      "region": "free-state",
+      "province": "Free State",
+      "adminLevel": 3,
+      "sourcePcode": "ZA4201",
+      "boundaryId": "15628383B54507106575148",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-nw371",
+      "entityId": "za-municipality-nw371",
+      "name": "Moretele",
+      "sourceName": "Moretele",
+      "municipalityCode": "NW371",
+      "category": "B",
+      "region": "north-west",
+      "province": "North West",
+      "adminLevel": 3,
+      "sourcePcode": "ZA6371",
+      "boundaryId": "15628383B60744679242137",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-nw375",
+      "entityId": "za-municipality-nw375",
+      "name": "Moses Kotane",
+      "sourceName": "Moses Kotane",
+      "municipalityCode": "NW375",
+      "category": "B",
+      "region": "north-west",
+      "province": "North West",
+      "adminLevel": 3,
+      "sourcePcode": "ZA6375",
+      "boundaryId": "15628383B63481411965292",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-wc043",
+      "entityId": "za-municipality-wc043",
+      "name": "Mossel Bay",
+      "sourceName": "Mossel Bay",
+      "municipalityCode": "WC043",
+      "category": "B",
+      "region": "western-cape",
+      "province": "Western Cape",
+      "adminLevel": 3,
+      "sourcePcode": "ZA1043",
+      "boundaryId": "15628383B56565941834020",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-kzn223",
+      "entityId": "za-municipality-kzn223",
+      "name": "Mpofana",
+      "sourceName": "Mpofana",
+      "municipalityCode": "KZN223",
+      "category": "B",
+      "region": "kwazulu-natal",
+      "province": "KwaZulu-Natal",
+      "adminLevel": 3,
+      "sourcePcode": "ZA5223",
+      "boundaryId": "15628383B6898714257611",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-kzn244",
+      "entityId": "za-municipality-kzn244",
+      "name": "Msinga",
+      "sourceName": "Msinga",
+      "municipalityCode": "KZN244",
+      "category": "B",
+      "region": "kwazulu-natal",
+      "province": "KwaZulu-Natal",
+      "adminLevel": 3,
+      "sourcePcode": "ZA5244",
+      "boundaryId": "15628383B45262568422847",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-mp302",
+      "entityId": "za-municipality-mp302",
+      "name": "Msukaligwa",
+      "sourceName": "Msukaligwa",
+      "municipalityCode": "MP302",
+      "category": "B",
+      "region": "mpumalanga",
+      "province": "Mpumalanga",
+      "adminLevel": 3,
+      "sourcePcode": "ZA8302",
+      "boundaryId": "15628383B20102527858320",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-kzn285",
+      "entityId": "za-municipality-kzn285",
+      "name": "Mthonjaneni",
+      "sourceName": "Mthonjaneni",
+      "municipalityCode": "KZN285",
+      "category": "B",
+      "region": "kwazulu-natal",
+      "province": "KwaZulu-Natal",
+      "adminLevel": 3,
+      "sourcePcode": "ZA5285",
+      "boundaryId": "15628383B48775744068307",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-kzn275",
+      "entityId": "za-municipality-kzn275",
+      "name": "Mtubatuba",
+      "sourceName": "Mtubatuba",
+      "municipalityCode": "KZN275",
+      "category": "B",
+      "region": "kwazulu-natal",
+      "province": "KwaZulu-Natal",
+      "adminLevel": 3,
+      "sourcePcode": "ZA5275",
+      "boundaryId": "15628383B69683886729369",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-lim341",
+      "entityId": "za-municipality-lim341",
+      "name": "Musina",
+      "sourceName": "Musina",
+      "municipalityCode": "LIM341",
+      "category": "B",
+      "region": "limpopo",
+      "province": "Limpopo",
+      "adminLevel": 3,
+      "sourcePcode": "ZA9341",
+      "boundaryId": "15628383B53706266463889",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-fs185",
+      "entityId": "za-municipality-fs185",
+      "name": "Nala",
+      "sourceName": "Nala",
+      "municipalityCode": "FS185",
+      "category": "B",
+      "region": "free-state",
+      "province": "Free State",
+      "adminLevel": 3,
+      "sourcePcode": "ZA4185",
+      "boundaryId": "15628383B80610561870669",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-nw392",
+      "entityId": "za-municipality-nw392",
+      "name": "Naledi (NW)",
+      "sourceName": "Naledi",
+      "municipalityCode": "NW392",
+      "category": "B",
+      "region": "north-west",
+      "province": "North West",
+      "adminLevel": 3,
+      "sourcePcode": "ZA6392",
+      "boundaryId": "15628383B66727705229747",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-nc062",
+      "entityId": "za-municipality-nc062",
+      "name": "Nama Khoi",
+      "sourceName": "Nama Khoi",
+      "municipalityCode": "NC062",
+      "category": "B",
+      "region": "northern-cape",
+      "province": "Nothern Cape",
+      "adminLevel": 3,
+      "sourcePcode": "ZA3062",
+      "boundaryId": "15628383B9095746706118",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-ec105",
+      "entityId": "za-municipality-ec105",
+      "name": "Ndlambe",
+      "sourceName": "Ndlambe",
+      "municipalityCode": "EC105",
+      "category": "B",
+      "region": "eastern-cape",
+      "province": "Eastern Cape",
+      "adminLevel": 3,
+      "sourcePcode": "ZA2105",
+      "boundaryId": "15628383B35584475836677",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-kzn293",
+      "entityId": "za-municipality-kzn293",
+      "name": "Ndwedwe",
+      "sourceName": "Ndwedwe",
+      "municipalityCode": "KZN293",
+      "category": "B",
+      "region": "kwazulu-natal",
+      "province": "KwaZulu-Natal",
+      "adminLevel": 3,
+      "sourcePcode": "ZA5293",
+      "boundaryId": "15628383B18669934425704",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-nma",
+      "entityId": "za-municipality-nma",
+      "name": "Nelson Mandela Bay",
+      "sourceName": "Nelson Mandela Bay",
+      "municipalityCode": "NMA",
+      "category": "A",
+      "region": "eastern-cape",
+      "province": "Eastern Cape",
+      "adminLevel": 3,
+      "sourcePcode": "ZA2930",
+      "boundaryId": "15628383B28857154592205",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-kzn252",
+      "entityId": "za-municipality-kzn252",
+      "name": "Newcastle",
+      "sourceName": "Newcastle",
+      "municipalityCode": "KZN252",
+      "category": "B",
+      "region": "kwazulu-natal",
+      "province": "KwaZulu-Natal",
+      "adminLevel": 3,
+      "sourcePcode": "ZA5252",
+      "boundaryId": "15628383B99550328665914",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-ec126",
+      "entityId": "za-municipality-ec126",
+      "name": "Ngqushwa",
+      "sourceName": "Ngqushwa",
+      "municipalityCode": "EC126",
+      "category": "B",
+      "region": "eastern-cape",
+      "province": "Eastern Cape",
+      "adminLevel": 3,
+      "sourcePcode": "ZA2126",
+      "boundaryId": "15628383B43101438913708",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-ec153",
+      "entityId": "za-municipality-ec153",
+      "name": "Ngquza Hills",
+      "sourceName": "Ngquza Hill",
+      "municipalityCode": "EC153",
+      "category": "B",
+      "region": "eastern-cape",
+      "province": "Eastern Cape",
+      "adminLevel": 3,
+      "sourcePcode": "ZA2153",
+      "boundaryId": "15628383B21359415323699",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-fs203",
+      "entityId": "za-municipality-fs203",
+      "name": "Ngwathe",
+      "sourceName": "Ngwathe",
+      "municipalityCode": "FS203",
+      "category": "B",
+      "region": "free-state",
+      "province": "Free State",
+      "adminLevel": 3,
+      "sourcePcode": "ZA4203",
+      "boundaryId": "15628383B11748786271617",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-kzn286",
+      "entityId": "za-municipality-kzn286",
+      "name": "Nkandla",
+      "sourceName": "Nkandla",
+      "municipalityCode": "KZN286",
+      "category": "B",
+      "region": "kwazulu-natal",
+      "province": "KwaZulu-Natal",
+      "adminLevel": 3,
+      "sourcePcode": "ZA5286",
+      "boundaryId": "15628383B97834380912632",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-fs193",
+      "entityId": "za-municipality-fs193",
+      "name": "Nketoana",
+      "sourceName": "Nketoana",
+      "municipalityCode": "FS193",
+      "category": "B",
+      "region": "free-state",
+      "province": "Free State",
+      "adminLevel": 3,
+      "sourcePcode": "ZA4193",
+      "boundaryId": "15628383B16370705883263",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-mp324",
+      "entityId": "za-municipality-mp324",
+      "name": "Nkomazi",
+      "sourceName": "Nkomazi",
+      "municipalityCode": "MP324",
+      "category": "B",
+      "region": "mpumalanga",
+      "province": "Mpumalanga",
+      "adminLevel": 3,
+      "sourcePcode": "ZA8324",
+      "boundaryId": "15628383B3812939933350",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-kzn265",
+      "entityId": "za-municipality-kzn265",
+      "name": "Nongoma",
+      "sourceName": "Nongoma",
+      "municipalityCode": "KZN265",
+      "category": "B",
+      "region": "kwazulu-natal",
+      "province": "KwaZulu-Natal",
+      "adminLevel": 3,
+      "sourcePcode": "ZA5265",
+      "boundaryId": "15628383B6389010886764",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-kzn242",
+      "entityId": "za-municipality-kzn242",
+      "name": "Nquthu",
+      "sourceName": "Nqutu",
+      "municipalityCode": "KZN242",
+      "category": "B",
+      "region": "kwazulu-natal",
+      "province": "KwaZulu-Natal",
+      "adminLevel": 3,
+      "sourcePcode": "ZA5242",
+      "boundaryId": "15628383B34666752536015",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-ec444",
+      "entityId": "za-municipality-ec444",
+      "name": "Ntabankulu",
+      "sourceName": "Ntabankulu",
+      "municipalityCode": "EC444",
+      "category": "B",
+      "region": "eastern-cape",
+      "province": "Eastern Cape",
+      "adminLevel": 3,
+      "sourcePcode": "ZA2444",
+      "boundaryId": "15628383B44296191907272",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-ec155",
+      "entityId": "za-municipality-ec155",
+      "name": "Nyandeni",
+      "sourceName": "Nyandeni",
+      "municipalityCode": "EC155",
+      "category": "B",
+      "region": "eastern-cape",
+      "province": "Eastern Cape",
+      "adminLevel": 3,
+      "sourcePcode": "ZA2155",
+      "boundaryId": "15628383B29870836441497",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-kzn235",
+      "entityId": "za-municipality-kzn235",
+      "name": "Okhahlamba",
+      "sourceName": "Okhahlamba",
+      "municipalityCode": "KZN235",
+      "category": "B",
+      "region": "kwazulu-natal",
+      "province": "KwaZulu-Natal",
+      "adminLevel": 3,
+      "sourcePcode": "ZA5235",
+      "boundaryId": "15628383B81788636322257",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-wc045",
+      "entityId": "za-municipality-wc045",
+      "name": "Oudtshoorn",
+      "sourceName": "Oudtshoorn",
+      "municipalityCode": "WC045",
+      "category": "B",
+      "region": "western-cape",
+      "province": "Western Cape",
+      "adminLevel": 3,
+      "sourcePcode": "ZA1045",
+      "boundaryId": "15628383B24950367245541",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-wc032",
+      "entityId": "za-municipality-wc032",
+      "name": "Overstrand",
+      "sourceName": "Overstrand",
+      "municipalityCode": "WC032",
+      "category": "B",
+      "region": "western-cape",
+      "province": "Western Cape",
+      "adminLevel": 3,
+      "sourcePcode": "ZA1032",
+      "boundaryId": "15628383B80696664936096",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "MultiPolygon"
+    },
+    {
+      "id": "za-municipality-nc094",
+      "entityId": "za-municipality-nc094",
+      "name": "Phokwane",
+      "sourceName": "Phokwane",
+      "municipalityCode": "NC094",
+      "category": "B",
+      "region": "northern-cape",
+      "province": "Nothern Cape",
+      "adminLevel": 3,
+      "sourcePcode": "ZA3094",
+      "boundaryId": "15628383B44304939530750",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-fs195",
+      "entityId": "za-municipality-fs195",
+      "name": "Phumelela",
+      "sourceName": "Phumelela",
+      "municipalityCode": "FS195",
+      "category": "B",
+      "region": "free-state",
+      "province": "Free State",
+      "adminLevel": 3,
+      "sourcePcode": "ZA4195",
+      "boundaryId": "15628383B27105653038875",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-lim354",
+      "entityId": "za-municipality-lim354",
+      "name": "Polokwane",
+      "sourceName": "Polokwane",
+      "municipalityCode": "LIM354",
+      "category": "B",
+      "region": "limpopo",
+      "province": "Limpopo",
+      "adminLevel": 3,
+      "sourcePcode": "ZA9354",
+      "boundaryId": "15628383B84414150036036",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-ec154",
+      "entityId": "za-municipality-ec154",
+      "name": "Port St Johns",
+      "sourceName": "Port St Johns",
+      "municipalityCode": "EC154",
+      "category": "B",
+      "region": "eastern-cape",
+      "province": "Eastern Cape",
+      "adminLevel": 3,
+      "sourcePcode": "ZA2154",
+      "boundaryId": "15628383B51643995484882",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-wc052",
+      "entityId": "za-municipality-wc052",
+      "name": "Prince Albert",
+      "sourceName": "Prince Albert",
+      "municipalityCode": "WC052",
+      "category": "B",
+      "region": "western-cape",
+      "province": "Western Cape",
+      "adminLevel": 3,
+      "sourcePcode": "ZA1052",
+      "boundaryId": "15628383B22315624477969",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-nw385",
+      "entityId": "za-municipality-nw385",
+      "name": "Ramotshere Moiloa",
+      "sourceName": "Ramotshere Moiloa",
+      "municipalityCode": "NW385",
+      "category": "B",
+      "region": "north-west",
+      "province": "North West",
+      "adminLevel": 3,
+      "sourcePcode": "ZA6385",
+      "boundaryId": "15628383B61432920624348",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-gt485",
+      "entityId": "za-municipality-gt485",
+      "name": "Rand West City",
+      "sourceName": "Rand West City",
+      "municipalityCode": "GT485",
+      "category": "B",
+      "region": "gauteng",
+      "province": "Gauteng",
+      "adminLevel": 3,
+      "sourcePcode": "ZA7485",
+      "boundaryId": "15628383B59802674221222",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-nw381",
+      "entityId": "za-municipality-nw381",
+      "name": "Ratlou",
+      "sourceName": "Ratlou",
+      "municipalityCode": "NW381",
+      "category": "B",
+      "region": "north-west",
+      "province": "North West",
+      "adminLevel": 3,
+      "sourcePcode": "ZA6381",
+      "boundaryId": "15628383B47394950220829",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-kzn216",
+      "entityId": "za-municipality-kzn216",
+      "name": "Ray Nkonyeni",
+      "sourceName": "Ray Nkonyeni",
+      "municipalityCode": "KZN216",
+      "category": "B",
+      "region": "kwazulu-natal",
+      "province": "KwaZulu-Natal",
+      "adminLevel": 3,
+      "sourcePcode": "ZA5216",
+      "boundaryId": "15628383B93091970558511",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-ec129",
+      "entityId": "za-municipality-ec129",
+      "name": "Raymond Mhlaba",
+      "sourceName": "Raymond Mhlaba",
+      "municipalityCode": "EC129",
+      "category": "B",
+      "region": "eastern-cape",
+      "province": "Eastern Cape",
+      "adminLevel": 3,
+      "sourcePcode": "ZA2129",
+      "boundaryId": "15628383B98865365427996",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-nc075",
+      "entityId": "za-municipality-nc075",
+      "name": "Renosterberg",
+      "sourceName": "Renosterberg",
+      "municipalityCode": "NC075",
+      "category": "B",
+      "region": "northern-cape",
+      "province": "Nothern Cape",
+      "adminLevel": 3,
+      "sourcePcode": "ZA3075",
+      "boundaryId": "15628383B97169336353078",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-kzn227",
+      "entityId": "za-municipality-kzn227",
+      "name": "Richmond",
+      "sourceName": "Richmond",
+      "municipalityCode": "KZN227",
+      "category": "B",
+      "region": "kwazulu-natal",
+      "province": "KwaZulu-Natal",
+      "adminLevel": 3,
+      "sourcePcode": "ZA5227",
+      "boundaryId": "15628383B94614350175878",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-nc061",
+      "entityId": "za-municipality-nc061",
+      "name": "Richtersveld",
+      "sourceName": "Richtersveld",
+      "municipalityCode": "NC061",
+      "category": "B",
+      "region": "northern-cape",
+      "province": "Nothern Cape",
+      "adminLevel": 3,
+      "sourcePcode": "ZA3061",
+      "boundaryId": "15628383B22398881151445",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-nw373",
+      "entityId": "za-municipality-nw373",
+      "name": "Rustenburg",
+      "sourceName": "Rustenburg",
+      "municipalityCode": "NW373",
+      "category": "B",
+      "region": "north-west",
+      "province": "North West",
+      "adminLevel": 3,
+      "sourcePcode": "ZA6373",
+      "boundaryId": "15628383B8341083957996",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-ec138",
+      "entityId": "za-municipality-ec138",
+      "name": "Sakhisizwe",
+      "sourceName": "Sakhisizwe",
+      "municipalityCode": "EC138",
+      "category": "B",
+      "region": "eastern-cape",
+      "province": "Eastern Cape",
+      "adminLevel": 3,
+      "sourcePcode": "ZA2138",
+      "boundaryId": "15628383B16723794281290",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-wc014",
+      "entityId": "za-municipality-wc014",
+      "name": "Saldanha Bay",
+      "sourceName": "Saldanha Bay",
+      "municipalityCode": "WC014",
+      "category": "B",
+      "region": "western-cape",
+      "province": "Western Cape",
+      "adminLevel": 3,
+      "sourcePcode": "ZA1014",
+      "boundaryId": "15628383B22918874206511",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "MultiPolygon"
+    },
+    {
+      "id": "za-municipality-ec142",
+      "entityId": "za-municipality-ec142",
+      "name": "Senqu",
+      "sourceName": "Senqu",
+      "municipalityCode": "EC142",
+      "category": "B",
+      "region": "eastern-cape",
+      "province": "Eastern Cape",
+      "adminLevel": 3,
+      "sourcePcode": "ZA2142",
+      "boundaryId": "15628383B56060894344771",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-fs191",
+      "entityId": "za-municipality-fs191",
+      "name": "Setsoto",
+      "sourceName": "Setsoto",
+      "municipalityCode": "FS191",
+      "category": "B",
+      "region": "free-state",
+      "province": "Free State",
+      "adminLevel": 3,
+      "sourcePcode": "ZA4191",
+      "boundaryId": "15628383B27786336068400",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-nc078",
+      "entityId": "za-municipality-nc078",
+      "name": "Siyancuma",
+      "sourceName": "Siyancuma",
+      "municipalityCode": "NC078",
+      "category": "B",
+      "region": "northern-cape",
+      "province": "Nothern Cape",
+      "adminLevel": 3,
+      "sourcePcode": "ZA3078",
+      "boundaryId": "15628383B20343011275792",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-nc077",
+      "entityId": "za-municipality-nc077",
+      "name": "Siyathemba",
+      "sourceName": "Siyathemba",
+      "municipalityCode": "NC077",
+      "category": "B",
+      "region": "northern-cape",
+      "province": "Nothern Cape",
+      "adminLevel": 3,
+      "sourcePcode": "ZA3077",
+      "boundaryId": "15628383B61631469274814",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-nc091",
+      "entityId": "za-municipality-nc091",
+      "name": "Sol Plaatje",
+      "sourceName": "Sol Plaatjie",
+      "municipalityCode": "NC091",
+      "category": "B",
+      "region": "northern-cape",
+      "province": "Nothern Cape",
+      "adminLevel": 3,
+      "sourcePcode": "ZA3091",
+      "boundaryId": "15628383B27888516952282",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-wc024",
+      "entityId": "za-municipality-wc024",
+      "name": "Stellenbosch",
+      "sourceName": "Stellenbosch",
+      "municipalityCode": "WC024",
+      "category": "B",
+      "region": "western-cape",
+      "province": "Western Cape",
+      "adminLevel": 3,
+      "sourcePcode": "ZA1024",
+      "boundaryId": "15628383B53810498400879",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-mp313",
+      "entityId": "za-municipality-mp313",
+      "name": "Steve Tshwete",
+      "sourceName": "Steve Tshwete",
+      "municipalityCode": "MP313",
+      "category": "B",
+      "region": "mpumalanga",
+      "province": "Mpumalanga",
+      "adminLevel": 3,
+      "sourcePcode": "ZA8313",
+      "boundaryId": "15628383B87112813359476",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-ec106",
+      "entityId": "za-municipality-ec106",
+      "name": "Sundays River Valley",
+      "sourceName": "Sundays River Valley",
+      "municipalityCode": "EC106",
+      "category": "B",
+      "region": "eastern-cape",
+      "province": "Eastern Cape",
+      "adminLevel": 3,
+      "sourcePcode": "ZA2106",
+      "boundaryId": "15628383B24472250012031",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-wc015",
+      "entityId": "za-municipality-wc015",
+      "name": "Swartland",
+      "sourceName": "Swartland",
+      "municipalityCode": "WC015",
+      "category": "B",
+      "region": "western-cape",
+      "province": "Western Cape",
+      "adminLevel": 3,
+      "sourcePcode": "ZA1015",
+      "boundaryId": "15628383B41108868323970",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "MultiPolygon"
+    },
+    {
+      "id": "za-municipality-wc034",
+      "entityId": "za-municipality-wc034",
+      "name": "Swellendam",
+      "sourceName": "Swellendam",
+      "municipalityCode": "WC034",
+      "category": "B",
+      "region": "western-cape",
+      "province": "Western Cape",
+      "adminLevel": 3,
+      "sourcePcode": "ZA1034",
+      "boundaryId": "15628383B28198425114752",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-mp321",
+      "entityId": "za-municipality-mp321",
+      "name": "Thaba Chweu",
+      "sourceName": "Thaba Chweu",
+      "municipalityCode": "MP321",
+      "category": "B",
+      "region": "mpumalanga",
+      "province": "Mpumalanga",
+      "adminLevel": 3,
+      "sourcePcode": "ZA8321",
+      "boundaryId": "15628383B83650063742596",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-lim361",
+      "entityId": "za-municipality-lim361",
+      "name": "Thabazimbi",
+      "sourceName": "Thabazimbi",
+      "municipalityCode": "LIM361",
+      "category": "B",
+      "region": "limpopo",
+      "province": "Limpopo",
+      "adminLevel": 3,
+      "sourcePcode": "ZA9361",
+      "boundaryId": "15628383B46845171983587",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-kzn225",
+      "entityId": "za-municipality-kzn225",
+      "name": "Msunduzi",
+      "sourceName": "The Msunduzi",
+      "municipalityCode": "KZN225",
+      "category": "B",
+      "region": "kwazulu-natal",
+      "province": "KwaZulu-Natal",
+      "adminLevel": 3,
+      "sourcePcode": "ZA5225",
+      "boundaryId": "15628383B55646829528137",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-wc031",
+      "entityId": "za-municipality-wc031",
+      "name": "Theewaterskloof",
+      "sourceName": "Theewaterskloof",
+      "municipalityCode": "WC031",
+      "category": "B",
+      "region": "western-cape",
+      "province": "Western Cape",
+      "adminLevel": 3,
+      "sourcePcode": "ZA1031",
+      "boundaryId": "15628383B17742819019912",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-nc076",
+      "entityId": "za-municipality-nc076",
+      "name": "Thembelihle",
+      "sourceName": "Thembelihle",
+      "municipalityCode": "NC076",
+      "category": "B",
+      "region": "northern-cape",
+      "province": "Nothern Cape",
+      "adminLevel": 3,
+      "sourcePcode": "ZA3076",
+      "boundaryId": "15628383B84967339349714",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-mp315",
+      "entityId": "za-municipality-mp315",
+      "name": "Thembisile Hani",
+      "sourceName": "Thembisile",
+      "municipalityCode": "MP315",
+      "category": "B",
+      "region": "mpumalanga",
+      "province": "Mpumalanga",
+      "adminLevel": 3,
+      "sourcePcode": "ZA8315",
+      "boundaryId": "15628383B53462234009854",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-lim343",
+      "entityId": "za-municipality-lim343",
+      "name": "Thulamela",
+      "sourceName": "Thulamela",
+      "municipalityCode": "LIM343",
+      "category": "B",
+      "region": "limpopo",
+      "province": "Limpopo",
+      "adminLevel": 3,
+      "sourcePcode": "ZA9343",
+      "boundaryId": "15628383B41203661454034",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-fs182",
+      "entityId": "za-municipality-fs182",
+      "name": "Tokologo",
+      "sourceName": "Tokologo",
+      "municipalityCode": "FS182",
+      "category": "B",
+      "region": "free-state",
+      "province": "Free State",
+      "adminLevel": 3,
+      "sourcePcode": "ZA4182",
+      "boundaryId": "15628383B89728652792601",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-nc085",
+      "entityId": "za-municipality-nc085",
+      "name": "Tsantsabane",
+      "sourceName": "Tsantsabane",
+      "municipalityCode": "NC085",
+      "category": "B",
+      "region": "northern-cape",
+      "province": "Nothern Cape",
+      "adminLevel": 3,
+      "sourcePcode": "ZA3085",
+      "boundaryId": "15628383B77297968052391",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-nw382",
+      "entityId": "za-municipality-nw382",
+      "name": "Tswaing",
+      "sourceName": "Tswaing",
+      "municipalityCode": "NW382",
+      "category": "B",
+      "region": "north-west",
+      "province": "North West",
+      "adminLevel": 3,
+      "sourcePcode": "ZA6382",
+      "boundaryId": "15628383B35491227383110",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-fs183",
+      "entityId": "za-municipality-fs183",
+      "name": "Tswelopele",
+      "sourceName": "Tswelopele",
+      "municipalityCode": "FS183",
+      "category": "B",
+      "region": "free-state",
+      "province": "Free State",
+      "adminLevel": 3,
+      "sourcePcode": "ZA4183",
+      "boundaryId": "15628383B97037373759717",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-kzn434",
+      "entityId": "za-municipality-kzn434",
+      "name": "Johannes Phumani Phungula",
+      "sourceName": "Ubuhlebezwe",
+      "municipalityCode": "KZN434",
+      "category": "B",
+      "region": "kwazulu-natal",
+      "province": "KwaZulu-Natal",
+      "adminLevel": 3,
+      "sourcePcode": "ZA5434",
+      "boundaryId": "15628383B42702955327338",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-nc071",
+      "entityId": "za-municipality-nc071",
+      "name": "Ubuntu",
+      "sourceName": "Ubuntu",
+      "municipalityCode": "NC071",
+      "category": "B",
+      "region": "northern-cape",
+      "province": "Nothern Cape",
+      "adminLevel": 3,
+      "sourcePcode": "ZA3071",
+      "boundaryId": "15628383B10231305979692",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-kzn266",
+      "entityId": "za-municipality-kzn266",
+      "name": "Ulundi",
+      "sourceName": "Ulundi",
+      "municipalityCode": "KZN266",
+      "category": "B",
+      "region": "kwazulu-natal",
+      "province": "KwaZulu-Natal",
+      "adminLevel": 3,
+      "sourcePcode": "ZA5266",
+      "boundaryId": "15628383B50034412175971",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-kzn212",
+      "entityId": "za-municipality-kzn212",
+      "name": "Umdoni",
+      "sourceName": "Umdoni",
+      "municipalityCode": "KZN212",
+      "category": "B",
+      "region": "kwazulu-natal",
+      "province": "KwaZulu-Natal",
+      "adminLevel": 3,
+      "sourcePcode": "ZA5212",
+      "boundaryId": "15628383B54808640674561",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-kzn271",
+      "entityId": "za-municipality-kzn271",
+      "name": "Umhlabuyalingana",
+      "sourceName": "Umhlabuyalingana",
+      "municipalityCode": "KZN271",
+      "category": "B",
+      "region": "kwazulu-natal",
+      "province": "KwaZulu-Natal",
+      "adminLevel": 3,
+      "sourcePcode": "ZA5271",
+      "boundaryId": "15628383B85816100363009",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-kzn282",
+      "entityId": "za-municipality-kzn282",
+      "name": "uMhlathuze",
+      "sourceName": "uMhlathuze",
+      "municipalityCode": "KZN282",
+      "category": "B",
+      "region": "kwazulu-natal",
+      "province": "KwaZulu-Natal",
+      "adminLevel": 3,
+      "sourcePcode": "ZA5282",
+      "boundaryId": "15628383B13242049883763",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-kzn284",
+      "entityId": "za-municipality-kzn284",
+      "name": "uMlalazi",
+      "sourceName": "uMlalazi",
+      "municipalityCode": "KZN284",
+      "category": "B",
+      "region": "kwazulu-natal",
+      "province": "KwaZulu-Natal",
+      "adminLevel": 3,
+      "sourcePcode": "ZA5284",
+      "boundaryId": "15628383B7897519412969",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-kzn222",
+      "entityId": "za-municipality-kzn222",
+      "name": "uMngeni",
+      "sourceName": "uMngeni",
+      "municipalityCode": "KZN222",
+      "category": "B",
+      "region": "kwazulu-natal",
+      "province": "KwaZulu-Natal",
+      "adminLevel": 3,
+      "sourcePcode": "ZA5222",
+      "boundaryId": "15628383B85017454632042",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-kzn221",
+      "entityId": "za-municipality-kzn221",
+      "name": "uMshwathi",
+      "sourceName": "uMshwathi",
+      "municipalityCode": "KZN221",
+      "category": "B",
+      "region": "kwazulu-natal",
+      "province": "KwaZulu-Natal",
+      "adminLevel": 3,
+      "sourcePcode": "ZA5221",
+      "boundaryId": "15628383B38357797168546",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-nc072",
+      "entityId": "za-municipality-nc072",
+      "name": "Umsobomvu",
+      "sourceName": "Umsobomvu",
+      "municipalityCode": "NC072",
+      "category": "B",
+      "region": "northern-cape",
+      "province": "Nothern Cape",
+      "adminLevel": 3,
+      "sourcePcode": "ZA3072",
+      "boundaryId": "15628383B72969932115434",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-kzn214",
+      "entityId": "za-municipality-kzn214",
+      "name": "uMuziwabantu",
+      "sourceName": "uMuziwabantu",
+      "municipalityCode": "KZN214",
+      "category": "B",
+      "region": "kwazulu-natal",
+      "province": "KwaZulu-Natal",
+      "adminLevel": 3,
+      "sourcePcode": "ZA5214",
+      "boundaryId": "15628383B70795112074447",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-kzn245",
+      "entityId": "za-municipality-kzn245",
+      "name": "Umvoti",
+      "sourceName": "Umvoti",
+      "municipalityCode": "KZN245",
+      "category": "B",
+      "region": "kwazulu-natal",
+      "province": "KwaZulu-Natal",
+      "adminLevel": 3,
+      "sourcePcode": "ZA5245",
+      "boundaryId": "15628383B82450102835076",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-kzn435",
+      "entityId": "za-municipality-kzn435",
+      "name": "Umzimkhulu",
+      "sourceName": "Umzimkhulu",
+      "municipalityCode": "KZN435",
+      "category": "B",
+      "region": "kwazulu-natal",
+      "province": "KwaZulu-Natal",
+      "adminLevel": 3,
+      "sourcePcode": "ZA5435",
+      "boundaryId": "15628383B1738846702003",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-ec442",
+      "entityId": "za-municipality-ec442",
+      "name": "Umzimvubu",
+      "sourceName": "Umzimvubu",
+      "municipalityCode": "EC442",
+      "category": "B",
+      "region": "eastern-cape",
+      "province": "Eastern Cape",
+      "adminLevel": 3,
+      "sourcePcode": "ZA2442",
+      "boundaryId": "15628383B69661172902968",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-kzn213",
+      "entityId": "za-municipality-kzn213",
+      "name": "Umzumbe",
+      "sourceName": "Umzumbe",
+      "municipalityCode": "KZN213",
+      "category": "B",
+      "region": "kwazulu-natal",
+      "province": "KwaZulu-Natal",
+      "adminLevel": 3,
+      "sourcePcode": "ZA5213",
+      "boundaryId": "15628383B23037579047030",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-kzn262",
+      "entityId": "za-municipality-kzn262",
+      "name": "uPhongolo",
+      "sourceName": "uPhongolo",
+      "municipalityCode": "KZN262",
+      "category": "B",
+      "region": "kwazulu-natal",
+      "province": "KwaZulu-Natal",
+      "adminLevel": 3,
+      "sourcePcode": "ZA5262",
+      "boundaryId": "15628383B83069245545305",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-nw405",
+      "entityId": "za-municipality-nw405",
+      "name": "J B Marks",
+      "sourceName": "Ventersdorp/Tlokwe",
+      "municipalityCode": "NW405",
+      "category": "B",
+      "region": "north-west",
+      "province": "North West",
+      "adminLevel": 3,
+      "sourcePcode": "ZA6405",
+      "boundaryId": "15628383B17839761001340",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-mp311",
+      "entityId": "za-municipality-mp311",
+      "name": "Victor Khanye",
+      "sourceName": "Victor Khanye",
+      "municipalityCode": "MP311",
+      "category": "B",
+      "region": "mpumalanga",
+      "province": "Mpumalanga",
+      "adminLevel": 3,
+      "sourcePcode": "ZA8311",
+      "boundaryId": "15628383B51783858104799",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-ec145",
+      "entityId": "za-municipality-ec145",
+      "name": "Walter Sisulu",
+      "sourceName": "Walter Sisulu",
+      "municipalityCode": "EC145",
+      "category": "B",
+      "region": "eastern-cape",
+      "province": "Eastern Cape",
+      "adminLevel": 3,
+      "sourcePcode": "ZA2145",
+      "boundaryId": "15628383B59220525748831",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    },
+    {
+      "id": "za-municipality-wc022",
+      "entityId": "za-municipality-wc022",
+      "name": "Witzenberg",
+      "sourceName": "Witzenberg",
+      "municipalityCode": "WC022",
+      "category": "B",
+      "region": "western-cape",
+      "province": "Western Cape",
+      "adminLevel": 3,
+      "sourcePcode": "ZA1022",
+      "boundaryId": "15628383B53438128232803",
+      "boundaryVintage": "2020",
+      "boundaryValidOn": "2020-11-09",
+      "sourceIds": [
+        "municipal-boundaries"
+      ],
+      "joinMethod": "exact normalized source name",
+      "geometryType": "Polygon"
+    }
+  ]
+}

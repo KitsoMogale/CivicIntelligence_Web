@@ -4,6 +4,7 @@ import { ArrowDown, ArrowUp, X } from "lucide-react";
 import { useExplorer } from "@/lib/store";
 import { layerRegistry, layerById, type LayerId } from "@/lib/canvas";
 import { entities, getSources, relationships } from "@/lib/knowledge";
+import { provincialMetrics, type MetricId } from "@/lib/statistics";
 export default function LayerControls({ close }: { close: () => void }) {
   const s = useExplorer(),
     ordered = [...s.layers].sort((a, b) => b.zIndex - a.zIndex),
@@ -292,6 +293,32 @@ export default function LayerControls({ close }: { close: () => void }) {
         })}
       </div>
       <label>
+        Municipal boundary level
+        <select
+          aria-label="Municipal boundary level"
+          value={s.municipalityLevel}
+          onChange={(e) =>
+            s.navigate(
+              {
+                municipalityLevel: e.target.value as typeof s.municipalityLevel,
+              },
+              "Municipal boundary level",
+            )
+          }
+        >
+          <option value="local">Local municipalities + metros · 213</option>
+          <option value="district">
+            District municipalities + metros · 52
+          </option>
+        </select>
+      </label>
+      <p>
+        Representative 2020 boundaries from a 2018 source, joined to the 2026
+        directory. District and local areas overlap; eight metros occur at both
+        levels. Source geometry is illustrative, not a current legal
+        demarcation.
+      </p>
+      <label>
         Statistical measure
         <select
           aria-label="Map data overlay"
@@ -309,7 +336,10 @@ export default function LayerControls({ close }: { close: () => void }) {
               {
                 type: "SET_STATISTIC",
                 payload: {
-                  metric: e.target.value === "change" ? "change" : "population",
+                  metric:
+                    e.target.value === "none"
+                      ? "population"
+                      : (e.target.value as MetricId),
                   year: stats.year,
                 },
               },
@@ -319,6 +349,11 @@ export default function LayerControls({ close }: { close: () => void }) {
           <option value="none">No statistical overlay</option>
           <option value="population">Population count</option>
           <option value="change">Population change · 2011–2022</option>
+          {provincialMetrics.map((metric) => (
+            <option key={metric.id} value={metric.id}>
+              {metric.name} · {metric.periodLabel}
+            </option>
+          ))}
         </select>
       </label>
       <label>
@@ -326,7 +361,7 @@ export default function LayerControls({ close }: { close: () => void }) {
         <select
           aria-label="Map census year"
           value={stats.year}
-          disabled={stats.metric === "change"}
+          disabled={stats.metric !== "population"}
           onChange={(e) =>
             s.applyActions([
               {

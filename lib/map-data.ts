@@ -1,6 +1,7 @@
 import { entities, regions, relationships, entityById } from "./knowledge";
 import type { Entity } from "./types";
 import type { Exploration } from "./exploration";
+import { municipalById } from "./geography";
 import { layerById, layerRegistry, type LayerId } from "./canvas";
 export type MapPlace = {
   entity: Entity;
@@ -66,7 +67,9 @@ export function matchesFilters(
   );
 }
 export function inRegion(entity: Entity, regionId: string | null) {
-  const province = regions.find((r) => r.entityId === regionId);
+  const province = regions.find(
+    (r) => r.entityId === regionId || r.id === municipalById(regionId)?.region,
+  );
   return !province || entity.id === regionId || entity.region === province.id;
 }
 export function canvasPlaces(

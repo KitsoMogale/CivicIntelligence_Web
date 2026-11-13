@@ -5,6 +5,7 @@ import { visibleEntityIds } from "@/lib/visibility";
 import { useExplorer } from "@/lib/store";
 import type { Core } from "cytoscape";
 import { canvasLinks } from "@/lib/map-data";
+import { traceNetwork } from "@/lib/network";
 export default function RelationshipCanvas() {
   const s = useExplorer();
   const container = useRef<HTMLDivElement>(null),
@@ -26,6 +27,12 @@ export default function RelationshipCanvas() {
         expanded,
         canvas: s,
       });
+      const tracedEdges = s.networkTrace
+        ? new Set(
+            traceNetwork(s.networkTrace, s.country.code, s.timeRange)
+              .relationshipIds,
+          )
+        : null;
       const graph = cytoscape({
         container: container.current,
         elements: [
@@ -35,8 +42,16 @@ export default function RelationshipCanvas() {
               data: { id: e.id, label: e.name },
               selected: s.selectionIds.includes(e.id),
             })),
-          ...canvasLinks(s)
-            .filter((r) => ids.includes(r.source) && ids.includes(r.target))
+          ...(tracedEdges
+            ? relationships.filter((r) => tracedEdges.has(r.id))
+            : canvasLinks(s)
+          )
+            .filter(
+              (r) =>
+                ids.includes(r.source) &&
+                ids.includes(r.target) &&
+                (!tracedEdges || tracedEdges.has(r.id)),
+            )
             .map((r) => ({
               selected:
                 r.id === selectedLink ||
@@ -153,6 +168,7 @@ export default function RelationshipCanvas() {
     s.region,
     s.timeRange,
     s.isolatedEntityIds,
+    s.networkTrace,
   ]);
   useEffect(() => {
     cy.current?.nodes().unselect();
@@ -188,6 +204,38 @@ export default function RelationshipCanvas() {
           </button>
         )}
       </div>
+      {s.networkTrace && (
+        <div className="network-result-note" role="status">
+          {(() => {
+            const result = traceNetwork(
+              s.networkTrace,
+              s.country.code,
+              s.timeRange,
+            );
+            return result.found
+              ? (s.networkTrace.targetId
+                  ? "Shortest documented path"
+                  : "Documented neighborhood") +
+                  " · " +
+                  result.relationshipIds.length +
+                  " connections · max " +
+                  s.networkTrace.depth +
+                  " steps" +
+                  (result.truncated ? " · capped" : "")
+              : "No documented path within the current filters and step limit.";
+          })()}
+          <button
+            onClick={() =>
+              s.navigate(
+                { networkTrace: null, highlightedRelationshipIds: [] },
+                "Close network trace",
+              )
+            }
+          >
+            Close trace
+          </button>
+        </div>
+      )}
       <div
         className="relationship-surface"
         ref={container}

@@ -1,20 +1,25 @@
 {
   "version": "0.2.0",
-  "revision": "4aac40a1d4bd7efd9a7d15ae603a301b5d8de56837a2f8e0566edecd15248e99",
+  "revision": "034a3fe25a216db5c9905b4f52fb588a4c56a55968ac2dfcee8d345954fb4f51",
   "reviewedAt": "2026-11-13",
   "counts": {
-    "sources": 79,
-    "entities": 390,
-    "relationships": 393,
+    "sources": 88,
+    "entities": 396,
+    "relationships": 399,
     "datasets": 2,
     "regions": 9,
     "indicators": 2,
-    "events": 7
+    "events": 7,
+    "municipalities": 257,
+    "provincialIndicators": 6
   },
   "files": [
     "events.json",
+    "geography-assets.json",
     "indicators.json",
     "knowledge.json",
+    "municipal-geography.json",
+    "provincial-indicators.json",
     "regions.json"
   ]
 }

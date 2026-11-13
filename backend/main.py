@@ -11,7 +11,7 @@ from typing import Literal
 from fastapi import FastAPI, HTTPException, Query
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, ConfigDict, Field, field_validator
-from backend.catalog import SEED, REGIONS, INDICATORS, EVENTS, ROOT, catalog_digest
+from backend.catalog import SEED, REGIONS, INDICATORS, EVENTS, ROOT, MUNICIPALITIES, PROVINCIAL_METRICS, catalog_digest
 app = FastAPI(title="Civic Intelligence Knowledge API", version="0.2.0")
 app.add_middleware(CORSMiddleware, allow_origins=[os.getenv("APP_ORIGIN", "http://127.0.0.1:3000")], allow_methods=["GET", "POST"], allow_headers=["Content-Type"])
 logger = logging.getLogger("civic.api")
@@ -60,12 +60,17 @@ def records():
 def collection(name):
     if os.getenv("DATABASE_URL"):
         from backend.database import load_records, Relationship, Source, Dataset, IndicatorRecord, TimelineEventRecord
-        model = {"relationships":Relationship,"sources":Source,"datasets":Dataset,"indicators":IndicatorRecord,"events":TimelineEventRecord}[name]
-        return load_records(model)
+        model = {"relationships":Relationship,"sources":Source,"datasets":Dataset,"indicators":IndicatorRecord,"overlays":IndicatorRecord,"events":TimelineEventRecord}[name]
+        values=load_records(model)
+        if name=="indicators": return [r for r in values if "code" in r]
+        if name=="overlays": return [r for r in values if r.get("geography")=="province"]
+        return values
     if name == "indicators":
         return INDICATORS["indicators"]
     if name == "events":
         return EVENTS
+    if name == "overlays":
+        return PROVINCIAL_METRICS
     return SEED[name]
 @app.get("/health")
 def health():
@@ -88,6 +93,13 @@ def readiness():
 @app.get("/catalog")
 def catalog():
     return {"revision":catalog_digest(),"counts":{key:len(value) for key,value in SEED.items()},"regions":len(REGIONS),"indicators":len(INDICATORS["indicators"]),"events":len(EVENTS)}
+@app.get("/overlays")
+def provincial_overlays(country: str = Query("ZA",pattern="^[A-Z]{2}$")):
+    return [metric for metric in collection("overlays") if metric.get("country")==country]
+@app.get("/municipalities")
+def municipalities(country: str = Query("ZA",pattern="^[A-Z]{2}$"), level: Literal["local","district"]="local", province: str | None=None):
+    if country!="ZA":return []
+    return [m for m in MUNICIPALITIES if (not province or m["region"]==province) and (m["category"]!="C" if level=="local" else m["category"]!="B")]
 @app.get("/entities", response_model=list[Entity], response_model_exclude_none=True)
 def list_entities(country: str = Query("ZA", pattern="^[A-Z]{2}$"), domain: str | None = None, region: str | None = None):
     return [e for e in records() if e["country"] == country and (not domain or e["domain"] == domain) and (not region or e.get("region") == region)]
@@ -118,7 +130,7 @@ def regions(country: str = Query("ZA", pattern="^[A-Z]{2}$")):
     return [r for r in REGIONS if r["country"]==country]
 @app.get("/regions/{region_id}/boundary")
 def region_boundary(region_id: str):
-    region = next((r for r in REGIONS if r["id"]==region_id),None)
+    region = next((r for r in [*REGIONS,*MUNICIPALITIES] if r["id"]==region_id),None)
     if not region:
         raise HTTPException(404,"Region not found")
     if os.getenv("DATABASE_URL"):
@@ -130,7 +142,8 @@ def region_boundary(region_id: str):
         if not geometry:
             raise HTTPException(404,"Region geometry is not available")
         return {"type":"Feature","geometry":json.loads(geometry),"properties":region}
-    path = ROOT / "public" / "data" / "za-provinces.geojson"
+    file="za-provinces.geojson" if region in REGIONS else "za-municipalities-adm"+("2" if region["category"]=="C" else "3")+".geojson"
+    path = ROOT / "public" / "data" / file
     data = json.loads(path.read_text(encoding="utf-8"))
     return next(f for f in data["features"] if f["properties"]["id"]==region_id)
 @app.get("/indicators")

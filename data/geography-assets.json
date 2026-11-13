@@ -1,0 +1,16 @@
+[
+  {
+    "file": "za-municipalities-adm2.geojson",
+    "sha256": "b077c243027801129b26f1edcb43b3b155832111bba082531fcac0bb5ab69750",
+    "sourceId": "municipal-boundaries",
+    "vintage": "2020",
+    "features": 52
+  },
+  {
+    "file": "za-municipalities-adm3.geojson",
+    "sha256": "dd47505fe98907591d23751b81368fe7cfa14b47a9550c6031cb8aedaacecd22",
+    "sourceId": "municipal-boundaries",
+    "vintage": "2020",
+    "features": 213
+  }
+]

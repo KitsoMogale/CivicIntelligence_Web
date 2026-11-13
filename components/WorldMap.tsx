@@ -22,8 +22,17 @@ import {
   type Camera,
 } from "@/lib/canvas";
 import LayerControls from "./LayerControls";
+import { municipalGeography, municipalById } from "@/lib/geography";
+import {
+  metricById,
+  metricValue,
+  metricColor,
+  metricExtent,
+  formatMetric,
+} from "@/lib/statistics";
 let geography: Promise<FeatureCollection> | undefined,
   provinceGeography: Promise<FeatureCollection> | undefined;
+const municipalFiles: Record<string, Promise<FeatureCollection>> = {};
 async function jsonFile(path: string): Promise<FeatureCollection> {
   const r = await fetch(path);
   if (!r.ok) throw new Error("Geography unavailable");
@@ -53,6 +62,9 @@ export default function WorldMap() {
     map = useRef<MapInstance | null>(null),
     markers = useRef<maplibregl.Marker[]>([]);
   const s = useExplorer();
+  const municipalLevelLoaded = useRef("");
+  const [municipalReady, setMunicipalReady] = useState(false),
+    [municipalError, setMunicipalError] = useState(false);
   const [error, setError] = useState(""),
     [ready, setReady] = useState(false),
     [provinceReady, setProvinceReady] = useState(false),
@@ -101,7 +113,7 @@ export default function WorldMap() {
         new maplibregl.AttributionControl({
           compact: true,
           customAttribution:
-            'Countries/cities: <a href="https://www.naturalearthdata.com/about/terms-of-use/" target="_blank" rel="noreferrer">Natural Earth (public domain)</a> · Provinces: <a href="https://www.geoboundaries.org/" target="_blank" rel="noreferrer">geoBoundaries (CC BY 4.0)</a>; OCHA ROSEA / MDB (<a href="https://creativecommons.org/licenses/by/3.0/igo/" target="_blank" rel="noreferrer">CC BY 3.0 IGO</a>), 2020 · simplified',
+            'Countries/cities: <a href="https://www.naturalearthdata.com/about/terms-of-use/" target="_blank" rel="noreferrer">Natural Earth (public domain)</a> · Provinces/municipalities: <a href="https://www.geoboundaries.org/" target="_blank" rel="noreferrer">geoBoundaries (CC BY 4.0)</a>; OCHA ROSEA / MDB (<a href="https://creativecommons.org/licenses/by/3.0/igo/" target="_blank" rel="noreferrer">CC BY 3.0 IGO</a>), 2020 · simplified',
         }),
       );
       m.on("moveend", () => {
@@ -218,6 +230,7 @@ export default function WorldMap() {
             if (isMarkerControl(e)) return;
             if (!m) return;
             const layers = [
+              "municipal-fill",
               "province-fill",
               "statistics-fill",
               "connection-lines",
@@ -304,10 +317,30 @@ export default function WorldMap() {
             const p = e.features?.[0]?.properties;
             if (p) {
               m.getCanvas().style.cursor = "pointer";
+              const layer = layerById(
+                  useExplorer.getState().layers,
+                  "statistics",
+                ),
+                metric = metricById(layer.metric);
               setHover(
-                p.name +
-                  " · Census 2022: " +
-                  Number(p.population2022).toLocaleString("en-ZA"),
+                metric
+                  ? p.name +
+                      " · " +
+                      metric.name +
+                      ": " +
+                      formatMetric(
+                        metricValue(metric.id, p.id),
+                        metric.precision,
+                      ) +
+                      " · " +
+                      metric.periodLabel
+                  : p.name +
+                      " · Census " +
+                      layer.year +
+                      ": " +
+                      Number(p["population" + layer.year]).toLocaleString(
+                        "en-ZA",
+                      ),
               );
             }
           });
@@ -316,6 +349,22 @@ export default function WorldMap() {
         // One map click can hit both composable fills. Dispatch the topmost province once.
         m.on("click", (e) => {
           if (isMarkerControl(e)) return;
+          if (
+            m.getLayer("municipal-fill") &&
+            layerById(useExplorer.getState().layers, "municipalities").visible
+          ) {
+            const p = m.queryRenderedFeatures(e.point, {
+              layers: ["municipal-fill"],
+            })[0]?.properties;
+            if (p) {
+              useExplorer
+                .getState()
+                .applyActions([
+                  { type: "FOCUS_REGION", payload: { entityId: p.entityId } },
+                ]);
+              return;
+            }
+          }
           if (
             m.queryRenderedFeatures(e.point, { layers: ["connection-lines"] })
               .length
@@ -345,6 +394,97 @@ export default function WorldMap() {
   }, [ready, s.country.code, retry]);
   useEffect(() => {
     const m = map.current;
+    if (
+      !m ||
+      !ready ||
+      s.country.code !== "ZA" ||
+      !layerById(s.layers, "municipalities").visible ||
+      s.camera.zoom < 4.5
+    )
+      return;
+    const level = s.municipalityLevel === "district" ? "2" : "3";
+    if (
+      municipalLevelLoaded.current === level &&
+      m.getSource("za-municipalities")
+    )
+      return;
+    let cancelled = false;
+    setMunicipalReady(false);
+    container.current?.setAttribute("data-municipalities-loaded", "false");
+    municipalFiles[level] ??= jsonFile(
+      "/data/za-municipalities-adm" + level + ".geojson",
+    ).catch((e) => {
+      delete municipalFiles[level];
+      throw e;
+    });
+    municipalFiles[level]
+      .then((data) => {
+        if (cancelled) return;
+        if (m.getSource("za-municipalities"))
+          (m.getSource("za-municipalities") as GeoJSONSource).setData(data);
+        else {
+          m.addSource("za-municipalities", {
+            type: "geojson",
+            data,
+            promoteId: "entityId",
+          });
+          m.addLayer({
+            id: "municipal-fill",
+            type: "fill",
+            source: "za-municipalities",
+            minzoom: 4.5,
+            paint: { "fill-color": "#879e8e", "fill-opacity": 0.08 },
+          });
+          m.addLayer({
+            id: "municipal-borders",
+            type: "line",
+            source: "za-municipalities",
+            minzoom: 4.5,
+            paint: { "line-color": "#9cb09c", "line-width": 1 },
+          });
+          m.addLayer({
+            id: "municipal-selection",
+            type: "line",
+            source: "za-municipalities",
+            filter: ["==", "entityId", ""],
+            paint: { "line-color": "#e3f3b6", "line-width": 3 },
+          });
+          m.on("mousemove", "municipal-fill", (e) => {
+            const p = e.features?.[0]?.properties;
+            if (p) {
+              m.getCanvas().style.cursor = "pointer";
+              setHover(
+                p.name + " · historical 2020 boundary · " + p.municipalityCode,
+              );
+            }
+          });
+          m.on("mouseleave", "municipal-fill", () => setHover(""));
+        }
+        municipalLevelLoaded.current = level;
+        setMunicipalReady(true);
+        setMunicipalError(false);
+        container.current?.setAttribute("data-municipalities-loaded", "true");
+        container.current?.setAttribute(
+          "data-municipality-count",
+          String(data.features.length),
+        );
+      })
+      .catch(() => {
+        if (!cancelled) setMunicipalError(true);
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, [
+    ready,
+    s.country.code,
+    s.municipalityLevel,
+    s.camera.zoom,
+    layerById(s.layers, "municipalities").visible,
+    retry,
+  ]);
+  useEffect(() => {
+    const m = map.current;
     if (!m || !ready) return;
     m.setPaintProperty("land", "fill-color", [
       "case",
@@ -368,6 +508,11 @@ export default function WorldMap() {
     const groups: Record<string, string[]> = {
       countries: ["land", "borders"],
       provinces: ["province-fill", "province-borders"],
+      municipalities: [
+        "municipal-fill",
+        "municipal-borders",
+        "municipal-selection",
+      ],
       statistics: ["statistics-fill"],
       connections: ["connection-lines"],
       cities: ["points-cities"],
@@ -383,6 +528,7 @@ export default function WorldMap() {
           id,
           "visibility",
           layer.visible &&
+            (layer.id !== "municipalities" || municipalReady) &&
             (layer.id === "countries" || layer.id === "evidence" || geographic)
             ? "visible"
             : "none",
@@ -399,6 +545,8 @@ export default function WorldMap() {
             "province-selection",
             "selection",
             "connection-lines",
+            "municipal-borders",
+            "municipal-selection",
           ].includes(id)
         )
           m.setPaintProperty(id, "line-opacity", layer.opacity);
@@ -407,7 +555,10 @@ export default function WorldMap() {
       }
     }
     if (provinceReady) {
-      const province = regions.find((r) => r.entityId === s.region);
+      const province = regions.find(
+        (r) =>
+          r.entityId === s.region || r.id === municipalById(s.region)?.region,
+      );
       const filter: maplibregl.FilterSpecification = province
         ? ["==", "id", province.id]
         : ["has", "id"];
@@ -452,8 +603,53 @@ export default function WorldMap() {
       );
       for (const id of ["province-fill", "province-borders", "statistics-fill"])
         m.setLayerZoomRange(id, 3, 13);
+      const metric = metricById(stats.metric);
+      if (metric) {
+        const expression: unknown[] = ["match", ["get", "id"]];
+        for (const r of regions)
+          expression.push(
+            r.id,
+            metricColor(metric, metricValue(metric.id, r.id)),
+          );
+        expression.push("#596460");
+        m.setPaintProperty(
+          "statistics-fill",
+          "fill-color",
+          expression as maplibregl.ExpressionSpecification,
+        );
+      }
     }
-  }, [ready, provinceReady, s.layers, s.region, s.country.code]);
+    if (municipalReady) {
+      const provinceId =
+        regions.find((r) => r.entityId === s.region)?.id ??
+        municipalById(s.region)?.region;
+      const filter: maplibregl.FilterSpecification = provinceId
+        ? ["==", "region", provinceId]
+        : ["has", "entityId"];
+      m.setFilter("municipal-fill", filter);
+      m.setFilter("municipal-borders", filter);
+      m.setPaintProperty(
+        "municipal-fill",
+        "fill-opacity",
+        layerById(s.layers, "municipalities").opacity * 0.08,
+      );
+      m.setFilter("municipal-selection", [
+        "==",
+        "entityId",
+        municipalById(s.selectedEntity)?.entityId ??
+          municipalById(s.region)?.entityId ??
+          "",
+      ]);
+    }
+  }, [
+    ready,
+    provinceReady,
+    municipalReady,
+    s.layers,
+    s.region,
+    s.country.code,
+    s.selectedEntity,
+  ]);
   useEffect(() => {
     const m = map.current;
     if (!m || !ready) return;
@@ -664,6 +860,8 @@ export default function WorldMap() {
     evidence = layerById(s.layers, "evidence"),
     selected = entityById(s.selectedEntity ?? ""),
     sources = selected ? getSources(selected.sourceIds) : [];
+  const metric = metricById(stats.metric),
+    statSource = metric ? getSources(metric.sourceIds)[0] : null;
   return (
     <div className="map-frame">
       <div
@@ -693,7 +891,8 @@ export default function WorldMap() {
             value={
               entityById(s.region ?? "")?.type === "Province"
                 ? (s.region ?? "all")
-                : "all"
+                : (regions.find((r) => r.id === municipalById(s.region)?.region)
+                    ?.entityId ?? "all")
             }
             onChange={(e) => {
               if (e.target.value === "all")
@@ -725,6 +924,41 @@ export default function WorldMap() {
               </option>
             ))}
           </select>
+          {layerById(s.layers, "municipalities").visible && (
+            <select
+              className="municipal-focus"
+              aria-label="Focus municipality"
+              value={municipalById(s.region)?.entityId ?? ""}
+              onChange={(e) => {
+                if (e.target.value)
+                  s.applyActions([
+                    {
+                      type: "FOCUS_REGION",
+                      payload: { entityId: e.target.value },
+                    },
+                  ]);
+              }}
+            >
+              <option value="">Choose municipality</option>
+              {municipalGeography
+                .filter(
+                  (m) =>
+                    (s.municipalityLevel === "district"
+                      ? m.category !== "B"
+                      : m.category !== "C") &&
+                    (!s.region ||
+                      m.region ===
+                        (regions.find((r) => r.entityId === s.region)?.id ??
+                          municipalById(s.region)?.region)),
+                )
+                .sort((a, b) => a.name.localeCompare(b.name))
+                .map((m) => (
+                  <option key={m.entityId} value={m.entityId}>
+                    {m.name} · {m.municipalityCode}
+                  </option>
+                ))}
+            </select>
+          )}
         </div>
       )}
       <div className="map-density-status" aria-label="Map scope and density">
@@ -749,7 +983,9 @@ export default function WorldMap() {
             {selected.coordinateNote ??
               (selected.coordinates
                 ? "Published representative locator"
-                : "No verified exact location")}
+                : municipalById(selected.id)
+                  ? "Historical 2020 municipality boundary · not a facility locator"
+                  : "No verified exact location")}
           </small>
           {sources.slice(0, 1).map((source) => (
             <a
@@ -791,27 +1027,57 @@ export default function WorldMap() {
       {s.country.code === "ZA" && stats.visible && (
         <div className="map-legend" aria-label="Map data legend">
           <strong>
-            {stats.metric === "population"
-              ? "Population · Census " + stats.year
-              : "Population change · Census 2011–2022"}
+            {metric
+              ? metric.name + " · " + metric.periodLabel
+              : stats.metric === "population"
+                ? "Population · Census " + stats.year
+                : "Population change · Census 2011–2022"}
           </strong>
           <div
+            style={
+              metric
+                ? {
+                    background:
+                      "linear-gradient(to right,#284e55,#407578,#78a294,#a7c18f,#d6dfa8)",
+                  }
+                : undefined
+            }
             className={
               "legend-ramp " + (stats.metric === "change" ? "change" : "")
             }
           />
           <span>
-            {stats.metric === "population"
-              ? "<3m · 3–6m · 6–10m · 10–14m · ≥14m people"
-              : "<15% · 15–25% · 25–35% · ≥35% growth"}
+            {metric
+              ? "Equal intervals · " +
+                metricExtent(metric)
+                  .map((v) => formatMetric(v, metric.precision))
+                  .join(" → ") +
+                " · grey = unavailable"
+              : stats.metric === "population"
+                ? "<3m · 3–6m · 6–10m · 10–14m · ≥14m people"
+                : "<15% · 15–25% · 25–35% · ≥35% growth"}
           </span>
           <a
-            href="https://www.gov.za/sites/default/files/P03014_Census_2022_Statistical_Release.pdf"
+            href={
+              statSource?.url ??
+              "https://www.gov.za/sites/default/files/P03014_Census_2022_Statistical_Release.pdf"
+            }
             target="_blank"
             rel="noreferrer"
           >
-            Stats SA · Table 2.2 ↗
+            {metric
+              ? "Stats SA · " + metric.periodLabel + " ↗"
+              : "Stats SA · Table 2.2 ↗"}
           </a>
+          {metric && (
+            <details>
+              <summary>Measure & source</summary>
+              <p>{metric.definition}</p>
+              <p>{metric.denominator}</p>
+              <p>{metric.caveats.join(" ")}</p>
+              <p>Provincial values; no municipality estimates.</p>
+            </details>
+          )}
         </div>
       )}
       <button
@@ -834,6 +1100,17 @@ export default function WorldMap() {
           onClick={() => setRetry((n) => n + 1)}
         >
           Province boundaries unavailable · Retry
+        </button>
+      )}
+      {municipalError && (
+        <button
+          className="province-error"
+          onClick={() => {
+            municipalLevelLoaded.current = "";
+            setRetry((n) => n + 1);
+          }}
+        >
+          Municipal boundaries unavailable · Retry
         </button>
       )}
       {error && (
