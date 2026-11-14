@@ -18,6 +18,7 @@ import {
 } from "@/lib/boundaries";
 import { STREET_TILES, STREET_ATTRIBUTION } from "@/lib/streets";
 import { entityById } from "@/lib/knowledge";
+import MapOverlay from "./MapOverlay";
 export type StreetStatus = "off" | "loading" | "ready" | "error";
 const cachedWards = new Map<string, FeatureCollection>();
 export default function MapDetails({
@@ -248,8 +249,12 @@ export default function MapDetails({
         )}
       </div>
       {s.country.code === "ZA" && wardLayer.visible && (
-        <section className="ward-controls" aria-label="Ward boundary controls">
-          <strong>Ward detail · MDB 2026 edition</strong>
+        <MapOverlay
+          className="ward-controls"
+          label="Ward boundary controls"
+          title="Ward detail · MDB 2026 edition"
+          reopenLabel="Ward controls"
+        >
           {s.boundaryEdition !== "mdb-2026" ? (
             <p>Select the MDB 2026 boundary edition to show wards.</p>
           ) : !file ? (
@@ -260,7 +265,9 @@ export default function MapDetails({
           ) : (
             <>
               <label>
-                Ward in {entityById(s.region ?? "")?.name}
+                <span className="ward-scope">
+                  Ward in {entityById(s.region ?? "")?.name}
+                </span>
                 <select
                   aria-label="Focus ward"
                   value={s.selectedWardId ?? ""}
@@ -340,7 +347,7 @@ export default function MapDetails({
           >
             Municipal Demarcation Board · source ↗
           </a>
-        </section>
+        </MapOverlay>
       )}
     </>
   );

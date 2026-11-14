@@ -40,4 +40,6 @@ Ward files retain official identifiers and numbering gaps. The revised release r
 
 ## Run and maintain
 
+The map opens without welcome, shared-selection or city cards. City points remain selectable; source-linked entity details are available in the closable Details sidebar. Ward controls, statistical legends and map error panels have an X to close and a compact button to reopen. Closing these panels preserves map layers and selection; Escape also closes a focused panel. Canvas overlays have an X that returns to Map. Required map attribution remains visible.
+
 See [README.md](README.md) for local startup and checks, [data maintenance](docs/data-maintenance.md) for curation, [production setup](docs/production.md) for deployment/monitoring, and [local verification](docs/local-verification.md) for observed results.

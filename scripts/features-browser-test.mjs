@@ -78,7 +78,7 @@ try {
     .getByLabel("Focus municipality", { exact: true })
     .selectOption("za-municipality-cpt");
   assert.match(
-    await page.getByLabel("Map selection evidence").innerText(),
+    await page.locator(".entity-details h2").innerText(),
     /Cape Town/,
   );
   await layers();
@@ -120,7 +120,7 @@ try {
     true,
   );
   await closeLayers();
-  const legend = page.getByLabel("Map data legend");
+  const legend = page.getByLabel("Map data legend", { exact: true });
   assert.match(await legend.innerText(), /2026/);
   await legend.locator("summary").click();
   assert.match(await legend.innerText(), /labour force/i);
@@ -247,7 +247,7 @@ try {
   assert.equal(await result.count(), 1);
   await result.click();
   assert.match(
-    await page.getByLabel("Map selection evidence").innerText(),
+    await page.locator(".entity-details").innerText(),
     /Municipality-published hospital locator/,
   );
   check(

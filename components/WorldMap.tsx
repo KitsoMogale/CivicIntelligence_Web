@@ -4,7 +4,7 @@ import * as maplibregl from "maplibre-gl";
 import type { Map as MapInstance, GeoJSONSource } from "maplibre-gl";
 import { MAP_WORKER_URL } from "@/lib/map-runtime";
 import type { FeatureCollection } from "geojson";
-import { AlertCircle, Layers3, RotateCcw } from "lucide-react";
+import { Layers3, RotateCcw } from "lucide-react";
 import { countries, entityById, regions, getSources } from "@/lib/knowledge";
 import { useExplorer } from "@/lib/store";
 import {
@@ -22,6 +22,7 @@ import {
 } from "@/lib/canvas";
 import LayerControls from "./LayerControls";
 import MapDetails, { type StreetStatus } from "./MapDetails";
+import MapOverlay from "./MapOverlay";
 import {
   boundaryTitle,
   municipalityRecords,
@@ -853,7 +854,10 @@ export default function WorldMap() {
           records.length > 1
             ? String(records.length)
             : records[0].name + (regional ? " · province locator" : "");
-        button.append(dot, label);
+        // Cities remain selectable points; their names are supplied by the
+        // street basemap rather than persistent cards covering nearby roads.
+        button.append(dot);
+        if (records.length > 1 || layer.id !== "cities") button.append(label);
         function open(id: string, add = false) {
           const current = useExplorer.getState();
           if (add)
@@ -966,10 +970,7 @@ export default function WorldMap() {
     s.timeRange,
     s.selectedRelationship,
   ]);
-  const stats = layerById(s.layers, "statistics"),
-    evidence = layerById(s.layers, "evidence"),
-    selected = entityById(s.selectedEntity ?? ""),
-    sources = selected ? getSources(selected.sourceIds) : [];
+  const stats = layerById(s.layers, "statistics");
   const metric = metricById(stats.metric),
     statSource = metric ? getSources(metric.sourceIds)[0] : null;
   return (
@@ -1090,70 +1091,19 @@ export default function WorldMap() {
           : ""}
       </div>
       {layersOpen && <LayerControls close={() => setLayersOpen(false)} />}
-      {evidence.visible && selected && !layersOpen && (
-        <aside
-          className="map-selection-card"
-          style={{ opacity: evidence.opacity }}
-          aria-label="Map selection evidence"
-        >
-          <span className="eyebrow">
-            SHARED SELECTION · {s.selectionIds.length}
-          </span>
-          <strong>{selected.name}</strong>
-          <small>
-            {selected.coordinateNote ??
-              (selected.coordinates
-                ? "Published representative locator"
-                : municipalById(selected.id)
-                  ? boundaryTitle(s.boundaryEdition) + " · area geometry"
-                  : "No verified exact location")}
-          </small>
-          {sources.slice(0, 1).map((source) => (
-            <a
-              key={source.id}
-              href={source.url}
-              target="_blank"
-              rel="noreferrer"
-            >
-              {source.publisher} · evidence ↗
-            </a>
-          ))}
-          <div>
-            <button
-              onClick={() =>
-                s.applyActions([
-                  {
-                    type: "ISOLATE_ENTITIES",
-                    payload: {
-                      ids: s.isolatedEntityIds.length ? [] : s.selectionIds,
-                    },
-                  },
-                ])
-              }
-            >
-              {s.isolatedEntityIds.length
-                ? "Show all records"
-                : "Isolate selection"}
-            </button>
-            <button
-              onClick={() =>
-                s.applyActions([{ type: "CLEAR_SELECTION", payload: {} }])
-              }
-            >
-              Clear selection
-            </button>
-          </div>
-        </aside>
-      )}
       {s.country.code === "ZA" && stats.visible && (
-        <div className="map-legend" aria-label="Map data legend">
-          <strong>
-            {metric
+        <MapOverlay
+          className="map-legend"
+          label="Map data legend"
+          reopenLabel="Legend"
+          title={
+            metric
               ? metric.name + " · " + metric.periodLabel
               : stats.metric === "population"
                 ? "Population · Census " + stats.year
-                : "Population change · Census 2011–2022"}
-          </strong>
+                : "Population change · Census 2011–2022"
+          }
+        >
           <div
             style={
               metric
@@ -1199,7 +1149,7 @@ export default function WorldMap() {
               <p>Provincial values; no municipality estimates.</p>
             </details>
           )}
-        </div>
+        </MapOverlay>
       )}
       <button
         className="world-control"
@@ -1216,29 +1166,42 @@ export default function WorldMap() {
         World view
       </button>
       {provinceError && (
-        <button
+        <MapOverlay
           className="province-error"
-          onClick={() => setRetry((n) => n + 1)}
+          label="Province boundary status"
+          title="Province boundaries unavailable"
+          reopenLabel="Province status"
         >
-          Province boundaries unavailable · Retry
-        </button>
+          <button onClick={() => setRetry((n) => n + 1)}>
+            Retry boundaries
+          </button>
+        </MapOverlay>
       )}
       {municipalError && (
-        <button
+        <MapOverlay
           className="province-error"
-          onClick={() => {
-            municipalLevelLoaded.current = "";
-            setRetry((n) => n + 1);
-          }}
+          label="Municipal boundary status"
+          title="Municipal boundaries unavailable"
+          reopenLabel="Municipal status"
         >
-          Municipal boundaries unavailable · Retry
-        </button>
+          <button
+            onClick={() => {
+              municipalLevelLoaded.current = "";
+              setRetry((n) => n + 1);
+            }}
+          >
+            Retry boundaries
+          </button>
+        </MapOverlay>
       )}
       {error && (
-        <div className="map-error" role="alert">
-          <AlertCircle size={26} />
-          <h3>Map unavailable</h3>
-          <p>{error}</p>
+        <MapOverlay
+          className="map-error"
+          label="Map error"
+          title="Map unavailable"
+          reopenLabel="Map status"
+        >
+          <p role="alert">{error}</p>
           <button
             onClick={() => {
               setError("");
@@ -1250,7 +1213,7 @@ export default function WorldMap() {
           <button onClick={() => s.setMode("hierarchy")}>
             Explore knowledge instead
           </button>
-        </div>
+        </MapOverlay>
       )}
     </div>
   );

@@ -74,6 +74,34 @@ try {
     .selectOption("population");
   assert.equal(await statistics.locator("a").getAttribute("href"), censusUrl);
   check("Census selection restores its Census reference");
+  await page.getByLabel("Close map layers", { exact: true }).click();
+  await page.getByLabel("Close map data legend", { exact: true }).click();
+  assert.equal(
+    await page.getByLabel("Map data legend", { exact: true }).count(),
+    0,
+  );
+  await page.getByLabel("Map layers", { exact: true }).click();
+  assert.equal(
+    await page.getByLabel("Provincial statistics", { exact: true }).isChecked(),
+    true,
+  );
+  await page
+    .getByLabel("Map data overlay", { exact: true })
+    .selectOption(metric.id);
+  await page.getByLabel("Close map layers", { exact: true }).click();
+  assert.equal(
+    await page.getByLabel("Map data legend", { exact: true }).count(),
+    0,
+  );
+  await page.getByLabel("Show map data legend", { exact: true }).click();
+  assert.ok(
+    (
+      await page.getByLabel("Map data legend", { exact: true }).innerText()
+    ).includes(metric.periodLabel),
+  );
+  check(
+    "Closing the legend preserves its map layer and reopening shows the active metric",
+  );
   assert.deepEqual(errors, []);
   await fs.writeFile(
     "test-results/source-browser-results.json",

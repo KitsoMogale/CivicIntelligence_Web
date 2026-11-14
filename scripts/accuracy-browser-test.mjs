@@ -162,6 +162,35 @@ try {
     "Official ward file is scoped to its parent, highlights natively and exposes the documented original",
   );
   await page.screenshot({ path: "test-results/accurate-ward-desktop.png" });
+  await page
+    .getByLabel("Close ward boundary controls", { exact: true })
+    .click();
+  assert.equal(await panel.count(), 0);
+  const reopenWard = page.getByLabel("Show ward boundary controls", {
+    exact: true,
+  });
+  assert.equal(
+    await reopenWard.evaluate((el) => el === document.activeElement),
+    true,
+  );
+  assert.ok(
+    +(await page
+      .locator(".map-surface")
+      .getAttribute("data-highlighted-wards")) > 0,
+  );
+  await reopenWard.press("Enter");
+  assert.equal(
+    await page.getByLabel("Focus ward", { exact: true }).inputValue(),
+    selected.id,
+  );
+  await page
+    .getByLabel("Close ward boundary controls", { exact: true })
+    .press("Escape");
+  assert.equal(await panel.count(), 0);
+  await reopenWard.press("Enter");
+  check(
+    "Ward controls close and reopen by mouse or keyboard without clearing the selected boundary",
+  );
   // Clear the selection without moving, then click a known interior navigation point on the real polygon.
   await page.getByLabel("Focus ward", { exact: true }).selectOption("");
   const c = await camera(),
@@ -293,6 +322,14 @@ try {
   });
   await page.getByLabel("Canvas layout", { exact: true }).selectOption("split");
   await page.locator('.split-divider[aria-orientation="horizontal"]').waitFor();
+  await page
+    .getByLabel("Close ward boundary controls", { exact: true })
+    .click();
+  assert.equal(
+    await page.getByLabel("Ward boundary controls", { exact: true }).count(),
+    0,
+  );
+  await page.getByLabel("Show ward boundary controls", { exact: true }).click();
   assert.equal(
     await page.getByLabel("Focus ward", { exact: true }).isVisible(),
     true,

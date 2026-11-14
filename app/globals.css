@@ -705,66 +705,6 @@ svg {
   padding: 9px;
   border-radius: 4px;
 }
-.country-overview-card {
-  position: absolute;
-  bottom: 22px;
-  left: 22px;
-  width: 335px;
-  max-width: calc(100% - 88px);
-  background: #152127f2;
-  border: 1px solid #3a4b43;
-  border-radius: 8px;
-  padding: 21px 22px;
-  box-shadow: 0 12px 40px #050b0e40;
-  pointer-events: auto;
-}
-.country-overview-card .eyebrow {
-  font-size: 7px;
-  letter-spacing: 1.35px;
-  color: #a0b29d;
-}
-.country-overview-card h2 {
-  font-size: 24px;
-  font-weight: 400;
-  letter-spacing: -0.6px;
-  margin: 13px 0 8px;
-}
-.country-overview-card > p {
-  font-size: 10px;
-  line-height: 1.8;
-  margin: 0;
-  color: #a0b0a4;
-}
-.overview-stats {
-  display: flex;
-  gap: 23px;
-  margin: 20px 0 17px;
-}
-.overview-stats > div {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-}
-.overview-stats strong {
-  font-weight: 400;
-  font-size: 20px;
-  color: #cfe0c9;
-}
-.overview-stats span {
-  font-size: 7px;
-  color: #8a9e8f;
-  white-space: nowrap;
-}
-.country-overview-card > button {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 11px 0 0;
-  border-top: 1px solid #33493a;
-  color: #c1d5b9;
-  font-size: 10px;
-}
 .map-entity {
   display: flex;
   align-items: center;
@@ -1640,10 +1580,6 @@ svg {
   .workspace-heading h1 {
     font-size: 36px;
   }
-  .country-overview-card {
-    width: 365px;
-    padding: 24px;
-  }
   .assistant-welcome {
     padding-top: 40px;
   }
@@ -1700,16 +1636,6 @@ svg {
     font-size: 9px;
     gap: 5px;
   }
-  .country-overview-card {
-    width: 290px;
-    padding: 18px;
-  }
-  .country-overview-card > p {
-    font-size: 9px;
-  }
-  .overview-stats {
-    gap: 18px;
-  }
   .assistant-welcome h2 {
     font-size: 24px;
   }
@@ -1746,9 +1672,6 @@ svg {
   }
   .assistant-panel {
     width: 290px;
-  }
-  .country-overview-card {
-    width: 310px;
   }
   .workspace-heading {
     padding: 23px;
@@ -1931,32 +1854,6 @@ svg {
   }
   .fit-button {
     padding-left: 8px;
-  }
-  .country-overview-card {
-    left: 14px;
-    bottom: 18px;
-    max-width: calc(100% - 74px);
-    width: 310px;
-    padding: 17px;
-  }
-  .country-overview-card h2 {
-    font-size: 21px;
-    margin: 10px 0 7px;
-  }
-  .country-overview-card > p {
-    font-size: 9px;
-  }
-  .country-overview-card .eyebrow {
-    font-size: 6px;
-  }
-  .overview-stats {
-    margin: 13px 0;
-  }
-  .overview-stats strong {
-    font-size: 19px;
-  }
-  .overview-stats span {
-    font-size: 7px;
   }
   .map-topline {
     left: 14px;

@@ -59,6 +59,23 @@ try {
   await page
     .locator('.map-surface[data-loaded="true"][data-provinces-loaded="true"]')
     .waitFor();
+  assert.equal(
+    await page.locator(".country-overview-card,.map-selection-card").count(),
+    0,
+  );
+  assert.ok(await page.locator('.map-entity[data-layer-id="cities"]').count());
+  assert.equal(
+    await page
+      .locator(
+        '.map-entity[data-layer-id="cities"]:not(.map-cluster) .map-marker-label',
+      )
+      .count(),
+    0,
+  );
+  check(
+    "Welcome and selection cards are removed; city points have no card labels",
+  );
+  await page.screenshot({ path: "test-results/map-without-cards.png" });
   await layers(page);
   assert.equal(await page.locator(".canvas-layer-row").count(), 11);
   await page.getByLabel("Cities & towns", { exact: true }).uncheck();
@@ -159,6 +176,17 @@ try {
   check(
     "Census charts and accessible tables reflect and update the shared province selection",
   );
+  await page
+    .getByLabel("Canvas layout", { exact: true })
+    .selectOption("overlay");
+  await page.getByRole("tab", { name: "Hierarchy", exact: true }).click();
+  await page.getByLabel("Close canvas overlay", { exact: true }).click();
+  assert.equal(await page.locator(".canvas-floating-view").count(), 0);
+  assert.deepEqual(await camera(page), focused);
+  await page
+    .getByLabel("Canvas layout", { exact: true })
+    .selectOption("single");
+  check("Canvas overlays close to reveal the map and retain its camera");
   await page.getByLabel("Focus province", { exact: true }).selectOption("all");
   await page.getByRole("button", { name: "World view", exact: true }).click();
   await page.locator('.map-surface[data-scope="World"]').waitFor();
@@ -212,7 +240,14 @@ try {
       .locator(".map-cluster-list")
       .getByRole("button", { name: /Kusile Power Station/i })
       .click();
-  await page.getByLabel("Map selection evidence", { exact: true }).waitFor();
+  await page
+    .locator(".entity-details h2")
+    .filter({ hasText: "Kusile Power Station" })
+    .waitFor();
+  assert.equal(
+    await page.getByLabel("Map selection evidence", { exact: true }).count(),
+    0,
+  );
   await page.getByLabel("Close assistant", { exact: true }).click();
   await page.getByRole("button", { name: "Isolate", exact: true }).click();
   assert.equal(

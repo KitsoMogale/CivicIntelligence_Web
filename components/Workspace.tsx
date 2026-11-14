@@ -54,7 +54,6 @@ import {
   entityById,
   relationships,
   searchKnowledge,
-  sources,
 } from "@/lib/knowledge";
 import { useExplorer } from "@/lib/store";
 import type { Domain, Mode } from "@/lib/types";
@@ -707,55 +706,16 @@ export default function Workspace() {
                     : "canvas-main-view"
               }
             >
-              {s.mode === "geographic" ? (
-                <>
-                  {!s.region &&
-                    !s.selectedEntity &&
-                    s.populationLayer === "none" && (
-                      <div className="country-overview-card">
-                        <span className="eyebrow">
-                          <span className="live-dot" />{" "}
-                          {s.country.code === "ZA"
-                            ? "YOUR EXPLORATION STARTS HERE"
-                            : "A WORLD STILL TO EXPLORE"}
-                        </span>
-                        <h2>{s.country.name}</h2>
-                        <p>
-                          {s.country.code === "ZA"
-                            ? "Explore the institutions, people and systems that shape a country. Follow a connection to see what lies beneath."
-                            : "Country boundaries are available. Detailed institutional coverage has not yet been added. Historical comparison indicators are available for Botswana and Namibia in Compare."}
-                        </p>
-                        {s.country.code === "ZA" ? (
-                          <>
-                            <div className="overview-stats">
-                              <div>
-                                <strong>6</strong>
-                                <span>Knowledge domains</span>
-                              </div>
-                              <div>
-                                <strong>{entities.length}</strong>
-                                <span>Curated entities</span>
-                              </div>
-                              <div>
-                                <strong>{sources.length}</strong>
-                                <span>References</span>
-                              </div>
-                            </div>
-                            <button
-                              onClick={() => s.selectDomain("government")}
-                            >
-                              Explore the government <ArrowRight size={14} />
-                            </button>
-                          </>
-                        ) : (
-                          <button onClick={() => s.selectCountry(countries[0])}>
-                            Explore South Africa <ArrowRight size={14} />
-                          </button>
-                        )}
-                      </div>
-                    )}
-                </>
-              ) : s.mode === "compare" ? (
+              {s.layout === "overlay" && s.mode !== "geographic" && (
+                <button
+                  className="icon-button canvas-overlay-close"
+                  aria-label="Close canvas overlay"
+                  onClick={() => s.setMode("geographic")}
+                >
+                  <X size={16} />
+                </button>
+              )}
+              {s.mode === "geographic" ? null : s.mode === "compare" ? (
                 <ComparisonCanvas />
               ) : s.mode === "timeline" ? (
                 <TimelineCanvas />

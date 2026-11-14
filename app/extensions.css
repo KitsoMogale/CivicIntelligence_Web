@@ -1,4 +1,53 @@
 /* Investigation, geography and evidence tools. */
+.map-overlay-header {
+  position: sticky;
+  top: -15px;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  background: inherit;
+}
+.map-overlay-header > strong {
+  flex: 1;
+}
+.map-frame .map-overlay-close {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  margin: 0;
+  border: 1px solid #5d735f;
+  border-radius: 4px;
+  color: #d5e3cf;
+  background: #15272b;
+  text-decoration: none;
+}
+.map-frame .map-overlay-reopen {
+  width: auto;
+  right: auto;
+  max-width: calc(100% - 70px);
+  min-height: 32px;
+  padding: 6px 10px;
+  font-size: 10px;
+  text-align: left;
+  text-decoration: none;
+}
+.map-overlay-close:hover,
+.map-overlay-reopen:hover {
+  border-color: #b5d0aa;
+}
+.map-overlay-close:focus-visible,
+.map-overlay-reopen:focus-visible {
+  outline: 2px solid #d6f0ac;
+  outline-offset: 2px;
+}
+.ward-controls .map-overlay-header {
+  top: -12px;
+}
 .map-source-status {
   position: absolute;
   bottom: 8px;
@@ -77,9 +126,6 @@
   border-left: 2px solid #d6a453;
   padding-left: 8px;
 }
-.map-frame:has(.ward-controls) .map-selection-card {
-  display: none;
-}
 @media (max-width: 760px) {
   .ward-controls {
     top: 146px;
@@ -114,9 +160,6 @@
 }
 .map-frame:has(.municipal-focus) .map-density-status {
   top: 135px;
-}
-.map-frame:has(.municipal-focus) .map-selection-card {
-  top: 170px;
 }
 .map-legend details {
   font-size: 9px;
@@ -288,9 +331,6 @@
     height: 3px;
     width: 45px;
   }
-  .has-canvas-split .map-selection-card {
-    display: none;
-  }
   .has-canvas-split .map-legend {
     max-width: 160px;
     bottom: 20px;
@@ -320,9 +360,6 @@
 .persistent-map[hidden] {
   display: none;
 }
-.canvas-container:has(.canvas-layers-panel) .country-overview-card {
-  visibility: hidden;
-}
 .canvas-layers-panel > header {
   position: sticky;
   top: -15px;
@@ -337,12 +374,6 @@
 }
 .has-canvas-overlay .canvas-caption .caption-hint {
   display: none;
-}
-.canvas-main-view:has(.country-overview-card) {
-  pointer-events: none;
-}
-.canvas-main-view .country-overview-card {
-  pointer-events: auto;
 }
 .canvas-main-view:empty {
   pointer-events: none;
@@ -363,6 +394,14 @@
 }
 .canvas-floating-view .relationship-surface {
   top: 38px;
+}
+.canvas-overlay-close {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  z-index: 5;
+  background: #15272b;
+  border: 1px solid #5d735f;
 }
 .canvas-floating-view .comparison-canvas,
 .canvas-floating-view .data-canvas {
@@ -457,41 +496,6 @@
   color: #9fb8a9;
   font-size: 9px;
   pointer-events: none;
-}
-.map-selection-card {
-  position: absolute;
-  top: 137px;
-  left: 25px;
-  max-width: 230px;
-  border: 1px solid #55765b;
-  background: #15242af0;
-  padding: 13px;
-  border-radius: 7px;
-  display: grid;
-  gap: 7px;
-  font-size: 11px;
-  z-index: 2;
-}
-.map-selection-card small {
-  font-size: 9px;
-  color: #a2b6a9;
-  line-height: 1.7;
-}
-.map-selection-card a {
-  font-size: 9px;
-  color: #b8dcba;
-}
-.map-selection-card div {
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
-}
-.map-selection-card button {
-  font-size: 9px;
-  color: #b6d2be;
-  border: 1px solid #496352;
-  border-radius: 4px;
-  padding: 5px;
 }
 .map-entity .map-dot {
   background: var(--marker-color, #a6d1b3);
@@ -628,18 +632,10 @@
     inset: 135px 10px 28px;
     min-height: 140px;
   }
-  .has-canvas-overlay .map-selection-card {
-    display: none;
-  }
   .map-density-status {
     left: 14px;
     font-size: 8px;
     top: 90px;
-  }
-  .map-selection-card {
-    left: 14px;
-    top: 123px;
-    max-width: 205px;
   }
   .canvas-layers-panel {
     width: min(330px, calc(100% - 28px));
@@ -1718,8 +1714,18 @@
     max-width: none;
     max-height: 110px;
   }
-  .has-canvas-split .ward-controls > strong,
   .has-canvas-split .map-frame:has(.ward-controls) .map-density-status {
     display: none;
+  }
+  .has-canvas-split .ward-controls .map-overlay-header > strong,
+  .has-canvas-split .ward-controls .ward-scope {
+    display: none;
+  }
+  .map-frame .map-overlay-close {
+    width: 32px;
+    height: 32px;
+  }
+  .ward-controls .map-overlay-header {
+    top: -9px;
   }
 }
