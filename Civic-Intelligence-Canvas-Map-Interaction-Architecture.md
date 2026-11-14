@@ -25,13 +25,13 @@ Map | Hierarchy | Graph | Flow | Charts
 
 Treat map layers as independently enabled, reordered, filtered, and styled components.
 
-| Layer | Data | Rendering and interactions |
-|---|---|---|
-| 1. Geography | Countries, provinces, municipalities, cities, boundaries | Vector polygons, labels, hover/select, drill-down, fly-to |
-| 2. Statistical overlays | Population, GDP, employment, healthcare, education, etc. | Choropleths, heatmaps, proportional markers, legends, time and metric filters |
-| 3. Entities and assets | Mines, hospitals, institutions, power stations, businesses, ports | Points/polygons, clustering, search, selection, details |
-| 4. Networks and relationships | Roads, rail, transmission, pipelines, supply links, dependencies | Geographical line networks when routes are known; abstract relationship edges only when explicitly differentiated |
-| 5. Knowledge and AI overlays | Annotations, evidence, explanations, selections, comparisons | Floating panels, highlights, callouts, traces, contextual cards |
+| Layer                         | Data                                                              | Rendering and interactions                                                                                        |
+| ----------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| 1. Geography                  | Countries, provinces, municipalities, cities, boundaries          | Vector polygons, labels, hover/select, drill-down, fly-to                                                         |
+| 2. Statistical overlays       | Population, GDP, employment, healthcare, education, etc.          | Choropleths, heatmaps, proportional markers, legends, time and metric filters                                     |
+| 3. Entities and assets        | Mines, hospitals, institutions, power stations, businesses, ports | Points/polygons, clustering, search, selection, details                                                           |
+| 4. Networks and relationships | Roads, rail, transmission, pipelines, supply links, dependencies  | Geographical line networks when routes are known; abstract relationship edges only when explicitly differentiated |
+| 5. Knowledge and AI overlays  | Annotations, evidence, explanations, selections, comparisons      | Floating panels, highlights, callouts, traces, contextual cards                                                   |
 
 Every layer should expose: `id`, `type`, `visible`, `opacity`, `zIndex`, `filters`, `style`, `sourceId`, `legend`, and `minZoom`/`maxZoom` where relevant. Preserve provenance and time validity of displayed features.
 
@@ -50,13 +50,13 @@ Every layer should expose: `id`, `type`, `visible`, `opacity`, `zIndex`, `filter
 
 Zooming should change **which knowledge is displayed**, not merely scale icons.
 
-| Geographic scope | Default content |
-|---|---|
-| World | Countries, boundaries, high-level indicators |
-| Country | Provinces, major cities, national systems |
-| Province/region | Municipalities, industrial clusters, infrastructure corridors |
-| City/district | Individual institutions, businesses, facilities |
-| Entity | Detailed entity record, documented relationships, evidence |
+| Geographic scope | Default content                                               |
+| ---------------- | ------------------------------------------------------------- |
+| World            | Countries, boundaries, high-level indicators                  |
+| Country          | Provinces, major cities, national systems                     |
+| Province/region  | Municipalities, industrial clusters, infrastructure corridors |
+| City/district    | Individual institutions, businesses, facilities               |
+| Entity           | Detailed entity record, documented relationships, evidence    |
 
 Implement geographic scope and information density as **separate controls**. Users can choose `overview`, `regional`, or `detailed` density, subject to performance and data availability. Use feature clustering, label collision management, viewport-based loading, and progressively detailed geometry. Do not imply exact locations or relationships when data is unavailable.
 
@@ -104,16 +104,16 @@ Selection, geographical context, filters, and time should carry across modes. Se
 
 The AI translates requests into **validated, declarative actions**. It never sends executable UI code.
 
-| Action family | Examples |
-|---|---|
-| Navigation | `FLY_TO`, `FOCUS_REGION`, `FIT_VIEW`, `RESET_VIEW` |
-| Layers | `ADD_LAYER`, `REMOVE_LAYER`, `SET_LAYER_VISIBILITY`, `SET_LAYER_OPACITY`, `REORDER_LAYERS` |
-| Filtering | `SET_FILTERS`, `SET_TIME_RANGE`, `SET_INFORMATION_DENSITY` |
-| Selection | `SELECT_ENTITIES`, `HIGHLIGHT_RELATIONSHIPS`, `ISOLATE_ENTITIES`, `CLEAR_SELECTION` |
-| Visualization | `SET_VISUALIZATION_MODE`, `LOAD_HIERARCHY`, `LOAD_GRAPH`, `LOAD_FLOW`, `CREATE_CHART` |
-| Layout | `SET_LAYOUT`, `OPEN_DETAIL_PANEL`, `FIT_CANVAS` |
-| Explanation | `ADD_ANNOTATION`, `SHOW_SOURCES`, `TRACE_DEPENDENCY` |
-| History | `UNDO`, `REDO`, `RESTORE_VIEW` |
+| Action family | Examples                                                                                   |
+| ------------- | ------------------------------------------------------------------------------------------ |
+| Navigation    | `FLY_TO`, `FOCUS_REGION`, `FIT_VIEW`, `RESET_VIEW`                                         |
+| Layers        | `ADD_LAYER`, `REMOVE_LAYER`, `SET_LAYER_VISIBILITY`, `SET_LAYER_OPACITY`, `REORDER_LAYERS` |
+| Filtering     | `SET_FILTERS`, `SET_TIME_RANGE`, `SET_INFORMATION_DENSITY`                                 |
+| Selection     | `SELECT_ENTITIES`, `HIGHLIGHT_RELATIONSHIPS`, `ISOLATE_ENTITIES`, `CLEAR_SELECTION`        |
+| Visualization | `SET_VISUALIZATION_MODE`, `LOAD_HIERARCHY`, `LOAD_GRAPH`, `LOAD_FLOW`, `CREATE_CHART`      |
+| Layout        | `SET_LAYOUT`, `OPEN_DETAIL_PANEL`, `FIT_CANVAS`                                            |
+| Explanation   | `ADD_ANNOTATION`, `SHOW_SOURCES`, `TRACE_DEPENDENCY`                                       |
+| History       | `UNDO`, `REDO`, `RESTORE_VIEW`                                                             |
 
 ### Example: platinum mines and electricity
 
@@ -246,3 +246,11 @@ Design the responsive website for future React Native WebView embedding. Use mob
 **The map is the permanent geographical reference, not a forced container for all information.** Physical assets belong on the map; institutional structures belong in hierarchies; ownership and dependencies belong in graphs; processes belong in flows; and measurements belong in charts.
 
 Civic Intelligence's defining capability is transforming the **same sourced knowledge** into different, synchronized, interactive visual representations, with AI directing those transformations and explaining them.
+
+## 11. Country learning topics and AI orchestration
+
+The [country learning design](docs/country-learning/README.md) develops ten learning topics: geography, people, government, administrative divisions, economy, history, laws and rights, public services, infrastructure, and international relations.
+
+Each topic describes categories, interactive learning, an AI-orchestrated example, evidence requirements, current support and proposed additions. The shared [AI orchestration guide](docs/country-learning/ai-orchestration.md) defines the question → retrieval → display → explanation loop; the [integration guide](docs/country-learning/integration-and-delivery.md) maps it to the existing code and delivery stages.
+
+These documents specify future learning capabilities without treating them as implemented features. They preserve country-specific structures, source dates, reversible display changes, manual exploration and details on demand.

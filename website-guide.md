@@ -2,6 +2,8 @@
 
 The original product brief is preserved in [docs/product-brief.md](docs/product-brief.md). This implementation replaces the old marketing website, whose guide is archived in [docs/website-guide.legacy.md](docs/website-guide.legacy.md).
 
+The [country learning design](docs/country-learning/README.md) explains ten learning topics and how AI can orchestrate reviewed knowledge, interactive displays and user exploration. Its topic guides, orchestration model and integration roadmap distinguish current support from proposed learning features.
+
 ## Implemented workspace
 
 Next.js App Router, TypeScript, Tailwind, Zustand, MapLibre, React Flow, Cytoscape and ECharts provide a responsive knowledge workspace with seven views: Map, Hierarchy, Relationships, System flow, Data, Compare and History.

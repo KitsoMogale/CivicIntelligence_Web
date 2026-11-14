@@ -107,3 +107,7 @@ Live AI and embedding generation remain optional. Do not place server keys in `N
 ## World country coverage
 
 Country profiles now cover 237 countries and areas with dated reference geography, initial Botswana and Namibia institution profiles, and historical World Bank comparisons. See [coverage, sources and reproduction](docs/world-coverage.md) for the scope and data caveats.
+
+## Country learning design
+
+The [country learning documentation](docs/country-learning/README.md) covers ten topics, their categories, interactive learning journeys, evidence requirements and current/proposed capabilities. It includes an AI orchestration design and an implementation roadmap connecting knowledge retrieval, shared canvas state and user exploration.
