@@ -4,13 +4,17 @@ import {
   retrieveSearch,
   retrieveEntities,
 } from "@/lib/retrieval";
-import { entities, datasets, sources } from "@/lib/knowledge";
+import { countries, entities, datasets, getSources } from "@/lib/knowledge";
+import { countryProfile } from "@/lib/country-profiles";
 export async function GET(req: Request) {
   const params = new URL(req.url).searchParams,
     country = params.get("country") || "ZA",
     query = params.get("q"),
     id = params.get("entity");
-  if (!/^[A-Z]{2}$/.test(country) || (query && query.length > 2000))
+  if (
+    !countries.some((c) => c.code === country) ||
+    (query && query.length > 2000)
+  )
     return Response.json({ error: "Invalid query" }, { status: 400 });
   try {
     if (id) {
@@ -26,8 +30,14 @@ export async function GET(req: Request) {
       entities: query
         ? await retrieveSearch(query, country)
         : await retrieveEntities(country),
-      datasets: country === "ZA" ? datasets : [],
-      sources: country === "ZA" ? sources : [],
+      datasets: datasets.filter((d) => (d.country ?? "ZA") === country),
+      sources: getSources([
+        ...entities
+          .filter((e) => e.country === country)
+          .flatMap((e) => e.sourceIds),
+        ...countryProfile(country).sourceIds,
+        countryProfile(country).boundary.sourceId,
+      ]),
     });
   } catch {
     return Response.json(

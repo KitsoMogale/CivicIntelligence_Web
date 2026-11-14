@@ -11,6 +11,7 @@ import { modeSchema } from "./actions";
 import type { Country, Domain, Mode } from "./types";
 import { networkSchema, type NetworkQuery } from "./network";
 import { wardById, type BoundaryEdition } from "./boundaries";
+import { supportsCountryMode, domainRoot } from "./country-profiles";
 import {
   cameraSchema,
   densitySchema,
@@ -201,14 +202,14 @@ export function normalizeExploration(input: unknown): Exploration {
     !indicators.some((i) => i.code === value.indicatorCode)
   )
     throw new Error("Unknown indicator");
-  if (
-    country.code !== "ZA" &&
-    !["geographic", "compare", "timeline"].includes(value.mode)
-  )
+  if (!supportsCountryMode(country.code, value.mode))
     throw new Error("Detailed country coverage is unavailable");
   const layers = value.layers ?? legacyLayers(value);
   return {
     ...value,
+    domain: domainRoot(country.code, value.domain)
+      ? value.domain
+      : "government",
     selectedWardId:
       value.boundaryEdition === "mdb-2026" &&
       wardById(value.selectedWardId)?.municipalityId === value.region

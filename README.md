@@ -84,7 +84,7 @@ That server uses `.next-verify` and http://127.0.0.1:3100, leaving the regular b
 
 ## Data and release workflow
 
-The curated catalogue contains **396 entities, 399 relationships, 92 references, nine province regions, 257 municipal boundary identities, 4,485 wards, two Census datasets, two World Bank indicator series, six provincial metrics (54 observations) and seven dated events**. Navigation and geographic-context links are included in the relationship count.
+The catalogue contains **4,238 entities, 4,007 relationships, 301 references, 237 country/area profiles, 3,382 world reference areas, nine South African province regions, 257 municipal boundary identities, 4,485 wards, two Census datasets, two World Bank indicator series, six provincial metrics (54 observations) and seven dated events**. Navigation and geographic-context links are included in the relationship count.
 
 See [data maintenance](docs/data-maintenance.md), [production setup](docs/production.md), [local verification](docs/local-verification.md), and the [product brief](docs/product-brief.md). `data/release.json` records the bundle digest used by database readiness checks.
 
@@ -94,7 +94,7 @@ See [data maintenance](docs/data-maintenance.md), [production setup](docs/produc
 
 ## Scope and evidence
 
-Institutional knowledge focuses on South Africa; statistical comparisons cover ZA/BW/NA. This is not a worldwide institutional register. The mining and station catalogues are curated examples, not exhaustive lists.
+Institutional knowledge is deepest in South Africa, with initial Botswana and Namibia profiles. Other countries show their dated geographic reference coverage and explicit institution gaps. Historical comparisons cover mapped World Bank economies where observations are published. The mining and station catalogues are curated examples, not exhaustive lists.
 
 Ownership and operating interests retain their reporting dates and legal-entity level. No current officeholder list, interest rate, asset output or forecasts are invented. Census counts and World Bank midyear estimates are different measures. The published 2011 provincial integers sum to one more person than the release's printed national total; source values are preserved.
 
@@ -103,3 +103,7 @@ Country and province reference geography is simplified. MDB municipality and war
 Investigations and review notes are browser-local; there is no account system or cloud synchronization. Review proposals are checked in the browser and applied through the repository workflow, not through an unauthenticated public write API. There is no collaboration, simulation or 3D view.
 
 Live AI and embedding generation remain optional. Do not place server keys in `NEXT_PUBLIC_` variables or exported reports. The labelled local guide works now.
+
+## World country coverage
+
+Country profiles now cover 237 countries and areas with dated reference geography, initial Botswana and Namibia institution profiles, and historical World Bank comparisons. See [coverage, sources and reproduction](docs/world-coverage.md) for the scope and data caveats.

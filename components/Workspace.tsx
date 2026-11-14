@@ -54,7 +54,16 @@ import {
   entityById,
   relationships,
   searchKnowledge,
+  countryDomain,
 } from "@/lib/knowledge";
+import {
+  countryProfile,
+  countryCoverage,
+  domainRoot,
+  supportsCountryMode,
+  referenceArea,
+} from "@/lib/country-profiles";
+import CountryProfileDialog from "./CountryProfileDialog";
 import { useExplorer } from "@/lib/store";
 import type { Domain, Mode } from "@/lib/types";
 import Assistant from "./Assistant";
@@ -132,11 +141,14 @@ export default function Workspace() {
     [countryList, setCountryList] = useState(countries),
     [expandedDomain, setExpandedDomain] = useState<Domain | null>(null),
     [mounted, setMounted] = useState(false);
+  const [profileOpen, setProfileOpen] = useState(false);
+  const profile = countryProfile(s.country.code);
   const searchInput = useRef<HTMLInputElement>(null);
   useEffect(() => {
     const geographicSelection =
       s.selectedWardId ||
       s.selectedEntity?.startsWith("za-municipality-") ||
+      referenceArea(s.selectedEntity) ||
       entityById(s.selectedEntity ?? "")?.type === "Province";
     const choosingWards =
       s.layers.some((l) => l.id === "wards" && l.visible) &&
@@ -188,6 +200,7 @@ export default function Workspace() {
         setSavedOpen(false);
         setNavOpen(false);
         setReportOpen(false);
+        setProfileOpen(false);
       }
     }
     window.addEventListener("keydown", key);
@@ -201,7 +214,7 @@ export default function Workspace() {
   const results = query.trim()
     ? searchKnowledge(query, s.country.code)
     : entities.filter((e) => e.country === s.country.code).slice(0, 5);
-  const currentDomain = domains.find((d) => d.id === s.domain)!;
+  const currentDomain = countryDomain(s.country.code, s.domain);
   const viewName =
     s.mode === "compare"
       ? "Country comparison"
@@ -359,10 +372,15 @@ export default function Workspace() {
             <Bookmark size={19} />
           </button>
           <button
-            disabled={s.country.code !== "ZA"}
+            disabled={
+              !profile.comparisonIndicators.length &&
+              !supportsCountryMode(s.country.code, "data")
+            }
             aria-label="View population data"
             onClick={() => {
-              s.selectDomain("society");
+              if (supportsCountryMode(s.country.code, "data"))
+                s.selectDomain("society");
+              else s.setMode("compare");
             }}
           >
             <ChartNoAxesCombined size={19} />
@@ -438,12 +456,14 @@ export default function Workspace() {
             </select>
             <ChevronDown size={13} />
           </div>
-          <div className="country-coverage">
+          <button
+            className="country-coverage"
+            aria-label="Country structure and coverage"
+            onClick={() => setProfileOpen(true)}
+          >
             <span className="coverage-dot" />
-            {s.country.code === "ZA"
-              ? "Curated knowledge coverage"
-              : "Map coverage · knowledge coming"}
-          </div>
+            {countryCoverage(s.country.code)}
+          </button>
           <button
             className={
               "world-overview " + (s.mode === "geographic" ? "selected" : "")
@@ -460,10 +480,13 @@ export default function Workspace() {
           <div className="sidebar-divider" />
           <div className="sidebar-section-label">
             KNOWLEDGE DOMAINS{" "}
-            <span>{s.country.code === "ZA" ? "06" : "00"}</span>
+            <span>
+              {String(Object.keys(profile.domainRoots).length).padStart(2, "0")}
+            </span>
           </div>
           <div className="domain-list">
-            {domains.map((d) => {
+            {domains.map((base) => {
+              const d = countryDomain(s.country.code, base.id);
               const Icon = domainIcons[d.id];
               const active =
                 s.domain === d.id &&
@@ -471,7 +494,7 @@ export default function Workspace() {
               return (
                 <div key={d.id}>
                   <button
-                    disabled={s.country.code !== "ZA"}
+                    disabled={!domainRoot(s.country.code, d.id)}
                     className={"domain-button " + (active ? "active" : "")}
                     onClick={() => domainSelect(d.id)}
                   >
@@ -483,13 +506,15 @@ export default function Workspace() {
                       <ChevronRight size={13} />
                     )}
                   </button>
-                  {expandedDomain === d.id && s.country.code === "ZA" && (
-                    <KnowledgeTree
-                      domain={d.id}
-                      root={d.root}
-                      onSelect={() => setAiOpen(true)}
-                    />
-                  )}
+                  {expandedDomain === d.id &&
+                    domainRoot(s.country.code, d.id) && (
+                      <KnowledgeTree
+                        key={s.country.code + "-" + d.id}
+                        domain={d.id}
+                        root={d.root}
+                        onSelect={() => setAiOpen(true)}
+                      />
+                    )}
                 </div>
               );
             })}
@@ -502,7 +527,7 @@ export default function Workspace() {
               <strong>A starting point for discovery.</strong>
               <p>
                 Follow a company to its operations, compare countries, or
-                explore the provincial map.
+                explore the available administrative map.
               </p>
               <button onClick={() => setHelp(true)}>
                 About this workspace <ArrowUpRight size={12} />
@@ -656,10 +681,7 @@ export default function Workspace() {
                 <button
                   role="tab"
                   aria-selected={s.mode === m.id}
-                  disabled={
-                    s.country.code !== "ZA" &&
-                    !["geographic", "compare", "timeline"].includes(m.id)
-                  }
+                  disabled={!supportsCountryMode(s.country.code, m.id)}
                   key={m.id}
                   onClick={() => s.setMode(m.id)}
                   className={s.mode === m.id ? "active" : ""}
@@ -750,15 +772,18 @@ export default function Workspace() {
               references included
             </span>
             <span>
-              {s.country.code === "ZA"
-                ? "SOUTH AFRICA SEED"
-                : "LIMITED COVERAGE"}{" "}
+              {profile.institutions === "not-curated"
+                ? "REFERENCE COVERAGE"
+                : "CURATED COUNTRY PROFILE"}{" "}
               <span className="footer-dot" /> {s.mode.toUpperCase()}
             </span>
           </footer>
         </main>
         <Assistant hidden={!aiOpen} close={() => setAiOpen(false)} />
       </div>
+      {profileOpen && (
+        <CountryProfileDialog close={() => setProfileOpen(false)} />
+      )}
       {notice && (
         <div className="toast" role="status">
           <Check size={15} />
@@ -825,10 +850,11 @@ export default function Workspace() {
                   </li>
                 </ul>
                 <p>
-                  Detailed institutional coverage starts with South Africa.
-                  Compare historical World Bank population and GDP growth for
-                  South Africa, Botswana and Namibia. Source dates and coverage
-                  limits are shown throughout.
+                  Country profiles show their own geographic coverage and source
+                  dates. Initial institution profiles cover South Africa,
+                  Botswana and Namibia. Compare historical World Bank population
+                  and GDP growth where observations are published; missing
+                  values remain unavailable.
                 </p>
                 <div className="modal-links">
                   <Link href="/privacy">Privacy</Link>

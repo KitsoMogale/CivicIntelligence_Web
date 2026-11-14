@@ -1,0 +1,1721 @@
+[
+  {
+    "file": "countries.geojson",
+    "features": 242,
+    "sourceId": "world-natural-earth-countries",
+    "bytes": 2320499,
+    "sha256": "5890b447e4c9ac5f7666748e10bfb5cc208a5d91186371305cf4e825525b18fe"
+  },
+  {
+    "country": "AD",
+    "file": "world/AD.geojson",
+    "features": 7,
+    "sourceId": "world-gb-ad-adm1",
+    "bytes": 12732,
+    "sha256": "a5c89ca5cdb675bce6af26c97475854846ff7589e289ef9d6abaca34557fe651"
+  },
+  {
+    "country": "AE",
+    "file": "world/AE.geojson",
+    "features": 7,
+    "sourceId": "world-gb-ae-adm1",
+    "bytes": 175640,
+    "sha256": "26c87685b7c9f9350f1a919d926959913b5fe66f89a7964e5ade06a1e89042ae"
+  },
+  {
+    "country": "AF",
+    "file": "world/AF.geojson",
+    "features": 34,
+    "sourceId": "world-gb-af-adm1",
+    "bytes": 157145,
+    "sha256": "ac6f5d6603bfa2853e918239fc3bb4897cf4c9f81bbf0ab41b208cc8768eb6a1"
+  },
+  {
+    "country": "AG",
+    "file": "world/AG.geojson",
+    "features": 8,
+    "sourceId": "world-gb-ag-adm1",
+    "bytes": 23869,
+    "sha256": "0694dcb5af44535355b6d81b466a30c259eac424ef13d318fb861286651aa5bc"
+  },
+  {
+    "country": "AI",
+    "file": "world/AI.geojson",
+    "features": 15,
+    "sourceId": "world-natural-earth-divisions",
+    "bytes": 42643,
+    "sha256": "07e9766b5e35ef3b4e25b3cdf93abc1227659e99b120bc5edfd4f7338febf43b"
+  },
+  {
+    "country": "AL",
+    "file": "world/AL.geojson",
+    "features": 12,
+    "sourceId": "world-gb-al-adm1",
+    "bytes": 52806,
+    "sha256": "2f24886eafad948ad43ec48e31ff67ab05047517bb3fdab922d0275cb97b99d6"
+  },
+  {
+    "country": "AM",
+    "file": "world/AM.geojson",
+    "features": 11,
+    "sourceId": "world-gb-am-adm1",
+    "bytes": 72945,
+    "sha256": "620f90620fb2bcb3cc16298a308c8569831d617ebacb90adaf7c9351a9718ebe"
+  },
+  {
+    "country": "AO",
+    "file": "world/AO.geojson",
+    "features": 18,
+    "sourceId": "world-gb-ao-adm1",
+    "bytes": 517307,
+    "sha256": "f3957bb9aefc850cf67f3ae0ef7dba5448b2b36545839546adfba6e85de3bdad"
+  },
+  {
+    "country": "AQ",
+    "file": "world/AQ.geojson",
+    "features": 2,
+    "sourceId": "world-natural-earth-divisions",
+    "bytes": 565694,
+    "sha256": "0aefbf1b8539b66dbf35c6bdc9463d0e857fe10afc10d56a0f6aeab966e7c9cf"
+  },
+  {
+    "country": "AR",
+    "file": "world/AR.geojson",
+    "features": 23,
+    "sourceId": "world-gb-ar-adm1",
+    "bytes": 164211,
+    "sha256": "9a1b239c0178bcdf3ade72d14a88fe3231ebb7be81f9d4c3505338bc2aea308c"
+  },
+  {
+    "country": "AS",
+    "file": "world/AS.geojson",
+    "features": 5,
+    "sourceId": "world-natural-earth-divisions",
+    "bytes": 14520,
+    "sha256": "9ecef761a99145b2cd29289fa71205fef6c3cc5a2a2dc3a9e92e532d32431567"
+  },
+  {
+    "country": "AT",
+    "file": "world/AT.geojson",
+    "features": 9,
+    "sourceId": "world-gb-at-adm1",
+    "bytes": 349518,
+    "sha256": "6975ebda367ff6015eb46127666f7eb59cca649b122f18c2e82e9508acbd25dd"
+  },
+  {
+    "country": "AU",
+    "file": "world/AU.geojson",
+    "features": 9,
+    "sourceId": "world-gb-au-adm1",
+    "bytes": 4214226,
+    "sha256": "1c774d33d604b7c054ba249608a68ec44bb6758317c4cb7738264e71c0cbb32e"
+  },
+  {
+    "country": "AX",
+    "file": "world/AX.geojson",
+    "features": 11,
+    "sourceId": "world-natural-earth-divisions",
+    "bytes": 34480,
+    "sha256": "b2a2af1e74ead9d4e4710e8061abe30d4879c98d2a6a09a7587651781e581f4f"
+  },
+  {
+    "country": "AZ",
+    "file": "world/AZ.geojson",
+    "features": 2,
+    "sourceId": "world-gb-az-adm1",
+    "bytes": 106213,
+    "sha256": "aa22a136dda22d48b4fc48ed4475ef9f3c12993059941fea949a8ee69dcfdb30"
+  },
+  {
+    "country": "BA",
+    "file": "world/BA.geojson",
+    "features": 3,
+    "sourceId": "world-gb-ba-adm1",
+    "bytes": 110542,
+    "sha256": "16df2d4e6a85519d6f338e348be40d3a12f6e6b4d9526137e7360a13fb874957"
+  },
+  {
+    "country": "BB",
+    "file": "world/BB.geojson",
+    "features": 11,
+    "sourceId": "world-gb-bb-adm1",
+    "bytes": 11718,
+    "sha256": "ee6d4e6a80e7f4da25e964c10def0c1d87b8ad2c60acb361d7167aa56a5db5a2"
+  },
+  {
+    "country": "BD",
+    "file": "world/BD.geojson",
+    "features": 8,
+    "sourceId": "world-gb-bd-adm1",
+    "bytes": 81558,
+    "sha256": "229cc2978692c8b2e372e1583106bae4da16e9c140af1070980371c218c08e42"
+  },
+  {
+    "country": "BE",
+    "file": "world/BE.geojson",
+    "features": 3,
+    "sourceId": "world-gb-be-adm1",
+    "bytes": 5865,
+    "sha256": "69111bf42d8c29f0ecc823aab2868c8c78c66e6977e4e5f33cf9d02475008302"
+  },
+  {
+    "country": "BF",
+    "file": "world/BF.geojson",
+    "features": 13,
+    "sourceId": "world-gb-bf-adm1",
+    "bytes": 314478,
+    "sha256": "e17ce69fc87948c88ddcf25432dbc97722d8180dbca29da5d1731c052e4e0e8b"
+  },
+  {
+    "country": "BG",
+    "file": "world/BG.geojson",
+    "features": 28,
+    "sourceId": "world-gb-bg-adm1",
+    "bytes": 229482,
+    "sha256": "68d45a9849a9ecd07651f2e3757f9d111a1746f5ae8c8eaa133506cc3fd32bde"
+  },
+  {
+    "country": "BH",
+    "file": "world/BH.geojson",
+    "features": 4,
+    "sourceId": "world-gb-bh-adm1",
+    "bytes": 34878,
+    "sha256": "8d89789e3fb2ddc5b235c53858ba8365ecf04310c6ef0df353ccafd38184929e"
+  },
+  {
+    "country": "BI",
+    "file": "world/BI.geojson",
+    "features": 18,
+    "sourceId": "world-gb-bi-adm1",
+    "bytes": 126560,
+    "sha256": "97cc0e5b69b1872ebb0093a498e463fb6cad9b33951adcbee61c459bce205a21"
+  },
+  {
+    "country": "BJ",
+    "file": "world/BJ.geojson",
+    "features": 12,
+    "sourceId": "world-gb-bj-adm1",
+    "bytes": 52410,
+    "sha256": "4fd9c5a59e8d38e72fcb89a9a7cf148a4b3babd070e5e7b86f78ba9d15098fa8"
+  },
+  {
+    "country": "BM",
+    "file": "world/BM.geojson",
+    "features": 11,
+    "sourceId": "world-natural-earth-divisions",
+    "bytes": 31473,
+    "sha256": "c123881e2b19fedbd3aa8f3e09404b3ceb9d0b93f9eac1e95eed92d80e98bdd2"
+  },
+  {
+    "country": "BN",
+    "file": "world/BN.geojson",
+    "features": 4,
+    "sourceId": "world-gb-bn-adm1",
+    "bytes": 31072,
+    "sha256": "dbbfb00c5cd0d03ae596d3a4e1b724fb31f9ae9f37fbaf3c6d09f43eafeaa652"
+  },
+  {
+    "country": "BO",
+    "file": "world/BO.geojson",
+    "features": 9,
+    "sourceId": "world-gb-bo-adm1",
+    "bytes": 890143,
+    "sha256": "c9e4b95e26a685f0fa83ab20b19831910c1415dc58c4c754e8085b144eb96dd4"
+  },
+  {
+    "country": "BR",
+    "file": "world/BR.geojson",
+    "features": 27,
+    "sourceId": "world-gb-br-adm1",
+    "bytes": 1329673,
+    "sha256": "817fb76a58d8f347ec0c70c09929c22906daabbc27bef9d6b1c034cd89feeff3"
+  },
+  {
+    "country": "BS",
+    "file": "world/BS.geojson",
+    "features": 32,
+    "sourceId": "world-gb-bs-adm1",
+    "bytes": 760526,
+    "sha256": "c9b63b95a678b6a5bbfefa4f5d9fc3a55a71f526f9e024354953512e4e7eea65"
+  },
+  {
+    "country": "BT",
+    "file": "world/BT.geojson",
+    "features": 20,
+    "sourceId": "world-gb-bt-adm1",
+    "bytes": 90274,
+    "sha256": "c8039195f3ab3171051d1e7f26b019430dc2033645d203e17f7cd9e6350f6922"
+  },
+  {
+    "country": "BW",
+    "file": "world/BW.geojson",
+    "features": 10,
+    "sourceId": "world-gb-bw-adm1",
+    "bytes": 113172,
+    "sha256": "cb76a87ec8b4f05caaea25ed2c22a61ba113fd9aa73f45e281c3aa936bd26aef"
+  },
+  {
+    "country": "BY",
+    "file": "world/BY.geojson",
+    "features": 7,
+    "sourceId": "world-gb-by-adm1",
+    "bytes": 226928,
+    "sha256": "05b62e2645fe247a51aacf83b5313aefac17895373231422da977080a1236be9"
+  },
+  {
+    "country": "BZ",
+    "file": "world/BZ.geojson",
+    "features": 6,
+    "sourceId": "world-gb-bz-adm1",
+    "bytes": 46314,
+    "sha256": "0a6458a1e5da7f68713f61a6c4d532dea8a510dd53968de0959294d496034b38"
+  },
+  {
+    "country": "CA",
+    "file": "world/CA.geojson",
+    "features": 13,
+    "sourceId": "world-gb-ca-adm1",
+    "bytes": 26023331,
+    "sha256": "ee00e8bbe1790f654f42d1851821418ba5fa8d47db44ec9eafaef85af11c0d7e"
+  },
+  {
+    "country": "CD",
+    "file": "world/CD.geojson",
+    "features": 26,
+    "sourceId": "world-gb-cd-adm1",
+    "bytes": 986222,
+    "sha256": "748af48a0268cd4f1ffc4795ee842929118fab926eadfbfe20f838e3a76a3096"
+  },
+  {
+    "country": "CF",
+    "file": "world/CF.geojson",
+    "features": 17,
+    "sourceId": "world-gb-cf-adm1",
+    "bytes": 104864,
+    "sha256": "955fcd386544052cafc5274a0f477280b64ea2b5df9f93c5caa0b5b5dbd1ecc5"
+  },
+  {
+    "country": "CG",
+    "file": "world/CG.geojson",
+    "features": 12,
+    "sourceId": "world-gb-cg-adm1",
+    "bytes": 146436,
+    "sha256": "14960cb9179149ba5558f7ba1d67e681f56f60a5436859879a117db3855ae788"
+  },
+  {
+    "country": "CH",
+    "file": "world/CH.geojson",
+    "features": 26,
+    "sourceId": "world-gb-ch-adm1",
+    "bytes": 393340,
+    "sha256": "e63c32ea158aa3459cd873b2ac92ff91f7ddf89032ed15962494f7438785947b"
+  },
+  {
+    "country": "CI",
+    "file": "world/CI.geojson",
+    "features": 14,
+    "sourceId": "world-gb-ci-adm1",
+    "bytes": 444224,
+    "sha256": "0248ecd8c06130c665ba4901019b1a97eb23f5e55fff15cb993bf34a0ea0a20e"
+  },
+  {
+    "country": "CK",
+    "file": "world/CK.geojson",
+    "features": 11,
+    "sourceId": "world-natural-earth-divisions",
+    "bytes": 30795,
+    "sha256": "736b45e1e81ff946782d8c740ef5f8a44256710274ce83fcc3520122fc871280"
+  },
+  {
+    "country": "CL",
+    "file": "world/CL.geojson",
+    "features": 16,
+    "sourceId": "world-gb-cl-adm1",
+    "bytes": 7049979,
+    "sha256": "1ab2cc1df433ab391a1baabe19a367bf18517f7c5b9f9c2d1666c0bea0595153"
+  },
+  {
+    "country": "CM",
+    "file": "world/CM.geojson",
+    "features": 10,
+    "sourceId": "world-gb-cm-adm1",
+    "bytes": 132350,
+    "sha256": "562b86e183977689298d4a0162938a05702eae8ff3842b97d82506e5f1553f30"
+  },
+  {
+    "country": "CN",
+    "file": "world/CN.geojson",
+    "features": 34,
+    "sourceId": "world-gb-cn-adm1",
+    "bytes": 234245,
+    "sha256": "1515aad1fb42df22373e551ba0a98125e6cbc8c33f1fe4d12d329890dfbecc94"
+  },
+  {
+    "country": "CO",
+    "file": "world/CO.geojson",
+    "features": 33,
+    "sourceId": "world-gb-co-adm1",
+    "bytes": 1053098,
+    "sha256": "74c1f798a6abc4ee41a1c67490d42dee0d14f8c1d154edbf5aac5241b3044204"
+  },
+  {
+    "country": "CR",
+    "file": "world/CR.geojson",
+    "features": 7,
+    "sourceId": "world-gb-cr-adm1",
+    "bytes": 136551,
+    "sha256": "fa176ca7c5642cabcacb5e5c8a149498c8b2a57b2c4d27c63a485574ee667543"
+  },
+  {
+    "country": "CU",
+    "file": "world/CU.geojson",
+    "features": 16,
+    "sourceId": "world-gb-cu-adm1",
+    "bytes": 481307,
+    "sha256": "7e84011b50f5dd3e0a48a4f275bafd80ecd3661dc4e7d202ea4f84c20bf98827"
+  },
+  {
+    "country": "CV",
+    "file": "world/CV.geojson",
+    "features": 22,
+    "sourceId": "world-gb-cv-adm1",
+    "bytes": 60211,
+    "sha256": "5efb2b72310e15e0a47769d4e77f9f65dbb979d37adec975a30e2c09d5a5d743"
+  },
+  {
+    "country": "CY",
+    "file": "world/CY.geojson",
+    "features": 6,
+    "sourceId": "world-gb-cy-adm1",
+    "bytes": 56687,
+    "sha256": "603aa8887d1f0be85c517591f7106b93d83e2d9d7f2e8ab458641335a4386216"
+  },
+  {
+    "country": "CZ",
+    "file": "world/CZ.geojson",
+    "features": 14,
+    "sourceId": "world-gb-cz-adm1",
+    "bytes": 568720,
+    "sha256": "ae7083073b772ccb78ba9f6dc82c31311778c43542ed83b8c1fb42b384aac98c"
+  },
+  {
+    "country": "DE",
+    "file": "world/DE.geojson",
+    "features": 16,
+    "sourceId": "world-gb-de-adm1",
+    "bytes": 1080047,
+    "sha256": "e241804a647d94b78d9bae33e7c7b8ce0a0c46708d25cbb3d3128e2cb14ba3b0"
+  },
+  {
+    "country": "DJ",
+    "file": "world/DJ.geojson",
+    "features": 6,
+    "sourceId": "world-gb-dj-adm1",
+    "bytes": 12959,
+    "sha256": "b920075624ff22f3e528a8143a90ecea63f6846792c08309db2cff0dd45766d6"
+  },
+  {
+    "country": "DK",
+    "file": "world/DK.geojson",
+    "features": 5,
+    "sourceId": "world-gb-dk-adm1",
+    "bytes": 243893,
+    "sha256": "2321dd4ea5854cbd56e6bf7220ddc7d209ae6f906f7bb31fb0e5b6139f9683c5"
+  },
+  {
+    "country": "DM",
+    "file": "world/DM.geojson",
+    "features": 10,
+    "sourceId": "world-gb-dm-adm1",
+    "bytes": 22230,
+    "sha256": "c2f75e20bf9f391021258586dae4dbc1af1726be0c5afb6cd90412bfb2ba7ff7"
+  },
+  {
+    "country": "DO",
+    "file": "world/DO.geojson",
+    "features": 32,
+    "sourceId": "world-gb-do-adm1",
+    "bytes": 78113,
+    "sha256": "03b2cef5dde6b8e0e303bc09a25da1c71f9c4ea1ac0e19d29ce3b226063d1d46"
+  },
+  {
+    "country": "DZ",
+    "file": "world/DZ.geojson",
+    "features": 48,
+    "sourceId": "world-gb-dz-adm1",
+    "bytes": 580056,
+    "sha256": "43ae99d7b502580b9bbdd0c943a32a1c50a10b1646355b7e81612318b1502ef1"
+  },
+  {
+    "country": "EC",
+    "file": "world/EC.geojson",
+    "features": 24,
+    "sourceId": "world-gb-ec-adm1",
+    "bytes": 366514,
+    "sha256": "ed881273a0b5a2899379fac8588970b2f74c84d106f4396933111e88b9e1381d"
+  },
+  {
+    "country": "EE",
+    "file": "world/EE.geojson",
+    "features": 15,
+    "sourceId": "world-gb-ee-adm1",
+    "bytes": 363043,
+    "sha256": "528b27c8653ff55a2e80ae5a512207b295e7e36c4c070f1420894616dde6a5b0"
+  },
+  {
+    "country": "EG",
+    "file": "world/EG.geojson",
+    "features": 27,
+    "sourceId": "world-gb-eg-adm1",
+    "bytes": 169266,
+    "sha256": "3c34aab4d11528931115173f12337390dc19383a637b24747756a94d586be591"
+  },
+  {
+    "country": "ER",
+    "file": "world/ER.geojson",
+    "features": 6,
+    "sourceId": "world-gb-er-adm1",
+    "bytes": 141627,
+    "sha256": "b96d6f661ee95c95287e50632472241e352e394c791437625d2de851666d94e8"
+  },
+  {
+    "country": "ES",
+    "file": "world/ES.geojson",
+    "features": 19,
+    "sourceId": "world-gb-es-adm1",
+    "bytes": 843816,
+    "sha256": "20689966e3c3843477e2c38a5df16f7c332dfd5543c797a91deabfbe01fec428"
+  },
+  {
+    "country": "ET",
+    "file": "world/ET.geojson",
+    "features": 11,
+    "sourceId": "world-gb-et-adm1",
+    "bytes": 348899,
+    "sha256": "3c70ac44f94cad415cbc74a6b16510603ea6a63c3d9d470ef9f6bf421b98810c"
+  },
+  {
+    "country": "FI",
+    "file": "world/FI.geojson",
+    "features": 19,
+    "sourceId": "world-gb-fi-adm1",
+    "bytes": 913613,
+    "sha256": "67d3f726434d17ae775cdb97413727e989e3273e3c2f4a4881efbd7de68977f9"
+  },
+  {
+    "country": "FJ",
+    "file": "world/FJ.geojson",
+    "features": 4,
+    "sourceId": "world-gb-fj-adm1",
+    "bytes": 33053,
+    "sha256": "af71ad62b577b74d8cc333819093de691f94595d17a066d50a4e4cead0979d44"
+  },
+  {
+    "country": "FM",
+    "file": "world/FM.geojson",
+    "features": 4,
+    "sourceId": "world-gb-fm-adm1",
+    "bytes": 78723,
+    "sha256": "806ef11a412dd10cf217dc2f06e7a6421655c29a3a8ddcc1f62bb51369292d04"
+  },
+  {
+    "country": "FR",
+    "file": "world/FR.geojson",
+    "features": 13,
+    "sourceId": "world-gb-fr-adm1",
+    "bytes": 1492460,
+    "sha256": "abb653c6afba1dd9aa8f251dbe6798ffbe5bfeded45dfd1821a093c42a652a12"
+  },
+  {
+    "country": "GA",
+    "file": "world/GA.geojson",
+    "features": 9,
+    "sourceId": "world-gb-ga-adm1",
+    "bytes": 81762,
+    "sha256": "b52f4badbd2981417258ad93495f0fcd797a91e6438debf71558f64f55de2f3c"
+  },
+  {
+    "country": "GB",
+    "file": "world/GB.geojson",
+    "features": 4,
+    "sourceId": "world-gb-gb-adm1",
+    "bytes": 171268,
+    "sha256": "a49cb0ffc38e722fe17cb30c511da4f8c076bc338edb7b5b9b97ed89f931280c"
+  },
+  {
+    "country": "GD",
+    "file": "world/GD.geojson",
+    "features": 7,
+    "sourceId": "world-gb-gd-adm1",
+    "bytes": 19545,
+    "sha256": "5a9ad7f81226d42f7ae5ecd6943d3cae425d08973ad9350150885248eb87d390"
+  },
+  {
+    "country": "GE",
+    "file": "world/GE.geojson",
+    "features": 12,
+    "sourceId": "world-gb-ge-adm1",
+    "bytes": 146527,
+    "sha256": "024318fe0961a616e19da8f817b2cb78cfe92db90461be6ee28d1c1c681a1ac0"
+  },
+  {
+    "country": "GH",
+    "file": "world/GH.geojson",
+    "features": 16,
+    "sourceId": "world-gb-gh-adm1",
+    "bytes": 230125,
+    "sha256": "b13e2527cb1af276dedde792c1e3c7ae62fd595225486e06b9d4f74b08bce8ea"
+  },
+  {
+    "country": "GL",
+    "file": "world/GL.geojson",
+    "features": 6,
+    "sourceId": "world-gb-gl-adm1",
+    "bytes": 1401451,
+    "sha256": "86c01c0facdf0f0514ae3d554116d4346403856ddb1f3a4649584a909a1cfa97"
+  },
+  {
+    "country": "GM",
+    "file": "world/GM.geojson",
+    "features": 8,
+    "sourceId": "world-gb-gm-adm1",
+    "bytes": 73970,
+    "sha256": "5ae266c36d330d125c4f159cbc357037390ba6495e99a63cecb51cc22382e452"
+  },
+  {
+    "country": "GN",
+    "file": "world/GN.geojson",
+    "features": 8,
+    "sourceId": "world-gb-gn-adm1",
+    "bytes": 163330,
+    "sha256": "2973cec7db49824a0f7bc0c63ed4d5dd0a83d43fc553f4106b50720f303feb70"
+  },
+  {
+    "country": "GQ",
+    "file": "world/GQ.geojson",
+    "features": 7,
+    "sourceId": "world-gb-gq-adm1",
+    "bytes": 38333,
+    "sha256": "d5e04ac5943115be6396ec850c8a65868b38373d472c5fc95d54cbe26eaadb59"
+  },
+  {
+    "country": "GR",
+    "file": "world/GR.geojson",
+    "features": 8,
+    "sourceId": "world-gb-gr-adm1",
+    "bytes": 492066,
+    "sha256": "8980ef1cf71bf3284c5c2a7fca2b7f8292ce97357007dcd6b8040f02de8077b6"
+  },
+  {
+    "country": "GT",
+    "file": "world/GT.geojson",
+    "features": 22,
+    "sourceId": "world-gb-gt-adm1",
+    "bytes": 282685,
+    "sha256": "f902d77579ca035f229a370a4ef277f36c2c1664c72bc0cac119135937bde8af"
+  },
+  {
+    "country": "GW",
+    "file": "world/GW.geojson",
+    "features": 9,
+    "sourceId": "world-gb-gw-adm1",
+    "bytes": 157294,
+    "sha256": "171e659aae7669f55122fc2b8fe02d66a98baae0845f4afedbafe9068a6a7624"
+  },
+  {
+    "country": "GY",
+    "file": "world/GY.geojson",
+    "features": 10,
+    "sourceId": "world-gb-gy-adm1",
+    "bytes": 122606,
+    "sha256": "e13b6414ba55d287be3110320dd757b1d6e72644af6f895251eec03520b70037"
+  },
+  {
+    "country": "HK",
+    "file": "world/HK.geojson",
+    "features": 18,
+    "sourceId": "world-natural-earth-divisions",
+    "bytes": 59201,
+    "sha256": "52b79e0776e4e23cd4567a5bf485bc9dda7688603c0e72ab8ef2fd9c4fc0b994"
+  },
+  {
+    "country": "HN",
+    "file": "world/HN.geojson",
+    "features": 18,
+    "sourceId": "world-gb-hn-adm1",
+    "bytes": 265622,
+    "sha256": "6070671a2d4f0256da4d3935345da9be75c684b3f4e4d29fb52a3ca3ecc7365c"
+  },
+  {
+    "country": "HR",
+    "file": "world/HR.geojson",
+    "features": 21,
+    "sourceId": "world-gb-hr-adm1",
+    "bytes": 425717,
+    "sha256": "509fe3f5f5c99ed7cb58a67ebba42818f7e7473824a3580448f4af96aa391d50"
+  },
+  {
+    "country": "HT",
+    "file": "world/HT.geojson",
+    "features": 10,
+    "sourceId": "world-gb-ht-adm1",
+    "bytes": 152300,
+    "sha256": "f57230a0a485642026f779826c79147ca7d14f28d0a2c9860582f1ab27531a95"
+  },
+  {
+    "country": "HU",
+    "file": "world/HU.geojson",
+    "features": 43,
+    "sourceId": "world-natural-earth-divisions",
+    "bytes": 190522,
+    "sha256": "8de30eee3e3364d5db13760e7d10d239c0724fbd2468ecb89542a9285b558495"
+  },
+  {
+    "country": "ID",
+    "file": "world/ID.geojson",
+    "features": 34,
+    "sourceId": "world-gb-id-adm1",
+    "bytes": 2867491,
+    "sha256": "d29bbdccf9ad150e24af758650a11f1714c25d6d418887df2b98e28d7caee9cd"
+  },
+  {
+    "country": "IE",
+    "file": "world/IE.geojson",
+    "features": 4,
+    "sourceId": "world-gb-ie-adm1",
+    "bytes": 706620,
+    "sha256": "47a0977766f030a29f678dc3f32ca82f6f8edfede2c2a275e75cbae8af973fbb"
+  },
+  {
+    "country": "IL",
+    "file": "world/IL.geojson",
+    "features": 6,
+    "sourceId": "world-gb-il-adm1",
+    "bytes": 39632,
+    "sha256": "d49cbefcf09140db60b20b59d07a3f8d1740d97df216823ce88782029b1ad520"
+  },
+  {
+    "country": "IN",
+    "file": "world/IN.geojson",
+    "features": 36,
+    "sourceId": "world-gb-in-adm1",
+    "bytes": 4486345,
+    "sha256": "4b980063983e7893a2e7914ade957fe1d6390011f75cb52f989bb2705bc83ad8"
+  },
+  {
+    "country": "IQ",
+    "file": "world/IQ.geojson",
+    "features": 18,
+    "sourceId": "world-gb-iq-adm1",
+    "bytes": 132933,
+    "sha256": "868daa8aca903259fddedd9003b9d210cfa22e2e3efcb4e60b996e8c0e352a55"
+  },
+  {
+    "country": "IR",
+    "file": "world/IR.geojson",
+    "features": 31,
+    "sourceId": "world-natural-earth-divisions",
+    "bytes": 216383,
+    "sha256": "82a13463f53c04486ecd9534305135e63509fe25a04a004037125b8230bd7227"
+  },
+  {
+    "country": "IS",
+    "file": "world/IS.geojson",
+    "features": 8,
+    "sourceId": "world-gb-is-adm1",
+    "bytes": 301158,
+    "sha256": "bee08b4baceb516fd3e1fda2d3458e2ba05ff4a571d3243289f29a4a204f8f6a"
+  },
+  {
+    "country": "IT",
+    "file": "world/IT.geojson",
+    "features": 5,
+    "sourceId": "world-gb-it-adm1",
+    "bytes": 762757,
+    "sha256": "7c98ae4782984fe742b996602c85355cdda4a8ba1d23dacd95786ae7da4a2630"
+  },
+  {
+    "country": "JM",
+    "file": "world/JM.geojson",
+    "features": 14,
+    "sourceId": "world-gb-jm-adm1",
+    "bytes": 46682,
+    "sha256": "11ca43cf189ab3d8ff457423adce22b29e9b8e846652bd2988425c90e68a1937"
+  },
+  {
+    "country": "JO",
+    "file": "world/JO.geojson",
+    "features": 12,
+    "sourceId": "world-gb-jo-adm1",
+    "bytes": 49447,
+    "sha256": "f5897ebeded3ac0c330bc3c39fd68d545bdbf8c0e20b62bca7edb6ad4f28fc0c"
+  },
+  {
+    "country": "JP",
+    "file": "world/JP.geojson",
+    "features": 47,
+    "sourceId": "world-gb-jp-adm1",
+    "bytes": 1890303,
+    "sha256": "b3a67f81ee1c15b83b19370939483cdbd90bedf5c60da8d750486471344cd577"
+  },
+  {
+    "country": "KE",
+    "file": "world/KE.geojson",
+    "features": 47,
+    "sourceId": "world-gb-ke-adm1",
+    "bytes": 771981,
+    "sha256": "eaa7b1f55f0215b1f70a46e530a020c6865657d8e27c4c669cbdef5c6fc316cf"
+  },
+  {
+    "country": "KG",
+    "file": "world/KG.geojson",
+    "features": 7,
+    "sourceId": "world-gb-kg-adm1",
+    "bytes": 152623,
+    "sha256": "752d369c72992794a5ef3565ca42acdcc2799ecd92b04fc85575b6c0924c34e6"
+  },
+  {
+    "country": "KH",
+    "file": "world/KH.geojson",
+    "features": 25,
+    "sourceId": "world-gb-kh-adm1",
+    "bytes": 355170,
+    "sha256": "61572998a63b5ff3998cf8bc714274e02b770c9e6bdcf5bbf9b517a08ca16409"
+  },
+  {
+    "country": "KI",
+    "file": "world/KI.geojson",
+    "features": 3,
+    "sourceId": "world-gb-ki-adm1",
+    "bytes": 63823,
+    "sha256": "b0a8f8bdc3b335527809c6217ed8d7dbfb6d6047b554ed2beebc38b6244bc4c2"
+  },
+  {
+    "country": "KM",
+    "file": "world/KM.geojson",
+    "features": 3,
+    "sourceId": "world-gb-km-adm1",
+    "bytes": 18116,
+    "sha256": "02d907c704a2a341aff1c2304df383c49cafea6d9254ce47dd97964952646a95"
+  },
+  {
+    "country": "KN",
+    "file": "world/KN.geojson",
+    "features": 14,
+    "sourceId": "world-gb-kn-adm1",
+    "bytes": 13864,
+    "sha256": "fa230674c9c8bed61c53e2e5cb95c742f8dc265ef1dc0d272fbb3284ee440a35"
+  },
+  {
+    "country": "KP",
+    "file": "world/KP.geojson",
+    "features": 11,
+    "sourceId": "world-gb-kp-adm1",
+    "bytes": 291471,
+    "sha256": "995973fc8a6048a417288b4ed0b337497d36781f6ec962b6420507587f7d53c5"
+  },
+  {
+    "country": "KR",
+    "file": "world/KR.geojson",
+    "features": 17,
+    "sourceId": "world-gb-kr-adm1",
+    "bytes": 165823,
+    "sha256": "3edb9afa53156f0b0ca195316a0106b18f8a520eb46f67eb5b6d978f25b7ef0d"
+  },
+  {
+    "country": "KW",
+    "file": "world/KW.geojson",
+    "features": 6,
+    "sourceId": "world-gb-kw-adm1",
+    "bytes": 40867,
+    "sha256": "b9142d5d3ae8b207803194a58b818737ffbc613f9564266791559b8814787477"
+  },
+  {
+    "country": "KZ",
+    "file": "world/KZ.geojson",
+    "features": 16,
+    "sourceId": "world-gb-kz-adm1",
+    "bytes": 407699,
+    "sha256": "6a6c4e8e3800db60936e8dbe12e599bfda934c0f6a73273e6510321f0fc21be1"
+  },
+  {
+    "country": "LA",
+    "file": "world/LA.geojson",
+    "features": 18,
+    "sourceId": "world-gb-la-adm1",
+    "bytes": 392318,
+    "sha256": "e7c1d21c017f97b1255b234ef47590d94ee38ff5867a9778a2b9342f2be80e29"
+  },
+  {
+    "country": "LB",
+    "file": "world/LB.geojson",
+    "features": 9,
+    "sourceId": "world-gb-lb-adm1",
+    "bytes": 85308,
+    "sha256": "42815f4617456694bcfbe2cd9bad5221c85ce5474b4404f7bb53b37a81639098"
+  },
+  {
+    "country": "LC",
+    "file": "world/LC.geojson",
+    "features": 10,
+    "sourceId": "world-gb-lc-adm1",
+    "bytes": 45314,
+    "sha256": "38c4c4cbaf789100722f0de95b6c6b4b8e7d657632c775391e1f5eeebd91a309"
+  },
+  {
+    "country": "LI",
+    "file": "world/LI.geojson",
+    "features": 11,
+    "sourceId": "world-gb-li-adm1",
+    "bytes": 16338,
+    "sha256": "f06eeb7b8830ce5fc852422cbad8688630e7269cbf69e54d05eebd272ce22a2c"
+  },
+  {
+    "country": "LK",
+    "file": "world/LK.geojson",
+    "features": 9,
+    "sourceId": "world-gb-lk-adm1",
+    "bytes": 148454,
+    "sha256": "e6f060c2097b8cbb378a5803802f67a213fdd252dfb3be1ea9b17cf4fcd13155"
+  },
+  {
+    "country": "LR",
+    "file": "world/LR.geojson",
+    "features": 15,
+    "sourceId": "world-gb-lr-adm1",
+    "bytes": 270126,
+    "sha256": "6d3e99a19d6f949f3e4d6994736c5fe4d285e6503871bc7987ebaaed3fdacc52"
+  },
+  {
+    "country": "LS",
+    "file": "world/LS.geojson",
+    "features": 10,
+    "sourceId": "world-gb-ls-adm1",
+    "bytes": 141888,
+    "sha256": "f8c098c891786ee8d86e19b78998cad6e85ffea679049dd5d20fbfa307aee8fb"
+  },
+  {
+    "country": "LT",
+    "file": "world/LT.geojson",
+    "features": 10,
+    "sourceId": "world-gb-lt-adm1",
+    "bytes": 186128,
+    "sha256": "56dc50195d1be5cc536127d16c3eeb3aa2ea4a80d2a95e12b414b1a4b767659f"
+  },
+  {
+    "country": "LU",
+    "file": "world/LU.geojson",
+    "features": 12,
+    "sourceId": "world-gb-lu-adm1",
+    "bytes": 50155,
+    "sha256": "1469904c44627244db92f9aaeafea81d4a6726ebb1b274e10265d1d3b507de86"
+  },
+  {
+    "country": "LV",
+    "file": "world/LV.geojson",
+    "features": 43,
+    "sourceId": "world-gb-lv-adm1",
+    "bytes": 564287,
+    "sha256": "da6d7ceb268c0bdb4802cee9e88af2c86c621274915542e768219b526073f8d9"
+  },
+  {
+    "country": "LY",
+    "file": "world/LY.geojson",
+    "features": 22,
+    "sourceId": "world-gb-ly-adm1",
+    "bytes": 70929,
+    "sha256": "8c8de7e07a8ce7032c0445feb41e582fc0c02e9f1d675a9d401f623fe7f688fa"
+  },
+  {
+    "country": "MA",
+    "file": "world/MA.geojson",
+    "features": 12,
+    "sourceId": "world-gb-ma-adm1",
+    "bytes": 215719,
+    "sha256": "3ea138abf6b14cb3c4e783186b224acb8b3cafe185adc9f17c4a8ba3839766c8"
+  },
+  {
+    "country": "MC",
+    "file": "world/MC.geojson",
+    "features": 1,
+    "sourceId": "world-gb-mc-adm1",
+    "bytes": 1023,
+    "sha256": "3e15b49e8b5649f3eae191320ead991c3274126f6cc3fa2cc96b064717f5d5e9"
+  },
+  {
+    "country": "MD",
+    "file": "world/MD.geojson",
+    "features": 37,
+    "sourceId": "world-gb-md-adm1",
+    "bytes": 284691,
+    "sha256": "faa0d3217e6b2a066c9e500ad62c4824233afd341b83804322b87c72bdbb5da3"
+  },
+  {
+    "country": "ME",
+    "file": "world/ME.geojson",
+    "features": 23,
+    "sourceId": "world-gb-me-adm1",
+    "bytes": 63955,
+    "sha256": "b43e8d7cd10588032b0b34e149c8f14fc1ecbd6fc0a4c38c6c285d6741160b2c"
+  },
+  {
+    "country": "MG",
+    "file": "world/MG.geojson",
+    "features": 22,
+    "sourceId": "world-gb-mg-adm1",
+    "bytes": 655171,
+    "sha256": "f40e31c11e3e6e45cdc88ba98c4924239e669bdd086f87cae54738679743ba02"
+  },
+  {
+    "country": "MH",
+    "file": "world/MH.geojson",
+    "features": 24,
+    "sourceId": "world-gb-mh-adm1",
+    "bytes": 36820,
+    "sha256": "e4ad9071bd5839ed2c7eb982021956f380552183f68e48ce7834f4a64c254d4a"
+  },
+  {
+    "country": "MK",
+    "file": "world/MK.geojson",
+    "features": 8,
+    "sourceId": "world-gb-mk-adm1",
+    "bytes": 92242,
+    "sha256": "4c1e6ad646b02dd6db4d5acd339f9783b36519f5dd6eaeb476a41739ca4bde81"
+  },
+  {
+    "country": "ML",
+    "file": "world/ML.geojson",
+    "features": 9,
+    "sourceId": "world-gb-ml-adm1",
+    "bytes": 267273,
+    "sha256": "6188f79074459b11bef3b3212dc5c334da2ae22253543f68ee89bc3fd705347d"
+  },
+  {
+    "country": "MM",
+    "file": "world/MM.geojson",
+    "features": 14,
+    "sourceId": "world-gb-mm-adm1",
+    "bytes": 1377987,
+    "sha256": "40f8ca118df4bed27af3b17f9932eb723164abde1a166b0255aae671ce5b8721"
+  },
+  {
+    "country": "MN",
+    "file": "world/MN.geojson",
+    "features": 22,
+    "sourceId": "world-gb-mn-adm1",
+    "bytes": 223106,
+    "sha256": "2dcd0f83e554a132bea41b916d0a3695da23195711cada28560c06e2fe446521"
+  },
+  {
+    "country": "MP",
+    "file": "world/MP.geojson",
+    "features": 4,
+    "sourceId": "world-natural-earth-divisions",
+    "bytes": 14752,
+    "sha256": "2777ed7e72bec4991111d1a7b392404690cf604b3e6a1d13428162f56968e2ce"
+  },
+  {
+    "country": "MR",
+    "file": "world/MR.geojson",
+    "features": 13,
+    "sourceId": "world-gb-mr-adm1",
+    "bytes": 176178,
+    "sha256": "bc0243fa1dbae5001b14bc80b8a7c191c728cf8edbee67c33cdd2dafdcfa6a7c"
+  },
+  {
+    "country": "MS",
+    "file": "world/MS.geojson",
+    "features": 3,
+    "sourceId": "world-natural-earth-divisions",
+    "bytes": 9233,
+    "sha256": "11e93272b2c8f678aa1fea33e5f7d033d5d5d177bf52a6f2c7625034e1edd0d7"
+  },
+  {
+    "country": "MT",
+    "file": "world/MT.geojson",
+    "features": 68,
+    "sourceId": "world-gb-mt-adm1",
+    "bytes": 73383,
+    "sha256": "dd81a915616dc24f582e0959524e587381133fbe069a7d40d49e26ac94ba049b"
+  },
+  {
+    "country": "MU",
+    "file": "world/MU.geojson",
+    "features": 12,
+    "sourceId": "world-gb-mu-adm1",
+    "bytes": 52113,
+    "sha256": "0cd78b9005f550e6ecb906bdd0ed1285ebe594e78176e94df3843dbe609d112b"
+  },
+  {
+    "country": "MV",
+    "file": "world/MV.geojson",
+    "features": 21,
+    "sourceId": "world-gb-mv-adm1",
+    "bytes": 19253,
+    "sha256": "e90c2f202783c235e8dc779c506f191704a79b24a88191f282f0c45a8a34de8e"
+  },
+  {
+    "country": "MW",
+    "file": "world/MW.geojson",
+    "features": 3,
+    "sourceId": "world-gb-mw-adm1",
+    "bytes": 104202,
+    "sha256": "b57d7d2a930d5229e1de34c85f8bcfb6256b66e4ee609b5f3059449ea380367a"
+  },
+  {
+    "country": "MX",
+    "file": "world/MX.geojson",
+    "features": 32,
+    "sourceId": "world-gb-mx-adm1",
+    "bytes": 3549524,
+    "sha256": "6df57e1197893f0dd4dcd0d591524c8cbd3328e781d78223187bf2680917f42c"
+  },
+  {
+    "country": "MY",
+    "file": "world/MY.geojson",
+    "features": 16,
+    "sourceId": "world-gb-my-adm1",
+    "bytes": 506468,
+    "sha256": "b6c7d11336016c8c0ab7e11ad93e501e2dd37db95a47e4fc18090e0c00d0bc18"
+  },
+  {
+    "country": "MZ",
+    "file": "world/MZ.geojson",
+    "features": 10,
+    "sourceId": "world-gb-mz-adm1",
+    "bytes": 228415,
+    "sha256": "bf07d3a43bc76c2d2cd6041ea34162d1358e3d70fd890bbf70cb8ce20b8862ee"
+  },
+  {
+    "country": "NA",
+    "file": "world/NA.geojson",
+    "features": 14,
+    "sourceId": "world-gb-na-adm1",
+    "bytes": 195712,
+    "sha256": "a495c6dc271dcc89364acdd1f1ac424948a900b987ac67963abf6ea15b2c9ccd"
+  },
+  {
+    "country": "NC",
+    "file": "world/NC.geojson",
+    "features": 3,
+    "sourceId": "world-natural-earth-divisions",
+    "bytes": 34413,
+    "sha256": "77cdb211e0bea448c0169f7b0cf403d8904d07c7c37dacb20e1a4ca7c9b2457a"
+  },
+  {
+    "country": "NE",
+    "file": "world/NE.geojson",
+    "features": 6,
+    "sourceId": "world-gb-ne-adm1",
+    "bytes": 62734,
+    "sha256": "d10732ddfa7e7745276d9d57b8a2fd9707ce44309cd42733a0a36bb8381c850d"
+  },
+  {
+    "country": "NG",
+    "file": "world/NG.geojson",
+    "features": 37,
+    "sourceId": "world-gb-ng-adm1",
+    "bytes": 750794,
+    "sha256": "2e3ea7ff44406f433cbf80f0f379219661cb08538fb649cd5947c2be0c389ca8"
+  },
+  {
+    "country": "NI",
+    "file": "world/NI.geojson",
+    "features": 17,
+    "sourceId": "world-gb-ni-adm1",
+    "bytes": 295775,
+    "sha256": "587592cd13752e577377d1c5eacd3e6317765b3197d987139a9c734e2a682bbe"
+  },
+  {
+    "country": "NL",
+    "file": "world/NL.geojson",
+    "features": 12,
+    "sourceId": "world-gb-nl-adm1",
+    "bytes": 138201,
+    "sha256": "c64f07051bb51b882a1d0902d088f27b9b4aea9e03902ce0e0d5bfbdf587e86a"
+  },
+  {
+    "country": "NO",
+    "file": "world/NO.geojson",
+    "features": 11,
+    "sourceId": "world-gb-no-adm1",
+    "bytes": 2812449,
+    "sha256": "b5e7ef640dfad72eb53d580820f25d1332a46f7eef4e4a3624b4da426d038c1d"
+  },
+  {
+    "country": "NP",
+    "file": "world/NP.geojson",
+    "features": 7,
+    "sourceId": "world-gb-np-adm1",
+    "bytes": 372306,
+    "sha256": "061e82deb23e1bcdb7ea121f8c6227fa72a59961c806e3a089faed00d02023e8"
+  },
+  {
+    "country": "NR",
+    "file": "world/NR.geojson",
+    "features": 14,
+    "sourceId": "world-gb-nr-adm1",
+    "bytes": 17528,
+    "sha256": "4b25aebf0b5c1264068b5e84029c2f1c582facf48f8df7391f4ea05c6c3b6351"
+  },
+  {
+    "country": "NU",
+    "file": "world/NU.geojson",
+    "features": 14,
+    "sourceId": "world-gb-nu-adm1",
+    "bytes": 13832,
+    "sha256": "138ccd51ecb138e8b23b9b3af62fa1e5f605dff7205b9cddfe3490c336a1973a"
+  },
+  {
+    "country": "NZ",
+    "file": "world/NZ.geojson",
+    "features": 17,
+    "sourceId": "world-gb-nz-adm1",
+    "bytes": 1745445,
+    "sha256": "e161cdf3ca486b6ecf751ef0cf94aea0a381da6fd5bf2120becec245ad23f233"
+  },
+  {
+    "country": "OM",
+    "file": "world/OM.geojson",
+    "features": 7,
+    "sourceId": "world-gb-om-adm1",
+    "bytes": 184484,
+    "sha256": "375b734531a11cab86b17008836809f35c025545f32fd03c35f677d087241ecf"
+  },
+  {
+    "country": "PA",
+    "file": "world/PA.geojson",
+    "features": 13,
+    "sourceId": "world-gb-pa-adm1",
+    "bytes": 342794,
+    "sha256": "aaf23b97f23f40444aa6fcd293f7873c4124965ccbc69827283caaf05e792dc7"
+  },
+  {
+    "country": "PE",
+    "file": "world/PE.geojson",
+    "features": 26,
+    "sourceId": "world-gb-pe-adm1",
+    "bytes": 291941,
+    "sha256": "d279e84962b55addd1bc31e399f3bc8ec8c34269837b79e0dfd8c162b641a243"
+  },
+  {
+    "country": "PF",
+    "file": "world/PF.geojson",
+    "features": 5,
+    "sourceId": "world-natural-earth-divisions",
+    "bytes": 40456,
+    "sha256": "532c7c26f0fda68955013ec46eed0f7c9df78492bd3437f7c63774661ba67803"
+  },
+  {
+    "country": "PG",
+    "file": "world/PG.geojson",
+    "features": 22,
+    "sourceId": "world-gb-pg-adm1",
+    "bytes": 1261770,
+    "sha256": "2255f260f963989a6b43f5ca3232a3786e01807b654d81dddb23c3bffd27aef6"
+  },
+  {
+    "country": "PH",
+    "file": "world/PH.geojson",
+    "features": 17,
+    "sourceId": "world-gb-ph-adm1",
+    "bytes": 2813563,
+    "sha256": "c5918c8441e9432baf7843c6c16fabadfb5fa1837e46c6de259d0b5321e88cd1"
+  },
+  {
+    "country": "PK",
+    "file": "world/PK.geojson",
+    "features": 7,
+    "sourceId": "world-gb-pk-adm1",
+    "bytes": 139786,
+    "sha256": "bf1f289dc686132e2baf7c5f47080df29056a575cf404302b9ac873f9ac78eca"
+  },
+  {
+    "country": "PL",
+    "file": "world/PL.geojson",
+    "features": 16,
+    "sourceId": "world-gb-pl-adm1",
+    "bytes": 514300,
+    "sha256": "3ed8059d9a5cbbebcaed65614427c5bcad791a600e7c047ed106f4cf66c8ce09"
+  },
+  {
+    "country": "PM",
+    "file": "world/PM.geojson",
+    "features": 2,
+    "sourceId": "world-natural-earth-divisions",
+    "bytes": 7985,
+    "sha256": "686ffd4eb6d99d752da638b737c9f8f00975172a314d0cfbf924868bb1a2b84f"
+  },
+  {
+    "country": "PS",
+    "file": "world/PS.geojson",
+    "features": 2,
+    "sourceId": "world-gb-ps-adm1",
+    "bytes": 30572,
+    "sha256": "6b7d2d1f2b20aa44ae5ca6d4595ce30368b1b8bc32cd1551aca98c859af0b1df"
+  },
+  {
+    "country": "PT",
+    "file": "world/PT.geojson",
+    "features": 20,
+    "sourceId": "world-gb-pt-adm1",
+    "bytes": 532083,
+    "sha256": "c43327cf6cb5bf2475c0e725a05917201a224bb26e19afea17526f4bb7bff4b1"
+  },
+  {
+    "country": "PW",
+    "file": "world/PW.geojson",
+    "features": 16,
+    "sourceId": "world-gb-pw-adm1",
+    "bytes": 34551,
+    "sha256": "8f65da3834e2a66af24162ca9b2092b0dcb5b66914610f9a7d14c1c0ac610ff3"
+  },
+  {
+    "country": "PY",
+    "file": "world/PY.geojson",
+    "features": 18,
+    "sourceId": "world-gb-py-adm1",
+    "bytes": 763636,
+    "sha256": "49564a2ad846be57abf987841c22a8fa3866af411a173601bccc0c76189ad3e1"
+  },
+  {
+    "country": "QA",
+    "file": "world/QA.geojson",
+    "features": 8,
+    "sourceId": "world-gb-qa-adm1",
+    "bytes": 76531,
+    "sha256": "52c6645c0a39579490c458fb115c59e3b8c33331b924fd7e30b312070b8f8fd2"
+  },
+  {
+    "country": "RO",
+    "file": "world/RO.geojson",
+    "features": 42,
+    "sourceId": "world-gb-ro-adm1",
+    "bytes": 1111497,
+    "sha256": "367db4565674aedbf921b2449a4de8f62e6e811942f00f1c133c3b0ac82caea6"
+  },
+  {
+    "country": "RS",
+    "file": "world/RS.geojson",
+    "features": 25,
+    "sourceId": "world-gb-rs-adm1",
+    "bytes": 315603,
+    "sha256": "587debfce9b32402fb0c88c1c8dbf1ea8c492184531e208345de1629dfcf19cf"
+  },
+  {
+    "country": "RU",
+    "file": "world/RU.geojson",
+    "features": 83,
+    "sourceId": "world-gb-ru-adm1",
+    "bytes": 8183198,
+    "sha256": "eb15b426ea6838476ba9227241b9aafa985684ad9da787c1c097fce0d233404d"
+  },
+  {
+    "country": "RW",
+    "file": "world/RW.geojson",
+    "features": 5,
+    "sourceId": "world-gb-rw-adm1",
+    "bytes": 115419,
+    "sha256": "67f61d402ffef914b3b8e084651ca1ded363d7861340beb9f10638877cb14d92"
+  },
+  {
+    "country": "SA",
+    "file": "world/SA.geojson",
+    "features": 13,
+    "sourceId": "world-gb-sa-adm1",
+    "bytes": 380504,
+    "sha256": "02956924760dbd9733f0990861d2ad2ee0fd80d6c7981e19ec0ae0760e625ae0"
+  },
+  {
+    "country": "SB",
+    "file": "world/SB.geojson",
+    "features": 10,
+    "sourceId": "world-gb-sb-adm1",
+    "bytes": 83300,
+    "sha256": "8c06b2f5424e35e1055e1f9f177c8d1d942d05d44d4b8c03f6e4d29a6b42639d"
+  },
+  {
+    "country": "SC",
+    "file": "world/SC.geojson",
+    "features": 26,
+    "sourceId": "world-gb-sc-adm1",
+    "bytes": 74610,
+    "sha256": "9e9be95fdcaf0af06112de647861facfb3561d4f27d2339c2ca259072261a34a"
+  },
+  {
+    "country": "SD",
+    "file": "world/SD.geojson",
+    "features": 19,
+    "sourceId": "world-gb-sd-adm1",
+    "bytes": 261118,
+    "sha256": "daa7cad83a46dfb1053d7403b47b51da5f21100538685ce35c802950929a5ec9"
+  },
+  {
+    "country": "SE",
+    "file": "world/SE.geojson",
+    "features": 21,
+    "sourceId": "world-gb-se-adm1",
+    "bytes": 1231956,
+    "sha256": "e463552eb965871ea6ec56eb904d82d9ce42dfb1c3cc7eef1ac9af01498f1bb7"
+  },
+  {
+    "country": "SG",
+    "file": "world/SG.geojson",
+    "features": 5,
+    "sourceId": "world-gb-sg-adm1",
+    "bytes": 36339,
+    "sha256": "472d9f1d884dd2faf54bf39fc0e1b4b3e6b598bbcb313d470c26fb378d670bd5"
+  },
+  {
+    "country": "SH",
+    "file": "world/SH.geojson",
+    "features": 3,
+    "sourceId": "world-natural-earth-divisions",
+    "bytes": 10277,
+    "sha256": "042ad726f6d1654192dbda874d709ae1d4594de938cf0ee6ff29f7993a8bdae8"
+  },
+  {
+    "country": "SI",
+    "file": "world/SI.geojson",
+    "features": 2,
+    "sourceId": "world-gb-si-adm1",
+    "bytes": 3824,
+    "sha256": "3444df4a1c47a9f0e4c0ec9cff19c171eb66314a20ee28648bc43f94bf7118a2"
+  },
+  {
+    "country": "SK",
+    "file": "world/SK.geojson",
+    "features": 8,
+    "sourceId": "world-gb-sk-adm1",
+    "bytes": 139596,
+    "sha256": "e8fedb247221b55c5a9a91cc57d528ff6e5f7c326162bb6f23a3ae62c5100722"
+  },
+  {
+    "country": "SL",
+    "file": "world/SL.geojson",
+    "features": 4,
+    "sourceId": "world-gb-sl-adm1",
+    "bytes": 159093,
+    "sha256": "cf0522a74d6ca30066107a5f49516c247f74b37c9921aab72760cd751e08792d"
+  },
+  {
+    "country": "SM",
+    "file": "world/SM.geojson",
+    "features": 9,
+    "sourceId": "world-gb-sm-adm1",
+    "bytes": 7554,
+    "sha256": "28b0056953559579efc60da142f56270aa5825a3d652d1b58c94e6898bb2a015"
+  },
+  {
+    "country": "SN",
+    "file": "world/SN.geojson",
+    "features": 14,
+    "sourceId": "world-gb-sn-adm1",
+    "bytes": 217710,
+    "sha256": "004eceb2c20674afb23a91c82813306be3f513910688ccafe08274f14d1b284a"
+  },
+  {
+    "country": "SO",
+    "file": "world/SO.geojson",
+    "features": 18,
+    "sourceId": "world-gb-so-adm1",
+    "bytes": 75999,
+    "sha256": "e2dc4e5e071c5c141a914f9eb4daaf7e1fcf3ac404f69cf9ae7b4dddbebe0a14"
+  },
+  {
+    "country": "SR",
+    "file": "world/SR.geojson",
+    "features": 10,
+    "sourceId": "world-gb-sr-adm1",
+    "bytes": 71629,
+    "sha256": "a02235fb36d9f6e8c57f1b419ea9978aec0097bf0385d1951e91662f4085868f"
+  },
+  {
+    "country": "SS",
+    "file": "world/SS.geojson",
+    "features": 10,
+    "sourceId": "world-gb-ss-adm1",
+    "bytes": 195754,
+    "sha256": "1efa833dd5b5b1c04e1214a0c5c973804cddcfb85ee019a549b6a78fac55331a"
+  },
+  {
+    "country": "ST",
+    "file": "world/ST.geojson",
+    "features": 2,
+    "sourceId": "world-gb-st-adm1",
+    "bytes": 11838,
+    "sha256": "1838d28a4b78e181bcc804de0f18a2c5402983ae43b33d0efd4b3be28474c14c"
+  },
+  {
+    "country": "SV",
+    "file": "world/SV.geojson",
+    "features": 14,
+    "sourceId": "world-gb-sv-adm1",
+    "bytes": 101879,
+    "sha256": "07c5ece19273438889baa2a4432716418f680f075f46558f6ddf722de0294cd1"
+  },
+  {
+    "country": "SY",
+    "file": "world/SY.geojson",
+    "features": 14,
+    "sourceId": "world-gb-sy-adm1",
+    "bytes": 167892,
+    "sha256": "977c538299828919a5e3c7ce5b8c1e4adcb55a856660516f87b11dd246ecc417"
+  },
+  {
+    "country": "SZ",
+    "file": "world/SZ.geojson",
+    "features": 4,
+    "sourceId": "world-gb-sz-adm1",
+    "bytes": 17963,
+    "sha256": "32b4d9e524af4dc88aed6457223009c5b78604016484fe369101adf12ce12f8b"
+  },
+  {
+    "country": "TC",
+    "file": "world/TC.geojson",
+    "features": 6,
+    "sourceId": "world-natural-earth-divisions",
+    "bytes": 22201,
+    "sha256": "ab6a7c5ba9ac1d3f2d62e6fc25196fa9331bcc81f1f0cd34e5c14b64425f0640"
+  },
+  {
+    "country": "TD",
+    "file": "world/TD.geojson",
+    "features": 23,
+    "sourceId": "world-gb-td-adm1",
+    "bytes": 98040,
+    "sha256": "3c8267220985bd7f24b7d9094ddf8de5901f1c273198387bb59ee8b60f30d047"
+  },
+  {
+    "country": "TF",
+    "file": "world/TF.geojson",
+    "features": 4,
+    "sourceId": "world-natural-earth-divisions",
+    "bytes": 25041,
+    "sha256": "69559616ccd81e838ccc9d862f32261cd0c11fdf242f910133be16275d1c1854"
+  },
+  {
+    "country": "TG",
+    "file": "world/TG.geojson",
+    "features": 5,
+    "sourceId": "world-gb-tg-adm1",
+    "bytes": 63826,
+    "sha256": "7b1a927eb67acd3e86ccb2fa8f3f738da1d9af2a7447c4aef2e99fb709be72cc"
+  },
+  {
+    "country": "TH",
+    "file": "world/TH.geojson",
+    "features": 77,
+    "sourceId": "world-gb-th-adm1",
+    "bytes": 871469,
+    "sha256": "bf5e932ffd2dd9d145b8dcce69040e82c2285f8984dbbfe136bffc7739fafb2c"
+  },
+  {
+    "country": "TJ",
+    "file": "world/TJ.geojson",
+    "features": 5,
+    "sourceId": "world-gb-tj-adm1",
+    "bytes": 111672,
+    "sha256": "47d3c87f5cbd96a84b11648dd912fdbb2cdad60884cfd69459a880c2165db391"
+  },
+  {
+    "country": "TL",
+    "file": "world/TL.geojson",
+    "features": 13,
+    "sourceId": "world-gb-tl-adm1",
+    "bytes": 43643,
+    "sha256": "85e71635290b17956e62fa8517c206cff4c36bde2e19aa1653d5f654be255831"
+  },
+  {
+    "country": "TM",
+    "file": "world/TM.geojson",
+    "features": 5,
+    "sourceId": "world-natural-earth-divisions",
+    "bytes": 66818,
+    "sha256": "062dbcd4acb1c495327f1df8c3dcc233a5184d436ce12f31def9e4e3bda5980e"
+  },
+  {
+    "country": "TN",
+    "file": "world/TN.geojson",
+    "features": 24,
+    "sourceId": "world-gb-tn-adm1",
+    "bytes": 253530,
+    "sha256": "2d34be245ec76565f36d2fed9ddea7e58557ef5e9dcdb6b910bbdded4a6c6754"
+  },
+  {
+    "country": "TO",
+    "file": "world/TO.geojson",
+    "features": 5,
+    "sourceId": "world-gb-to-adm1",
+    "bytes": 28783,
+    "sha256": "96e3463149640196f576efcce07ab00873e820d19c44c3f9b09fab29a48574f2"
+  },
+  {
+    "country": "TR",
+    "file": "world/TR.geojson",
+    "features": 81,
+    "sourceId": "world-gb-tr-adm1",
+    "bytes": 1339365,
+    "sha256": "dacb3077682a3f40ab121b14891cc3794ad9b0953f1e000a4c5c8ee0a6940c3d"
+  },
+  {
+    "country": "TT",
+    "file": "world/TT.geojson",
+    "features": 14,
+    "sourceId": "world-gb-tt-adm1",
+    "bytes": 39901,
+    "sha256": "c18b4b2fccf6cbc3cef7b19076e8a1cfe972df93befce5a80ba03722c5cff671"
+  },
+  {
+    "country": "TV",
+    "file": "world/TV.geojson",
+    "features": 8,
+    "sourceId": "world-gb-tv-adm1",
+    "bytes": 6168,
+    "sha256": "1ef57bdbc54b4123611969109d43eb2550bc8e6d0753e6267ede7d07718aafbe"
+  },
+  {
+    "country": "TW",
+    "file": "world/TW.geojson",
+    "features": 22,
+    "sourceId": "world-gb-tw-adm1",
+    "bytes": 222177,
+    "sha256": "44c3f1fd506a6c4e6445dd52a706809a70768125972884fa127ebd137164558e"
+  },
+  {
+    "country": "TZ",
+    "file": "world/TZ.geojson",
+    "features": 30,
+    "sourceId": "world-gb-tz-adm1",
+    "bytes": 366749,
+    "sha256": "c7fcd228dfdc9d4f54aaacf5fb8ab2ba4ecd3fdc7540d23adce77268f1fb8751"
+  },
+  {
+    "country": "UA",
+    "file": "world/UA.geojson",
+    "features": 27,
+    "sourceId": "world-gb-ua-adm1",
+    "bytes": 654805,
+    "sha256": "9da5510f9121dca1617ebb37d91dd06b57a70b378f1717bea928a27587e790c0"
+  },
+  {
+    "country": "UG",
+    "file": "world/UG.geojson",
+    "features": 4,
+    "sourceId": "world-gb-ug-adm1",
+    "bytes": 220156,
+    "sha256": "b73d5a4ce94681485ddac70b9b40f216e7a9ea02312c4ee36f5261a55a4d289b"
+  },
+  {
+    "country": "US",
+    "file": "world/US.geojson",
+    "features": 56,
+    "sourceId": "world-gb-us-adm1",
+    "bytes": 4802456,
+    "sha256": "8a9fc5b9356a8412c5fbbbc338842a6b152348e64e7818ef66e6f8ab2d6b3307"
+  },
+  {
+    "country": "UY",
+    "file": "world/UY.geojson",
+    "features": 19,
+    "sourceId": "world-gb-uy-adm1",
+    "bytes": 369925,
+    "sha256": "98e1fd68bcf238dbec0626f2c4b0582327f799c020c22ac0bc3cfacc394a354d"
+  },
+  {
+    "country": "UZ",
+    "file": "world/UZ.geojson",
+    "features": 14,
+    "sourceId": "world-gb-uz-adm1",
+    "bytes": 150269,
+    "sha256": "088d13182736ab75eb050aa7a1585bff59ad75e643596cded134f8ab4f95f7ce"
+  },
+  {
+    "country": "VC",
+    "file": "world/VC.geojson",
+    "features": 6,
+    "sourceId": "world-gb-vc-adm1",
+    "bytes": 17344,
+    "sha256": "38911948ccc47f1f12e2df514ebca3fd5f26c132be5102b5ba0dda00a71adf92"
+  },
+  {
+    "country": "VE",
+    "file": "world/VE.geojson",
+    "features": 25,
+    "sourceId": "world-gb-ve-adm1",
+    "bytes": 1117550,
+    "sha256": "c2505a462c1b4d34183554c05e5b264cd9e38d0e899d47f319a1f9eac6d1854a"
+  },
+  {
+    "country": "VI",
+    "file": "world/VI.geojson",
+    "features": 3,
+    "sourceId": "world-natural-earth-divisions",
+    "bytes": 9844,
+    "sha256": "74351e790f7e66ce8d991b42e9b7bc53e62887f18ff6cea5501dbbca8c0474e4"
+  },
+  {
+    "country": "VN",
+    "file": "world/VN.geojson",
+    "features": 64,
+    "sourceId": "world-gb-vn-adm1",
+    "bytes": 478970,
+    "sha256": "0a055bc5f4b4c4dd50ac248e9f39ab9e51758e86643f5fd1d3e0d0601c35ab8d"
+  },
+  {
+    "country": "VU",
+    "file": "world/VU.geojson",
+    "features": 6,
+    "sourceId": "world-gb-vu-adm1",
+    "bytes": 108563,
+    "sha256": "4a09437e6aaae860099576eb28f3dbfae0c11ec88a58860549972b3cb5d000a6"
+  },
+  {
+    "country": "WF",
+    "file": "world/WF.geojson",
+    "features": 3,
+    "sourceId": "world-natural-earth-divisions",
+    "bytes": 8939,
+    "sha256": "ff98f393b94101eea6da47d5f72bea06175bdb3ebcb569d28118fdabd90a0f01"
+  },
+  {
+    "country": "WS",
+    "file": "world/WS.geojson",
+    "features": 11,
+    "sourceId": "world-gb-ws-adm1",
+    "bytes": 42670,
+    "sha256": "9aa0479bf817c201fb38e64198197818917e9da266f38ab02e6127e9496e69b1"
+  },
+  {
+    "country": "XK",
+    "file": "world/XK.geojson",
+    "features": 30,
+    "sourceId": "world-natural-earth-divisions",
+    "bytes": 104019,
+    "sha256": "78154cee4a60f9ae0bbf7c0c5c1ab17ff47786bbd89dd4dafaedf884293cc23c"
+  },
+  {
+    "country": "YE",
+    "file": "world/YE.geojson",
+    "features": 22,
+    "sourceId": "world-gb-ye-adm1",
+    "bytes": 191582,
+    "sha256": "897a1e46cadb9bf9bfdda1b5152b77ce75d91f0e81324fe8db71f5748f270b09"
+  },
+  {
+    "country": "ZM",
+    "file": "world/ZM.geojson",
+    "features": 10,
+    "sourceId": "world-gb-zm-adm1",
+    "bytes": 647074,
+    "sha256": "9b72822645e6574ff324f1a15cbc792544046603745c4245892a2828008889d7"
+  },
+  {
+    "country": "ZW",
+    "file": "world/ZW.geojson",
+    "features": 10,
+    "sourceId": "world-gb-zw-adm1",
+    "bytes": 383564,
+    "sha256": "10fbba92c468d870ea82c1616c249c8743a908f20167a2df3bbffcb9a25685f6"
+  }
+]

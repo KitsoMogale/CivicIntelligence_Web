@@ -1,0 +1,253 @@
+{
+  "reviewedAt": "2026-11-14",
+  "profiles": {
+    "ZA": {
+      "summary": "National, provincial and local spheres are distinct, interdependent and interrelated. District, local and metropolitan municipalities have different responsibilities.",
+      "schemes": [
+        {
+          "name": "Government spheres",
+          "levels": ["National", "Provincial", "Local"],
+          "note": "Spheres are not a chain of command."
+        },
+        {
+          "name": "Local government",
+          "levels": [
+            "District and local municipalities",
+            "Metropolitan municipalities",
+            "Wards"
+          ],
+          "note": "Metros operate separately from the district/local arrangement. Ward editions and statistical dates remain separate."
+        }
+      ],
+      "sourceIds": ["constitution"],
+      "institutions": []
+    },
+    "BW": {
+      "summary": "Local councils, parliamentary constituencies, council wards and traditional administration are separate schemes. The historical district map is not a map of today's local councils.",
+      "schemes": [
+        {
+          "name": "Local government",
+          "levels": ["District councils", "City councils", "Town councils"],
+          "note": "The ministry reports 31 local authorities. Council areas are not interchangeable with the 28 census districts used in 2022."
+        },
+        {
+          "name": "Electoral geography",
+          "levels": [
+            "Parliamentary constituencies",
+            "Polling districts / council wards"
+          ],
+          "note": "The December 2024 parliamentary record reports 61 constituencies and 609 polling districts. Current electoral geometry has not been bundled."
+        },
+        {
+          "name": "Traditional administration",
+          "levels": ["Dikgosi", "Kgotla institutions"],
+          "note": "Traditional administration is a separate scheme; it is not an extra level below a local council."
+        }
+      ],
+      "sourceIds": [
+        "bw-local-government",
+        "bw-local-authorities",
+        "bw-parliament-functions",
+        "bw-electoral-2024",
+        "bw-census-2022"
+      ],
+      "institutions": [
+        {
+          "id": "bw-national-assembly",
+          "name": "National Assembly",
+          "type": "Legislature",
+          "description": "Botswana's lawmaking assembly. Ntlo ya Dikgosi advises the Assembly on specified customary, constitutional and land matters.",
+          "sourceIds": ["bw-parliament-functions"]
+        },
+        {
+          "id": "bw-ntlo-ya-dikgosi",
+          "name": "Ntlo ya Dikgosi",
+          "type": "Advisory institution",
+          "description": "Advises the National Assembly on matters within its constitutional remit. It is not presented as an equal lawmaking chamber.",
+          "sourceIds": ["bw-parliament-functions"]
+        },
+        {
+          "id": "bw-local-government-ministry",
+          "name": "Ministry of Local Government and Traditional Affairs",
+          "type": "Ministry",
+          "description": "Supports local government and traditional administration. Its local-authority and traditional-administration schemes are recorded separately.",
+          "sourceIds": ["bw-local-government"]
+        },
+        {
+          "id": "bw-statistics",
+          "name": "Statistics Botswana",
+          "type": "National statistical agency",
+          "description": "Publishes official statistics, including the 2022 census. Census districts are a statistical geography with their own reference date.",
+          "sourceIds": ["bw-census-2022"]
+        },
+        {
+          "id": "bw-electoral-commission",
+          "name": "Independent Electoral Commission",
+          "type": "Electoral institution",
+          "description": "Botswana's electoral commission. Constituencies and council wards use an electoral scheme separate from the historical reference districts.",
+          "sourceIds": ["bw-iec"]
+        }
+      ]
+    },
+    "NA": {
+      "summary": "Regions and constituencies form the regional electoral scheme. Municipality, town and village authorities are a parallel local-government scheme; they are not a complete subdivision beneath constituencies.",
+      "schemes": [
+        {
+          "name": "Regional government and elections",
+          "levels": ["Regions / regional councils", "Constituencies"],
+          "note": "The ministry's 19 March 2026 speech records 14 regions and 121 constituencies. Constituency geometry has not been bundled."
+        },
+        {
+          "name": "Local authorities",
+          "levels": [
+            "Municipality councils",
+            "Town councils",
+            "Village councils"
+          ],
+          "note": "The same dated ministry source records 59 local authorities. These are parallel categories, not a municipality → town → village hierarchy."
+        },
+        {
+          "name": "Traditional authorities",
+          "levels": ["Recognised traditional authorities"],
+          "note": "Traditional authorities are recorded separately from regional and local councils."
+        }
+      ],
+      "sourceIds": [
+        "na-murd-structure-2026",
+        "na-regional-directory",
+        "na-national-assembly",
+        "na-national-council"
+      ],
+      "institutions": [
+        {
+          "id": "na-national-assembly",
+          "name": "National Assembly",
+          "type": "Legislative chamber",
+          "description": "Namibia's National Assembly debates and passes legislation. Referred bills are considered by the National Council through the constitutional legislative process.",
+          "sourceIds": ["na-national-assembly"]
+        },
+        {
+          "id": "na-national-council",
+          "name": "National Council",
+          "type": "Legislative chamber",
+          "description": "Reviews bills referred by the National Assembly. It is represented separately from the Assembly and from regional councils.",
+          "sourceIds": ["na-national-council"]
+        },
+        {
+          "id": "na-urban-rural-ministry",
+          "name": "Ministry of Urban and Rural Development",
+          "type": "Ministry",
+          "description": "Works with regional councils, local authorities and traditional authorities. Its dated structure source distinguishes these schemes.",
+          "sourceIds": ["na-murd-structure-2026"]
+        },
+        {
+          "id": "na-statistics-agency",
+          "name": "Namibia Statistics Agency",
+          "type": "National statistical agency",
+          "description": "Produces and coordinates official statistics. Geographic and statistical reference periods must be retained separately.",
+          "sourceIds": ["na-statistics-agency"]
+        },
+        {
+          "id": "na-electoral-commission",
+          "name": "Electoral Commission of Namibia",
+          "type": "Electoral institution",
+          "description": "Administers elections. Its 2025 regional-council register identifies constituencies separately from local-authority areas.",
+          "sourceIds": ["na-electoral-register-2025"]
+        }
+      ]
+    }
+  },
+  "sources": [
+    {
+      "id": "bw-local-government",
+      "title": "Ministry of Local Government and Traditional Affairs",
+      "publisher": "Government of Botswana",
+      "url": "https://www.gov.bw/ministries/ministry-local-government-and-traditional-affairs",
+      "retrievedAt": "2026-11-14",
+      "note": "Official structure description. Counts are a reviewed snapshot; individual council names require separate verification."
+    },
+    {
+      "id": "bw-local-authorities",
+      "title": "Local Authorities directory",
+      "publisher": "Government of Botswana",
+      "url": "https://www.gov.bw/local-authorities-view",
+      "retrievedAt": "2026-11-14"
+    },
+    {
+      "id": "bw-parliament-functions",
+      "title": "Parliament: functions and Ntlo ya Dikgosi",
+      "publisher": "Parliament of Botswana",
+      "url": "https://www.parliament.gov.bw/index.php?id=84&option=com_content&view=article",
+      "retrievedAt": "2026-11-14"
+    },
+    {
+      "id": "bw-electoral-2024",
+      "title": "Daily Hansard, 9 December 2024",
+      "publisher": "Parliament of Botswana",
+      "url": "https://www.parliament.gov.bw/documents/DAILY-HANSARD-09-DECEMBER-2024--SONA-MEETING--Mixed-Version_06_38_00_16_12_2024.pdf",
+      "retrievedAt": "2026-11-14",
+      "publishedAt": "2024-12-09",
+      "note": "Reports 61 parliamentary constituencies and 609 polling districts (council wards); these are not administrative-district counts."
+    },
+    {
+      "id": "bw-census-2022",
+      "title": "2022 Population and Housing Census data",
+      "publisher": "Statistics Botswana",
+      "url": "https://www.statsbots.org.bw/census-data",
+      "retrievedAt": "2026-11-14",
+      "note": "Historical census geography, separate from current local-authority and electoral schemes."
+    },
+    {
+      "id": "bw-iec",
+      "title": "Independent Electoral Commission",
+      "publisher": "Independent Electoral Commission, Botswana",
+      "url": "https://www.iec.gov.bw/",
+      "retrievedAt": "2026-11-14"
+    },
+    {
+      "id": "na-murd-structure-2026",
+      "title": "Strategic plan launch keynote, 19 March 2026",
+      "publisher": "Namibia Ministry of Urban and Rural Development",
+      "url": "https://murd.gov.na/documents/1179298/7426797/19%2BMarch%2B2026%2BKey%2Bnote%2Baddress%2Bby%2BMinister%2Bat%2BLaunch%2Bof%2Bthe%2Bstrategic%2Bplan.pdf/21fa6d65-d408-6ee2-9adf-2e1bb7daca60?t=1773928997347",
+      "retrievedAt": "2026-11-14",
+      "publishedAt": "2026-03-19",
+      "note": "Dated ministry snapshot: 14 regions, 121 constituencies, 59 local authorities. Parallel schemes are not flattened into a single tree."
+    },
+    {
+      "id": "na-regional-directory",
+      "title": "Sub-national governments",
+      "publisher": "Namibia Ministry of Urban and Rural Development",
+      "url": "https://murd.gov.na/sub-national-governments",
+      "retrievedAt": "2026-11-14"
+    },
+    {
+      "id": "na-national-assembly",
+      "title": "National Assembly",
+      "publisher": "Parliament of Namibia",
+      "url": "https://www.parliament.na/national-assembly/",
+      "retrievedAt": "2026-11-14"
+    },
+    {
+      "id": "na-national-council",
+      "title": "National Council",
+      "publisher": "Parliament of Namibia",
+      "url": "https://www.parliament.na/national-council/",
+      "retrievedAt": "2026-11-14"
+    },
+    {
+      "id": "na-statistics-agency",
+      "title": "Namibia Statistics Agency mandate",
+      "publisher": "Namibia Statistics Agency",
+      "url": "https://nsa.org.na/about-us/",
+      "retrievedAt": "2026-11-14"
+    },
+    {
+      "id": "na-electoral-register-2025",
+      "title": "2025 final voters register for regional council elections",
+      "publisher": "Electoral Commission of Namibia",
+      "url": "https://www.ecn.na/wp-content/uploads/2025/10/2025-Final-Voters-Register-Regional-Councils-elections.pdf",
+      "retrievedAt": "2026-11-14",
+      "note": "A dated electoral source. This does not provide current constituency polygon geometry."
+    }
+  ]
+}

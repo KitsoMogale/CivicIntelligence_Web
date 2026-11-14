@@ -23,6 +23,7 @@ import {
 import { visibleEntityIds } from "@/lib/visibility";
 import { useExplorer } from "@/lib/store";
 import { municipalById } from "@/lib/geography";
+import { referenceArea } from "@/lib/country-profiles";
 import { validateActions, type CanvasAction } from "@/lib/actions";
 type Message = {
   role: "user" | "assistant";
@@ -285,11 +286,13 @@ export default function Assistant({
                     ])
                   }
                 >
-                  {municipalById(selected.id)
-                    ? "View historical municipality boundary"
-                    : selected.coordinates
-                      ? "Locate on map"
-                      : "View province · site coordinates unavailable"}{" "}
+                  {referenceArea(selected.id)
+                    ? "View administrative area"
+                    : municipalById(selected.id)
+                      ? "View historical municipality boundary"
+                      : selected.coordinates
+                        ? "Locate on map"
+                        : "View province · site coordinates unavailable"}{" "}
                   <ArrowUpRight size={14} />
                 </button>
               )}

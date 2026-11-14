@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { entities, regions } from "@/lib/knowledge";
+import { entities, countryRegions } from "@/lib/knowledge";
 import { useExplorer } from "@/lib/store";
 import type { Domain } from "@/lib/types";
 export default function KnowledgeTree({
@@ -13,6 +13,7 @@ export default function KnowledgeTree({
   onSelect: () => void;
 }) {
   const s = useExplorer();
+  const regions = countryRegions(s.country.code);
   const [filter, setFilter] = useState("");
   const [region, setRegion] = useState("all");
   const records = entities.filter(
@@ -34,11 +35,19 @@ export default function KnowledgeTree({
       />
       {domain === "government" && (
         <select
-          aria-label="Filter explorer province"
+          aria-label={
+            s.country.code === "ZA"
+              ? "Filter explorer province"
+              : "Filter explorer administrative area"
+          }
           value={region}
           onChange={(e) => setRegion(e.target.value)}
         >
-          <option value="all">All provinces / national</option>
+          <option value="all">
+            {s.country.code === "ZA"
+              ? "All provinces / national"
+              : "All areas / national"}
+          </option>
           {regions.map((r) => (
             <option key={r.id} value={r.id}>
               {r.name}

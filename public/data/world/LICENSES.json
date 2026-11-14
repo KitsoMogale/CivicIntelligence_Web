@@ -1,0 +1,1762 @@
+{
+  "note": "Licences apply to their respective datasets. Original geometry properties and publisher simplification are preserved. Source years are not retrieval dates.",
+  "sources": [
+    {
+      "id": "world-natural-earth-countries",
+      "title": "Natural Earth 50m country/area reference, release 5.1.2",
+      "publisher": "Natural Earth",
+      "url": "https://www.naturalearthdata.com/downloads/50m-cultural-vectors/50m-admin-0-countries-2/",
+      "publishedAt": "2022-05-13",
+      "retrievedAt": "2026-11-14",
+      "license": "Public domain",
+      "note": "Cartographic reference, de facto worldview; dependencies and disputed areas retain publisher identifiers. Not a legal determination."
+    },
+    {
+      "id": "world-natural-earth-divisions",
+      "title": "Natural Earth administrative reference, release 5.1.2",
+      "publisher": "Natural Earth",
+      "url": "https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-1-states-provinces/",
+      "publishedAt": "2022-05-13",
+      "retrievedAt": "2026-11-14",
+      "license": "Public domain",
+      "note": "Fallback publisher reference areas only. Administrative depths and dates vary; classifications are not a verified current government hierarchy."
+    },
+    {
+      "id": "world-gb-ad-adm1",
+      "title": "Andorra ADM1 reference boundaries (2007)",
+      "publisher": "geoBoundaries / geoBoundaries, Wikimedia Commons",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/AND/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Public Domain",
+      "note": "Publisher-simplified reference geometry. Source year 2007; canonical label Parish. Original licence: commons.wikimedia.org/wiki/File. Dataset AND-ADM1-23515209; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-ae-adm1",
+      "title": "United Arab Emirates ADM1 reference boundaries (2017)",
+      "publisher": "geoBoundaries / OpenStreetMap, Wambacher",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/ARE/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Open Data Commons Open Database License 1.0",
+      "note": "Publisher-simplified reference geometry. Source year 2017; canonical label Unknown. Original licence: www.openstreetmap.org/copyright. Dataset ARE-ADM1-86790563; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-af-adm1",
+      "title": "Afghanistan ADM1 reference boundaries (2007)",
+      "publisher": "geoBoundaries / Wikimedia, geoBoundaries",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/AFG/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Public Domain",
+      "note": "Publisher-simplified reference geometry. Source year 2007; canonical label Wilayat. Original licence: commons.wikimedia.org/wiki/File. Dataset AFG-ADM1-12653393; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-ag-adm1",
+      "title": "Antigua and Barbuda ADM1 reference boundaries (2009)",
+      "publisher": "geoBoundaries / geoBoundaries, Wikimedia",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/ATG/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Public Domain",
+      "note": "Publisher-simplified reference geometry. Source year 2009; canonical label Parish and Dependency. Original licence: commons.wikimedia.org/wiki/File. Dataset ATG-ADM1-74100532; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-al-adm1",
+      "title": "Albania ADM1 reference boundaries (2021)",
+      "publisher": "geoBoundaries / geoBoundaries, Wikipedia",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/ALB/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Public Domain",
+      "note": "Publisher-simplified reference geometry. Source year 2021; canonical label Qarqet. Original licence: commons.wikimedia.org/wiki/File. Dataset ALB-ADM1-10019604; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-am-adm1",
+      "title": "Armenia ADM1 reference boundaries (2005)",
+      "publisher": "geoBoundaries / geoBoundaries, Wikimedia",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/ARM/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Creative Commons Attribution 2.5 Generic",
+      "note": "Publisher-simplified reference geometry. Source year 2005; canonical label Province and City. Original licence: commons.wikimedia.org/wiki/File. Dataset ARM-ADM1-6114869; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-ao-adm1",
+      "title": "Angola ADM1 reference boundaries (2021)",
+      "publisher": "geoBoundaries / U.S. Census Bureau",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/AGO/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Public Domain",
+      "note": "Publisher-simplified reference geometry. Source year 2021; canonical label Province. Original licence: www.census.gov/geographies/mapping-files/time-series/demo/international-programs/subnationalpopulation.html. Dataset AGO-ADM1-26408823; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-ar-adm1",
+      "title": "Argentina ADM1 reference boundaries (2006)",
+      "publisher": "geoBoundaries / geoBoundaries, Wikimedia",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/ARG/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Creative Commons Attribution 2.5 Generic",
+      "note": "Publisher-simplified reference geometry. Source year 2006; canonical label Province. Original licence: commons.wikimedia.org/wiki/File. Dataset ARG-ADM1-19177384; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-at-adm1",
+      "title": "Austria ADM1 reference boundaries (2017)",
+      "publisher": "geoBoundaries / geoBoundaries, Federal Office for Metrology and Survey, Austria",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/AUT/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Creative Commons Attribution-ShareAlike 2.0",
+      "note": "Publisher-simplified reference geometry. Source year 2017; canonical label Bundesländer. Original licence: twitter.com/WMgeoLab/status/1253487894313959424. Dataset AUT-ADM1-97560089; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-au-adm1",
+      "title": "Australia ADM1 reference boundaries (2021)",
+      "publisher": "geoBoundaries / Australian Bureau of Statistics",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/AUS/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+      "note": "Publisher-simplified reference geometry. Source year 2021; canonical label States and Territories. Original licence: www.abs.gov.au/website-privacy-copyright-and-disclaimer#copyright-and-creative-commons. Dataset AUS-ADM1-82085004; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-az-adm1",
+      "title": "Azerbaijan ADM1 reference boundaries (2021)",
+      "publisher": "geoBoundaries / geoBoundaries, OpenStreetMap",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/AZE/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Open Data Commons Open Database License 1.0",
+      "note": "Publisher-simplified reference geometry. Source year 2021; canonical label Contiguous Regions. Original licence: www.openstreetmap.org/copyright. Dataset AZE-ADM1-63332228; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-ba-adm1",
+      "title": "Bosnia and Herzegovina ADM1 reference boundaries (2013)",
+      "publisher": "geoBoundaries / Wikimedia Commons",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/BIH/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Public Domain",
+      "note": "Publisher-simplified reference geometry. Source year 2013; canonical label gbOpen. Original licence: commons.wikimedia.org/wiki/File. Dataset BIH-ADM1-54001226; build Feb 21, 2024. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-bb-adm1",
+      "title": "Barbados ADM1 reference boundaries (2005)",
+      "publisher": "geoBoundaries / geoBoundaries, Wikimedia",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/BRB/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Creative Commons Attribution 2.5 Generic",
+      "note": "Publisher-simplified reference geometry. Source year 2005; canonical label Parish. Original licence: commons.wikimedia.org/wiki/File. Dataset BRB-ADM1-18249212; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-bd-adm1",
+      "title": "Bangladesh ADM1 reference boundaries (2015)",
+      "publisher": "geoBoundaries / geoBoundaries, Wikimedia Commons",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/BGD/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "CC0 1.0 Universal (CC0 1.0) Public Domain Dedication",
+      "note": "Publisher-simplified reference geometry. Source year 2015; canonical label Division. Original licence: commons.wikimedia.org/wiki/File. Dataset BGD-ADM1-32408957; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-be-adm1",
+      "title": "Belgium ADM1 reference boundaries (2022)",
+      "publisher": "geoBoundaries / Eurostat- European Commission",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/BEL/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Creative Commons Attribution 4.0 (CC BY 4.0)",
+      "note": "Publisher-simplified reference geometry. Source year 2022; canonical label Region. Original licence: ec.europa.eu/info/legal-notice_en. Dataset BEL-ADM1-27649430; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-bf-adm1",
+      "title": "Burkina Faso ADM1 reference boundaries (2017)",
+      "publisher": "geoBoundaries / World Bank",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/BFA/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Creative Commons Attribution 4.0 (CC BY 4.0)",
+      "note": "Publisher-simplified reference geometry. Source year 2017; canonical label Region. Original licence: datacatalog.worldbank.org/public-licenses#cc-by. Dataset BFA-ADM1-92566538; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-bg-adm1",
+      "title": "Bulgaria ADM1 reference boundaries (2019)",
+      "publisher": "geoBoundaries / geoBoundaries, Wikimedia",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/BGR/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Public Domain",
+      "note": "Publisher-simplified reference geometry. Source year 2019; canonical label Province. Original licence: commons.wikimedia.org/wiki/File. Dataset BGR-ADM1-22928101; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-bh-adm1",
+      "title": "Bahrain ADM1 reference boundaries (2017)",
+      "publisher": "geoBoundaries / OpenStreetMap, Wambacher",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/BHR/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Open Data Commons Open Database License 1.0",
+      "note": "Publisher-simplified reference geometry. Source year 2017; canonical label Unknown. Original licence: www.openstreetmap.org/copyright. Dataset BHR-ADM1-46075475; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-bi-adm1",
+      "title": "Burundi ADM1 reference boundaries (2014)",
+      "publisher": "geoBoundaries / geoBoundaries, Wikimedia",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/BDI/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "CC0 1.0 Universal (CC0 1.0) Public Domain Dedication",
+      "note": "Publisher-simplified reference geometry. Source year 2014; canonical label Province. Original licence: commons.wikimedia.org/wiki/File. Dataset BDI-ADM1-87207978; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-bj-adm1",
+      "title": "Benin ADM1 reference boundaries (2012)",
+      "publisher": "geoBoundaries / geoBoundaries, Wikimedia Commons",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/BEN/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Public Domain",
+      "note": "Publisher-simplified reference geometry. Source year 2012; canonical label Departments. Original licence: commons.wikimedia.org/wiki/File. Dataset BEN-ADM1-11314189; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-bn-adm1",
+      "title": "Brunei ADM1 reference boundaries (2011)",
+      "publisher": "geoBoundaries / geoBoundaries, Wikimedia Commons; credit to user 'Tachymetre'",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/BRN/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Public Domain",
+      "note": "Publisher-simplified reference geometry. Source year 2011; canonical label Districts. Original licence: commons.wikimedia.org/wiki/File. Dataset BRN-ADM1-89281809; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-bo-adm1",
+      "title": "Bolivia ADM1 reference boundaries (2015)",
+      "publisher": "geoBoundaries / GeoBolivia, Derived from ADM3 layer",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/BOL/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Public Domain",
+      "note": "Publisher-simplified reference geometry. Source year 2015; canonical label Unknown. Original licence: geo.gob.bo/geonetwork/srv/spa/catalog.search#/metadata/aeeb85a9-23df-48d4-a4e5-dd19e8b206db. Dataset BOL-ADM1-26024454; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-br-adm1",
+      "title": "Brazil ADM1 reference boundaries (2006)",
+      "publisher": "geoBoundaries / geoBoundaries, Wikimedia Commons",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/BRA/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Creative Commons Attribution 2.5 Generic",
+      "note": "Publisher-simplified reference geometry. Source year 2006; canonical label State. Original licence: commons.wikimedia.org/wiki/File. Dataset BRA-ADM1-14911670; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-bs-adm1",
+      "title": "The Bahamas ADM1 reference boundaries (09-09-2017 to 24-08-2020)",
+      "publisher": "geoBoundaries / Haiti GeoPortal",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/BHS/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+      "note": "Publisher-simplified reference geometry. Source year 09-09-2017 to 24-08-2020; canonical label Districts. Original licence: httpshttps. Dataset BHS-ADM1-57655419; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-bt-adm1",
+      "title": "Bhutan ADM1 reference boundaries (2010)",
+      "publisher": "geoBoundaries / geoBoundaries, Wikimedia Commons; credit to author 'Babbage'",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/BTN/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Creative Commons Attribution 3.0 License",
+      "note": "Publisher-simplified reference geometry. Source year 2010; canonical label Dzongdeys. Original licence: commons.wikimedia.org/wiki/File. Dataset BTN-ADM1-66845921; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-bw-adm1",
+      "title": "Botswana ADM1 reference boundaries (2017)",
+      "publisher": "geoBoundaries / OpenStreetMap, Wambacher",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/BWA/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Creative Commons Attribution-ShareAlike 2.0",
+      "note": "Publisher-simplified reference geometry. Source year 2017; canonical label districts. Original licence: www.openstreetmap.org/copyright. Dataset BWA-ADM1-57670837; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-by-adm1",
+      "title": "Belarus ADM1 reference boundaries (2005)",
+      "publisher": "geoBoundaries / geoBoundaries, CIESIN",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/BLR/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Creative Commons Attribution 3.0 License",
+      "note": "Publisher-simplified reference geometry. Source year 2005; canonical label Oblast. Original licence: creativecommons.org/licenses/by/3.0/. Dataset BLR-ADM1-45462678; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-bz-adm1",
+      "title": "Belize ADM1 reference boundaries (2006)",
+      "publisher": "geoBoundaries / geoBoundaries, Wikimedia Commons",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/BLZ/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Creative Commons Attribution 2.5 Generic",
+      "note": "Publisher-simplified reference geometry. Source year 2006; canonical label Districts. Original licence: commons.wikimedia.org/wiki/File. Dataset BLZ-ADM1-66346737; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-ca-adm1",
+      "title": "Canada ADM1 reference boundaries (2023)",
+      "publisher": "geoBoundaries / Statistics Canada (StatCan)",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/CAN/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Open Government Canada 2.0",
+      "note": "Publisher-simplified reference geometry. Source year 2023; canonical label Province. Original licence: www.statcan.gc.ca/eng/reference/licence. Dataset CAN-ADM1-82249235; build Jul 05, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-cd-adm1",
+      "title": "Democratic Republic of the Congo ADM1 reference boundaries (2017)",
+      "publisher": "geoBoundaries / OpenStreetMap, Wambacher",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/COD/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Open Data Commons Open Database License 1.0",
+      "note": "Publisher-simplified reference geometry. Source year 2017; canonical label Provinces. Original licence: www.openstreetmap.org/copyright. Dataset COD-ADM1-28894549; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-cf-adm1",
+      "title": "Central African Republic ADM1 reference boundaries (2006)",
+      "publisher": "geoBoundaries / geoBoundaries, Wikimedia",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/CAF/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Creative Commons Attribution 2.5 Generic",
+      "note": "Publisher-simplified reference geometry. Source year 2006; canonical label Prefecture and Commune. Original licence: commons.wikimedia.org/wiki/File. Dataset CAF-ADM1-63714938; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-cg-adm1",
+      "title": "Republic of the Congo ADM1 reference boundaries (2017)",
+      "publisher": "geoBoundaries / OpenStreetMap, Wambacher",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/COG/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Open Data Commons Open Database License 1.0",
+      "note": "Publisher-simplified reference geometry. Source year 2017; canonical label Départements. Original licence: www.openstreetmap.org/copyright. Dataset COG-ADM1-67827341; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-ch-adm1",
+      "title": "Switzerland ADM1 reference boundaries (2022)",
+      "publisher": "geoBoundaries / Federal Office of Topography swisstopo",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/CHE/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Federal Office of Topography swisstopo License",
+      "note": "Publisher-simplified reference geometry. Source year 2022; canonical label Canton. Original licence: www.swisstopo.admin.ch/en/home/meta/conditions/geodata/ogd.html. Dataset CHE-ADM1-70761945; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-ci-adm1",
+      "title": "Ivory Coast ADM1 reference boundaries (2016)",
+      "publisher": "geoBoundaries / World Bank Group, OCHA Côte d’Ivoire",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/CIV/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+      "note": "Publisher-simplified reference geometry. Source year 2016; canonical label districts de Côte d’Ivoire. Original licence: datacatalog.worldbank.org/public-licenses#cc-by. Dataset CIV-ADM1-83157122; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-cl-adm1",
+      "title": "Chile ADM1 reference boundaries (2020)",
+      "publisher": "geoBoundaries / La Biblioteca del Congreso Nacional de Chile (BCN), OCHA ROLAC",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/CHL/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)",
+      "note": "Publisher-simplified reference geometry. Source year 2020; canonical label Regions. Original licence: data.humdata.org/dataset/chile-administrative-level-0-country-1-region-region. Dataset CHL-ADM1-47653553; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-cm-adm1",
+      "title": "Cameroon ADM1 reference boundaries (2016)",
+      "publisher": "geoBoundaries / geoBoundaries, Wikimedia",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/CMR/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Creative Commons Attribution 3.0 License",
+      "note": "Publisher-simplified reference geometry. Source year 2016; canonical label Region. Original licence: commons.wikimedia.org/wiki/File. Dataset CMR-ADM1-27767025; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-cn-adm1",
+      "title": "People's Republic of China ADM1 reference boundaries (2019)",
+      "publisher": "geoBoundaries / geoBoundaries, Wikimedia Commons",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/CHN/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Public Domain",
+      "note": "Publisher-simplified reference geometry. Source year 2019; canonical label People’s Republic of China. Original licence: commons.wikimedia.org/wiki/File. Dataset CHN-ADM1-43563684; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-co-adm1",
+      "title": "Colombia ADM1 reference boundaries (2017)",
+      "publisher": "geoBoundaries / OpenStreetMap, Wambacher",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/COL/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Open Data Commons Open Database License 1.0",
+      "note": "Publisher-simplified reference geometry. Source year 2017; canonical label Departments. Original licence: www.openstreetmap.org/copyright. Dataset COL-ADM1-13589884; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-cr-adm1",
+      "title": "Costa Rica ADM1 reference boundaries (2017)",
+      "publisher": "geoBoundaries / OpenStreetMap, Wambacher",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/CRI/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Open Data Commons Open Database License 1.0",
+      "note": "Publisher-simplified reference geometry. Source year 2017; canonical label Unknown. Original licence: www.openstreetmap.org/copyright. Dataset CRI-ADM1-80129987; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-cu-adm1",
+      "title": "Cuba ADM1 reference boundaries (2017)",
+      "publisher": "geoBoundaries / OpenStreetMap, Wambacher",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/CUB/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Open Data Commons Open Database License 1.0",
+      "note": "Publisher-simplified reference geometry. Source year 2017; canonical label Unknown. Original licence: www.openstreetmap.org/copyright. Dataset CUB-ADM1-62585838; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-cv-adm1",
+      "title": "Cape Verde ADM1 reference boundaries (2017)",
+      "publisher": "geoBoundaries / OpenStreetMap, Wambacher",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/CPV/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Open Data Commons Open Database License 1.0",
+      "note": "Publisher-simplified reference geometry. Source year 2017; canonical label Unknown. Original licence: www.openstreetmap.org/copyright. Dataset CPV-ADM1-35879248; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-cy-adm1",
+      "title": "Cyprus ADM1 reference boundaries (2017)",
+      "publisher": "geoBoundaries / OpenStreetMap, Wambacher",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/CYP/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Open Data Commons Open Database License 1.0",
+      "note": "Publisher-simplified reference geometry. Source year 2017; canonical label Unknown. Original licence: www.openstreetmap.org/copyright. Dataset CYP-ADM1-96831152; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-cz-adm1",
+      "title": "Czech Republic ADM1 reference boundaries (2021)",
+      "publisher": "geoBoundaries / Czech Office for Surveying",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/CZE/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+      "note": "Publisher-simplified reference geometry. Source year 2021; canonical label regions. Original licence: creativecommons.org/licenses/by/4.0/. Dataset CZE-ADM1-73172107; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-de-adm1",
+      "title": "Germany ADM1 reference boundaries (2021)",
+      "publisher": "geoBoundaries / Federal Agency for Cartography and Geodesy",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/DEU/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Data license Germany - Attribution - Version 2.0",
+      "note": "Publisher-simplified reference geometry. Source year 2021; canonical label Länder. Original licence: www.govdata.de/dl-de/by-2-0. Dataset DEU-ADM1-10402087; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-dj-adm1",
+      "title": "Djibouti ADM1 reference boundaries (2021)",
+      "publisher": "geoBoundaries / Natural Earth",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/DJI/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Public Domain",
+      "note": "Publisher-simplified reference geometry. Source year 2021; canonical label Regions. Original licence: www.naturalearthdata.com/about/terms-of-use/. Dataset DJI-ADM1-25444519; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-dk-adm1",
+      "title": "Denmark ADM1 reference boundaries (2021)",
+      "publisher": "geoBoundaries / geoBoundaries, Web Vectors Map",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/DNK/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+      "note": "Publisher-simplified reference geometry. Source year 2021; canonical label Unknown. Original licence: webvectormaps.com/administrative-map-of-denmark-by-regions/. Dataset DNK-ADM1-84455774; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-dm-adm1",
+      "title": "Dominica ADM1 reference boundaries (2005)",
+      "publisher": "geoBoundaries / geoBoundaries, Wikimedia Commons",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/DMA/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Creative Commons Attribution 2.5 Generic",
+      "note": "Publisher-simplified reference geometry. Source year 2005; canonical label Parish. Original licence: commons.wikimedia.org/wiki/File. Dataset DMA-ADM1-96108325; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-do-adm1",
+      "title": "Dominican Republic ADM1 reference boundaries (2022)",
+      "publisher": "geoBoundaries / Natural Earth",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/DOM/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Public Domain",
+      "note": "Publisher-simplified reference geometry. Source year 2022; canonical label Province. Original licence: www.naturalearthdata.com/about/terms-of-use/. Dataset DOM-ADM1-93820187; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-dz-adm1",
+      "title": "Algeria ADM1 reference boundaries (2017)",
+      "publisher": "geoBoundaries / OpenStreetMap, Wambacher",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/DZA/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Open Data Commons Open Database License 1.0",
+      "note": "Publisher-simplified reference geometry. Source year 2017; canonical label Unknown. Original licence: www.openstreetmap.org/copyright. Dataset DZA-ADM1-43142294; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-ec-adm1",
+      "title": "Ecuador ADM1 reference boundaries (2011)",
+      "publisher": "geoBoundaries / geoBoundaries, Wikimedia Commons",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/ECU/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "CC0 1.0 Universal (CC0 1.0) Public Domain Dedication",
+      "note": "Publisher-simplified reference geometry. Source year 2011; canonical label Province. Original licence: commons.wikimedia.org/wiki/File. Dataset ECU-ADM1-780006; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-ee-adm1",
+      "title": "Estonia ADM1 reference boundaries (2016)",
+      "publisher": "geoBoundaries / OpenStreetMap, Wambacher",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/EST/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Open Data Commons Open Database License 1.0",
+      "note": "Publisher-simplified reference geometry. Source year 2016; canonical label Unknown. Original licence: www.openstreetmap.org/copyright. Dataset EST-ADM1-21999144; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-eg-adm1",
+      "title": "Egypt ADM1 reference boundaries (2017)",
+      "publisher": "geoBoundaries / OpenStreetMap, Wambacher",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/EGY/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Open Data Commons Open Database License 1.0",
+      "note": "Publisher-simplified reference geometry. Source year 2017; canonical label Unknown. Original licence: www.openstreetmap.org/copyright. Dataset EGY-ADM1-46179711; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-er-adm1",
+      "title": "Eritrea ADM1 reference boundaries (2017)",
+      "publisher": "geoBoundaries / OpenStreetMap, Wambacher",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/ERI/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Open Data Commons Open Database License 1.0",
+      "note": "Publisher-simplified reference geometry. Source year 2017; canonical label Unknown. Original licence: www.openstreetmap.org/copyright. Dataset ERI-ADM1-12472421; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-es-adm1",
+      "title": "Spain ADM1 reference boundaries (2017)",
+      "publisher": "geoBoundaries / Instituto de Geografico Nacional",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/ESP/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+      "note": "Publisher-simplified reference geometry. Source year 2017; canonical label Unknown. Original licence: centrodedescargas.cnig.es/CentroDescargas/index.jsp#. Dataset ESP-ADM1-25490228; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-et-adm1",
+      "title": "Ethiopia ADM1 reference boundaries (2016)",
+      "publisher": "geoBoundaries / Open Africa, Code for Ethiopia",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/ETH/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Creative Commons Attribution 4.0 (CC BY 4.0)",
+      "note": "Publisher-simplified reference geometry. Source year 2016; canonical label kilil and astedader. Original licence: africaopendata.org/dataset/ethiopia-shapefiles. Dataset ETH-ADM1-75662566; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-fi-adm1",
+      "title": "Finland ADM1 reference boundaries (2017)",
+      "publisher": "geoBoundaries / OpenStreetMap, Wambacher",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/FIN/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Open Data Commons Open Database License 1.0",
+      "note": "Publisher-simplified reference geometry. Source year 2017; canonical label Unknown. Original licence: www.openstreetmap.org/copyright. Dataset FIN-ADM1-49019192; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-fj-adm1",
+      "title": "Fiji ADM1 reference boundaries (2006)",
+      "publisher": "geoBoundaries / geoBoundaries, Wikimedia Commons",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/FJI/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Creative Commons Attribution 2.5 Generic",
+      "note": "Publisher-simplified reference geometry. Source year 2006; canonical label Divisions. Original licence: en.wikipedia.org/wiki/File. Dataset FJI-ADM1-53030831; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-fm-adm1",
+      "title": "Federated States of Micronesia ADM1 reference boundaries (2019)",
+      "publisher": "geoBoundaries / OCHA ROP, Federated States of Micronesia Division of Statistics, 2010 Census of Population and Housing and Secretariat of the Pacific Community, Statistics for Development Division",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/FSM/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)",
+      "note": "Publisher-simplified reference geometry. Source year 2019; canonical label State. Original licence: Data https. Dataset FSM-ADM1-64989084; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-fr-adm1",
+      "title": "France ADM1 reference boundaries (2022)",
+      "publisher": "geoBoundaries / Institut national de l'information géographique et forestière (IGN-F)",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/FRA/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Etalab Open License 2.0",
+      "note": "Publisher-simplified reference geometry. Source year 2022; canonical label Region. Original licence: geoservices.ign.fr/sites/default/files/2021-11/IGNF_ADMIN_EXPRESS_3-1.html. Dataset FRA-ADM1-19338628; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-ga-adm1",
+      "title": "Gabon ADM1 reference boundaries (2005)",
+      "publisher": "geoBoundaries / geoBoundaries, Wikipedia",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/GAB/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Creative Commons Attribution-ShareAlike 3.0 Unported",
+      "note": "Publisher-simplified reference geometry. Source year 2005; canonical label Provinces. Original licence: en.wikipedia.org/wiki/Subdivisions_of_Gabon#/media/File. Dataset GAB-ADM1-98808126; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-gb-adm1",
+      "title": "United Kingdom ADM1 reference boundaries (2021)",
+      "publisher": "geoBoundaries / Eurostat- European Commission",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/GBR/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+      "note": "Publisher-simplified reference geometry. Source year 2021; canonical label Country. Original licence: ec.europa.eu/info/legal-notice_en. Dataset GBR-ADM1-14339913; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-gd-adm1",
+      "title": "Grenada ADM1 reference boundaries (2017)",
+      "publisher": "geoBoundaries / OpenStreetMap, Wikipedia",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/GRD/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Creative Commons Attribution-ShareAlike 2.0",
+      "note": "Publisher-simplified reference geometry. Source year 2017; canonical label Parish. Original licence: osm-boundaries.com/. Dataset GRD-ADM1-93511190; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-ge-adm1",
+      "title": "Georgia ADM1 reference boundaries (2015)",
+      "publisher": "geoBoundaries / geoBoundaries, Wikimedia",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/GEO/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Creative Commons Attribution 3.0 License",
+      "note": "Publisher-simplified reference geometry. Source year 2015; canonical label Autonomous Republic, Region, City. Original licence: commons.wikimedia.org/wiki/File. Dataset GEO-ADM1-13066534; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-gh-adm1",
+      "title": "Ghana ADM1 reference boundaries (2021)",
+      "publisher": "geoBoundaries / Open Street Map",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/GHA/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Creative Commons Attribution-ShareAlike 2.0",
+      "note": "Publisher-simplified reference geometry. Source year 2021; canonical label Region. Original licence: www.openstreetmap.org/copyright. Dataset GHA-ADM1-69750345; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-gl-adm1",
+      "title": "Greenland ADM1 reference boundaries (2020)",
+      "publisher": "geoBoundaries / GeoBoundaries, Wikipedia",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/GRL/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Creative Commons Attribution-ShareAlike 3.0 Unported",
+      "note": "Publisher-simplified reference geometry. Source year 2020; canonical label Municipalities. Original licence: creativecommons.org/licenses/by-sa/3.0/de/legalcode. Dataset GRL-ADM1-42512837; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-gm-adm1",
+      "title": "The Gambia ADM1 reference boundaries (2020)",
+      "publisher": "geoBoundaries / Knippenberg, Erwin, & Moritz, Meyer. “The Hidden Potential of Mobile Phone Data Insights on COVID-19 in the Gambia.” Data Blog, The World Bank Data Catalog",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/GMB/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Creative Commons Attribution 4.0 (CC BY 4.0)",
+      "note": "Publisher-simplified reference geometry. Source year 2020; canonical label Local Government Areas. Original licence: datacatalog.worldbank.org/search/dataset/0038034. Dataset GMB-ADM1-31243875; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-gn-adm1",
+      "title": "Guinea ADM1 reference boundaries (2017)",
+      "publisher": "geoBoundaries / World Food Programme, OCHA ROWCA",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/GIN/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)",
+      "note": "Publisher-simplified reference geometry. Source year 2017; canonical label Administrative regions and governate. Original licence: data.humdata.org/dataset/guinea-geodatabase. Dataset GIN-ADM1-385441; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-gq-adm1",
+      "title": "Equatorial Guinea ADM1 reference boundaries (2016)",
+      "publisher": "geoBoundaries / OpenStreetMap, Wambacher",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/GNQ/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Open Data Commons Open Database License 1.0",
+      "note": "Publisher-simplified reference geometry. Source year 2016; canonical label Unknown. Original licence: www.openstreetmap.org/copyright. Dataset GNQ-ADM1-51917635; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-gr-adm1",
+      "title": "Greece ADM1 reference boundaries (2016)",
+      "publisher": "geoBoundaries / EuroGeoGraphics, Regional IM Working Group - Europe",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/GRC/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+      "note": "Publisher-simplified reference geometry. Source year 2016; canonical label Decentralized administration. Original licence: data.humdata.org/dataset/gree. Dataset GRC-ADM1-93993887; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-gt-adm1",
+      "title": "Guatemala ADM1 reference boundaries (2017)",
+      "publisher": "geoBoundaries / OpenStreetMap, Wambacher",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/GTM/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Open Data Commons Open Database License 1.0",
+      "note": "Publisher-simplified reference geometry. Source year 2017; canonical label Unknown. Original licence: www.openstreetmap.org/copyright. Dataset GTM-ADM1-53557124; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-gw-adm1",
+      "title": "Guinea-Bissau ADM1 reference boundaries (2017)",
+      "publisher": "geoBoundaries / OpenStreetMap, Wambacher",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/GNB/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Open Data Commons Open Database License 1.0",
+      "note": "Publisher-simplified reference geometry. Source year 2017; canonical label Regiões. Original licence: www.openstreetmap.org/copyright. Dataset GNB-ADM1-76643164; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-gy-adm1",
+      "title": "Guyana ADM1 reference boundaries (2017)",
+      "publisher": "geoBoundaries / OpenStreetMap, Wambacher",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/GUY/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Open Data Commons Open Database License 1.0",
+      "note": "Publisher-simplified reference geometry. Source year 2017; canonical label Regions. Original licence: www.openstreetmap.org/copyright. Dataset GUY-ADM1-73500413; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-hn-adm1",
+      "title": "Honduras ADM1 reference boundaries (2017)",
+      "publisher": "geoBoundaries / OpenStreetMap, Wambacher",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/HND/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Open Data Commons Open Database License 1.0",
+      "note": "Publisher-simplified reference geometry. Source year 2017; canonical label Departments. Original licence: www.openstreetmap.org/copyright. Dataset HND-ADM1-10453824; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-hr-adm1",
+      "title": "Croatia ADM1 reference boundaries (2017)",
+      "publisher": "geoBoundaries / OpenStreetMap, Wambacher",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/HRV/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Open Data Commons Open Database License 1.0",
+      "note": "Publisher-simplified reference geometry. Source year 2017; canonical label Croatia. Original licence: www.openstreetmap.org/copyright. Dataset HRV-ADM1-27960609; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-ht-adm1",
+      "title": "Haiti ADM1 reference boundaries (2017)",
+      "publisher": "geoBoundaries / OpenStreetMap, Wambacher",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/HTI/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Open Data Commons Open Database License 1.0",
+      "note": "Publisher-simplified reference geometry. Source year 2017; canonical label Departments. Original licence: www.openstreetmap.org/copyright. Dataset HTI-ADM1-49955354; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-id-adm1",
+      "title": "Indonesia ADM1 reference boundaries (2017)",
+      "publisher": "geoBoundaries / OpenStreetMap, Wambacher",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/IDN/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Open Data Commons Open Database License 1.0",
+      "note": "Publisher-simplified reference geometry. Source year 2017; canonical label Unknown. Original licence: www.openstreetmap.org/copyright. Dataset IDN-ADM1-65028918; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-ie-adm1",
+      "title": "Ireland ADM1 reference boundaries (2022)",
+      "publisher": "geoBoundaries / Ordce Survey Ireland",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/IRL/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Creative Commons Attribution 4.0 (CC BY 4.0)",
+      "note": "Publisher-simplified reference geometry. Source year 2022; canonical label Province. Original licence: www.arcgis.com/sharing/rest/content/items/cac5ddcbbe934edc881d1611c6b910c7/info/metadata/metadata.xml?format=default&output=html. Dataset IRL-ADM1-36931253; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-il-adm1",
+      "title": "Israel ADM1 reference boundaries (2006)",
+      "publisher": "geoBoundaries / geoBoundaries, Wikimedia",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/ISR/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Public Domain",
+      "note": "Publisher-simplified reference geometry. Source year 2006; canonical label Districts. Original licence: commons.wikimedia.org/wiki/File. Dataset ISR-ADM1-19161824; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-in-adm1",
+      "title": "India ADM1 reference boundaries (2011)",
+      "publisher": "geoBoundaries / DataMeet India community, Election Commission of India",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/IND/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Creative Commons Attribution 2.5 India (CC BY 2.5 IN)",
+      "note": "Publisher-simplified reference geometry. Source year 2011; canonical label State / Union Territory. Original licence: github.com/datameet/maps. Dataset IND-ADM0-90661403; build Feb 21, 2024. No current legal boundary claim. Publisher metadata incorrectly declares one unit. The pinned geometry has 36 separately identified states/union territories. The original metadata is retained; no current legal boundary claim is made."
+    },
+    {
+      "id": "world-gb-iq-adm1",
+      "title": "Iraq ADM1 reference boundaries (2022)",
+      "publisher": "geoBoundaries / geoBoundaries, Wikimedia Commons",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/IRQ/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "CC0 1.0 Universal (CC0 1.0) Public Domain Dedication",
+      "note": "Publisher-simplified reference geometry. Source year 2022; canonical label Governorates (muḥāfaẓāt). Original licence: creativecommons.org/publicdomain/zero/1.0/deed.en. Dataset IRQ-ADM1-90741666; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-is-adm1",
+      "title": "Iceland ADM1 reference boundaries (2017)",
+      "publisher": "geoBoundaries / OpenStreetMap, Wambacher",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/ISL/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Open Data Commons Open Database License 1.0",
+      "note": "Publisher-simplified reference geometry. Source year 2017; canonical label Unknown. Original licence: www.openstreetmap.org/copyright. Dataset ISL-ADM1-53860390; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-it-adm1",
+      "title": "Italy ADM1 reference boundaries (2023)",
+      "publisher": "geoBoundaries / ISTAT, National Institute of Statistics",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/ITA/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Creative Commons Attribution 3.0 License",
+      "note": "Publisher-simplified reference geometry. Source year 2023; canonical label Unknown. Original licence: www.istat.it/it/note-legali. Dataset ITA-ADM1-72843720; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-jm-adm1",
+      "title": "Jamaica ADM1 reference boundaries (2011)",
+      "publisher": "geoBoundaries / OpenStreetMap, Wambacher",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/JAM/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Creative Commons Attribution-ShareAlike 2.0",
+      "note": "Publisher-simplified reference geometry. Source year 2011; canonical label parish. Original licence: www.openstreetmap.org/copyright. Dataset JAM-ADM1-11528761; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-jo-adm1",
+      "title": "Jordan ADM1 reference boundaries (2006)",
+      "publisher": "geoBoundaries / geoBoundaries, Wikimedia",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/JOR/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Creative Commons Attribution 2.5 Generic",
+      "note": "Publisher-simplified reference geometry. Source year 2006; canonical label Governorate. Original licence: commons.wikimedia.org/wiki/File. Dataset JOR-ADM1-50493656; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-jp-adm1",
+      "title": "Japan ADM1 reference boundaries (2017)",
+      "publisher": "geoBoundaries / OpenStreetMap, Wambacher",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/JPN/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Open Data Commons Open Database License 1.0",
+      "note": "Publisher-simplified reference geometry. Source year 2017; canonical label Prefectures. Original licence: www.openstreetmap.org/copyright. Dataset JPN-ADM1-47310658; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-ke-adm1",
+      "title": "Kenya ADM1 reference boundaries (2020)",
+      "publisher": "geoBoundaries / RCMRD GeoPortal, Africa GeoPortal",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/KEN/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Public Domain",
+      "note": "Publisher-simplified reference geometry. Source year 2020; canonical label Counties. Original licence: rcmrd.africageoportal.com/datasets/africageoportal. Dataset KEN-ADM1-32016919; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-kg-adm1",
+      "title": "Kyrgyzstan ADM1 reference boundaries (2017)",
+      "publisher": "geoBoundaries / OpenStreetMap, Wambacher",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/KGZ/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Open Data Commons Open Database License 1.0",
+      "note": "Publisher-simplified reference geometry. Source year 2017; canonical label Unknown. Original licence: www.openstreetmap.org/copyright. Dataset KGZ-ADM1-38789647; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-kh-adm1",
+      "title": "Cambodia ADM1 reference boundaries (2017)",
+      "publisher": "geoBoundaries / OpenStreetMap, Wambacher",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/KHM/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Open Data Commons Open Database License 1.0",
+      "note": "Publisher-simplified reference geometry. Source year 2017; canonical label Unknown. Original licence: www.openstreetmap.org/copyright. Dataset KHM-ADM1-37992800; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-ki-adm1",
+      "title": "Kiribati ADM1 reference boundaries (2017)",
+      "publisher": "geoBoundaries / OpenStreetMap, Wambacher",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/KIR/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Open Data Commons Open Database License 1.0",
+      "note": "Publisher-simplified reference geometry. Source year 2017; canonical label Unknown. Original licence: www.openstreetmap.org/copyright. Dataset KIR-ADM1-97431129; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-km-adm1",
+      "title": "Comoros ADM1 reference boundaries (2017)",
+      "publisher": "geoBoundaries / OpenStreetMap, Wambacher",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/COM/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Open Data Commons Open Database License 1.0",
+      "note": "Publisher-simplified reference geometry. Source year 2017; canonical label Unknown. Original licence: www.openstreetmap.org/copyright. Dataset COM-ADM1-22816118; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-kn-adm1",
+      "title": "Saint Kitts and Nevis ADM1 reference boundaries (2021)",
+      "publisher": "geoBoundaries / OpenStreetMap",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/KNA/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Creative Commons Attribution-ShareAlike 2.0",
+      "note": "Publisher-simplified reference geometry. Source year 2021; canonical label parish. Original licence: www.openstreetmap.org/copyright. Dataset KNA-ADM1-52472329; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-kp-adm1",
+      "title": "North Korea ADM1 reference boundaries (2018)",
+      "publisher": "geoBoundaries / World Food Programme, OCHA ROAP",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/PRK/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)",
+      "note": "Publisher-simplified reference geometry. Source year 2018; canonical label Provinces. Original licence: data.humdata.org/dataset/dpr-korea-administrative-boundaries. Dataset PRK-ADM1-3916807; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-kr-adm1",
+      "title": "South Korea ADM1 reference boundaries (2021)",
+      "publisher": "geoBoundaries / Natural Earth",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/KOR/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Public Domain",
+      "note": "Publisher-simplified reference geometry. Source year 2021; canonical label Province. Original licence: www.naturalearthdata.com/about/terms-of-use/. Dataset KOR-ADM1-68945753; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-kw-adm1",
+      "title": "Kuwait ADM1 reference boundaries (2017)",
+      "publisher": "geoBoundaries / OpenStreetMap, Wambacher",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/KWT/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Open Data Commons Open Database License 1.0",
+      "note": "Publisher-simplified reference geometry. Source year 2017; canonical label Unknown. Original licence: www.openstreetmap.org/copyright. Dataset KWT-ADM1-60633882; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-kz-adm1",
+      "title": "Kazakhstan ADM1 reference boundaries (2017)",
+      "publisher": "geoBoundaries / OpenStreetMap, Wambacher",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/KAZ/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Open Data Commons Open Database License 1.0",
+      "note": "Publisher-simplified reference geometry. Source year 2017; canonical label Unknown. Original licence: www.openstreetmap.org/copyright. Dataset KAZ-ADM1-16772668; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-la-adm1",
+      "title": "Laos ADM1 reference boundaries (2017)",
+      "publisher": "geoBoundaries / OpenStreetMap, Wambacher",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/LAO/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Open Data Commons Open Database License 1.0",
+      "note": "Publisher-simplified reference geometry. Source year 2017; canonical label Unknown. Original licence: www.openstreetmap.org/copyright. Dataset LAO-ADM1-31783359; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-lb-adm1",
+      "title": "Lebanon ADM1 reference boundaries (2017)",
+      "publisher": "geoBoundaries / geoBoundaries, Wikimedia Commons",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/LBN/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Public Domain",
+      "note": "Publisher-simplified reference geometry. Source year 2017; canonical label Governorates / Muhafazah. Original licence: commons.wikimedia.org/wiki/File. Dataset LBN-ADM1-68408151; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-lc-adm1",
+      "title": "Saint Lucia ADM1 reference boundaries (2015)",
+      "publisher": "geoBoundaries / Wikimedia Commons, Wikimedia Commons",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/LCA/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "CC0 1.0 Universal (CC0 1.0) Public Domain Dedication",
+      "note": "Publisher-simplified reference geometry. Source year 2015; canonical label District. Original licence: commons.wikimedia.org/wiki/File. Dataset LCA-ADM1-63095687; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-li-adm1",
+      "title": "Liechtenstein ADM1 reference boundaries (2017)",
+      "publisher": "geoBoundaries / OpenStreetMap, Wambacher",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/LIE/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Open Data Commons Open Database License 1.0",
+      "note": "Publisher-simplified reference geometry. Source year 2017; canonical label Unknown. Original licence: www.openstreetmap.org/copyright. Dataset LIE-ADM1-41692755; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-lk-adm1",
+      "title": "Sri Lanka ADM1 reference boundaries (2017)",
+      "publisher": "geoBoundaries / OpenStreetMap, Wambacher",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/LKA/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Open Data Commons Open Database License 1.0",
+      "note": "Publisher-simplified reference geometry. Source year 2017; canonical label Unknown. Original licence: www.openstreetmap.org/copyright. Dataset LKA-ADM1-99731895; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-lr-adm1",
+      "title": "Liberia ADM1 reference boundaries (2021)",
+      "publisher": "geoBoundaries / UNMIL, OCHA ROWCA",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/LBR/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)",
+      "note": "Publisher-simplified reference geometry. Source year 2021; canonical label Counties. Original licence: data.humdata.org/dataset/liberia-admin-level-2-boundaries. Dataset LBR-ADM1-1627179; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-ls-adm1",
+      "title": "Lesotho ADM1 reference boundaries (2017)",
+      "publisher": "geoBoundaries / OpenStreetMap, Wambacher",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/LSO/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Open Data Commons Open Database License 1.0",
+      "note": "Publisher-simplified reference geometry. Source year 2017; canonical label Unknown. Original licence: www.openstreetmap.org/copyright. Dataset LSO-ADM1-63558799; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-lt-adm1",
+      "title": "Lithuania ADM1 reference boundaries (2017)",
+      "publisher": "geoBoundaries / OpenStreetMap, Wambacher",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/LTU/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Open Data Commons Open Database License 1.0",
+      "note": "Publisher-simplified reference geometry. Source year 2017; canonical label Counties. Original licence: www.openstreetmap.org/copyright. Dataset LTU-ADM1-39236102; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-lu-adm1",
+      "title": "Luxembourg ADM1 reference boundaries (2017)",
+      "publisher": "geoBoundaries / OpenStreetMap, Wambacher",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/LUX/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Open Data Commons Open Database License 1.0",
+      "note": "Publisher-simplified reference geometry. Source year 2017; canonical label Unknown. Original licence: www.openstreetmap.org/copyright. Dataset LUX-ADM1-76397094; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-lv-adm1",
+      "title": "Latvia ADM1 reference boundaries (2021)",
+      "publisher": "geoBoundaries / Geoportal of Latvia",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/LVA/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+      "note": "Publisher-simplified reference geometry. Source year 2021; canonical label Administratīvās teritorijas. Original licence: geolatvija.lv/geo/p/658. Dataset LVA-ADM1-71098776; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-ly-adm1",
+      "title": "Libya ADM1 reference boundaries (2021)",
+      "publisher": "geoBoundaries / Natural Earth",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/LBY/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Public Domain",
+      "note": "Publisher-simplified reference geometry. Source year 2021; canonical label Districts. Original licence: www.naturalearthdata.com/about/terms-of-use/. Dataset LBY-ADM1-10800210; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-ma-adm1",
+      "title": "Morocco ADM1 reference boundaries (2017)",
+      "publisher": "geoBoundaries / OpenStreetMap, Wambacher",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/MAR/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Open Data Commons Open Database License 1.0",
+      "note": "Publisher-simplified reference geometry. Source year 2017; canonical label Region. Original licence: www.openstreetmap.org/copyright. Dataset MAR-ADM1-70788906; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-mc-adm1",
+      "title": "Monaco ADM1 reference boundaries (2017)",
+      "publisher": "geoBoundaries / OpenStreetMap, Wambacher",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/MCO/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Open Data Commons Open Database License 1.0",
+      "note": "Publisher-simplified reference geometry. Source year 2017; canonical label Unknown. Original licence: www.openstreetmap.org/copyright. Dataset MCO-ADM1-64170238; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-md-adm1",
+      "title": "Moldova ADM1 reference boundaries (2020)",
+      "publisher": "geoBoundaries / UNHCR, OCHA FISS",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/MDA/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)",
+      "note": "Publisher-simplified reference geometry. Source year 2020; canonical label Districts. Original licence: data.humdata.org/dataset/moldova-administrative-level-0-1-boundaries. Dataset MDA-ADM1-25212430; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-me-adm1",
+      "title": "Montenegro ADM1 reference boundaries (2017)",
+      "publisher": "geoBoundaries / OpenStreetMap, Wambacher",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/MNE/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Open Data Commons Open Database License 1.0",
+      "note": "Publisher-simplified reference geometry. Source year 2017; canonical label Unknown. Original licence: www.openstreetmap.org/copyright. Dataset MNE-ADM1-59799669; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-mg-adm1",
+      "title": "Madagascar ADM1 reference boundaries (2017)",
+      "publisher": "geoBoundaries / OpenStreetMap, Wambacher",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/MDG/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Open Data Commons Open Database License 1.0",
+      "note": "Publisher-simplified reference geometry. Source year 2017; canonical label Unknown. Original licence: www.openstreetmap.org/copyright. Dataset MDG-ADM1-27540722; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-mh-adm1",
+      "title": "Marshall Islands ADM1 reference boundaries (2017)",
+      "publisher": "geoBoundaries / OpenStreetMap, Wambacher",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/MHL/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Open Data Commons Open Database License 1.0",
+      "note": "Publisher-simplified reference geometry. Source year 2017; canonical label Unknown. Original licence: www.openstreetmap.org/copyright. Dataset MHL-ADM1-77969171; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-mk-adm1",
+      "title": "North Macedonia ADM1 reference boundaries (2016)",
+      "publisher": "geoBoundaries / EuroGeographics and NTES (Nomenclature of Territorial Units for Statistics - Republic of Macedonia State Statistical Office), Regional IM Working Group - Europe",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/MKD/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+      "note": "Publisher-simplified reference geometry. Source year 2016; canonical label Statistical Region. Original licence: data.humdata.org/dataset/fyrom-administrative-levels-1-4-from-eurogeographics-and-ntes. Dataset MKD-ADM1-19869673; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-ml-adm1",
+      "title": "Mali ADM1 reference boundaries (2021)",
+      "publisher": "geoBoundaries / DNCT - Direction Nationale des Collectivités Territoriales, United Nations Office for the Coordination of Humanitarian Affairs, Mali",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/MLI/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+      "note": "Publisher-simplified reference geometry. Source year 2021; canonical label Region or Capital District. Original licence: data.humdata.org/dataset/administrative-boundaries-cod-mli. Dataset MLI-ADM1-92416918; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-mm-adm1",
+      "title": "Myanmar ADM1 reference boundaries (2019)",
+      "publisher": "geoBoundaries / Myanmar Analytics Project, geoBoundaries",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/MMR/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Creative Commons Attribution 4.0 (CC BY 4.0)",
+      "note": "Publisher-simplified reference geometry. Source year 2019; canonical label State. Original licence: data.mmanalytics.org/dataset/border-shapefiles. Dataset MMR-ADM1-20573499; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-mn-adm1",
+      "title": "Mongolia ADM1 reference boundaries (2017)",
+      "publisher": "geoBoundaries / OpenStreetMap, Wambacher",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/MNG/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Open Data Commons Open Database License 1.0",
+      "note": "Publisher-simplified reference geometry. Source year 2017; canonical label Unknown. Original licence: www.openstreetmap.org/copyright. Dataset MNG-ADM1-14279143; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-mr-adm1",
+      "title": "Mauritania ADM1 reference boundaries (2015)",
+      "publisher": "geoBoundaries / Princeton University Library",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/MRT/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Creative Commons Attribution-ShareAlike 3.0 Unported",
+      "note": "Publisher-simplified reference geometry. Source year 2015; canonical label Wilya. Original licence: maps.princeton.edu/catalog/stanford-nw291zj7245/metadata. Dataset MRT-ADM1-64602211; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-mt-adm1",
+      "title": "Malta ADM1 reference boundaries (2022)",
+      "publisher": "geoBoundaries / geoBoundaries, d-maps.com",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/MLT/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Public Domain",
+      "note": "Publisher-simplified reference geometry. Source year 2022; canonical label Local Council. Original licence: d-maps.com/conditions.php?lang=en. Dataset MLT-ADM1-83640313; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-mu-adm1",
+      "title": "Mauritius ADM1 reference boundaries (2017)",
+      "publisher": "geoBoundaries / geoBoundaries, OpenStreetMap",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/MUS/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Open Data Commons Open Database License 1.0",
+      "note": "Publisher-simplified reference geometry. Source year 2017; canonical label Districts and Outer Islands of Mauritius. Original licence: www.openstreetmap.org/copyright. Dataset MUS-ADM1-65221844; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-mv-adm1",
+      "title": "Maldives ADM1 reference boundaries (2017)",
+      "publisher": "geoBoundaries / OpenStreetMap, Wambacher",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/MDV/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Open Data Commons Open Database License 1.0",
+      "note": "Publisher-simplified reference geometry. Source year 2017; canonical label Unknown. Original licence: www.openstreetmap.org/copyright. Dataset MDV-ADM1-51498476; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-mw-adm1",
+      "title": "Malawi ADM1 reference boundaries (2017)",
+      "publisher": "geoBoundaries / OpenStreetMap, Wambacher",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/MWI/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Open Data Commons Open Database License 1.0",
+      "note": "Publisher-simplified reference geometry. Source year 2017; canonical label Unknown. Original licence: www.openstreetmap.org/copyright. Dataset MWI-ADM1-82672581; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-mx-adm1",
+      "title": "Mexico ADM1 reference boundaries (2020)",
+      "publisher": "geoBoundaries / Instituto Nacional de Estadística y Geografía (INEGI)",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/MEX/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)",
+      "note": "Publisher-simplified reference geometry. Source year 2020; canonical label gbOpen. Original licence: data.humdata.org/dataset/mexican-administrative-level-0-country-1-estado-and-2-municipio-boundary-polygons. Dataset MEX-ADM1-31927357; build Feb 21, 2024. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-my-adm1",
+      "title": "Malaysia ADM1 reference boundaries (2017)",
+      "publisher": "geoBoundaries / OpenStreetMap, Wambacher",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/MYS/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Open Data Commons Open Database License 1.0",
+      "note": "Publisher-simplified reference geometry. Source year 2017; canonical label Unknown. Original licence: www.openstreetmap.org/copyright. Dataset MYS-ADM1-15666254; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-mz-adm1",
+      "title": "Mozambique ADM1 reference boundaries (2017)",
+      "publisher": "geoBoundaries / OpenStreetMap, Wambacher",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/MOZ/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Open Data Commons Open Database License 1.0",
+      "note": "Publisher-simplified reference geometry. Source year 2017; canonical label Unknown. Original licence: www.openstreetmap.org/copyright. Dataset MOZ-ADM1-27363107; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-na-adm1",
+      "title": "Namibia ADM1 reference boundaries (2011)",
+      "publisher": "geoBoundaries / Namibia Statistics Agency (NSA), HDX",
+      "url": "https://www.geoboundaries.org/api/current/gbHumanitarian/NAM/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)",
+      "note": "Publisher-simplified reference geometry. Source year 2011; canonical label Unknown. Original licence: data.humdata.org/dataset/cod-ab-nam. Dataset NAM-ADM1-65246180; build Dec 12, 2023. No current legal boundary claim. Publisher metadata says 2011 but includes Kavango East, Kavango West and Zambezi. This date inconsistency is unresolved; the geometry is a reference layer, not verified current demarcation."
+    },
+    {
+      "id": "world-gb-ne-adm1",
+      "title": "Niger ADM1 reference boundaries (2012)",
+      "publisher": "geoBoundaries / IPUMS DHS",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/NER/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Open Data Commons Open Database License 1.0",
+      "note": "Publisher-simplified reference geometry. Source year 2012; canonical label Regions. Original licence: spatialdata.dhsprogram.com/references/subnational_data_schema.pdf. Dataset NER-ADM1-87150794; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-ng-adm1",
+      "title": "Nigeria ADM1 reference boundaries (2022)",
+      "publisher": "geoBoundaries / GRID3",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/NGA/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+      "note": "Publisher-simplified reference geometry. Source year 2022; canonical label State. Original licence: data.grid3.org/datasets/grid3-nigeria-state-boundaries/explore?location=8.992006%2C8.685290%2C6.82. Dataset NGA-ADM1-27671186; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-ni-adm1",
+      "title": "Nicaragua ADM1 reference boundaries (2017)",
+      "publisher": "geoBoundaries / OpenStreetMap, Wambacher",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/NIC/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Open Data Commons Open Database License 1.0",
+      "note": "Publisher-simplified reference geometry. Source year 2017; canonical label Departamentos. Original licence: osm-boundaries.com/. Dataset NIC-ADM1-94367503; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-nl-adm1",
+      "title": "Netherlands ADM1 reference boundaries (2022)",
+      "publisher": "geoBoundaries / National Georegister",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/NLD/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "CC0 1.0 Universal (CC0 1.0) Public Domain Dedication",
+      "note": "Publisher-simplified reference geometry. Source year 2022; canonical label Province. Original licence: nationaalgeoregister.nl/geonetwork/srv/dut/catalog.search#/metadata/208bc283-7c66-4ce7-8ad3-1cf3e8933fb5?tab=general. Dataset NLD-ADM1-6811986; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-no-adm1",
+      "title": "Norway ADM1 reference boundaries (2022)",
+      "publisher": "geoBoundaries / Kartverket",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/NOR/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Creative Commons Attribution 4.0 (CC BY 4.0)",
+      "note": "Publisher-simplified reference geometry. Source year 2022; canonical label Fylke. Original licence: kartkatalog.geonorge.no/metadata/administrative-enheter-fylker/6093c8a8-fa80-11e6-bc64-92361f002671. Dataset NOR-ADM1-71437522; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-np-adm1",
+      "title": "Nepal ADM1 reference boundaries (2020)",
+      "publisher": "geoBoundaries / Survey Department of Nepal, OCHA FISS",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/NPL/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)",
+      "note": "Publisher-simplified reference geometry. Source year 2020; canonical label Provinces. Original licence: data.humdata.org/dataset/administrative-bounadries-of-nepal. Dataset NPL-ADM1-38925275; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-nr-adm1",
+      "title": "Nauru ADM1 reference boundaries (2005)",
+      "publisher": "geoBoundaries / geoBoundaries, FreeMapViewer",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/NRU/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Public Domain",
+      "note": "Publisher-simplified reference geometry. Source year 2005; canonical label District. Original licence: creativecommons.org/share-your-work/public-domain/. Dataset NRU-ADM1-42797286; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-nu-adm1",
+      "title": "Niue ADM1 reference boundaries (2020)",
+      "publisher": "geoBoundaries / Pacific Data Hub",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/NIU/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+      "note": "Publisher-simplified reference geometry. Source year 2020; canonical label village. Original licence: pacificdata.org/data/dataset/2011_niu_phc_admin_boundaries. Dataset NIU-ADM1-93272968; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-nz-adm1",
+      "title": "New Zealand ADM1 reference boundaries (2017)",
+      "publisher": "geoBoundaries / NZ Stats",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/NZL/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+      "note": "Publisher-simplified reference geometry. Source year 2017; canonical label Unknown. Original licence: www.stats.govt.nz/about_us/about-this-site/copyright-terms-of-use.aspx. Dataset NZL-ADM1-40311993; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-om-adm1",
+      "title": "Oman ADM1 reference boundaries (2010)",
+      "publisher": "geoBoundaries / OpenStreetMap, Wambacher",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/OMN/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Open Data Commons Open Database License 1.0",
+      "note": "Publisher-simplified reference geometry. Source year 2010; canonical label Unknown. Original licence: www.openstreetmap.org/copyright. Dataset OMN-ADM1-34121849; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-pa-adm1",
+      "title": "Panama ADM1 reference boundaries (2017)",
+      "publisher": "geoBoundaries / OpenStreetMap, Wambacher",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/PAN/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Open Data Commons Open Database License 1.0",
+      "note": "Publisher-simplified reference geometry. Source year 2017; canonical label Unknown. Original licence: www.openstreetmap.org/copyright. Dataset PAN-ADM1-82927092; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-pe-adm1",
+      "title": "Peru ADM1 reference boundaries (2008)",
+      "publisher": "geoBoundaries / Wikimedia Commons",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/PER/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Public Domain",
+      "note": "Publisher-simplified reference geometry. Source year 2008; canonical label gbOpen. Original licence: commons.wikimedia.org/wiki/File. Dataset PER-ADM1-1875124; build Feb 21, 2024. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-pg-adm1",
+      "title": "Papua New Guinea ADM1 reference boundaries (2019)",
+      "publisher": "geoBoundaries / Papua New Guinea National Statistics Office, OCHA ROAP",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/PNG/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)",
+      "note": "Publisher-simplified reference geometry. Source year 2019; canonical label Provinces. Original licence: data.humdata.org/dataset/papua-new-guinea-admin-level-0-international-boundaries. Dataset PNG-ADM1-602756; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-ph-adm1",
+      "title": "Philippines ADM1 reference boundaries (2020)",
+      "publisher": "geoBoundaries / National Mapping and Resource Information Authority (NAMRIA), Philippines Statistics Authority (PSA), OCHA Philippines",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/PHL/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)",
+      "note": "Publisher-simplified reference geometry. Source year 2020; canonical label Regions. Original licence: data.humdata.org/dataset/philippines-administrative-levels-0-to-3. Dataset PHL-ADM1-36201628; build Jul 05, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-pk-adm1",
+      "title": "Pakistan ADM1 reference boundaries (2019)",
+      "publisher": "geoBoundaries / geoBoundaries, Wikipedia",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/PAK/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Public Domain",
+      "note": "Publisher-simplified reference geometry. Source year 2019; canonical label Province. Original licence: creativecommons.org/share-your-work/public-domain/. Dataset PAK-ADM1-70912109; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-pl-adm1",
+      "title": "Poland ADM1 reference boundaries (2017)",
+      "publisher": "geoBoundaries / OpenStreetMap, Wambacher",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/POL/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Open Data Commons Open Database License 1.0",
+      "note": "Publisher-simplified reference geometry. Source year 2017; canonical label Unknown. Original licence: www.openstreetmap.org/copyright. Dataset POL-ADM1-17162690; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-ps-adm1",
+      "title": "Palestine ADM1 reference boundaries (2021)",
+      "publisher": "geoBoundaries / geoBoundaries, Open Data Watch",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/PSE/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Creative Commons Attribution 4.0 (CC BY 4.0)",
+      "note": "Publisher-simplified reference geometry. Source year 2021; canonical label territory. Original licence: opendatawatch.com/publications/open-data-to-support-sustainable-development-goals/. Dataset PSE-ADM1-83478781; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-pt-adm1",
+      "title": "Portugal ADM1 reference boundaries (2016)",
+      "publisher": "geoBoundaries / DG Territory",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/PRT/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Open Data Commons Open Database License 1.0",
+      "note": "Publisher-simplified reference geometry. Source year 2016; canonical label Unknown. Original licence: snig.dgterritorio.gov.pt/rndg/srv/por/catalog.search#/metadata/5e3debf1-6cde-4ff2-8301-a86799231907. Dataset PRT-ADM1-24955722; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-pw-adm1",
+      "title": "Palau ADM1 reference boundaries (2017)",
+      "publisher": "geoBoundaries / OpenStreetMap, Wambacher",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/PLW/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Open Data Commons Open Database License 1.0",
+      "note": "Publisher-simplified reference geometry. Source year 2017; canonical label Unknown. Original licence: www.openstreetmap.org/copyright. Dataset PLW-ADM1-51375826; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-py-adm1",
+      "title": "Paraguay ADM1 reference boundaries (2012)",
+      "publisher": "geoBoundaries / Direcion General de Estadica, Encuestas y Censos",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/PRY/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+      "note": "Publisher-simplified reference geometry. Source year 2012; canonical label Unknown. Original licence: twitter.com/WMgeoLab/status/1179001467669078017/photo/2. Dataset PRY-ADM1-63826900; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-qa-adm1",
+      "title": "Qatar ADM1 reference boundaries (2015)",
+      "publisher": "geoBoundaries / geoBoundaries, Qatar Open Data Portal",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/QAT/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+      "note": "Publisher-simplified reference geometry. Source year 2015; canonical label Unknown. Original licence: www.data.gov.qa/pages/license/annexes. Dataset QAT-ADM1-59647477; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-ro-adm1",
+      "title": "Romania ADM1 reference boundaries (2017)",
+      "publisher": "geoBoundaries / World Bank",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/ROU/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+      "note": "Publisher-simplified reference geometry. Source year 2017; canonical label Counties. Original licence: data.worldbank.org/summary-terms-of-use. Dataset ROU-ADM1-36066543; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-rs-adm1",
+      "title": "Serbia ADM1 reference boundaries (2017)",
+      "publisher": "geoBoundaries / OpenStreetMap, Wambacher",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/SRB/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Open Data Commons Open Database License 1.0",
+      "note": "Publisher-simplified reference geometry. Source year 2017; canonical label district. Original licence: www.openstreetmap.org/copyright. Dataset SRB-ADM1-41074048; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-ru-adm1",
+      "title": "Russia ADM1 reference boundaries (2017)",
+      "publisher": "geoBoundaries / OpenStreetMap, Wambacher",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/RUS/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Open Data Commons Open Database License 1.0",
+      "note": "Publisher-simplified reference geometry. Source year 2017; canonical label Unknown. Original licence: www.openstreetmap.org/copyright. Dataset RUS-ADM1-28173009; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-rw-adm1",
+      "title": "Rwanda ADM1 reference boundaries (2020)",
+      "publisher": "geoBoundaries / The Rwanda Geo Portal",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/RWA/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Creative Commons Attribution 4.0 (CC BY 4.0)",
+      "note": "Publisher-simplified reference geometry. Source year 2020; canonical label Province. Original licence: rwanda.africageoportal.com/datasets/dac12729b2cd4f0db92fddaa6a80460d_0. Dataset RWA-ADM1-91480417; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-sa-adm1",
+      "title": "Saudi Arabia ADM1 reference boundaries (2017)",
+      "publisher": "geoBoundaries / OpenStreetMap, Wambacher",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/SAU/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Open Data Commons Open Database License 1.0",
+      "note": "Publisher-simplified reference geometry. Source year 2017; canonical label Unknown. Original licence: www.openstreetmap.org/copyright. Dataset SAU-ADM1-25081817; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-sb-adm1",
+      "title": "Solomon Islands ADM1 reference boundaries (2021)",
+      "publisher": "geoBoundaries / Natural Earth",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/SLB/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Public Domain",
+      "note": "Publisher-simplified reference geometry. Source year 2021; canonical label Province. Original licence: www.naturalearthdata.com/about/terms-of-use/. Dataset SLB-ADM1-17018030; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-sc-adm1",
+      "title": "Seychelles ADM1 reference boundaries (2018)",
+      "publisher": "geoBoundaries / Digitizedhttps, Digitizedhttps",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/SYC/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Creative Commons Attribution-ShareAlike 3.0 Unported",
+      "note": "Publisher-simplified reference geometry. Source year 2018; canonical label Unknown. Original licence: commons.wikimedia.org/wiki/File. Dataset SYC-ADM1-4304713; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-sd-adm1",
+      "title": "Sudan ADM1 reference boundaries (2020)",
+      "publisher": "geoBoundaries / Information Management Working Group (IMWG), OCHA ROSEA",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/SDN/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)",
+      "note": "Publisher-simplified reference geometry. Source year 2020; canonical label Wilayat/State. Original licence: data.humdata.org/dataset/sudan-administrative-boundaries-levels-0-2. Dataset SDN-ADM1-86620642; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-se-adm1",
+      "title": "Sweden ADM1 reference boundaries (2009)",
+      "publisher": "geoBoundaries / geoBoundaries, Erik Frohne",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/SWE/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Creative Commons Attribution 3.0 License",
+      "note": "Publisher-simplified reference geometry. Source year 2009; canonical label County. Original licence: commons.wikimedia.org/w/index.php?curid=5675559. Dataset SWE-ADM1-68755315; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-sg-adm1",
+      "title": "Singapore ADM1 reference boundaries (2016)",
+      "publisher": "geoBoundaries / Urban Redevelopment Authority, derived from ADM 3",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/SGP/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Open Data Commons Open Database License 1.0",
+      "note": "Publisher-simplified reference geometry. Source year 2016; canonical label Unknown. Original licence: data.gov.sg/dataset/master-plan-2014-subzone-boundary-no-sea. Dataset SGP-ADM1-49756563; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-si-adm1",
+      "title": "Slovenia ADM1 reference boundaries (2021)",
+      "publisher": "geoBoundaries / Eurostat- European Commission",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/SVN/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Creative Commons Attribution 4.0 (CC BY 4.0)",
+      "note": "Publisher-simplified reference geometry. Source year 2021; canonical label Macroregions. Original licence: ec.europa.eu/info/legal-notice_en. Dataset SVN-ADM1-3739544; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-sk-adm1",
+      "title": "Slovakia ADM1 reference boundaries (2017)",
+      "publisher": "geoBoundaries / OpenStreetMap, Wambacher",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/SVK/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Open Data Commons Open Database License 1.0",
+      "note": "Publisher-simplified reference geometry. Source year 2017; canonical label Unknown. Original licence: www.openstreetmap.org/copyright. Dataset SVK-ADM1-25762395; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-sl-adm1",
+      "title": "Sierra Leone ADM1 reference boundaries (2014)",
+      "publisher": "geoBoundaries / Government of Sierra Leone, OCHA ROWCA",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/SLE/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)",
+      "note": "Publisher-simplified reference geometry. Source year 2014; canonical label Province. Original licence: data.humdata.org/dataset/sierra-leone-all-ad-min-level-boundaries. Dataset SLE-ADM1-38320839; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-sm-adm1",
+      "title": "San Marino ADM1 reference boundaries (2017)",
+      "publisher": "geoBoundaries / OpenStreetMap, Wambacher",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/SMR/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Open Data Commons Open Database License 1.0",
+      "note": "Publisher-simplified reference geometry. Source year 2017; canonical label Unknown. Original licence: www.openstreetmap.org/copyright. Dataset SMR-ADM1-276375; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-sn-adm1",
+      "title": "Senegal ADM1 reference boundaries (2019)",
+      "publisher": "geoBoundaries / Government of Senegal, OCHA ROWCA",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/SEN/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)",
+      "note": "Publisher-simplified reference geometry. Source year 2019; canonical label region. Original licence: data.humdata.org/dataset/senegal-administrative-boundaries. Dataset SEN-ADM1-71046170; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-so-adm1",
+      "title": "Somalia ADM1 reference boundaries (2015)",
+      "publisher": "geoBoundaries / OpenStreetMap, Wambacher",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/SOM/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Open Data Commons Open Database License 1.0",
+      "note": "Publisher-simplified reference geometry. Source year 2015; canonical label Unknown. Original licence: www.openstreetmap.org/copyright. Dataset SOM-ADM1-83879307; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-sr-adm1",
+      "title": "Suriname ADM1 reference boundaries (2017)",
+      "publisher": "geoBoundaries / OpenStreetMap, Wambacher",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/SUR/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Open Data Commons Open Database License 1.0",
+      "note": "Publisher-simplified reference geometry. Source year 2017; canonical label Unknown. Original licence: www.openstreetmap.org/copyright. Dataset SUR-ADM1-93550828; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-ss-adm1",
+      "title": "South Sudan ADM1 reference boundaries (2020)",
+      "publisher": "geoBoundaries / South Sudan Information Management Working Group (IMWG), National Bureau of Statistics (NBS), and OCHA, OCHA South Sudan",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/SSD/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)",
+      "note": "Publisher-simplified reference geometry. Source year 2020; canonical label states. Original licence: data.humdata.org/dataset/south-sudan-administrative-boundaries. Dataset SSD-ADM1-48771326; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-st-adm1",
+      "title": "São Tomé and Príncipe ADM1 reference boundaries (2017)",
+      "publisher": "geoBoundaries / OpenStreetMap, Wambacher",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/STP/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Open Data Commons Open Database License 1.0",
+      "note": "Publisher-simplified reference geometry. Source year 2017; canonical label Unknown. Original licence: www.openstreetmap.org/copyright. Dataset STP-ADM1-19237168; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-sv-adm1",
+      "title": "El Salvador ADM1 reference boundaries (2021)",
+      "publisher": "geoBoundaries / Open Street Map",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/SLV/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Creative Commons Attribution-ShareAlike 2.0",
+      "note": "Publisher-simplified reference geometry. Source year 2021; canonical label Departments. Original licence: osm-boundaries.com/. Dataset SLV-ADM1-98794003; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-sy-adm1",
+      "title": "Syria ADM1 reference boundaries (2017)",
+      "publisher": "geoBoundaries / United Nations Cartographic Section (UNCS) and United Nations Office for the Coordination of Humanitarian Affairs (UNOCHA), OCHA ROSC",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/SYR/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)",
+      "note": "Publisher-simplified reference geometry. Source year 2017; canonical label Governorate. Original licence: data.humdata.org/dataset/syrian-arab-republic-administrative-boundaries-populated-places. Dataset SYR-ADM1-8384693; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-sz-adm1",
+      "title": "Eswatini ADM1 reference boundaries (2017)",
+      "publisher": "geoBoundaries / OpenStreetMap, Wambacher",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/SWZ/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Open Data Commons Open Database License 1.0",
+      "note": "Publisher-simplified reference geometry. Source year 2017; canonical label Unknown. Original licence: www.openstreetmap.org/copyright. Dataset SWZ-ADM1-75366066; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-td-adm1",
+      "title": "Chad ADM1 reference boundaries (2017)",
+      "publisher": "geoBoundaries / OpenStreetMap, Wambacher",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/TCD/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Open Data Commons Open Database License 1.0",
+      "note": "Publisher-simplified reference geometry. Source year 2017; canonical label Unknown. Original licence: www.openstreetmap.org/copyright. Dataset TCD-ADM1-23847190; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-tg-adm1",
+      "title": "Togo ADM1 reference boundaries (2017)",
+      "publisher": "geoBoundaries / OpenStreetMap, Wambacher",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/TGO/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Open Data Commons Open Database License 1.0",
+      "note": "Publisher-simplified reference geometry. Source year 2017; canonical label Regions. Original licence: www.openstreetmap.org/copyright. Dataset TGO-ADM1-44829518; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-th-adm1",
+      "title": "Thailand ADM1 reference boundaries (2017)",
+      "publisher": "geoBoundaries / OpenStreetMap, Wambacher",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/THA/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Open Data Commons Open Database License 1.0",
+      "note": "Publisher-simplified reference geometry. Source year 2017; canonical label Unknown. Original licence: www.openstreetmap.org/copyright. Dataset THA-ADM1-36821470; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-tj-adm1",
+      "title": "Tajikistan ADM1 reference boundaries (2017)",
+      "publisher": "geoBoundaries / OpenStreetMap, Wambacher",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/TJK/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Open Data Commons Open Database License 1.0",
+      "note": "Publisher-simplified reference geometry. Source year 2017; canonical label Unknown. Original licence: www.openstreetmap.org/copyright. Dataset TJK-ADM1-86453995; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-tl-adm1",
+      "title": "East Timor ADM1 reference boundaries (2017)",
+      "publisher": "geoBoundaries / OpenStreetMap, Wambacher",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/TLS/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Open Data Commons Open Database License 1.0",
+      "note": "Publisher-simplified reference geometry. Source year 2017; canonical label Municipalities. Original licence: www.openstreetmap.org/copyright. Dataset TLS-ADM1-58719522; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-tn-adm1",
+      "title": "Tunisia ADM1 reference boundaries (2017)",
+      "publisher": "geoBoundaries / OpenStreetMap, Wambacher",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/TUN/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Open Data Commons Open Database License 1.0",
+      "note": "Publisher-simplified reference geometry. Source year 2017; canonical label Unknown. Original licence: www.openstreetmap.org/copyright. Dataset TUN-ADM1-13205935; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-to-adm1",
+      "title": "Tonga ADM1 reference boundaries (2017)",
+      "publisher": "geoBoundaries / OpenStreetMap, Wambacher",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/TON/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Open Data Commons Open Database License 1.0",
+      "note": "Publisher-simplified reference geometry. Source year 2017; canonical label Unknown. Original licence: www.openstreetmap.org/copyright. Dataset TON-ADM1-12702645; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-tr-adm1",
+      "title": "Turkey ADM1 reference boundaries (2021)",
+      "publisher": "geoBoundaries / Open Street Map",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/TUR/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Creative Commons Attribution-ShareAlike 2.0",
+      "note": "Publisher-simplified reference geometry. Source year 2021; canonical label province. Original licence: www.openstreetmap.org/copyright. Dataset TUR-ADM1-25984515; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-tt-adm1",
+      "title": "Trinidad and Tobago ADM1 reference boundaries (2017)",
+      "publisher": "geoBoundaries / OpenStreetMap, Wambacher",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/TTO/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Open Data Commons Open Database License 1.0",
+      "note": "Publisher-simplified reference geometry. Source year 2017; canonical label Unknown. Original licence: www.openstreetmap.org/copyright. Dataset TTO-ADM1-22272344; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-tv-adm1",
+      "title": "Tuvalu ADM1 reference boundaries (2017)",
+      "publisher": "geoBoundaries / OpenStreetMap, Wambacher",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/TUV/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Open Data Commons Open Database License 1.0",
+      "note": "Publisher-simplified reference geometry. Source year 2017; canonical label Unknown. Original licence: www.openstreetmap.org/copyright. Dataset TUV-ADM1-17741764; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-tw-adm1",
+      "title": "Taiwan ADM1 reference boundaries (2017)",
+      "publisher": "geoBoundaries / OpenStreetMap, Wambacher",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/TWN/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Open Data Commons Open Database License 1.0",
+      "note": "Publisher-simplified reference geometry. Source year 2017; canonical label Chinese Taipei. Original licence: www.openstreetmap.org/copyright. Dataset TWN-ADM1-90331920; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-tz-adm1",
+      "title": "Tanzania ADM1 reference boundaries (2015)",
+      "publisher": "geoBoundaries / OpenStreetMap, Wambacher",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/TZA/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Open Data Commons Open Database License 1.0",
+      "note": "Publisher-simplified reference geometry. Source year 2015; canonical label Regions. Original licence: www.openstreetmap.org/copyright. Dataset TZA-ADM1-36957248; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-ua-adm1",
+      "title": "Ukraine ADM1 reference boundaries (2017)",
+      "publisher": "geoBoundaries / OpenStreetMap, Wambacher",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/UKR/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Open Data Commons Open Database License 1.0",
+      "note": "Publisher-simplified reference geometry. Source year 2017; canonical label Unknown. Original licence: www.openstreetmap.org/copyright. Dataset UKR-ADM1-14850775; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-ug-adm1",
+      "title": "Uganda ADM1 reference boundaries (2017)",
+      "publisher": "geoBoundaries / OpenStreetMap, Wambacher",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/UGA/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Open Data Commons Open Database License 1.0",
+      "note": "Publisher-simplified reference geometry. Source year 2017; canonical label Unknown. Original licence: www.openstreetmap.org/copyright. Dataset UGA-ADM1-17295835; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-us-adm1",
+      "title": "United States of America ADM1 reference boundaries (2018)",
+      "publisher": "geoBoundaries / United States Census Bureau, MAF/TIGER Database",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/USA/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Public Domain",
+      "note": "Publisher-simplified reference geometry. Source year 2018; canonical label States. Original licence: www.census.gov/programs-surveys/geography/technical-documentation/naming-convention/cartographic-boundary-file.html. Dataset USA-ADM1-66186276; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-uy-adm1",
+      "title": "Uruguay ADM1 reference boundaries (2017)",
+      "publisher": "geoBoundaries / OpenStreetMap, Wambacher",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/URY/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Open Data Commons Open Database License 1.0",
+      "note": "Publisher-simplified reference geometry. Source year 2017; canonical label Unknown. Original licence: www.openstreetmap.org/copyright. Dataset URY-ADM1-27058087; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-uz-adm1",
+      "title": "Uzbekistan ADM1 reference boundaries (2017)",
+      "publisher": "geoBoundaries / OpenStreetMap, Wambacher",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/UZB/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Open Data Commons Open Database License 1.0",
+      "note": "Publisher-simplified reference geometry. Source year 2017; canonical label Province. Original licence: www.openstreetmap.org/copyright. Dataset UZB-ADM1-4885205; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-vc-adm1",
+      "title": "Saint Vincent and the Grenadines ADM1 reference boundaries (2017)",
+      "publisher": "geoBoundaries / OpenStreetMap, Wambacher",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/VCT/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Open Data Commons Open Database License 1.0",
+      "note": "Publisher-simplified reference geometry. Source year 2017; canonical label Parishes. Original licence: www.openstreetmap.org/copyright. Dataset VCT-ADM1-94954027; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-ve-adm1",
+      "title": "Venezuela ADM1 reference boundaries (2020)",
+      "publisher": "geoBoundaries / OCHA Venezuela, Instituto Nacional de Estadística",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/VEN/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)",
+      "note": "Publisher-simplified reference geometry. Source year 2020; canonical label Estados. Original licence: Data https. Dataset VEN-ADM1-42786344; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-vn-adm1",
+      "title": "Vietnam ADM1 reference boundaries (2008)",
+      "publisher": "geoBoundaries / geoBoundaries, Wikipedia",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/VNM/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Public Domain",
+      "note": "Publisher-simplified reference geometry. Source year 2008; canonical label Municipalities and Provinces. Original licence: commons.wikimedia.org/wiki/File. Dataset VNM-ADM1-63759600; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-vu-adm1",
+      "title": "Vanuatu ADM1 reference boundaries (2017)",
+      "publisher": "geoBoundaries / OpenStreetMap, Wambacher",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/VUT/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Open Data Commons Open Database License 1.0",
+      "note": "Publisher-simplified reference geometry. Source year 2017; canonical label Unknown. Original licence: www.openstreetmap.org/copyright. Dataset VUT-ADM1-32282491; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-ws-adm1",
+      "title": "Samoa ADM1 reference boundaries (2018)",
+      "publisher": "geoBoundaries / Wikipedia",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/WSM/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Creative Commons Attribution-ShareAlike 3.0 Unported",
+      "note": "Publisher-simplified reference geometry. Source year 2018; canonical label Unknown. Original licence: en.wikipedia.org/wiki/File. Dataset WSM-ADM1-40696546; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-ye-adm1",
+      "title": "Yemen ADM1 reference boundaries (2017)",
+      "publisher": "geoBoundaries / OpenStreetMap, Wambacher",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/YEM/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Open Data Commons Open Database License 1.0",
+      "note": "Publisher-simplified reference geometry. Source year 2017; canonical label Unknown. Original licence: www.openstreetmap.org/copyright. Dataset YEM-ADM1-18629408; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-zm-adm1",
+      "title": "Zambia ADM1 reference boundaries (2020)",
+      "publisher": "geoBoundaries / Zambia Data Hub",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/ZMB/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+      "note": "Publisher-simplified reference geometry. Source year 2020; canonical label Province. Original licence: zambia-nsdi-mlnr.hub.arcgis.com/datasets/6fe71ff483ab491782c8524ec3d1a3b8_0/about. Dataset ZMB-ADM1-6923714; build Dec 12, 2023. No current legal boundary claim. "
+    },
+    {
+      "id": "world-gb-zw-adm1",
+      "title": "Zimbabwe ADM1 reference boundaries (2020)",
+      "publisher": "geoBoundaries / Zimbabwe National Statistics Agency (ZIMSTAT www.zimstat.co.zw) Central Statistics Office, OCHA ROSEA",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/ZWE/ADM1/",
+      "retrievedAt": "2026-11-14",
+      "license": "Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)",
+      "note": "Publisher-simplified reference geometry. Source year 2020; canonical label Province. Original licence: data.humdata.org/dataset/zimbabwe-administrative-levels-0-3-boundaries. Dataset ZWE-ADM1-88200057; build Dec 12, 2023. No current legal boundary claim. "
+    }
+  ]
+}

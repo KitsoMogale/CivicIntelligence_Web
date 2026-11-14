@@ -8,9 +8,11 @@ Next.js App Router, TypeScript, Tailwind, Zustand, MapLibre, React Flow, Cytosca
 
 The [canvas interaction implementation](docs/canvas-implementation.md) adds independent ordered layers, opacity/filter controls, native map symbols, semantic scope with separate density, shared camera and selection, an overlay layout, and reversible validated actions. Existing saved investigations migrate to the expanded state. Resizable split view is implemented; live AI orchestration remains deferred.
 
-The curated catalogue includes 396 entities, 399 typed/navigation relationships, 92 sources, all nine South African provinces, 43 national-directory bodies, 257 municipalities with current-edition and historical boundary geometry, 4,485 revised MDB wards, three mining groups with eight operations, four station assets, five additional sourced facility locators, 13 representative city points, two Census datasets, six provincial measures, two historical World Bank indicators and seven events.
+The catalogue includes 4,238 entities, 4,007 typed/navigation relationships and 301 sources. Country profiles cover 237 countries and areas, including 3,382 dated reference areas across 214 country files. South Africa retains nine provinces, 43 national-directory bodies, 257 municipalities, 4,485 revised MDB wards, curated industry and infrastructure examples, two Census datasets, six provincial measures and seven events.
 
-Detailed institutional coverage focuses on South Africa. World Bank population and GDP-growth comparisons cover South Africa, Botswana and Namibia in 2014–2024. Other countries remain map-only.
+Detailed institutional coverage focuses on South Africa, with initial sourced Botswana and Namibia profiles. Other countries show their geographic reference coverage and institution gaps. World Bank population and GDP-growth comparisons cover mapped economies where observations are published in 2014–2024. See [world coverage and source caveats](docs/world-coverage.md).
+
+Country structure and coverage opens on demand. Dated administrative areas can be selected and highlighted. Entity dots remain selectable, with permanent and hover name cards removed, including power stations. Cluster counts remain visible.
 
 ## Geography and evidence
 

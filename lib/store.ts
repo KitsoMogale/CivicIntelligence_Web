@@ -12,6 +12,11 @@ import {
 } from "./exploration";
 import { legacyLayers, sameCamera, type Camera } from "./canvas";
 import { reduceCanvas, entityExpansion, actionLabel } from "./canvas-reducer";
+import {
+  countryProfile,
+  domainRoot,
+  supportsCountryMode,
+} from "./country-profiles";
 type State = Exploration & {
   past: Exploration[];
   future: Exploration[];
@@ -69,7 +74,8 @@ export const useExplorer = create<State>()(
           { type: "SELECT_COUNTRY", payload: { countryCode: country.code } },
         ]),
       selectDomain: (domain) => {
-        if (get().country.code !== "ZA") return;
+        const root = domainRoot(get().country.code, domain);
+        if (!root) return;
         const d = domains.find((d) => d.id === domain)!;
         get().navigate(
           {
@@ -85,8 +91,10 @@ export const useExplorer = create<State>()(
                   ? "data"
                   : "hierarchy",
             expanded: [
-              d.root,
-              ...(domain === "government" ? ["za-national"] : []),
+              root,
+              ...(domain === "government"
+                ? countryProfile(get().country.code).defaultExpanded
+                : []),
             ],
           },
           "Explore " + d.short,
@@ -127,11 +135,7 @@ export const useExplorer = create<State>()(
         );
       },
       setMode: (mode) => {
-        if (
-          get().country.code !== "ZA" &&
-          !["geographic", "compare", "timeline"].includes(mode)
-        )
-          return;
+        if (!supportsCountryMode(get().country.code, mode)) return;
         get().applyActions([
           { type: "SET_VISUALIZATION_MODE", payload: { mode } },
         ]);

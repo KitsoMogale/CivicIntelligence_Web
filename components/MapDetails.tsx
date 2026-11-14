@@ -17,7 +17,8 @@ import {
   wardFile,
 } from "@/lib/boundaries";
 import { STREET_TILES, STREET_ATTRIBUTION } from "@/lib/streets";
-import { entityById } from "@/lib/knowledge";
+import { entityById, getSources } from "@/lib/knowledge";
+import { countryProfile } from "@/lib/country-profiles";
 import MapOverlay from "./MapOverlay";
 export type StreetStatus = "off" | "loading" | "ready" | "error";
 const cachedWards = new Map<string, FeatureCollection>();
@@ -46,6 +47,8 @@ export default function MapDetails({
         ? wardFile(s.region)
         : null;
   const options = municipalityWards(s.region);
+  const profile = countryProfile(s.country.code);
+  const boundarySource = getSources([profile.boundary.sourceId])[0];
   useEffect(() => {
     if (!map || !ready) return;
     const update = (status: StreetStatus) => {
@@ -109,6 +112,8 @@ export default function MapDetails({
         type: "geojson",
         data: { type: "FeatureCollection", features: [] },
         promoteId: "wardId",
+        attribution:
+          '<a href="https://spatialhub-mdb-sa.opendata.arcgis.com/" target="_blank" rel="noreferrer">Municipal Demarcation Board</a> (2026 publisher terms)',
       });
       map.addLayer({
         id: "ward-fill",
@@ -246,6 +251,19 @@ export default function MapDetails({
         )}
         {s.country.code === "ZA" && (
           <span>{boundaryTitle(s.boundaryEdition)}</span>
+        )}
+        {s.country.code !== "ZA" && boundarySource && (
+          <a
+            href={boundarySource.url}
+            target="_blank"
+            rel="noreferrer"
+            title={
+              boundarySource.publisher + " · " + (boundarySource.license ?? "")
+            }
+          >
+            Boundary reference · {profile.boundary.year}
+            {s.country.code === "NA" ? " · date conflict" : ""}
+          </a>
         )}
       </div>
       {s.country.code === "ZA" && wardLayer.visible && (

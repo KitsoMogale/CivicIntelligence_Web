@@ -86,7 +86,7 @@ try {
   );
   await screenshot(page, "desktop-map");
   check("World map and all nine province geometries load without overflow");
-  const bank = page.getByTitle(/South African Reserve Bank/);
+  const bank = page.locator('.map-entity[data-entity-ids*="za-sarb"]');
   await bank.click();
   if (await page.locator(".map-cluster-list").count())
     await page

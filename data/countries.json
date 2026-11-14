@@ -1,843 +1,17 @@
 [
   {
-    "code": "FJ",
-    "name": "Fiji",
-    "continent": "Oceania",
-    "center": [
-      178.00155,
-      -17.813955
-    ],
-    "zoom": 6
-  },
-  {
-    "code": "TZ",
-    "name": "Tanzania",
-    "continent": "Africa",
-    "center": [
-      34.828294,
-      -6.335469
-    ],
-    "zoom": 4.214784200713503
-  },
-  {
-    "code": "EH",
-    "name": "Western Sahara",
-    "continent": "Africa",
-    "center": [
-      -12.8642735,
-      24.328089
-    ],
-    "zoom": 4.909054673478941
-  },
-  {
-    "code": "CA",
-    "name": "Canada",
-    "continent": "North America",
-    "center": [
-      -98.34058,
-      56.7978175
-    ],
-    "zoom": 2
-  },
-  {
-    "code": "US",
-    "name": "United States of America",
-    "continent": "North America",
-    "center": [
-      -95.82593499999999,
-      37.234525
-    ],
-    "zoom": 2.377755560659993
-  },
-  {
-    "code": "KZ",
-    "name": "Kazakhstan",
-    "continent": "Asia",
-    "center": [
-      66.913208,
-      48.0237875
-    ],
-    "zoom": 2.875018203121876
-  },
-  {
-    "code": "UZ",
-    "name": "Uzbekistan",
-    "continent": "Asia",
-    "center": [
-      64.492167,
-      41.365899
-    ],
-    "zoom": 4.130660245620534
-  },
-  {
-    "code": "PG",
-    "name": "Papua New Guinea",
-    "continent": "Oceania",
-    "center": [
-      145.900919,
-      -6.6263135
-    ],
-    "zoom": 4.634450787705982
-  },
-  {
-    "code": "ID",
-    "name": "Indonesia",
-    "continent": "Asia",
-    "center": [
-      122.00413499999999,
-      -2.0150705
-    ],
-    "zoom": 4.772671167556465
-  },
-  {
-    "code": "AR",
-    "name": "Argentina",
-    "continent": "South America",
-    "center": [
-      -63.5218925,
-      -37.0911465
-    ],
-    "zoom": 2.7122831353148467
-  },
-  {
-    "code": "CL",
-    "name": "Chile",
-    "continent": "South America",
-    "center": [
-      -71.31481450000001,
-      -35.7182335
-    ],
-    "zoom": 2.4628950921035857
-  },
-  {
-    "code": "CD",
-    "name": "Democratic Republic of the Congo",
-    "continent": "Africa",
-    "center": [
-      21.678243000000002,
-      -4.0005695
-    ],
-    "zoom": 3.4333648471205844
-  },
-  {
-    "code": "SO",
-    "name": "Somalia",
-    "continent": "Africa",
-    "center": [
-      46.057460000000006,
-      5.170695
-    ],
-    "zoom": 3.866921574886651
-  },
-  {
-    "code": "KE",
-    "name": "Kenya",
-    "continent": "Africa",
-    "center": [
-      37.874325999999996,
-      0.41461499999999996
-    ],
-    "zoom": 4.295798026433905
-  },
-  {
-    "code": "SD",
-    "name": "Sudan",
-    "continent": "Africa",
-    "center": [
-      30.17345,
-      15.114594
-    ],
-    "zoom": 3.860314463966807
-  },
-  {
-    "code": "TD",
-    "name": "Chad",
-    "continent": "Africa",
-    "center": [
-      18.713642,
-      15.4158225
-    ],
-    "zoom": 3.6449571155389746
-  },
-  {
-    "code": "HT",
-    "name": "Haiti",
-    "continent": "North America",
-    "center": [
-      -73.04145349999999,
-      18.973338499999997
-    ],
-    "zoom": 6
-  },
-  {
-    "code": "DO",
-    "name": "Dominican Republic",
-    "continent": "North America",
-    "center": [
-      -70.1315275,
-      18.7417375
-    ],
-    "zoom": 6
-  },
-  {
-    "code": "RU",
-    "name": "Russia",
+    "code": "AD",
+    "name": "Andorra",
     "continent": "Europe",
     "center": [
-      103.6440925,
-      59.424668
-    ],
-    "zoom": 2
-  },
-  {
-    "code": "BS",
-    "name": "The Bahamas",
-    "continent": "North America",
-    "center": [
-      -77.97157,
-      24.46015
-    ],
-    "zoom": 6
-  },
-  {
-    "code": "FK",
-    "name": "Falkland Islands",
-    "continent": "South America",
-    "center": [
-      -59.475,
-      -51.7
-    ],
-    "zoom": 6
-  },
-  {
-    "code": "NO",
-    "name": "Norway",
-    "continent": "Europe",
-    "center": [
-      18.142748,
-      64.63217900000001
-    ],
-    "zoom": 3.511754291828304
-  },
-  {
-    "code": "GL",
-    "name": "Greenland",
-    "continent": "North America",
-    "center": [
-      -42.752775,
-      71.840945
-    ],
-    "zoom": 2.2959909602923814
-  },
-  {
-    "code": "TF",
-    "name": "French Southern and Antarctic Lands",
-    "continent": "Seven seas (open ocean)",
-    "center": [
-      69.64,
-      -49.2
-    ],
-    "zoom": 6
-  },
-  {
-    "code": "TL",
-    "name": "East Timor",
-    "continent": "Asia",
-    "center": [
-      126.152305,
-      -8.833259000000002
-    ],
-    "zoom": 6
-  },
-  {
-    "code": "ZA",
-    "name": "South Africa",
-    "continent": "Africa",
-    "center": [
-      24.5875485,
-      -28.4552395
-    ],
-    "zoom": 3.9739390163775807
-  },
-  {
-    "code": "LS",
-    "name": "Lesotho",
-    "continent": "Africa",
-    "center": [
-      28.162214,
-      -29.646304
-    ],
-    "zoom": 6
-  },
-  {
-    "code": "MX",
-    "name": "Mexico",
-    "continent": "North America",
-    "center": [
-      -101.969871,
-      23.6298295
-    ],
-    "zoom": 3.306821748517256
-  },
-  {
-    "code": "UY",
-    "name": "Uruguay",
-    "continent": "South America",
-    "center": [
-      -55.8183315,
-      -32.5311665
-    ],
-    "zoom": 5.367966804702862
-  },
-  {
-    "code": "BR",
-    "name": "Brazil",
-    "continent": "South America",
-    "center": [
-      -54.358614,
-      -14.261945999999998
-    ],
-    "zoom": 2.35797818196633
-  },
-  {
-    "code": "BO",
-    "name": "Bolivia",
-    "continent": "South America",
-    "center": [
-      -63.5443975,
-      -16.3174535
-    ],
-    "zoom": 3.9311579607087936
-  },
-  {
-    "code": "PE",
-    "name": "Peru",
-    "continent": "South America",
-    "center": [
-      -75.03801150000001,
-      -9.20259
-    ],
-    "zoom": 3.4508122843278795
-  },
-  {
-    "code": "CO",
-    "name": "Colombia",
-    "continent": "South America",
-    "center": [
-      -72.93363049999999,
-      4.069558
-    ],
-    "zoom": 3.5790173024394996
-  },
-  {
-    "code": "PA",
-    "name": "Panama",
-    "continent": "North America",
-    "center": [
-      -80.1041745,
-      8.4160755
-    ],
-    "zoom": 5.7119923817238405
-  },
-  {
-    "code": "CR",
-    "name": "Costa Rica",
-    "continent": "North America",
-    "center": [
-      -84.2439605,
-      9.7210735
-    ],
-    "zoom": 6
-  },
-  {
-    "code": "NI",
-    "name": "Nicaragua",
-    "continent": "North America",
-    "center": [
-      -85.40785600000001,
-      12.871552999999999
-    ],
-    "zoom": 5.543070914213785
-  },
-  {
-    "code": "HN",
-    "name": "Honduras",
-    "continent": "North America",
-    "center": [
-      -86.2502725,
-      14.495046
-    ],
-    "zoom": 5.595130119791252
-  },
-  {
-    "code": "SV",
-    "name": "El Salvador",
-    "continent": "North America",
-    "center": [
-      -88.90952899999999,
-      13.786575
-    ],
-    "zoom": 6
-  },
-  {
-    "code": "GT",
-    "name": "Guatemala",
-    "continent": "North America",
-    "center": [
-      -90.227136,
-      15.777332000000001
-    ],
-    "zoom": 5.613877562630001
-  },
-  {
-    "code": "BZ",
-    "name": "Belize",
-    "continent": "North America",
-    "center": [
-      -88.6679675,
-      17.19346
-    ],
-    "zoom": 6
-  },
-  {
-    "code": "VE",
-    "name": "Venezuela",
-    "continent": "South America",
-    "center": [
-      -66.53161850000001,
-      6.4433795
-    ],
-    "zoom": 4.12811157345427
-  },
-  {
-    "code": "GY",
-    "name": "Guyana",
-    "continent": "South America",
-    "center": [
-      -58.9748445,
-      4.8175615
-    ],
-    "zoom": 4.816251146923918
-  },
-  {
-    "code": "SR",
-    "name": "Suriname",
-    "continent": "South America",
-    "center": [
-      -56.001369499999996,
-      3.921479
-    ],
-    "zoom": 5.570850400917299
-  },
-  {
-    "code": "FR",
-    "name": "France",
-    "continent": "Europe",
-    "center": [
-      1.7534644999999998,
-      46.7459455
-    ],
-    "zoom": 4.505513360062308
-  },
-  {
-    "code": "EC",
-    "name": "Ecuador",
-    "continent": "South America",
-    "center": [
-      -78.10074399999999,
-      -1.7891024999999998
-    ],
-    "zoom": 4.979361289076041
-  },
-  {
-    "code": "PR",
-    "name": "Puerto Rico",
-    "continent": "North America",
-    "center": [
-      -66.41671600000001,
-      18.233577
-    ],
-    "zoom": 6
-  },
-  {
-    "code": "JM",
-    "name": "Jamaica",
-    "continent": "North America",
-    "center": [
-      -77.268689,
-      18.112667000000002
-    ],
-    "zoom": 6
-  },
-  {
-    "code": "CU",
-    "name": "Cuba",
-    "continent": "North America",
-    "center": [
-      -79.576468,
-      21.522046000000003
-    ],
-    "zoom": 4.796275320271455
-  },
-  {
-    "code": "ZW",
-    "name": "Zimbabwe",
-    "continent": "Africa",
-    "center": [
-      29.0570435,
-      -18.8896995
-    ],
-    "zoom": 4.886016856298002
-  },
-  {
-    "code": "BW",
-    "name": "Botswana",
-    "continent": "Africa",
-    "center": [
-      24.663823,
-      -22.2451795
-    ],
-    "zoom": 4.44744948144602
-  },
-  {
-    "code": "NA",
-    "name": "Namibia",
-    "continent": "Africa",
-    "center": [
-      18.409321,
-      -22.993402500000002
-    ],
-    "zoom": 4.046430018490239
-  },
-  {
-    "code": "SN",
-    "name": "Senegal",
-    "continent": "Africa",
-    "center": [
-      -14.546471,
-      14.465177
-    ],
-    "zoom": 5.550913381194737
-  },
-  {
-    "code": "ML",
-    "name": "Mali",
-    "continent": "Africa",
-    "center": [
-      -3.95027,
-      17.5354675
-    ],
-    "zoom": 3.7487268379882934
-  },
-  {
-    "code": "MR",
-    "name": "Mauritania",
-    "continent": "Africa",
-    "center": [
-      -10.99338,
-      21.006289000000002
-    ],
-    "zoom": 3.968163310610191
-  },
-  {
-    "code": "BJ",
-    "name": "Benin",
-    "continent": "Africa",
-    "center": [
-      2.2847239999999998,
-      9.188897
-    ],
-    "zoom": 5.036590273450219
-  },
-  {
-    "code": "NE",
-    "name": "Niger",
-    "continent": "Africa",
-    "center": [
-      8.0994465,
-      17.5659175
-    ],
-    "zoom": 4.081735781493856
-  },
-  {
-    "code": "NG",
-    "name": "Nigeria",
-    "continent": "Africa",
-    "center": [
-      8.63444,
-      9.053259
-    ],
-    "zoom": 4.3770201860977815
-  },
-  {
-    "code": "CM",
-    "name": "Cameroon",
-    "continent": "Africa",
-    "center": [
-      12.250834,
-      7.2935345
-    ],
-    "zoom": 4.167251180449294
-  },
-  {
-    "code": "TG",
-    "name": "Togo",
-    "continent": "Africa",
-    "center": [
-      0.907728,
-      8.4737595
-    ],
-    "zoom": 5.296234466899333
-  },
-  {
-    "code": "GH",
-    "name": "Ghana",
-    "continent": "Africa",
-    "center": [
-      -1.092124,
-      7.9044015
-    ],
-    "zoom": 4.968519204475996
-  },
-  {
-    "code": "CI",
-    "name": "Ivory Coast",
-    "continent": "Africa",
-    "center": [
-      -5.582535,
-      7.4311745
-    ],
-    "zoom": 5.014902298116575
-  },
-  {
-    "code": "GN",
-    "name": "Guinea",
-    "continent": "Africa",
-    "center": [
-      -11.4812055,
-      9.947610000000001
-    ],
-    "zoom": 5.2440982914128815
-  },
-  {
-    "code": "GW",
-    "name": "Guinea-Bissau",
-    "continent": "Africa",
-    "center": [
-      -15.188963999999999,
-      11.834291
-    ],
-    "zoom": 6
-  },
-  {
-    "code": "LR",
-    "name": "Liberia",
-    "continent": "Africa",
-    "center": [
-      -9.489247,
-      6.448405
-    ],
-    "zoom": 5.578525151706356
-  },
-  {
-    "code": "SL",
-    "name": "Sierra Leone",
-    "continent": "Africa",
-    "center": [
-      -11.738322,
-      8.4164505
-    ],
-    "zoom": 5.938512107604395
-  },
-  {
-    "code": "BF",
-    "name": "Burkina Faso",
-    "continent": "Africa",
-    "center": [
-      -1.6467284999999998,
-      12.3634965
-    ],
-    "zoom": 5.183028979876453
-  },
-  {
-    "code": "CF",
-    "name": "Central African Republic",
-    "continent": "Africa",
-    "center": [
-      20.9168165,
-      6.7050175
-    ],
-    "zoom": 4.494148897330759
-  },
-  {
-    "code": "CG",
-    "name": "Republic of the Congo",
-    "continent": "Africa",
-    "center": [
-      14.773419,
-      -0.654895
-    ],
-    "zoom": 4.511907228787861
-  },
-  {
-    "code": "GA",
-    "name": "Gabon",
-    "continent": "Africa",
-    "center": [
-      11.611726,
-      -0.8260345
-    ],
-    "zoom": 4.987225967128004
-  },
-  {
-    "code": "GQ",
-    "name": "Equatorial Guinea",
-    "continent": "Africa",
-    "center": [
-      10.295345999999999,
-      1.6469930000000002
-    ],
-    "zoom": 6
-  },
-  {
-    "code": "ZM",
-    "name": "Zambia",
-    "continent": "Africa",
-    "center": [
-      27.6867655,
-      -13.099743
-    ],
-    "zoom": 4.362458823033145
-  },
-  {
-    "code": "MW",
-    "name": "Malawi",
-    "continent": "Africa",
-    "center": [
-      34.230035,
-      -13.015949500000001
-    ],
-    "zoom": 4.723429298757798
-  },
-  {
-    "code": "MZ",
-    "name": "Mozambique",
-    "continent": "Africa",
-    "center": [
-      35.477478,
-      -18.529643999999998
-    ],
-    "zoom": 3.606026292174206
-  },
-  {
-    "code": "SZ",
-    "name": "Eswatini",
-    "continent": "Africa",
-    "center": [
-      31.374137,
-      -26.473035000000003
-    ],
-    "zoom": 6
-  },
-  {
-    "code": "AO",
-    "name": "Angola",
-    "continent": "Africa",
-    "center": [
-      17.860000499999998,
-      -11.8974385
-    ],
-    "zoom": 4.0509333792308215
-  },
-  {
-    "code": "BI",
-    "name": "Burundi",
-    "continent": "Africa",
-    "center": [
-      29.888583,
-      -3.4242350000000004
-    ],
-    "zoom": 6
-  },
-  {
-    "code": "IL",
-    "name": "Israel",
-    "continent": "Asia",
-    "center": [
-      35.050915,
-      31.389376
-    ],
-    "zoom": 5.726959218614755
-  },
-  {
-    "code": "LB",
-    "name": "Lebanon",
-    "continent": "Asia",
-    "center": [
-      35.8689015,
-      33.866977
-    ],
-    "zoom": 6
-  },
-  {
-    "code": "MG",
-    "name": "Madagascar",
-    "continent": "Africa",
-    "center": [
-      46.865362000000005,
-      -18.820995500000002
-    ],
-    "zoom": 3.8824776123837923
-  },
-  {
-    "code": "PS",
-    "name": "Palestine",
-    "continent": "Asia",
-    "center": [
-      35.2365365,
-      31.942973000000002
-    ],
-    "zoom": 6
-  },
-  {
-    "code": "GM",
-    "name": "The Gambia",
-    "continent": "Africa",
-    "center": [
-      -15.343244,
-      13.503388000000001
-    ],
-    "zoom": 6
-  },
-  {
-    "code": "TN",
-    "name": "Tunisia",
-    "continent": "Africa",
-    "center": [
-      9.5066345,
-      33.828775
-    ],
-    "zoom": 4.82778123227303
-  },
-  {
-    "code": "DZ",
-    "name": "Algeria",
-    "continent": "Africa",
-    "center": [
-      1.657553,
-      28.0878725
-    ],
-    "zoom": 3.469048962891025
-  },
-  {
-    "code": "JO",
-    "name": "Jordan",
-    "continent": "Asia",
-    "center": [
-      37.0590355,
-      31.288090500000003
-    ],
-    "zoom": 5.579942241475444
+      1.577539,
+      42.538599
+    ],
+    "zoom": 8,
+    "iso3": "AND",
+    "status": "Sovereign country",
+    "sovereignty": "Andorra",
+    "providerId": "AND"
   },
   {
     "code": "AE",
@@ -847,187 +21,11 @@
       53.988183,
       24.276206000000002
     ],
-    "zoom": 5.81258046706575
-  },
-  {
-    "code": "QA",
-    "name": "Qatar",
-    "continent": "Asia",
-    "center": [
-      51.17530549999999,
-      25.3354565
-    ],
-    "zoom": 6
-  },
-  {
-    "code": "KW",
-    "name": "Kuwait",
-    "continent": "Asia",
-    "center": [
-      47.4924035,
-      29.2925665
-    ],
-    "zoom": 6
-  },
-  {
-    "code": "IQ",
-    "name": "Iraq",
-    "continent": "Asia",
-    "center": [
-      43.680156,
-      33.2421445
-    ],
-    "zoom": 4.593138757202943
-  },
-  {
-    "code": "OM",
-    "name": "Oman",
-    "continent": "Asia",
-    "center": [
-      55.904035,
-      20.7878915
-    ],
-    "zoom": 4.595326855671586
-  },
-  {
-    "code": "VU",
-    "name": "Vanuatu",
-    "continent": "Oceania",
-    "center": [
-      166.9495825,
-      -15.183259
-    ],
-    "zoom": 6
-  },
-  {
-    "code": "KH",
-    "name": "Cambodia",
-    "continent": "Asia",
-    "center": [
-      104.9813235,
-      12.528564
-    ],
-    "zoom": 5.613859193412332
-  },
-  {
-    "code": "TH",
-    "name": "Thailand",
-    "continent": "Asia",
-    "center": [
-      101.4824675,
-      13.054617
-    ],
-    "zoom": 3.763516835320306
-  },
-  {
-    "code": "LA",
-    "name": "Laos",
-    "continent": "Asia",
-    "center": [
-      103.84025650000001,
-      18.172922
-    ],
-    "zoom": 4.542262921756297
-  },
-  {
-    "code": "MM",
-    "name": "Myanmar",
-    "continent": "Asia",
-    "center": [
-      96.7416195,
-      19.1344525
-    ],
-    "zoom": 3.4419883016800026
-  },
-  {
-    "code": "VN",
-    "name": "Vietnam",
-    "continent": "Asia",
-    "center": [
-      105.75285299999999,
-      15.9759115
-    ],
-    "zoom": 3.760987901950251
-  },
-  {
-    "code": "KP",
-    "name": "North Korea",
-    "continent": "Asia",
-    "center": [
-      127.5228085,
-      40.327229
-    ],
-    "zoom": 5.233429329313453
-  },
-  {
-    "code": "KR",
-    "name": "South Korea",
-    "continent": "Asia",
-    "center": [
-      127.79285099999998,
-      36.501144499999995
-    ],
-    "zoom": 5.565862296003779
-  },
-  {
-    "code": "MN",
-    "name": "Mongolia",
-    "continent": "Asia",
-    "center": [
-      103.762044,
-      46.822388000000004
-    ],
-    "zoom": 3.227847002012895
-  },
-  {
-    "code": "IN",
-    "name": "India",
-    "continent": "Asia",
-    "center": [
-      82.789603,
-      21.729772500000003
-    ],
-    "zoom": 2.8610034039831715
-  },
-  {
-    "code": "BD",
-    "name": "Bangladesh",
-    "continent": "Asia",
-    "center": [
-      90.37857149999999,
-      23.558704499999997
-    ],
-    "zoom": 5.113874619649188
-  },
-  {
-    "code": "BT",
-    "name": "Bhutan",
-    "continent": "Asia",
-    "center": [
-      90.45898,
-      27.507921
-    ],
-    "zoom": 6
-  },
-  {
-    "code": "NP",
-    "name": "Nepal",
-    "continent": "Asia",
-    "center": [
-      84.1316145,
-      28.410307500000002
-    ],
-    "zoom": 5.213324867716504
-  },
-  {
-    "code": "PK",
-    "name": "Pakistan",
-    "continent": "Asia",
-    "center": [
-      69.3558495,
-      30.412498
-    ],
-    "zoom": 3.895280533264241
+    "zoom": 5.81258046706575,
+    "iso3": "ARE",
+    "status": "Sovereign country",
+    "sovereignty": "United Arab Emirates",
+    "providerId": "ARE"
   },
   {
     "code": "AF",
@@ -1037,217 +35,39 @@
       67.84322900000001,
       33.902427
     ],
-    "zoom": 4.358000468741458
+    "zoom": 4.358000468741458,
+    "iso3": "AFG",
+    "status": "Sovereign country",
+    "sovereignty": "Afghanistan",
+    "providerId": "AFG"
   },
   {
-    "code": "TJ",
-    "name": "Tajikistan",
-    "continent": "Asia",
+    "code": "AG",
+    "name": "Antigua and Barbuda",
+    "continent": "North America",
     "center": [
-      71.211111,
-      38.849192
+      -61.786572,
+      17.083056499999998
     ],
-    "zoom": 5.3146786190365685
+    "zoom": 8,
+    "iso3": "ATG",
+    "status": "Sovereign country",
+    "sovereignty": "Antigua and Barbuda",
+    "providerId": "ATG"
   },
   {
-    "code": "KG",
-    "name": "Kyrgyzstan",
-    "continent": "Asia",
+    "code": "AI",
+    "name": "Anguilla",
+    "continent": "North America",
     "center": [
-      74.8624385,
-      41.288900999999996
+      -63.0698,
+      18.220557
     ],
-    "zoom": 4.796513586904859
-  },
-  {
-    "code": "TM",
-    "name": "Turkmenistan",
-    "continent": "Asia",
-    "center": [
-      59.524305,
-      39.011107499999994
-    ],
-    "zoom": 4.416968539933634
-  },
-  {
-    "code": "IR",
-    "name": "Iran",
-    "continent": "Asia",
-    "center": [
-      53.712928500000004,
-      32.39562
-    ],
-    "zoom": 3.772528416673222
-  },
-  {
-    "code": "SY",
-    "name": "Syria",
-    "continent": "Asia",
-    "center": [
-      39.0251945,
-      34.7714055
-    ],
-    "zoom": 5.346096906366755
-  },
-  {
-    "code": "AM",
-    "name": "Armenia",
-    "continent": "Asia",
-    "center": [
-      45.044233,
-      39.994665
-    ],
-    "zoom": 6
-  },
-  {
-    "code": "SE",
-    "name": "Sweden",
-    "continent": "Europe",
-    "center": [
-      17.465374,
-      62.233992
-    ],
-    "zoom": 3.8630726200605747
-  },
-  {
-    "code": "BY",
-    "name": "Belarus",
-    "continent": "Europe",
-    "center": [
-      27.9465685,
-      53.7443165
-    ],
-    "zoom": 4.981779999073354
-  },
-  {
-    "code": "UA",
-    "name": "Ukraine",
-    "continent": "Europe",
-    "center": [
-      31.0831985,
-      48.81419150000001
-    ],
-    "zoom": 4.059279982287853
-  },
-  {
-    "code": "PL",
-    "name": "Poland",
-    "continent": "Europe",
-    "center": [
-      19.0522535,
-      51.9394655
-    ],
-    "zoom": 4.913329987555963
-  },
-  {
-    "code": "AT",
-    "name": "Austria",
-    "continent": "Europe",
-    "center": [
-      13.2298185,
-      47.7354455
-    ],
-    "zoom": 5.3219863809444
-  },
-  {
-    "code": "HU",
-    "name": "Hungary",
-    "continent": "Europe",
-    "center": [
-      19.4564145,
-      47.1916675
-    ],
-    "zoom": 5.526552788912719
-  },
-  {
-    "code": "MD",
-    "name": "Moldova",
-    "continent": "Europe",
-    "center": [
-      28.321998,
-      46.977700999999996
-    ],
-    "zoom": 6
-  },
-  {
-    "code": "RO",
-    "name": "Romania",
-    "continent": "Europe",
-    "center": [
-      24.9233675,
-      45.954663
-    ],
-    "zoom": 4.995183522821431
-  },
-  {
-    "code": "LT",
-    "name": "Lithuania",
-    "continent": "Europe",
-    "center": [
-      23.822039500000002,
-      55.139115000000004
-    ],
-    "zoom": 5.760892620593111
-  },
-  {
-    "code": "LV",
-    "name": "Latvia",
-    "continent": "Europe",
-    "center": [
-      24.6162545,
-      56.792632
-    ],
-    "zoom": 5.396757274292073
-  },
-  {
-    "code": "EE",
-    "name": "Estonia",
-    "continent": "Europe",
-    "center": [
-      25.735747,
-      58.542809
-    ],
-    "zoom": 5.9682196847296245
-  },
-  {
-    "code": "DE",
-    "name": "Germany",
-    "continent": "Europe",
-    "center": [
-      10.502827,
-      51.142796
-    ],
-    "zoom": 4.702634167304008
-  },
-  {
-    "code": "BG",
-    "name": "Bulgaria",
-    "continent": "Europe",
-    "center": [
-      25.469303500000002,
-      42.7347045
-    ],
-    "zoom": 5.601782740283946
-  },
-  {
-    "code": "GR",
-    "name": "Greece",
-    "continent": "Europe",
-    "center": [
-      23.377106,
-      39.1184525
-    ],
-    "zoom": 5.206387400282115
-  },
-  {
-    "code": "TR",
-    "name": "Turkey",
-    "continent": "Asia",
-    "center": [
-      35.4823875,
-      38.93088
-    ],
-    "zoom": 4.009789217679124
+    "zoom": 8,
+    "iso3": "AIA",
+    "status": "Dependency",
+    "sovereignty": "United Kingdom",
+    "providerId": "AIA"
   },
   {
     "code": "AL",
@@ -1257,337 +77,39 @@
       20.162263000000003,
       41.1566225
     ],
-    "zoom": 6
+    "zoom": 6,
+    "iso3": "ALB",
+    "status": "Sovereign country",
+    "sovereignty": "Albania",
+    "providerId": "ALB"
   },
   {
-    "code": "HR",
-    "name": "Croatia",
-    "continent": "Europe",
-    "center": [
-      16.523726,
-      44.491871
-    ],
-    "zoom": 5.635311932627227
-  },
-  {
-    "code": "CH",
-    "name": "Switzerland",
-    "continent": "Europe",
-    "center": [
-      8.232655,
-      46.803888
-    ],
-    "zoom": 6
-  },
-  {
-    "code": "LU",
-    "name": "Luxembourg",
-    "continent": "Europe",
-    "center": [
-      5.9584015,
-      49.7853595
-    ],
-    "zoom": 6
-  },
-  {
-    "code": "BE",
-    "name": "Belgium",
-    "continent": "Europe",
-    "center": [
-      4.335115500000001,
-      50.50225399999999
-    ],
-    "zoom": 6
-  },
-  {
-    "code": "NL",
-    "name": "Netherlands",
-    "continent": "Europe",
-    "center": [
-      5.203512,
-      52.157061999999996
-    ],
-    "zoom": 6
-  },
-  {
-    "code": "PT",
-    "name": "Portugal",
-    "continent": "Europe",
-    "center": [
-      -7.957829500000001,
-      39.559369
-    ],
-    "zoom": 5.19966621339547
-  },
-  {
-    "code": "ES",
-    "name": "Spain",
-    "continent": "Europe",
-    "center": [
-      -3.1767000000000003,
-      39.847594
-    ],
-    "zoom": 4.5927894821236945
-  },
-  {
-    "code": "IE",
-    "name": "Ireland",
-    "continent": "Europe",
-    "center": [
-      -8.0050355,
-      53.4004615
-    ],
-    "zoom": 5.852116703186962
-  },
-  {
-    "code": "NC",
-    "name": "New Caledonia",
-    "continent": "Oceania",
-    "center": [
-      165.57480850000002,
-      -21.252811
-    ],
-    "zoom": 6
-  },
-  {
-    "code": "SB",
-    "name": "Solomon Islands",
-    "continent": "Oceania",
-    "center": [
-      159.064276,
-      -7.9291540000000005
-    ],
-    "zoom": 6
-  },
-  {
-    "code": "NZ",
-    "name": "New Zealand",
-    "continent": "Oceania",
-    "center": [
-      175.5765495,
-      -38.069485
-    ],
-    "zoom": 4.788335643895445
-  },
-  {
-    "code": "AU",
-    "name": "Australia",
-    "continent": "Oceania",
-    "center": [
-      133.454211,
-      -24.851971499999998
-    ],
-    "zoom": 2.8176854711090633
-  },
-  {
-    "code": "LK",
-    "name": "Sri Lanka",
+    "code": "AM",
+    "name": "Armenia",
     "continent": "Asia",
     "center": [
-      80.741563,
-      7.896224
+      45.044233,
+      39.994665
     ],
-    "zoom": 5.696860392071789
+    "zoom": 6,
+    "iso3": "ARM",
+    "status": "Sovereign country",
+    "sovereignty": "Armenia",
+    "providerId": "ARM"
   },
   {
-    "code": "CN",
-    "name": "People's Republic of China",
-    "continent": "Asia",
-    "center": [
-      104.35084499999999,
-      36.870628499999995
-    ],
-    "zoom": 2.2898053351504117
-  },
-  {
-    "code": "TW",
-    "name": "Taiwan",
-    "continent": "Asia",
-    "center": [
-      121.0287165,
-      23.633015
-    ],
-    "zoom": 5.9105504460228575
-  },
-  {
-    "code": "IT",
-    "name": "Italy",
-    "continent": "Europe",
-    "center": [
-      12.615101,
-      42.51212099999999
-    ],
-    "zoom": 4.441196498145499
-  },
-  {
-    "code": "DK",
-    "name": "Denmark",
-    "continent": "Europe",
-    "center": [
-      9.5010795,
-      56.280440999999996
-    ],
-    "zoom": 6
-  },
-  {
-    "code": "GB",
-    "name": "United Kingdom",
-    "continent": "Europe",
-    "center": [
-      -2.2342250000000003,
-      54.2975
-    ],
-    "zoom": 4.526992432083826
-  },
-  {
-    "code": "IS",
-    "name": "Iceland",
-    "continent": "Europe",
-    "center": [
-      -18.967958,
-      65.0115875
-    ],
-    "zoom": 4.807063257840585
-  },
-  {
-    "code": "AZ",
-    "name": "Azerbaijan",
-    "continent": "Asia",
-    "center": [
-      47.682650499999994,
-      40.065526500000004
-    ],
-    "zoom": 5.79043507442711
-  },
-  {
-    "code": "GE",
-    "name": "Georgia",
-    "continent": "Asia",
-    "center": [
-      43.2964585,
-      42.3087745
-    ],
-    "zoom": 5.488344619885075
-  },
-  {
-    "code": "PH",
-    "name": "Philippines",
-    "continent": "Asia",
-    "center": [
-      122.032531,
-      15.520952000000001
-    ],
-    "zoom": 5.0664757041628405
-  },
-  {
-    "code": "MY",
-    "name": "Malaysia",
-    "continent": "Asia",
-    "center": [
-      114.422582,
-      3.8505920000000002
-    ],
-    "zoom": 4.978062624716128
-  },
-  {
-    "code": "BN",
-    "name": "Brunei",
-    "continent": "Asia",
-    "center": [
-      114.82736349999999,
-      4.7276834999999995
-    ],
-    "zoom": 6
-  },
-  {
-    "code": "SI",
-    "name": "Slovenia",
-    "continent": "Europe",
-    "center": [
-      15.131459,
-      46.152351
-    ],
-    "zoom": 6
-  },
-  {
-    "code": "FI",
-    "name": "Finland",
-    "continent": "Europe",
-    "center": [
-      26.080842500000003,
-      65.00528299999999
-    ],
-    "zoom": 4.276789911666821
-  },
-  {
-    "code": "SK",
-    "name": "Slovakia",
-    "continent": "Europe",
-    "center": [
-      19.719060499999998,
-      48.6650015
-    ],
-    "zoom": 5.723396458784898
-  },
-  {
-    "code": "CZ",
-    "name": "Czech Republic",
-    "continent": "Europe",
-    "center": [
-      15.5466275,
-      49.8362865
-    ],
-    "zoom": 5.503506589644624
-  },
-  {
-    "code": "ER",
-    "name": "Eritrea",
+    "code": "AO",
+    "name": "Angola",
     "continent": "Africa",
     "center": [
-      39.702223000000004,
-      15.2268615
+      17.860000499999998,
+      -11.8974385
     ],
-    "zoom": 5.173217552221212
-  },
-  {
-    "code": "JP",
-    "name": "Japan",
-    "continent": "Asia",
-    "center": [
-      135.661363,
-      36.2040695
-    ],
-    "zoom": 4.2724393734062796
-  },
-  {
-    "code": "PY",
-    "name": "Paraguay",
-    "continent": "South America",
-    "center": [
-      -58.4890085,
-      -23.445622999999998
-    ],
-    "zoom": 4.607220637028161
-  },
-  {
-    "code": "YE",
-    "name": "Yemen",
-    "continent": "Asia",
-    "center": [
-      47.856723,
-      15.7929765
-    ],
-    "zoom": 4.8359929790149865
-  },
-  {
-    "code": "SA",
-    "name": "Saudi Arabia",
-    "continent": "Asia",
-    "center": [
-      45.1494975,
-      24.25445
-    ],
-    "zoom": 3.6608062313262453
+    "zoom": 4.0509333792308215,
+    "iso3": "AGO",
+    "status": "Sovereign country",
+    "sovereignty": "Angola",
+    "providerId": "AGO"
   },
   {
     "code": "AQ",
@@ -1597,87 +119,109 @@
       0,
       -76.63533
     ],
-    "zoom": 2
+    "zoom": 2,
+    "iso3": "ATA",
+    "status": "Indeterminate",
+    "sovereignty": "Antarctica",
+    "providerId": "ATA"
   },
   {
-    "code": "CY",
-    "name": "Cyprus",
+    "code": "AR",
+    "name": "Argentina",
+    "continent": "South America",
+    "center": [
+      -63.5218925,
+      -37.0911465
+    ],
+    "zoom": 2.7122831353148467,
+    "iso3": "ARG",
+    "status": "Sovereign country",
+    "sovereignty": "Argentina",
+    "providerId": "ARG"
+  },
+  {
+    "code": "AS",
+    "name": "American Samoa",
+    "continent": "Oceania",
+    "center": [
+      -170.6943115,
+      -14.308594
+    ],
+    "zoom": 8,
+    "iso3": "ASM",
+    "status": "Dependency",
+    "sovereignty": "United States of America",
+    "providerId": "ASM"
+  },
+  {
+    "code": "AT",
+    "name": "Austria",
+    "continent": "Europe",
+    "center": [
+      13.2298185,
+      47.7354455
+    ],
+    "zoom": 5.3219863809444,
+    "iso3": "AUT",
+    "status": "Sovereign country",
+    "sovereignty": "Austria",
+    "providerId": "AUT"
+  },
+  {
+    "code": "AU",
+    "name": "Australia",
+    "continent": "Oceania",
+    "center": [
+      133.454211,
+      -24.851971499999998
+    ],
+    "zoom": 2.8176854711090633,
+    "iso3": "AUS",
+    "status": "Country",
+    "sovereignty": "Australia",
+    "providerId": "AUS"
+  },
+  {
+    "code": "AW",
+    "name": "Aruba",
+    "continent": "North America",
+    "center": [
+      -69.980908,
+      12.5185545
+    ],
+    "zoom": 8,
+    "iso3": "ABW",
+    "status": "Country",
+    "sovereignty": "Netherlands",
+    "providerId": "ABW"
+  },
+  {
+    "code": "AX",
+    "name": "Åland",
+    "continent": "Europe",
+    "center": [
+      19.9655765,
+      60.2437745
+    ],
+    "zoom": 8,
+    "iso3": "ALA",
+    "status": "Country",
+    "sovereignty": "Finland",
+    "providerId": "ALD"
+  },
+  {
+    "code": "AZ",
+    "name": "Azerbaijan",
     "continent": "Asia",
     "center": [
-      33.130774,
-      34.872496999999996
+      47.682650499999994,
+      40.065526500000004
     ],
-    "zoom": 6
-  },
-  {
-    "code": "MA",
-    "name": "Morocco",
-    "continent": "Africa",
-    "center": [
-      -9.0724895,
-      28.590361
-    ],
-    "zoom": 3.801958125135968
-  },
-  {
-    "code": "EG",
-    "name": "Egypt",
-    "continent": "Africa",
-    "center": [
-      30.78315,
-      26.792839999999998
-    ],
-    "zoom": 4.382975410689836
-  },
-  {
-    "code": "LY",
-    "name": "Libya",
-    "continent": "Africa",
-    "center": [
-      17.2421155,
-      26.358733
-    ],
-    "zoom": 3.8829405745765047
-  },
-  {
-    "code": "ET",
-    "name": "Ethiopia",
-    "continent": "Africa",
-    "center": [
-      40.3718,
-      9.190745
-    ],
-    "zoom": 4.115613702826666
-  },
-  {
-    "code": "DJ",
-    "name": "Djibouti",
-    "continent": "Africa",
-    "center": [
-      42.489806,
-      11.813258999999999
-    ],
-    "zoom": 6
-  },
-  {
-    "code": "UG",
-    "name": "Uganda",
-    "continent": "Africa",
-    "center": [
-      32.307728,
-      1.4032814999999998
-    ],
-    "zoom": 5.134614633969028
-  },
-  {
-    "code": "RW",
-    "name": "Rwanda",
-    "continent": "Africa",
-    "center": [
-      29.920530499999998,
-      -2.0262585
-    ],
-    "zoom": 6
+    "zoom": 5.79043507442711,
+    "iso3": "AZE",
+    "status": "Sovereign country",
+    "sovereignty": "Azerbaijan",
+    "providerId": "AZE"
   },
   {
     "code": "BA",
@@ -1687,27 +231,1621 @@
       17.674893,
       43.941888500000005
     ],
-    "zoom": 6
+    "zoom": 6,
+    "iso3": "BIH",
+    "status": "Sovereign country",
+    "sovereignty": "Bosnia and Herzegovina",
+    "providerId": "BIH"
   },
   {
-    "code": "MK",
-    "name": "North Macedonia",
-    "continent": "Europe",
+    "code": "BB",
+    "name": "Barbados",
+    "continent": "North America",
     "center": [
-      21.707776,
-      41.58149349999999
+      -59.537158500000004,
+      13.1899415
     ],
-    "zoom": 6
+    "zoom": 8,
+    "iso3": "BRB",
+    "status": "Sovereign country",
+    "sovereignty": "Barbados",
+    "providerId": "BRB"
   },
   {
-    "code": "RS",
-    "name": "Serbia",
+    "code": "BD",
+    "name": "Bangladesh",
+    "continent": "Asia",
+    "center": [
+      90.37857149999999,
+      23.558704499999997
+    ],
+    "zoom": 5.113874619649188,
+    "iso3": "BGD",
+    "status": "Sovereign country",
+    "sovereignty": "Bangladesh",
+    "providerId": "BGD"
+  },
+  {
+    "code": "BE",
+    "name": "Belgium",
     "continent": "Europe",
     "center": [
-      20.907922,
-      44.208477
+      4.335115500000001,
+      50.50225399999999
     ],
-    "zoom": 5.670610088124055
+    "zoom": 6,
+    "iso3": "BEL",
+    "status": "Sovereign country",
+    "sovereignty": "Belgium",
+    "providerId": "BEL"
+  },
+  {
+    "code": "BF",
+    "name": "Burkina Faso",
+    "continent": "Africa",
+    "center": [
+      -1.6467284999999998,
+      12.3634965
+    ],
+    "zoom": 5.183028979876453,
+    "iso3": "BFA",
+    "status": "Sovereign country",
+    "sovereignty": "Burkina Faso",
+    "providerId": "BFA"
+  },
+  {
+    "code": "BG",
+    "name": "Bulgaria",
+    "continent": "Europe",
+    "center": [
+      25.469303500000002,
+      42.7347045
+    ],
+    "zoom": 5.601782740283946,
+    "iso3": "BGR",
+    "status": "Sovereign country",
+    "sovereignty": "Bulgaria",
+    "providerId": "BGR"
+  },
+  {
+    "code": "BH",
+    "name": "Bahrain",
+    "continent": "Asia",
+    "center": [
+      50.5349605,
+      26.0266115
+    ],
+    "zoom": 8,
+    "iso3": "BHR",
+    "status": "Sovereign country",
+    "sovereignty": "Bahrain",
+    "providerId": "BHR"
+  },
+  {
+    "code": "BI",
+    "name": "Burundi",
+    "continent": "Africa",
+    "center": [
+      29.888583,
+      -3.4242350000000004
+    ],
+    "zoom": 6,
+    "iso3": "BDI",
+    "status": "Sovereign country",
+    "sovereignty": "Burundi",
+    "providerId": "BDI"
+  },
+  {
+    "code": "BJ",
+    "name": "Benin",
+    "continent": "Africa",
+    "center": [
+      2.2847239999999998,
+      9.188897
+    ],
+    "zoom": 5.036590273450219,
+    "iso3": "BEN",
+    "status": "Sovereign country",
+    "sovereignty": "Benin",
+    "providerId": "BEN"
+  },
+  {
+    "code": "BL",
+    "name": "Saint Barthélemy",
+    "continent": "North America",
+    "center": [
+      -62.837573,
+      17.8987305
+    ],
+    "zoom": 8,
+    "iso3": "BLM",
+    "status": "Dependency",
+    "sovereignty": "France",
+    "providerId": "BLM"
+  },
+  {
+    "code": "BM",
+    "name": "Bermuda",
+    "continent": "North America",
+    "center": [
+      -64.76557650000001,
+      32.3232665
+    ],
+    "zoom": 8,
+    "iso3": "BMU",
+    "status": "Dependency",
+    "sovereignty": "United Kingdom",
+    "providerId": "BMU"
+  },
+  {
+    "code": "BN",
+    "name": "Brunei",
+    "continent": "Asia",
+    "center": [
+      114.82736349999999,
+      4.7276834999999995
+    ],
+    "zoom": 6,
+    "iso3": "BRN",
+    "status": "Sovereign country",
+    "sovereignty": "Brunei",
+    "providerId": "BRN"
+  },
+  {
+    "code": "BO",
+    "name": "Bolivia",
+    "continent": "South America",
+    "center": [
+      -63.5443975,
+      -16.3174535
+    ],
+    "zoom": 3.9311579607087936,
+    "iso3": "BOL",
+    "status": "Sovereign country",
+    "sovereignty": "Bolivia",
+    "providerId": "BOL"
+  },
+  {
+    "code": "BR",
+    "name": "Brazil",
+    "continent": "South America",
+    "center": [
+      -54.358614,
+      -14.261945999999998
+    ],
+    "zoom": 2.35797818196633,
+    "iso3": "BRA",
+    "status": "Sovereign country",
+    "sovereignty": "Brazil",
+    "providerId": "BRA"
+  },
+  {
+    "code": "BS",
+    "name": "The Bahamas",
+    "continent": "North America",
+    "center": [
+      -77.97157,
+      24.46015
+    ],
+    "zoom": 6,
+    "iso3": "BHS",
+    "status": "Sovereign country",
+    "sovereignty": "The Bahamas",
+    "providerId": "BHS"
+  },
+  {
+    "code": "BT",
+    "name": "Bhutan",
+    "continent": "Asia",
+    "center": [
+      90.45898,
+      27.507921
+    ],
+    "zoom": 6,
+    "iso3": "BTN",
+    "status": "Sovereign country",
+    "sovereignty": "Bhutan",
+    "providerId": "BTN"
+  },
+  {
+    "code": "BW",
+    "name": "Botswana",
+    "continent": "Africa",
+    "center": [
+      24.663823,
+      -22.2451795
+    ],
+    "zoom": 4.44744948144602,
+    "iso3": "BWA",
+    "status": "Sovereign country",
+    "sovereignty": "Botswana",
+    "providerId": "BWA"
+  },
+  {
+    "code": "BY",
+    "name": "Belarus",
+    "continent": "Europe",
+    "center": [
+      27.9465685,
+      53.7443165
+    ],
+    "zoom": 4.981779999073354,
+    "iso3": "BLR",
+    "status": "Sovereign country",
+    "sovereignty": "Belarus",
+    "providerId": "BLR"
+  },
+  {
+    "code": "BZ",
+    "name": "Belize",
+    "continent": "North America",
+    "center": [
+      -88.6679675,
+      17.19346
+    ],
+    "zoom": 6,
+    "iso3": "BLZ",
+    "status": "Sovereign country",
+    "sovereignty": "Belize",
+    "providerId": "BLZ"
+  },
+  {
+    "code": "CA",
+    "name": "Canada",
+    "continent": "North America",
+    "center": [
+      -98.34058,
+      56.7978175
+    ],
+    "zoom": 2,
+    "iso3": "CAN",
+    "status": "Sovereign country",
+    "sovereignty": "Canada",
+    "providerId": "CAN"
+  },
+  {
+    "code": "CD",
+    "name": "Democratic Republic of the Congo",
+    "continent": "Africa",
+    "center": [
+      21.678243000000002,
+      -4.0005695
+    ],
+    "zoom": 3.4333648471205844,
+    "iso3": "COD",
+    "status": "Sovereign country",
+    "sovereignty": "Democratic Republic of the Congo",
+    "providerId": "COD"
+  },
+  {
+    "code": "CF",
+    "name": "Central African Republic",
+    "continent": "Africa",
+    "center": [
+      20.9168165,
+      6.7050175
+    ],
+    "zoom": 4.494148897330759,
+    "iso3": "CAF",
+    "status": "Sovereign country",
+    "sovereignty": "Central African Republic",
+    "providerId": "CAF"
+  },
+  {
+    "code": "CG",
+    "name": "Republic of the Congo",
+    "continent": "Africa",
+    "center": [
+      14.773419,
+      -0.654895
+    ],
+    "zoom": 4.511907228787861,
+    "iso3": "COG",
+    "status": "Sovereign country",
+    "sovereignty": "Republic of the Congo",
+    "providerId": "COG"
+  },
+  {
+    "code": "CH",
+    "name": "Switzerland",
+    "continent": "Europe",
+    "center": [
+      8.232655,
+      46.803888
+    ],
+    "zoom": 6,
+    "iso3": "CHE",
+    "status": "Sovereign country",
+    "sovereignty": "Switzerland",
+    "providerId": "CHE"
+  },
+  {
+    "code": "CI",
+    "name": "Ivory Coast",
+    "continent": "Africa",
+    "center": [
+      -5.582535,
+      7.4311745
+    ],
+    "zoom": 5.014902298116575,
+    "iso3": "CIV",
+    "status": "Sovereign country",
+    "sovereignty": "Ivory Coast",
+    "providerId": "CIV"
+  },
+  {
+    "code": "CK",
+    "name": "Cook Islands",
+    "continent": "Oceania",
+    "center": [
+      -159.7896725,
+      -21.217969
+    ],
+    "zoom": 8,
+    "iso3": "COK",
+    "status": "Dependency",
+    "sovereignty": "New Zealand",
+    "providerId": "COK"
+  },
+  {
+    "code": "CL",
+    "name": "Chile",
+    "continent": "South America",
+    "center": [
+      -71.31481450000001,
+      -35.7182335
+    ],
+    "zoom": 2.4628950921035857,
+    "iso3": "CHL",
+    "status": "Sovereign country",
+    "sovereignty": "Chile",
+    "providerId": "CHL"
+  },
+  {
+    "code": "CM",
+    "name": "Cameroon",
+    "continent": "Africa",
+    "center": [
+      12.250834,
+      7.2935345
+    ],
+    "zoom": 4.167251180449294,
+    "iso3": "CMR",
+    "status": "Sovereign country",
+    "sovereignty": "Cameroon",
+    "providerId": "CMR"
+  },
+  {
+    "code": "CN",
+    "name": "People's Republic of China",
+    "continent": "Asia",
+    "center": [
+      104.35084499999999,
+      36.870628499999995
+    ],
+    "zoom": 2.2898053351504117,
+    "iso3": "CHN",
+    "status": "Country",
+    "sovereignty": "China",
+    "providerId": "CHN"
+  },
+  {
+    "code": "CO",
+    "name": "Colombia",
+    "continent": "South America",
+    "center": [
+      -72.93363049999999,
+      4.069558
+    ],
+    "zoom": 3.5790173024394996,
+    "iso3": "COL",
+    "status": "Sovereign country",
+    "sovereignty": "Colombia",
+    "providerId": "COL"
+  },
+  {
+    "code": "CR",
+    "name": "Costa Rica",
+    "continent": "North America",
+    "center": [
+      -84.2439605,
+      9.7210735
+    ],
+    "zoom": 6,
+    "iso3": "CRI",
+    "status": "Sovereign country",
+    "sovereignty": "Costa Rica",
+    "providerId": "CRI"
+  },
+  {
+    "code": "CU",
+    "name": "Cuba",
+    "continent": "North America",
+    "center": [
+      -79.576468,
+      21.522046000000003
+    ],
+    "zoom": 4.796275320271455,
+    "iso3": "CUB",
+    "status": "Sovereignty",
+    "sovereignty": "Cuba",
+    "providerId": "CUB"
+  },
+  {
+    "code": "CV",
+    "name": "Cape Verde",
+    "continent": "Africa",
+    "center": [
+      -23.614624,
+      15.1223145
+    ],
+    "zoom": 8,
+    "iso3": "CPV",
+    "status": "Sovereign country",
+    "sovereignty": "Cabo Verde",
+    "providerId": "CPV"
+  },
+  {
+    "code": "CW",
+    "name": "Curaçao",
+    "continent": "North America",
+    "center": [
+      -68.9549805,
+      12.212866
+    ],
+    "zoom": 8,
+    "iso3": "CUW",
+    "status": "Country",
+    "sovereignty": "Netherlands",
+    "providerId": "CUW"
+  },
+  {
+    "code": "CY",
+    "name": "Cyprus",
+    "continent": "Asia",
+    "center": [
+      33.130774,
+      34.872496999999996
+    ],
+    "zoom": 6,
+    "iso3": "CYP",
+    "status": "Sovereign country",
+    "sovereignty": "Cyprus",
+    "providerId": "CYP"
+  },
+  {
+    "code": "CZ",
+    "name": "Czech Republic",
+    "continent": "Europe",
+    "center": [
+      15.5466275,
+      49.8362865
+    ],
+    "zoom": 5.503506589644624,
+    "iso3": "CZE",
+    "status": "Sovereign country",
+    "sovereignty": "Czechia",
+    "providerId": "CZE"
+  },
+  {
+    "code": "DE",
+    "name": "Germany",
+    "continent": "Europe",
+    "center": [
+      10.502827,
+      51.142796
+    ],
+    "zoom": 4.702634167304008,
+    "iso3": "DEU",
+    "status": "Sovereign country",
+    "sovereignty": "Germany",
+    "providerId": "DEU"
+  },
+  {
+    "code": "DJ",
+    "name": "Djibouti",
+    "continent": "Africa",
+    "center": [
+      42.489806,
+      11.813258999999999
+    ],
+    "zoom": 6,
+    "iso3": "DJI",
+    "status": "Sovereign country",
+    "sovereignty": "Djibouti",
+    "providerId": "DJI"
+  },
+  {
+    "code": "DK",
+    "name": "Denmark",
+    "continent": "Europe",
+    "center": [
+      9.5010795,
+      56.280440999999996
+    ],
+    "zoom": 6,
+    "iso3": "DNK",
+    "status": "Country",
+    "sovereignty": "Denmark",
+    "providerId": "DNK"
+  },
+  {
+    "code": "DM",
+    "name": "Dominica",
+    "continent": "North America",
+    "center": [
+      -61.366113,
+      15.4302
+    ],
+    "zoom": 8,
+    "iso3": "DMA",
+    "status": "Sovereign country",
+    "sovereignty": "Dominica",
+    "providerId": "DMA"
+  },
+  {
+    "code": "DO",
+    "name": "Dominican Republic",
+    "continent": "North America",
+    "center": [
+      -70.1315275,
+      18.7417375
+    ],
+    "zoom": 6,
+    "iso3": "DOM",
+    "status": "Sovereign country",
+    "sovereignty": "Dominican Republic",
+    "providerId": "DOM"
+  },
+  {
+    "code": "DZ",
+    "name": "Algeria",
+    "continent": "Africa",
+    "center": [
+      1.657553,
+      28.0878725
+    ],
+    "zoom": 3.469048962891025,
+    "iso3": "DZA",
+    "status": "Sovereign country",
+    "sovereignty": "Algeria",
+    "providerId": "DZA"
+  },
+  {
+    "code": "EC",
+    "name": "Ecuador",
+    "continent": "South America",
+    "center": [
+      -78.10074399999999,
+      -1.7891024999999998
+    ],
+    "zoom": 4.979361289076041,
+    "iso3": "ECU",
+    "status": "Sovereign country",
+    "sovereignty": "Ecuador",
+    "providerId": "ECU"
+  },
+  {
+    "code": "EE",
+    "name": "Estonia",
+    "continent": "Europe",
+    "center": [
+      25.735747,
+      58.542809
+    ],
+    "zoom": 5.9682196847296245,
+    "iso3": "EST",
+    "status": "Sovereign country",
+    "sovereignty": "Estonia",
+    "providerId": "EST"
+  },
+  {
+    "code": "EG",
+    "name": "Egypt",
+    "continent": "Africa",
+    "center": [
+      30.78315,
+      26.792839999999998
+    ],
+    "zoom": 4.382975410689836,
+    "iso3": "EGY",
+    "status": "Sovereign country",
+    "sovereignty": "Egypt",
+    "providerId": "EGY"
+  },
+  {
+    "code": "EH",
+    "name": "Western Sahara",
+    "continent": "Africa",
+    "center": [
+      -12.8642735,
+      24.328089
+    ],
+    "zoom": 4.909054673478941,
+    "iso3": "ESH",
+    "status": "Indeterminate",
+    "sovereignty": "Western Sahara",
+    "providerId": "SAH"
+  },
+  {
+    "code": "ER",
+    "name": "Eritrea",
+    "continent": "Africa",
+    "center": [
+      39.702223000000004,
+      15.2268615
+    ],
+    "zoom": 5.173217552221212,
+    "iso3": "ERI",
+    "status": "Sovereign country",
+    "sovereignty": "Eritrea",
+    "providerId": "ERI"
+  },
+  {
+    "code": "ES",
+    "name": "Spain",
+    "continent": "Europe",
+    "center": [
+      -3.1767000000000003,
+      39.847594
+    ],
+    "zoom": 4.5927894821236945,
+    "iso3": "ESP",
+    "status": "Sovereign country",
+    "sovereignty": "Spain",
+    "providerId": "ESP"
+  },
+  {
+    "code": "ET",
+    "name": "Ethiopia",
+    "continent": "Africa",
+    "center": [
+      40.3718,
+      9.190745
+    ],
+    "zoom": 4.115613702826666,
+    "iso3": "ETH",
+    "status": "Sovereign country",
+    "sovereignty": "Ethiopia",
+    "providerId": "ETH"
+  },
+  {
+    "code": "FI",
+    "name": "Finland",
+    "continent": "Europe",
+    "center": [
+      26.080842500000003,
+      65.00528299999999
+    ],
+    "zoom": 4.276789911666821,
+    "iso3": "FIN",
+    "status": "Country",
+    "sovereignty": "Finland",
+    "providerId": "FIN"
+  },
+  {
+    "code": "FJ",
+    "name": "Fiji",
+    "continent": "Oceania",
+    "center": [
+      178.00155,
+      -17.813955
+    ],
+    "zoom": 6,
+    "iso3": "FJI",
+    "status": "Sovereign country",
+    "sovereignty": "Fiji",
+    "providerId": "FJI"
+  },
+  {
+    "code": "FK",
+    "name": "Falkland Islands",
+    "continent": "South America",
+    "center": [
+      -59.475,
+      -51.7
+    ],
+    "zoom": 6,
+    "iso3": "FLK",
+    "status": "Disputed",
+    "sovereignty": "United Kingdom",
+    "providerId": "FLK"
+  },
+  {
+    "code": "FM",
+    "name": "Federated States of Micronesia",
+    "continent": "Oceania",
+    "center": [
+      151.6101075,
+      7.361719000000001
+    ],
+    "zoom": 8,
+    "iso3": "FSM",
+    "status": "Sovereign country",
+    "sovereignty": "Federated States of Micronesia",
+    "providerId": "FSM"
+  },
+  {
+    "code": "FO",
+    "name": "Faroe Islands",
+    "continent": "Europe",
+    "center": [
+      -6.9016115,
+      62.1338625
+    ],
+    "zoom": 8,
+    "iso3": "FRO",
+    "status": "Dependency",
+    "sovereignty": "Denmark",
+    "providerId": "FRO"
+  },
+  {
+    "code": "FR",
+    "name": "France",
+    "continent": "Europe",
+    "center": [
+      1.7534644999999998,
+      46.7459455
+    ],
+    "zoom": 4.505513360062308,
+    "iso3": "FRA",
+    "status": "Country",
+    "sovereignty": "France",
+    "providerId": "FRA"
+  },
+  {
+    "code": "GA",
+    "name": "Gabon",
+    "continent": "Africa",
+    "center": [
+      11.611726,
+      -0.8260345
+    ],
+    "zoom": 4.987225967128004,
+    "iso3": "GAB",
+    "status": "Sovereign country",
+    "sovereignty": "Gabon",
+    "providerId": "GAB"
+  },
+  {
+    "code": "GB",
+    "name": "United Kingdom",
+    "continent": "Europe",
+    "center": [
+      -2.2342250000000003,
+      54.2975
+    ],
+    "zoom": 4.526992432083826,
+    "iso3": "GBR",
+    "status": "Country",
+    "sovereignty": "United Kingdom",
+    "providerId": "GBR"
+  },
+  {
+    "code": "GD",
+    "name": "Grenada",
+    "continent": "North America",
+    "center": [
+      -61.6946045,
+      12.1227295
+    ],
+    "zoom": 8,
+    "iso3": "GRD",
+    "status": "Sovereign country",
+    "sovereignty": "Grenada",
+    "providerId": "GRD"
+  },
+  {
+    "code": "GE",
+    "name": "Georgia",
+    "continent": "Asia",
+    "center": [
+      43.2964585,
+      42.3087745
+    ],
+    "zoom": 5.488344619885075,
+    "iso3": "GEO",
+    "status": "Sovereign country",
+    "sovereignty": "Georgia",
+    "providerId": "GEO"
+  },
+  {
+    "code": "GG",
+    "name": "Guernsey",
+    "continent": "Europe",
+    "center": [
+      -2.579224,
+      49.4676515
+    ],
+    "zoom": 8,
+    "iso3": "GGY",
+    "status": "Country",
+    "sovereignty": "United Kingdom",
+    "providerId": "GGY"
+  },
+  {
+    "code": "GH",
+    "name": "Ghana",
+    "continent": "Africa",
+    "center": [
+      -1.092124,
+      7.9044015
+    ],
+    "zoom": 4.968519204475996,
+    "iso3": "GHA",
+    "status": "Sovereign country",
+    "sovereignty": "Ghana",
+    "providerId": "GHA"
+  },
+  {
+    "code": "GL",
+    "name": "Greenland",
+    "continent": "North America",
+    "center": [
+      -42.752775,
+      71.840945
+    ],
+    "zoom": 2.2959909602923814,
+    "iso3": "GRL",
+    "status": "Country",
+    "sovereignty": "Denmark",
+    "providerId": "GRL"
+  },
+  {
+    "code": "GM",
+    "name": "The Gambia",
+    "continent": "Africa",
+    "center": [
+      -15.343244,
+      13.503388000000001
+    ],
+    "zoom": 6,
+    "iso3": "GMB",
+    "status": "Sovereign country",
+    "sovereignty": "Gambia",
+    "providerId": "GMB"
+  },
+  {
+    "code": "GN",
+    "name": "Guinea",
+    "continent": "Africa",
+    "center": [
+      -11.4812055,
+      9.947610000000001
+    ],
+    "zoom": 5.2440982914128815,
+    "iso3": "GIN",
+    "status": "Sovereign country",
+    "sovereignty": "Guinea",
+    "providerId": "GIN"
+  },
+  {
+    "code": "GQ",
+    "name": "Equatorial Guinea",
+    "continent": "Africa",
+    "center": [
+      10.295345999999999,
+      1.6469930000000002
+    ],
+    "zoom": 6,
+    "iso3": "GNQ",
+    "status": "Sovereign country",
+    "sovereignty": "Equatorial Guinea",
+    "providerId": "GNQ"
+  },
+  {
+    "code": "GR",
+    "name": "Greece",
+    "continent": "Europe",
+    "center": [
+      23.377106,
+      39.1184525
+    ],
+    "zoom": 5.206387400282115,
+    "iso3": "GRC",
+    "status": "Sovereign country",
+    "sovereignty": "Greece",
+    "providerId": "GRC"
+  },
+  {
+    "code": "GS",
+    "name": "South Georgia and the South Sandwich Islands",
+    "continent": "Seven seas (open ocean)",
+    "center": [
+      -36.908007999999995,
+      -54.425439499999996
+    ],
+    "zoom": 7.079007849980854,
+    "iso3": "SGS",
+    "status": "Dependency",
+    "sovereignty": "United Kingdom",
+    "providerId": "SGS"
+  },
+  {
+    "code": "GT",
+    "name": "Guatemala",
+    "continent": "North America",
+    "center": [
+      -90.227136,
+      15.777332000000001
+    ],
+    "zoom": 5.613877562630001,
+    "iso3": "GTM",
+    "status": "Sovereign country",
+    "sovereignty": "Guatemala",
+    "providerId": "GTM"
+  },
+  {
+    "code": "GU",
+    "name": "Guam",
+    "continent": "Oceania",
+    "center": [
+      144.79506800000001,
+      13.4399415
+    ],
+    "zoom": 8,
+    "iso3": "GUM",
+    "status": "Dependency",
+    "sovereignty": "United States of America",
+    "providerId": "GUM"
+  },
+  {
+    "code": "GW",
+    "name": "Guinea-Bissau",
+    "continent": "Africa",
+    "center": [
+      -15.188963999999999,
+      11.834291
+    ],
+    "zoom": 6,
+    "iso3": "GNB",
+    "status": "Sovereign country",
+    "sovereignty": "Guinea-Bissau",
+    "providerId": "GNB"
+  },
+  {
+    "code": "GY",
+    "name": "Guyana",
+    "continent": "South America",
+    "center": [
+      -58.9748445,
+      4.8175615
+    ],
+    "zoom": 4.816251146923918,
+    "iso3": "GUY",
+    "status": "Sovereign country",
+    "sovereignty": "Guyana",
+    "providerId": "GUY"
+  },
+  {
+    "code": "HK",
+    "name": "Hong Kong",
+    "continent": "Asia",
+    "center": [
+      114.115869,
+      22.4302735
+    ],
+    "zoom": 8,
+    "iso3": "HKG",
+    "status": "Country",
+    "sovereignty": "China",
+    "providerId": "HKG"
+  },
+  {
+    "code": "HM",
+    "name": "Heard Island and McDonald Islands",
+    "continent": "Seven seas (open ocean)",
+    "center": [
+      73.5444825,
+      -53.0754395
+    ],
+    "zoom": 8,
+    "iso3": "HMD",
+    "status": "Dependency",
+    "sovereignty": "Australia",
+    "providerId": "HMD"
+  },
+  {
+    "code": "HN",
+    "name": "Honduras",
+    "continent": "North America",
+    "center": [
+      -86.2502725,
+      14.495046
+    ],
+    "zoom": 5.595130119791252,
+    "iso3": "HND",
+    "status": "Sovereign country",
+    "sovereignty": "Honduras",
+    "providerId": "HND"
+  },
+  {
+    "code": "HR",
+    "name": "Croatia",
+    "continent": "Europe",
+    "center": [
+      16.523726,
+      44.491871
+    ],
+    "zoom": 5.635311932627227,
+    "iso3": "HRV",
+    "status": "Sovereign country",
+    "sovereignty": "Croatia",
+    "providerId": "HRV"
+  },
+  {
+    "code": "HT",
+    "name": "Haiti",
+    "continent": "North America",
+    "center": [
+      -73.04145349999999,
+      18.973338499999997
+    ],
+    "zoom": 6,
+    "iso3": "HTI",
+    "status": "Sovereign country",
+    "sovereignty": "Haiti",
+    "providerId": "HTI"
+  },
+  {
+    "code": "HU",
+    "name": "Hungary",
+    "continent": "Europe",
+    "center": [
+      19.4564145,
+      47.1916675
+    ],
+    "zoom": 5.526552788912719,
+    "iso3": "HUN",
+    "status": "Sovereign country",
+    "sovereignty": "Hungary",
+    "providerId": "HUN"
+  },
+  {
+    "code": "ID",
+    "name": "Indonesia",
+    "continent": "Asia",
+    "center": [
+      122.00413499999999,
+      -2.0150705
+    ],
+    "zoom": 4.772671167556465,
+    "iso3": "IDN",
+    "status": "Sovereign country",
+    "sovereignty": "Indonesia",
+    "providerId": "IDN"
+  },
+  {
+    "code": "IE",
+    "name": "Ireland",
+    "continent": "Europe",
+    "center": [
+      -8.0050355,
+      53.4004615
+    ],
+    "zoom": 5.852116703186962,
+    "iso3": "IRL",
+    "status": "Sovereign country",
+    "sovereignty": "Ireland",
+    "providerId": "IRL"
+  },
+  {
+    "code": "IL",
+    "name": "Israel",
+    "continent": "Asia",
+    "center": [
+      35.050915,
+      31.389376
+    ],
+    "zoom": 5.726959218614755,
+    "iso3": "ISR",
+    "status": "Disputed",
+    "sovereignty": "Israel",
+    "providerId": "ISR"
+  },
+  {
+    "code": "IM",
+    "name": "Isle of Man",
+    "continent": "Europe",
+    "center": [
+      -4.5616699999999994,
+      54.2329345
+    ],
+    "zoom": 8,
+    "iso3": "IMN",
+    "status": "Country",
+    "sovereignty": "United Kingdom",
+    "providerId": "IMN"
+  },
+  {
+    "code": "IN",
+    "name": "India",
+    "continent": "Asia",
+    "center": [
+      82.789603,
+      21.729772500000003
+    ],
+    "zoom": 2.8610034039831715,
+    "iso3": "IND",
+    "status": "Sovereign country",
+    "sovereignty": "India",
+    "providerId": "IND"
+  },
+  {
+    "code": "IO",
+    "name": "British Indian Ocean Territory",
+    "continent": "Seven seas (open ocean)",
+    "center": [
+      72.424121,
+      -7.327881
+    ],
+    "zoom": 8,
+    "iso3": "IOT",
+    "status": "Disputed",
+    "sovereignty": "United Kingdom",
+    "providerId": "IOT"
+  },
+  {
+    "code": "IQ",
+    "name": "Iraq",
+    "continent": "Asia",
+    "center": [
+      43.680156,
+      33.2421445
+    ],
+    "zoom": 4.593138757202943,
+    "iso3": "IRQ",
+    "status": "Sovereign country",
+    "sovereignty": "Iraq",
+    "providerId": "IRQ"
+  },
+  {
+    "code": "IR",
+    "name": "Iran",
+    "continent": "Asia",
+    "center": [
+      53.712928500000004,
+      32.39562
+    ],
+    "zoom": 3.772528416673222,
+    "iso3": "IRN",
+    "status": "Sovereign country",
+    "sovereignty": "Iran",
+    "providerId": "IRN"
+  },
+  {
+    "code": "IS",
+    "name": "Iceland",
+    "continent": "Europe",
+    "center": [
+      -18.967958,
+      65.0115875
+    ],
+    "zoom": 4.807063257840585,
+    "iso3": "ISL",
+    "status": "Sovereign country",
+    "sovereignty": "Iceland",
+    "providerId": "ISL"
+  },
+  {
+    "code": "IT",
+    "name": "Italy",
+    "continent": "Europe",
+    "center": [
+      12.615101,
+      42.51212099999999
+    ],
+    "zoom": 4.441196498145499,
+    "iso3": "ITA",
+    "status": "Sovereign country",
+    "sovereignty": "Italy",
+    "providerId": "ITA"
+  },
+  {
+    "code": "JE",
+    "name": "Jersey",
+    "continent": "Europe",
+    "center": [
+      -2.1228759999999998,
+      49.2180905
+    ],
+    "zoom": 8,
+    "iso3": "JEY",
+    "status": "Country",
+    "sovereignty": "United Kingdom",
+    "providerId": "JEY"
+  },
+  {
+    "code": "JM",
+    "name": "Jamaica",
+    "continent": "North America",
+    "center": [
+      -77.268689,
+      18.112667000000002
+    ],
+    "zoom": 6,
+    "iso3": "JAM",
+    "status": "Sovereign country",
+    "sovereignty": "Jamaica",
+    "providerId": "JAM"
+  },
+  {
+    "code": "JO",
+    "name": "Jordan",
+    "continent": "Asia",
+    "center": [
+      37.0590355,
+      31.288090500000003
+    ],
+    "zoom": 5.579942241475444,
+    "iso3": "JOR",
+    "status": "Sovereign country",
+    "sovereignty": "Jordan",
+    "providerId": "JOR"
+  },
+  {
+    "code": "JP",
+    "name": "Japan",
+    "continent": "Asia",
+    "center": [
+      135.661363,
+      36.2040695
+    ],
+    "zoom": 4.2724393734062796,
+    "iso3": "JPN",
+    "status": "Sovereign country",
+    "sovereignty": "Japan",
+    "providerId": "JPN"
+  },
+  {
+    "code": "KE",
+    "name": "Kenya",
+    "continent": "Africa",
+    "center": [
+      37.874325999999996,
+      0.41461499999999996
+    ],
+    "zoom": 4.295798026433905,
+    "iso3": "KEN",
+    "status": "Sovereign country",
+    "sovereignty": "Kenya",
+    "providerId": "KEN"
+  },
+  {
+    "code": "KG",
+    "name": "Kyrgyzstan",
+    "continent": "Asia",
+    "center": [
+      74.8624385,
+      41.288900999999996
+    ],
+    "zoom": 4.796513586904859,
+    "iso3": "KGZ",
+    "status": "Sovereign country",
+    "sovereignty": "Kyrgyzstan",
+    "providerId": "KGZ"
+  },
+  {
+    "code": "KH",
+    "name": "Cambodia",
+    "continent": "Asia",
+    "center": [
+      104.9813235,
+      12.528564
+    ],
+    "zoom": 5.613859193412332,
+    "iso3": "KHM",
+    "status": "Sovereign country",
+    "sovereignty": "Cambodia",
+    "providerId": "KHM"
+  },
+  {
+    "code": "KI",
+    "name": "Kiribati",
+    "continent": "Oceania",
+    "center": [
+      -171.677637,
+      -2.8086425000000004
+    ],
+    "zoom": 8,
+    "iso3": "KIR",
+    "status": "Sovereign country",
+    "sovereignty": "Kiribati",
+    "providerId": "KIR"
+  },
+  {
+    "code": "KM",
+    "name": "Comoros",
+    "continent": "Africa",
+    "center": [
+      44.3734375,
+      -12.213965
+    ],
+    "zoom": 8,
+    "iso3": "COM",
+    "status": "Sovereign country",
+    "sovereignty": "Comoros",
+    "providerId": "COM"
+  },
+  {
+    "code": "KN",
+    "name": "Saint Kitts and Nevis",
+    "continent": "North America",
+    "center": [
+      -62.735571500000006,
+      17.313501000000002
+    ],
+    "zoom": 8,
+    "iso3": "KNA",
+    "status": "Sovereign country",
+    "sovereignty": "Saint Kitts and Nevis",
+    "providerId": "KNA"
+  },
+  {
+    "code": "KP",
+    "name": "North Korea",
+    "continent": "Asia",
+    "center": [
+      127.5228085,
+      40.327229
+    ],
+    "zoom": 5.233429329313453,
+    "iso3": "PRK",
+    "status": "Sovereign country",
+    "sovereignty": "North Korea",
+    "providerId": "PRK"
+  },
+  {
+    "code": "KR",
+    "name": "South Korea",
+    "continent": "Asia",
+    "center": [
+      127.79285099999998,
+      36.501144499999995
+    ],
+    "zoom": 5.565862296003779,
+    "iso3": "KOR",
+    "status": "Sovereign country",
+    "sovereignty": "South Korea",
+    "providerId": "KOR"
+  },
+  {
+    "code": "KW",
+    "name": "Kuwait",
+    "continent": "Asia",
+    "center": [
+      47.4924035,
+      29.2925665
+    ],
+    "zoom": 6,
+    "iso3": "KWT",
+    "status": "Sovereign country",
+    "sovereignty": "Kuwait",
+    "providerId": "KWT"
+  },
+  {
+    "code": "KY",
+    "name": "Cayman Islands",
+    "continent": "North America",
+    "center": [
+      -81.26311050000001,
+      19.3283935
+    ],
+    "zoom": 8,
+    "iso3": "CYM",
+    "status": "Dependency",
+    "sovereignty": "United Kingdom",
+    "providerId": "CYM"
+  },
+  {
+    "code": "KZ",
+    "name": "Kazakhstan",
+    "continent": "Asia",
+    "center": [
+      66.913208,
+      48.0237875
+    ],
+    "zoom": 2.875018203121876,
+    "iso3": "KAZ",
+    "status": "Sovereignty",
+    "sovereignty": "Kazakhstan",
+    "providerId": "KAZ"
+  },
+  {
+    "code": "LA",
+    "name": "Laos",
+    "continent": "Asia",
+    "center": [
+      103.84025650000001,
+      18.172922
+    ],
+    "zoom": 4.542262921756297,
+    "iso3": "LAO",
+    "status": "Sovereign country",
+    "sovereignty": "Laos",
+    "providerId": "LAO"
+  },
+  {
+    "code": "LB",
+    "name": "Lebanon",
+    "continent": "Asia",
+    "center": [
+      35.8689015,
+      33.866977
+    ],
+    "zoom": 6,
+    "iso3": "LBN",
+    "status": "Sovereign country",
+    "sovereignty": "Lebanon",
+    "providerId": "LBN"
+  },
+  {
+    "code": "LC",
+    "name": "Saint Lucia",
+    "continent": "North America",
+    "center": [
+      -60.9799565,
+      13.9054685
+    ],
+    "zoom": 8,
+    "iso3": "LCA",
+    "status": "Sovereign country",
+    "sovereignty": "Saint Lucia",
+    "providerId": "LCA"
+  },
+  {
+    "code": "LI",
+    "name": "Liechtenstein",
+    "continent": "Europe",
+    "center": [
+      9.5450195,
+      47.1640625
+    ],
+    "zoom": 8,
+    "iso3": "LIE",
+    "status": "Sovereign country",
+    "sovereignty": "Liechtenstein",
+    "providerId": "LIE"
+  },
+  {
+    "code": "LK",
+    "name": "Sri Lanka",
+    "continent": "Asia",
+    "center": [
+      80.741563,
+      7.896224
+    ],
+    "zoom": 5.696860392071789,
+    "iso3": "LKA",
+    "status": "Sovereign country",
+    "sovereignty": "Sri Lanka",
+    "providerId": "LKA"
+  },
+  {
+    "code": "LR",
+    "name": "Liberia",
+    "continent": "Africa",
+    "center": [
+      -9.489247,
+      6.448405
+    ],
+    "zoom": 5.578525151706356,
+    "iso3": "LBR",
+    "status": "Sovereign country",
+    "sovereignty": "Liberia",
+    "providerId": "LBR"
+  },
+  {
+    "code": "LS",
+    "name": "Lesotho",
+    "continent": "Africa",
+    "center": [
+      28.162214,
+      -29.646304
+    ],
+    "zoom": 6,
+    "iso3": "LSO",
+    "status": "Sovereign country",
+    "sovereignty": "Lesotho",
+    "providerId": "LSO"
+  },
+  {
+    "code": "LT",
+    "name": "Lithuania",
+    "continent": "Europe",
+    "center": [
+      23.822039500000002,
+      55.139115000000004
+    ],
+    "zoom": 5.760892620593111,
+    "iso3": "LTU",
+    "status": "Sovereign country",
+    "sovereignty": "Lithuania",
+    "providerId": "LTU"
+  },
+  {
+    "code": "LU",
+    "name": "Luxembourg",
+    "continent": "Europe",
+    "center": [
+      5.9584015,
+      49.7853595
+    ],
+    "zoom": 6,
+    "iso3": "LUX",
+    "status": "Sovereign country",
+    "sovereignty": "Luxembourg",
+    "providerId": "LUX"
+  },
+  {
+    "code": "LV",
+    "name": "Latvia",
+    "continent": "Europe",
+    "center": [
+      24.6162545,
+      56.792632
+    ],
+    "zoom": 5.396757274292073,
+    "iso3": "LVA",
+    "status": "Sovereign country",
+    "sovereignty": "Latvia",
+    "providerId": "LVA"
+  },
+  {
+    "code": "LY",
+    "name": "Libya",
+    "continent": "Africa",
+    "center": [
+      17.2421155,
+      26.358733
+    ],
+    "zoom": 3.8829405745765047,
+    "iso3": "LBY",
+    "status": "Sovereign country",
+    "sovereignty": "Libya",
+    "providerId": "LBY"
+  },
+  {
+    "code": "MA",
+    "name": "Morocco",
+    "continent": "Africa",
+    "center": [
+      -9.0724895,
+      28.590361
+    ],
+    "zoom": 3.801958125135968,
+    "iso3": "MAR",
+    "status": "Sovereign country",
+    "sovereignty": "Morocco",
+    "providerId": "MAR"
+  },
+  {
+    "code": "MC",
+    "name": "Monaco",
+    "continent": "Europe",
+    "center": [
+      7.408203,
+      43.751318
+    ],
+    "zoom": 8,
+    "iso3": "MCO",
+    "status": "Sovereign country",
+    "sovereignty": "Monaco",
+    "providerId": "MCO"
+  },
+  {
+    "code": "MD",
+    "name": "Moldova",
+    "continent": "Europe",
+    "center": [
+      28.321998,
+      46.977700999999996
+    ],
+    "zoom": 6,
+    "iso3": "MDA",
+    "status": "Sovereign country",
+    "sovereignty": "Moldova",
+    "providerId": "MDA"
   },
   {
     "code": "ME",
@@ -1717,27 +1855,907 @@
       19.3949085,
       42.700695499999995
     ],
-    "zoom": 6
+    "zoom": 6,
+    "iso3": "MNE",
+    "status": "Sovereign country",
+    "sovereignty": "Montenegro",
+    "providerId": "MNE"
   },
   {
-    "code": "XK",
-    "name": "Kosovo",
-    "continent": "Europe",
-    "center": [
-      20.922874999999998,
-      42.55958
-    ],
-    "zoom": 6
-  },
-  {
-    "code": "TT",
-    "name": "Trinidad and Tobago",
+    "code": "MF",
+    "name": "Saint Martin",
     "continent": "North America",
     "center": [
-      -61.4225,
-      10.445
+      -63.066235500000005,
+      18.092138499999997
     ],
-    "zoom": 6
+    "zoom": 8,
+    "iso3": "MAF",
+    "status": "Dependency",
+    "sovereignty": "France",
+    "providerId": "MAF"
+  },
+  {
+    "code": "MG",
+    "name": "Madagascar",
+    "continent": "Africa",
+    "center": [
+      46.865362000000005,
+      -18.820995500000002
+    ],
+    "zoom": 3.8824776123837923,
+    "iso3": "MDG",
+    "status": "Sovereign country",
+    "sovereignty": "Madagascar",
+    "providerId": "MDG"
+  },
+  {
+    "code": "MH",
+    "name": "Marshall Islands",
+    "continent": "Oceania",
+    "center": [
+      171.214746,
+      7.1202635
+    ],
+    "zoom": 8,
+    "iso3": "MHL",
+    "status": "Sovereign country",
+    "sovereignty": "Marshall Islands",
+    "providerId": "MHL"
+  },
+  {
+    "code": "MK",
+    "name": "North Macedonia",
+    "continent": "Europe",
+    "center": [
+      21.707776,
+      41.58149349999999
+    ],
+    "zoom": 6,
+    "iso3": "MKD",
+    "status": "Sovereign country",
+    "sovereignty": "North Macedonia",
+    "providerId": "MKD"
+  },
+  {
+    "code": "ML",
+    "name": "Mali",
+    "continent": "Africa",
+    "center": [
+      -3.95027,
+      17.5354675
+    ],
+    "zoom": 3.7487268379882934,
+    "iso3": "MLI",
+    "status": "Sovereign country",
+    "sovereignty": "Mali",
+    "providerId": "MLI"
+  },
+  {
+    "code": "MM",
+    "name": "Myanmar",
+    "continent": "Asia",
+    "center": [
+      96.7416195,
+      19.1344525
+    ],
+    "zoom": 3.4419883016800026,
+    "iso3": "MMR",
+    "status": "Sovereign country",
+    "sovereignty": "Myanmar",
+    "providerId": "MMR"
+  },
+  {
+    "code": "MN",
+    "name": "Mongolia",
+    "continent": "Asia",
+    "center": [
+      103.762044,
+      46.822388000000004
+    ],
+    "zoom": 3.227847002012895,
+    "iso3": "MNG",
+    "status": "Sovereign country",
+    "sovereignty": "Mongolia",
+    "providerId": "MNG"
+  },
+  {
+    "code": "MO",
+    "name": "Macau",
+    "continent": "Asia",
+    "center": [
+      113.5135255,
+      22.220752
+    ],
+    "zoom": 8,
+    "iso3": "MAC",
+    "status": "Country",
+    "sovereignty": "China",
+    "providerId": "MAC"
+  },
+  {
+    "code": "MP",
+    "name": "Northern Mariana Islands",
+    "continent": "Oceania",
+    "center": [
+      145.75307600000002,
+      15.186304
+    ],
+    "zoom": 8,
+    "iso3": "MNP",
+    "status": "Dependency",
+    "sovereignty": "United States of America",
+    "providerId": "MNP"
+  },
+  {
+    "code": "MR",
+    "name": "Mauritania",
+    "continent": "Africa",
+    "center": [
+      -10.99338,
+      21.006289000000002
+    ],
+    "zoom": 3.968163310610191,
+    "iso3": "MRT",
+    "status": "Sovereign country",
+    "sovereignty": "Mauritania",
+    "providerId": "MRT"
+  },
+  {
+    "code": "MS",
+    "name": "Montserrat",
+    "continent": "North America",
+    "center": [
+      -62.1857425,
+      16.7453855
+    ],
+    "zoom": 8,
+    "iso3": "MSR",
+    "status": "Dependency",
+    "sovereignty": "United Kingdom",
+    "providerId": "MSR"
+  },
+  {
+    "code": "MT",
+    "name": "Malta",
+    "continent": "Europe",
+    "center": [
+      14.4587405,
+      35.8993165
+    ],
+    "zoom": 8,
+    "iso3": "MLT",
+    "status": "Sovereign country",
+    "sovereignty": "Malta",
+    "providerId": "MLT"
+  },
+  {
+    "code": "MU",
+    "name": "Mauritius",
+    "continent": "Seven seas (open ocean)",
+    "center": [
+      57.554834,
+      -20.2515625
+    ],
+    "zoom": 8,
+    "iso3": "MUS",
+    "status": "Sovereign country",
+    "sovereignty": "Mauritius",
+    "providerId": "MUS"
+  },
+  {
+    "code": "MV",
+    "name": "Maldives",
+    "continent": "Seven seas (open ocean)",
+    "center": [
+      73.5006835,
+      4.201416
+    ],
+    "zoom": 8,
+    "iso3": "MDV",
+    "status": "Sovereign country",
+    "sovereignty": "Maldives",
+    "providerId": "MDV"
+  },
+  {
+    "code": "MW",
+    "name": "Malawi",
+    "continent": "Africa",
+    "center": [
+      34.230035,
+      -13.015949500000001
+    ],
+    "zoom": 4.723429298757798,
+    "iso3": "MWI",
+    "status": "Sovereign country",
+    "sovereignty": "Malawi",
+    "providerId": "MWI"
+  },
+  {
+    "code": "MX",
+    "name": "Mexico",
+    "continent": "North America",
+    "center": [
+      -101.969871,
+      23.6298295
+    ],
+    "zoom": 3.306821748517256,
+    "iso3": "MEX",
+    "status": "Sovereign country",
+    "sovereignty": "Mexico",
+    "providerId": "MEX"
+  },
+  {
+    "code": "MY",
+    "name": "Malaysia",
+    "continent": "Asia",
+    "center": [
+      114.422582,
+      3.8505920000000002
+    ],
+    "zoom": 4.978062624716128,
+    "iso3": "MYS",
+    "status": "Sovereign country",
+    "sovereignty": "Malaysia",
+    "providerId": "MYS"
+  },
+  {
+    "code": "MZ",
+    "name": "Mozambique",
+    "continent": "Africa",
+    "center": [
+      35.477478,
+      -18.529643999999998
+    ],
+    "zoom": 3.606026292174206,
+    "iso3": "MOZ",
+    "status": "Sovereign country",
+    "sovereignty": "Mozambique",
+    "providerId": "MOZ"
+  },
+  {
+    "code": "NA",
+    "name": "Namibia",
+    "continent": "Africa",
+    "center": [
+      18.409321,
+      -22.993402500000002
+    ],
+    "zoom": 4.046430018490239,
+    "iso3": "NAM",
+    "status": "Sovereign country",
+    "sovereignty": "Namibia",
+    "providerId": "NAM"
+  },
+  {
+    "code": "NC",
+    "name": "New Caledonia",
+    "continent": "Oceania",
+    "center": [
+      165.57480850000002,
+      -21.252811
+    ],
+    "zoom": 6,
+    "iso3": "NCL",
+    "status": "Dependency",
+    "sovereignty": "France",
+    "providerId": "NCL"
+  },
+  {
+    "code": "NE",
+    "name": "Niger",
+    "continent": "Africa",
+    "center": [
+      8.0994465,
+      17.5659175
+    ],
+    "zoom": 4.081735781493856,
+    "iso3": "NER",
+    "status": "Sovereign country",
+    "sovereignty": "Niger",
+    "providerId": "NER"
+  },
+  {
+    "code": "NF",
+    "name": "Norfolk Island",
+    "continent": "Oceania",
+    "center": [
+      167.94829099999998,
+      -29.055127
+    ],
+    "zoom": 8,
+    "iso3": "NFK",
+    "status": "Dependency",
+    "sovereignty": "Australia",
+    "providerId": "NFK"
+  },
+  {
+    "code": "NG",
+    "name": "Nigeria",
+    "continent": "Africa",
+    "center": [
+      8.63444,
+      9.053259
+    ],
+    "zoom": 4.3770201860977815,
+    "iso3": "NGA",
+    "status": "Sovereign country",
+    "sovereignty": "Nigeria",
+    "providerId": "NGA"
+  },
+  {
+    "code": "NI",
+    "name": "Nicaragua",
+    "continent": "North America",
+    "center": [
+      -85.40785600000001,
+      12.871552999999999
+    ],
+    "zoom": 5.543070914213785,
+    "iso3": "NIC",
+    "status": "Sovereign country",
+    "sovereignty": "Nicaragua",
+    "providerId": "NIC"
+  },
+  {
+    "code": "NL",
+    "name": "Netherlands",
+    "continent": "Europe",
+    "center": [
+      5.203512,
+      52.157061999999996
+    ],
+    "zoom": 6,
+    "iso3": "NLD",
+    "status": "Country",
+    "sovereignty": "Netherlands",
+    "providerId": "NLD"
+  },
+  {
+    "code": "NO",
+    "name": "Norway",
+    "continent": "Europe",
+    "center": [
+      18.142748,
+      64.63217900000001
+    ],
+    "zoom": 3.511754291828304,
+    "iso3": "NOR",
+    "status": "Sovereign country",
+    "sovereignty": "Norway",
+    "providerId": "NOR"
+  },
+  {
+    "code": "NP",
+    "name": "Nepal",
+    "continent": "Asia",
+    "center": [
+      84.1316145,
+      28.410307500000002
+    ],
+    "zoom": 5.213324867716504,
+    "iso3": "NPL",
+    "status": "Sovereign country",
+    "sovereignty": "Nepal",
+    "providerId": "NPL"
+  },
+  {
+    "code": "NR",
+    "name": "Nauru",
+    "continent": "Oceania",
+    "center": [
+      166.93271449999997,
+      -0.520068
+    ],
+    "zoom": 8,
+    "iso3": "NRU",
+    "status": "Sovereign country",
+    "sovereignty": "Nauru",
+    "providerId": "NRU"
+  },
+  {
+    "code": "NU",
+    "name": "Niue",
+    "continent": "Oceania",
+    "center": [
+      -169.87087400000001,
+      -19.0519535
+    ],
+    "zoom": 8,
+    "iso3": "NIU",
+    "status": "Dependency",
+    "sovereignty": "New Zealand",
+    "providerId": "NIU"
+  },
+  {
+    "code": "NZ",
+    "name": "New Zealand",
+    "continent": "Oceania",
+    "center": [
+      175.5765495,
+      -38.069485
+    ],
+    "zoom": 4.788335643895445,
+    "iso3": "NZL",
+    "status": "Country",
+    "sovereignty": "New Zealand",
+    "providerId": "NZL"
+  },
+  {
+    "code": "OM",
+    "name": "Oman",
+    "continent": "Asia",
+    "center": [
+      55.904035,
+      20.7878915
+    ],
+    "zoom": 4.595326855671586,
+    "iso3": "OMN",
+    "status": "Sovereign country",
+    "sovereignty": "Oman",
+    "providerId": "OMN"
+  },
+  {
+    "code": "PA",
+    "name": "Panama",
+    "continent": "North America",
+    "center": [
+      -80.1041745,
+      8.4160755
+    ],
+    "zoom": 5.7119923817238405,
+    "iso3": "PAN",
+    "status": "Sovereign country",
+    "sovereignty": "Panama",
+    "providerId": "PAN"
+  },
+  {
+    "code": "PE",
+    "name": "Peru",
+    "continent": "South America",
+    "center": [
+      -75.03801150000001,
+      -9.20259
+    ],
+    "zoom": 3.4508122843278795,
+    "iso3": "PER",
+    "status": "Sovereign country",
+    "sovereignty": "Peru",
+    "providerId": "PER"
+  },
+  {
+    "code": "PF",
+    "name": "French Polynesia",
+    "continent": "Oceania",
+    "center": [
+      -140.74489699999998,
+      -17.7727055
+    ],
+    "zoom": 8,
+    "iso3": "PYF",
+    "status": "Dependency",
+    "sovereignty": "France",
+    "providerId": "PYF"
+  },
+  {
+    "code": "PG",
+    "name": "Papua New Guinea",
+    "continent": "Oceania",
+    "center": [
+      145.900919,
+      -6.6263135
+    ],
+    "zoom": 4.634450787705982,
+    "iso3": "PNG",
+    "status": "Sovereign country",
+    "sovereignty": "Papua New Guinea",
+    "providerId": "PNG"
+  },
+  {
+    "code": "PH",
+    "name": "Philippines",
+    "continent": "Asia",
+    "center": [
+      122.032531,
+      15.520952000000001
+    ],
+    "zoom": 5.0664757041628405,
+    "iso3": "PHL",
+    "status": "Sovereign country",
+    "sovereignty": "Philippines",
+    "providerId": "PHL"
+  },
+  {
+    "code": "PK",
+    "name": "Pakistan",
+    "continent": "Asia",
+    "center": [
+      69.3558495,
+      30.412498
+    ],
+    "zoom": 3.895280533264241,
+    "iso3": "PAK",
+    "status": "Sovereign country",
+    "sovereignty": "Pakistan",
+    "providerId": "PAK"
+  },
+  {
+    "code": "PL",
+    "name": "Poland",
+    "continent": "Europe",
+    "center": [
+      19.0522535,
+      51.9394655
+    ],
+    "zoom": 4.913329987555963,
+    "iso3": "POL",
+    "status": "Sovereign country",
+    "sovereignty": "Poland",
+    "providerId": "POL"
+  },
+  {
+    "code": "PM",
+    "name": "Saint Pierre and Miquelon",
+    "continent": "North America",
+    "center": [
+      -56.3211915,
+      46.9471435
+    ],
+    "zoom": 8,
+    "iso3": "SPM",
+    "status": "Dependency",
+    "sovereignty": "France",
+    "providerId": "SPM"
+  },
+  {
+    "code": "PN",
+    "name": "Pitcairn Islands",
+    "continent": "Oceania",
+    "center": [
+      -128.3201415,
+      -24.367919999999998
+    ],
+    "zoom": 8,
+    "iso3": "PCN",
+    "status": "Dependency",
+    "sovereignty": "United Kingdom",
+    "providerId": "PCN"
+  },
+  {
+    "code": "PR",
+    "name": "Puerto Rico",
+    "continent": "North America",
+    "center": [
+      -66.41671600000001,
+      18.233577
+    ],
+    "zoom": 6,
+    "iso3": "PRI",
+    "status": "Dependency",
+    "sovereignty": "United States of America",
+    "providerId": "PRI"
+  },
+  {
+    "code": "PS",
+    "name": "Palestine",
+    "continent": "Asia",
+    "center": [
+      35.2365365,
+      31.942973000000002
+    ],
+    "zoom": 6,
+    "iso3": "PSE",
+    "status": "Indeterminate",
+    "sovereignty": "Israel",
+    "providerId": "PSX"
+  },
+  {
+    "code": "PT",
+    "name": "Portugal",
+    "continent": "Europe",
+    "center": [
+      -7.957829500000001,
+      39.559369
+    ],
+    "zoom": 5.19966621339547,
+    "iso3": "PRT",
+    "status": "Sovereign country",
+    "sovereignty": "Portugal",
+    "providerId": "PRT"
+  },
+  {
+    "code": "PW",
+    "name": "Palau",
+    "continent": "Oceania",
+    "center": [
+      134.58291,
+      7.536377
+    ],
+    "zoom": 8,
+    "iso3": "PLW",
+    "status": "Sovereign country",
+    "sovereignty": "Palau",
+    "providerId": "PLW"
+  },
+  {
+    "code": "PY",
+    "name": "Paraguay",
+    "continent": "South America",
+    "center": [
+      -58.4890085,
+      -23.445622999999998
+    ],
+    "zoom": 4.607220637028161,
+    "iso3": "PRY",
+    "status": "Sovereign country",
+    "sovereignty": "Paraguay",
+    "providerId": "PRY"
+  },
+  {
+    "code": "QA",
+    "name": "Qatar",
+    "continent": "Asia",
+    "center": [
+      51.17530549999999,
+      25.3354565
+    ],
+    "zoom": 6,
+    "iso3": "QAT",
+    "status": "Sovereign country",
+    "sovereignty": "Qatar",
+    "providerId": "QAT"
+  },
+  {
+    "code": "RO",
+    "name": "Romania",
+    "continent": "Europe",
+    "center": [
+      24.9233675,
+      45.954663
+    ],
+    "zoom": 4.995183522821431,
+    "iso3": "ROU",
+    "status": "Sovereign country",
+    "sovereignty": "Romania",
+    "providerId": "ROU"
+  },
+  {
+    "code": "RS",
+    "name": "Serbia",
+    "continent": "Europe",
+    "center": [
+      20.907922,
+      44.208477
+    ],
+    "zoom": 5.670610088124055,
+    "iso3": "SRB",
+    "status": "Sovereign country",
+    "sovereignty": "Republic of Serbia",
+    "providerId": "SRB"
+  },
+  {
+    "code": "RU",
+    "name": "Russia",
+    "continent": "Europe",
+    "center": [
+      103.6440925,
+      59.424668
+    ],
+    "zoom": 2,
+    "iso3": "RUS",
+    "status": "Sovereign country",
+    "sovereignty": "Russia",
+    "providerId": "RUS"
+  },
+  {
+    "code": "RW",
+    "name": "Rwanda",
+    "continent": "Africa",
+    "center": [
+      29.920530499999998,
+      -2.0262585
+    ],
+    "zoom": 6,
+    "iso3": "RWA",
+    "status": "Sovereign country",
+    "sovereignty": "Rwanda",
+    "providerId": "RWA"
+  },
+  {
+    "code": "SA",
+    "name": "Saudi Arabia",
+    "continent": "Asia",
+    "center": [
+      45.1494975,
+      24.25445
+    ],
+    "zoom": 3.6608062313262453,
+    "iso3": "SAU",
+    "status": "Sovereign country",
+    "sovereignty": "Saudi Arabia",
+    "providerId": "SAU"
+  },
+  {
+    "code": "SB",
+    "name": "Solomon Islands",
+    "continent": "Oceania",
+    "center": [
+      159.064276,
+      -7.9291540000000005
+    ],
+    "zoom": 6,
+    "iso3": "SLB",
+    "status": "Sovereign country",
+    "sovereignty": "Solomon Islands",
+    "providerId": "SLB"
+  },
+  {
+    "code": "SC",
+    "name": "Seychelles",
+    "continent": "Seven seas (open ocean)",
+    "center": [
+      55.4631835,
+      -4.672168
+    ],
+    "zoom": 8,
+    "iso3": "SYC",
+    "status": "Sovereign country",
+    "sovereignty": "Seychelles",
+    "providerId": "SYC"
+  },
+  {
+    "code": "SD",
+    "name": "Sudan",
+    "continent": "Africa",
+    "center": [
+      30.17345,
+      15.114594
+    ],
+    "zoom": 3.860314463966807,
+    "iso3": "SDN",
+    "status": "Sovereign country",
+    "sovereignty": "Sudan",
+    "providerId": "SDN"
+  },
+  {
+    "code": "SE",
+    "name": "Sweden",
+    "continent": "Europe",
+    "center": [
+      17.465374,
+      62.233992
+    ],
+    "zoom": 3.8630726200605747,
+    "iso3": "SWE",
+    "status": "Sovereign country",
+    "sovereignty": "Sweden",
+    "providerId": "SWE"
+  },
+  {
+    "code": "SG",
+    "name": "Singapore",
+    "continent": "Asia",
+    "center": [
+      103.823291,
+      1.3562255
+    ],
+    "zoom": 8,
+    "iso3": "SGP",
+    "status": "Sovereign country",
+    "sovereignty": "Singapore",
+    "providerId": "SGP"
+  },
+  {
+    "code": "SH",
+    "name": "Saint Helena",
+    "continent": "Seven seas (open ocean)",
+    "center": [
+      -14.358740000000001,
+      -7.929199
+    ],
+    "zoom": 8,
+    "iso3": "SHN",
+    "status": "Dependency",
+    "sovereignty": "United Kingdom",
+    "providerId": "SHN"
+  },
+  {
+    "code": "SI",
+    "name": "Slovenia",
+    "continent": "Europe",
+    "center": [
+      15.131459,
+      46.152351
+    ],
+    "zoom": 6,
+    "iso3": "SVN",
+    "status": "Sovereign country",
+    "sovereignty": "Slovenia",
+    "providerId": "SVN"
+  },
+  {
+    "code": "SK",
+    "name": "Slovakia",
+    "continent": "Europe",
+    "center": [
+      19.719060499999998,
+      48.6650015
+    ],
+    "zoom": 5.723396458784898,
+    "iso3": "SVK",
+    "status": "Sovereign country",
+    "sovereignty": "Slovakia",
+    "providerId": "SVK"
+  },
+  {
+    "code": "SL",
+    "name": "Sierra Leone",
+    "continent": "Africa",
+    "center": [
+      -11.738322,
+      8.4164505
+    ],
+    "zoom": 5.938512107604395,
+    "iso3": "SLE",
+    "status": "Sovereign country",
+    "sovereignty": "Sierra Leone",
+    "providerId": "SLE"
+  },
+  {
+    "code": "SM",
+    "name": "San Marino",
+    "continent": "Europe",
+    "center": [
+      12.4557615,
+      43.941919
+    ],
+    "zoom": 8,
+    "iso3": "SMR",
+    "status": "Sovereign country",
+    "sovereignty": "San Marino",
+    "providerId": "SMR"
+  },
+  {
+    "code": "SN",
+    "name": "Senegal",
+    "continent": "Africa",
+    "center": [
+      -14.546471,
+      14.465177
+    ],
+    "zoom": 5.550913381194737,
+    "iso3": "SEN",
+    "status": "Sovereign country",
+    "sovereignty": "Senegal",
+    "providerId": "SEN"
+  },
+  {
+    "code": "SO",
+    "name": "Somalia",
+    "continent": "Africa",
+    "center": [
+      46.057460000000006,
+      5.170695
+    ],
+    "zoom": 3.866921574886651,
+    "iso3": "SOM",
+    "status": "Sovereign country",
+    "sovereignty": "Somalia",
+    "providerId": "SOM"
+  },
+  {
+    "code": "SR",
+    "name": "Suriname",
+    "continent": "South America",
+    "center": [
+      -56.001369499999996,
+      3.921479
+    ],
+    "zoom": 5.570850400917299,
+    "iso3": "SUR",
+    "status": "Sovereign country",
+    "sovereignty": "Suriname",
+    "providerId": "SUR"
   },
   {
     "code": "SS",
@@ -1747,6 +2765,556 @@
       29.5924935,
       7.87859
     ],
-    "zoom": 4.516415062092623
+    "zoom": 4.516415062092623,
+    "iso3": "SSD",
+    "status": "Sovereign country",
+    "sovereignty": "South Sudan",
+    "providerId": "SDS"
+  },
+  {
+    "code": "ST",
+    "name": "São Tomé and Príncipe",
+    "continent": "Africa",
+    "center": [
+      6.609082,
+      0.225879
+    ],
+    "zoom": 8,
+    "iso3": "STP",
+    "status": "Sovereign country",
+    "sovereignty": "São Tomé and Principe",
+    "providerId": "STP"
+  },
+  {
+    "code": "SV",
+    "name": "El Salvador",
+    "continent": "North America",
+    "center": [
+      -88.90952899999999,
+      13.786575
+    ],
+    "zoom": 6,
+    "iso3": "SLV",
+    "status": "Sovereign country",
+    "sovereignty": "El Salvador",
+    "providerId": "SLV"
+  },
+  {
+    "code": "SX",
+    "name": "Sint Maarten",
+    "continent": "North America",
+    "center": [
+      -63.067944499999996,
+      18.044067
+    ],
+    "zoom": 8,
+    "iso3": "SXM",
+    "status": "Country",
+    "sovereignty": "Netherlands",
+    "providerId": "SXM"
+  },
+  {
+    "code": "SY",
+    "name": "Syria",
+    "continent": "Asia",
+    "center": [
+      39.0251945,
+      34.7714055
+    ],
+    "zoom": 5.346096906366755,
+    "iso3": "SYR",
+    "status": "Sovereign country",
+    "sovereignty": "Syria",
+    "providerId": "SYR"
+  },
+  {
+    "code": "SZ",
+    "name": "Eswatini",
+    "continent": "Africa",
+    "center": [
+      31.374137,
+      -26.473035000000003
+    ],
+    "zoom": 6,
+    "iso3": "SWZ",
+    "status": "Sovereign country",
+    "sovereignty": "eSwatini",
+    "providerId": "SWZ"
+  },
+  {
+    "code": "TC",
+    "name": "Turks and Caicos Islands",
+    "continent": "North America",
+    "center": [
+      -71.9494875,
+      21.890893499999997
+    ],
+    "zoom": 8,
+    "iso3": "TCA",
+    "status": "Dependency",
+    "sovereignty": "United Kingdom",
+    "providerId": "TCA"
+  },
+  {
+    "code": "TD",
+    "name": "Chad",
+    "continent": "Africa",
+    "center": [
+      18.713642,
+      15.4158225
+    ],
+    "zoom": 3.6449571155389746,
+    "iso3": "TCD",
+    "status": "Sovereign country",
+    "sovereignty": "Chad",
+    "providerId": "TCD"
+  },
+  {
+    "code": "TF",
+    "name": "French Southern and Antarctic Lands",
+    "continent": "Seven seas (open ocean)",
+    "center": [
+      69.64,
+      -49.2
+    ],
+    "zoom": 6,
+    "iso3": "ATF",
+    "status": "Dependency",
+    "sovereignty": "France",
+    "providerId": "ATF"
+  },
+  {
+    "code": "TG",
+    "name": "Togo",
+    "continent": "Africa",
+    "center": [
+      0.907728,
+      8.4737595
+    ],
+    "zoom": 5.296234466899333,
+    "iso3": "TGO",
+    "status": "Sovereign country",
+    "sovereignty": "Togo",
+    "providerId": "TGO"
+  },
+  {
+    "code": "TH",
+    "name": "Thailand",
+    "continent": "Asia",
+    "center": [
+      101.4824675,
+      13.054617
+    ],
+    "zoom": 3.763516835320306,
+    "iso3": "THA",
+    "status": "Sovereign country",
+    "sovereignty": "Thailand",
+    "providerId": "THA"
+  },
+  {
+    "code": "TJ",
+    "name": "Tajikistan",
+    "continent": "Asia",
+    "center": [
+      71.211111,
+      38.849192
+    ],
+    "zoom": 5.3146786190365685,
+    "iso3": "TJK",
+    "status": "Sovereign country",
+    "sovereignty": "Tajikistan",
+    "providerId": "TJK"
+  },
+  {
+    "code": "TL",
+    "name": "East Timor",
+    "continent": "Asia",
+    "center": [
+      126.152305,
+      -8.833259000000002
+    ],
+    "zoom": 6,
+    "iso3": "TLS",
+    "status": "Sovereign country",
+    "sovereignty": "East Timor",
+    "providerId": "TLS"
+  },
+  {
+    "code": "TM",
+    "name": "Turkmenistan",
+    "continent": "Asia",
+    "center": [
+      59.524305,
+      39.011107499999994
+    ],
+    "zoom": 4.416968539933634,
+    "iso3": "TKM",
+    "status": "Sovereign country",
+    "sovereignty": "Turkmenistan",
+    "providerId": "TKM"
+  },
+  {
+    "code": "TN",
+    "name": "Tunisia",
+    "continent": "Africa",
+    "center": [
+      9.5066345,
+      33.828775
+    ],
+    "zoom": 4.82778123227303,
+    "iso3": "TUN",
+    "status": "Sovereign country",
+    "sovereignty": "Tunisia",
+    "providerId": "TUN"
+  },
+  {
+    "code": "TO",
+    "name": "Tonga",
+    "continent": "Oceania",
+    "center": [
+      -175.220264,
+      -21.165967000000002
+    ],
+    "zoom": 8,
+    "iso3": "TON",
+    "status": "Sovereign country",
+    "sovereignty": "Tonga",
+    "providerId": "TON"
+  },
+  {
+    "code": "TR",
+    "name": "Turkey",
+    "continent": "Asia",
+    "center": [
+      35.4823875,
+      38.93088
+    ],
+    "zoom": 4.009789217679124,
+    "iso3": "TUR",
+    "status": "Sovereign country",
+    "sovereignty": "Turkey",
+    "providerId": "TUR"
+  },
+  {
+    "code": "TT",
+    "name": "Trinidad and Tobago",
+    "continent": "North America",
+    "center": [
+      -61.4225,
+      10.445
+    ],
+    "zoom": 6,
+    "iso3": "TTO",
+    "status": "Sovereign country",
+    "sovereignty": "Trinidad and Tobago",
+    "providerId": "TTO"
+  },
+  {
+    "code": "TV",
+    "name": "Tuvalu",
+    "continent": "Oceania",
+    "center": [
+      179.2061525,
+      -8.500634999999999
+    ],
+    "zoom": 8,
+    "iso3": "TUV",
+    "status": "Sovereign country",
+    "sovereignty": "Tuvalu",
+    "providerId": "TUV"
+  },
+  {
+    "code": "TW",
+    "name": "Taiwan",
+    "continent": "Asia",
+    "center": [
+      121.0287165,
+      23.633015
+    ],
+    "zoom": 5.9105504460228575,
+    "iso3": "TWN",
+    "status": "Sovereign country",
+    "sovereignty": "Taiwan",
+    "providerId": "TWN"
+  },
+  {
+    "code": "TZ",
+    "name": "Tanzania",
+    "continent": "Africa",
+    "center": [
+      34.828294,
+      -6.335469
+    ],
+    "zoom": 4.214784200713503,
+    "iso3": "TZA",
+    "status": "Sovereign country",
+    "sovereignty": "United Republic of Tanzania",
+    "providerId": "TZA"
+  },
+  {
+    "code": "UA",
+    "name": "Ukraine",
+    "continent": "Europe",
+    "center": [
+      31.0831985,
+      48.81419150000001
+    ],
+    "zoom": 4.059279982287853,
+    "iso3": "UKR",
+    "status": "Sovereign country",
+    "sovereignty": "Ukraine",
+    "providerId": "UKR"
+  },
+  {
+    "code": "UG",
+    "name": "Uganda",
+    "continent": "Africa",
+    "center": [
+      32.307728,
+      1.4032814999999998
+    ],
+    "zoom": 5.134614633969028,
+    "iso3": "UGA",
+    "status": "Sovereign country",
+    "sovereignty": "Uganda",
+    "providerId": "UGA"
+  },
+  {
+    "code": "US",
+    "name": "United States of America",
+    "continent": "North America",
+    "center": [
+      -95.82593499999999,
+      37.234525
+    ],
+    "zoom": 2.377755560659993,
+    "iso3": "USA",
+    "status": "Country",
+    "sovereignty": "United States of America",
+    "providerId": "USA"
+  },
+  {
+    "code": "UY",
+    "name": "Uruguay",
+    "continent": "South America",
+    "center": [
+      -55.8183315,
+      -32.5311665
+    ],
+    "zoom": 5.367966804702862,
+    "iso3": "URY",
+    "status": "Sovereign country",
+    "sovereignty": "Uruguay",
+    "providerId": "URY"
+  },
+  {
+    "code": "UZ",
+    "name": "Uzbekistan",
+    "continent": "Asia",
+    "center": [
+      64.492167,
+      41.365899
+    ],
+    "zoom": 4.130660245620534,
+    "iso3": "UZB",
+    "status": "Sovereign country",
+    "sovereignty": "Uzbekistan",
+    "providerId": "UZB"
+  },
+  {
+    "code": "VA",
+    "name": "Vatican City",
+    "continent": "Europe",
+    "center": [
+      12.433349499999998,
+      41.901880000000006
+    ],
+    "zoom": 8,
+    "iso3": "VAT",
+    "status": "Sovereign country",
+    "sovereignty": "Vatican",
+    "providerId": "VAT"
+  },
+  {
+    "code": "VC",
+    "name": "Saint Vincent and the Grenadines",
+    "continent": "North America",
+    "center": [
+      -61.2353515,
+      13.0144045
+    ],
+    "zoom": 8,
+    "iso3": "VCT",
+    "status": "Sovereign country",
+    "sovereignty": "Saint Vincent and the Grenadines",
+    "providerId": "VCT"
+  },
+  {
+    "code": "VE",
+    "name": "Venezuela",
+    "continent": "South America",
+    "center": [
+      -66.53161850000001,
+      6.4433795
+    ],
+    "zoom": 4.12811157345427,
+    "iso3": "VEN",
+    "status": "Sovereign country",
+    "sovereignty": "Venezuela",
+    "providerId": "VEN"
+  },
+  {
+    "code": "VG",
+    "name": "British Virgin Islands",
+    "continent": "North America",
+    "center": [
+      -64.342505,
+      18.7299075
+    ],
+    "zoom": 8,
+    "iso3": "VGB",
+    "status": "Dependency",
+    "sovereignty": "United Kingdom",
+    "providerId": "VGB"
+  },
+  {
+    "code": "VI",
+    "name": "United States Virgin Islands",
+    "continent": "North America",
+    "center": [
+      -64.73479,
+      17.7480225
+    ],
+    "zoom": 8,
+    "iso3": "VIR",
+    "status": "Dependency",
+    "sovereignty": "United States of America",
+    "providerId": "VIR"
+  },
+  {
+    "code": "VN",
+    "name": "Vietnam",
+    "continent": "Asia",
+    "center": [
+      105.75285299999999,
+      15.9759115
+    ],
+    "zoom": 3.760987901950251,
+    "iso3": "VNM",
+    "status": "Sovereign country",
+    "sovereignty": "Vietnam",
+    "providerId": "VNM"
+  },
+  {
+    "code": "VU",
+    "name": "Vanuatu",
+    "continent": "Oceania",
+    "center": [
+      166.9495825,
+      -15.183259
+    ],
+    "zoom": 6,
+    "iso3": "VUT",
+    "status": "Sovereign country",
+    "sovereignty": "Vanuatu",
+    "providerId": "VUT"
+  },
+  {
+    "code": "WF",
+    "name": "Wallis and Futuna",
+    "continent": "Oceania",
+    "center": [
+      -178.1190185,
+      -14.278271499999999
+    ],
+    "zoom": 8,
+    "iso3": "WLF",
+    "status": "Dependency",
+    "sovereignty": "France",
+    "providerId": "WLF"
+  },
+  {
+    "code": "WS",
+    "name": "Samoa",
+    "continent": "Oceania",
+    "center": [
+      -171.7477295,
+      -13.9271975
+    ],
+    "zoom": 8,
+    "iso3": "WSM",
+    "status": "Sovereign country",
+    "sovereignty": "Samoa",
+    "providerId": "WSM"
+  },
+  {
+    "code": "XK",
+    "name": "Kosovo",
+    "continent": "Europe",
+    "center": [
+      20.922874999999998,
+      42.55958
+    ],
+    "zoom": 6,
+    "iso3": "-99",
+    "status": "Disputed",
+    "sovereignty": "Kosovo",
+    "providerId": "KOS"
+  },
+  {
+    "code": "YE",
+    "name": "Yemen",
+    "continent": "Asia",
+    "center": [
+      47.856723,
+      15.7929765
+    ],
+    "zoom": 4.8359929790149865,
+    "iso3": "YEM",
+    "status": "Sovereign country",
+    "sovereignty": "Yemen",
+    "providerId": "YEM"
+  },
+  {
+    "code": "ZA",
+    "name": "South Africa",
+    "continent": "Africa",
+    "center": [
+      24.5875485,
+      -28.4552395
+    ],
+    "zoom": 3.9739390163775807,
+    "iso3": "ZAF",
+    "status": "Sovereign country",
+    "sovereignty": "South Africa",
+    "providerId": "ZAF"
+  },
+  {
+    "code": "ZM",
+    "name": "Zambia",
+    "continent": "Africa",
+    "center": [
+      27.6867655,
+      -13.099743
+    ],
+    "zoom": 4.362458823033145,
+    "iso3": "ZMB",
+    "status": "Sovereign country",
+    "sovereignty": "Zambia",
+    "providerId": "ZMB"
+  },
+  {
+    "code": "ZW",
+    "name": "Zimbabwe",
+    "continent": "Africa",
+    "center": [
+      29.0570435,
+      -18.8896995
+    ],
+    "zoom": 4.886016856298002,
+    "iso3": "ZWE",
+    "status": "Sovereign country",
+    "sovereignty": "Zimbabwe",
+    "providerId": "ZWE"
   }
 ]

@@ -1,5 +1,6 @@
 import { z } from "zod";
 import { countries, datasets, entityById, entities } from "./knowledge";
+import { referenceArea, supportsCountryMode } from "./country-profiles";
 import { relationships } from "./knowledge";
 import { networkSchema } from "./network";
 import { metricSchema } from "./statistics";
@@ -271,6 +272,7 @@ export function validateActions(
       if (
         action.type === "FOCUS_REGION" &&
         !entity.coordinates &&
+        !referenceArea(entity.id) &&
         !municipalById(entity.id)
       )
         throw new Error("Region has no geometry");
@@ -283,8 +285,7 @@ export function validateActions(
       throw new Error("Unknown dataset");
     if (
       action.type === "SET_VISUALIZATION_MODE" &&
-      country !== "ZA" &&
-      !["geographic", "compare", "timeline"].includes(action.payload.mode)
+      !supportsCountryMode(country, action.payload.mode)
     )
       throw new Error("Detailed coverage unavailable");
   }

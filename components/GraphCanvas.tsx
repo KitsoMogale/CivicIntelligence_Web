@@ -26,6 +26,7 @@ import { descendants, domains, entities, relationships } from "@/lib/knowledge";
 import { useExplorer } from "@/lib/store";
 import { visibleEntityIds } from "@/lib/visibility";
 import { canvasLinks } from "@/lib/map-data";
+import { domainRoot } from "@/lib/country-profiles";
 type KnowledgeNode = Node<
   {
     label: string;
@@ -112,7 +113,7 @@ function Canvas() {
   const s = useExplorer(),
     flow = useReactFlow();
   const graph = useMemo(() => {
-    const root = domains.find((d) => d.id === s.domain)!.root,
+    const root = domainRoot(s.country.code, s.domain)!,
       ids = new Set<string>(
         visibleEntityIds({
           countryCode: s.country.code,

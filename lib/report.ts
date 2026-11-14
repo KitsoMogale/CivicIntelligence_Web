@@ -35,6 +35,7 @@ export function geographySvg(
   overlay: "none" | "population" | "change" = "none",
   year: 2011 | 2022 = 2022,
   metricId?: MetricId,
+  boundaryCaption = "Province geometry: 2020, geoBoundaries (CC BY 4.0), OCHA ROSEA / Municipal Demarcation Board (CC BY 3.0 IGO). Country geometry: Natural Earth, public domain.",
 ) {
   const metric = metricId ? metricById(metricId) : null;
   const shapes = collection.features.flatMap((feature) => {
@@ -56,12 +57,19 @@ export function geographySvg(
       },
     ];
   });
-  const points = shapes.flatMap((shape) => shape.rings.flat());
-  if (!points.length) return "";
-  const west = Math.min(...points.map((p) => p[0])),
-    east = Math.max(...points.map((p) => p[0])),
-    south = Math.min(...points.map((p) => p[1])),
-    north = Math.max(...points.map((p) => p[1]));
+  let west = Infinity,
+    east = -Infinity,
+    south = Infinity,
+    north = -Infinity;
+  for (const shape of shapes)
+    for (const ring of shape.rings)
+      for (const p of ring) {
+        west = Math.min(west, p[0]);
+        east = Math.max(east, p[0]);
+        south = Math.min(south, p[1]);
+        north = Math.max(north, p[1]);
+      }
+  if (!Number.isFinite(west)) return "";
   const cosine = Math.max(
       0.2,
       Math.cos((((north + south) / 2) * Math.PI) / 180),
@@ -119,13 +127,18 @@ export function geographySvg(
               .join(" ") + "Z",
         )
         .join(" ");
-      const name = String(shape.properties.name ?? "");
+      const name = String(
+        shape.properties.name ??
+          shape.properties.shapeName ??
+          entityById(String(shape.properties.entityId))?.name ??
+          "",
+      );
       const region = regions.find((r) => r.id === shape.properties.id);
       const label = region ? project(region.center) : null;
       return `<path d="${d}" fill="${color}" stroke="#567765" stroke-width="1.2" fill-rule="evenodd"><title>${escapeHtml(name)}${metric ? " · " + escapeHtml(formatMetric(value, metric.precision)) : overlay !== "none" && Number.isFinite(value) ? " · " + escapeHtml(value) : ""}</title></path>${label ? `<text x="${label[0]}" y="${label[1]}" text-anchor="middle" font-size="13" fill="#193c2d">${escapeHtml(name)}</text>` : ""}`;
     })
     .join("");
-  return `<figure><svg role="img" aria-label="Illustrative geographic overview" viewBox="0 0 1000 ${height}" xmlns="http://www.w3.org/2000/svg">${paths}</svg><figcaption>Simplified geography for exploration.${metric ? " Colour shows " + escapeHtml(metric.name) + " · " + escapeHtml(metric.periodLabel) + ". Provincial observations only." : overlay === "population" ? " Colour shows provincial Census " + year + " population." : overlay === "change" ? " Colour shows population change between Census 2011 and 2022." : ""} Province geometry: 2020, geoBoundaries (CC BY 4.0), OCHA ROSEA / Municipal Demarcation Board (CC BY 3.0 IGO). Country geometry: Natural Earth, public domain.</figcaption></figure>`;
+  return `<figure><svg role="img" aria-label="Illustrative geographic overview" viewBox="0 0 1000 ${height}" xmlns="http://www.w3.org/2000/svg">${paths}</svg><figcaption>Simplified geography for exploration.${metric ? " Colour shows " + escapeHtml(metric.name) + " · " + escapeHtml(metric.periodLabel) + ". Provincial observations only." : overlay === "population" ? " Colour shows provincial Census " + year + " population." : overlay === "change" ? " Colour shows population change between Census 2011 and 2022." : ""} ${escapeHtml(boundaryCaption)}</figcaption></figure>`;
 }
 export function graphSvg(data: ReportSnapshot) {
   const nodes = data.entities.slice(0, 36);
@@ -305,7 +318,8 @@ export function renderReport(
   return `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src data:; base-uri 'none'; form-action 'none'"><title>${h(title)} · Civic Intelligence</title><style>body{font:14px/1.65 Arial,sans-serif;color:#20382c;background:#fff;margin:0}main{max-width:1050px;margin:auto;padding:42px}h1{font-size:35px;line-height:1.2}h2{font-size:22px;margin-top:35px;border-bottom:1px solid #dae5dd;padding-bottom:8px}h3{font-size:16px}a{color:#226347;overflow-wrap:anywhere}p{white-space:pre-wrap}.eyebrow{font-size:11px;letter-spacing:2px;color:#558068}table{border-collapse:collapse;width:100%;margin:20px 0;font-size:12px}td,th{padding:10px;text-align:left;border-bottom:1px solid #dae5dd;vertical-align:top}small,figcaption{color:#567060}figure{margin:20px 0}svg{width:100%;height:auto}article{break-inside:avoid}.note{background:#f0f5f1;padding:18px;border-left:3px solid #739d89}.print-help{border:1px solid #ccdcd1;padding:12px;font-size:12px}@page{size:A4;margin:16mm}@media print{main{padding:0}.print-help{display:none}a{color:inherit}h2{break-after:avoid}thead{display:table-header-group}figure{break-inside:avoid}body{font-size:11px}table{font-size:10px}}</style></head><body><main><span class="eyebrow">CIVIC INTELLIGENCE · EXPLORATION REPORT</span><h1>${h(title)}</h1><p>${h(data.country.name)} · ${h(data.domain)} · ${h(data.mode)}<br>Exported ${h(data.exportedAt)}</p><p class="print-help">This self-contained report works offline. Use your browser’s Print command to save a PDF. Follow the numbered source links to verify claims.</p>${note ? `<h2>Investigation notes</h2><p class="note">${h(note)}</p>` : ""}
   ${data.comparison ? `<h2>${h(data.comparison.indicator.name)} · ${h(data.comparison.year ?? "no common year")}</h2><p>${h(data.comparison.indicator.description)} ${references(data.comparison.indicator.sourceIds)}</p>${chart}<table><thead><tr><th>Country</th><th>Value</th><th>Unit</th></tr></thead><tbody>${data.comparison.rows.map((r) => `<tr><td>${h(countries.find((c) => c.code === r.country)?.name ?? r.country)}</td><td>${h(formatStatistic(r.value, data.comparison!.indicator.unit))}</td><td>${h(data.comparison!.indicator.unit)}</td></tr>`).join("")}</tbody></table>` : ""}
   ${data.events.length ? `<h2>Historical events</h2>${data.events.map((event) => `<article><h3>${h(event.date)} · ${h(event.title)}</h3><p>${h(event.description)} ${references(event.sourceIds)}</p></article>`).join("")}` : ""}
-  ${map ? `<h2>Geographic overview</h2>${geographySvg(map.geography, map.overlay, map.year, map.metricId)}` : ""}
+  ${map ? `<h2>Geographic overview</h2>${geographySvg(map.geography, map.overlay, map.year, map.metricId, data.country.code === "ZA" ? undefined : `Country/reference geometry: ${data.countryProfile.boundary.year}. ${data.sources.find((s) => s.id === data.countryProfile.boundary.sourceId)?.publisher ?? "See source register"}. ${data.sources.find((s) => s.id === data.countryProfile.boundary.sourceId)?.license ?? "See source licence"}. ${data.countryProfile.boundary.note ?? "Dated reference boundaries; no current legal boundary claim."}`)}` : ""}
+  ${data.countryProfile ? `<h2>Country structure and coverage</h2><p>${h(data.countryProfile.summary)}</p><p>${h(data.boundaryDescription)}. ${h(data.countryProfile.boundary.note ?? "Reference geography does not establish current legal boundaries.")}</p>${data.countryProfile.schemes.map((scheme) => `<h3>${h(scheme.name)}</h3><ul>${scheme.levels.map((level) => `<li>${h(level)}</li>`).join("")}</ul><p>${h(scheme.note)}</p>`).join("")}` : ""}
   ${data.selectedWard ? `<h2>Ward ${h(data.selectedWard.number)} · ${h(entityById(data.selectedWard.municipalityId)?.name)}</h2><p>Publisher identifier: ${h(data.selectedWard.id.replace("ward-", ""))}. ${h(data.boundaryDescription)}. ${references([data.selectedWard.sourceId, "iec-kopanong-2026"])}</p><p>${h(data.selectedWard.geometryNote ?? "")} No ward population or service values are inferred. The province overview remains a separately sourced reference figure; online street tiles are not embedded in this offline report.</p>` : ""}
   ${data.provincialMetric ? `<h2>${h(data.provincialMetric.name)} · ${h(data.provincialMetric.periodLabel)}</h2><p>${h(data.provincialMetric.definition)} ${references(data.provincialMetric.sourceIds)}</p><p>Denominator: ${h(data.provincialMetric.denominator)} ${h(data.provincialMetric.caveats.join(" "))}</p><table><thead><tr><th>Province</th><th>Value</th><th>Period</th></tr></thead><tbody>${data.provincialMetric.observations.map((o) => `<tr><td>${h(regions.find((r) => r.id === o.regionId)?.name ?? o.regionId)}</td><td>${h(formatMetric(o.value, data.provincialMetric!.precision))}</td><td>${h(data.provincialMetric!.periodLabel)}</td></tr>`).join("")}</tbody></table><p>Provincial observations only; no municipal estimates. ${h(data.provincialMetric.method)}</p>` : ""}
   ${["compare", "timeline", "data"].includes(data.mode) ? "" : `<h2>Knowledge connections</h2>${graphSvg(data)}`}

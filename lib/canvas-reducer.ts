@@ -15,6 +15,7 @@ import { legacyFlags } from "./canvas";
 import { traceNetwork } from "./network";
 import { municipalById } from "./geography";
 import { boundaryMunicipality, boundsCamera, wardById } from "./boundaries";
+import { countryProfile, domainRoot, referenceArea } from "./country-profiles";
 export function entityExpansion(state: Exploration, id: string) {
   const expanded = new Set(state.expanded),
     pending = [id],
@@ -31,6 +32,16 @@ export function entityExpansion(state: Exploration, id: string) {
   return [...expanded];
 }
 export function focusCamera(state: Exploration, id: string | null) {
+  const area = referenceArea(id);
+  if (area)
+    return area.bounds[2] - area.bounds[0] > 180
+      ? {
+          center: state.country.center,
+          zoom: state.country.zoom,
+          bearing: 0,
+          pitch: 0,
+        }
+      : boundsCamera(area.bounds);
   const municipality = boundaryMunicipality(id, state.boundaryEdition);
   if (municipality) {
     const bounds = municipality.bounds,
@@ -115,9 +126,7 @@ export function reduceCanvas(state: Exploration, input: unknown): Exploration {
           country,
           mode:
             next.layout === "split"
-              ? country.code === "ZA"
-                ? "relationships"
-                : "compare"
+              ? countryProfile(country.code).defaultSplitMode
               : "geographic",
           region: null,
           selectedWardId: null,
@@ -127,8 +136,10 @@ export function reduceCanvas(state: Exploration, input: unknown): Exploration {
           selectionIds: [],
           isolatedEntityIds: [],
           highlightedRelationshipIds: [],
-          expanded:
-            country.code === "ZA" ? [...initialExploration.expanded] : [],
+          domain: "government",
+          expanded: [...countryProfile(country.code).defaultExpanded],
+          comparisonCountries:
+            country.code === "ZA" ? ["ZA", "BW"] : [country.code, "ZA"],
           timelineEntity: null,
           timelineYear: null,
           filters: { query: "", entityType: "", relationshipType: "" },
@@ -154,7 +165,9 @@ export function reduceCanvas(state: Exploration, input: unknown): Exploration {
         next.expanded = [
           ...new Set([
             ...next.expanded,
-            domains.find((d) => d.id === next.domain)!.root,
+            ...(domainRoot(next.country.code, next.domain)
+              ? [domainRoot(next.country.code, next.domain)!]
+              : []),
           ]),
         ];
         break;
@@ -226,7 +239,7 @@ export function reduceCanvas(state: Exploration, input: unknown): Exploration {
       case "SET_LAYOUT":
         next.layout = a.payload.layout;
         if (next.layout === "split" && next.mode === "geographic")
-          next.mode = next.country.code === "ZA" ? "relationships" : "compare";
+          next.mode = countryProfile(next.country.code).defaultSplitMode;
         break;
       case "SET_INFORMATION_DENSITY":
         next.density = a.payload.density;

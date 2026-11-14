@@ -12,6 +12,7 @@ import {
   indicators,
   regions,
 } from "./knowledge";
+import { countryProfile, countryCoverage } from "./country-profiles";
 export function localGuide(request: z.infer<typeof chatRequestSchema>) {
   const { message, context } = request,
     q = message.toLowerCase();
@@ -28,7 +29,7 @@ export function localGuide(request: z.infer<typeof chatRequestSchema>) {
   if (/compar/.test(q)) {
     return {
       message:
-        "The Compare view contains historical World Bank population and GDP growth series for South Africa, Botswana and Namibia (2014–2024). Use the country, indicator and year selectors to compare matching observations, or choose Historical trends. Other countries do not yet have comparison series.",
+        "The Compare view contains historical World Bank population and GDP growth series for the countries and economies with published observations (2014–2024). Use the country, indicator and year selectors to compare matching observations. Missing values are not estimated.",
       actions: validateActions(
         [{ type: "SET_VISUALIZATION_MODE", payload: { mode: "compare" } }],
         context.country,
@@ -46,21 +47,33 @@ export function localGuide(request: z.infer<typeof chatRequestSchema>) {
         message:
           "Showing " +
           country.name +
-          " on the map. Detailed institutional knowledge coverage has not yet been added. Historical comparison series are available for Botswana and Namibia in Compare.",
+          " on the map. " +
+          countryCoverage(country.code) +
+          ". Open Country structure and coverage for local schemes, boundary dates and source limitations.",
         actions: validateActions(actions, context.country),
-        sourceIds: [],
+        sourceIds: countryProfile(country.code).sourceIds,
       };
   }
   const active = country?.code ?? context.country;
-  if (active !== "ZA")
+  if (active !== "ZA") {
+    const profile = countryProfile(active),
+      results = searchKnowledge(message, active);
+    if (results.length)
+      actions.push({
+        type: "OPEN_ENTITY",
+        payload: { entityId: results[0].id },
+      });
     return {
-      message:
-        "The map covers " +
-        context.countryName +
-        ", but detailed knowledge is currently available only for South Africa. Ask “Explore South Africa” to begin there.",
-      actions: [],
-      sourceIds: [],
+      message: results.length
+        ? results[0].name + ": " + results[0].description
+        : profile.summary +
+          " Coverage: " +
+          countryCoverage(active) +
+          ". Country structure and coverage lists the verified schemes and source dates.",
+      actions: validateActions(actions, context.country),
+      sourceIds: results[0]?.sourceIds ?? profile.sourceIds,
     };
+  }
   if (/electric|power station|household|homes/.test(q)) {
     ids = [
       "za-electricity",

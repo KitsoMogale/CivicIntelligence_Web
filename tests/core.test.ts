@@ -103,7 +103,7 @@ test("the local guide opens the sourced historical comparison view", () => {
         action.payload.mode === "compare",
     ),
   );
-  assert.ok(reply.sourceIds.some((id) => id.startsWith("wdi-")));
+  assert.ok(reply.sourceIds.some((id) => id.startsWith("world-wdi-")));
 });
 test("oversized chat and missing context fail validation", () => {
   assert.equal(
@@ -116,14 +116,19 @@ test("oversized chat and missing context fail validation", () => {
   );
   assert.equal(chatRequestSchema.safeParse({ message: "hi" }).success, false);
 });
-test("foreign countries have no seeded detailed coverage", () => {
+test("foreign country guidance uses its own reviewed profile and keeps unsupported details absent", () => {
   const reply = localGuide({
     message: "show government",
     context: { ...context, country: "BW", countryName: "Botswana" },
     history: [],
   });
-  assert.deepEqual(reply.actions, []);
-  assert.match(reply.message, /only for South Africa/);
+  assert.ok(reply.sourceIds.length > 0);
+  assert.ok(
+    reply.actions.every(
+      (a) => a.type !== "OPEN_ENTITY" || a.payload.entityId.startsWith("bw-"),
+    ),
+  );
+  assert.doesNotMatch(reply.message, /only for South Africa/);
 });
 
 test("the guide can navigate to a world-map country without inventing knowledge", () => {
@@ -133,6 +138,6 @@ test("the guide can navigate to a world-map country without inventing knowledge"
       (a) => a.type === "SELECT_COUNTRY" && a.payload.countryCode === "FR",
     ),
   );
-  assert.deepEqual(reply.sourceIds, []);
+  assert.ok(reply.sourceIds.length > 0);
   assert.match(reply.message, /coverage/);
 });

@@ -9,10 +9,15 @@ test("country exports never include another country's knowledge", () => {
     mode: "geographic",
     selectedEntity: null,
   });
-  assert.deepEqual(snapshot.entities, []);
-  assert.deepEqual(snapshot.relationships, []);
+  assert.ok(snapshot.entities.length > 0);
+  assert.ok(snapshot.entities.every((e) => e.country === "BW"));
+  const ids = new Set(snapshot.entities.map((e) => e.id));
+  assert.ok(
+    snapshot.relationships.every((r) => ids.has(r.source) && ids.has(r.target)),
+  );
   assert.deepEqual(snapshot.datasets, []);
-  assert.deepEqual(snapshot.sources, []);
+  assert.ok(snapshot.sources.length > 0);
+  assert.equal(snapshot.mapAttribution.provinceBoundaries, null);
 });
 test("exports include every referenced entity and the historical chart data", () => {
   const snapshot = knowledgeSnapshot({

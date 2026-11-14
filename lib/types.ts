@@ -51,6 +51,10 @@ export interface Country {
   continent: string;
   center: [number, number];
   zoom: number;
+  iso3?: string;
+  status?: string;
+  sovereignty?: string;
+  providerId?: string;
 }
 export interface Dataset {
   id: string;

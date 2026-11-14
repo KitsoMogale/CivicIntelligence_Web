@@ -6,7 +6,11 @@ ROOT = Path(__file__).resolve().parents[1]
 def read_data(name):
     return json.loads((ROOT / "data" / name).read_text(encoding="utf-8-sig"))
 SEED = read_data("knowledge.json")
-REGIONS = read_data("regions.json")
+WORLD = read_data("world-catalog.json")
+SEED = {key: [*value, *WORLD.get(key, [])] for key, value in SEED.items()}
+REGIONS = [*read_data("regions.json"), *read_data("world-regions.json")]
+COUNTRIES = read_data("countries.json")
+COUNTRY_PROFILES = read_data("country-profiles.json")
 INDICATORS = read_data("indicators.json")
 EVENTS = read_data("events.json")
 MUNICIPALITIES = read_data("municipal-geography.json")

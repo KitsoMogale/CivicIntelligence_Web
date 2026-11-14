@@ -16,11 +16,21 @@ const option = (name: string) => {
   return index < 0 ? null : args[index + 1];
 };
 const proposal = option("--proposal") ?? option("--apply");
-const bundle = await read(proposal ?? "data/knowledge.json");
+const baseBundle = await read(proposal ?? "data/knowledge.json");
+const worldBundle = await read("data/world-catalog.json");
+const bundle = Object.fromEntries(
+  Object.entries(baseBundle).map(([key, rows]) => [
+    key,
+    [...(rows as unknown[]), ...(worldBundle[key] ?? [])],
+  ]),
+);
 const result = inspectBundle(bundle);
 const errors = result.issues.filter((issue) => issue.severity === "error");
 const warnings = result.issues.filter((issue) => issue.severity === "warning");
-const regions = await read("data/regions.json");
+const regions = [
+  ...(await read("data/regions.json")),
+  ...(await read("data/world-regions.json")),
+];
 const countries = await read("data/countries.json");
 const regionIds = new Set(regions.map((r: { id: string }) => r.id));
 const countryIds = new Set(countries.map((c: { code: string }) => c.code));
@@ -234,6 +244,73 @@ for (const feature of boundaries.features) {
   if (!regionIds.has(feature.properties.id))
     fail("province-boundaries", "Unknown geometry region");
 }
+const profiles = await read("data/country-profiles.json"),
+  worldAssets = await read("data/world-assets.json");
+const profilesByCode = new Map(
+  profiles.map((p: { code: string }) => [p.code, p]),
+);
+if (
+  profiles.length !== countries.length ||
+  profilesByCode.size !== countries.length
+)
+  fail("world", "Country profiles do not match registry");
+const seenAreas = new Set<string>();
+for (const asset of worldAssets) {
+  if (!/^(countries\.geojson|world\/[A-Z]{2}\.geojson)$/.test(asset.file)) {
+    fail(asset.file, "Unsafe world asset path");
+    continue;
+  }
+  const bytes = await fs.readFile(path.join(root, "public/data", asset.file));
+  if (
+    bytes.length !== asset.bytes ||
+    createHash("sha256").update(bytes).digest("hex") !== asset.sha256
+  )
+    fail(asset.file, "World asset digest mismatch");
+  const geo = JSON.parse(bytes.toString());
+  if (geo.features.length !== asset.features || !refs.has(asset.sourceId))
+    fail(asset.file, "World asset count/source mismatch");
+  for (const f of geo.features) {
+    if (!["Polygon", "MultiPolygon"].includes(f.geometry?.type))
+      fail(asset.file, "Expected world polygon");
+    if (asset.country) {
+      const id = f.properties.entityId;
+      if (
+        !entityIds.has(id) ||
+        !regionIds.has(id) ||
+        seenAreas.has(id) ||
+        f.properties.countryCode !== asset.country
+      )
+        fail(asset.file, "Invalid world area identity");
+      seenAreas.add(id);
+    }
+  }
+}
+for (const profile of profiles) {
+  if (
+    !countryIds.has(profile.code) ||
+    !entityIds.has(profile.root) ||
+    !profile.sourceIds.every((id: string) => refs.has(id))
+  )
+    fail(profile.code, "Invalid country profile join");
+  const areaCount = regions.filter(
+    (r: { country: string }) => r.country === profile.code,
+  ).length;
+  if (profile.code !== "ZA" && areaCount !== profile.boundary.count)
+    fail(profile.code, "Profile boundary count differs");
+}
+if (seenAreas.size !== regions.length - 9)
+  fail("world", "Reference area geometry incomplete");
+const downloads = await read("data/provenance/world-downloads.json");
+for (const item of downloads.snapshots) {
+  const bytes = await fs.readFile(
+    path.join(root, "data/provenance/world-inputs", item.file),
+  );
+  if (
+    bytes.length !== item.bytes ||
+    createHash("sha256").update(bytes).digest("hex") !== item.sha256
+  )
+    fail(item.file, "World snapshot digest mismatch");
+}
 for (const issue of [...errors, ...warnings])
   console.log(
     issue.severity.toUpperCase() + " " + issue.record + ": " + issue.message,
@@ -267,7 +344,7 @@ if (args.includes("--apply")) {
   const target = path.join(root, "data/knowledge.json");
   await fs.writeFile(
     target + ".pending",
-    JSON.stringify(result.bundle, null, 2) + "\n",
+    JSON.stringify(inspectBundle(baseBundle).bundle, null, 2) + "\n",
   );
   await fs.rename(target + ".pending", target);
   console.log(
@@ -289,6 +366,18 @@ if (args.includes("--apply")) {
     "municipal-geography-2026.json",
     "ward-index.json",
     "provenance/mdb-geometry-repairs.json",
+    "countries.json",
+    "world-catalog.json",
+    "world-regions.json",
+    "country-profiles.json",
+    "curated-country-profiles.json",
+    "world-source-audit.json",
+    "world-assets.json",
+    "provenance/world-source-metadata.json",
+    "provenance/world-downloads.json",
+    ...downloads.snapshots.map(
+      (s: { file: string }) => "provenance/world-inputs/" + s.file,
+    ),
   ].sort();
   for (const name of files) {
     digest.update(name);
@@ -300,7 +389,7 @@ if (args.includes("--apply")) {
   const release = {
     version: "0.2.0",
     revision,
-    reviewedAt: "2026-11-13",
+    reviewedAt: "2026-11-14",
     counts: {
       ...result.counts,
       regions: regions.length,

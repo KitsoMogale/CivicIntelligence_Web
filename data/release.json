@@ -1,13 +1,13 @@
 {
   "version": "0.2.0",
-  "revision": "8bf92dcc9685cfda6697fcd19a20e4962286e65f1fa8260f1b4732f59506603c",
-  "reviewedAt": "2026-11-13",
+  "revision": "4b766de0c799055ad0908cf3c6b543529a860c1e8146eac01ef64d0c7c46ec60",
+  "reviewedAt": "2026-11-14",
   "counts": {
-    "sources": 92,
-    "entities": 396,
-    "relationships": 399,
+    "sources": 301,
+    "entities": 4238,
+    "relationships": 4007,
     "datasets": 2,
-    "regions": 9,
+    "regions": 3391,
     "indicators": 2,
     "events": 7,
     "municipalities": 257,
@@ -18,6 +18,9 @@
   "files": [
     "boundary-assets.json",
     "boundary-release.json",
+    "countries.json",
+    "country-profiles.json",
+    "curated-country-profiles.json",
     "events.json",
     "geography-assets.json",
     "indicators.json",
@@ -25,8 +28,18 @@
     "municipal-geography-2026.json",
     "municipal-geography.json",
     "provenance/mdb-geometry-repairs.json",
+    "provenance/world-downloads.json",
+    "provenance/world-inputs/gb-metadata.json",
+    "provenance/world-inputs/namibia-humanitarian.json",
+    "provenance/world-inputs/wdi-gdp-growth.json",
+    "provenance/world-inputs/wdi-population.json",
+    "provenance/world-source-metadata.json",
     "provincial-indicators.json",
     "regions.json",
-    "ward-index.json"
+    "ward-index.json",
+    "world-assets.json",
+    "world-catalog.json",
+    "world-regions.json",
+    "world-source-audit.json"
   ]
 }

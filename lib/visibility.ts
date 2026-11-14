@@ -10,6 +10,7 @@ import {
 } from "./map-data";
 import { entityById } from "./knowledge";
 import { traceNetwork } from "./network";
+import { domainRoot, supportsCountryMode } from "./country-profiles";
 export function visibleEntityIds(context: {
   countryCode: string;
   domain: Domain;
@@ -20,7 +21,7 @@ export function visibleEntityIds(context: {
   canvas?: Exploration;
 }) {
   if (
-    context.countryCode !== "ZA" ||
+    !supportsCountryMode(context.countryCode, context.mode) ||
     ["data", "compare", "timeline"].includes(context.mode)
   )
     return [];
@@ -32,7 +33,8 @@ export function visibleEntityIds(context: {
           context.markerLayer,
           context.provinceLayer,
         ).map((place) => place.entity.id);
-  const root = domains.find((d) => d.id === context.domain)!.root;
+  const root = domainRoot(context.countryCode, context.domain);
+  if (!root) return [];
   if (context.mode === "relationships" && context.canvas?.networkTrace) {
     const s = context.canvas;
     return traceNetwork(

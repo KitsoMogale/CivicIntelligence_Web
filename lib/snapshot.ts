@@ -15,6 +15,7 @@ import { metricById } from "./statistics";
 import { traceNetwork } from "./network";
 import { wardById, boundaryTitle } from "./boundaries";
 import boundaryRelease from "@/data/boundary-release.json";
+import { countryProfile, domainRoot } from "./country-profiles";
 export function knowledgeSnapshot(
   context: Pick<Exploration, "country" | "domain" | "mode" | "selectedEntity"> &
     Partial<Exploration>,
@@ -35,13 +36,12 @@ export function knowledgeSnapshot(
   const ids = new Set(
     trace
       ? trace.nodeIds
-      : context.country.code === "ZA" &&
-          !["compare", "timeline", "data"].includes(context.mode)
+      : !["compare", "timeline", "data"].includes(context.mode)
         ? context.mode === "geographic"
           ? entities
               .filter((e) => e.country === context.country.code)
               .map((e) => e.id)
-          : descendants(domains.find((d) => d.id === context.domain)!.root)
+          : descendants(domainRoot(context.country.code, context.domain) ?? "")
         : [],
   );
   const records = entities.filter(
@@ -84,6 +84,9 @@ export function knowledgeSnapshot(
         ) ?? null)
       : null;
   const references = [
+    "world-natural-earth-countries",
+    countryProfile(context.country.code).boundary.sourceId,
+    ...countryProfile(context.country.code).sourceIds,
     ...(context.basemap === "streets" ? ["openstreetmap"] : []),
     ...(context.country.code === "ZA" &&
     context.boundaryEdition === "mdb-2026" &&
@@ -120,7 +123,13 @@ export function knowledgeSnapshot(
       context.selectedEntity && ids.has(context.selectedEntity)
         ? entityById(context.selectedEntity)
         : null,
-    coverage: records.length ? "curated-seed" : "map-only",
+    coverage:
+      countryProfile(context.country.code).institutions === "not-curated"
+        ? "reference-geography"
+        : records.length
+          ? "curated-seed"
+          : "map-only",
+    countryProfile: countryProfile(context.country.code),
     entities: records,
     relationships: links,
     datasets: series,
@@ -132,9 +141,11 @@ export function knowledgeSnapshot(
         ? (wardById(context.selectedWardId) ?? null)
         : null,
     boundaryEdition: context.boundaryEdition ?? "legacy-2020",
-    boundaryDescription: boundaryTitle(
-      context.boundaryEdition ?? "legacy-2020",
-    ),
+    boundaryDescription:
+      context.country.code !== "ZA"
+        ? "Reference areas · " +
+          countryProfile(context.country.code).boundary.year
+        : boundaryTitle(context.boundaryEdition ?? "legacy-2020"),
     sources: getSources(references),
     mapAttribution: {
       publisher: "Natural Earth",
@@ -150,14 +161,18 @@ export function knowledgeSnapshot(
               note: "Online street map; imagery is not embedded or downloaded by this report.",
             }
           : null,
-      provinceBoundaries: {
-        publisher:
-          "geoBoundaries; OCHA ROSEA / South African Municipal Demarcation Board",
-        url: "https://www.geoboundaries.org/api/current/gbOpen/ZAF/ADM1/",
-        license: "geoBoundaries CC BY 4.0; original OCHA/MDB CC BY 3.0 IGO",
-        vintage: "2020",
-        note: "Simplified province boundaries; source Northern Cape label corrected.",
-      },
+      provinceBoundaries:
+        context.country.code !== "ZA"
+          ? null
+          : {
+              publisher:
+                "geoBoundaries; OCHA ROSEA / South African Municipal Demarcation Board",
+              url: "https://www.geoboundaries.org/api/current/gbOpen/ZAF/ADM1/",
+              license:
+                "geoBoundaries CC BY 4.0; original OCHA/MDB CC BY 3.0 IGO",
+              vintage: "2020",
+              note: "Simplified province boundaries; source Northern Cape label corrected.",
+            },
     },
     exportedAt: new Date().toISOString(),
   };

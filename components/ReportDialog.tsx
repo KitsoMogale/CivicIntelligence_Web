@@ -9,6 +9,7 @@ import { getSources } from "@/lib/knowledge";
 import { visibleEntityIds } from "@/lib/visibility";
 import { layerById } from "@/lib/canvas";
 import { metricById } from "@/lib/statistics";
+import { countryProfile } from "@/lib/country-profiles";
 export default function ReportDialog({ close }: { close: () => void }) {
   const s = useExplorer();
   const [geography, setGeography] = useState<FeatureCollection | null>(null),
@@ -21,7 +22,8 @@ export default function ReportDialog({ close }: { close: () => void }) {
     fetch(
       s.country.code === "ZA"
         ? "/data/za-provinces.geojson"
-        : "/data/countries.geojson",
+        : (countryProfile(s.country.code).boundary.file ??
+            "/data/countries.geojson"),
     )
       .then((r) => {
         if (!r.ok) throw new Error();
@@ -35,7 +37,9 @@ export default function ReportDialog({ close }: { close: () => void }) {
             : {
                 ...geo,
                 features: geo.features.filter(
-                  (f) => f.properties?.code === s.country.code,
+                  (f) =>
+                    f.properties?.countryCode === s.country.code ||
+                    f.properties?.code === s.country.code,
                 ),
               },
         );
@@ -95,6 +99,9 @@ export default function ReportDialog({ close }: { close: () => void }) {
     const refs = new Set(
       [...records, ...links, ...full.datasets].flatMap((r) => r.sourceIds),
     );
+    refs.add("world-natural-earth-countries");
+    refs.add(countryProfile(s.country.code).boundary.sourceId);
+    countryProfile(s.country.code).sourceIds.forEach((id) => refs.add(id));
     if (
       (s.mode === "geographic" || s.layout !== "single") &&
       s.country.code === "ZA"

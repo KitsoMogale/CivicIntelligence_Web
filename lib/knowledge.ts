@@ -3,6 +3,8 @@ import seed from "@/data/knowledge.json";
 import regionData from "@/data/regions.json";
 import indicatorData from "@/data/indicators.json";
 import eventData from "@/data/events.json";
+import world from "@/data/world-catalog.json";
+import { countryAreas, domainRoot, countryProfile } from "./country-profiles";
 import type {
   Country,
   Dataset,
@@ -15,11 +17,17 @@ import type {
   TimelineEvent,
 } from "./types";
 
-export const entities = seed.entities as Entity[];
-export const relationships = seed.relationships as Relationship[];
-export const sources = seed.sources as Source[];
+export const entities = [...seed.entities, ...world.entities] as Entity[];
+export const relationships = [
+  ...seed.relationships,
+  ...world.relationships,
+] as Relationship[];
+export const sources = [...seed.sources, ...world.sources] as Source[];
 export const datasets = seed.datasets as Dataset[];
 export const regions = regionData as Region[];
+export function countryRegions(code: string): Region[] {
+  return code === "ZA" ? regions : countryAreas(code);
+}
 export const indicators = indicatorData.indicators as Indicator[];
 export const indicatorSnapshot = indicatorData.retrievedAt;
 export const timelineEvents = eventData as TimelineEvent[];
@@ -125,13 +133,32 @@ const preferredCountries: Country[] = [
   },
 ];
 export const countries: Country[] = [
-  ...preferredCountries,
+  ...preferredCountries.map((p) => ({
+    ...countrySummaries.find((c) => c.code === p.code),
+    ...p,
+  })),
   ...(countrySummaries as Country[]).filter(
     (c) => !preferredCountries.some((p) => p.code === c.code),
   ),
 ];
+const entityIndex = new Map(entities.map((e) => [e.id, e]));
 export function entityById(id: string) {
-  return entities.find((e) => e.id === id);
+  return entityIndex.get(id);
+}
+export function countryDomain(code: string, id: Domain) {
+  const d = domains.find((d) => d.id === id)!;
+  const p = countryProfile(code);
+  return {
+    ...d,
+    root: domainRoot(code, id) ?? "",
+    ...(id === "government" && p.institutions === "not-curated"
+      ? {
+          name: "Administrative reference",
+          short: "Reference geography",
+          caption: "Publisher reference areas · current institutions pending",
+        }
+      : {}),
+  };
 }
 export function searchKnowledge(query: string, country = "ZA") {
   const words = query

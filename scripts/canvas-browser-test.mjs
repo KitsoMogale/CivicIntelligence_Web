@@ -67,7 +67,7 @@ try {
   assert.equal(
     await page
       .locator(
-        '.map-entity[data-layer-id="cities"]:not(.map-cluster) .map-marker-label',
+        ".map-entity .map-marker-label,.map-entity[title],.map-entity.show-label",
       )
       .count(),
     0,
@@ -233,7 +233,9 @@ try {
     .selectOption("detailed");
   await page.getByLabel("Mining operations", { exact: true }).uncheck();
   await closeLayers(page);
-  const station = page.getByTitle(/Kusile Power Station/i).first();
+  const station = page.locator(
+    '.map-entity[data-entity-ids~="za-kusile-power-station"],.map-entity[data-entity-ids*="za-kusile-power-station"]',
+  );
   await station.click();
   if (await page.locator(".map-cluster-list").count())
     await page

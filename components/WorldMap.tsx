@@ -23,6 +23,8 @@ import {
 import LayerControls from "./LayerControls";
 import MapDetails, { type StreetStatus } from "./MapDetails";
 import MapOverlay from "./MapOverlay";
+import CountryAreas from "./CountryAreas";
+import { referenceArea } from "@/lib/country-profiles";
 import {
   boundaryTitle,
   municipalityRecords,
@@ -92,6 +94,7 @@ export default function WorldMap() {
     markers = useRef<maplibregl.Marker[]>([]);
   const s = useExplorer();
   const [streetStatus, setStreetStatus] = useState<StreetStatus>("off");
+  const [areasReady, setAreasReady] = useState(false);
   const municipalLevelLoaded = useRef("");
   const [municipalReady, setMunicipalReady] = useState(false),
     [municipalError, setMunicipalError] = useState(false);
@@ -160,7 +163,7 @@ export default function WorldMap() {
         new maplibregl.AttributionControl({
           compact: true,
           customAttribution:
-            'Countries/cities: <a href="https://www.naturalearthdata.com/about/terms-of-use/" target="_blank" rel="noreferrer">Natural Earth (public domain)</a> · Reference geography (2020): <a href="https://www.geoboundaries.org/" target="_blank" rel="noreferrer">geoBoundaries (CC BY 4.0)</a>; OCHA ROSEA / MDB (<a href="https://creativecommons.org/licenses/by/3.0/igo/" target="_blank" rel="noreferrer">CC BY 3.0 IGO</a>), 2020 · simplified · 2026 municipality/ward geometry: <a href="https://spatialhub-mdb-sa.opendata.arcgis.com/" target="_blank" rel="noreferrer">Municipal Demarcation Board</a> (publisher terms)',
+            'Countries/cities: <a href="https://www.naturalearthdata.com/about/terms-of-use/" target="_blank" rel="noreferrer">Natural Earth (public domain)</a>',
         }),
       );
       m.on("moveend", () => {
@@ -292,6 +295,7 @@ export default function WorldMap() {
               "ward-fill",
               "municipal-fill",
               "province-fill",
+              "country-area-fill",
               "statistics-fill",
               "connection-lines",
             ].filter((id) => !!m!.getLayer(id));
@@ -346,7 +350,13 @@ export default function WorldMap() {
     provinceGeography
       .then((data) => {
         if (cancelled) return;
-        m.addSource("za-provinces", { type: "geojson", data, promoteId: "id" });
+        m.addSource("za-provinces", {
+          type: "geojson",
+          data,
+          promoteId: "id",
+          attribution:
+            'South Africa reference provinces (2020): <a href="https://www.geoboundaries.org/" target="_blank" rel="noreferrer">geoBoundaries (CC BY 4.0)</a>; OCHA ROSEA / MDB (<a href="https://creativecommons.org/licenses/by/3.0/igo/" target="_blank" rel="noreferrer">CC BY 3.0 IGO</a>)',
+        });
         m.addLayer({
           id: "province-fill",
           type: "fill",
@@ -506,6 +516,8 @@ export default function WorldMap() {
             type: "geojson",
             data,
             promoteId: "entityId",
+            attribution:
+              '<a href="https://spatialhub-mdb-sa.opendata.arcgis.com/" target="_blank" rel="noreferrer">Municipal Demarcation Board</a> (2026 publisher terms); historical 2020: geoBoundaries / OCHA ROSEA / MDB (CC BY 3.0 IGO)',
           });
           m.addLayer({
             id: "municipal-fill",
@@ -596,7 +608,12 @@ export default function WorldMap() {
       geographic = s.country.code === "ZA";
     const groups: Record<string, string[]> = {
       countries: ["land", "borders"],
-      provinces: ["province-fill", "province-borders"],
+      provinces: [
+        "province-fill",
+        "province-borders",
+        "country-area-fill",
+        "country-area-lines",
+      ],
       municipalities: [
         "municipal-fill",
         "municipal-borders",
@@ -609,7 +626,12 @@ export default function WorldMap() {
       institutions: ["points-institutions"],
       mining: ["points-mining"],
       infrastructure: ["points-infrastructure"],
-      evidence: ["selection", "hover", "province-selection"],
+      evidence: [
+        "selection",
+        "hover",
+        "province-selection",
+        "country-area-selection",
+      ],
     };
     for (const layer of [...s.layers].sort((a, b) => a.zIndex - b.zIndex)) {
       for (const id of groups[layer.id] ?? []) {
@@ -619,7 +641,18 @@ export default function WorldMap() {
           "visibility",
           layer.visible &&
             (layer.id !== "municipalities" || municipalReady) &&
-            (layer.id === "countries" || layer.id === "evidence" || geographic)
+            (!id.startsWith("province-") || geographic) &&
+            (layer.id === "countries" ||
+              layer.id === "evidence" ||
+              (layer.id === "provinces" && areasReady) ||
+              [
+                "cities",
+                "institutions",
+                "mining",
+                "infrastructure",
+                "connections",
+              ].includes(layer.id) ||
+              geographic)
             ? "visible"
             : "none",
         );
@@ -639,6 +672,8 @@ export default function WorldMap() {
             "municipal-selection",
             "ward-borders",
             "ward-selection",
+            "country-area-lines",
+            "country-area-selection",
           ].includes(id)
         )
           m.setPaintProperty(id, "line-opacity", layer.opacity);
@@ -649,6 +684,25 @@ export default function WorldMap() {
             layer.opacity * (streetStatus === "ready" ? 0.025 : 0.96),
           );
       }
+    }
+    if (areasReady && m.getLayer("country-area-selection")) {
+      m.setFilter("country-area-selection", [
+        "==",
+        "entityId",
+        referenceArea(s.region)?.entityId ?? "",
+      ]);
+      m.setLayoutProperty(
+        "country-area-selection",
+        "visibility",
+        provinces.visible && layerById(s.layers, "evidence").visible
+          ? "visible"
+          : "none",
+      );
+      m.setPaintProperty(
+        "country-area-fill",
+        "fill-opacity",
+        provinces.opacity * 0.04,
+      );
     }
     if (provinceReady) {
       const province = regions.find(
@@ -753,6 +807,7 @@ export default function WorldMap() {
   }, [
     ready,
     provinceReady,
+    areasReady,
     municipalReady,
     s.layers,
     s.region,
@@ -812,12 +867,7 @@ export default function WorldMap() {
           geometry: { type: "Point", coordinates: coordinate },
         });
         button.className =
-          "map-entity" +
-          (records.length > 1
-            ? " map-cluster"
-            : m!.getZoom() > 6.2 || state.density === "detailed"
-              ? " show-label"
-              : "");
+          "map-entity" + (records.length > 1 ? " map-cluster" : "");
         if (
           layerById(state.layers, "evidence").visible &&
           records.some((e) => state.selectionIds.includes(e.id))
@@ -832,14 +882,6 @@ export default function WorldMap() {
           "--marker-color",
           layerRegistry[layer.id].style.color,
         );
-        button.title =
-          (regional ? "Province locator · " : "") +
-          records
-            .map(
-              (e) =>
-                e.name + (e.coordinateNote ? " · " + e.coordinateNote : ""),
-            )
-            .join(" · ");
         button.setAttribute(
           "aria-label",
           records.length === 1
@@ -848,16 +890,13 @@ export default function WorldMap() {
         );
         const dot = document.createElement("span");
         dot.className = "map-dot";
-        const label = document.createElement("span");
-        label.className = "map-marker-label";
-        label.textContent =
-          records.length > 1
-            ? String(records.length)
-            : records[0].name + (regional ? " · province locator" : "");
-        // Cities remain selectable points; their names are supplied by the
-        // street basemap rather than persistent cards covering nearby roads.
         button.append(dot);
-        if (records.length > 1 || layer.id !== "cities") button.append(label);
+        if (records.length > 1) {
+          const count = document.createElement("span");
+          count.className = "map-cluster-count";
+          count.textContent = String(records.length);
+          button.append(count);
+        }
         function open(id: string, add = false) {
           const current = useExplorer.getState();
           if (add)
@@ -980,6 +1019,7 @@ export default function WorldMap() {
         ready={ready}
         onStreetStatus={setStreetStatus}
       />
+      <CountryAreas map={map.current} ready={ready} onReady={setAreasReady} />
       <div
         ref={container}
         className="map-surface"

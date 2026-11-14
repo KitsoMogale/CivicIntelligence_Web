@@ -1,0 +1,38 @@
+{
+  "reviewedAt": "2026-11-14",
+  "excludedGbOpen": {
+    "NAM": "The nominal 2022/14 dataset contains 13 historical Namibian regions and an Angolan Cunene sliver (AO-CNN). Replaced with the separately audited NSA/HDX gbHumanitarian reference.",
+    "HUN": "Metadata declares 20 units but simplified geometry has 19 and omits Budapest. Use explicit Natural Earth reference fallback.",
+    "IRN": "Metadata declares 33 units; geometry has 32 including a duplicate Mazandaran label. Use explicit Natural Earth reference fallback.",
+    "TKM": "Metadata declares 6 units; simplified geometry has 5. Use explicit Natural Earth reference fallback.",
+    "XKX": "Metadata declares 48 units; simplified geometry has 7. The unresolved metadata mismatch is excluded from this batch."
+  },
+  "countOverrides": {
+    "IND": {
+      "geometryCount": 36,
+      "note": "Publisher metadata incorrectly declares one unit. The pinned geometry has 36 separately identified states/union territories. The original metadata is retained; no current legal boundary claim is made."
+    }
+  },
+  "namibia": {
+    "dataset": "gbHumanitarian/NAM/ADM1",
+    "count": 14,
+    "yearNote": "Publisher metadata says 2011 but includes Kavango East, Kavango West and Zambezi. This date inconsistency is unresolved; the geometry is a reference layer, not verified current demarcation.",
+    "aliases": { "Karas": "//Kharas" },
+    "verifiedNames": [
+      "Erongo",
+      "Hardap",
+      "Kavango East",
+      "Kavango West",
+      "Khomas",
+      "Kunene",
+      "Ohangwena",
+      "Omaheke",
+      "Omusati",
+      "Oshana",
+      "Oshikoto",
+      "Otjozondjupa",
+      "Zambezi",
+      "//Kharas"
+    ]
+  }
+}

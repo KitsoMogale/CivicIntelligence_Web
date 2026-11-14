@@ -1,4 +1,39 @@
 /* Investigation, geography and evidence tools. */
+.country-profile-modal {
+  width: min(680px, calc(100vw - 24px));
+  max-height: 85dvh;
+  overflow: auto;
+}
+.country-profile-modal h3 {
+  margin: 24px 0 8px;
+  font-size: 15px;
+}
+.country-profile-modal p,
+.country-profile-modal li {
+  font-size: 12px;
+  line-height: 1.7;
+}
+.country-profile-modal ul {
+  padding-left: 20px;
+}
+.country-profile-modal article {
+  padding: 12px 0;
+  border-top: 1px solid #355046;
+}
+.country-profile-modal a {
+  color: #c8ddba;
+  text-decoration: underline;
+  overflow-wrap: anywhere;
+}
+.country-coverage {
+  text-align: left;
+}
+.map-frame .map-cluster-count {
+  color: #d0ead0;
+  font-size: 10px;
+  font-weight: 600;
+  pointer-events: none;
+}
 .map-overlay-header {
   position: sticky;
   top: -15px;
@@ -1644,30 +1679,9 @@
   box-shadow: none;
   overflow: visible;
 }
-.map-frame .map-entity .map-marker-label {
-  position: absolute;
-  left: 23px;
-  top: 3px;
-  padding: 5px 7px;
-  background: #15272bea;
-  border: 1px solid #58715b;
-  border-radius: 4px;
-  white-space: nowrap;
-  font-size: 9px;
-  max-width: 180px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  pointer-events: none;
-  opacity: 0;
-}
 .map-frame .map-entity:hover,
 .map-frame .map-entity:focus-visible {
   z-index: 100 !important;
-}
-.map-frame .map-entity:hover .map-marker-label,
-.map-frame .map-entity:focus-visible .map-marker-label,
-.map-frame .map-entity.show-label .map-marker-label {
-  opacity: 1;
 }
 .map-frame .map-entity.map-cluster {
   width: 28px;
@@ -1680,17 +1694,6 @@
 .map-frame .map-entity.map-cluster .map-dot {
   display: none;
 }
-.map-frame .map-entity.map-cluster .map-marker-label {
-  position: static;
-  opacity: 1;
-  background: none;
-  border: 0;
-  padding: 0;
-  color: #d0ead0;
-  font-size: 10px;
-  font-weight: 600;
-  overflow: visible;
-}
 @media (max-width: 760px) {
   .map-frame .map-entity {
     width: 30px;
@@ -1699,9 +1702,6 @@
   .map-frame .map-entity.map-cluster {
     width: 32px;
     height: 32px;
-  }
-  .map-frame .map-entity .map-marker-label {
-    left: 29px;
   }
 }
 

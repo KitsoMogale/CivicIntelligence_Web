@@ -4,17 +4,22 @@ from datetime import datetime, timezone
 from sqlalchemy import func
 from sqlalchemy.orm import Session
 from backend.database import engine, Country, Region, KnowledgeDomain, Source, EntityRecord, Relationship, Dataset, IndicatorRecord, TimelineEventRecord, CatalogRevision
-from backend.catalog import ROOT, SEED, REGIONS, INDICATORS, EVENTS, PROVINCIAL_METRICS, MUNICIPALITIES, catalog_digest
+from backend.catalog import ROOT, SEED, REGIONS, INDICATORS, EVENTS, PROVINCIAL_METRICS, MUNICIPALITIES, COUNTRIES, catalog_digest
 def geometry(record):
     return func.ST_Multi(func.ST_SetSRID(func.ST_GeomFromGeoJSON(json.dumps(record)),4326))
 def main():
     with Session(engine()) as session:
         geography = ROOT / "public" / "data" / "countries.geojson"
         if geography.exists():
+            country_shapes = {}
             for feature in json.loads(geography.read_text(encoding="utf-8"))["features"]:
                 p = feature["properties"]
                 if len(p["code"])==2 and p["code"].isalpha():
-                    session.merge(Country(code=p["code"],name=p["name"],continent=p["continent"],boundary=geometry(feature["geometry"])))
+                    g = feature["geometry"]
+                    country_shapes.setdefault(p["code"], []).extend(g["coordinates"] if g["type"] == "MultiPolygon" else [g["coordinates"]])
+            for country in COUNTRIES:
+                if country["code"] in country_shapes:
+                    session.merge(Country(code=country["code"],name=country["name"],continent=country["continent"],boundary=geometry({"type":"MultiPolygon","coordinates":country_shapes[country["code"]]})))
         else:
             session.merge(Country(code="ZA",name="South Africa",continent="Africa"))
         for id,name in [("government","Government & politics"),("economy","Economy & finance"),("industry","Industries & businesses"),("infrastructure","Infrastructure & systems"),("law","Law & justice"),("society","People & society")]:
@@ -22,8 +27,17 @@ def main():
         session.flush()
         path = ROOT / "public" / "data" / "za-provinces.geojson"
         boundaries = {f["properties"]["id"]:f["geometry"] for f in json.loads(path.read_text(encoding="utf-8"))["features"]}
+        world_boundaries = {}
         for region in REGIONS:
-            session.merge(Region(id=region["id"],country=region["country"],name=region["name"],kind="province",geometry=geometry(boundaries[region["id"]])))
+            if region["country"] == "ZA":
+                shape = boundaries[region["id"]]
+            else:
+                country_code = region["country"]
+                if country_code not in world_boundaries:
+                    geo = json.loads((ROOT / "public/data/world" / (country_code + ".geojson")).read_text(encoding="utf-8"))
+                    world_boundaries[country_code] = {f["properties"]["entityId"]: f["geometry"] for f in geo["features"]}
+                shape = world_boundaries[country_code][region["entityId"]]
+            session.merge(Region(id=region["id"],country=region["country"],name=region["name"],kind="province" if region["country"] == "ZA" else "reference-area",geometry=geometry(shape)))
         session.flush()
         for record in SEED["sources"]:
             session.merge(Source(id=record["id"],record=record))

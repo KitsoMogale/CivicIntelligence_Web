@@ -11,8 +11,23 @@ def test_seed_validity():
         assert link["source"] in ids and link["target"] in ids
         assert set(link["sourceIds"]) <= source_ids
 def test_country_coverage():
-    assert client.get("/entities?country=BW").json() == []
+    records = client.get("/entities?country=BW").json()
+    assert len(records) > 10
+    assert all(e["country"] == "BW" for e in records)
     assert client.get("/datasets?country=BW").json() == []
+
+def test_world_profiles_and_reference_geometry():
+    assert len(client.get("/countries").json()) == 237
+    profile = client.get("/countries/NA/profile").json()["profile"]
+    assert profile["boundary"]["count"] == 14
+    assert "2011" in profile["boundary"]["note"]
+    areas = client.get("/regions?country=NA").json()
+    assert {a["name"] for a in areas} >= {"Kavango East", "Kavango West", "Zambezi", "//Kharas"}
+    region = next(a for a in areas if a["name"] == "Kavango East")
+    feature = client.get("/regions/"+region["entityId"]+"/boundary")
+    assert feature.status_code == 200
+    assert feature.json()["properties"]["countryCode"] == "NA"
+    assert client.get("/countries/ZZ/profile").status_code == 404
 def test_search_and_relationships():
     response = client.get("/search?q=transmission")
     assert response.status_code == 200
@@ -54,7 +69,7 @@ def test_directory_and_source_linked_details():
 
 def test_regions_and_provincial_geometry():
     assert len(client.get("/regions").json()) == 9
-    assert client.get("/regions?country=BW").json() == []
+    assert len(client.get("/regions?country=BW").json()) == 10
     feature = client.get("/regions/north-west/boundary")
     assert feature.status_code == 200
     assert feature.json()["geometry"]["type"] in ("Polygon", "MultiPolygon")
@@ -65,7 +80,7 @@ def test_indicators_have_same_years_and_missing_countries_are_empty():
     assert len(values) >= 2
     assert all(o["country"] == "BW" for indicator in values for o in indicator["observations"])
     assert all(len(indicator["observations"]) == 11 for indicator in values)
-    assert all(not indicator["observations"] for indicator in client.get("/indicators?country=FR").json())
+    assert all(len(indicator["observations"]) == 11 for indicator in client.get("/indicators?country=FR").json())
 
 def test_history_and_catalog_readiness():
     events = client.get("/events?through=2020&entity=za-belfast-mine").json()

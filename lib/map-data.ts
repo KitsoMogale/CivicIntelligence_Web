@@ -3,6 +3,7 @@ import type { Entity } from "./types";
 import type { Exploration } from "./exploration";
 import { municipalById } from "./geography";
 import { layerById, layerRegistry, type LayerId } from "./canvas";
+import { referenceArea } from "./country-profiles";
 export type MapPlace = {
   entity: Entity;
   coordinate: [number, number];
@@ -13,7 +14,7 @@ export function mapPlaces(
   markerLayer: Exploration["markerLayer"] = "all",
   provinceLayer = true,
 ): MapPlace[] {
-  if (country !== "ZA" || markerLayer === "none") return [];
+  if (markerLayer === "none") return [];
   return entities
     .filter((e) => e.country === country)
     .flatMap((entity) => {
@@ -29,7 +30,11 @@ export function mapPlaces(
           (city || mining || infrastructure || entity.type === "Province"))
       )
         return [];
-      if (provinceLayer && entity.type === "Province") return [];
+      if (
+        (provinceLayer && entity.type === "Province") ||
+        referenceArea(entity.id)
+      )
+        return [];
       const region = regions.find((r) => r.id === entity.region);
       const coordinate =
         entity.coordinates ??
@@ -67,6 +72,8 @@ export function matchesFilters(
   );
 }
 export function inRegion(entity: Entity, regionId: string | null) {
+  const area = referenceArea(regionId);
+  if (area) return entity.id === area.entityId || entity.region === area.id;
   const province = regions.find(
     (r) => r.entityId === regionId || r.id === municipalById(regionId)?.region,
   );

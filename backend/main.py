@@ -13,7 +13,18 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, ConfigDict, Field, field_validator
 from backend.catalog import SEED, REGIONS, INDICATORS, EVENTS, ROOT, MUNICIPALITIES, PROVINCIAL_METRICS, catalog_digest
 from backend.catalog import OFFICIAL_MUNICIPALITIES, WARDS, BOUNDARY_RELEASE
+from backend.catalog import COUNTRIES, COUNTRY_PROFILES
 app = FastAPI(title="Civic Intelligence Knowledge API", version="0.2.0")
+@app.get("/countries")
+def countries():
+    return COUNTRIES
+
+@app.get("/countries/{country_code}/profile")
+def country_profile(country_code: str):
+    profile = next((p for p in COUNTRY_PROFILES if p["code"] == country_code), None)
+    if profile is None:
+        raise HTTPException(404, "Country or area not found")
+    return {"profile": profile, "areas": [r for r in REGIONS if r["country"] == country_code]}
 app.add_middleware(CORSMiddleware, allow_origins=[os.getenv("APP_ORIGIN", "http://127.0.0.1:3000")], allow_methods=["GET", "POST"], allow_headers=["Content-Type"])
 logger = logging.getLogger("civic.api")
 logger.setLevel(logging.INFO)
@@ -149,6 +160,14 @@ def region_boundary(region_id: str, edition: Literal["legacy-2020","mdb-2026"]="
         if not geometry:
             raise HTTPException(404,"Region geometry is not available")
         return {"type":"Feature","geometry":json.loads(geometry),"properties":region}
+    if region.get("country", "ZA") != "ZA":
+        profile = next(p for p in COUNTRY_PROFILES if p["code"] == region["country"])
+        for file in profile["boundary"].get("files", [profile["boundary"]["file"]]):
+            data = json.loads((ROOT / "public" / file.lstrip("/")).read_text(encoding="utf-8"))
+            feature = next((f for f in data["features"] if f["properties"]["entityId"] == region_id), None)
+            if feature is not None:
+                return feature
+        raise HTTPException(404, "Reference geometry is unavailable")
     file="za-provinces.geojson" if region in REGIONS else "za-municipalities-adm"+("2" if region["category"]=="C" else "3")+".geojson"
     path = ROOT / "public" / "data" / file
     data = json.loads(path.read_text(encoding="utf-8"))

@@ -130,8 +130,8 @@ test("common-year comparison preserves nulls, zero and negative growth", () => {
   const observed = comparisonRows("NY.GDP.MKTP.KD.ZG", ["ZA", "BW"], 2024)!;
   assert.equal(observed.year, 2024);
   assert.ok(observed.rows.find((r) => r.country === "BW")!.value! < 0);
-  const missing = comparisonRows("SP.POP.TOTL", ["ZA", "FR"], 2024)!;
-  assert.equal(missing.rows.find((r) => r.country === "FR")!.value, null);
+  const missing = comparisonRows("SP.POP.TOTL", ["ZA", "VA"], 2024)!;
+  assert.equal(missing.rows.find((r) => r.country === "VA")!.value, null);
   assert.equal(comparisonRows("SP.POP.TOTL", ["ZA", "BW"])!.year, 2024);
 });
 test("investigations restore the full selected evidence and reject foreign or unknown records", () => {
