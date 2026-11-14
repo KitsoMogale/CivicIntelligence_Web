@@ -1,52 +1,53 @@
 # 9. Infrastructure
 
-Help users understand the physical and organizational systems that move people, goods, energy, water and information.
+Infrastructure means the systems that support daily life: transport, electricity, water, communication and other utilities.
 
-## Categories to learn
+## What users can learn
 
-- **Transport:** roads, rail, ports, airports and public transport where documented.
-- **Electricity and energy:** generation, transmission, distribution, fuels and institutions.
-- **Water and sanitation:** sources, treatment, storage, distribution and wastewater systems.
-- **Digital connectivity:** telecommunications, broadband, mobile networks and published coverage.
-- **Waste and other utilities:** collection, processing and documented facilities.
-- **Capacity and change:** sourced asset capacities, demand, investment, condition and project history.
+- **Transport:** roads, rail, ports, airports and public transport.
+- **Electricity and energy:** producing power, moving it and delivering it locally.
+- **Water and sanitation:** sources, treatment, storage, pipes and wastewater.
+- **Internet and phones:** networks and published connection coverage.
+- **Waste services:** collection, processing and facilities.
+- **Changes over time:** projects, condition, demand and published capacity figures.
 
-An asset, its owner, its operator, a regulator and a physical network are different records. Their relationships need explicit evidence.
+A facility, its owner, its operator and the body regulating it are different things. Their connections need sources.
 
-## Interactive learning
+## How users can explore
 
-| User activity                       | App accommodation                                                             |
-| ----------------------------------- | ----------------------------------------------------------------------------- |
-| Ask where infrastructure is located | Verified points/polygons or sourced network geometry with precision notes     |
-| Click an asset dot                  | On-demand record, evidence and documented connections                         |
-| Ask how a system works              | An explanatory system flow with sourced stages and quantities where available |
-| Trace a real connection             | A bounded network/route only where that connection is documented              |
-| Compare capacity or change          | Dated observations with consistent units and asset scope                      |
+| User wants to                | The app can show                        |
+| ---------------------------- | --------------------------------------- |
+| Locate a facility or network | Checked points, shapes or routes        |
+| Click a facility dot         | Details, sources and known connections  |
+| Understand a system          | A step-by-step diagram                  |
+| Compare capacity or change   | Figures with dates and consistent units |
 
-Street-map roads provide geographic detail. They do not by themselves supply a routing engine, live traffic, utility connections or service coverage.
+Roads on a street map do not by themselves provide route planning, traffic information or utility connections.
 
-## AI-orchestrated example
+## Example with AI
 
 **Question:** "How does electricity get from power stations to homes?"
 
-AI retrieves the reviewed electricity-system stages and relevant institutional/asset records. It can show a generation → transmission → distribution → user flow, with a map of documented asset locators alongside it.
+AI finds the checked steps and relevant organizations. It can show power generation → long-distance transmission → local distribution → use, with known facility locations on the map.
 
-If actual network geometry and connections are unavailable, the flow remains explanatory. The map must not draw plausible transmission routes or claim that a nearby station supplies a particular neighbourhood.
+If actual line routes are missing, keep the explanation as a process diagram. Do not draw guessed lines or claim that a nearby station supplies a particular neighbourhood.
 
-Clicking a station can lead to "Show the operator," "Inspect its documented ownership" or "Explain this stage of the system." Missing capacity or output data should remain unavailable.
+Clicking a station can lead to "Who runs it?" or "Who owns it?" Unknown capacity or output stays unavailable.
 
-## Evidence and integration
+## Information and app changes needed
 
-Use responsible network operators, asset registers, regulator publications, official project documents, licensed mapping data and dated technical disclosures. Distinguish planned, under-construction, operating and retired assets.
+Use network operators, official facility lists, regulators, project documents, licensed maps and dated technical reports. Distinguish planned, being built, operating and closed facilities.
 
-Retain coordinate purpose and precision: a project locator, property boundary and facility centre are not interchangeable. Nameplate capacity, available capacity and actual output also require different measures and periods.
+Keep location accuracy clear: a project marker, a property boundary and a facility centre are different. Maximum design capacity, currently available capacity and actual output are also different figures.
 
-Expand the catalogue with asset, operator, network-segment, node, service-area and observation records where needed. System-flow quantities need units and conservation assumptions if used. Simulations require an explicit model and separate implementation; AI should not imply predictive network analysis from a diagram.
+Add real network parts, service areas and dated measurements where available. Predictions or what-if tools need a separate stated model; a diagram alone cannot support them.
 
-**Current foundation:** online roads/street labels, a bounded set of sourced facility locators, selected infrastructure entities, documented graph connections and a simplified electricity flow. Complete physical utility networks, routing, outages, live capacity and national infrastructure inventories are proposed additions.
+## What already works
 
-## Learning outcome and completion check
+The app has online roads and street labels, some checked facility locations, infrastructure entries, saved connections and a simple electricity process diagram. Complete utility networks, route planning, outages and live capacity are still planned.
 
-The user can distinguish an asset from a system stage and an abstract dependency from a verified physical connection. Check locator precision, source dates, route evidence, units and preservation of the selected asset across map, graph and flow views.
+## How to check it
+
+Users should distinguish a real facility, a process step and a documented connection. Check location accuracy, dates, routes and units. Keep the same facility selected when moving between views.
 
 Continue to [economy](05-economy.md), [public services](08-public-services.md) or [geography](01-geography.md).

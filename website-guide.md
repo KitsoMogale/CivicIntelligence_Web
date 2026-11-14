@@ -1,49 +1,93 @@
-# Civic Intelligence — Interactive World Knowledge Canvas
+# Civic Intelligence — Website guide
 
-The original product brief is preserved in [docs/product-brief.md](docs/product-brief.md). This implementation replaces the old marketing website, whose guide is archived in [docs/website-guide.legacy.md](docs/website-guide.legacy.md).
+Civic Intelligence helps people learn about countries through maps, diagrams, charts and questions.
 
-The [country learning design](docs/country-learning/README.md) explains ten learning topics and how AI can orchestrate reviewed knowledge, interactive displays and user exploration. Its topic guides, orchestration model and integration roadmap distinguish current support from proposed learning features.
+The [original product brief](docs/product-brief.md) is kept for reference. The former marketing website's guide is [archived here](docs/website-guide.legacy.md).
 
-## Implemented workspace
+The [country learning guides](docs/country-learning/README.md) explain ten topics, how users can explore them and how AI can connect questions to checked facts and useful views. They say what already works and what still needs to be built.
 
-Next.js App Router, TypeScript, Tailwind, Zustand, MapLibre, React Flow, Cytoscape and ECharts provide a responsive knowledge workspace with seven views: Map, Hierarchy, Relationships, System flow, Data, Compare and History.
+## What users can do today
 
-The [canvas interaction implementation](docs/canvas-implementation.md) adds independent ordered layers, opacity/filter controls, native map symbols, semantic scope with separate density, shared camera and selection, an overlay layout, and reversible validated actions. Existing saved investigations migrate to the expanded state. Resizable split view is implemented; live AI orchestration remains deferred.
+The workspace has seven views:
 
-The catalogue includes 4,238 entities, 4,007 typed/navigation relationships and 301 sources. Country profiles cover 237 countries and areas, including 3,382 dated reference areas across 214 country files. South Africa retains nine provinces, 43 national-directory bodies, 257 municipalities, 4,485 revised MDB wards, curated industry and infrastructure examples, two Census datasets, six provincial measures and seven events.
+- **Map:** explore countries, areas and known locations.
+- **Hierarchy:** see how supported organizations are arranged.
+- **Relationships:** inspect documented connections.
+- **System flow:** follow a simple process, such as electricity supply.
+- **Data:** explore supported statistics.
+- **Compare:** compare published country figures.
+- **History:** explore the available dated events.
 
-Detailed institutional coverage focuses on South Africa, with initial sourced Botswana and Namibia profiles. Other countries show their geographic reference coverage and institution gaps. World Bank population and GDP-growth comparisons cover mapped economies where observations are published in 2014–2024. See [world coverage and source caveats](docs/world-coverage.md).
+Users can combine layers, change transparency, filter items and choose how much detail to show. The same selection and map position carry across views. Changes can be undone.
 
-Country structure and coverage opens on demand. Dated administrative areas can be selected and highlighted. Entity dots remain selectable, with permanent and hover name cards removed, including power stations. Cluster counts remain visible.
+Single, overlay and resizable split layouts are available. In split view, the map stays beside a graph or chart. The [map interaction guide](docs/canvas-implementation.md) explains the controls in more detail.
 
-## Geography and evidence
+## Information available
 
-The map bundles Natural Earth country boundaries, simplified geoBoundaries province geometry and source-linked markers. Layers include Census 2022 counts, Census 2011–2022 change, cities, institutions, mining province locators and station/project locators. Coordinate precision is documented; Duvha's exact point is withheld pending the source's verification request.
+The collection contains 4,238 saved items, 4,007 connections and 301 sources. Connections include links used for navigation, as well as documented real-world relationships.
 
-Government spheres are distinct, interdependent and interrelated; navigation groups are not a chain of command. Company interests preserve legal-entity level and reporting date. Electricity-flow arrows represent the four functional stages; asset catalogue links carry their own meanings. Historical events do not reconstruct the entire past graph.
+There are profiles for 237 countries and areas, with 3,382 dated smaller-area map shapes across 214 country files. South Africa has the most detail: nine provinces, 43 national-directory bodies, 257 municipalities, 4,485 wards, selected businesses and facilities, two Census collections, six provincial measures and seven events.
 
-Census counts are not current estimates or World Bank midyear estimates. Source values, missing observations and the 2011 national/provincial one-person discrepancy are preserved.
+Botswana and Namibia have initial government profiles. Many other countries have reference maps while their government information still needs to be added.
 
-## Investigations and review
+Historical World Bank population and GDP-growth comparisons cover 2014–2024 where figures were published. Read [world information and its limits](docs/world-coverage.md) for dates, sources and known problems.
 
-Saved investigations preserve full exploration state, notes and filters, with import/export and migration of old bookmarks. Visual reports contain diagrams or map figures, data tables, notes and source references and can be printed to PDF.
+Open Country structure and coverage to see what is available for the selected country. Select an area to highlight its boundary.
 
-The public directory separates former municipality codes. Source review records browser-local decisions and structurally validates proposed bundles. Repository imports are validated, backed up and versioned; there is no unauthenticated database write endpoint.
+## Maps, facts and sources
 
-## Architecture and hosting
+Natural Earth supplies country boundaries. Other boundary files and location entries keep their own sources, dates and accuracy notes.
 
-The Next frontend and same-origin Node routes are prepared for Netlify. The optional FastAPI service uses PostgreSQL, PostGIS, pgvector, SQLAlchemy and Alembic and needs a separate production host. It persists entities, relationships, sources, datasets, province geometry, indicator series, timeline events and catalogue revisions.
+Map layers include Census population, population change, cities, public bodies and selected mines and power facilities. Some locations identify only a province or project area. Duvha's exact location is withheld while the source's requested verification is pending.
 
-The default reviewed bundle works without a database or AI credentials. Streaming AI and embedding plumbing remain available for later credential configuration. No live-provider requests or deployments are part of this milestone.
+Keep different meanings clear:
 
-Choose **Layout → Split canvas** to keep the map beside the active graph/chart, then drag or keyboard-resize the divider. Its ratio is saved and supports undo. **Layers → Municipal boundaries** offers local/metro and district/metro levels for 257 unique records. The default is the MDB 2026 published edition; historical representative-2020 geometry remains separately selectable. Enable Ward boundaries, choose a local municipality/metro, and select a ward. Online OpenStreetMap supplies roads and street labels through zoom 19. Five sourced facility points retain publisher precision.
+- Government levels can work together without forming one command chain.
+- A company connection applies to the named companies and reporting date.
+- Electricity arrows can explain stages without showing real power-line routes.
+- Selected historical events do not recreate a complete picture of the past.
+- Census counts and World Bank population estimates are different measures.
 
-**Explore network** finds multi-step neighborhoods or a shortest documented path, with direction, type, reporting-date filters and evidence links. Directory connections are optional. Provincial statistics include unemployment, employment absorption, real GDP growth, adult education and medical-aid coverage. Legends and reports preserve periods, denominators and attribution. Netlify deployment and live AI credentials remain deferred.
+The source's 2011 provincial counts add up to one person more than its printed national total. The app keeps the published numbers and explains the difference.
 
-Ward files retain official identifiers and numbering gaps. The revised release reflects the stayed Kopanong split (nine wards). Source DATE fields are 4 November 2026; retrieval was 13 November. One publisher ring defect in Alfred Duma Ward 5 has a documented, area-preserving display repair and a downloadable original. Boundary editions do not change the dates or granularity of statistical observations.
+## Detailed map controls
+
+Choose **Layout → Split canvas** to keep the map beside another view. Drag the divider or use the keyboard to resize it. The layout is saved and can be undone.
+
+Use **Layers → Municipal boundaries** for South Africa's local/metro and district/metro areas. The default uses the published MDB 2026 boundaries. The older 2020 version remains available separately.
+
+For wards, turn on Ward boundaries, choose a local municipality or metro, then click a ward or use Focus ward. OpenStreetMap supplies online roads and street names through zoom 19.
+
+**Explore network** follows documented connections over several steps or finds a shortest saved path. Users can filter by arrow direction, connection type and reporting date. Navigation links are optional.
+
+Provincial figures include unemployment, the share of working-age people in work, real GDP growth, adult education and medical-aid coverage. Legends and reports show what was measured, when, for whom and by which source.
+
+Ward files keep official IDs and numbering gaps. The revised source keeps Kopanong at nine wards after the planned split was stayed. Source date fields say 4 November 2026; the files were collected on 13 November.
+
+One faulty boundary shape in Alfred Duma Ward 5 has a documented display repair that keeps the measured area unchanged. The original can still be downloaded. Choosing a boundary version does not change the dates or detail of the statistics.
+
+## Keeping the map clear
+
+The map opens without welcome, shared-selection or permanent entity name cards. City and facility dots remain selectable. Details and sources open in the closable Details sidebar.
+
+Ward controls, legends and error panels have an X to close and a small button to reopen. Closing them keeps the layers, selected item and map position. Escape can close a focused panel. An overlay's X returns to Map. Required map credits remain available.
+
+## Saved work and source review
+
+Saved investigations keep the view settings, selection, filters and notes. They can be exported and imported; older bookmarks are updated when loaded.
+
+Reports contain maps or diagrams, tables, notes and sources. They can be printed to PDF.
+
+The directory separates former municipality codes. Source review saves notes on the current device and checks the format of proposed updates. Applying information still goes through the project's review process, with backups and saved versions. The public review page does not write directly to the database.
+
+## Software and hosting
+
+The website uses Next.js, TypeScript, Tailwind, Zustand, MapLibre, React Flow, Cytoscape and ECharts.
+
+It works with bundled checked information, without a database or AI key. The optional Python service uses FastAPI and PostgreSQL, with PostGIS for map data and pgvector for searching by meaning. SQLAlchemy and Alembic manage its database access and changes.
+
+Netlify hosting is planned for the website. The optional Python service and database need a separate host. AI connection code is present, but live AI keys and full AI coordination remain planned for later. Nothing has been deployed.
 
 ## Run and maintain
 
-The map opens without welcome, shared-selection or city cards. City points remain selectable; source-linked entity details are available in the closable Details sidebar. Ward controls, statistical legends and map error panels have an X to close and a compact button to reopen. Closing these panels preserves map layers and selection; Escape also closes a focused panel. Canvas overlays have an X that returns to Map. Required map attribution remains visible.
-
-See [README.md](README.md) for local startup and checks, [data maintenance](docs/data-maintenance.md) for curation, [production setup](docs/production.md) for deployment/monitoring, and [local verification](docs/local-verification.md) for observed results.
+See [README.md](README.md) for startup commands and checks, [data maintenance](docs/data-maintenance.md) for checking and updating information, [production setup](docs/production.md) for hosting, and [local verification](docs/local-verification.md) for recorded checks.

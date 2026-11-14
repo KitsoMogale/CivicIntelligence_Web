@@ -1,52 +1,51 @@
 # 5. Economy
 
-Help users understand how a country produces goods and services, how people earn a living, and how businesses, institutions and markets connect.
+Help users learn how a country produces goods and services, how people earn a living and how businesses and money connect.
 
-## Categories to learn
+## What users can learn
 
-- **Economic scale and structure:** output, growth, sector composition and regional variation.
-- **Work and livelihoods:** employment, unemployment, occupations, wages and informal activity.
-- **Industries and businesses:** major sectors, documented companies, operations and ownership.
-- **Trade and production:** exports, imports, supply chains and important economic connections.
-- **Prices and household conditions:** inflation, living-cost measures, income and inequality.
-- **Public finance and money:** budgets, taxation, public debt, currency and monetary institutions.
+- **Size and growth:** the value produced by the economy and how it changes.
+- **Jobs:** employment, unemployment, occupations, pay and informal work.
+- **Industries:** major activities, businesses, operations and owners.
+- **Trade:** what is bought from and sold to other countries.
+- **Living costs:** prices, income and differences in living standards.
+- **Public money:** taxes, government spending, debt, currency and the central bank.
 
-GDP level, GDP growth and GDP per person are different measures. Business presence, ownership, operations and economic impact are different relationships.
+GDP measures the value of goods and services produced. GDP growth measures its change over time. GDP per person divides it by population. These are different figures.
 
-## Interactive learning
+## How users can explore
 
-| User activity                | App accommodation                                                          |
-| ---------------------------- | -------------------------------------------------------------------------- |
-| Ask what drives the economy  | Reviewed sector composition and trend charts with clear definitions        |
-| Explore an industry          | Map verified operations and show selected businesses and evidence          |
-| Ask who owns an operation    | A bounded ownership graph preserving legal entities, dates and percentages |
-| Compare countries or regions | Matching measures, periods and units, with an accessible table             |
-| Follow production or trade   | Sourced flows, clearly distinguished from verified transport routes        |
+| User wants to                  | The app can show                                         |
+| ------------------------------ | -------------------------------------------------------- |
+| See major industries           | Checked figures and charts over time                     |
+| Explore businesses             | Known locations, company details and sources             |
+| Ask who owns an operation      | A graph with named companies, dates and ownership shares |
+| Compare places or follow trade | Matching charts or sourced flows                         |
 
-Explain unfamiliar terms beside the relevant chart. Do not rank countries by an unexplained composite score or equate national output with everyone's living standard.
+Explain chart terms. National economic output does not tell us how well every household lives.
 
-## AI-orchestrated example
+## Example with AI
 
 **Question:** "How important is mining here, and which companies are involved?"
 
-AI resolves the country or selected region and checks separately for sector statistics, operation locations and company relationships. It can show a map plus a documented ownership graph and a sector chart if suitable observations exist.
+AI checks separately for industry figures, mine locations and company links. It can show a map, an ownership graph and a chart where the facts support them.
 
-If the catalogue contains only a few mining examples, explain that they are a curated sample. Do not call their count a complete national industry inventory or estimate the sector's economic contribution from it.
+If the app has only a few mining examples, call them examples. Do not use their number to claim the size of the whole industry or its contribution to the economy.
 
-Follow-ups can move to "Inspect this ownership disclosure," "Show the published employment measure" or "Explain the infrastructure used by this industry" where evidence supports them.
+## Information and app changes needed
 
-## Evidence and integration
+Use statistics offices, central banks, treasury reports, trade figures, company reports and research that explains its methods. Save the date, area, unit, currency, calculation method and meaning of each figure.
 
-Use national statistical releases, central-bank and treasury publications, customs/trade statistics, company filings and documented sector research. Retain observation definitions, units, currency basis, inflation treatment, denominators and dates.
+Keep ownership, operation and joint ventures separate. Keep the dates of company statements. An old chart does not establish the current final owner.
 
-Ownership edges should identify direct versus indirect interests, joint ventures and operating arrangements. Preserve disclosure dates. Do not infer a current ultimate owner from a historical diagram.
+Explain currency conversions and whether money figures allow for price changes. A past growth figure is not today's GDP or a forecast.
 
-Currency conversions and derived comparisons need explicit input series and methods. Nominal values, real values and purchasing-power measures must remain distinct. A historical growth series is not a live GDP level or a forecast.
+## What already works
 
-**Current foundation:** historical national GDP-growth/population comparisons, South African provincial GDP-growth and labour measures, and a bounded mining ownership catalogue. Sector composition, wages, prices, trade, budgets and other macroeconomic series need additional reviewed datasets and display/AI adapters.
+The app has historical country GDP-growth and population comparisons, selected South African provincial economy and jobs figures, and some mining ownership examples. Prices, pay, trade, budgets and full industry figures still need more checked data and features.
 
-## Learning outcome and completion check
+## How to check it
 
-The user can read an economic measure, distinguish its scope and period, and inspect a documented business relationship. Check common periods, units, negative/zero/null values, ownership direction and sample-coverage notes.
+Users should understand a figure's meaning, place and date, and be able to inspect a company connection. Check units, matching periods, ownership arrows and the difference between zero, negative and missing values.
 
-Continue to [infrastructure](09-infrastructure.md), [people](02-people.md) or [international relations](10-international-relations.md).
+Continue to [infrastructure](09-infrastructure.md), [people](02-people.md) or [country connections](10-international-relations.md).

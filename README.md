@@ -1,64 +1,70 @@
 # Civic Intelligence
 
-A local-first world knowledge workspace built with Next.js, MapLibre, React Flow, Cytoscape, ECharts and an optional FastAPI/PostgreSQL service. AI credentials are optional and remain deferred. Nothing has been deployed.
+An app for learning about countries through maps, diagrams, charts and questions. It can run locally using its checked information. AI keys and deployment are planned for later.
+
+The website uses Next.js, MapLibre, React Flow, Cytoscape and ECharts. A separate Python service and database are optional.
 
 ## Open locally on Windows
 
-Dependencies and a project-local Python environment have already been installed in this checkout.
+The required packages and a local Python environment have already been installed in this checkout.
 
 ```powershell
 npm.cmd run dev
 ```
 
-Open http://127.0.0.1:3000. Keep the terminal running. If the preview was already running before these changes, stop it with Ctrl+C and restart it.
+Open http://127.0.0.1:3000 and keep the terminal running. To restart the preview, stop it with Ctrl+C and run the command again.
 
-For a production preview, stop the development server, then:
+For a production preview, stop the development server, then run:
 
 ```powershell
 npm.cmd run build
 npm.cmd start
 ```
 
-A fresh checkout needs `npm.cmd ci` first. Use Node 22 or later. The default experience requires no API key, database, map-token. The default street basemap uses online OpenStreetMap tiles; reference geography works offline.
+A fresh checkout needs npm.cmd ci first. Use Node 22 or later. Basic use needs no AI key, database or map token. Online street detail comes from OpenStreetMap; bundled reference maps can work without internet access.
 
 ## What to explore
 
-- **Map:** roads and street names from OpenStreetMap, zoom through level 19, and MDB 2026 municipal/ward boundaries. Enable Ward boundaries, choose a province and local municipality/metro, then click a polygon or choose Focus ward. The revised release contains 4,485 wards and 257 municipality identities. Historical 2020 geometry remains a separate edition.
-- **Split canvas:** choose Layout → Split canvas to keep the map beside a graph or chart. Drag the divider or use its arrow keys; panels stack on mobile. Shared selection, camera, saved views and undo retain context.
-- **Networks:** Explore network supports one to six steps, shortest documented paths, direction and relationship-type controls. Directory connections are optional. The shared evidence-date filter excludes undated edges. Reverse traversal indicates connectivity, not reverse ownership.
-- **Provincial statistics:** Layers offers unemployment and absorption (Q3 2026), real GDP growth (2025), adult education (2022, ages 20+), and medical-aid coverage (2025), alongside Census population/change. Legends and reports retain definitions, denominators, periods and sources; no municipality estimates are interpolated.
-- **Canvas controls:** combine independent layers, reorder them, change opacity and choose Census 2011/2022. Set information density separately from zoom. Shared selection, filters and camera survive view changes. Use Map + overlay for synchronized diagrams, Trace/Isolate for selections, and History for undo/redo. See [canvas implementation](docs/canvas-implementation.md).
-- **Hierarchy / Relationships:** explore government spheres, provincial institutions, 43 national directory bodies, 257 municipalities, and three mining groups with eight operations. Select a connection for its evidence and reporting date.
-- **System flow:** the simplified four-stage electricity supply path stays separate from the infrastructure asset catalogue.
-- **Data:** Census 2011 and 2022 provincial counts, bar/donut charts, two-census comparison and accessible tables.
-- **Compare:** matching-year World Bank population and GDP-growth observations for South Africa, Botswana and Namibia, 2014–2024. Missing data remain unavailable.
-- **History:** source-linked events with year and entity filters. Events do not imply a complete historical reconstruction.
-- **Investigations:** bookmarks preserve the full view, selection, expanded nodes, map/data filters and notes. Import/export investigations between browsers. Older bookmarks migrate automatically.
-- **Reports:** download a self-contained HTML report with geographic or relationship figures, statistics, notes and references. Open it and use Print to save a PDF.
-- **Directory:** [http://127.0.0.1:3000/directory](http://127.0.0.1:3000/directory) lists national bodies and municipalities. Former municipal codes are separated.
-- **Source review:** [http://127.0.0.1:3000/review](http://127.0.0.1:3000/review) validates proposed bundles and stores review decisions on this device.
+- **Map:** online roads and street names, zoom through level 19, and South African municipality/ward boundaries. Turn on Ward boundaries, choose a province and local municipality/metro, then click a ward or use Focus ward. The published 2026 collection has 4,485 wards and 257 municipality IDs; older 2020 maps remain separate.
+- **Split canvas:** choose Layout → Split canvas to keep the map beside a graph or chart. Drag the divider or use its arrow keys. Views stack on phones. Selection, map position and undo work across the views.
+- **Networks:** Explore network follows one to six steps or finds a shortest documented path. Filter by arrow direction, connection type and reporting date. Navigation links are optional. Reading a path backwards does not reverse the meaning of ownership.
+- **Provincial statistics:** use Layers for unemployment and the share of working-age people in work (Q3 2026), real GDP growth (2025), adult education (2022, ages 20+) and medical-aid coverage (2025). Census population and change are also available. The app keeps source definitions and does not invent municipality figures from province totals.
+- **View controls:** combine layers, change their order and transparency, and choose Census 2011 or 2022. Choose the amount of detail separately from zoom. Selection, filters and map position stay with you. See [map controls](docs/canvas-implementation.md).
+- **Hierarchy / Relationships:** explore government bodies, 43 national-directory bodies, 257 municipalities and three mining groups with eight operations. Select a connection to inspect its source and date.
+- **System flow:** follow the four main stages of electricity supply. This explains a process; it is separate from the facility list.
+- **Data:** explore Census 2011/2022 provincial counts through charts and tables.
+- **Compare:** compare published country population and GDP-growth figures for 2014–2024. Missing figures stay unavailable.
+- **History:** browse the available sourced events by year or selected item.
+- **Investigations:** save the view, selected items, open diagram sections, filters and notes. Export or import them between browsers.
+- **Reports:** download a report with maps or diagrams, figures, notes and sources. Open it in a browser and use Print to save a PDF.
+- **Directory:** [open the local directory](http://127.0.0.1:3000/directory) for national bodies and municipalities. Former municipal codes are listed separately.
+- **Source review:** [open the local review page](http://127.0.0.1:3000/review) to check proposed information and save review notes on this device.
 
-## Optional FastAPI and database
+Date filters leave out connections with no date. They do not recreate a complete historical network.
 
-The frontend works independently from its reviewed bundle. To test the Python service:
+## Optional Python service and database
+
+The website can use its bundled information on its own. To try the Python service:
 
 ```powershell
 node scripts/bootstrap-python.mjs
 npm.cmd run dev:api
 ```
 
-Set `KNOWLEDGE_API_URL=http://127.0.0.1:8000` in a server-only `.env.local` and restart Next.js to use the knowledge gateway. The browser catalogue and database must use the same reviewed release.
+Set KNOWLEDGE_API_URL=http://127.0.0.1:8000 in a server-only .env.local and restart Next.js. The browser's information and the database must use the same checked version.
 
-For the isolated local database:
+For the separate local database:
 
 ```powershell
 docker compose -p civic-intelligence-local up -d db
 node scripts/db-check.mjs
 ```
 
-The database binds to loopback port 55432. The check applies migrations, seeds twice and verifies PostGIS, pgvector, catalog revisions and database-backed retrieval. The seed upserts reviewed records without deleting unrelated data. Database volumes are retained when the container is stopped.
+The database listens only on this computer, at port 55432. The check applies database changes, loads the checked information twice and checks map support, searching by meaning, saved versions and reading information.
 
-## Verification
+Loading information updates known entries without deleting unrelated ones. Stopping the database container keeps its stored data.
+
+## Checks
 
 ```powershell
 npm.cmd run data:check
@@ -71,43 +77,49 @@ npm.cmd run test:accuracy
 node scripts/smoke.mjs
 ```
 
-Browser tests use the installed Microsoft Edge through playwright-core. All automated tests mock OSM street tiles to comply with its tile policy. Set `BROWSER_EXECUTABLE` if needed and `TEST_BASE_URL` for a different local port. Screenshots and JSON reports go to ignored `test-results/`.
+Browser checks use Microsoft Edge through playwright-core. They use test street tiles instead of sending automated requests to the public map service. Set BROWSER_EXECUTABLE for another browser path and TEST_BASE_URL for another local address. Screenshots and results go into the ignored test-results folder.
 
-For an isolated production check while port 3000 is in use:
+To check a separate production preview while port 3000 is in use:
 
 ```powershell
 npm.cmd run build:verify
 npm.cmd run start:verify
 ```
 
-That server uses `.next-verify` and http://127.0.0.1:3100, leaving the regular build directory separate. Point browser/smoke checks at that URL.
+This uses .next-verify and http://127.0.0.1:3100, separately from the normal build. Point browser and smoke checks at that address.
 
-## Data and release workflow
+## Information and updates
 
-The catalogue contains **4,238 entities, 4,007 relationships, 301 references, 237 country/area profiles, 3,382 world reference areas, nine South African province regions, 257 municipal boundary identities, 4,485 wards, two Census datasets, two World Bank indicator series, six provincial metrics (54 observations) and seven dated events**. Navigation and geographic-context links are included in the relationship count.
+The collection has **4,238 items, 4,007 connections, 301 sources, 237 country/area profiles, 3,382 smaller world reference areas, nine South African provinces, 257 municipality IDs and 4,485 wards**.
 
-See [data maintenance](docs/data-maintenance.md), [production setup](docs/production.md), [local verification](docs/local-verification.md), and the [product brief](docs/product-brief.md). `data/release.json` records the bundle digest used by database readiness checks.
+It also includes two Census collections, two World Bank measures, six provincial measures with 54 values and seven dated events. Connection counts include links used for navigation.
+
+See [data maintenance](docs/data-maintenance.md), [hosting setup](docs/production.md), [recorded local checks](docs/local-verification.md) and the [product brief](docs/product-brief.md). The data/release.json file identifies the checked information version so the app can detect a database using a different version.
 
 ## Netlify
 
-`netlify.toml` checks the data and tests before building. Netlify's Next.js adapter serves the application and Node API routes. The optional persistent Python/database service needs a separate host. Production configuration and monitoring endpoints are prepared; no deployment has been performed.
+The netlify.toml file runs data checks and tests before building. Netlify's Next.js support serves the website and its Node routes. The optional Python service and database need a separate host. Setup and health checks are prepared; nothing has been deployed.
 
-## Scope and evidence
+## Important limits
 
-Institutional knowledge is deepest in South Africa, with initial Botswana and Namibia profiles. Other countries show their dated geographic reference coverage and explicit institution gaps. Historical comparisons cover mapped World Bank economies where observations are published. The mining and station catalogues are curated examples, not exhaustive lists.
+South Africa has the most government detail. Botswana and Namibia have initial profiles. Other countries show their dated maps and what government information is still missing. Historical country comparisons use published World Bank figures where available.
 
-Ownership and operating interests retain their reporting dates and legal-entity level. No current officeholder list, interest rate, asset output or forecasts are invented. Census counts and World Bank midyear estimates are different measures. The published 2011 provincial integers sum to one more person than the release's printed national total; source values are preserved.
+Mining and power facilities are checked examples, not complete national lists. Company links keep the exact companies and reporting dates. Current leaders, interest rates, facility output and forecasts are not invented.
 
-Country and province reference geography is simplified. MDB municipality and ward coordinates are unsimplified; a documented self-intersecting ring in Alfred Duma Ward 5 is repaired for display with the original retained. See [map data](public/data/README.md). City points and station project/fence points are representative locators, with precision notes. Mining points and Duvha use province locators where exact positions have not been verified. Licenses and attribution accompany geography and source records.
+Census counts and World Bank population estimates are different measures. The published 2011 province counts total one person more than the printed national total; the app keeps the source's numbers.
 
-Investigations and review notes are browser-local; there is no account system or cloud synchronization. Review proposals are checked in the browser and applied through the repository workflow, not through an unauthenticated public write API. There is no collaboration, simulation or 3D view.
+Country and province reference maps are simplified. The published MDB municipality and ward coordinates are kept in full, apart from a documented repair to a faulty shape in Alfred Duma Ward 5. The original is retained. See [map data](public/data/README.md).
 
-Live AI and embedding generation remain optional. Do not place server keys in `NEXT_PUBLIC_` variables or exported reports. The labelled local guide works now.
+Some city, project and facility points are approximate. Mining locations and Duvha use province-level markers where exact positions are unverified. Details explain the accuracy, sources and reuse terms.
 
-## World country coverage
+Saved investigations and review notes stay in the current browser. Accounts, cloud syncing, collaboration, simulations and 3D views are not built. Proposed information updates go through project review; the public page does not write directly to the database.
 
-Country profiles now cover 237 countries and areas with dated reference geography, initial Botswana and Namibia institution profiles, and historical World Bank comparisons. See [coverage, sources and reproduction](docs/world-coverage.md) for the scope and data caveats.
+The labelled local guide works now. Live AI and tools for searching by meaning can be connected later. Keep server keys out of NEXT_PUBLIC_ settings and exported reports.
 
-## Country learning design
+## World country information
 
-The [country learning documentation](docs/country-learning/README.md) covers ten topics, their categories, interactive learning journeys, evidence requirements and current/proposed capabilities. It includes an AI orchestration design and an implementation roadmap connecting knowledge retrieval, shared canvas state and user exploration.
+Profiles cover 237 countries and areas, with dated maps, initial Botswana/Namibia government information and historical country comparisons. See [what is available, its sources and how to rebuild it](docs/world-coverage.md).
+
+## Country learning guides
+
+The [learning guides](docs/country-learning/README.md) explain ten topics, what users can learn and how clicks, questions and views can help. They also explain AI's role, the work needed and which features already exist.

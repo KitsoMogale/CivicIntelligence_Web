@@ -1,95 +1,108 @@
-# AI between the user, knowledge and display
+# How AI connects the user, information and screen
 
-This is the proposed orchestration design for all [ten topics](README.md). Existing implementation limits are identified below.
+This guide describes the planned AI middleman for all [ten topics](README.md). It also explains what the current app can and cannot do.
 
-## Responsibilities
+## What each part does
 
-The user supplies an interest, question or selection. The knowledge layer returns reviewed entities, relationships, observations, documents, geography and source metadata. AI interprets and connects that evidence, chooses a presentation and explains it. The application validates the plan and renders supported views.
+- **The user** asks a question, chooses a topic or clicks something.
+- **The information store** supplies checked facts, places, organizations, links, numbers, documents and sources.
+- **AI** works out what the user needs, chooses a useful view and explains the facts.
+- **The app** checks AI's requested changes and draws the supported views.
 
-AI does not become the source of country facts. It must not invent coordinates, officeholders, routes, statistics, legal powers or missing relationships to complete a diagram.
+AI must use the information it finds. It must not make up locations, leaders, routes, statistics, powers or connections to fill a gap.
 
 ```mermaid
 flowchart TD
-  U[Question, click or follow-up] --> C[Read exploration context and topic coverage]
-  C --> I[Resolve intent, entities, place and period]
-  I --> R[Retrieve reviewed knowledge and evidence]
-  R --> P[Choose explanation and display plan]
-  P --> V[Validate evidence, capabilities and actions]
-  V --> S[Apply actions to shared exploration state]
-  S --> D[Map, diagram, graph, flow, chart or timeline]
-  D --> E[Explain the view, cite sources and offer a next step]
+  U[User asks or clicks] --> C[Read the current country, selection and dates]
+  C --> R[Find checked information and sources]
+  R --> P[Choose an explanation and useful view]
+  P --> V[Check the facts and requested changes]
+  V --> S[Update the shared view settings]
+  S --> D[Show the map, diagram, chart or timeline]
+  D --> E[Explain the result and offer a next step]
   E --> U
-  V --> G[Explain unsupported requests and coverage gaps]
+  V --> G[Explain missing information or unsupported features]
   G --> U
 ```
 
-The diagram expresses logical dependencies. Loading feedback can stream immediately, but factual prose and display instructions must remain tied to retrieved evidence.
+The app can show loading progress straight away. Answers and display changes must be based on information it has found.
 
-## The interaction loop
+## How AI handles a question
 
-| Step                  | What AI or the application does                                                                         | What the user experiences                                    |
-| --------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------ |
-| 1. Read context       | Inspect country, selected area/entity, active topic, time settings, current view and available coverage | "Here" and "this institution" refer to the current selection |
-| 2. Resolve intent     | Distinguish locating, explaining, comparing, tracing, exploring change and learning a concept           | A useful interpretation of the question                      |
-| 3. Retrieve           | Fetch bounded records and the evidence needed for the proposed answer                                   | Clear loading status; no invented completion                 |
-| 4. Check suitability  | Verify geography, periods, definitions, identifiers and supported renderers/actions                     | Comparable values and correctly labelled boundaries          |
-| 5. Plan               | Choose the smallest useful visual change and an explanation outline                                     | A relevant map, chart or diagram without unnecessary panels  |
-| 6. Validate and apply | Reject invalid IDs, unsupported layers and stale plans; apply a bounded reversible action batch         | Predictable changes that can be undone                       |
-| 7. Explain            | Describe what the visual shows, why it is relevant and what remains unknown                             | A short answer with inspectable citations                    |
-| 8. Continue           | Offer up to three relevant follow-ups or respond to the user's next click                               | An exploration that follows curiosity                        |
+| Step                       | What happens                                                                                     |
+| -------------------------- | ------------------------------------------------------------------------------------------------ |
+| 1. Read the current view   | Check the selected country, area, item, topic and dates                                          |
+| 2. Understand the question | Work out whether the user wants a place, explanation, comparison, connection or change over time |
+| 3. Find the facts          | Load only the checked information needed for the answer                                          |
+| 4. Check the match         | Make sure places, dates, definitions and units fit the question                                  |
+| 5. Choose a view           | Pick a useful display and change only what is needed                                             |
+| 6. Check and apply changes | Allow only valid commands, and let the user undo them                                            |
+| 7. Explain                 | Give a short answer, point out limits and show sources                                           |
+| 8. Continue                | Offer up to three useful follow-up questions                                                     |
 
-Do not ask the user to repeat information already present in context. Ask a short clarifying question when ambiguity would materially change the evidence or display, such as which of two places with the same name they mean.
+Use information already on screen. Ask a short question only when a missing detail would change the answer, such as two places sharing the same name.
 
-## Choosing a representation
+## Choosing what to show
 
-| Intent                     | Default representation                     | Important qualification                                           |
-| -------------------------- | ------------------------------------------ | ----------------------------------------------------------------- |
-| Where?                     | Map and geographic selection               | Only verified spatial features or explicitly approximate locators |
-| How is it organized?       | Hierarchy or grouped institutional diagram | Independent bodies and parallel schemes must remain distinct      |
-| Who is connected to whom?  | Typed relationship graph                   | Edge direction, meaning and evidence remain inspectable           |
-| How does a process work?   | System flow                                | An explanatory flow is distinct from a verified physical route    |
-| How much or how different? | Chart and accessible table                 | Matching definitions, units, geography and comparable periods     |
-| What changed?              | Timeline or time series                    | Event dates, observation dates and boundary editions are separate |
-| How do these fit together? | Split map plus a focused secondary view    | Shared selection and a bounded amount of detail                   |
+| User asks                  | Useful view                  | Keep in mind                                             |
+| -------------------------- | ---------------------------- | -------------------------------------------------------- |
+| Where is it?               | Map                          | Show checked locations and explain approximate ones      |
+| How is it organized?       | Organization diagram         | Keep independent bodies and different systems separate   |
+| What is connected?         | Connection graph             | Explain each line, its direction and its source          |
+| How does it work?          | Step-by-step process diagram | A process diagram does not prove a real route exists     |
+| How much or how different? | Chart and table              | Match the meaning, units, area and dates                 |
+| What changed?              | Timeline or chart over time  | Separate event dates from measurement and boundary dates |
+| How do these fit together? | Map beside another view      | Keep the same selection and a readable amount of detail  |
 
-A request for an explanation does not always require changing the canvas. If the existing view already answers the question, explain it and preserve the user's arrangement.
+If the current view already answers the question, AI can explain it without rearranging the screen.
 
-## Questions and clicks work together
+## Questions and clicks should work together
 
-- **Question to canvas:** "Show the regions and explain who governs them" resolves the country's relevant schemes, focuses available geometry and opens a supported institutional view.
-- **Canvas to explanation:** clicking a power-station dot selects its reviewed record. The details panel presents its evidence; AI can then explain documented ownership or the electricity system.
-- **Follow-up in context:** "And who regulates it?" keeps the selected entity and retrieves the appropriate typed relationships.
-- **Manual adjustment:** panning, closing a panel or changing a filter takes effect immediately. It does not require a model request.
-- **Optional learning prompt:** the user can request a brief explanation, a deeper account, a source comparison or a knowledge check.
+- "Show the regions and explain who governs them" opens the available map areas and the relevant government information.
+- Clicking a power-station dot opens its checked details and sources.
+- "Who regulates it?" uses that selected station as the starting point.
+- Panning the map, closing a panel or changing a filter works immediately.
+- "Explain more" or "Give me a short quiz" starts the extra learning step when requested.
 
-Clicking a dot must not automatically trigger an expensive model request for every selection. Open reviewed details immediately; invoke AI when the user requests an explanation or has enabled a guided session.
+A click should open saved details without waiting for AI. Ask AI to explain them when the user requests it or has chosen a guided lesson.
 
-## Evidence and explanation
+## Getting the facts right
 
-Each substantive claim should connect to one or more retrieved source records and, where needed, an exact observation or document passage. Separate a publisher's statement, an application's explicit calculation and an AI explanation of their implications.
+Link factual statements to their sources. Where needed, also identify the exact figure, table or document section. Explain the difference between a published fact, a calculation made by the app and AI's explanation.
 
-When sources conflict, identify what differs and retain the source-specific dates or definitions. If a boundary file has an unresolved date conflict, the explanation must carry that caveat into charts, saved views and reports using it. Retrieval date must not replace an observation or effective date.
+When sources disagree, show what differs and keep their dates and definitions. Carry important warnings into saved views and reports. For example, an unclear boundary date must stay visible when that boundary is used.
 
-Never equate these conditions:
+Keep these differences clear:
 
-- A zero value and an unavailable value.
-- A relationship not found in this catalogue and a relationship that does not exist.
-- A census count and a later population estimate.
-- A nearby facility and a documented supplier or service area.
-- A reference-area directory and a government reporting line.
-- A legal instrument's publication date and the date its provisions take effect.
+- **Zero** means a measured value; **unavailable** means the value is missing.
+- **No saved link** means the app has no evidence for it; the real-world link may still exist.
+- **A census count** and **a later population estimate** are different measures.
+- **A nearby facility** is not automatically the area's supplier or service provider.
+- **A list of areas** does not show which government body controls another.
+- **A law's publication date** may differ from the date it starts applying.
 
-If coverage is missing, explain the gap, show a supported alternative and allow the user to continue. Any future source-discovery feature should produce a reviewable ingestion candidate; it must not silently add model-generated claims to the reviewed catalogue.
+If information is missing, say so and offer a supported alternative. A future research tool may suggest new sources for review. AI must not add its own guesses as checked facts.
 
-## Plans, actions and shared state
+## Keeping the user in control
 
-A proposed internal display plan should record the resolved question, topics, country/area IDs, evidence IDs, chosen views, required capabilities, action sequence, explanation outline and the exploration revision on which it depends. This is a future planning interface, not an API that currently exists.
+Before changing the screen, the planned AI controller should record:
 
-The application should validate the entire dependent batch before changing state. Reject or replan if the user changed country, selection or period while a response was loading. Cancelling a request must cancel its pending display changes. A failed plan should retain the previous usable view and provide a concise retry or alternative.
+- The question, topic, selected places and dates.
+- The facts and sources it will use.
+- The views and commands it needs.
+- The view settings on which the answer depends.
 
-AI issues declarative commands. It never sends JavaScript, HTML, SQL, arbitrary URLs or direct store writes for execution.
+These are planned additions. The app does not yet have this full plan format.
 
-For example, after retrieving the South African government root and confirming the active country, the following uses existing action names and identifiers:
+Check a group of related commands before applying it. If the user changes country or selection while AI is working, stop or update the old plan. Cancelling a request should also cancel its pending screen changes.
+
+Keep the previous view usable if a request fails. Show a short retry option or another useful route.
+
+AI sends a small list of allowed commands. It must not send code, database queries or arbitrary web addresses for the app to run.
+
+### Example using existing commands
+
+After checking the South African government information and confirming South Africa is selected, the app can use:
 
 ```json
 [
@@ -99,35 +112,53 @@ For example, after retrieving the South African government root and confirming t
 ]
 ```
 
-This is a navigation example, not a complete lesson. An explanatory answer still needs retrieved evidence and citations. Other countries must resolve their own IDs and capabilities before a batch is constructed.
+In plain terms: select the government entry, switch to its organization diagram and open its first level. The answer still needs facts and sources. Other countries use their own entry names and supported features.
 
-## Existing implementation and required extensions
+## What the AI connection supports today
 
-The current [provider adapter](../../lib/agent.ts) exposes four read tools: search_knowledge, get_entity_details, get_entity_relationships and get_dataset. Its canvas_action tool exposes seven commands: SELECT_COUNTRY, OPEN_ENTITY, SET_VISUALIZATION_MODE, EXPAND_NODE, FOCUS_REGION, CREATE_CHART and FIT_CANVAS.
+The current [AI connection code](../../lib/agent.ts) has four tools for finding information:
 
-That adapter's mode enum currently omits compare and timeline, although the broader application supports them. Its get_dataset path currently retrieves the South African Census dataset collection; global indicators are handled separately in the application. Layer composition, tracing, layout changes, comparison settings, document passages and learning activities are not all available as provider tools.
+| Tool name                | What it does                           |
+| ------------------------ | -------------------------------------- |
+| search_knowledge         | Search entries in the selected country |
+| get_entity_details       | Read one entry                         |
+| get_entity_relationships | Read its saved connections             |
+| get_dataset              | Read a supported collection of figures |
 
-The shared [action schema](../../lib/actions.ts) supports more actions than the provider adapter exposes, and permits at most eight actions in a batch. Extending the AI controller requires explicit tool contracts and tests; listing a feature in a prompt does not make it executable.
+Its canvas_action tool allows seven commands: SELECT_COUNTRY, OPEN_ENTITY, SET_VISUALIZATION_MODE, EXPAND_NODE, FOCUS_REGION, CREATE_CHART and FIT_CANVAS.
 
-The current chat context includes country, domain, mode, selected entity, visible IDs and region. Extend it with a bounded representation of relevant time settings, layer state, layout, selected relationships, comparison settings and a revision token. Proposed learning-session context should add the current goal, explanation depth and completed steps without dumping full country catalogues into the model prompt.
+Some app features are not yet connected to these AI tools:
 
-Replace the current whole-index prompt approach with capability summaries and bounded retrieval as content expands. Future read tools should expose topic coverage, country schemes, indicators, dated events and cited document excerpts. Expose only validated display actions that the client can actually apply.
+- The AI view selector does not yet include Compare or History.
+- The get_dataset tool currently reads the South African Census collections. Country comparison figures use a separate part of the app.
+- Not all layer controls, connection tracing, layouts or comparison settings are available to AI.
+- Document sections and learning activities need new tools.
 
-Live credentials and full orchestration remain deferred. Manual controls and the labelled local guide should continue to function while these extensions are developed.
+The broader [command rules](../../lib/actions.ts) allow more actions than this AI connection exposes. A group can contain at most eight commands. Every new AI command needs a matching app feature and checks.
 
-## Guided learning
+## What needs to be added
 
-A proposed guided journey contains a question, a short explanation, a focused interaction, an optional check of understanding and a relevant next step. Let the user skip, change topic or return to free exploration at any time.
+Give AI a short summary of relevant map settings, dates, selected connections and comparisons. Include a way to tell whether the user has changed the view since the request began.
 
-Questions and feedback must be generated from retrieved lesson evidence. If evidence is insufficient, do not grade the answer as wrong. Distinguish recalling a sourced fact from interpreting a complex or contested issue.
+For learning sessions, also keep the user's goal, chosen explanation level and completed steps. Load just the facts needed for the question instead of putting the whole country collection into every AI request.
 
-Learning progress can initially be optional browser-local state, separate from canvas undo history. A future saved journey should retain its evidence version and identify source changes when resumed. Account synchronization is a separate future feature.
+Add tools for checking available topics, country divisions, country statistics, events and source passages. Connect new display commands only when the app can check and apply them.
 
-## Acceptance criteria
+AI keys remain planned for later. Basic controls and the labelled local guide should keep working as these parts are added.
 
-- A question results in an evidence-backed explanation and an appropriate supported display, or an explicit coverage gap.
-- A selected map entity remains the same entity in subsequent graph and explanation views.
-- All proposed changes pass action and capability validation and can be undone.
-- User navigation during loading cannot apply an answer to the wrong country or selection.
-- Closing an overlay preserves the map and current selection.
-- Core exploration works without a live model, and an AI error leaves manual controls usable.
+## Guided lessons
+
+A guided lesson can contain a question, a short explanation, one interaction, an optional quiz and a next step. Let users skip, change topic or return to free exploration.
+
+Build questions and feedback from the lesson's sources. If the evidence is unclear, explain that rather than mark the user's answer wrong. Opinions and disputed explanations should not be treated as simple fact questions.
+
+Progress can first be saved on the current device, separately from map undo history. A saved lesson should remember which version of the facts it used and flag later changes. Saving across accounts or devices is a separate future feature.
+
+## How to check it
+
+- Answers use checked facts and a suitable view, or clearly explain what is missing.
+- Selecting an item in one view keeps the same item selected in another.
+- Commands are checked and display changes can be undone.
+- An old answer cannot change a newly selected country or place.
+- Closing a panel keeps the map position, layers and selection.
+- Basic exploration remains usable if AI is off or a request fails.

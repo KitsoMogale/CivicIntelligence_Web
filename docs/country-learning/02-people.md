@@ -1,52 +1,51 @@
 # 2. People
 
-Help users understand a country's population, communities and cultural life without reducing it to one stereotype or treating national averages as descriptions of every person.
+Help users learn who lives in a country, where people live and how communities and cultures differ. A national average does not describe every person.
 
-## Categories to learn
+## What users can learn
 
-- **Population:** size, distribution, density, urban/rural settlement and change.
-- **Age and households:** age structures, household composition and demographic measures.
-- **Languages:** official status, reported language use, regional variation and local names.
-- **Culture and everyday life:** arts, food, traditions, festivals and contemporary life.
-- **Religion and identity:** published aggregate descriptions and diverse perspectives.
-- **Movement:** migration, urbanization and diaspora where reliable evidence exists.
+- **Population:** how many people live there and where they live.
+- **Age and households:** age groups and who lives together.
+- **Languages:** official languages, languages people use and local place names.
+- **Culture:** food, arts, traditions, festivals and everyday life.
+- **Religion and identity:** published information and different community views.
+- **Movement:** migration, growing towns and communities living abroad.
 
-Keep census categories and self-identification definitions attached to the source. Distinguish a constitutional language status from the share of people reporting its use.
+Explain how the source groups people. An official language is not necessarily the language most people use.
 
-## Interactive learning
+## How users can explore
 
-| User activity                               | App accommodation                                                         |
-| ------------------------------------------- | ------------------------------------------------------------------------- |
-| Ask where people live                       | Population map with a labelled period and an accessible regional table    |
-| Compare regions or countries                | Matching-year charts with clear measure definitions                       |
-| Explore age composition                     | Population distributions or age pyramids when suitable observations exist |
-| Learn about a language or cultural practice | On-demand topic narrative, sourced examples and related places            |
-| Follow population change                    | Time series that distinguishes census counts from estimates               |
+| User wants to             | The app can show                                     |
+| ------------------------- | ---------------------------------------------------- |
+| Find where people live    | A population map with a date and table               |
+| Compare places            | Charts using the same type of figure and year        |
+| Learn about age groups    | A chart of the population by age, if available       |
+| Explore culture or change | Sourced stories, related places and charts over time |
 
-Counts, density and percentages answer different questions. AI should choose the measure that fits the question and explain its denominator.
+Explain the difference between a total, a percentage and population density: how many people live in a given amount of space.
 
-## AI-orchestrated example
+## Example with AI
 
 **Question:** "Where do most people live, and how has that changed?"
 
-AI resolves the country and available periods, retrieves the population definitions and observations, then selects an appropriate map and comparison chart. Clicking a region highlights the same geography in the chart and opens its dated values.
+AI finds the available population figures and explains how they were collected. It chooses a map and chart. Clicking a region selects the same region in both.
 
-If only national estimates are available, show the country trend and explain that it cannot establish the distribution within the country. Do not spread national totals across wards or imply a continuous annual series from two census observations.
+If only country totals exist, show those totals and explain that they do not tell us how people are spread within the country. Do not invent ward figures or fill the years between two census counts.
 
-Useful follow-ups include "Show population density," "Explain the census method" and "Compare another available period."
+## Information and app changes needed
 
-## Evidence and integration
+Use official population counts, estimates, language laws, research and named cultural or community sources. Explain whose cultural account is being shown.
 
-Use reviewed census/statistical releases, population estimates, language legislation, documented demographic research and attributed cultural institutions or community-authored material. Cultural accounts should identify whose perspective is represented rather than imply a single national voice.
+Keep the year, area, age group, counting method and meaning of percentages. A census is an official population count; an estimate is a calculated figure for another date.
 
-Extend observation metadata with geography, denominator, category definition, method and compatible boundary edition. Add reviewed narrative/document records for cultural topics; they are different from statistical observations.
+Use published group information. Do not guess a person's language, religion or identity from their name or location. Some groups overlap, so their percentages may not add up to 100%.
 
-Map public aggregate observations at the level actually published. Do not infer an individual's ethnicity, religion or language from their name or location. Overlapping group memberships must not be presented as mutually exclusive percentages.
+## What already works
 
-**Current foundation:** historical national population comparisons, South African Census provincial data, geographic selection and sourced statistics. Language distributions, age pyramids, migration data and cultural learning material are proposed additions.
+The app has historical country population comparisons and South African provincial Census figures. Language maps, age charts, migration information and cultural learning material still need to be added.
 
-## Learning outcome and completion check
+## How to check it
 
-The user can interpret a population measure, identify its period and scope, and recognize regional or cultural diversity. Check that charts and maps agree on the selected geography and date, missing values remain unavailable, and explanations distinguish estimates from counts.
+Users should understand what a population figure measures and which place and date it covers. Check that maps and charts agree, missing values stay missing, and counts are kept separate from estimates.
 
 Continue to [history](06-history.md), [economy](05-economy.md) or [public services](08-public-services.md).

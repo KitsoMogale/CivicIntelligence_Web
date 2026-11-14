@@ -1,54 +1,51 @@
 # 6. History
 
-Help users understand how a country, place, institution or system changed over time and how evidence supports different accounts of that change.
+Help users learn how a country, place, organization or system changed over time and how we know what happened.
 
-## Categories to learn
+## What users can learn
 
-- **Historical periods:** reviewed periodizations and important transitions.
-- **Political and constitutional change:** state formation, independence, constitutional changes and elections.
-- **Social and cultural history:** communities, movements, migration and everyday life.
-- **Economic and technological change:** industries, transport, infrastructure and labour.
-- **Place and institutional histories:** selected cities, administrative areas, organizations and assets.
-- **Historical interpretation:** evidence, perspectives, uncertainty and contested explanations.
+- **Main periods:** important stages and turning points.
+- **Political changes:** independence, elections, constitutions and changes of government.
+- **People and culture:** communities, movements, migration and everyday life.
+- **Work and technology:** changes in industries, jobs, transport and services.
+- **Places and organizations:** the history of a city, area, public body or business.
+- **Different accounts:** what sources agree on, disagree on or leave unclear.
 
-A timeline is a selection of sourced events, not a complete account. Explain who chose the events and the limits of the available collection.
+A timeline shows selected events. It is not a complete history. Explain which events are included and where the collection has gaps.
 
-## Interactive learning
+## How users can explore
 
-| User activity                      | App accommodation                                                                                |
-| ---------------------------------- | ------------------------------------------------------------------------------------------------ |
-| Ask how a place developed          | A focused timeline connected to the selected place and its sources                               |
-| Click an event                     | Open its date precision, description, evidence and related entities                              |
-| Follow an institution through time | Show documented changes and keep its identity separate from an officeholder                      |
-| Compare periods                    | Use dated maps or observations only where matching historical material exists                    |
-| Ask why something changed          | Present supported explanations and attributed perspectives rather than infer cause from sequence |
+| User wants to               | The app can show                                 |
+| --------------------------- | ------------------------------------------------ |
+| Learn how a place developed | A timeline linked to that place                  |
+| Open an event               | Its date, explanation, sources and related items |
+| Follow an organization      | Documented changes and the people involved       |
+| Compare periods             | Matching older maps or figures, where available  |
 
-A year-only date should remain year-only. Do not invent a month or day to fit the interface.
+Keep the date as precise as the source allows. If only the year is known, do not invent a month or day.
 
-## AI-orchestrated example
+## Example with AI
 
-**Question:** "How did this region's economy change over time?"
+**Question:** "How did this region's economy change?"
 
-AI checks for dated events, compatible economic observations and any available historical geography. It can show a timeline alongside a chart, with the selected region kept in geographic context.
+AI looks for events, figures and older maps for the selected region. It can show a timeline beside a chart and explain the sources.
 
-An event click narrows the next explanation: "What changed after this?" or "Which source supports that date?" If observations or events are sparse, AI describes those gaps and avoids drawing a continuous historical narrative between them as established fact.
+An event click can lead to "What changed next?" or "Where does that date come from?" If the evidence has gaps, AI says so. One event happening before another does not prove it caused it.
 
-Current boundaries may be shown for orientation only when labelled as such. They must not masquerade as the region's boundary in an earlier period.
+## Information and app changes needed
 
-## Evidence and integration
+Use archives, original documents, laws, official records, recorded oral histories and checked historical research. Keep the author, source passage, event date, document date and any different accounts.
 
-Use primary historical documents, legislation, archives, official records, documented oral histories and reviewed historical research. Preserve authorship, document dates, event dates, date precision, passage references and relevant perspectives.
+Older maps need their own dates. A modern boundary may be shown for orientation, but it must not be presented as the boundary from an earlier period.
 
-Expand event records to support richer date precision, related places and claim-level evidence where needed. A proposed historical geography index should describe when a geometry is valid rather than treating the current polygon as timeless.
+Keep events, legal dates, company reporting dates and statistical years separate. Filtering old company statements does not recreate a complete past ownership network.
 
-Institutional validity, historical events, reporting snapshots and statistical observation years need separate temporal handling. A filter over dated ownership disclosures does not reconstruct a complete past ownership network.
+## What already works
 
-Conflicting accounts should retain their attribution. AI can explain why sources differ, but it should not turn an interpretation into an unattributed factual verdict.
+The app has a small set of sourced events, a History view with year and item filters, date filters for connections and historical figures. Broader country histories, archive reading and older boundary maps still need work.
 
-**Current foundation:** a small set of source-linked events, an entity/year-filtered History view, evidence-period filtering and historical statistical series. Broad national histories, archival document exploration and historical boundary reconstruction are proposed extensions.
+## How to check it
 
-## Learning outcome and completion check
-
-The user can place a sourced event in context, identify what its date means, and distinguish chronology from explanation. Check date precision, event/entity links, period labels and whether the map's displayed geography is actually valid for the chosen historical period.
+Users should be able to place an event in context and identify its source. Check dates, linked places, missing periods and whether a map really represents the selected time.
 
 Continue to [government](03-government.md), [economy](05-economy.md) or [people](02-people.md).

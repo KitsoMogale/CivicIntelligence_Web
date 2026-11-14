@@ -1,52 +1,51 @@
 # 8. Public services
 
-Help users understand how education, healthcare and social support are organized, delivered and measured, and which institutions have documented responsibilities.
+Help users understand education, healthcare and social support: how they work, who provides them and what published figures can tell us.
 
-## Categories to learn
+## What users can learn
 
-- **Education:** school stages, vocational and higher education, participation and attainment.
-- **Healthcare:** system organization, public/private providers, financing and published access measures.
-- **Social support:** programmes, responsible institutions, official eligibility rules and service channels.
-- **Other civic services:** documented public-safety, administrative and community services.
-- **Service governance:** national/local responsibilities, funding and accountability.
-- **Access and outcomes:** facility availability, published coverage, utilization and outcomes with their definitions.
+- **Education:** school stages, skills training, universities and learning levels.
+- **Healthcare:** public and private services, funding and access.
+- **Social support:** programmes, responsible bodies and official rules for qualifying.
+- **Other services:** public-safety, administrative and community services.
+- **Responsibility:** who sets policy, pays, provides the service and checks it.
+- **Results:** published information about availability, use and outcomes.
 
-Facility presence, entitlement, utilization, quality and outcomes are different concepts. A financial-coverage measure is not a measure of hospital capacity.
+Having a facility nearby does not prove that someone can use it or that it provides good care. Medical-aid coverage is about financial cover, not hospital capacity.
 
-## Interactive learning
+## How users can explore
 
-| User activity                             | App accommodation                                                                  |
-| ----------------------------------------- | ---------------------------------------------------------------------------------- |
-| Ask how the school or health system works | A country-specific structure or process diagram with official terms                |
-| Explore reviewed facilities               | Select mapped points to inspect their published role and location precision        |
-| Ask who provides a service                | Retrieve documented responsibility and delivery relationships                      |
-| Compare regional measures                 | Charts/maps using matching definitions and published geographic scope              |
-| Explore a programme                       | Show the responsible body, cited rules, evidence date and official service channel |
+| User wants to                          | The app can show                             |
+| -------------------------------------- | -------------------------------------------- |
+| Understand the school or health system | A diagram using the country's own terms      |
+| Explore a known facility               | A map dot with checked details               |
+| Ask who provides a service             | Documented responsibility and provider links |
+| Compare areas or programmes            | Matching figures, dates, rules and sources   |
 
-Use layers and filters only where reviewed facility or service data exists. Keep the map clear: dots and verified shapes open closable details, rather than permanent school or hospital name cards.
+Keep details in closable panels. Do not add permanent school or hospital name cards over the map.
 
-## AI-orchestrated example
+## Example with AI
 
-**Question:** "How does healthcare work in this region, and what can we tell about access?"
+**Question:** "How does healthcare work here, and what do we know about access?"
 
-AI retrieves the country's health-system description, relevant institutions and any compatible published access measures. It may show a responsibility diagram with a regional chart, adding facility points if reviewed geometry is available.
+AI finds the checked system description, responsible bodies and available access figures. It can show a responsibility diagram, a regional chart and known facility points.
 
-It explains what each measure can establish. A facility count alone does not show capacity or quality, and the nearest facility is not automatically the user's assigned provider. Travel times and catchment coverage require suitable route and service-area data.
+It explains what each figure measures. Facility counts do not establish capacity or quality. The nearest hospital is not automatically a person's assigned provider. Travel times and service areas need their own reliable data.
 
-If those datasets are absent, describe the reviewed system and disclose the gap. Do not fabricate facilities, opening hours, service availability or eligibility.
+## Information and app changes needed
 
-## Evidence and integration
+Use education and health departments, statistics offices, programme authorities, official facility lists and published research. Keep dates, age groups, calculation methods and the groups used to calculate percentages.
 
-Use education/health ministries, statistical agencies, responsible programme authorities, official facility registers, reviewed service standards and published research. Preserve dates, programme versions, indicator definitions, age groups and denominators.
+Save facilities, operators, funders, regulators and service areas separately. A department that sets policy may not run every facility.
 
-Model facility, operator, funder, regulator and service area separately. A facility may have several service types; a government department may set policy without operating every site.
+Use figures for the areas they actually cover. Compare rates only when their underlying counts and populations match. Use published group totals rather than private pupil, patient or beneficiary details.
 
-Future service indicators need their actual reporting geography. Population-based rates require compatible numerators and denominators. Publish aggregate learning data rather than individual patient, pupil or beneficiary records.
+## What already works
 
-**Current foundation:** public institution records and selected South African provincial measures, including adult education and medical-aid coverage. These do not constitute complete school/healthcare maps or service-access assessments. Facility registers, service areas and broad programme learning require new curation and capabilities.
+The app has public-body entries and selected South African provincial figures, including adult education and medical-aid coverage. Complete facility maps, service-area maps and broader programme lessons still need to be added.
 
-## Learning outcome and completion check
+## How to check it
 
-The user can explain who is responsible for a service and interpret one published service measure within its limits. Check facility identity, relationship meaning, age/denominator definitions and that geographic proximity is not presented as verified access or entitlement.
+Users should understand who is responsible and what a service figure can establish. Check facility identity, age groups, percentages and dates. Do not turn a nearby point into a promise of access or eligibility.
 
 Continue to [government](03-government.md), [people](02-people.md), [laws and rights](07-laws-and-rights.md) or [infrastructure](09-infrastructure.md).

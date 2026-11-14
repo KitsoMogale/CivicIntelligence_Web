@@ -1,54 +1,51 @@
-# 10. International relations
+# 10. How a country connects to the world
 
-Help users understand how a country interacts with other countries, international institutions and cross-border systems.
+International relations means how a country works with, trades with or disagrees with other countries and international organizations.
 
-## Categories to learn
+## What users can learn
 
-- **Neighbours and regional context:** borders, shared resources and documented regional connections.
-- **Diplomacy:** diplomatic institutions and sourced relationships or agreements.
-- **International organizations:** memberships, institutional roles and accession/withdrawal dates.
-- **Trade and investment:** bilateral observations and documented economic relationships.
-- **Treaties and cooperation:** agreements, responsibilities and published cooperation programmes.
-- **Disputes and global issues:** attributed positions, historical developments and reviewed evidence.
+- **Neighbours:** borders, shared resources and regional links.
+- **Diplomacy:** official relations and agreements between countries.
+- **International groups:** memberships, roles and dates of joining or leaving.
+- **Trade and investment:** goods, services and money moving between countries.
+- **Cooperation:** treaties, joint projects and shared responsibilities.
+- **Disputes and global issues:** the stated positions, history and sources.
 
-Distinguish a country's stated position, an organization's decision and an analyst's interpretation. Map borders follow a cited publisher's representation and do not settle recognition or territorial disputes.
+Separate a government's position, an organization's decision and someone's interpretation. A map's border style does not settle a territorial dispute.
 
-## Interactive learning
+## How users can explore
 
-| User activity                           | App accommodation                                                        |
-| --------------------------------------- | ------------------------------------------------------------------------ |
-| Compare the country with its neighbours | Geographic context and compatible published country indicators           |
-| Ask which organizations it belongs to   | A dated membership graph with inspectable evidence                       |
-| Explore bilateral trade                 | Directional flows/charts for a specified measure and period              |
-| Follow an agreement or dispute          | Sourced document details and a timeline of dated events                  |
-| Explore a shared system                 | Verified cross-border geography and documented institutional connections |
+| User wants to                      | The app can show                                  |
+| ---------------------------------- | ------------------------------------------------- |
+| Compare neighbouring countries     | A map and matching published figures              |
+| Explore memberships                | A graph with dates and sources                    |
+| Follow trade                       | Charts or arrows showing the direction and period |
+| Understand an agreement or dispute | Source documents and a timeline                   |
 
-Country similarity is not a diplomatic relationship. Graph layout distance is not a measure of political closeness unless a reviewed methodology explicitly defines one.
+Similar countries are not automatically allies. Placing two nodes near each other on a graph does not by itself show political closeness.
 
-## AI-orchestrated example
+## Example with AI
 
-**Question:** "How is this country connected to its neighbours economically?"
+**Question:** "How is this country connected to its neighbours through trade?"
 
-AI resolves the relevant neighbouring countries and checks for compatible national indicators, bilateral trade observations and documented agreements. It can begin with a map and the existing historical country comparisons.
+AI finds the neighbours and checks for trade figures and agreements. It can also show available country comparisons, but must explain that population and GDP-growth figures are not trade figures.
 
-Bilateral flows or treaty links require their own evidence and a supported multi-country representation. Population or GDP-growth comparisons cannot substitute for trade data.
+Trade arrows and treaty links need their own sources and a view that supports several countries. If those facts are missing, AI says so and offers an available comparison.
 
-The explanation separates geographic proximity, statistical comparison and documented relationships. If bilateral records are missing, disclose that and offer the available comparison instead of constructing plausible trade links.
+## Information and app changes needed
 
-## Evidence and integration
+Use official diplomatic records, treaties, membership lists, trade statistics and international sources that explain their methods. Keep the countries involved, dates, status, direction and meaning of each figure.
 
-Use official diplomatic and treaty records, international-organization membership registers, national/customs statistics and documented multilateral datasets. Retain treaty identifiers, parties, status/effective intervals, trade direction, measure definitions and reporting periods.
+The app currently limits connection graphs and related actions to the selected country. A view linking countries needs clear country limits, checked links, tools for finding facts and support for saving the view. Keep the existing checks in place while adding it.
 
-Introduce a dedicated multi-country relationship capability with explicit country sets and reviewed endpoints. The current entity-action validation and graph traversal enforce active-country isolation. Do not remove those protections to make an international graph work; design a scoped extension with corresponding retrieval, validation, UI and saved-state support.
+Keep membership, partnership, agreements and trade as different types of connection. Show whose position is being described when sources disagree.
 
-An organization may require a separate non-country identity and different relationship types. Membership, partnership, regulation, agreement and trade observations should not collapse into one generic connection.
+## What already works
 
-For disputed issues, retain attributed source positions and temporal context. AI should explain the evidence and its limitations rather than decide a legal or geopolitical status from map styling.
+The app has a world map, country profiles and historical population/GDP-growth comparisons. Graphs linking countries, trade between country pairs, treaty reading, memberships and diplomatic histories still need to be added.
 
-**Current foundation:** a world map, country profiles, historical population/GDP-growth comparisons and sources. Cross-country institutional graphs, bilateral trade, memberships, treaty documents and diplomatic histories are proposed additions.
+## How to check it
 
-## Learning outcome and completion check
-
-The user can distinguish geographic context, a comparable indicator and an actual international relationship. Verify country scopes, graph endpoint validation, direction, membership/agreement dates, source attribution and that unsupported bilateral data stays unavailable.
+Users should distinguish a nearby country, a statistical comparison and a real international relationship. Check countries, arrow meanings, dates and sources. Missing trade or agreement records must not become invented links.
 
 Continue to [economy](05-economy.md), [history](06-history.md), [government](03-government.md) or [geography](01-geography.md).

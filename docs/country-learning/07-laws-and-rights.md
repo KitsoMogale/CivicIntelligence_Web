@@ -1,54 +1,51 @@
 # 7. Laws and rights
 
-Help users understand the country's legal framework, institutions, rights and public procedures through inspectable legal evidence.
+Help users understand a country's rules, rights, courts and public processes, with links to the documents behind the explanation.
 
-## Categories to learn
+## What users can learn
 
-- **Constitution and rights:** constitutional principles, rights frameworks and documented limitations.
-- **Sources of law:** legislation, regulations, case law and recognized customary or other legal systems as applicable.
-- **Institutions and jurisdiction:** courts, tribunals, regulators and their legal responsibilities.
-- **Lawmaking and change:** enactment, amendments, commencement, repeal and review.
-- **Public participation and remedies:** documented complaint, information-request and review processes.
-- **Everyday legal concepts:** explain general concepts and how to find the applicable official material.
+- **Constitution and rights:** basic rules, rights and their stated limits.
+- **Types of law:** laws, regulations, court decisions and traditional rules recognized by the country.
+- **Legal bodies:** courts, tribunals and regulators, and where their powers apply.
+- **Changes to law:** how rules are made, changed, brought into use or removed.
+- **Public processes:** complaints, information requests, participation and review.
+- **Legal terms:** simple explanations and how to find official material.
 
-Separate what an instrument states, how an institution describes a process and how a court has interpreted a provision.
+Keep separate what a law says, what a public guide describes and what a court has ruled.
 
-## Interactive learning
+## How users can explore
 
-| User activity               | App accommodation                                                            |
-| --------------------------- | ---------------------------------------------------------------------------- |
-| Ask what a right means      | A plain-language explanation beside cited provisions and context             |
-| Select a court or regulator | Inspect its jurisdiction, role, source material and documented relationships |
-| Follow a procedure          | A sourced process diagram with relevant stages and exceptions                |
-| Explore a legal change      | A timeline separating publication, commencement, amendment and repeal        |
-| Ask where a rule applies    | Match the correct jurisdiction and effective period before displaying it     |
+| User wants to               | The app can show                                       |
+| --------------------------- | ------------------------------------------------------ |
+| Understand a right          | A plain explanation beside the relevant legal text     |
+| Select a court or regulator | Its role, area of responsibility and sources           |
+| Follow a process            | Sourced steps, including important exceptions          |
+| Explore a legal change      | A timeline of publication and dates when rules applied |
 
-Legal text should open in a readable document/passage view with enough surrounding context. A short excerpt is not a substitute for the full instrument.
+Show the relevant passage with enough surrounding text. Let the user open the full document.
 
-## AI-orchestrated example
+## Example with AI
 
-**Question:** "How can the public participate in making a law here?"
+**Question:** "How can people help shape a new law?"
 
-AI resolves the jurisdiction, retrieves the responsible institution's published process and relevant legal provisions, and checks the material's date and status. It shows a concise process flow and links each important step to its evidence.
+AI checks the country, the responsible body and the published process. It shows the supported steps, explains them and links them to sources.
 
-If the relevant process is not reviewed, AI can explain the available institutional roles and offer the official source link. It must not invent consultation deadlines, filing requirements or a personalized legal outcome.
+If that process is not available, AI can explain the public bodies the app does know about and offer official links. It must not invent deadlines, forms, requirements or a likely outcome for someone's case.
 
-Follow-ups can include "Read the cited provision," "Show the responsible institution" or "Explain how this process changed."
+## Information and app changes needed
 
-## Evidence and integration
+Use official constitutions, government notices, laws, court decisions and regulator publications. Save the document name, section, version, area where it applies, changes and relevant dates.
 
-Use official constitutions, gazettes, consolidated legislation, court judgments, regulator publications and other responsible legal publishers. Retain instrument identifiers, jurisdiction, section/paragraph references, amendments, effective intervals and the version consulted.
+Add support for reading and linking exact passages. Keep legal powers separate from simple map boundaries. Explain how different legal systems work together where the country recognizes more than one.
 
-Add structured legal-document and claim/passage records. Model legal authority and jurisdiction separately from geographic containment. Where different legal systems coexist, describe their documented scope and interaction instead of imposing one national hierarchy.
+Finding similar text or a graph connection does not establish that a rule applies to a person's situation. Finding a document today does not prove that it is still in force.
 
-Textual similarity or a graph path does not establish that a rule applies to a user's circumstances. General civic learning can work from reviewed material; requests for case-specific interpretation need to make evidential limits clear.
+## What already works
 
-Historical material should remain explicitly historical. Retrieving a document today does not establish that it is currently in force.
+The app has some constitutional and government information, law-section navigation and sources, especially for South Africa. A full legal library, document-version tools and detailed rights lessons are still planned.
 
-**Current foundation:** sourced constitutional/institutional records, legal-domain navigation and source details, especially for South Africa. A versioned legal corpus, cited-passage interface, jurisdiction tools and comprehensive rights/procedure lessons remain proposed work.
+## How to check it
 
-## Learning outcome and completion check
+Users should be able to find the responsible body and a cited rule. Check where the rule applies, its version and the difference between publication and start dates. Process diagrams must not add unsupported requirements.
 
-The user can identify an applicable institution, find a cited legal provision and distinguish its publication date from its effective date. Verify jurisdiction, instrument version, passage links and that process diagrams do not add unsupported requirements.
-
-Continue to [government](03-government.md), [administrative divisions](04-administrative-divisions.md) or [public services](08-public-services.md).
+Continue to [government](03-government.md), [country divisions](04-administrative-divisions.md) or [public services](08-public-services.md).

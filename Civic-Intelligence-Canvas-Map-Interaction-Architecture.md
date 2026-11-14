@@ -1,256 +1,225 @@
-# Civic Intelligence — Canvas & Map Interaction Architecture
+# Civic Intelligence — How the map, views and AI work together
 
-## 1. Product principle
+This document explains the app's design. It describes both existing features and planned work. See [the website guide](website-guide.md) for what is built today.
 
-Civic Intelligence is an **AI-directed, interactive knowledge canvas** for understanding countries. The map is the geographical foundation, not the entire interface. The product combines:
+## 1. Main idea
 
-- **Knowledge structure:** country → regions → domains → entities → relationships → evidence.
-- **Five visualization modes:** geographical map, hierarchy, relationship graph, system flow, and data/timeline charts.
-- **AI canvas controller:** interprets user intent, retrieves sourced knowledge, selects a suitable view, and issues validated display actions with explanations.
+Civic Intelligence helps people learn about countries by asking questions and exploring maps, diagrams and charts.
 
-The user must be able to perform the same core navigation and manipulation manually. AI is an orchestrator, not a replacement for controls.
+The map gives a sense of place. Other views explain organizations, connections, processes, numbers and history.
+
+The main parts are:
+
+- **Checked information:** countries, areas, topics, places, organizations, connections and sources.
+- **Interactive views:** maps, organization diagrams, connection graphs, process diagrams and charts.
+- **AI as the middleman:** understand the question, find checked facts, choose what to show and explain it.
+
+Users can also explore with ordinary controls. They do not need AI for every click.
 
 ```text
-User interaction / natural language
-              ↓
-      AI Canvas Controller
-  intent → retrieval → plan → actions
-              ↓
-    Shared Exploration State
-              ↓
-Map | Hierarchy | Graph | Flow | Charts
+User asks a question or clicks something
+                 ↓
+AI finds the facts and plans a useful view
+                 ↓
+The app checks the requested changes
+                 ↓
+Shared view settings are updated
+                 ↓
+Map | Organization | Connections | Process | Charts
 ```
 
-## 2. Five composable map layers
+## 2. Five groups of map layers
 
-Treat map layers as independently enabled, reordered, filtered, and styled components.
+A layer is one set of information that can be shown on the map. Users should be able to switch layers on or off, change their order, filter them and make them more transparent.
 
-| Layer                         | Data                                                              | Rendering and interactions                                                                                        |
-| ----------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
-| 1. Geography                  | Countries, provinces, municipalities, cities, boundaries          | Vector polygons, labels, hover/select, drill-down, fly-to                                                         |
-| 2. Statistical overlays       | Population, GDP, employment, healthcare, education, etc.          | Choropleths, heatmaps, proportional markers, legends, time and metric filters                                     |
-| 3. Entities and assets        | Mines, hospitals, institutions, power stations, businesses, ports | Points/polygons, clustering, search, selection, details                                                           |
-| 4. Networks and relationships | Roads, rail, transmission, pipelines, supply links, dependencies  | Geographical line networks when routes are known; abstract relationship edges only when explicitly differentiated |
-| 5. Knowledge and AI overlays  | Annotations, evidence, explanations, selections, comparisons      | Floating panels, highlights, callouts, traces, contextual cards                                                   |
+| Layer group                 | What it contains                                          | What users can do                                        |
+| --------------------------- | --------------------------------------------------------- | -------------------------------------------------------- |
+| Geography                   | Countries, regions, towns and boundaries                  | Select an area and explore smaller areas where supported |
+| Statistics                  | Population, jobs, education and other figures             | Choose a measure and date; read the legend and source    |
+| Places and organizations    | Mines, hospitals, public bodies, power stations and ports | Click a dot or shape to open checked details             |
+| Networks and connections    | Roads, rail, utility lines and documented relationships   | Follow known routes or inspect explained connections     |
+| Explanations and selections | Highlights, sources, notes and comparisons                | Understand the view and ask a follow-up question         |
 
-Every layer should expose: `id`, `type`, `visible`, `opacity`, `zIndex`, `filters`, `style`, `sourceId`, `legend`, and `minZoom`/`maxZoom` where relevant. Preserve provenance and time validity of displayed features.
+Each layer needs a name, source, visibility setting, order, transparency and relevant filters. Explain its colours, dates and accuracy. Some layers should only appear at suitable zoom levels.
+
+The app currently supports eleven known layer IDs within these groups. Adding a new layer type requires app changes as well as data.
 
 ### Map controls
 
-- Pan, zoom, rotate (where supported), reset bearing, fit selection, and fly-to location.
-- Country/region/city selection with breadcrumbs and back/forward history.
-- Toggle/reorder layers, adjust opacity, choose a metric and time period.
-- Search and filter by geographical region, industry, entity type, relationship, and date.
-- Click/hover markers, polygons, lines, and clusters; inspect details and sources.
-- Isolate/highlight a selection and trace known relationships.
-- Save and restore view state.
-- On mobile/WebView, support touch pan/pinch, accessible controls, and bottom sheets.
+- Move, zoom, rotate where supported, reset direction and fit a selection.
+- Choose a country, area or place and follow the path back.
+- Turn layers on or off, reorder them and adjust transparency.
+- Choose dates, measures and filters.
+- Click dots, areas, lines or groups of nearby dots to inspect details.
+- Highlight a selection, hide unrelated items or follow documented links.
+- Save and restore the current view.
+- Support touch, keyboard controls and readable panels on phones.
 
-## 3. Semantic zoom and information density
+Keep permanent entity name cards and hover name cards removed. Details open on click. Extra panels can be closed and reopened while keeping the selection and map position. Required map credits remain available.
 
-Zooming should change **which knowledge is displayed**, not merely scale icons.
+## 3. Zoom and amount of detail
 
-| Geographic scope | Default content                                               |
-| ---------------- | ------------------------------------------------------------- |
-| World            | Countries, boundaries, high-level indicators                  |
-| Country          | Provinces, major cities, national systems                     |
-| Province/region  | Municipalities, industrial clusters, infrastructure corridors |
-| City/district    | Individual institutions, businesses, facilities               |
-| Entity           | Detailed entity record, documented relationships, evidence    |
+Zoom should help decide which information is useful, rather than only making symbols bigger.
 
-Implement geographic scope and information density as **separate controls**. Users can choose `overview`, `regional`, or `detailed` density, subject to performance and data availability. Use feature clustering, label collision management, viewport-based loading, and progressively detailed geometry. Do not imply exact locations or relationships when data is unavailable.
+| View of the map  | Useful information when available                   |
+| ---------------- | --------------------------------------------------- |
+| World            | Countries and basic comparisons                     |
+| Country          | Main areas, major places and national systems       |
+| Region           | Local areas, industries and infrastructure          |
+| Town or district | Individual facilities, businesses and public bodies |
+| Selected item    | Its details, documented connections and sources     |
 
-## 4. Five primary visualization modes
+Keep zoom separate from the amount of information shown. The existing choices are overview, regional and detailed. Explanation depth is another separate choice.
 
-### A. Geographic map
+Group nearby dots and load more map detail only when needed. Do not invent exact locations or links when the source only supports a rough position.
 
-Question: **Where is something?**
+## 4. Choosing the right view
 
-MapLibre GL JS renders geographic features, thematic overlays, markers, and known spatial networks. Supports country/region drill-down and geographic filtering.
+### A. Map — where is it?
 
-### B. Hierarchy diagram
+MapLibre draws places, boundaries, available statistics and known physical networks. Users can select areas, zoom in and filter the map.
 
-Question: **How is it organized?**
+### B. Organization diagram — how is it organized?
 
-React Flow renders parent-child structures (government → ministries → departments, company → divisions). Support collapse/expand, node details, fit view, and layout direction.
+React Flow shows structures such as a ministry and its departments. Users can open or close parts of a diagram and inspect each item.
 
-### C. Relationship graph
+Only show a chain of authority where the source supports it. Keep independent bodies and separate systems distinct.
 
-Question: **What is connected, and how?**
+### C. Connection graph — what is linked?
 
-Cytoscape.js (or a suitable graph renderer) shows ownership, regulation, supply, dependency, and other typed edges. Support neighbors, path highlighting, filtering, and evidence inspection. Avoid rendering huge unfiltered graphs.
+Cytoscape shows links such as ownership, regulation and supply. Users can inspect a line, follow nearby connections and filter by type or date.
 
-### D. System flow
+Explain what each arrow means. Keep large graphs focused on the question.
 
-Question: **How does it work or move?**
+### D. Process diagram — how does it work?
 
-Render process steps, material/energy/money flows, inputs/outputs, and dependencies. Use directional edges, labels, and quantities only when sourced. A Sankey or flow layout may be selected according to the data.
+Show steps such as producing electricity, moving it and delivering it to users. Use quantities only when there is a source.
 
-### E. Data and timeline
+A process diagram can explain a system without proving a particular physical route exists.
 
-Question: **How much, how different, or how has it changed?**
+### E. Charts and timelines — how much, or what changed?
 
-ECharts renders time series, comparisons, bars, distributions, and timelines. Show units, source, period, and missing-data treatment.
+ECharts helps show comparisons, changes over time, totals and distributions. Always include units, dates, sources and missing values.
 
-### Synchronized view layouts
+The app presents these view types through seven tabs: Map, Hierarchy, Relationships, System flow, Data, Compare and History.
 
-1. **Single:** replace the main canvas while preserving exploration context.
-2. **Overlay:** float charts, hierarchies, or entity panels over the map.
-3. **Split:** show synchronized map + graph/chart side by side (later phase).
+### Ways to arrange views
 
-Selection, geographical context, filters, and time should carry across modes. Selecting a mine on a map should highlight that same entity in a graph, when present.
+1. **Single:** one main view.
+2. **Overlay:** a closable diagram or chart above the map.
+3. **Split:** the map beside a diagram or chart; stacked on smaller screens.
 
-## 5. AI-directed canvas manipulation
+Keep the selected country, area, item, dates and filters when changing views. Selecting a mine on the map should select the same mine in a graph when it is present.
 
-The AI translates requests into **validated, declarative actions**. It never sends executable UI code.
+## 5. How AI changes the screen
 
-| Action family | Examples                                                                                   |
-| ------------- | ------------------------------------------------------------------------------------------ |
-| Navigation    | `FLY_TO`, `FOCUS_REGION`, `FIT_VIEW`, `RESET_VIEW`                                         |
-| Layers        | `ADD_LAYER`, `REMOVE_LAYER`, `SET_LAYER_VISIBILITY`, `SET_LAYER_OPACITY`, `REORDER_LAYERS` |
-| Filtering     | `SET_FILTERS`, `SET_TIME_RANGE`, `SET_INFORMATION_DENSITY`                                 |
-| Selection     | `SELECT_ENTITIES`, `HIGHLIGHT_RELATIONSHIPS`, `ISOLATE_ENTITIES`, `CLEAR_SELECTION`        |
-| Visualization | `SET_VISUALIZATION_MODE`, `LOAD_HIERARCHY`, `LOAD_GRAPH`, `LOAD_FLOW`, `CREATE_CHART`      |
-| Layout        | `SET_LAYOUT`, `OPEN_DETAIL_PANEL`, `FIT_CANVAS`                                            |
-| Explanation   | `ADD_ANNOTATION`, `SHOW_SOURCES`, `TRACE_DEPENDENCY`                                       |
-| History       | `UNDO`, `REDO`, `RESTORE_VIEW`                                                             |
+AI sends allowed commands, and the app checks them before applying them. AI must not send code for the browser to run.
 
-### Example: platinum mines and electricity
+Examples from the wider app command rules:
 
-User: “Show platinum mining operations around Rustenburg and how they depend on electricity infrastructure.”
+| What needs to change    | Existing command examples                                                   |
+| ----------------------- | --------------------------------------------------------------------------- |
+| Country or map position | SELECT_COUNTRY, FLY_TO, FOCUS_REGION, RESET_VIEW, FIT_CANVAS                |
+| Layers                  | SET_LAYER_VISIBILITY, SET_LAYER_OPACITY, REORDER_LAYERS                     |
+| Filters and detail      | SET_FILTERS, SET_LAYER_FILTERS, SET_TIME_RANGE, SET_INFORMATION_DENSITY     |
+| Selection               | SELECT_ENTITIES, HIGHLIGHT_RELATIONSHIPS, ISOLATE_ENTITIES, CLEAR_SELECTION |
+| View or chart           | SET_VISUALIZATION_MODE, CREATE_CHART, EXPAND_NODE                           |
+| Layout                  | SET_LAYOUT                                                                  |
+| Connections             | TRACE_NETWORK                                                               |
+| History                 | UNDO, REDO                                                                  |
 
-1. Resolve Rustenburg and focus the map on its area.
-2. Enable mining and power infrastructure layers.
-3. Filter operations by commodity and geography.
-4. Retrieve **documented** infrastructure dependencies.
-5. Highlight verified connections, distinguish uncertain/inferred relationships, and avoid inventing transmission routes.
-6. Open a relationship graph as an overlay or split view.
-7. Explain the result with sources and identify missing information.
+The AI connection exposes only part of this list today. See [how AI connects everything](docs/country-learning/ai-orchestration.md) for the exact limits. New layers, document reading and lessons need further work.
 
-Actions must be reversible, with loading/error states and clear user feedback.
+### Example: mining and electricity
 
-## 6. Shared exploration state
+User: "Show platinum mines around Rustenburg and explain their electricity connections."
 
-Keep map rendering, graph rendering, and AI orchestration separate. Use a central state store (e.g., Zustand) with a common entity ID system.
+1. Find Rustenburg and focus the map.
+2. Show the available mining and power information.
+3. Find relevant operations and checked connections.
+4. Highlight only links supported by sources.
+5. Show a focused connection graph beside or above the map.
+6. Explain the result, sources and missing facts.
 
-```ts
-type VisualizationMode = "map" | "hierarchy" | "graph" | "flow" | "chart";
-type CanvasLayout = "single" | "split" | "overlay";
-type InformationDensity = "overview" | "regional" | "detailed";
+Do not guess transmission routes or suppliers from nearby locations. Show loading and errors clearly, and let the user undo changes.
 
-type CanvasState = {
-  geography: {
-    countryId: string | null;
-    regionId: string | null;
-    center: [number, number]; // longitude, latitude
-    zoom: number;
-  };
-  visualization: {
-    mode: VisualizationMode;
-    layout: CanvasLayout;
-    density: InformationDensity;
-  };
-  layers: Array<{
-    id: string;
-    visible: boolean;
-    opacity: number;
-    zIndex: number;
-    filters: Record<string, unknown>;
-  }>;
-  selection: {
-    entityIds: string[];
-    relationshipIds: string[];
-  };
-  time: {
-    year: number | null;
-    range: [string, string] | null;
-  };
-};
-```
+## 6. Shared view settings
 
-A backend AI response should contain an explanation, citations, and a list of schema-validated actions. Resolve identifiers and check authorization, bounds, and supported operations before applying any action. Never let an LLM run arbitrary JavaScript or write directly to the client state.
+All views should use the same saved settings for:
 
-## 7. Architecture and responsibilities
+- Selected country, area and items.
+- Map position, zoom and direction.
+- View type, layout and amount of detail.
+- Visible layers, their order and transparency.
+- Filters, dates and comparisons.
+- Selected connections and highlighted paths.
 
-```text
-Next.js + React + TypeScript
-  ├─ Map renderer: MapLibre GL JS
-  ├─ Hierarchy / flow renderer: React Flow
-  ├─ Relationship renderer: Cytoscape.js
-  ├─ Charts renderer: Apache ECharts
-  ├─ Shared exploration state: Zustand
-  └─ AI interaction + action dispatcher
-                │
-                ▼
-FastAPI backend
-  ├─ Knowledge / geographic / statistical APIs
-  ├─ Source retrieval and evidence handling
-  ├─ AI intent planner and tool orchestration
-  └─ Action schema validation
-                │
-                ▼
-PostgreSQL + PostGIS + pgvector
-  ├─ Country and regional geometries
-  ├─ Entities, domains, relationships
-  ├─ Datasets, dates, source provenance
-  └─ Retrieval indexes
-```
+Each real place or organization needs one stable ID so every view refers to the same item. Keep display drawing separate from AI planning and information storage.
 
-Design the responsive website for future React Native WebView embedding. Use mobile-friendly gesture handling and avoid unnecessarily heavy rendering.
+The actual field names are in [exploration.ts](lib/exploration.ts). The [store](lib/store.ts) keeps the current settings, and [command checks](lib/actions.ts) decide which changes are allowed.
 
-## 8. Codex implementation priorities
+An AI answer should include an explanation, sources and valid commands. Check the country, IDs, map limits and supported features before changing the screen. Reject old requests if the user has moved to another place or question.
 
-### Phase 1 — Canvas foundation
+## 7. Main software parts
 
-- Build responsive workspace shell with top toolbar, left knowledge explorer, central canvas, and collapsible AI/detail panel.
-- Implement MapLibre world map and country selection.
-- Add South Africa and its administrative hierarchy from sourced geodata.
-- Implement map camera controls, selection, and breadcrumbs.
-- Establish shared `CanvasState` and action dispatcher.
+| Part                          | Responsibility                                               |
+| ----------------------------- | ------------------------------------------------------------ |
+| Next.js, React and TypeScript | Website, controls and server routes                          |
+| MapLibre                      | Map drawing                                                  |
+| React Flow                    | Organization and process diagrams                            |
+| Cytoscape                     | Connection graphs                                            |
+| ECharts                       | Charts and comparisons                                       |
+| Zustand                       | Shared view settings                                         |
+| AI tools and command checks   | Find facts, explain them and request safe display changes    |
+| Optional FastAPI service      | Read checked information from a separate Python service      |
+| Optional PostgreSQL database  | Save country information, places, links, figures and sources |
+| PostGIS and pgvector          | Support map data and searches by meaning in the database     |
 
-### Phase 2 — Layer and semantic zoom engine
+The app can use its bundled information without the optional database. The current AI connection uses a Next.js server route.
 
-- Add layer registry and layer controls (visibility, order, opacity, filters).
-- Add entity markers, clustering, statistical overlays, and source legends.
-- Implement scope-dependent loading and information-density modes.
-- Add geographic drill-down and synchronized entity selection.
+Keep the website usable on phones and suitable for a future mobile app that displays the website inside it.
 
-### Phase 3 — Five visualization modes
+## 8. Build in stages
 
-- Add hierarchy, graph, flow, and chart renderers.
-- Implement mode switching without losing country, selection, or filters.
-- Add floating detail panels and overlay layouts.
-- Add split layout after single and overlay modes are stable.
+### Stage 1 — Basic workspace
 
-### Phase 4 — AI canvas controller
+Build the page layout, country selection, map controls, details panel and shared settings. Add checked country information using each country's own structure.
 
-- Expose safe read-only knowledge retrieval tools.
-- Define typed, validated canvas action schemas.
-- Implement AI planning → retrieve → explain → action sequence.
-- Show sources, missing data, and action history.
-- Add tests for invalid action payloads and context preservation.
+### Stage 2 — Layers and detail
 
-## 9. Acceptance criteria
+Add layer controls, dots, charts on the map and clear legends. Load detail as users explore. Keep selections linked across views.
 
-- A user can select South Africa, drill down to a region, and return without losing state.
-- A user can independently toggle two thematic layers and change density.
-- Entity selections persist across map and graph views.
-- A hierarchy can be expanded/collapsed and a graph can highlight typed relationships.
-- A chart shows data units, time range, and sources.
-- AI can change the visible layers and mode using only allowed actions.
-- Unsupported or unsourced relationships are not presented as verified facts.
-- The interface is usable on desktop and touch devices.
+### Stage 3 — Other views
 
-## 10. Guiding principle
+Add organization, connection, process and chart views. Support single, overlay and split layouts without losing the current selection.
 
-**The map is the permanent geographical reference, not a forced container for all information.** Physical assets belong on the map; institutional structures belong in hierarchies; ownership and dependencies belong in graphs; processes belong in flows; and measurements belong in charts.
+### Stage 4 — AI coordinator
 
-Civic Intelligence's defining capability is transforming the **same sourced knowledge** into different, synchronized, interactive visual representations, with AI directing those transformations and explaining them.
+Connect tools that read checked facts. Add allowed display commands, source-based explanations, cancellation and undo. Check invalid requests and changes made while AI is loading.
 
-## 11. Country learning topics and AI orchestration
+Much of stages 1–3 is already built. Full AI coordination and the broader learning features still need work.
 
-The [country learning design](docs/country-learning/README.md) develops ten learning topics: geography, people, government, administrative divisions, economy, history, laws and rights, public services, infrastructure, and international relations.
+## 9. How to check the result
 
-Each topic describes categories, interactive learning, an AI-orchestrated example, evidence requirements, current support and proposed additions. The shared [AI orchestration guide](docs/country-learning/ai-orchestration.md) defines the question → retrieval → display → explanation loop; the [integration guide](docs/country-learning/integration-and-delivery.md) maps it to the existing code and delivery stages.
+- Users can select a country, explore an available area and return without losing their place.
+- Two layers can be controlled separately.
+- The same item stays selected across maps and diagrams.
+- Diagrams can open and close sections; graphs can explain their links.
+- Charts show units, dates, sources and missing values.
+- AI can use only supported commands and checked information.
+- Missing or uncertain connections are explained honestly.
+- Desktop, touch and keyboard controls work.
 
-These documents specify future learning capabilities without treating them as implemented features. They preserve country-specific structures, source dates, reversible display changes, manual exploration and details on demand.
+## 10. Main rule
+
+Use the map to show places. Use other views when they explain something better.
+
+The app should let people explore the same checked information in several connected ways, with AI helping them choose and understand the next step.
+
+## 11. Learning topics
+
+The [country learning guides](docs/country-learning/README.md) cover geography, people, government, country divisions, economy, history, laws and rights, public services, infrastructure and international relations.
+
+Each explains what users can learn, how they can explore it, an example with AI, the information needed and what already works.
+
+Read [the AI guide](docs/country-learning/ai-orchestration.md) for the question → facts → screen → explanation process. Read [the build guide](docs/country-learning/integration-and-delivery.md) for the work and code involved.

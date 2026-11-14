@@ -1,132 +1,148 @@
-# Integrating the learning topics
+# How to build the learning topics into the app
 
-This guide connects the [topic specifications](README.md) to the current repository. It proposes future changes; it does not add runtime features.
+This guide connects the [ten topics](README.md) to the current project. It explains the work needed; it does not mean those features are already built.
 
-## Reuse the current architecture
+## Reuse what the app has
 
-| Existing foundation                  | Role in the learning experience                                           | Relevant code                                                                                                                                                                                                                                    |
-| ------------------------------------ | ------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Country profiles and reference areas | Country terminology, boundary dates, coverage and supported views         | [country-profiles.ts](../../lib/country-profiles.ts), [country API](../../app/api/countries/route.ts), [world coverage](../world-coverage.md)                                                                                                    |
-| Reviewed knowledge and retrieval     | Stable entity IDs, typed relationships, sources and datasets              | [types.ts](../../lib/types.ts), [knowledge.ts](../../lib/knowledge.ts), [retrieval.ts](../../lib/retrieval.ts)                                                                                                                                   |
-| Shared exploration state             | Country, area, camera, selections, layers, time and display settings      | [exploration.ts](../../lib/exploration.ts), [store.ts](../../lib/store.ts)                                                                                                                                                                       |
-| Validated actions and history        | Shared route for manual and AI changes, bounded reversible batches        | [actions.ts](../../lib/actions.ts), [canvas-reducer.ts](../../lib/canvas-reducer.ts)                                                                                                                                                             |
-| Geography and entity rendering       | Boundary focus, dots, clustering, selected feature details                | [WorldMap.tsx](../../components/WorldMap.tsx), [CountryAreas.tsx](../../components/CountryAreas.tsx), [MapDetails.tsx](../../components/MapDetails.tsx)                                                                                          |
-| Other renderers                      | Institutional structures, connections, flows, statistics and events       | [GraphCanvas.tsx](../../components/GraphCanvas.tsx), [RelationshipCanvas.tsx](../../components/RelationshipCanvas.tsx), [ComparisonCanvas.tsx](../../components/ComparisonCanvas.tsx), [TimelineCanvas.tsx](../../components/TimelineCanvas.tsx) |
-| Assistant and orchestration plumbing | Question input, reviewed details, streamed explanation and queued actions | [Assistant.tsx](../../components/Assistant.tsx), [agent.ts](../../lib/agent.ts), [chat route](../../app/api/chat/route.ts)                                                                                                                       |
-| Investigations and reports           | Save the exploration and retain evidence outside the conversation         | [investigations.ts](../../lib/investigations.ts), [snapshot.ts](../../lib/snapshot.ts), [report.ts](../../lib/report.ts)                                                                                                                         |
+| Part of the app        | How it helps learning                                                 | Main files                                                                                                                                                                                                                                       |
+| ---------------------- | --------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Country profiles       | Country names, local divisions, boundary dates and available features | [country-profiles.ts](../../lib/country-profiles.ts), [country API](../../app/api/countries/route.ts), [world information](../world-coverage.md)                                                                                                 |
+| Checked information    | Places, organizations, links, figures and sources                     | [types.ts](../../lib/types.ts), [knowledge.ts](../../lib/knowledge.ts), [retrieval.ts](../../lib/retrieval.ts)                                                                                                                                   |
+| Shared view settings   | Selected country, area, item, map position, layers and dates          | [exploration.ts](../../lib/exploration.ts), [store.ts](../../lib/store.ts)                                                                                                                                                                       |
+| Commands and undo      | Apply checked changes from either the user or AI                      | [actions.ts](../../lib/actions.ts), [canvas-reducer.ts](../../lib/canvas-reducer.ts)                                                                                                                                                             |
+| Maps and details       | Show boundaries and dots, then open details on click                  | [WorldMap.tsx](../../components/WorldMap.tsx), [CountryAreas.tsx](../../components/CountryAreas.tsx), [MapDetails.tsx](../../components/MapDetails.tsx)                                                                                          |
+| Other views            | Show organization, connections, numbers and events                    | [GraphCanvas.tsx](../../components/GraphCanvas.tsx), [RelationshipCanvas.tsx](../../components/RelationshipCanvas.tsx), [ComparisonCanvas.tsx](../../components/ComparisonCanvas.tsx), [TimelineCanvas.tsx](../../components/TimelineCanvas.tsx) |
+| Assistant              | Accept questions, show explanations and request screen changes        | [Assistant.tsx](../../components/Assistant.tsx), [agent.ts](../../lib/agent.ts), [chat route](../../app/api/chat/route.ts)                                                                                                                       |
+| Saved work and reports | Keep a view, notes and sources for later                              | [investigations.ts](../../lib/investigations.ts), [snapshot.ts](../../lib/snapshot.ts), [report.ts](../../lib/report.ts)                                                                                                                         |
 
-The current layer registry is closed to eleven IDs. New service, environment or legal overlays require deliberate schema, renderer, control and saved-state migration work. They cannot be introduced by an AI request alone.
+The app currently accepts eleven known layer names. A new school, climate or legal-area layer needs changes to the data rules, map drawing, controls and saved views. AI cannot create a working layer just by asking for it.
 
-## Topics and technical domains
+## How topics fit the existing sections
 
-Keep the ten learning topics as a separate taxonomy that can tag records and learning material. Existing entities have one primary technical domain; a proposed many-to-many topic index allows the same record to support several lessons without duplicating it.
+The app has six main information sections. A learning topic can use more than one.
 
-| Learning topic           | Existing technical domains or cross-cutting features                 |
-| ------------------------ | -------------------------------------------------------------------- |
-| Geography                | Country/area geography; relevant infrastructure and industry records |
-| People                   | society; population indicators and regional statistics               |
-| Government               | government and law                                                   |
-| Administrative divisions | Geography and government; country-specific schemes                   |
-| Economy                  | economy and industry; relevant infrastructure                        |
-| History                  | Dated events and historical evidence across all domains              |
-| Laws and rights          | law and government                                                   |
-| Public services          | society, government and infrastructure                               |
-| Infrastructure           | infrastructure and industry; geographic networks                     |
-| International relations  | government, economy and law; future cross-country relationships      |
+| Learning topic          | Existing sections or features it can use                     |
+| ----------------------- | ------------------------------------------------------------ |
+| Geography               | Country maps, areas, infrastructure and industries           |
+| People                  | Society and population statistics                            |
+| Government              | Government and law                                           |
+| Country divisions       | Maps and government                                          |
+| Economy                 | Economy, industries and infrastructure                       |
+| History                 | Events and older information from every section              |
+| Laws and rights         | Law and government                                           |
+| Public services         | Society, government and infrastructure                       |
+| Infrastructure          | Infrastructure, industries and maps                          |
+| International relations | Government, economy, law and future country-to-country links |
 
-Topic navigation can appear as a compact "Learn about" control or as suggested questions in the assistant. It should not add ten permanent overlay cards or force a redesign of the existing sidebar.
+Keep one entry for each real place or organization and tag it with the topics that use it. A compact "Learn about" menu or suggested questions can help users choose. Avoid ten permanent cards covering the map.
 
-## Proposed knowledge additions
+## Information we need to add
 
-These are design requirements for future schema work, not fields that every existing record already supports.
+An ID is the app's unique name for an entry. Keeping the same ID across views lets a map dot, chart item and details panel refer to the same thing.
 
-| Record or capability    | Information to retain                                                                                                          |
-| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
-| Topic definition        | Stable topic ID, localized label, categories, related topics and example learning questions                                    |
-| Topic membership        | Entity/document/observation ID, topic IDs and specific learning concepts                                                       |
-| Coverage record         | Country, topic/category, available record types, spatial scope, periods, capability gaps and source-review status              |
-| Administrative scheme   | Scheme ID, local terms, area types, effective interval, typed parent or overlap relationships and geometry editions            |
-| Claim or passage        | Subject, statement/predicate, source ID, document location, relevant dates and editorial conflict notes                        |
-| Statistical observation | Measure definition, value/null, unit, denominator, geography ID, observation period, method, source and boundary compatibility |
-| Spatial evidence        | Verified geometry or locator, original provider ID, precision, boundary/route edition, licence and source dates                |
-| Learning activity       | Goal, prerequisite concepts, cited evidence, interaction steps, optional questions and evidence-based feedback                 |
-| Learning session        | Active topics, explanation depth, current goal, visited steps and referenced catalogue version                                 |
+| Information        | What to save                                                                                  |
+| ------------------ | --------------------------------------------------------------------------------------------- |
+| Topic              | Its name, categories, related topics and example questions                                    |
+| Topic links        | Which places, organizations, figures and documents belong to each topic                       |
+| What is available  | Country, topic, supported features, places and dates covered, sources and missing information |
+| Country divisions  | Local names, types of areas, how areas fit or overlap, dates and boundary versions            |
+| Facts and passages | The statement, its subject, source, document section, dates and any disagreement              |
+| Figures            | What was measured, value or missing value, unit, area, period, source and calculation method  |
+| Map information    | Checked location or shape, accuracy, source ID, dates, version and reuse terms                |
+| Learning activity  | Goal, sources, steps, optional questions and feedback                                         |
+| Learning progress  | Current topic, goal, explanation level, completed steps and version of the information used   |
 
-Existing entities, relationships, indicators, sources and events cover parts of these needs. Extend them deliberately or add related records where their current shape is insufficient. Do not hide structured statistical or legal data in an untyped description.
+Some of this already exists. Add clear fields where more detail is needed. Do not put complex legal rules or statistics into a vague description.
 
-A topic's availability should be assessed per country and subcategory. For example, published population observations do not imply language data, and an institution directory does not imply current officeholder coverage.
+Check what is available for each country and topic. Having population figures does not mean language figures exist. A list of government bodies does not mean their current leaders are known.
 
-Coverage should explain availability and limitations directly: "Historical country totals, 2014–2024" or "Reference boundaries only; local service coverage unavailable." Avoid a single numeric completeness score across unlike countries and topics.
+Describe limits directly: "Country totals for 2014–2024" or "Older boundaries only; local services not mapped." A single completeness score would hide these differences.
 
-## Geography, time and comparisons
+## Match places, dates and numbers
 
-Join observations to stable source geography IDs and compatible boundary editions. If a statistical region and a current administrative region differ, preserve both schemes; a reviewed crosswalk may describe their relationship. Do not divide a national or provincial value across smaller polygons to fill the map.
+Link figures to the exact areas they describe. A census area may differ from a current council area. Keep both sets of boundaries and explain any checked way of matching them.
 
-Keep separate clocks for observation periods, institutional/legal validity, boundary editions and source retrieval. A timeline control must say which clock it changes. Changing the selected year should not imply that every layer has a matching historical version.
+Do not divide a country's total across smaller areas just to fill a map.
 
-Country comparisons require matching definitions and units as well as a suitable common period. Keep nulls, negative values and zero distinct. Currency conversions, derived rates and other calculations need explicit formulas, source inputs and dates.
+Keep these dates separate:
 
-## Knowledge acquisition and review
+- When something was measured.
+- When a law or responsibility applied.
+- Which boundary version is shown.
+- When the source was collected or checked.
 
-Use source families appropriate to each topic, prioritizing responsible public institutions, statistical agencies, primary documents and documented research methods. Exact sources, licences and update schedules must be reviewed for each country before import; the topic guides do not certify any unimported dataset.
+A year selector must say which information it changes. It should not suggest every layer has a map or figure for that year.
 
-Source acquisition feeds a staging/review pipeline: retain the publisher material, check identifiers and dates, review factual meaning, validate joins and geometry, record licences, generate a catalogue release, and then expose the reviewed material to retrieval. AI can help propose mappings and identify gaps; it must not mark its own generated content as verified.
+For comparisons, match the definition, units and period. Keep zero, negative numbers and missing values distinct. Show the method and source figures for currency conversions or other calculations.
 
-Technical validation establishes schema and join correctness, not historical, legal or political truth. Conflicts should remain inspectable rather than being silently reconciled.
+## Check information before adding it
 
-## Deliver in usable slices
+Start with the responsible public bodies, statistics offices, original documents and research that explains its methods. Check the exact source, reuse terms and update needs for each country.
 
-### 1. Define coverage and curate pilot questions
+Before information reaches the app:
 
-Add topic definitions and country/topic coverage contracts. Select a small question set for each topic, identify required evidence and mark questions unsupported where that evidence is missing. Start with existing reviewed coverage; use Botswana and Namibia to test different administrative schemes.
+1. Keep a copy of the source.
+2. Check names, IDs, dates and meaning.
+3. Check map shapes and links between entries.
+4. Record the source and reuse terms.
+5. Save a reviewed version of the information.
+6. Make that version available to the app and AI.
 
-**Exit:** every pilot question has an evidence inventory, a proposed display and an honest availability state.
+AI can suggest sources and help find gaps. Its guesses must not be labelled as checked facts. Software checks can find broken links or invalid shapes; people still need to check factual meaning. Keep source disagreements visible.
 
-### 2. Build direct exploration and details
+## Build it in four stages
 
-Add compact topic navigation and evidence-backed content for one supported slice at a time. Reuse map dots, selections, diagrams, charts, accessible tables and closable details. Add new renderers or layers only when the content requires them.
+### 1. Decide what each topic can answer
 
-**Exit:** a user can complete the pilot interaction manually, inspect sources and save the result without AI.
+Add the topic list and a record of available information for each country. Choose a few starter questions, list the facts they need and mark any missing facts. Start with the information already checked. Use Botswana and Namibia to test different local systems.
 
-### 3. Connect the AI orchestrator
+**Ready when:** every starter question has sources, a suitable view and an honest statement of what is available.
 
-Add bounded topic/profile/indicator/event/document retrieval tools, richer context and the required provider action adapter. Validate dependent batches, check stale context, support cancellation and explain coverage gaps. See [AI orchestration](ai-orchestration.md) for the existing adapter limits.
+### 2. Make the clicks and controls work
 
-**Exit:** natural-language requests reproduce the supported manual journeys using reviewed evidence and reversible actions.
+Build one useful part at a time. Reuse map dots, diagrams, charts, tables and closable details. Add new views only when needed.
 
-### 4. Add learning journeys and expand countries
+**Ready when:** users can explore the starter questions, check sources and save results using the controls, without AI.
 
-Build optional guided sequences, concept explanations and short evidence-backed knowledge checks. Store local progress separately from view history. Expand only the country/topic combinations with reviewed data, terminology and capabilities.
+### 3. Let AI coordinate those features
 
-**Exit:** users can switch between a guided journey and free exploration, resume with evidence-version awareness, and understand what each country actually covers.
+Connect tools for reading topics, places, figures, events and documents. Give AI the relevant view settings. Check commands, support cancellation and stop old requests from changing a new selection. See [the AI guide](ai-orchestration.md) for today's limits.
 
-These phases describe dependencies; a particular topic can reach a later phase while another still awaits source curation. Live credentials can be added when the user is ready; documentation and manual exploration can advance first.
+**Ready when:** a user can ask for the same supported result in ordinary language and undo the changes.
 
-## Validation for each implemented slice
+### 4. Add lessons and more countries
 
-| Area              | What to verify                                                                                                 |
-| ----------------- | -------------------------------------------------------------------------------------------------------------- |
-| Evidence          | Every factual answer and displayed measurement resolves to the actual reviewed evidence                        |
-| Country structure | Local terminology, parallel schemes and reference/current distinctions remain correct                          |
-| Visualization     | IDs and selections agree across views; display choice fits the question                                        |
-| Dates and values  | Periods, definitions, units, nulls, denominators and boundary compatibility remain visible                     |
-| AI behavior       | Unsupported tools/actions fail safely, stale plans are rejected and changes are reversible                     |
-| Learning          | Optional questions have sourced answer guidance; contested interpretation is not treated as a single fact quiz |
-| Accessibility     | Keyboard selection, meaningful text/table alternatives, readable legends and usable mobile panels              |
-| Persistence       | Saved investigations and reports preserve context, sources, coverage notes and applicable versions             |
-| Performance       | Country-scoped requests, progressive geometry, bounded graphs and no full-catalogue model prompt               |
+Add optional guided steps and short questions based on sources. Keep learning progress separate from map history. Add country/topic combinations as their information is checked.
 
-Browser verification should continue to mock public street tiles. New checks should verify learning outcomes and cross-view behavior rather than duplicate internal implementation details.
+**Ready when:** users can move between lessons and free exploration, resume saved work and see what each country supports.
 
-## Worked cross-topic journey
+Different topics can move at different speeds. Live AI keys can be connected later; source checking and manual features can be built first.
+
+## What to check before release
+
+| Area              | Check                                                                                         |
+| ----------------- | --------------------------------------------------------------------------------------------- |
+| Facts             | Answers and figures link to the checked sources                                               |
+| Country setup     | Local names, separate systems and older boundaries are explained correctly                    |
+| Views             | The same item stays selected across views                                                     |
+| Figures and dates | Units, periods, percentages and missing values are clear                                      |
+| AI                | Invalid commands fail safely; old answers do not change new selections; changes can be undone |
+| Learning          | Quiz feedback uses sources and allows for unclear or disputed answers                         |
+| Access            | Keyboard controls, readable legends, tables and phone layouts work                            |
+| Saved work        | Reports and saved views keep the sources, limits and relevant versions                        |
+| Speed             | Load only the needed country data, map detail and graph items                                 |
+
+Automated browser checks should keep using test street tiles rather than send automated traffic to the public map service.
+
+## Example using several topics
 
 Question: "How does electricity connect to mining and jobs in this region?"
 
-1. Resolve the selected region and find reviewed mining and infrastructure records.
-2. Show mapped assets at their documented precision; retrieve sourced ownership, regulation and supply relationships.
-3. Use a split view for the region and a bounded relationship graph. Keep abstract connections distinct from physical networks.
-4. If compatible regional employment observations exist, show their period, definition and source in a chart. Do not infer mine-level employment from a regional total.
-5. Explain the recorded relationships. Proximity alone does not establish an electricity supplier or a causal effect on jobs.
-6. Offer "Explore the electricity system," "Inspect ownership evidence" or "Compare published employment measures" when supported.
+1. Find checked mining and electricity information for the selected region.
+2. Map known locations and read the saved ownership, regulation and supply links.
+3. Show the map beside a small connection graph. Explain which lines show real routes and which only show relationships.
+4. Add employment figures if they describe the right area and period. Do not treat a regional total as the number of jobs at one mine.
+5. Explain what the sources establish. Nearby places are not automatically connected, and a graph does not prove an effect on jobs.
+6. Offer a useful next question, such as "How does the electricity system work?" or "Who owns this mine?"
 
-The current catalogue can support parts of this journey. Verified physical supply routes, causal employment models and complete regional employment coverage require additional evidence and implementation.
+The app can already support parts of this example. Complete supply routes, effects on jobs and full regional employment figures need more checked information and features.
