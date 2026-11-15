@@ -24,6 +24,12 @@ The app also supports [MapTiler satellite imagery](https://docs.maptiler.com/clo
 
 This is a public browser key: it is included in the website so the browser can request map tiles. Do not put an AI key or another private credential in this setting. On Netlify, set the same variable as a build environment variable when deployment is authorized.
 
-MapTiler's TileJSON supplies the tile addresses, native zoom limits and imagery credits. The app displays its logo and attribution. Detail and capture dates vary by place; there is no single image date or promised building-level coverage everywhere. The provider's [account terms](https://www.maptiler.com/terms/) and usage allowance apply. A real account and key are needed to verify the detailed imagery service end to end.
+MapTiler's `satellite-v2` TileJSON supplies the tile addresses, native zoom limits and imagery credits. The app displays its logo and attribution. Detail and capture dates vary by place; there is no single image date or promised building-level coverage everywhere. The provider's [account terms](https://www.maptiler.com/terms/) and usage allowance apply.
+
+## Checking the connection locally
+
+With the key configured and the app running on port 3000, run `node scripts/maptiler-browser-test.mjs`. This checks detailed imagery, credits, switching and failure recovery using simulated provider responses. It makes no image requests to MapTiler and rejects unknown tileset addresses.
+
+For a small real-service check, run `node scripts/maptiler-browser-test.mjs --live`. This opens one detailed view over Cape Town and uses some of the account's tile allowance. Street and EOX tiles remain simulated. The check limits MapTiler image requests to 48 and saves a screenshot in the ignored `test-results` folder. Logs and saved results omit API keys and URL query strings. It checks that images load; it cannot establish an image's capture date when the provider does not supply one.
 
 Satellite images are a visual background. They do not prove a facility's name, ownership, operating status or exact boundary. The app's checked records keep their own sources and dates.

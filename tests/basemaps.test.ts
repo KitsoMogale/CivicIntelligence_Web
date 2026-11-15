@@ -48,7 +48,7 @@ test("detailed imagery needs its own browser key and uses provider TileJSON for 
   const source = rasterBasemap("satellite-detail", "test key&value");
   assert.equal(
     source?.url,
-    "https://api.maptiler.com/tiles/satellite-v4/tiles.json?key=test%20key%26value",
+    "https://api.maptiler.com/tiles/satellite-v2/tiles.json?key=test%20key%26value",
   );
   assert.equal(source?.tiles, undefined);
   assert.equal(source?.maxzoom, undefined);

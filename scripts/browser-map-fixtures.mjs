@@ -61,3 +61,49 @@ export async function mockSatelliteTiles(context, status = () => 200) {
     });
   });
 }
+
+export const isMapTilerImagePath = (path) =>
+  /^\/tiles\/satellite-v2\/\d+\/\d+\/\d+(?:\.(?:jpg|png|webp))?$/.test(path);
+
+export async function mockMapTiler(context, status = () => 200) {
+  await context.route("https://api.maptiler.com/**", (route) => {
+    const path = new URL(route.request().url()).pathname;
+    const headers = { "access-control-allow-origin": "*" };
+    if (path === "/tiles/satellite-v2/tiles.json")
+      return route.fulfill({
+        json: {
+          tilejson: "2.2.0",
+          name: "Satellite fixture",
+          minzoom: 0,
+          maxzoom: 22,
+          tiles: [
+            "https://api.maptiler.com/tiles/satellite-v2/{z}/{x}/{y}?key=fixture",
+          ],
+          attribution:
+            '<a href="https://www.maptiler.com/copyright/">© MapTiler</a> · Test imagery provider',
+        },
+        headers,
+      });
+    if (path === "/resources/logo.svg")
+      return route.fulfill({
+        contentType: "image/svg+xml",
+        headers,
+        body: '<svg xmlns="http://www.w3.org/2000/svg" width="85" height="20"><text x="0" y="15">MapTiler</text></svg>',
+      });
+    if (isMapTilerImagePath(path)) {
+      const code = status();
+      return route.fulfill({
+        status: code,
+        contentType: code === 200 ? "image/png" : "text/plain",
+        body: code === 200 ? tile : "Simulated imagery error",
+        headers,
+      });
+    }
+    // A mistyped tileset must fail instead of being accepted by a broad mock.
+    return route.fulfill({
+      status: 404,
+      body: "Unknown MapTiler fixture path",
+      headers,
+    });
+  });
+}

@@ -83,6 +83,8 @@ Browser checks use Microsoft Edge through playwright-core. They use test street 
 
 Run `node scripts/satellite-browser-test.mjs` against a local preview for satellite switching, saved views, zoom limits, mobile credits and image-failure recovery. It uses test imagery tiles so checks do not generate traffic to the public image service.
 
+With a MapTiler browser key configured, `node scripts/maptiler-browser-test.mjs` checks detailed imagery with simulated responses. Add `--live` only for a small real-service check over Cape Town, which uses the account's tile allowance. See [satellite checks](docs/satellite-view.md#checking-the-connection-locally).
+
 To check a separate production preview while port 3000 is in use:
 
 ```powershell

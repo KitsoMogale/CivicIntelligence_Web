@@ -66,7 +66,7 @@ export function rasterBasemap(
       type: "raster",
       // TileJSON supplies current tile URLs, native zoom limits and data credits.
       url:
-        "https://api.maptiler.com/tiles/satellite-v4/tiles.json?key=" +
+        "https://api.maptiler.com/tiles/satellite-v2/tiles.json?key=" +
         encodeURIComponent(key.trim()),
       tileSize: 256,
     };
