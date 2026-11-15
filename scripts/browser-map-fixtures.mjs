@@ -48,3 +48,16 @@ export async function mockStreetTiles(context, status = () => 200) {
     });
   });
 }
+
+// Imagery tests also stay local: never automate tile traffic to public providers.
+export async function mockSatelliteTiles(context, status = () => 200) {
+  await context.route("https://tiles.maps.eox.at/**", (route) => {
+    const code = status(route.request());
+    return route.fulfill({
+      status: code,
+      contentType: code === 200 ? "image/png" : "text/plain",
+      body: code === 200 ? tile : "Simulated unavailable imagery",
+      headers: { "access-control-allow-origin": "*" },
+    });
+  });
+}

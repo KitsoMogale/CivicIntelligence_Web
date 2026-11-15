@@ -23,6 +23,8 @@ npm.cmd start
 
 A fresh checkout needs npm.cmd ci first. Use Node 22 or later. Basic use needs no AI key, database or map token. Online street detail comes from OpenStreetMap; bundled reference maps can work without internet access.
 
+For real satellite images, choose **Layers → Basemap → Satellite · 2016 overview**. This key-free view shows land and built-up areas at about 10 m ground detail. Sharper MapTiler imagery can be enabled with a separate map key. See [satellite view and setup](docs/satellite-view.md) for image dates, detail limits and instructions.
+
 ## What to explore
 
 - **Map:** online roads and street names, zoom through level 19, and South African municipality/ward boundaries. Turn on Ward boundaries, choose a province and local municipality/metro, then click a ward or use Focus ward. The published 2026 collection has 4,485 wards and 257 municipality IDs; older 2020 maps remain separate.
@@ -78,6 +80,8 @@ node scripts/smoke.mjs
 ```
 
 Browser checks use Microsoft Edge through playwright-core. They use test street tiles instead of sending automated requests to the public map service. Set BROWSER_EXECUTABLE for another browser path and TEST_BASE_URL for another local address. Screenshots and results go into the ignored test-results folder.
+
+Run `node scripts/satellite-browser-test.mjs` against a local preview for satellite switching, saved views, zoom limits, mobile credits and image-failure recovery. It uses test imagery tiles so checks do not generate traffic to the public image service.
 
 To check a separate production preview while port 3000 is in use:
 

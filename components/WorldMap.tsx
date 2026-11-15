@@ -21,7 +21,8 @@ import {
   type Camera,
 } from "@/lib/canvas";
 import LayerControls from "./LayerControls";
-import MapDetails, { type StreetStatus } from "./MapDetails";
+import MapDetails from "./MapDetails";
+import type { BasemapStatus } from "@/lib/basemaps";
 import MapOverlay from "./MapOverlay";
 import CountryAreas from "./CountryAreas";
 import { referenceArea } from "@/lib/country-profiles";
@@ -93,7 +94,7 @@ export default function WorldMap() {
     map = useRef<MapInstance | null>(null),
     markers = useRef<maplibregl.Marker[]>([]);
   const s = useExplorer();
-  const [streetStatus, setStreetStatus] = useState<StreetStatus>("off");
+  const [basemapStatus, setBasemapStatus] = useState<BasemapStatus>("off");
   const [areasReady, setAreasReady] = useState(false);
   const municipalLevelLoaded = useRef("");
   const [municipalReady, setMunicipalReady] = useState(false),
@@ -139,7 +140,7 @@ export default function WorldMap() {
       observer = new ResizeObserver(() => {
         m?.resize();
         // A short mobile panel cannot fit expanded attribution. The permanent
-        // OSM credit remains visible; the information control can still open.
+        // Active basemap credit remains visible; the information control can still open.
         if (
           m &&
           window.innerWidth <= 760 &&
@@ -681,7 +682,10 @@ export default function WorldMap() {
           m.setPaintProperty(
             id,
             "fill-opacity",
-            layer.opacity * (streetStatus === "ready" ? 0.025 : 0.96),
+            layer.opacity *
+              (basemapStatus === "ready" && s.basemap !== "reference"
+                ? 0.025
+                : 0.96),
           );
       }
     }
@@ -804,6 +808,16 @@ export default function WorldMap() {
     }
     m.setLayerZoomRange("borders", 1.2, s.basemap === "streets" ? 8 : 19);
     m.setLayerZoomRange("selection", 1.2, s.basemap === "streets" ? 8 : 19);
+    const satellite =
+      s.basemap.startsWith("satellite") && basemapStatus === "ready";
+    m.setPaintProperty(
+      "borders",
+      "line-color",
+      satellite ? "#e8eee7" : "#3a4b50",
+    );
+    for (const id of ["province-borders", "country-area-lines"])
+      if (m.getLayer(id))
+        m.setPaintProperty(id, "line-color", satellite ? "#e8eee7" : "#5d8071");
   }, [
     ready,
     provinceReady,
@@ -813,7 +827,7 @@ export default function WorldMap() {
     s.region,
     s.country.code,
     s.selectedEntity,
-    streetStatus,
+    basemapStatus,
     s.basemap,
   ]);
   useEffect(() => {
@@ -1017,7 +1031,7 @@ export default function WorldMap() {
       <MapDetails
         map={map.current}
         ready={ready}
-        onStreetStatus={setStreetStatus}
+        onBasemapStatus={setBasemapStatus}
       />
       <CountryAreas map={map.current} ready={ready} onReady={setAreasReady} />
       <div

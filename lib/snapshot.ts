@@ -16,6 +16,7 @@ import { traceNetwork } from "./network";
 import { wardById, boundaryTitle } from "./boundaries";
 import boundaryRelease from "@/data/boundary-release.json";
 import { countryProfile, domainRoot } from "./country-profiles";
+import { basemapMetadata } from "./basemaps";
 export function knowledgeSnapshot(
   context: Pick<Exploration, "country" | "domain" | "mode" | "selectedEntity"> &
     Partial<Exploration>,
@@ -152,6 +153,9 @@ export function knowledgeSnapshot(
       url: "https://www.naturalearthdata.com/about/terms-of-use/",
       license: "Public domain",
       note: "Low-resolution illustrative boundaries; not legal determinations.",
+      satellite: context.basemap?.startsWith("satellite")
+        ? basemapMetadata(context.basemap)
+        : null,
       streets:
         context.basemap === "streets"
           ? {

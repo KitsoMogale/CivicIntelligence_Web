@@ -42,7 +42,7 @@ Show who supplied each boundary and which version it is. Different sources may d
 
 ## What already works
 
-The app has country boundaries, dated regional maps, South African municipal and ward boundaries, map controls and online street detail. Most land, climate, river and environmental learning layers still need to be added.
+The app has country boundaries, dated regional maps, South African municipal and ward boundaries, map controls and online street detail. Its [satellite view](../satellite-view.md) shows real 2016 images at about 10 m ground detail without a key. A separate map key can enable sharper imagery. These are captured images, not live views or proof of what a place is called. Most named land, climate, river and environmental learning layers still need to be added.
 
 ## How to check it
 

@@ -16,6 +16,8 @@ The reviewed seed and local guide work without AI credentials or a Python servic
 
 Configure `APP_ORIGIN` to the deployed HTTPS origin without a trailing slash. Set `KNOWLEDGE_API_URL` only if the separately hosted FastAPI service is in use. These are server-side settings. No paid-AI configuration is required for this milestone.
 
+Satellite overview works without a map key using the EOxCloudless 2016 mosaic. For detailed imagery, optionally set `NEXT_PUBLIC_MAPTILER_KEY` before the build. This is a public browser key, separate from private server credentials; restrict its allowed origins with MapTiler. Rebuild after changing it. See [satellite setup and image limits](satellite-view.md).
+
 ## Optional knowledge service
 
 Netlify does not host the persistent FastAPI/PostgreSQL service. Use a separate container/Python host and PostgreSQL with PostGIS and pgvector, or run the included production Compose configuration on an appropriate host.

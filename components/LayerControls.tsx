@@ -8,6 +8,7 @@ import { provincialMetrics, type MetricId } from "@/lib/statistics";
 import { boundaryTitle } from "@/lib/boundaries";
 import { countryProfile, referenceArea } from "@/lib/country-profiles";
 import { placeLayer } from "@/lib/map-data";
+import { MAPTILER_KEY } from "@/lib/basemaps";
 export default function LayerControls({ close }: { close: () => void }) {
   const s = useExplorer(),
     ordered = [...s.layers].sort((a, b) => b.zIndex - a.zIndex),
@@ -74,9 +75,24 @@ export default function LayerControls({ close }: { close: () => void }) {
           }
         >
           <option value="streets">Streets · OpenStreetMap</option>
+          <option value="satellite">Satellite · 2016 overview</option>
+          {(MAPTILER_KEY || s.basemap === "satellite-detail") && (
+            <option value="satellite-detail">
+              Satellite · detailed imagery
+            </option>
+          )}
           <option value="reference">Reference geography · offline</option>
         </select>
       </label>
+      {s.basemap.startsWith("satellite") && (
+        <p>
+          {s.basemap === "satellite"
+            ? "Real satellite images from 2016, with about 10 m ground detail. Useful for land, fields and built-up areas; individual buildings may not be clear. Zooming closer enlarges the same image."
+            : "Satellite and aerial images. Detail and image dates vary by location."}{" "}
+          Images need internet access and are not live. Boundaries and dots
+          remain separate layers.
+        </p>
+      )}
       <p>
         Street names and roads come from OpenStreetMap, require internet access
         and follow the publisher's updates. They are visual map detail; abstract

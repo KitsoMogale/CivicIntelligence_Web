@@ -12,6 +12,7 @@ import type { Country, Domain, Mode } from "./types";
 import { networkSchema, type NetworkQuery } from "./network";
 import { wardById, type BoundaryEdition } from "./boundaries";
 import { supportsCountryMode, domainRoot } from "./country-profiles";
+import type { Basemap } from "./basemaps";
 import {
   cameraSchema,
   densitySchema,
@@ -52,7 +53,7 @@ export type Exploration = {
   networkTrace: NetworkQuery | null;
   municipalityLevel: "local" | "district";
   boundaryEdition: BoundaryEdition;
-  basemap: "reference" | "streets";
+  basemap: Basemap;
   selectedWardId: string | null;
   filters: { query: string; entityType: string; relationshipType: string };
   selectionIds: string[];
@@ -104,7 +105,9 @@ const schema = z.object({
   networkTrace: networkSchema.nullable().default(null),
   municipalityLevel: z.enum(["local", "district"]).default("local"),
   boundaryEdition: z.enum(["legacy-2020", "mdb-2026"]).default("legacy-2020"),
-  basemap: z.enum(["reference", "streets"]).default("reference"),
+  basemap: z
+    .enum(["reference", "streets", "satellite", "satellite-detail"])
+    .default("reference"),
   selectedWardId: z.string().nullable().default(null),
   filters: filterSchema.default({
     query: "",

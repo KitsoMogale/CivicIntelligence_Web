@@ -58,6 +58,8 @@ Use **Layers → Municipal boundaries** for South Africa's local/metro and distr
 
 For wards, turn on Ward boundaries, choose a local municipality or metro, then click a ward or use Focus ward. OpenStreetMap supplies online roads and street names through zoom 19.
 
+Choose **Layers → Basemap → Satellite · 2016 overview** for real images of land, fields and built-up areas. This key-free view has about 10 m ground detail and shows its 2016 image year. It is not live and cannot promise clear views of individual buildings. A separate map key enables the detailed satellite option. See [satellite view](docs/satellite-view.md) for setup and sources. Switching basemaps preserves your map position and selection.
+
 **Explore network** follows documented connections over several steps or finds a shortest saved path. Users can filter by arrow direction, connection type and reporting date. Navigation links are optional.
 
 Provincial figures include unemployment, the share of working-age people in work, real GDP growth, adult education and medical-aid coverage. Legends and reports show what was measured, when, for whom and by which source.

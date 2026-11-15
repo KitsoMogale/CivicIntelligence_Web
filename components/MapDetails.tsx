@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import type {
   Map as MapInstance,
   GeoJSONSource,
-  RasterTileSource,
   MapLayerMouseEvent,
 } from "maplibre-gl";
 import type { FeatureCollection } from "geojson";
@@ -16,23 +15,23 @@ import {
   wardById,
   wardFile,
 } from "@/lib/boundaries";
-import { STREET_TILES, STREET_ATTRIBUTION } from "@/lib/streets";
+import { basemapMetadata, type BasemapStatus } from "@/lib/basemaps";
+import { useBasemap } from "@/lib/use-basemap";
 import { entityById, getSources } from "@/lib/knowledge";
 import { countryProfile } from "@/lib/country-profiles";
 import MapOverlay from "./MapOverlay";
-export type StreetStatus = "off" | "loading" | "ready" | "error";
 const cachedWards = new Map<string, FeatureCollection>();
 export default function MapDetails({
   map,
   ready,
-  onStreetStatus,
+  onBasemapStatus,
 }: {
   map: MapInstance | null;
   ready: boolean;
-  onStreetStatus: (status: StreetStatus) => void;
+  onBasemapStatus: (status: BasemapStatus) => void;
 }) {
   const s = useExplorer(),
-    [streetStatus, setStreetStatus] = useState<StreetStatus>("off"),
+    [basemapRetry, setBasemapRetry] = useState(0),
     [retry, setRetry] = useState(0),
     [wardStatus, setWardStatus] = useState<
       "idle" | "loading" | "ready" | "error"
@@ -49,62 +48,15 @@ export default function MapDetails({
   const options = municipalityWards(s.region);
   const profile = countryProfile(s.country.code);
   const boundarySource = getSources([profile.boundary.sourceId])[0];
-  useEffect(() => {
-    if (!map || !ready) return;
-    const update = (status: StreetStatus) => {
-      setStreetStatus(status);
-      onStreetStatus(status);
-      map.getContainer().setAttribute("data-street-status", status);
-    };
-    if (s.basemap !== "streets") {
-      if (map.getLayer("street-base"))
-        map.setLayoutProperty("street-base", "visibility", "none");
-      update("off");
-      return;
-    }
-    update("loading");
-    const loaded = (event: { sourceId?: string; sourceDataType?: string }) => {
-      if (event.sourceId === "streets" && event.sourceDataType === "content")
-        update("ready");
-    };
-    const error = (event: { sourceId?: string; error?: Error }) => {
-      if (
-        event.sourceId === "streets" ||
-        event.error?.message.includes("tile.openstreetmap.org")
-      )
-        update("error");
-    };
-    map.on("sourcedata", loaded);
-    map.on("error", error);
-    if (!map.getSource("streets")) {
-      map.addSource("streets", {
-        type: "raster",
-        tiles: [STREET_TILES],
-        tileSize: 256,
-        minzoom: 0,
-        maxzoom: 19,
-        attribution: STREET_ATTRIBUTION,
-      });
-      map.addLayer(
-        {
-          id: "street-base",
-          type: "raster",
-          source: "streets",
-          paint: { "raster-opacity": 1, "raster-fade-duration": 200 },
-        },
-        "land",
-      );
-    } else {
-      map.setLayoutProperty("street-base", "visibility", "visible");
-      if (retry)
-        (map.getSource("streets") as RasterTileSource).setTiles([STREET_TILES]);
-      else if (map.isSourceLoaded("streets")) update("ready");
-    }
-    return () => {
-      map.off("sourcedata", loaded);
-      map.off("error", error);
-    };
-  }, [map, ready, s.basemap, retry, onStreetStatus]);
+  const basemapStatus = useBasemap(
+    map,
+    ready,
+    s.basemap,
+    basemapRetry,
+    onBasemapStatus,
+  );
+  const imagery = s.basemap.startsWith("satellite");
+  const metadata = basemapMetadata(s.basemap);
   useEffect(() => {
     if (!map || !ready) return;
     if (!map.getSource("ward-detail")) {
@@ -222,32 +174,58 @@ export default function MapDetails({
       wardLayer.opacity * 0.025,
     );
     map.setFilter("ward-selection", ["==", "wardId", s.selectedWardId ?? ""]);
-  }, [map, ready, file, wardStatus, wardLayer, s.selectedWardId]);
+    map.setPaintProperty(
+      "ward-borders",
+      "line-color",
+      s.basemap.startsWith("satellite") ? "#f9e0a3" : "#775118",
+    );
+  }, [map, ready, file, wardStatus, wardLayer, s.selectedWardId, s.basemap]);
   return (
     <>
       <div className="map-source-status" aria-label="Map sources and edition">
-        {s.basemap === "streets" && (
+        {metadata && (
           <>
-            <a
-              href="https://www.openstreetmap.org/copyright"
-              target="_blank"
-              rel="noreferrer"
-            >
-              © OpenStreetMap contributors
+            <a href={metadata.url} target="_blank" rel="noreferrer">
+              {s.basemap === "streets"
+                ? "© OpenStreetMap contributors"
+                : s.basemap === "satellite"
+                  ? "EOxCloudless · EOX / Copernicus · 2016 · CC BY 4.0"
+                  : "© MapTiler · imagery credits"}
             </a>
             <span>
-              {streetStatus === "ready"
-                ? "Online streets"
-                : streetStatus === "error"
-                  ? "Street tiles unavailable · reference map shown"
-                  : "Loading street map…"}
+              {basemapStatus === "ready"
+                ? imagery
+                  ? s.basemap === "satellite"
+                    ? "2016 images · ~10 m detail · not live"
+                    : "Captured images · dates vary · not live"
+                  : "Online streets"
+                : basemapStatus === "error"
+                  ? `${imagery ? "Satellite images" : "Street tiles"} unavailable · reference map shown`
+                  : `Loading ${imagery ? "satellite images" : "street map"}…`}
             </span>
-            {streetStatus === "error" && (
-              <button onClick={() => setRetry((n) => n + 1)}>
-                Retry streets
+            {basemapStatus === "error" && (
+              <button onClick={() => setBasemapRetry((n) => n + 1)}>
+                {imagery ? "Retry satellite" : "Retry streets"}
               </button>
             )}
           </>
+        )}
+        {s.basemap === "satellite-detail" && (
+          <a
+            href="https://www.maptiler.com/"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="MapTiler"
+          >
+            {/* Required logo for MapTiler free accounts. */}
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="https://api.maptiler.com/resources/logo.svg"
+              alt="MapTiler"
+              width="85"
+              height="20"
+            />
+          </a>
         )}
         {s.country.code === "ZA" && (
           <span>{boundaryTitle(s.boundaryEdition)}</span>
