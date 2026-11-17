@@ -7,7 +7,11 @@ export async function GET(req: Request) {
   return Response.json(
     {
       status: readiness && !readiness.ready ? "degraded" : "ok",
-      ai: process.env.OPENAI_API_KEY ? "configured" : "local-guide",
+      ai:
+        process.env.OPENAI_API_KEY || process.env.AI_SERVICE_URL
+          ? "configured"
+          : "local-guide",
+      model: process.env.OPENAI_MODEL || "gpt-6-luna",
       knowledge: process.env.KNOWLEDGE_API_URL ? "external" : "curated-seed",
       version: release.version,
       revision: release.revision,

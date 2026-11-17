@@ -14,7 +14,7 @@ Publish directory: `.next`. Node: 22. Netlify detects Next.js and supplies its a
 
 The reviewed seed and local guide work without AI credentials or a Python service. First validate the site in a Netlify deploy preview. Confirm map assets, dynamic APIs, downloads, legal pages, directory and source-review routes before making the production release.
 
-Configure `APP_ORIGIN` to the deployed HTTPS origin without a trailing slash. Set `KNOWLEDGE_API_URL` only if the separately hosted FastAPI service is in use. These are server-side settings. No paid-AI configuration is required for this milestone.
+Configure `APP_ORIGIN` to the deployed HTTPS origin without a trailing slash. For AI teaching, set `AI_SERVICE_URL` to the separately hosted FastAPI service and the same private `AI_SERVICE_TOKEN` on both services. FastAPI needs `OPENAI_API_KEY` and `OPENAI_MODEL=gpt-6-luna`. Configure shared rate limiting on Next before hosted paid requests. Set `KNOWLEDGE_API_URL` only for the optional saved reference-data service; teaching does not need a database. See [the teaching setup](ai-teaching-canvas.md).
 
 Satellite overview works without a map key using the EOxCloudless 2016 mosaic. For detailed imagery, optionally set `NEXT_PUBLIC_MAPTILER_KEY` before the build. This is a public browser key, separate from private server credentials; restrict its allowed origins with MapTiler. Rebuild after changing it. See [satellite setup and image limits](satellite-view.md).
 
@@ -64,4 +64,4 @@ Investigations and review decisions are stored on each user's device. Their expo
 
 ## Deferred
 
-Live-provider AI testing, embedding generation, credential configuration and paid-AI shared rate limiting remain deferred. Account-based synchronization, collaborative editing, a globally comprehensive knowledge register, 3D and simulation are outside this milestone. Physical-device WebView testing remains separate from responsive browser checks.
+The AI teacher has been checked locally with the real provider. Hosted credentials, shared rate limiting and deployment remain separate release steps. Embedding generation, account synchronization, collaborative editing and physical-device WebView testing remain future work. Teaching uses web research rather than requiring a globally comprehensive knowledge database. 3D is outside the product's current focus.

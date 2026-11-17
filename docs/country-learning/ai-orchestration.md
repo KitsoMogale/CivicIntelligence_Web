@@ -1,11 +1,11 @@
 # How AI connects the user, information and screen
 
-This guide describes the planned AI middleman for all [ten topics](README.md). It also explains what the current app can and cannot do.
+The [AI teaching canvas](../ai-teaching-canvas.md) now connects questions, web research and interactive visuals using `gpt-6-luna`. The [ten topics](README.md) are learning examples, not a fixed subject list. This guide also contains future lesson ideas and reference-map design notes.
 
 ## What each part does
 
 - **The user** asks a question, chooses a topic or clicks something.
-- **The information store** supplies checked facts, places, organizations, links, numbers, documents and sources.
+- **Web research** finds relevant facts and sources for the question. Saved reference information is an optional starting point.
 - **AI** works out what the user needs, chooses a useful view and explains the facts.
 - **The app** checks AI's requested changes and draws the supported views.
 
@@ -144,7 +144,7 @@ For learning sessions, also keep the user's goal, chosen explanation level and c
 
 Add tools for checking available topics, country divisions, country statistics, events and source passages. Connect new display commands only when the app can check and apply them.
 
-AI keys remain planned for later. Basic controls and the labelled local guide should keep working as these parts are added.
+AI keys now enable the FastAPI teacher. Basic controls and the labelled local guide keep working when AI is off or unavailable.
 
 ## Guided lessons
 

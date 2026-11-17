@@ -4,7 +4,7 @@ import { localGuide } from "@/lib/guide";
 import { runAgent } from "@/lib/agent";
 import { rateLimit } from "@/lib/rate-limit";
 export const runtime = "nodejs";
-export const maxDuration = 60;
+export const maxDuration = 120;
 export async function POST(req: Request) {
   try {
     if (!isAllowedOrigin(req))
@@ -12,10 +12,10 @@ export async function POST(req: Request) {
         { error: "Request origin is not allowed." },
         { status: 403 },
       );
-    if (Number(req.headers.get("content-length") || 0) > 48000)
+    if (Number(req.headers.get("content-length") || 0) > 240000)
       return Response.json({ error: "Message is too large." }, { status: 413 });
     const raw = await req.text();
-    if (raw.length > 48000)
+    if (new TextEncoder().encode(raw).length > 240000)
       return Response.json({ error: "Message is too large." }, { status: 413 });
     let json: unknown;
     try {
@@ -29,7 +29,7 @@ export async function POST(req: Request) {
         { error: "Invalid message or exploration context." },
         { status: 400 },
       );
-    const paid = !!process.env.OPENAI_API_KEY,
+    const paid = !!(process.env.OPENAI_API_KEY || process.env.AI_SERVICE_URL),
       ip = req.headers.get("x-nf-client-connection-ip") || "local";
     if (!(await rateLimit(ip, paid)))
       return Response.json(
@@ -55,11 +55,14 @@ export async function POST(req: Request) {
               engine: "Local guide",
             });
           }
-        } catch {
+        } catch (error) {
           emit({
             type: "error",
             message:
-              "The assistant could not complete the request. Check configuration and try again.",
+              error instanceof Error &&
+              error.message.startsWith("The teaching service")
+                ? error.message
+                : "The assistant could not connect. Start the teaching service with npm run dev:api, then try again.",
           });
         } finally {
           controller.close();

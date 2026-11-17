@@ -2,6 +2,8 @@
 
 Civic Intelligence helps people learn about countries through maps, diagrams, charts and questions.
 
+The main direction is now an **AI teaching canvas**: ask about any subject, let `gpt-6-luna` research it through web search, and build or update movable visuals. This works through a FastAPI teaching service; no subject database is required. See [setup and canvas controls](docs/ai-teaching-canvas.md). The saved country material and seven reference views below remain useful map examples, rather than limits on what AI can teach.
+
 The [original product brief](docs/product-brief.md) is kept for reference. The former marketing website's guide is [archived here](docs/website-guide.legacy.md).
 
 The [country learning guides](docs/country-learning/README.md) explain ten topics, how users can explore them and how AI can connect questions to checked facts and useful views. They say what already works and what still needs to be built.
@@ -88,7 +90,7 @@ The website uses Next.js, TypeScript, Tailwind, Zustand, MapLibre, React Flow, C
 
 It works with bundled checked information, without a database or AI key. The optional Python service uses FastAPI and PostgreSQL, with PostGIS for map data and pgvector for searching by meaning. SQLAlchemy and Alembic manage its database access and changes.
 
-Netlify hosting is planned for the website. The optional Python service and database need a separate host. AI connection code is present, but live AI keys and full AI coordination remain planned for later. Nothing has been deployed.
+Netlify hosting is planned for the website. FastAPI runs the AI teacher on a separate Python-capable host; it does not need a database. The teacher now uses `gpt-6-luna`, web search, citations and validated teaching-canvas commands. Local guide and map reference controls still work without AI. Nothing has been deployed.
 
 ## Run and maintain
 

@@ -65,6 +65,7 @@ import {
 } from "@/lib/country-profiles";
 import CountryProfileDialog from "./CountryProfileDialog";
 import { useExplorer } from "@/lib/store";
+import { useTeaching } from "@/lib/teaching-store";
 import type { Domain, Mode } from "@/lib/types";
 import Assistant from "./Assistant";
 import KnowledgeTree from "./KnowledgeTree";
@@ -104,6 +105,10 @@ const InvestigationsDialog = dynamic(() => import("./InvestigationsDialog"), {
   ssr: false,
 });
 const ReportDialog = dynamic(() => import("./ReportDialog"), { ssr: false });
+const TeachingCanvas = dynamic(() => import("./TeachingCanvas"), {
+  ssr: false,
+  loading: Loading,
+});
 const domainIcons = {
   government: Landmark,
   economy: TrendingUp,
@@ -128,6 +133,7 @@ type Saved = {
   mode: Mode;
 };
 export default function Workspace() {
+  const teaching = useTeaching();
   const s = useExplorer(),
     [navOpen, setNavOpen] = useState(false),
     [aiOpen, setAiOpen] = useState(false),
@@ -186,7 +192,10 @@ export default function Workspace() {
         !!e.target.closest("input,textarea,select,[contenteditable=true]");
       if (!editing && (e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "z") {
         e.preventDefault();
-        if (e.shiftKey) s.forward();
+        if (useTeaching.getState().active) {
+          if (e.shiftKey) useTeaching.getState().redo();
+          else useTeaching.getState().undo();
+        } else if (e.shiftKey) s.forward();
         else s.back();
       }
       if ((e.ctrlKey || e.metaKey) && e.key === "k") {
@@ -672,6 +681,13 @@ export default function Workspace() {
             </button>
           </div>
           <div className="view-bar">
+            <button
+              className={"teaching-toggle " + (teaching.active ? "active" : "")}
+              aria-pressed={teaching.active}
+              onClick={() => teaching.setActive(!teaching.active)}
+            >
+              <Sparkles size={14} /> Teaching canvas
+            </button>
             <div
               className="view-tabs"
               role="tablist"
@@ -680,10 +696,13 @@ export default function Workspace() {
               {modes.map((m) => (
                 <button
                   role="tab"
-                  aria-selected={s.mode === m.id}
+                  aria-selected={!teaching.active && s.mode === m.id}
                   disabled={!supportsCountryMode(s.country.code, m.id)}
                   key={m.id}
-                  onClick={() => s.setMode(m.id)}
+                  onClick={() => {
+                    teaching.setActive(false);
+                    s.setMode(m.id);
+                  }}
                   className={s.mode === m.id ? "active" : ""}
                 >
                   <m.icon size={14} />
@@ -696,8 +715,9 @@ export default function Workspace() {
               <span>Fit view</span>
             </button>
           </div>
-          <CanvasTools />
+          {!teaching.active && <CanvasTools />}
           <div
+            hidden={teaching.active}
             style={
               {
                 "--split-ratio": s.splitRatio + "%",
@@ -766,6 +786,7 @@ export default function Workspace() {
               </div>
             )}
           </div>
+          {teaching.active && <TeachingCanvas />}
           <footer className="canvas-footer">
             <span>
               <ShieldCheck size={12} /> Independent exploration · source

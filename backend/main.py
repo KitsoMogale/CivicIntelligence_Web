@@ -15,6 +15,8 @@ from backend.catalog import SEED, REGIONS, INDICATORS, EVENTS, ROOT, MUNICIPALIT
 from backend.catalog import OFFICIAL_MUNICIPALITIES, WARDS, BOUNDARY_RELEASE
 from backend.catalog import COUNTRIES, COUNTRY_PROFILES
 app = FastAPI(title="Civic Intelligence Knowledge API", version="0.2.0")
+from backend.teacher import router as teacher_router
+app.include_router(teacher_router)
 @app.get("/countries")
 def countries():
     return COUNTRIES

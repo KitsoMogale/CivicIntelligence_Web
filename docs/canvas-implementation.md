@@ -1,6 +1,6 @@
 # Canvas and map interaction implementation
 
-The interaction architecture is implemented as a shared exploration store with a validated action reducer. AI credentials remain deferred. Manual controls use the same action types that a future controller can dispatch.
+The app now has a [topic-independent teaching canvas](ai-teaching-canvas.md), controlled by users and a FastAPI AI teacher using `gpt-6-luna`. Its shared commands create and update maps, diagrams, graphs, charts, timelines, panels and notes. The detailed reference map workspace described below keeps its exploration store and validated action reducer.
 
 ## Available controls
 

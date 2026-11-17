@@ -1,4 +1,5 @@
 import { z } from "zod";
+import { teachingDocumentSchema } from "./teaching";
 import { countries, datasets, entityById, entities } from "./knowledge";
 import { referenceArea, supportsCountryMode } from "./country-profiles";
 import { relationships } from "./knowledge";
@@ -197,10 +198,16 @@ export const contextSchema = z.object({
   selectedEntity: z.string().nullable(),
   visibleEntities: z.array(z.string()).max(2000),
   region: z.string().nullable(),
+  camera: cameraSchema.optional(),
+  activeLayers: z.array(z.string().max(80)).max(20).optional(),
+  selectedLabel: z.string().max(180).nullable().optional(),
 });
 export const chatRequestSchema = z.object({
   message: z.string().trim().min(1).max(2000),
   context: contextSchema,
+  canvas: teachingDocumentSchema.optional(),
+  revision: z.number().int().nonnegative().optional(),
+  canvasActive: z.boolean().optional(),
   history: z
     .array(
       z.object({

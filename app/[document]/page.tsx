@@ -20,7 +20,7 @@ const pages: Record<
       },
       {
         heading: "Assistant conversations",
-        body: "When you send a message, the server receives your question, recent conversation history and current exploration context. With an API key configured, these are sent to OpenAI to produce a response. Requests use store: false. Provider processing remains subject to its applicable data policies. Without a key, the local guide processes the request on the application server. Chat messages are held in browser memory and are not written to the knowledge database.",
+        body: "When you send a message, the server receives your question, recent conversation and current canvas, including its text, sources, selected items and map settings. With AI configured, the FastAPI teaching service sends this context to OpenAI and can use web search to research the question. Requests use store: false. Provider processing remains subject to its applicable data policies. Without AI, the local guide runs on the application server. Chats stay in browser memory; your teaching canvas is saved in this browser. Do not put secrets or private information on a canvas you share with the assistant.",
       },
       {
         heading: "Technical data",
@@ -58,7 +58,7 @@ const pages: Record<
   support: {
     title: "A little help exploring",
     intro:
-      "Start with South Africa. Select a knowledge domain, open an entity, and follow its documented connections.",
+      "Ask about any country or subject. The AI teacher can research it and build an explanation on your teaching canvas.",
     sections: [
       {
         heading: "How do I use the canvas?",
@@ -66,7 +66,7 @@ const pages: Record<
       },
       {
         heading: "Why does the assistant say Local guide?",
-        body: "The local guide works without credentials and recognizes a small set of exploration requests. A server-side OpenAI API key enables open-ended responses and tool calling. Both paths use validated canvas commands.",
+        body: "The local guide works without AI and recognizes saved exploration examples. For the AI teacher, keep the Next.js website and FastAPI teaching service running. The server-only OpenAI key enables gpt-6-luna, web search and validated teaching-canvas commands.",
       },
       {
         heading: "What countries are covered?",

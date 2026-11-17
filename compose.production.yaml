@@ -22,6 +22,9 @@ services:
       DATABASE_URL: ${DATABASE_URL:?Set the URL-encoded PostgreSQL URL for the db service}
       APP_ORIGIN: ${APP_ORIGIN:?Set the Netlify site origin}
       LOG_REQUESTS: "1"
+      OPENAI_API_KEY: ${OPENAI_API_KEY:-}
+      OPENAI_MODEL: ${OPENAI_MODEL:-gpt-6-luna}
+      AI_SERVICE_TOKEN: ${AI_SERVICE_TOKEN:-}
     ports:
       - "127.0.0.1:8000:8000"
     depends_on:

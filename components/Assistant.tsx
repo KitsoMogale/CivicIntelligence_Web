@@ -25,11 +25,22 @@ import { useExplorer } from "@/lib/store";
 import { municipalById } from "@/lib/geography";
 import { referenceArea } from "@/lib/country-profiles";
 import { validateActions, type CanvasAction } from "@/lib/actions";
+import { useTeaching } from "@/lib/teaching-store";
+import {
+  citationSchema,
+  sourceSchema,
+  type Citation,
+  type WebSource,
+} from "@/lib/teaching";
+import CitedText from "./CitedText";
 type Message = {
   role: "user" | "assistant";
   content: string;
   sourceIds?: string[];
   actions?: CanvasAction[];
+  sources?: WebSource[];
+  citations?: Citation[];
+  commandCount?: number;
   error?: boolean;
 };
 export default function Assistant({
@@ -43,6 +54,7 @@ export default function Assistant({
     [messages, setMessages] = useState<Message[]>([]),
     [input, setInput] = useState(""),
     [busy, setBusy] = useState(false),
+    [progress, setProgress] = useState("Thinking…"),
     [engine, setEngine] = useState("Checking connection"),
     [tab, setTab] = useState<"assistant" | "details">("assistant");
   const skipDetailsFor = useRef<string | null>(null);
@@ -57,7 +69,9 @@ export default function Assistant({
     fetch("/api/health")
       .then((r) => r.json())
       .then((r) =>
-        setEngine(r.ai === "configured" ? "AI configured" : "Local guide"),
+        setEngine(
+          r.ai === "configured" ? r.model + " · web search" : "Local guide",
+        ),
       )
       .catch(() => setEngine("Connection unavailable"));
     return () => controller.current?.abort();
@@ -89,6 +103,19 @@ export default function Assistant({
       );
     controller.current = new AbortController();
     let content = "";
+    const teaching = useTeaching.getState();
+    const mapStamp = () => {
+      const state = useExplorer.getState();
+      return JSON.stringify([
+        state.country.code,
+        state.mode,
+        state.selectedEntity,
+        state.region,
+        state.layers,
+        state.camera,
+      ]);
+    };
+    const initialMapStamp = mapStamp();
     try {
       const res = await fetch("/api/chat", {
         method: "POST",
@@ -96,6 +123,9 @@ export default function Assistant({
         body: JSON.stringify({
           message: text,
           history: past,
+          canvas: teaching.document,
+          revision: teaching.revision,
+          canvasActive: teaching.active,
           context: {
             country: s.country.code,
             countryName: s.country.name,
@@ -112,6 +142,9 @@ export default function Assistant({
               canvas: s,
             }),
             region: s.region,
+            camera: s.camera,
+            activeLayers: s.layers.filter((l) => l.visible).map((l) => l.id),
+            selectedLabel: selected?.name ?? null,
           },
         }),
         signal: controller.current.signal,
@@ -135,8 +168,29 @@ export default function Assistant({
             content += event.text;
             update({ content });
           }
+          if (event.type === "status") setProgress(event.message);
           if (event.type === "done") {
             const actions = validateActions(event.actions, s.country.code);
+            const sources = (event.sources ?? []).map((source: unknown) =>
+              sourceSchema.parse(source),
+            );
+            const citations = (event.citations ?? []).map((citation: unknown) =>
+              citationSchema.parse(citation),
+            );
+            if (
+              (actions.length || event.commands?.length) &&
+              mapStamp() !== initialMapStamp
+            )
+              throw new Error(
+                "Your map changed while the AI was responding. Ask again to use the current view.",
+              );
+            if (event.commands?.length) {
+              if (event.revision !== teaching.revision)
+                throw new Error(
+                  "The AI returned changes for an older canvas. Please ask again.",
+                );
+              useTeaching.getState().apply(event.commands, teaching.revision);
+            }
             skipDetailsFor.current =
               actions
                 .flatMap((a) =>
@@ -145,8 +199,14 @@ export default function Assistant({
                     : [],
                 )
                 .at(-1) ?? null;
-            s.applyActions(actions);
-            update({ sourceIds: event.sourceIds, actions });
+            if (actions.length) s.applyActions(actions);
+            update({
+              sourceIds: event.sourceIds,
+              actions,
+              sources,
+              citations,
+              commandCount: event.commands?.length ?? 0,
+            });
             if (event.engine) setEngine(event.engine);
           }
           if (event.type === "error") throw new Error(event.message);
@@ -419,8 +479,8 @@ export default function Assistant({
                   </button>
                 ))}
                 <p className="guide-note">
-                  Your guide explores curated records. Detailed knowledge
-                  coverage starts with South Africa.
+                  Ask about any country or topic. AI can research sources and
+                  build an explanation on your teaching canvas.
                 </p>
               </div>
             ) : (
@@ -437,17 +497,36 @@ export default function Assistant({
                     </span>
                   )}
                   <div className="message-text">
-                    {m.content || (
+                    {m.content ? (
+                      <CitedText text={m.content} citations={m.citations} />
+                    ) : (
                       <span className="thinking">
-                        <LoaderCircle size={14} /> Exploring the knowledge base…
+                        <LoaderCircle size={14} /> {progress}
                       </span>
                     )}
                   </div>
-                  {!!m.actions?.length && (
+                  {!!(m.actions?.length || m.commandCount) && (
                     <span className="action-receipt">
-                      <Check size={12} /> Canvas updated · {m.actions.length}{" "}
-                      actions
+                      <Check size={12} /> Canvas updated ·{" "}
+                      {(m.actions?.length ?? 0) + (m.commandCount ?? 0)} actions
                     </span>
+                  )}
+                  {!!m.sources?.length && (
+                    <details className="message-sources">
+                      <summary>
+                        <BookOpen size={12} /> Web sources ({m.sources.length})
+                      </summary>
+                      {m.sources.map((source) => (
+                        <a
+                          href={source.url}
+                          target="_blank"
+                          rel="noreferrer"
+                          key={source.url}
+                        >
+                          {source.title} <ArrowUpRight size={11} />
+                        </a>
+                      ))}
+                    </details>
                   )}
                   {!!m.sourceIds?.length && (
                     <details className="message-sources">

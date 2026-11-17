@@ -1,6 +1,8 @@
 # Civic Intelligence — How the map, views and AI work together
 
-This document explains the app's design. It describes both existing features and planned work. See [the website guide](website-guide.md) for what is built today.
+The accepted direction is an AI teacher working on a flexible 2D chalkboard. GPT can research **any country or topic** through built-in web search and use validated tools to create, arrange and update maps, diagrams, graphs, charts, timelines, information panels and notes. The app does not require a predefined topic database. The implementation uses a responsive Next.js frontend, a FastAPI Responses API teacher, and `gpt-6-luna`.
+
+See [the teaching canvas guide](docs/ai-teaching-canvas.md) for the implemented workflow, local startup, shared tools and remaining limits. The detailed map architecture below remains the reference-map subsystem; its saved topic examples are optional starting points. React Native WebView embedding is a later delivery step. The focus remains 2D interaction and visual teaching.
 
 ## 1. Main idea
 

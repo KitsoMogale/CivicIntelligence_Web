@@ -1,8 +1,10 @@
 # Civic Intelligence
 
-An app for learning about countries through maps, diagrams, charts and questions. It can run locally using its checked information. AI keys and deployment are planned for later.
+An AI visual learning app for exploring any country or topic through maps, diagrams, charts and questions. GPT researches with web search and builds explanations on a shared 2D teaching canvas.
 
-The website uses Next.js, MapLibre, React Flow, Cytoscape and ECharts. A separate Python service and database are optional.
+The website uses Next.js, MapLibre, React Flow, Cytoscape and ECharts. FastAPI runs the AI teacher with the OpenAI Responses API and `gpt-6-luna`. Teaching does not need a database; the checked map examples still work without AI.
+
+For AI, keep `npm.cmd run dev:api` running in a second terminal. Both services read the server-only key from `.env.local`. See [the teaching canvas guide](docs/ai-teaching-canvas.md) for setup, controls and limits.
 
 ## Open locally on Windows
 
